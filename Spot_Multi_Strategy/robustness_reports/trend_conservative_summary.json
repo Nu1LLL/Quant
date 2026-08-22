@@ -1,0 +1,22 @@
+{
+  "warning": "这些测试使用已经查看过的历史，只能检查脆弱性，不能代替未来模拟盘。",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT"
+  ],
+  "interval": "4h",
+  "start": "2020-01-01",
+  "end": "2026-08-01",
+  "strategy_config": "/Users/tanganheng/Documents/Codex/2026-07-21/zh/outputs/Spot_Multi_Strategy/configs/trend_conservative.json",
+  "simulation_count": 5000,
+  "gate_passed": true,
+  "checks": {
+    "双倍成本下每个品种仍盈利": true,
+    "延迟2根K线时每个品种仍盈利": true,
+    "每个品种至少70%参数扰动仍盈利": true,
+    "每个品种参数扰动Sharpe中位数至少0.50": true,
+    "删除最佳两笔后每个品种仍盈利": true,
+    "蒙特卡洛亏损概率每个品种不超过25%": true,
+    "蒙特卡洛5%情景回撤不超过20%": true
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "warning": "这些历史区间已经被查看，只是滚动研究验证，不是新的隐藏测试。",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT"
+  ],
+  "interval": "4h",
+  "start": "2020-01-01",
+  "end": "2026-08-01",
+  "strategy_config": "/Users/tanganheng/Documents/Codex/2026-07-21/zh/outputs/Spot_Multi_Strategy/configs/trend_champion.json",
+  "fold_count": 12,
+  "profitable_fold_ratio": 0.75,
+  "median_fold_return": 0.02514930051147579,
+  "worst_fold_return": -0.04117600524735132,
+  "median_sharpe": 0.9860021022993125,
+  "worst_max_drawdown": -0.04979266228733337,
+  "total_trades": 156,
+  "strategies": [
+    {
+      "strategy": "trend_breakout",
+      "trade_count": 156,
+      "net_profit": 1571.0719012223394,
+      "profitable_fold_ratio": 0.75
+    }
+  ],
+  "gate_passed": true,
+  "checks": {
+    "盈利折比例不低于67%": true,
+    "滚动折收益中位数为正": true,
+    "滚动折Sharpe中位数不低于0.50": true,
+    "最差最大回撤不超过20%": true,
+    "完整交易总数不少于60笔": true,
+    "每个启用策略至少20笔完整交易": true,
+    "每个启用策略累计净利润为正": true
+  }
+}

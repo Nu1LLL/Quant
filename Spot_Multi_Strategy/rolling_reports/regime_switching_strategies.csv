@@ -1,0 +1,3 @@
+strategy,trade_count,net_profit,profitable_fold_ratio
+range_mean_reversion,11,11.078339924716113,0.16666666666666666
+trend_breakout,96,1059.2706350361275,0.75

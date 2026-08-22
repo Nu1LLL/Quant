@@ -1,0 +1,3 @@
+symbol,simulation_count,trade_count,median_final_value,percentile_5_final_value,loss_probability,percentile_5_max_drawdown
+BTCUSDT,5000,129,6760.585380085984,5410.543402679492,0.0106,-0.08439867223692017
+ETHUSDT,5000,145,6605.8517855214595,5171.428759007985,0.0294,-0.10966694465054434

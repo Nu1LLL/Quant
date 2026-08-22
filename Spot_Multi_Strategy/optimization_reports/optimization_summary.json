@@ -1,0 +1,16 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT"
+  ],
+  "interval": "4h",
+  "start": "2020-01-01",
+  "end": "2026-08-01",
+  "trial_count": 60,
+  "random_seed": 20260823,
+  "development_fraction": 0.8,
+  "fold_count": 4,
+  "best_candidate": 7,
+  "best_score": 0.5083389850761308,
+  "all_hidden_gates_passed": false
+}

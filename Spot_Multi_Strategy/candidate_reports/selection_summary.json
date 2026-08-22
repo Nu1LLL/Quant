@@ -1,0 +1,7 @@
+{
+  "warning": "参数邻域和时间折均已被查看，选出的只是模拟盘候选，不是经过新隐藏数据验证的实盘策略。",
+  "candidate_count": 11,
+  "passing_candidate_count": 1,
+  "selected_variant": "trailing_plus_20pct",
+  "selected_config": "configs/trend_champion.json"
+}
