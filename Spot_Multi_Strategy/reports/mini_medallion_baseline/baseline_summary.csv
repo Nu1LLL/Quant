@@ -1,0 +1,9 @@
+symbol,config,scope,final_value,total_return_pct,annualized_return_pct,max_drawdown_pct,sharpe,profit_factor,win_rate_pct,trade_count,total_fees,buy_and_hold_return_pct,buy_and_hold_final_value
+BTCUSDT,default,full,6248.25,24.97,3.39,-2.63,1.343,2.114,38.96,154,153.53,969.17,53458.69
+BTCUSDT,default,out_of_sample,5171.34,3.43,1.69,-2.25,0.829,1.56,40.0,45,47.54,42.94,7147.08
+BTCUSDT,regime_switching,full,6077.55,21.55,2.96,-3.38,1.14,2.215,39.22,102,125.16,969.17,53458.69
+BTCUSDT,regime_switching,out_of_sample,5031.54,0.63,0.31,-3.02,0.187,1.109,36.11,36,42.18,42.94,7147.08
+ETHUSDT,default,full,5809.37,16.19,2.27,-4.37,0.836,1.59,32.0,175,124.41,1800.87,95043.4
+ETHUSDT,default,out_of_sample,5280.61,5.61,2.76,-3.11,1.069,1.796,25.53,47,34.99,9.68,5484.16
+ETHUSDT,regime_switching,full,5811.85,16.24,2.27,-4.46,0.926,2.056,35.29,102,83.73,1800.87,95043.4
+ETHUSDT,regime_switching,out_of_sample,5185.66,3.71,1.83,-1.93,0.991,2.076,41.67,24,20.39,9.68,5484.16

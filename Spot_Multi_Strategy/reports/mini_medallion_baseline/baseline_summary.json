@@ -1,0 +1,165 @@
+{
+  "generated_at_utc": "2026-09-10T23:09:11.104724+00:00",
+  "data_range": {
+    "start": "2020-01-01",
+    "end_last_closed_candle_utc": "2026-09-10T16:00:00+00:00"
+  },
+  "interval": "4h",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT"
+  ],
+  "cost_assumptions": {
+    "fee_rate": 0.001,
+    "slippage_rate": 0.0005,
+    "execution_delay_bars": 1,
+    "risk_per_trade": 0.005,
+    "initial_capital": 5000.0
+  },
+  "configs": {
+    "default": "现货多策略默认参数（趋势突破 + 趋势回调，无震荡策略）",
+    "regime_switching": "ADX/EMA状态自动切换（趋势突破 + 震荡均值回归，回调策略权重为0）"
+  },
+  "reproduce_commands": [
+    "python3 main.py --symbol BTCUSDT --interval 4h --start 2020-01-01",
+    "python3 main.py --symbol ETHUSDT --interval 4h --start 2020-01-01",
+    "python3 main.py --symbol BTCUSDT --interval 4h --start 2020-01-01 --strategy-config configs/regime_switching.json",
+    "python3 main.py --symbol ETHUSDT --interval 4h --start 2020-01-01 --strategy-config configs/regime_switching.json"
+  ],
+  "notes": [
+    "不传 --end 时程序自动使用最后一根已收盘K线（此次运行为2026-09-10 16:00 UTC）。",
+    "样本外区间为最后30%K线，与main.py内置切分方式一致，未做任何额外调整。",
+    "本基线未修改任何策略代码、参数或成本假设，仅重跑现有main.py。",
+    "买入持有数据取自同一次运行的控制台输出（calculate_buy_and_hold）。"
+  ],
+  "results": [
+    {
+      "symbol": "BTCUSDT",
+      "config": "default",
+      "scope": "full",
+      "final_value": 6248.25,
+      "total_return_pct": 24.97,
+      "annualized_return_pct": 3.39,
+      "max_drawdown_pct": -2.63,
+      "sharpe": 1.343,
+      "profit_factor": 2.114,
+      "win_rate_pct": 38.96,
+      "trade_count": 154,
+      "total_fees": 153.53,
+      "buy_and_hold_return_pct": 969.17,
+      "buy_and_hold_final_value": 53458.69
+    },
+    {
+      "symbol": "BTCUSDT",
+      "config": "default",
+      "scope": "out_of_sample",
+      "final_value": 5171.34,
+      "total_return_pct": 3.43,
+      "annualized_return_pct": 1.69,
+      "max_drawdown_pct": -2.25,
+      "sharpe": 0.829,
+      "profit_factor": 1.56,
+      "win_rate_pct": 40.0,
+      "trade_count": 45,
+      "total_fees": 47.54,
+      "buy_and_hold_return_pct": 42.94,
+      "buy_and_hold_final_value": 7147.08
+    },
+    {
+      "symbol": "BTCUSDT",
+      "config": "regime_switching",
+      "scope": "full",
+      "final_value": 6077.55,
+      "total_return_pct": 21.55,
+      "annualized_return_pct": 2.96,
+      "max_drawdown_pct": -3.38,
+      "sharpe": 1.14,
+      "profit_factor": 2.215,
+      "win_rate_pct": 39.22,
+      "trade_count": 102,
+      "total_fees": 125.16,
+      "buy_and_hold_return_pct": 969.17,
+      "buy_and_hold_final_value": 53458.69
+    },
+    {
+      "symbol": "BTCUSDT",
+      "config": "regime_switching",
+      "scope": "out_of_sample",
+      "final_value": 5031.54,
+      "total_return_pct": 0.63,
+      "annualized_return_pct": 0.31,
+      "max_drawdown_pct": -3.02,
+      "sharpe": 0.187,
+      "profit_factor": 1.109,
+      "win_rate_pct": 36.11,
+      "trade_count": 36,
+      "total_fees": 42.18,
+      "buy_and_hold_return_pct": 42.94,
+      "buy_and_hold_final_value": 7147.08
+    },
+    {
+      "symbol": "ETHUSDT",
+      "config": "default",
+      "scope": "full",
+      "final_value": 5809.37,
+      "total_return_pct": 16.19,
+      "annualized_return_pct": 2.27,
+      "max_drawdown_pct": -4.37,
+      "sharpe": 0.836,
+      "profit_factor": 1.59,
+      "win_rate_pct": 32.0,
+      "trade_count": 175,
+      "total_fees": 124.41,
+      "buy_and_hold_return_pct": 1800.87,
+      "buy_and_hold_final_value": 95043.4
+    },
+    {
+      "symbol": "ETHUSDT",
+      "config": "default",
+      "scope": "out_of_sample",
+      "final_value": 5280.61,
+      "total_return_pct": 5.61,
+      "annualized_return_pct": 2.76,
+      "max_drawdown_pct": -3.11,
+      "sharpe": 1.069,
+      "profit_factor": 1.796,
+      "win_rate_pct": 25.53,
+      "trade_count": 47,
+      "total_fees": 34.99,
+      "buy_and_hold_return_pct": 9.68,
+      "buy_and_hold_final_value": 5484.16
+    },
+    {
+      "symbol": "ETHUSDT",
+      "config": "regime_switching",
+      "scope": "full",
+      "final_value": 5811.85,
+      "total_return_pct": 16.24,
+      "annualized_return_pct": 2.27,
+      "max_drawdown_pct": -4.46,
+      "sharpe": 0.926,
+      "profit_factor": 2.056,
+      "win_rate_pct": 35.29,
+      "trade_count": 102,
+      "total_fees": 83.73,
+      "buy_and_hold_return_pct": 1800.87,
+      "buy_and_hold_final_value": 95043.4
+    },
+    {
+      "symbol": "ETHUSDT",
+      "config": "regime_switching",
+      "scope": "out_of_sample",
+      "final_value": 5185.66,
+      "total_return_pct": 3.71,
+      "annualized_return_pct": 1.83,
+      "max_drawdown_pct": -1.93,
+      "sharpe": 0.991,
+      "profit_factor": 2.076,
+      "win_rate_pct": 41.67,
+      "trade_count": 24,
+      "total_fees": 20.39,
+      "buy_and_hold_return_pct": 9.68,
+      "buy_and_hold_final_value": 5484.16
+    }
+  ]
+}
