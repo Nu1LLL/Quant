@@ -134,5 +134,54 @@ class AlphaMetricsStatisticsTests(unittest.TestCase):
         self.assertGreaterEqual(len(yearly), 1)
 
 
+class RegimeCausalityTests(unittest.TestCase):
+    """compute_regime_labels用全样本分位数切分，只能用于事后描述性统计
+    （见其docstring里的警告），不能用来决定交易仓位；能安全用作交易
+    规则输入的是纯滚动窗口的compute_raw_efficiency_ratio。这里验证
+    后者确实不受未来数据影响，前者确实会受未来数据影响——用行为
+    本身证明文档里的警告是准确的，而不是一句空话。
+    """
+
+    def _make_close_series(self, rows, seed):
+        rng = np.random.default_rng(seed)
+        returns = rng.normal(scale=0.01, size=rows)
+        close = pd.Series(100.0 * np.cumprod(1 + returns))
+        open_time = pd.date_range(
+            "2020-01-01", periods=rows, freq="4h", tz="UTC"
+        )
+        return pd.DataFrame({"open_time": open_time, "close": close})
+
+    def test_raw_efficiency_ratio_is_unaffected_by_truncating_the_tail(self):
+        df = self._make_close_series(600, seed=1)
+        full = alpha_metrics.compute_raw_efficiency_ratio(df)
+
+        truncated_df = df.iloc[:-100].reset_index(drop=True)
+        truncated = alpha_metrics.compute_raw_efficiency_ratio(truncated_df)
+
+        pd.testing.assert_series_equal(
+            full.iloc[:len(truncated_df)].reset_index(drop=True),
+            truncated.reset_index(drop=True)
+        )
+
+    def test_regime_labels_can_change_when_future_data_is_appended(self):
+        df = self._make_close_series(600, seed=2)
+        short_labels = alpha_metrics.compute_regime_labels(df.iloc[:400])
+
+        extended_df = self._make_close_series(600, seed=2)
+        # 后200根改成剧烈趋势行情，拉高整段样本的分位数切分点
+        extended_df.loc[400:, "close"] = (
+            extended_df.loc[399, "close"]
+            * np.cumprod(1 + np.full(200, 0.01))
+        )
+        extended_labels = alpha_metrics.compute_regime_labels(extended_df)
+
+        # 用同一段前400根K线的效率比率去比较分类结果：如果函数是纯因果的，
+        # 两次分类应该完全一致；这里断言"确实存在不一致"，用来证明
+        # 这个函数不能被当成没有未来数据泄漏的交易规则使用。
+        overlap_before = short_labels.reset_index(drop=True)
+        overlap_after = extended_labels.iloc[:400].reset_index(drop=True)
+        self.assertFalse(overlap_before.equals(overlap_after))
+
+
 if __name__ == "__main__":
     unittest.main()

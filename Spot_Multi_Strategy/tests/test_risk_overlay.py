@@ -157,6 +157,105 @@ class RiskOverlaySimulationTests(unittest.TestCase):
         self.assertTrue((result["net_pnl"].fillna(0.0) == 0.0).all())
 
 
+class StopLossTests(unittest.TestCase):
+    def _crash_after_entry_df(self, flat_rows=60, crash_rows=40, crash_per_bar=-0.02):
+        flat_close = np.full(flat_rows, 100.0)
+        crash_close = 100.0 * np.cumprod(
+            1 + np.full(crash_rows, crash_per_bar)
+        )
+        close = np.concatenate([flat_close, crash_close])
+        rows = len(close)
+
+        return pd.DataFrame({
+            "open_time": pd.date_range(
+                "2020-01-01", periods=rows, freq="4h", tz="UTC"
+            ),
+            "open": np.concatenate([[100.0], close[:-1]]),
+            "high": close * 1.001,
+            "low": close * 0.999,
+            "close": close,
+            "volume": 100.0
+        })
+
+    def test_stop_loss_forces_exit_and_caps_drawdown(self):
+        df = self._crash_after_entry_df()
+        raw_exposure = pd.Series(1.0, index=df.index)
+
+        no_stop = risk_overlay.apply_risk_overlay(
+            df, raw_exposure,
+            risk_overlay.RiskConfig(no_trade_band=0.0, stop_loss_atr_multiple=None)
+        )
+        with_stop = risk_overlay.apply_risk_overlay(
+            df, raw_exposure,
+            risk_overlay.RiskConfig(
+                no_trade_band=0.0, stop_loss_atr_multiple=1.5,
+                stop_loss_atr_window=14
+            )
+        )
+
+        self.assertTrue(with_stop["stopped_out"].any())
+        # raw_exposure恒为1，止损归零后下一根就会因为信号依然乐观
+        # 重新建仓，所以这里不检查"从此保持空仓"，只检查止损版本的
+        # 最大回撤明显小于不设止损的版本。
+        no_stop_drawdown = (
+            no_stop["equity"] / no_stop["equity"].cummax() - 1
+        ).min()
+        with_stop_drawdown = (
+            with_stop["equity"] / with_stop["equity"].cummax() - 1
+        ).min()
+
+        self.assertLess(with_stop_drawdown, 0)
+        self.assertGreater(with_stop_drawdown, no_stop_drawdown)
+
+    def test_no_stop_loss_when_multiplier_is_none(self):
+        df = self._crash_after_entry_df()
+        raw_exposure = pd.Series(1.0, index=df.index)
+        result = risk_overlay.apply_risk_overlay(
+            df, raw_exposure,
+            risk_overlay.RiskConfig(stop_loss_atr_multiple=None)
+        )
+        self.assertFalse(result["stopped_out"].any())
+
+    def test_stop_loss_overrides_no_trade_band(self):
+        df = self._crash_after_entry_df(crash_per_bar=-0.05)
+        raw_exposure = pd.Series(1.0, index=df.index)
+        result = risk_overlay.apply_risk_overlay(
+            df, raw_exposure,
+            risk_overlay.RiskConfig(
+                no_trade_band=0.9,  # 大到几乎永远不会因为普通换手触发
+                stop_loss_atr_multiple=1.0
+            )
+        )
+        self.assertTrue(result["stopped_out"].any())
+        stop_index = result.index[result["stopped_out"]][0]
+        self.assertEqual(result.loc[stop_index, "position"], 0.0)
+
+    def test_stop_loss_is_causal(self):
+        df = self._crash_after_entry_df()
+        raw_exposure = pd.Series(1.0, index=df.index)
+        config = risk_overlay.RiskConfig(
+            no_trade_band=0.0, stop_loss_atr_multiple=1.5
+        )
+
+        before = risk_overlay.apply_risk_overlay(df, raw_exposure, config)
+
+        mutated_df = df.copy()
+        cutoff = int(len(df) * 0.9)
+        mutated_df.loc[cutoff:, ["open", "high", "low", "close"]] *= 5.0
+
+        after = risk_overlay.apply_risk_overlay(mutated_df, raw_exposure, config)
+
+        safe_boundary = cutoff - 30
+        pd.testing.assert_series_equal(
+            before["position"].iloc[:safe_boundary],
+            after["position"].iloc[:safe_boundary]
+        )
+        pd.testing.assert_series_equal(
+            before["stopped_out"].iloc[:safe_boundary],
+            after["stopped_out"].iloc[:safe_boundary]
+        )
+
+
 class AlphaConcentrationCapTests(unittest.TestCase):
     def test_no_single_alpha_exceeds_cap(self):
         weights = pd.DataFrame({

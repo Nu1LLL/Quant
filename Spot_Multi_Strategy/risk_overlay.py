@@ -8,10 +8,19 @@
 3. 单资产敞口上限：由调用方在合成组合时传入cap。
 4. Alpha集中度上限：cap_alpha_concentration，防止单个alpha主导组合。
 5. 换手控制：no_trade_band，目标敞口变化不超过阈值就不换仓。
+6. 逐笔ATR移动止损（可选，stop_loss_atr_multiple）：mini_medallion_v1
+   报告发现新系统回撤远大于既有引擎（-18%~-27% vs -2.4%~-4.5%），
+   根因是既有引擎有engine.py那样逐笔止损，这里的组合层风控只有
+   软性的整体回撤打折，没有替代逐笔止损的机制。这里补上一个简化版：
+   只在每根K线**收盘**检查（不是engine.py那种日内最低价检查，保护力度
+   更弱，这是一个明确记录在案的简化，不是等价实现），用持仓期间
+   收盘价的峰值回撤幅度（ATR标准化）触发强制平仓，且止损判定优先于
+   换手不交易带——止损不应该因为"变化幅度不够"而被无视。
 
-回撤控制和换手控制天然是路径依赖的（今天的仓位取决于组合自己过去的
-权益曲线和昨天的仓位），所以用一个显式的前向循环实现，不是矢量化的
-简单一行代码——但循环里只使用当前及更早的数据，不引入未来信息。
+回撤控制、换手控制和止损天然是路径依赖的（今天的仓位取决于组合自己
+过去的权益曲线和昨天的仓位），所以用一个显式的前向循环实现，不是
+矢量化的简单一行代码——但循环里只使用当前及更早的数据，不引入未来
+信息。
 """
 from dataclasses import dataclass
 
@@ -19,6 +28,7 @@ import numpy as np
 import pandas as pd
 
 import alpha_metrics
+from indicators import calculate_atr
 
 
 @dataclass
@@ -31,6 +41,8 @@ class RiskConfig:
     drawdown_min_scalar: float = 0.30
     no_trade_band: float = 0.05
     max_alpha_weight: float = 0.50
+    stop_loss_atr_multiple: float = None
+    stop_loss_atr_window: int = 14
 
 
 def infer_periods_per_year(open_time):
@@ -123,7 +135,7 @@ def apply_risk_overlay(
     转成实际持仓路径和逐根K线净收益。
 
     返回一个DataFrame：open_time, raw_exposure, vol_scalar,
-    drawdown_scalar, position, bar_return, net_pnl, equity。
+    drawdown_scalar, position, bar_return, stopped_out, net_pnl, equity。
     """
     config = config or RiskConfig()
 
@@ -140,7 +152,16 @@ def apply_risk_overlay(
 
     scaled_target_values = scaled_target.to_numpy()
     bar_return_values = bar_return.to_numpy()
+    close_values = df["close"].to_numpy()
     n = len(df)
+
+    stop_loss_enabled = config.stop_loss_atr_multiple is not None
+    if stop_loss_enabled:
+        atr_values = calculate_atr(
+            df, window=config.stop_loss_atr_window
+        ).to_numpy()
+    else:
+        atr_values = None
 
     position = np.zeros(n)
     drawdown_scalar_values = np.ones(n)
@@ -148,10 +169,14 @@ def apply_risk_overlay(
     executed_turnover = np.zeros(n)
     cost_values = np.zeros(n)
     rebalance_flag = np.zeros(n, dtype=bool)
+    stopped_out_flag = np.zeros(n, dtype=bool)
 
     equity = 1.0
     running_max_equity = 1.0
     current_position = 0.0
+    peak_close_since_entry = None
+    entry_atr = None
+    position_epsilon = 1e-9
 
     for t in range(n):
         drawdown = equity / running_max_equity - 1.0 if running_max_equity > 0 else 0.0
@@ -164,11 +189,49 @@ def apply_risk_overlay(
         drawdown_scalar_values[t] = dd_scalar
 
         target_t = scaled_target_values[t] * dd_scalar
+        stop_triggered = False
 
-        if abs(target_t - current_position) >= config.no_trade_band:
+        # 止损判定：只在已经持仓的情况下检查，用持仓期间收盘价峰值
+        # 回撤（ATR标准化）——这是engine.py日内最低价止损的简化近似，
+        # 保护力度更弱，只在收盘时刻（每4小时一次）才可能触发。
+        if stop_loss_enabled and current_position > position_epsilon:
+            close_t = close_values[t]
+            if peak_close_since_entry is None:
+                peak_close_since_entry = close_t
+            else:
+                peak_close_since_entry = max(peak_close_since_entry, close_t)
+
+            # 如果开仓时ATR还没有完成预热（entry_atr是NaN），
+            # 只要仍然持仓就每根K线用当前已知的ATR重试补齐，
+            # 一旦补上就立刻开始生效——只用当前及更早的数据。
+            if entry_atr is None and not np.isnan(atr_values[t]):
+                entry_atr = atr_values[t]
+
+            if entry_atr is not None and entry_atr > 0:
+                stop_level = (
+                    peak_close_since_entry
+                    - config.stop_loss_atr_multiple * entry_atr
+                )
+                if close_t <= stop_level:
+                    stop_triggered = True
+                    target_t = 0.0
+
+        if stop_triggered or abs(target_t - current_position) >= config.no_trade_band:
             turnover = abs(target_t - current_position)
             current_position = target_t
             rebalance_flag[t] = True
+            stopped_out_flag[t] = stop_triggered
+
+            if stop_loss_enabled:
+                if current_position <= position_epsilon:
+                    peak_close_since_entry = None
+                    entry_atr = None
+                elif entry_atr is None:
+                    # 新开仓：记录入场时刻已知的ATR和收盘价作为止损基准
+                    entry_atr = (
+                        atr_values[t] if not np.isnan(atr_values[t]) else None
+                    )
+                    peak_close_since_entry = close_values[t]
         else:
             turnover = 0.0
 
@@ -200,6 +263,7 @@ def apply_risk_overlay(
         "turnover": executed_turnover,
         "cost": cost_values,
         "rebalanced": rebalance_flag,
+        "stopped_out": stopped_out_flag,
         "net_pnl": net_pnl,
         "equity": equity_curve.values
     })

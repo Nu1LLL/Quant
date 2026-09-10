@@ -71,10 +71,16 @@ def build_symbol_exposure(
     )
 
     if apply_regime_filter:
-        regime = alpha_metrics.compute_regime_labels(df)
-        target_exposure = target_exposure.where(
-            regime.reset_index(drop=True) != "ranging", 0.0
-        )
+        # 注意：compute_regime_labels()的三分位切分点用了全样本分位数，
+        # 会把未来数据泄漏进regime分类，只适合alpha_research.py那种
+        # 事后描述性统计，不能用来决定实际仓位。这里改用纯滚动窗口的
+        # compute_raw_efficiency_ratio做连续缩放（regime越震荡、ER越
+        # 低，敞口按比例调低，而不是硬切0/1），一是消除未来数据泄漏，
+        # 二是避免硬切换带来的频繁开平仓换手。
+        regime_scalar = alpha_metrics.compute_raw_efficiency_ratio(df)
+        target_exposure = target_exposure * regime_scalar.reset_index(
+            drop=True
+        ).fillna(0.0)
 
     return weights, combined_alpha, target_exposure, available
 
@@ -89,6 +95,8 @@ def run_alpha_ensemble_portfolio(
     per_asset_cap=DEFAULT_PER_ASSET_CAP,
     apply_regime_filter=False,
     vol_target_annualized=None,
+    stop_loss_atr_multiple=None,
+    stop_loss_atr_window=14,
     initial_capital=5000.0,
     symbols=None
 ):
@@ -107,7 +115,9 @@ def run_alpha_ensemble_portfolio(
 
         risk_config = risk_overlay.RiskConfig(
             vol_target_annualized=vol_target_annualized,
-            exposure_cap=per_asset_cap
+            exposure_cap=per_asset_cap,
+            stop_loss_atr_multiple=stop_loss_atr_multiple,
+            stop_loss_atr_window=stop_loss_atr_window
         )
         simulation = risk_overlay.apply_risk_overlay(
             df, target_exposure, config=risk_config,
@@ -278,6 +288,10 @@ def parse_arguments():
     parser.add_argument(
         "--legacy-config", default="configs/regime_switching.json"
     )
+    parser.add_argument(
+        "--stop-loss-atr-multiple", type=float, default=2.5,
+        help="E场景用的ATR止损倍数，默认借用既有引擎的trend_stop_atr_multiple"
+    )
     parser.add_argument("--output-folder", default="reports/mini_medallion_v1")
     return parser.parse_args()
 
@@ -345,6 +359,19 @@ def main():
         )
     )
 
+    # E场景：结构性尝试——给组合层敞口加一个逐笔ATR止损，止损倍数
+    # 直接借用既有引擎StrategyConfig.trend_stop_atr_multiple的默认值
+    # (2.5)，不是从回测结果里挑出来的数字。
+    scenarios["E_corr_penalized_with_atr_stop_loss"] = (
+        run_alpha_ensemble_portfolio(
+            frames, alpha_sets, accepted, "corr_penalized",
+            args.fee, args.slippage,
+            per_asset_cap=args.per_asset_cap,
+            stop_loss_atr_multiple=args.stop_loss_atr_multiple,
+            initial_capital=args.capital, symbols=args.symbols
+        )
+    )
+
     summary_rows = []
     for name, result in scenarios.items():
         summary_rows.append({"scenario": name, **result["metrics"]})
@@ -365,7 +392,8 @@ def main():
     for scenario_name in [
         "B_alpha_ensemble_equal", "B_alpha_ensemble_ic",
         "B_alpha_ensemble_corr_penalized",
-        "D_regime_filtered_ensemble_corr_penalized"
+        "D_regime_filtered_ensemble_corr_penalized",
+        "E_corr_penalized_with_atr_stop_loss"
     ]:
         for symbol, simulation in scenarios[scenario_name]["per_symbol"].items():
             symbol_metrics = portfolio_metrics.calculate_extended_metrics(

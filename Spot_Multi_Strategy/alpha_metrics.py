@@ -128,16 +128,28 @@ def cost_adjusted_spread(
     return spread - estimated_drag
 
 
-def compute_regime_labels(df, window=20):
-    """用Kaufman效率比率把样本切成trending/mixed/ranging三个regime桶，
-    只用于研究报告里的regime细分展示，不是一个交易规则。
+def compute_raw_efficiency_ratio(df, window=20):
+    """Kaufman效率比率，纯滚动窗口计算，t时刻的值只用到t及更早的数据，
+    可以安全地用作交易规则的输入（不像下面的compute_regime_labels）。
     """
     close = df["close"]
     net_change = (close - close.shift(window)).abs()
     path_length = close.diff().abs().rolling(window).sum()
-    efficiency_ratio = (
-        net_change / path_length.replace(0, np.nan)
-    ).clip(0, 1)
+    return (net_change / path_length.replace(0, np.nan)).clip(0, 1)
+
+
+def compute_regime_labels(df, window=20):
+    """用Kaufman效率比率把样本切成trending/mixed/ranging三个regime桶。
+
+    警告：三分位切分点用的是efficiency_ratio的**全样本**分位数
+    （valid.quantile），也就是说2020年某一根K线的分类，依赖于2026年
+    的数据分布——这对于"事后描述历史各regime表现"（比如
+    alpha_research.py报告里的regime细分）是可以接受的做法，但绝对
+    不能被当作实时交易规则使用，否则就是未来数据泄漏。如果需要给
+    实盘/回测的敞口决策使用regime信息，请用上面纯滚动窗口的
+    compute_raw_efficiency_ratio，不要用这个函数的分类结果去决定仓位。
+    """
+    efficiency_ratio = compute_raw_efficiency_ratio(df, window=window)
 
     valid = efficiency_ratio.dropna()
     if len(valid) < 30:
