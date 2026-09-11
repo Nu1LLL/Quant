@@ -7,6 +7,7 @@ sleeve执行引擎（engine.py）。
 """
 from . import (
     base,
+    chan_theory,
     cross_asset,
     mean_reversion,
     momentum,
@@ -16,7 +17,9 @@ from . import (
 )
 from .base import AlphaSignal
 
-SINGLE_ASSET_MODULES = (momentum, trend, mean_reversion, volatility, volume)
+SINGLE_ASSET_MODULES = (
+    momentum, trend, mean_reversion, volatility, volume, chan_theory
+)
 
 
 def build_single_asset_alphas(df):
@@ -56,6 +59,7 @@ def build_alpha_library(df, btc_df=None, eth_df=None):
 __all__ = [
     "AlphaSignal",
     "base",
+    "chan_theory",
     "cross_asset",
     "mean_reversion",
     "momentum",
