@@ -51,6 +51,48 @@ def download_yahoo_daily_klines(symbol, range_="10y", timeout=15, session=None):
     return df
 
 
+def download_yahoo_adjusted_close(
+    symbol, range_="10y", timeout=15, session=None
+):
+    """Download a split- and distribution-adjusted daily close series."""
+    request_session = session or requests.Session()
+    response = request_session.get(
+        YAHOO_CHART_URL.format(symbol=symbol),
+        params={"range": range_, "interval": "1d"},
+        headers={"User-Agent": USER_AGENT},
+        timeout=timeout,
+    )
+    response.raise_for_status()
+    payload = response.json()
+    result = payload.get("chart", {}).get("result")
+    if not result:
+        raise ValueError(f"Yahoo Finance没有返回{symbol}的数据")
+    result = result[0]
+    adjusted = result.get("indicators", {}).get("adjclose")
+    if not adjusted or "adjclose" not in adjusted[0]:
+        raise ValueError(f"Yahoo Finance没有返回{symbol}的复权收盘价")
+    frame = pd.DataFrame({
+        "open_time": pd.to_datetime(
+            result["timestamp"], unit="s", utc=True
+        ).normalize(),
+        "adjusted_close": adjusted[0]["adjclose"],
+    })
+    return frame.dropna(subset=["adjusted_close"]).reset_index(drop=True)
+
+
+def load_or_download_yahoo_adjusted_close(
+    symbol, range_="10y", cache_folder="yahoo_data_cache", refresh=False
+):
+    cache_path = Path(cache_folder)
+    cache_path.mkdir(parents=True, exist_ok=True)
+    data_file = cache_path / f"{symbol.upper()}_{range_}_adjusted_close.csv"
+    if data_file.exists() and not refresh:
+        return pd.read_csv(data_file, parse_dates=["open_time"])
+    frame = download_yahoo_adjusted_close(symbol, range_=range_)
+    frame.to_csv(data_file, index=False)
+    return frame
+
+
 def load_or_download_yahoo_klines(
     symbol,
     range_="10y",

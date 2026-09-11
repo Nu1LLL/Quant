@@ -5,7 +5,11 @@ from unittest.mock import MagicMock
 
 import pandas as pd
 
-from yahoo_data import download_yahoo_daily_klines, load_or_download_yahoo_klines
+from yahoo_data import (
+    download_yahoo_adjusted_close,
+    download_yahoo_daily_klines,
+    load_or_download_yahoo_klines,
+)
 
 
 def _fake_yahoo_payload(timestamps, opens, highs, lows, closes, volumes):
@@ -80,6 +84,34 @@ class YahooParsingTests(unittest.TestCase):
         session = self._mock_session({"chart": {"result": None}})
         with self.assertRaises(ValueError):
             download_yahoo_daily_klines("TEST", session=session)
+
+    def test_adjusted_close_is_parsed_and_dates_are_normalized(self):
+        payload = _fake_yahoo_payload(
+            timestamps=[1700000000, 1700086400],
+            opens=[100.0, 101.0], highs=[102.0, 103.0],
+            lows=[99.0, 100.0], closes=[101.0, 102.0], volumes=[1000, 1100]
+        )
+        payload["chart"]["result"][0]["indicators"]["adjclose"] = [{
+            "adjclose": [98.0, 99.0]
+        }]
+        frame = download_yahoo_adjusted_close(
+            "TEST", session=self._mock_session(payload)
+        )
+        self.assertListEqual(
+            list(frame.columns), ["open_time", "adjusted_close"]
+        )
+        self.assertAlmostEqual(frame.iloc[0]["adjusted_close"], 98.0)
+        self.assertTrue((frame["open_time"].dt.hour == 0).all())
+
+    def test_missing_adjusted_close_raises(self):
+        payload = _fake_yahoo_payload(
+            timestamps=[1700000000], opens=[100.0], highs=[101.0],
+            lows=[99.0], closes=[100.0], volumes=[1000]
+        )
+        with self.assertRaises(ValueError):
+            download_yahoo_adjusted_close(
+                "TEST", session=self._mock_session(payload)
+            )
 
 
 class YahooCacheTests(unittest.TestCase):
