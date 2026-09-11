@@ -1,0 +1,14 @@
+{
+  "BNBUSDT": [],
+  "BTCUSDT": [
+    "A02_ema_distance_100",
+    "A07_atr_percentile",
+    "A08_trend_quality"
+  ],
+  "ETHUSDT": [
+    "A02_ema_distance_100",
+    "A07_atr_percentile",
+    "A08_trend_quality"
+  ],
+  "SOLUSDT": []
+}
