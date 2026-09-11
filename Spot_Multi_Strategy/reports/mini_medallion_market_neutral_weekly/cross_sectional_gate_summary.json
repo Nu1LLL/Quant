@@ -45,7 +45,8 @@
     "A24_skip_momentum_72_6",
     "A25_sign_tsmom_168",
     "A25_sign_tsmom_24",
-    "A25_sign_tsmom_72"
+    "A25_sign_tsmom_72",
+    "A26_chan_pivot_position"
   ],
   "rejection_reasons": {
     "A01_ts_momentum_12": [
@@ -242,6 +243,11 @@
       "扣费后成本侵蚀比例不超过70%"
     ],
     "A25_sign_tsmom_72": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A26_chan_pivot_position": [
       "单折PnL占比不超过50%",
       "单一日历年PnL占比不超过60%",
       "扣费后成本侵蚀比例不超过70%"
