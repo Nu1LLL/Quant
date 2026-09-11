@@ -1,0 +1,152 @@
+{
+  "fold_count": 6,
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT"
+  ],
+  "accepted_alphas": [
+    "A02_ema_distance_100",
+    "A07_atr_percentile",
+    "A08_trend_quality"
+  ],
+  "rejected_alphas": [
+    "A01_ts_momentum_12",
+    "A01_ts_momentum_120",
+    "A01_ts_momentum_24",
+    "A01_ts_momentum_48",
+    "A01_ts_momentum_72",
+    "A02_ema_distance_20",
+    "A02_ema_distance_50",
+    "A03_donchian_breakout_20",
+    "A04_short_reversion_1",
+    "A04_short_reversion_2",
+    "A04_short_reversion_3",
+    "A04_short_reversion_6",
+    "A05_bollinger_reversion_20",
+    "A06_rsi_reversion_14",
+    "A07_volatility_compression",
+    "A09_efficiency_ratio_20",
+    "A10_volume_surprise_48",
+    "A11_signed_volume_pressure_6",
+    "A12_close_location_value_10",
+    "A13_intraday_range_position_10",
+    "A14_gap_proxy",
+    "A15_volatility_adjusted_breakout_20",
+    "A16_momentum_ensemble",
+    "A17_mean_reversion_ensemble",
+    "A18_btc_lead_eth_lag_1",
+    "A18_btc_lead_eth_lag_2",
+    "A18_btc_lead_eth_lag_3",
+    "A19_relative_strength_btc_eth_24"
+  ],
+  "rejection_reasons": {
+    "A01_ts_momentum_12": [
+      "BTCUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A01_ts_momentum_120": [
+      "BTCUSDT: 至少60%的折IC为正, 单折PnL占比不超过50%",
+      "ETHUSDT: 单折PnL占比不超过50%"
+    ],
+    "A01_ts_momentum_24": [
+      "BTCUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A01_ts_momentum_48": [
+      "BTCUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 单折PnL占比不超过50%"
+    ],
+    "A01_ts_momentum_72": [
+      "BTCUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 单折PnL占比不超过50%"
+    ],
+    "A02_ema_distance_20": [
+      "BTCUSDT: 单折PnL占比不超过50%",
+      "ETHUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A02_ema_distance_50": [
+      "BTCUSDT: 单折PnL占比不超过50%",
+      "ETHUSDT: 单折PnL占比不超过50%"
+    ],
+    "A03_donchian_breakout_20": [
+      "BTCUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A04_short_reversion_1": [
+      "BTCUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A04_short_reversion_2": [
+      "BTCUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A04_short_reversion_3": [
+      "BTCUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A04_short_reversion_6": [
+      "BTCUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A05_bollinger_reversion_20": [
+      "BTCUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A06_rsi_reversion_14": [
+      "BTCUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A07_volatility_compression": [
+      "BTCUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%",
+      "ETHUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%"
+    ],
+    "A09_efficiency_ratio_20": [
+      "BTCUSDT: 单折PnL占比不超过50%",
+      "ETHUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A10_volume_surprise_48": [
+      "BTCUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A11_signed_volume_pressure_6": [
+      "BTCUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A12_close_location_value_10": [
+      "BTCUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A13_intraday_range_position_10": [
+      "BTCUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A14_gap_proxy": [
+      "BTCUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A15_volatility_adjusted_breakout_20": [
+      "BTCUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A16_momentum_ensemble": [
+      "BTCUSDT: 单折PnL占比不超过50%",
+      "ETHUSDT: 单折PnL占比不超过50%"
+    ],
+    "A17_mean_reversion_ensemble": [
+      "BTCUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%",
+      "ETHUSDT: 折IC中位数为正, 至少60%的折IC为正, 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A18_btc_lead_eth_lag_1": [
+      "ETHUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A18_btc_lead_eth_lag_2": [
+      "ETHUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A18_btc_lead_eth_lag_3": [
+      "ETHUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ],
+    "A19_relative_strength_btc_eth_24": [
+      "ETHUSDT: 单折PnL占比不超过50%, 单一日历年PnL占比不超过60%"
+    ]
+  }
+}
