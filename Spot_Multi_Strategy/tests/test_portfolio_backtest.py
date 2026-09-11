@@ -106,5 +106,51 @@ class PortfolioBacktestPlumbingTests(unittest.TestCase):
         self.assertTrue(comparison.all())
 
 
+class PerAssetLicensingTests(unittest.TestCase):
+    def setUp(self):
+        self.frames = {
+            "BTCUSDT": _make_ohlcv(2500, seed=1),
+            "ETHUSDT": _make_ohlcv(2500, seed=2)
+        }
+        self.alpha_sets = {
+            symbol: alphas.build_single_asset_alphas(df)
+            for symbol, df in self.frames.items()
+        }
+
+    def test_symbol_with_no_licensed_alpha_gets_zero_exposure_not_an_error(self):
+        per_asset_map = {
+            "BTCUSDT": ["A02_ema_distance_50"],
+            "ETHUSDT": []
+        }
+        _, _, exposure, available = portfolio_backtest.build_symbol_exposure(
+            "ETHUSDT", self.frames["ETHUSDT"], self.alpha_sets,
+            per_asset_map, "equal"
+        )
+        self.assertEqual(available, {})
+        self.assertTrue((exposure == 0.0).all())
+
+    def test_flat_list_still_raises_when_nothing_available(self):
+        with self.assertRaises(ValueError):
+            portfolio_backtest.build_symbol_exposure(
+                "ETHUSDT", self.frames["ETHUSDT"], self.alpha_sets,
+                ["A_NONEXISTENT_ALPHA"], "equal"
+            )
+
+    def test_per_asset_ensemble_portfolio_only_trades_licensed_symbol(self):
+        per_asset_map = {
+            "BTCUSDT": ["A02_ema_distance_50"],
+            "ETHUSDT": []
+        }
+        result = portfolio_backtest.run_alpha_ensemble_portfolio(
+            self.frames, self.alpha_sets, per_asset_map, "equal",
+            fee_rate=0.001, slippage_rate=0.0005, initial_capital=5000.0
+        )
+        eth_simulation = result["per_symbol"]["ETHUSDT"]
+        self.assertTrue((eth_simulation["position"] == 0.0).all())
+        self.assertTrue((eth_simulation["net_pnl"].fillna(0.0) == 0.0).all())
+        btc_simulation = result["per_symbol"]["BTCUSDT"]
+        self.assertTrue((btc_simulation["position"] != 0.0).any())
+
+
 if __name__ == "__main__":
     unittest.main()

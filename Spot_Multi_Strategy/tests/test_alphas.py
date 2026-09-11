@@ -189,5 +189,123 @@ class CrossAssetAlphaTests(unittest.TestCase):
         )
 
 
+class MultiAssetCrossAssetAlphaTests(unittest.TestCase):
+    """A20市场广度、A23跨资产相对强弱：验证不同长度历史（比如某个
+    资产比其他资产晚上线）不会互相污染，也不会引入未来数据泄漏。
+    """
+
+    def setUp(self):
+        self.frames = {
+            "AAAUSDT": _make_ohlcv(rows=500, seed=11, start_price=100.0),
+            "BBBUSDT": _make_ohlcv(rows=500, seed=12, start_price=50.0),
+            "CCCUSDT": _make_ohlcv(rows=500, seed=13, start_price=10.0),
+        }
+        # 让第四个资产比其他资产晚150根K线才有数据，模拟SOL晚于
+        # BTC/ETH/BNB在Binance上市的情况
+        late_asset = _make_ohlcv(rows=500, seed=14, start_price=1.0)
+        self.frames["DDDUSDT"] = late_asset.iloc[150:].reset_index(drop=True)
+
+    def test_breadth_and_relative_strength_handle_unequal_length_history(self):
+        breadth = alphas.cross_asset.build_market_breadth(self.frames)
+        relative_strength = (
+            alphas.cross_asset.build_cross_sectional_relative_strength(
+                self.frames
+            )
+        )
+
+        for symbol, frame in self.frames.items():
+            self.assertEqual(
+                len(breadth[symbol]["A20_market_breadth_24"].normalized_signal),
+                len(frame)
+            )
+            self.assertEqual(
+                len(
+                    relative_strength[symbol][
+                        "A23_cross_sectional_relative_strength_24"
+                    ].normalized_signal
+                ),
+                len(frame)
+            )
+
+    def test_late_starting_asset_does_not_produce_values_before_its_own_history(self):
+        relative_strength = (
+            alphas.cross_asset.build_cross_sectional_relative_strength(
+                self.frames
+            )
+        )
+        signal = relative_strength["DDDUSDT"][
+            "A23_cross_sectional_relative_strength_24"
+        ]
+        # DDD自己的动量需要24根K线回看，加上波动率48根K线窗口，
+        # 之前应该都是NaN，不应该因为其他资产更早有数据就被填出数值
+        self.assertTrue(signal.normalized_signal.iloc[:47].isna().all())
+
+    def test_no_lookahead_truncating_all_frames_by_calendar_time(self):
+        full_breadth = alphas.cross_asset.build_market_breadth(self.frames)
+        full_rs = alphas.cross_asset.build_cross_sectional_relative_strength(
+            self.frames
+        )
+
+        cutoff = self.frames["AAAUSDT"]["open_time"].iloc[-100]
+        truncated_frames = {
+            symbol: frame[frame["open_time"] < cutoff].reset_index(drop=True)
+            for symbol, frame in self.frames.items()
+        }
+        truncated_breadth = alphas.cross_asset.build_market_breadth(
+            truncated_frames
+        )
+        truncated_rs = (
+            alphas.cross_asset.build_cross_sectional_relative_strength(
+                truncated_frames
+            )
+        )
+
+        for symbol, frame in truncated_frames.items():
+            for full_result, truncated_result, alpha_name in [
+                (
+                    full_breadth, truncated_breadth,
+                    "A20_market_breadth_24"
+                ),
+                (
+                    full_rs, truncated_rs,
+                    "A23_cross_sectional_relative_strength_24"
+                ),
+            ]:
+                full_prefix = (
+                    full_result[symbol][alpha_name].normalized_signal
+                    .iloc[:len(frame)]
+                    .reset_index(drop=True)
+                )
+                truncated_values = (
+                    truncated_result[symbol][alpha_name].normalized_signal
+                    .reset_index(drop=True)
+                )
+                pd.testing.assert_series_equal(
+                    full_prefix, truncated_values, check_names=False
+                )
+
+    def test_breadth_reflects_unanimous_direction(self):
+        rows = 200
+        trending_up = {
+            symbol: _make_ohlcv(rows=rows, seed=20 + i, start_price=100.0)
+            for i, symbol in enumerate(["X1USDT", "X2USDT", "X3USDT"])
+        }
+        # 强制三个资产在最后一段时间同步大涨
+        for frame in trending_up.values():
+            frame.loc[rows - 30:, "close"] = (
+                frame.loc[rows - 31, "close"]
+                * np.cumprod(np.full(30, 1.05))
+            )
+            frame.loc[rows - 30:, "open"] = frame.loc[rows - 30:, "close"]
+
+        breadth = alphas.cross_asset.build_market_breadth(
+            trending_up, horizon=10
+        )
+        last_breadth = breadth["X1USDT"][
+            "A20_market_breadth_10"
+        ].raw_signal.iloc[-1]
+        self.assertAlmostEqual(last_breadth, 1.0)
+
+
 if __name__ == "__main__":
     unittest.main()

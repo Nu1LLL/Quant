@@ -13,7 +13,11 @@ import pandas as pd
 
 import alpha_metrics
 import alphas
+import alphas.alternative_data as alternative_data_alphas
 from data import load_or_download_klines, to_utc_timestamp
+from futures_data import load_or_download_funding_rates
+
+DEFAULT_SYMBOLS = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT"]
 
 
 def parse_arguments():
@@ -21,7 +25,7 @@ def parse_arguments():
         description="Alpha信号预测质量研究（不是交易回测）"
     )
     parser.add_argument(
-        "--symbols", nargs="+", default=["BTCUSDT", "ETHUSDT"]
+        "--symbols", nargs="+", default=DEFAULT_SYMBOLS
     )
     parser.add_argument("--interval", default="4h")
     parser.add_argument("--start", default="2020-01-01")
@@ -33,6 +37,10 @@ def parse_arguments():
     parser.add_argument("--fee", type=float, default=0.001)
     parser.add_argument("--slippage", type=float, default=0.0005)
     parser.add_argument("--rolling-window", type=int, default=250)
+    parser.add_argument(
+        "--no-funding", action="store_true",
+        help="跳过资金费率alpha（比如离线环境拿不到永续合约数据时）"
+    )
     parser.add_argument("--output-folder", default="alpha_reports")
     return parser.parse_args()
 
@@ -50,13 +58,41 @@ def load_symbol_frames(symbols, interval, start, end, cache_folder):
     return frames
 
 
-def build_alpha_sets(frames):
-    """返回{symbol: {alpha_name: AlphaSignal}}，只有当BTC和ETH都在
-    frames里时才给ETHUSDT附加跨资产alpha（A18/A19）。
+def load_funding_frames(symbols, start, end, cache_folder="futures_data_cache"):
+    """返回{symbol: funding_df}，某个品种的永续合约资金费率拿不到时
+    直接跳过那个品种（不静默伪造数据），由调用方决定是否继续。
+    """
+    funding_frames = {}
+    for symbol in symbols:
+        try:
+            funding_frames[symbol.upper()] = load_or_download_funding_rates(
+                symbol=symbol,
+                start_time=start,
+                end_time=end,
+                cache_folder=cache_folder
+            )
+        except Exception:
+            continue
+    return funding_frames
+
+
+def build_alpha_sets(frames, funding_frames=None):
+    """返回{symbol: {alpha_name: AlphaSignal}}。
+
+    - 单资产alpha（A01-A17）：每个品种都有。
+    - A18/A19（BTC领先/ETH滞后、BTC-ETH pairwise相对强弱）：只有当
+      BTC和ETH都在frames里时才附加到ETHUSDT。
+    - A20/A23（市场广度、跨资产相对强弱的N资产泛化版）：当frames里
+      至少有3个品种时，附加到**每一个**品种（不要求恰好是BTC/ETH，
+      不同品种历史长度不一致时用outer join对齐，缺失数据的品种
+      自然被排除，不做静默填补）。
+    - A21/A22（资金费率alpha）：某个品种在funding_frames里有对应的
+      永续合约资金费率数据时才附加，没有就跳过那个品种，不报错。
     """
     alpha_sets = {}
     btc_df = frames.get("BTCUSDT")
     eth_df = frames.get("ETHUSDT")
+    funding_frames = funding_frames or {}
 
     for symbol, df in frames.items():
         if symbol == "ETHUSDT" and btc_df is not None and eth_df is not None:
@@ -65,6 +101,24 @@ def build_alpha_sets(frames):
             )
         else:
             alpha_sets[symbol] = alphas.build_single_asset_alphas(df)
+
+    if len(frames) >= 3:
+        breadth = alphas.cross_asset.build_market_breadth(frames)
+        relative_strength = (
+            alphas.cross_asset.build_cross_sectional_relative_strength(
+                frames
+            )
+        )
+        for symbol in frames:
+            alpha_sets[symbol].update(breadth[symbol])
+            alpha_sets[symbol].update(relative_strength[symbol])
+
+    for symbol, funding_df in funding_frames.items():
+        if symbol not in alpha_sets:
+            continue
+        alpha_sets[symbol].update(
+            alternative_data_alphas.build_alphas(frames[symbol], funding_df)
+        )
 
     return alpha_sets
 
@@ -192,7 +246,17 @@ def main():
         cache_folder=project_folder / "data_cache"
     )
 
-    alpha_sets = build_alpha_sets(frames)
+    funding_frames = (
+        {} if args.no_funding
+        else load_funding_frames(
+            symbols=args.symbols,
+            start=args.start,
+            end=end_time,
+            cache_folder=project_folder / "futures_data_cache"
+        )
+    )
+
+    alpha_sets = build_alpha_sets(frames, funding_frames=funding_frames)
     summary_df, yearly_df = run_research(
         frames=frames,
         alpha_sets=alpha_sets,

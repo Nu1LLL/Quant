@@ -9,7 +9,12 @@ import numpy as np
 import pandas as pd
 
 import alphas
-from alpha_research import build_alpha_sets, load_symbol_frames
+from alpha_research import (
+    DEFAULT_SYMBOLS,
+    build_alpha_sets,
+    load_funding_frames,
+    load_symbol_frames
+)
 from data import INTERVAL_TO_TIMEDELTA, to_utc_timestamp
 
 REDUNDANCY_THRESHOLD = 0.75
@@ -125,12 +130,15 @@ def parse_arguments():
         description="Alpha信号相关性与冗余分析"
     )
     parser.add_argument(
-        "--symbols", nargs="+", default=["BTCUSDT", "ETHUSDT"]
+        "--symbols", nargs="+", default=DEFAULT_SYMBOLS
     )
     parser.add_argument("--interval", default="4h")
     parser.add_argument("--start", default="2020-01-01")
     parser.add_argument("--end", default=None)
     parser.add_argument("--threshold", type=float, default=REDUNDANCY_THRESHOLD)
+    parser.add_argument(
+        "--no-funding", action="store_true", help="跳过资金费率alpha"
+    )
     parser.add_argument("--output-folder", default="alpha_reports")
     return parser.parse_args()
 
@@ -158,7 +166,14 @@ def main():
         end=end_time,
         cache_folder=project_folder / "data_cache"
     )
-    alpha_sets = build_alpha_sets(frames)
+    funding_frames = (
+        {} if args.no_funding
+        else load_funding_frames(
+            symbols=args.symbols, start=args.start, end=end_time,
+            cache_folder=project_folder / "futures_data_cache"
+        )
+    )
+    alpha_sets = build_alpha_sets(frames, funding_frames=funding_frames)
 
     output_folder = project_folder / args.output_folder
     output_folder.mkdir(parents=True, exist_ok=True)

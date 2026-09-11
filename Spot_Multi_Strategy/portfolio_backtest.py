@@ -16,8 +16,17 @@ import alpha_metrics
 import ensemble
 import portfolio_metrics
 import risk_overlay
-from alpha_gate_report import run_gate, summarize_acceptance
-from alpha_research import build_alpha_sets, load_symbol_frames
+from alpha_gate_report import (
+    run_gate,
+    summarize_acceptance,
+    summarize_per_asset_acceptance
+)
+from alpha_research import (
+    DEFAULT_SYMBOLS,
+    build_alpha_sets,
+    load_funding_frames,
+    load_symbol_frames
+)
 from config import BacktestConfig, StrategyConfig, validate_config
 from config_io import load_strategy_config
 from data import INTERVAL_TO_TIMEDELTA, to_utc_timestamp
@@ -25,7 +34,6 @@ from engine import run_backtest
 from metrics import calculate_buy_and_hold
 from strategies import generate_signals
 
-DEFAULT_SYMBOLS = ["BTCUSDT", "ETHUSDT"]
 DEFAULT_PER_ASSET_CAP = 0.60
 
 
@@ -46,6 +54,18 @@ def get_accepted_alphas(frames, alpha_sets, folds=6, fee=0.001, slippage=0.0005)
     return accepted, rejected, gate_df, fold_df
 
 
+def get_per_asset_accepted_alphas(
+    frames, alpha_sets, folds=6, fee=0.001, slippage=0.0005
+):
+    """和get_accepted_alphas()共用同一次walk-forward Gate运行，只是
+    汇总方式不同：这里不要求alpha在所有品种上都通过，允许资产特定
+    的license（见summarize_per_asset_acceptance的说明）。
+    """
+    gate_df, fold_df, _ = run_gate(frames, alpha_sets, folds, fee, slippage)
+    per_asset_map = summarize_per_asset_acceptance(gate_df)
+    return per_asset_map, gate_df, fold_df
+
+
 def build_symbol_exposure(
     symbol,
     df,
@@ -57,12 +77,35 @@ def build_symbol_exposure(
     window=500,
     min_periods=100
 ):
+    """accepted_names可以是一个扁平列表（每个品种共用同一份通过验收
+    的alpha清单，来自summarize_acceptance——要求在所有品种上都通过），
+    也可以是{品种: [alpha名]}这种按资产分别license的字典（来自
+    summarize_per_asset_acceptance——承认alpha的有效性可能本来就是
+    资产特定的）。两种情况用的都是同一套6项验收标准，区别只在于
+    "通过"这件事是否要求跨资产统一。
+    """
+    if isinstance(accepted_names, dict):
+        symbol_accepted_names = accepted_names.get(symbol, [])
+    else:
+        symbol_accepted_names = accepted_names
+
     available = {
         name: alpha_sets[symbol][name]
-        for name in accepted_names
+        for name in symbol_accepted_names
         if name in alpha_sets[symbol]
     }
     if not available:
+        if isinstance(accepted_names, dict):
+            # 按资产分别license时，某个资产一个alpha都没有是完全正常
+            # 的结果（不是配置错误）：这个资产就应该保持空仓，资金
+            # 那部分留在现金里，而不是报错中断整个组合回测。
+            zero_exposure = pd.Series(0.0, index=df.index)
+            return (
+                pd.DataFrame(index=df.index),
+                pd.Series(0.0, index=df.index),
+                zero_exposure,
+                {}
+            )
         raise ValueError(f"{symbol}没有任何通过验收的alpha可用于组合")
 
     weights, combined_alpha, target_exposure = ensemble.build_ensemble(
@@ -292,6 +335,9 @@ def parse_arguments():
         "--stop-loss-atr-multiple", type=float, default=2.5,
         help="E场景用的ATR止损倍数，默认借用既有引擎的trend_stop_atr_multiple"
     )
+    parser.add_argument(
+        "--no-funding", action="store_true", help="跳过资金费率alpha"
+    )
     parser.add_argument("--output-folder", default="reports/mini_medallion_v1")
     return parser.parse_args()
 
@@ -306,7 +352,14 @@ def main():
         start=args.start, end=end_time,
         cache_folder=project_folder / "data_cache"
     )
-    alpha_sets = build_alpha_sets(frames)
+    funding_frames = (
+        {} if args.no_funding
+        else load_funding_frames(
+            symbols=args.symbols, start=args.start, end=end_time,
+            cache_folder=project_folder / "futures_data_cache"
+        )
+    )
+    alpha_sets = build_alpha_sets(frames, funding_frames=funding_frames)
 
     print("正在运行Alpha Research Gate（walk-forward）...")
     accepted, rejected, gate_df, fold_df = get_accepted_alphas(
@@ -317,17 +370,13 @@ def main():
     output_folder = project_folder / args.output_folder
     output_folder.mkdir(parents=True, exist_ok=True)
 
-    if not accepted:
-        print("没有alpha通过Research Gate，无法构建组合，据实报告。")
-        with (output_folder / "gate_only_summary.json").open(
-            "w", encoding="utf-8"
-        ) as file:
-            json.dump(
-                {"accepted": accepted, "rejected": rejected},
-                file, ensure_ascii=False, indent=2
-            )
-        return
+    gate_df.to_csv(output_folder / "alpha_gate_results.csv", index=False)
+    fold_df.to_csv(output_folder / "alpha_gate_folds.csv", index=False)
 
+    # A场景（既有多策略引擎）和C场景（买入持有）不需要任何通过验收
+    # 的alpha，即使Gate一个alpha都没放行，这两个场景仍然值得跑出来
+    # 做参照——不能因为新alpha研究没有产出，就连既有系统在扩大后的
+    # 资产范围上的表现也一起不报告。
     scenarios = {}
 
     legacy_config_path = project_folder / args.legacy_config
@@ -335,42 +384,118 @@ def main():
         frames, legacy_config_path, args.fee, args.slippage,
         initial_capital=args.capital, symbols=args.symbols
     )
-
-    for method in ("equal", "ic", "corr_penalized"):
-        scenarios[f"B_alpha_ensemble_{method}"] = run_alpha_ensemble_portfolio(
-            frames, alpha_sets, accepted, method,
-            args.fee, args.slippage,
-            per_asset_cap=args.per_asset_cap,
-            initial_capital=args.capital, symbols=args.symbols
-        )
-
     scenarios["C_buy_and_hold"] = run_buy_and_hold_portfolio(
         frames, args.fee, args.slippage,
         initial_capital=args.capital, symbols=args.symbols
     )
 
-    scenarios["D_regime_filtered_ensemble_corr_penalized"] = (
-        run_alpha_ensemble_portfolio(
-            frames, alpha_sets, accepted, "corr_penalized",
-            args.fee, args.slippage,
-            per_asset_cap=args.per_asset_cap,
-            apply_regime_filter=True,
-            initial_capital=args.capital, symbols=args.symbols
-        )
-    )
+    per_symbol_rows = []
+    cost_sensitivity_df = pd.DataFrame()
 
-    # E场景：结构性尝试——给组合层敞口加一个逐笔ATR止损，止损倍数
-    # 直接借用既有引擎StrategyConfig.trend_stop_atr_multiple的默认值
-    # (2.5)，不是从回测结果里挑出来的数字。
-    scenarios["E_corr_penalized_with_atr_stop_loss"] = (
-        run_alpha_ensemble_portfolio(
-            frames, alpha_sets, accepted, "corr_penalized",
-            args.fee, args.slippage,
-            per_asset_cap=args.per_asset_cap,
-            stop_loss_atr_multiple=args.stop_loss_atr_multiple,
-            initial_capital=args.capital, symbols=args.symbols
+    if not accepted:
+        print("没有alpha通过Research Gate，B/D/E场景无法构建，据实报告。")
+    else:
+        for method in ("equal", "ic", "corr_penalized"):
+            scenarios[f"B_alpha_ensemble_{method}"] = (
+                run_alpha_ensemble_portfolio(
+                    frames, alpha_sets, accepted, method,
+                    args.fee, args.slippage,
+                    per_asset_cap=args.per_asset_cap,
+                    initial_capital=args.capital, symbols=args.symbols
+                )
+            )
+
+        scenarios["D_regime_filtered_ensemble_corr_penalized"] = (
+            run_alpha_ensemble_portfolio(
+                frames, alpha_sets, accepted, "corr_penalized",
+                args.fee, args.slippage,
+                per_asset_cap=args.per_asset_cap,
+                apply_regime_filter=True,
+                initial_capital=args.capital, symbols=args.symbols
+            )
         )
-    )
+
+        # E场景：结构性尝试——给组合层敞口加一个逐笔ATR止损，止损倍数
+        # 直接借用既有引擎StrategyConfig.trend_stop_atr_multiple的默认值
+        # (2.5)，不是从回测结果里挑出来的数字。
+        scenarios["E_corr_penalized_with_atr_stop_loss"] = (
+            run_alpha_ensemble_portfolio(
+                frames, alpha_sets, accepted, "corr_penalized",
+                args.fee, args.slippage,
+                per_asset_cap=args.per_asset_cap,
+                stop_loss_atr_multiple=args.stop_loss_atr_multiple,
+                initial_capital=args.capital, symbols=args.symbols
+            )
+        )
+
+        for scenario_name in [
+            "B_alpha_ensemble_equal", "B_alpha_ensemble_ic",
+            "B_alpha_ensemble_corr_penalized",
+            "D_regime_filtered_ensemble_corr_penalized",
+            "E_corr_penalized_with_atr_stop_loss"
+        ]:
+            for symbol, simulation in (
+                scenarios[scenario_name]["per_symbol"].items()
+            ):
+                symbol_metrics = portfolio_metrics.calculate_extended_metrics(
+                    simulation,
+                    initial_capital=args.capital / len(args.symbols)
+                )
+                per_symbol_rows.append({
+                    "scenario": scenario_name, "symbol": symbol,
+                    **symbol_metrics
+                })
+
+        cost_sensitivity_rows = []
+        for multiplier in (1, 2, 3):
+            stressed = run_alpha_ensemble_portfolio(
+                frames, alpha_sets, accepted, "corr_penalized",
+                args.fee * multiplier, args.slippage * multiplier,
+                per_asset_cap=args.per_asset_cap,
+                initial_capital=args.capital, symbols=args.symbols
+            )
+            cost_sensitivity_rows.append({
+                "cost_multiplier": multiplier, **stressed["metrics"]
+            })
+        cost_sensitivity_df = pd.DataFrame(cost_sensitivity_rows)
+        cost_sensitivity_df.to_csv(
+            output_folder / "cost_sensitivity.csv", index=False
+        )
+
+    # F场景：按资产分别license（不要求同一个alpha在所有品种上都通过），
+    # 复用同一次Gate运行的结果，只是汇总方式不同——用的还是同一套
+    # 6项标准，只是承认alpha的有效性可能本来就是资产特定的。
+    per_asset_map = summarize_per_asset_acceptance(gate_df)
+    per_asset_has_any = any(len(names) > 0 for names in per_asset_map.values())
+
+    if per_asset_has_any:
+        scenarios["F_per_asset_licensed_ensemble_corr_penalized"] = (
+            run_alpha_ensemble_portfolio(
+                frames, alpha_sets, per_asset_map, "corr_penalized",
+                args.fee, args.slippage,
+                per_asset_cap=args.per_asset_cap,
+                initial_capital=args.capital, symbols=args.symbols
+            )
+        )
+        for symbol, simulation in (
+            scenarios["F_per_asset_licensed_ensemble_corr_penalized"][
+                "per_symbol"
+            ].items()
+        ):
+            symbol_metrics = portfolio_metrics.calculate_extended_metrics(
+                simulation, initial_capital=args.capital / len(args.symbols)
+            )
+            per_symbol_rows.append({
+                "scenario": "F_per_asset_licensed_ensemble_corr_penalized",
+                "symbol": symbol, **symbol_metrics
+            })
+    else:
+        print("按资产分别license后，仍然没有任何品种有可用的alpha，F场景无法构建。")
+
+    with (output_folder / "per_asset_gate_summary.json").open(
+        "w", encoding="utf-8"
+    ) as file:
+        json.dump(per_asset_map, file, ensure_ascii=False, indent=2)
 
     summary_rows = []
     for name, result in scenarios.items():
@@ -383,52 +508,26 @@ def main():
             output_folder / f"{name}_equity.csv", index=False
         )
 
-    gate_df.to_csv(output_folder / "alpha_gate_results.csv", index=False)
-    fold_df.to_csv(output_folder / "alpha_gate_folds.csv", index=False)
-
-    # BTC vs ETH单资产拆分（只针对alpha ensemble场景，因为per_symbol结果
-    # 已经在risk_overlay模拟里保留了，不需要重新跑）
-    per_symbol_rows = []
-    for scenario_name in [
-        "B_alpha_ensemble_equal", "B_alpha_ensemble_ic",
-        "B_alpha_ensemble_corr_penalized",
-        "D_regime_filtered_ensemble_corr_penalized",
-        "E_corr_penalized_with_atr_stop_loss"
-    ]:
-        for symbol, simulation in scenarios[scenario_name]["per_symbol"].items():
-            symbol_metrics = portfolio_metrics.calculate_extended_metrics(
-                simulation, initial_capital=args.capital / len(args.symbols)
-            )
-            per_symbol_rows.append({
-                "scenario": scenario_name, "symbol": symbol, **symbol_metrics
-            })
     per_symbol_df = pd.DataFrame(per_symbol_rows)
     per_symbol_df.to_csv(
         output_folder / "scenario_per_symbol_breakdown.csv", index=False
     )
 
-    # 成本敏感性：对corr_penalized集成方式做2倍/3倍成本压力测试
-    cost_sensitivity_rows = []
-    for multiplier in (1, 2, 3):
-        stressed = run_alpha_ensemble_portfolio(
-            frames, alpha_sets, accepted, "corr_penalized",
-            args.fee * multiplier, args.slippage * multiplier,
-            per_asset_cap=args.per_asset_cap,
-            initial_capital=args.capital, symbols=args.symbols
+    with (output_folder / "gate_only_summary.json").open(
+        "w", encoding="utf-8"
+    ) as file:
+        json.dump(
+            {"accepted": accepted, "rejected": rejected},
+            file, ensure_ascii=False, indent=2
         )
-        cost_sensitivity_rows.append({
-            "cost_multiplier": multiplier, **stressed["metrics"]
-        })
-    cost_sensitivity_df = pd.DataFrame(cost_sensitivity_rows)
-    cost_sensitivity_df.to_csv(
-        output_folder / "cost_sensitivity.csv", index=False
-    )
 
     print(summary_df.to_string(index=False))
-    print("\nBTC/ETH拆分：")
-    print(per_symbol_df.to_string(index=False))
-    print("\n成本敏感性（corr_penalized集成）：")
-    print(cost_sensitivity_df.to_string(index=False))
+    if not per_symbol_df.empty:
+        print("\n单资产拆分：")
+        print(per_symbol_df.to_string(index=False))
+    if not cost_sensitivity_df.empty:
+        print("\n成本敏感性（corr_penalized集成）：")
+        print(cost_sensitivity_df.to_string(index=False))
     print(f"\n报告已保存到：{output_folder}")
 
 

@@ -11,7 +11,12 @@ import pandas as pd
 
 import alpha_metrics
 import walk_forward
-from alpha_research import build_alpha_sets, load_symbol_frames
+from alpha_research import (
+    DEFAULT_SYMBOLS,
+    build_alpha_sets,
+    load_funding_frames,
+    load_symbol_frames
+)
 from data import INTERVAL_TO_TIMEDELTA, to_utc_timestamp
 
 REGIMES = ("trending", "mixed", "ranging")
@@ -22,7 +27,7 @@ def parse_arguments():
         description="Alpha Research Gate（多折walk-forward验收）"
     )
     parser.add_argument(
-        "--symbols", nargs="+", default=["BTCUSDT", "ETHUSDT"]
+        "--symbols", nargs="+", default=DEFAULT_SYMBOLS
     )
     parser.add_argument("--interval", default="4h")
     parser.add_argument("--start", default="2020-01-01")
@@ -30,6 +35,10 @@ def parse_arguments():
     parser.add_argument("--folds", type=int, default=6)
     parser.add_argument("--fee", type=float, default=0.001)
     parser.add_argument("--slippage", type=float, default=0.0005)
+    parser.add_argument(
+        "--no-funding", action="store_true",
+        help="跳过资金费率alpha"
+    )
     parser.add_argument("--output-folder", default="alpha_reports")
     parser.add_argument(
         "--regime-conditional", action="store_true",
@@ -162,6 +171,23 @@ def summarize_regime_acceptance(regime_gate_df):
     return regime_map
 
 
+def summarize_per_asset_acceptance(gate_df):
+    """{品种: [只在这一个品种上通过walk-forward门槛的alpha]}。
+
+    和summarize_acceptance()的"必须在所有测试品种上都通过"不同，
+    这里承认一个alpha的有效性可能本来就是资产特定的（不同资产的
+    流动性、参与者结构、波动率特征不一样），只要它在**这个资产自己
+    的**6折walk-forward历史上通过了和其他alpha完全相同的6项标准，
+    就在这个资产上被license——用的还是同一套门槛，不是放宽标准，
+    只是不强制要求"必须放之四海而皆准"。
+    """
+    per_asset_map = {}
+    for symbol, subset in gate_df.groupby("symbol"):
+        passed = subset[subset["passed"]]
+        per_asset_map[symbol] = sorted(passed["alpha_name"].tolist())
+    return per_asset_map
+
+
 def summarize_acceptance(gate_df):
     """一个alpha必须在所有被评估的品种上都通过才算accepted。"""
     per_alpha = gate_df.groupby("alpha_name")["passed"].all()
@@ -201,7 +227,14 @@ def main():
         end=end_time,
         cache_folder=project_folder / "data_cache"
     )
-    alpha_sets = build_alpha_sets(frames)
+    funding_frames = (
+        {} if args.no_funding
+        else load_funding_frames(
+            symbols=args.symbols, start=args.start, end=end_time,
+            cache_folder=project_folder / "futures_data_cache"
+        )
+    )
+    alpha_sets = build_alpha_sets(frames, funding_frames=funding_frames)
 
     gate_df, fold_df, _ = run_gate(
         frames, alpha_sets, args.folds, args.fee, args.slippage
