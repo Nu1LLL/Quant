@@ -37,7 +37,8 @@
 ## 验收
 
 每个杠杆场景同时报告CAGR、Sharpe、Sortino、最大回撤、逐年收益、
-最差滚动三年Sharpe和区块bootstrap均值显著性。用户目标按原值判断：
+最差滚动三年Sharpe和区块bootstrap均值显著性。bootstrap固定使用
+21日循环区块、4,999次、随机种子2718。用户目标按原值判断：
 
 - Sharpe不低于1.5；
 - CAGR不低于40%；
