@@ -1,0 +1,271 @@
+{
+  "fold_count": 6,
+  "no_trade_band": 0.05,
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "BNBUSDT"
+  ],
+  "accepted_alphas": [],
+  "rejected_alphas": [
+    "A01_ts_momentum_12",
+    "A01_ts_momentum_120",
+    "A01_ts_momentum_24",
+    "A01_ts_momentum_48",
+    "A01_ts_momentum_72",
+    "A02_ema_distance_100",
+    "A02_ema_distance_20",
+    "A02_ema_distance_50",
+    "A03_donchian_breakout_20",
+    "A04_short_reversion_1",
+    "A04_short_reversion_2",
+    "A04_short_reversion_3",
+    "A04_short_reversion_6",
+    "A05_bollinger_reversion_20",
+    "A06_rsi_reversion_14",
+    "A07_atr_percentile",
+    "A07_volatility_compression",
+    "A08_trend_quality",
+    "A09_efficiency_ratio_20",
+    "A10_volume_surprise_48",
+    "A11_signed_volume_pressure_6",
+    "A12_close_location_value_10",
+    "A13_intraday_range_position_10",
+    "A14_gap_proxy",
+    "A15_volatility_adjusted_breakout_20",
+    "A16_momentum_ensemble",
+    "A17_mean_reversion_ensemble",
+    "A20_market_breadth_24",
+    "A21_funding_rate_crowding_90",
+    "A22_funding_rate_trend_21",
+    "A23_cross_sectional_relative_strength_24",
+    "A24_skip_momentum_120_6",
+    "A24_skip_momentum_168_6",
+    "A24_skip_momentum_72_6",
+    "A25_sign_tsmom_168",
+    "A25_sign_tsmom_24",
+    "A25_sign_tsmom_72"
+  ],
+  "rejection_reasons": {
+    "A01_ts_momentum_12": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A01_ts_momentum_120": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A01_ts_momentum_24": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A01_ts_momentum_48": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A01_ts_momentum_72": [
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A02_ema_distance_100": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A02_ema_distance_20": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A02_ema_distance_50": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A03_donchian_breakout_20": [
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A04_short_reversion_1": [
+      "折IC中位数为正",
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A04_short_reversion_2": [
+      "折IC中位数为正",
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A04_short_reversion_3": [
+      "折IC中位数为正",
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A04_short_reversion_6": [
+      "折IC中位数为正",
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A05_bollinger_reversion_20": [
+      "折IC中位数为正",
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A06_rsi_reversion_14": [
+      "折IC中位数为正",
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A07_atr_percentile": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A07_volatility_compression": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A08_trend_quality": [
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A09_efficiency_ratio_20": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A10_volume_surprise_48": [
+      "折IC中位数为正",
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A11_signed_volume_pressure_6": [
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A12_close_location_value_10": [
+      "折IC中位数为正",
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A13_intraday_range_position_10": [
+      "折IC中位数为正",
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A14_gap_proxy": [
+      "折IC中位数为正",
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A15_volatility_adjusted_breakout_20": [
+      "折IC中位数为正",
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A16_momentum_ensemble": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A17_mean_reversion_ensemble": [
+      "折IC中位数为正",
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A20_market_breadth_24": [
+      "折IC中位数为正",
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A21_funding_rate_crowding_90": [
+      "折IC中位数为正",
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A22_funding_rate_trend_21": [
+      "折IC中位数为正",
+      "至少60%的折IC为正",
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A23_cross_sectional_relative_strength_24": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A24_skip_momentum_120_6": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A24_skip_momentum_168_6": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A24_skip_momentum_72_6": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A25_sign_tsmom_168": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A25_sign_tsmom_24": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ],
+    "A25_sign_tsmom_72": [
+      "单折PnL占比不超过50%",
+      "单一日历年PnL占比不超过60%",
+      "扣费后成本侵蚀比例不超过70%"
+    ]
+  }
+}
