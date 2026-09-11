@@ -1,0 +1,45 @@
+{
+  "symbols": [
+    "SPY",
+    "QQQ",
+    "AAPL",
+    "MSFT",
+    "JPM",
+    "XOM"
+  ],
+  "fee": 0.0005,
+  "slippage": 0.0002,
+  "long_only_accepted": [
+    "A06_rsi_reversion_14"
+  ],
+  "long_only_rejected_count": 35,
+  "market_neutral_accepted": [
+    "A25_sign_tsmom_168"
+  ],
+  "market_neutral_rejected_count": 35,
+  "long_only_metrics": {
+    "initial_capital": 10000.0,
+    "final_value": 12225.958386270848,
+    "total_return": 0.22259583862708476,
+    "cagr": 0.020309375406342367,
+    "annualized_volatility": 0.08068737123937138,
+    "sharpe_ratio": 0.4021618017150837,
+    "sortino_ratio": 0.45115502629805593,
+    "calmar_ratio": 0.1384694990345608,
+    "max_drawdown": -0.14667038985439906,
+    "average_drawdown": -0.02039654037583136,
+    "longest_drawdown_days": 803.0,
+    "profit_factor": 1.1196410885932022,
+    "win_rate": 0.4946604015378044,
+    "turnover_per_bar": 0.049583606291135354,
+    "annualized_turnover": 18.11041219783719,
+    "total_fees": 1745.1446070227998,
+    "rebalance_count": 1742,
+    "exposure_pct": 0.11629433144947116,
+    "average_exposure": 0.11629433144947116,
+    "best_year": 0.06414195155462821,
+    "worst_year": -0.03863655212408501,
+    "monthly_hit_rate": 0.725,
+    "elapsed_days": 3651.0
+  }
+}

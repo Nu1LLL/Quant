@@ -1,0 +1,24 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "BNBUSDT"
+  ],
+  "interval": "4h",
+  "start": "2020-01-01",
+  "rebalance_every_bars": 42,
+  "fee": 0.001,
+  "slippage": 0.0005,
+  "candidates": [
+    "A01_ts_momentum_120",
+    "A25_sign_tsmom_168",
+    "A24_skip_momentum_168_6"
+  ],
+  "gross_caps": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "note": "candidates选自LITERATURE_FACTORS.md已记录的周频再平衡近似通过案例，未做事后挑选"
+}
