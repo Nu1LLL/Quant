@@ -163,6 +163,21 @@ class RegimeCausalityTests(unittest.TestCase):
             truncated.reset_index(drop=True)
         )
 
+    def test_causal_regime_labels_are_unaffected_by_truncating_the_tail(self):
+        df = self._make_close_series(1200, seed=3)
+        full = alpha_metrics.compute_causal_regime_labels(df)
+
+        truncated_df = df.iloc[:-200].reset_index(drop=True)
+        truncated = alpha_metrics.compute_causal_regime_labels(truncated_df)
+
+        overlap_full = full.iloc[:len(truncated_df)].reset_index(drop=True)
+        overlap_truncated = truncated.reset_index(drop=True)
+
+        mismatches = (
+            overlap_full.fillna("NA") != overlap_truncated.fillna("NA")
+        ).sum()
+        self.assertEqual(mismatches, 0)
+
     def test_regime_labels_can_change_when_future_data_is_appended(self):
         df = self._make_close_series(600, seed=2)
         short_labels = alpha_metrics.compute_regime_labels(df.iloc[:400])

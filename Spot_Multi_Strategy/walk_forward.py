@@ -28,15 +28,28 @@ def simulate_standalone_alpha(
     alpha_signal,
     delay=1,
     fee_rate=0.001,
-    slippage_rate=0.0005
+    slippage_rate=0.0005,
+    activation_mask=None
 ):
     """把一个alpha独立翻译成[0,1]敞口，产生逐根K线净收益序列。
 
     这是alpha层面的诊断工具，不是生产执行路径：真实组合敞口由
     ensemble.py合成多个alpha后，再经过risk_overlay.py风控。
+
+    activation_mask（可选）：布尔Series，只有为True的K线才允许持仓，
+    其余K线敞口强制为0。用于regime条件评估——检验一个alpha是否只在
+    特定regime（比如震荡市）里才有效，而不是要求它在全部历史上都
+    无条件有效。mask必须来自因果的regime分类（见
+    alpha_metrics.compute_causal_regime_labels），否则会引入未来
+    数据泄漏。
     """
     bar_return = alpha_metrics.forward_return(df, horizon=1, delay=delay)
     exposure = alpha_signal.normalized_signal.clip(lower=0.0, upper=1.0)
+
+    if activation_mask is not None:
+        exposure = exposure.where(
+            activation_mask.reset_index(drop=True), 0.0
+        )
 
     turnover = exposure.diff().abs()
     turnover.iloc[0] = exposure.iloc[0] if len(exposure) else np.nan
@@ -98,32 +111,84 @@ def evaluate_alpha_walk_forward(
     max_fold_pnl_share=0.50,
     max_year_pnl_share=0.60,
     max_cost_drag_ratio=0.70,
-    min_positive_fold_ratio=0.60
+    min_positive_fold_ratio=0.60,
+    activation_mask=None
 ):
+    """activation_mask（可选）：只在mask为True的K线上评估这个alpha，
+    见simulate_standalone_alpha的说明。用于regime条件Alpha Research
+    Gate——检验一个alpha是否只在特定regime里通过验收，而不要求它
+    在全部历史上都无条件通过。
+
+    重要：当activation_mask存在时，折的边界不是按日历时间连续切分，
+    而是按"这个alpha在自己真正激活的regime里"的第N个激活位置切分。
+    原因：如果继续用日历时间连续折切分再叠加regime过滤，某个regime
+    在某一折时间窗口里可能只出现很少几次，会把折与折之间的有效样本
+    量搞得极不均衡，"单折PnL占比"这类集中度检验会因为样本量而不是
+    因为alpha本身不稳定就机械性地失败。按激活位置切分后，每一折
+    包含的有效样本数量大致相当，折与折之间不再是日历时间上连续的
+    区间，但仍然保持时间先后顺序（第1折的激活样本全部早于第2折）。
+    这个分支下forward_return用全量df计算（而不是按折切片后再计算），
+    因为激活样本本身在日历时间上就不连续，没有一个单一的"折边界"
+    可以用来天然截断前瞻窗口；这仍然不是未来数据泄漏——每个样本的
+    前瞻收益永远只使用该样本自己往后1根K线的真实价格，只是不再具备
+    "篡改后面的折不会改变前面的折"这种更强的边界不变性。
+    """
     simulation = simulate_standalone_alpha(
         df, alpha_signal, delay=delay,
-        fee_rate=fee_rate, slippage_rate=slippage_rate
+        fee_rate=fee_rate, slippage_rate=slippage_rate,
+        activation_mask=activation_mask
     )
     annualization_factor = _annualization_factor(simulation["open_time"])
 
-    folds = build_validation_folds(
-        data_length=len(df),
-        development_end=len(df),
-        fold_count=fold_count,
-        warmup_bars=warmup_bars
-    )
+    if activation_mask is not None:
+        activation_mask = activation_mask.reset_index(drop=True)
+        active_positions = np.flatnonzero(activation_mask.to_numpy())
+        position_folds = build_validation_folds(
+            data_length=len(active_positions),
+            development_end=len(active_positions),
+            fold_count=fold_count,
+            warmup_bars=warmup_bars
+        )
+        fold_row_position_lists = [
+            active_positions[position_fold["start"] - 1:position_fold["end"]]
+            for position_fold in position_folds
+        ]
+        global_bar_return = simulation["bar_return"]
+    else:
+        folds = build_validation_folds(
+            data_length=len(df),
+            development_end=len(df),
+            fold_count=fold_count,
+            warmup_bars=warmup_bars
+        )
+        fold_row_position_lists = [
+            np.arange(fold["start"] - 1, fold["end"]) for fold in folds
+        ]
+        global_bar_return = None
 
     fold_records = []
-    for fold in folds:
-        fold_slice = simulation.iloc[fold["start"] - 1:fold["end"]]
-        forward_ret = alpha_metrics.forward_return(
-            df.iloc[fold["start"] - 1:fold["end"]].reset_index(drop=True),
-            horizon=1,
-            delay=delay
-        )
+    for fold_number, row_positions in enumerate(fold_row_position_lists, start=1):
+        fold_slice = simulation.iloc[row_positions]
         fold_signal = alpha_signal.normalized_signal.iloc[
-            fold["start"] - 1:fold["end"]
+            row_positions
         ].reset_index(drop=True)
+
+        if activation_mask is not None:
+            forward_ret = global_bar_return.iloc[row_positions].reset_index(
+                drop=True
+            )
+            fold_active = activation_mask.iloc[row_positions].reset_index(
+                drop=True
+            )
+            fold_signal = fold_signal.where(fold_active, np.nan)
+            active_observations = int(fold_active.sum())
+        else:
+            forward_ret = alpha_metrics.forward_return(
+                df.iloc[row_positions].reset_index(drop=True),
+                horizon=1,
+                delay=delay
+            )
+            active_observations = None
 
         fold_ic, fold_ic_obs = alpha_metrics.pearson_ic(
             fold_signal, forward_ret
@@ -131,6 +196,8 @@ def evaluate_alpha_walk_forward(
 
         net_pnl = fold_slice["net_pnl"].dropna()
         observations = int(len(net_pnl))
+        if active_observations is None:
+            active_observations = observations
 
         if observations > 1 and net_pnl.std(ddof=0) > 0:
             fold_sharpe = float(
@@ -150,7 +217,7 @@ def evaluate_alpha_walk_forward(
         fold_records.append({
             "symbol": symbol,
             "alpha_name": alpha_signal.name,
-            "fold": fold["fold"],
+            "fold": fold_number,
             "start_time": (
                 fold_slice["open_time"].iloc[0]
                 if not fold_slice.empty else pd.NaT
@@ -160,6 +227,7 @@ def evaluate_alpha_walk_forward(
                 if not fold_slice.empty else pd.NaT
             ),
             "observations": observations,
+            "active_observations": active_observations,
             "fold_ic": fold_ic,
             "fold_ic_observations": fold_ic_obs,
             "fold_sharpe": fold_sharpe,
@@ -180,7 +248,10 @@ def evaluate_alpha_walk_forward(
     )
 
     total_pnl = float(simulation["net_pnl"].sum(skipna=True))
-    total_observations = int(simulation["net_pnl"].notna().sum())
+    if activation_mask is not None:
+        total_active_observations = int(activation_mask.sum())
+    else:
+        total_active_observations = int(simulation["net_pnl"].notna().sum())
     total_gross_pnl_abs = float(
         (simulation["exposure"] * simulation["bar_return"]).abs().sum(
             skipna=True
@@ -234,7 +305,7 @@ def evaluate_alpha_walk_forward(
     )
 
     min_fold_observations_actual = (
-        int(fold_table["observations"].min())
+        int(fold_table["active_observations"].min())
         if not fold_table.empty
         else 0
     )
@@ -254,7 +325,7 @@ def evaluate_alpha_walk_forward(
             cost_drag_ratio <= max_cost_drag_ratio
         ),
         f"总有效样本不少于{min_total_observations}根K线": (
-            total_observations >= min_total_observations
+            total_active_observations >= min_total_observations
         ),
         f"每折样本不少于{min_fold_observations}根K线": (
             min_fold_observations_actual >= min_fold_observations
@@ -268,7 +339,7 @@ def evaluate_alpha_walk_forward(
         "max_year_pnl_ratio": max_year_pnl_ratio,
         "cost_drag_ratio": cost_drag_ratio,
         "total_pnl": total_pnl,
-        "total_observations": total_observations,
+        "total_observations": total_active_observations,
         "min_fold_observations": min_fold_observations_actual
     }
 

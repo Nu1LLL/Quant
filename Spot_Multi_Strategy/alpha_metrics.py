@@ -138,6 +138,46 @@ def compute_raw_efficiency_ratio(df, window=20):
     return (net_change / path_length.replace(0, np.nan)).clip(0, 1)
 
 
+def compute_causal_regime_labels(
+    df,
+    window=20,
+    quantile_window=500,
+    min_periods=250
+):
+    """把efficiency_ratio切成trending/mixed/ranging三桶，但用**滚动**
+    分位数（而不是全样本分位数）做切分点，所以t时刻的分类只依赖t及
+    更早的数据——可以安全用作实时交易规则（regime条件激活alpha），
+    也是regime条件Alpha Research Gate里唯一的regime定义来源，
+    避免"研究用一套定义、实盘用另一套定义"带来的不一致和潜在bug。
+
+    对照：compute_regime_labels()用全样本分位数，只能用于事后描述性
+    统计；这个函数是它的因果版本。
+    """
+    efficiency_ratio = compute_raw_efficiency_ratio(df, window=window)
+
+    low_cut = efficiency_ratio.rolling(
+        quantile_window, min_periods=min_periods
+    ).quantile(1 / 3)
+    high_cut = efficiency_ratio.rolling(
+        quantile_window, min_periods=min_periods
+    ).quantile(2 / 3)
+
+    labels = pd.Series(
+        pd.array([None] * len(df), dtype="object"), index=df.index
+    )
+    valid = efficiency_ratio.notna() & low_cut.notna() & high_cut.notna()
+
+    labels[valid & (efficiency_ratio <= low_cut)] = "ranging"
+    labels[valid & (efficiency_ratio >= high_cut)] = "trending"
+    labels[
+        valid
+        & (efficiency_ratio > low_cut)
+        & (efficiency_ratio < high_cut)
+    ] = "mixed"
+
+    return labels
+
+
 def compute_regime_labels(df, window=20):
     """用Kaufman效率比率把样本切成trending/mixed/ranging三个regime桶。
 

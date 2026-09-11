@@ -157,5 +157,101 @@ class AlphaGateLogicTests(unittest.TestCase):
         )
 
 
+class RegimeConditionalGateTests(unittest.TestCase):
+    """一个alpha即使无条件评估会被拒绝，只要它在自己真正有效的
+    regime子集里被单独评估，也应该能通过——这是regime条件Gate存在
+    的意义，用一个构造出来的"只在mask为True时有效"的alpha直接证明。
+    """
+
+    def _signal_from_series(self, name, normalized):
+        return base.make_signal(
+            name=name, raw=normalized, normalized=normalized,
+            direction="trend", lookback=1
+        )
+
+    def test_regime_specialist_alpha_fails_unconditional_but_passes_masked(self):
+        rows = 4000
+        df = _make_ohlcv(rows=rows, seed=51, trend=0.0, scale=0.006)
+
+        future_direction = np.sign(
+            df["open"].shift(-2) / df["open"].shift(-1) - 1
+        ).fillna(0.0)
+
+        # regime在现实中是成段持续的，不是逐根K线随机翻转——用连续
+        # 的区块构造mask，否则每根K线都可能换挡，换手成本会把任何
+        # 信号都吃光，这只是测试构造的问题，不是被测代码的问题。
+        rng = np.random.default_rng(52)
+        block_size = 50
+        block_count = rows // block_size + 1
+        block_active = rng.random(block_count) < 0.4
+        activation_mask = pd.Series(
+            np.repeat(block_active, block_size)[:rows], index=df.index
+        )
+
+        # 信号只在mask=False的地方"预测正确"，mask=True的地方是纯噪声——
+        # 反过来构造：一个alpha只在mask=True时有效，在mask=False时是
+        # 噪声，无条件评估会被噪声部分拖累，但如果只在mask=True子集
+        # 上评估就应该能通过。
+        noise = pd.Series(rng.normal(size=rows) * 0.9, index=df.index)
+        specialist_signal = pd.Series(
+            np.where(
+                activation_mask, future_direction.values * 0.9, noise.values
+            ),
+            index=df.index
+        )
+        alpha_signal = self._signal_from_series(
+            "regime_specialist", specialist_signal
+        )
+
+        unconditional = walk_forward.evaluate_alpha_walk_forward(
+            "TEST", alpha_signal, df, fold_count=6,
+            min_total_observations=100, min_fold_observations=10
+        )
+        masked = walk_forward.evaluate_alpha_walk_forward(
+            "TEST", alpha_signal, df, fold_count=6,
+            min_total_observations=100, min_fold_observations=10,
+            activation_mask=activation_mask
+        )
+
+        self.assertFalse(unconditional.passed)
+        self.assertTrue(masked.passed)
+        self.assertGreater(
+            masked.summary["median_fold_ic"],
+            unconditional.summary["median_fold_ic"]
+        )
+
+    def test_activation_mask_is_respected_in_simulation(self):
+        df = _make_ohlcv(rows=500, seed=53)
+        alpha_signal = alphas.build_single_asset_alphas(df)[
+            "A01_ts_momentum_24"
+        ]
+        mask = pd.Series(
+            np.arange(len(df)) % 2 == 0, index=df.index
+        )
+
+        simulation = walk_forward.simulate_standalone_alpha(
+            df, alpha_signal, activation_mask=mask
+        )
+
+        off_rows = simulation.loc[~mask.values, "exposure"]
+        self.assertTrue((off_rows == 0.0).all())
+
+    def test_active_observations_reflect_mask_not_full_fold_length(self):
+        df = _make_ohlcv(rows=3000, seed=54)
+        alpha_signal = alphas.build_single_asset_alphas(df)[
+            "A08_trend_quality"
+        ]
+        rng = np.random.default_rng(55)
+        mask = pd.Series(rng.random(len(df)) < 0.3, index=df.index)
+
+        result = walk_forward.evaluate_alpha_walk_forward(
+            "TEST", alpha_signal, df, fold_count=6,
+            activation_mask=mask
+        )
+
+        for row in result.fold_table.itertuples(index=False):
+            self.assertLessEqual(row.active_observations, row.observations)
+
+
 if __name__ == "__main__":
     unittest.main()

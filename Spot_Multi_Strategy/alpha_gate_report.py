@@ -9,9 +9,12 @@ from pathlib import Path
 
 import pandas as pd
 
+import alpha_metrics
 import walk_forward
 from alpha_research import build_alpha_sets, load_symbol_frames
 from data import INTERVAL_TO_TIMEDELTA, to_utc_timestamp
+
+REGIMES = ("trending", "mixed", "ranging")
 
 
 def parse_arguments():
@@ -28,6 +31,11 @@ def parse_arguments():
     parser.add_argument("--fee", type=float, default=0.001)
     parser.add_argument("--slippage", type=float, default=0.0005)
     parser.add_argument("--output-folder", default="alpha_reports")
+    parser.add_argument(
+        "--regime-conditional", action="store_true",
+        help="额外跑一次regime条件门槛（每个alpha分别在trending/mixed/"
+             "ranging子段上评估，只有子段内真正有效才被license）"
+    )
     return parser.parse_args()
 
 
@@ -77,6 +85,81 @@ def run_gate(frames, alpha_sets, folds, fee, slippage):
     )
 
     return gate_df, fold_df, per_alpha_results
+
+
+def compute_regime_masks(frames):
+    """{symbol: {regime: 布尔mask}}，全部用因果的
+    compute_causal_regime_labels，可以安全用于regime条件评估。
+    """
+    masks = {}
+    for symbol, df in frames.items():
+        labels = alpha_metrics.compute_causal_regime_labels(df)
+        masks[symbol] = {
+            regime: (labels == regime) for regime in REGIMES
+        }
+    return masks
+
+
+def run_regime_conditional_gate(frames, alpha_sets, folds, fee, slippage):
+    """对每个alpha×品种×regime单独跑一次walk-forward门槛。
+
+    一个alpha即使无条件评估失败，只要在它真正擅长的regime子集里
+    单独评估能通过（且在所有被评估的品种上都通过），就会被记录为
+    这个regime的"专家alpha"，供build_regime_conditional_ensemble
+    在实际敞口只在对应regime里激活它。
+    """
+    regime_masks = compute_regime_masks(frames)
+
+    gate_records = []
+    fold_tables = []
+
+    for symbol, alpha_signals in alpha_sets.items():
+        df = frames[symbol]
+        for regime in REGIMES:
+            mask = regime_masks[symbol][regime]
+            for name, alpha_signal in alpha_signals.items():
+                result = walk_forward.evaluate_alpha_walk_forward(
+                    symbol, alpha_signal, df,
+                    fold_count=folds, fee_rate=fee, slippage_rate=slippage,
+                    activation_mask=mask
+                )
+                fold_table = result.fold_table.copy()
+                fold_table.insert(0, "regime", regime)
+                fold_tables.append(fold_table)
+
+                gate_records.append({
+                    "symbol": symbol,
+                    "alpha_name": name,
+                    "regime": regime,
+                    "direction": alpha_signal.direction,
+                    "passed": result.passed,
+                    **result.summary,
+                    **{
+                        f"check__{key}": value
+                        for key, value in result.checks.items()
+                    }
+                })
+
+    gate_df = pd.DataFrame(gate_records)
+    fold_df = (
+        pd.concat(fold_tables, ignore_index=True)
+        if fold_tables
+        else pd.DataFrame()
+    )
+
+    return gate_df, fold_df
+
+
+def summarize_regime_acceptance(regime_gate_df):
+    """{regime: [通过该regime条件门槛、且在所有测试品种上都通过的alpha]}。"""
+    regime_map = {}
+    for regime in REGIMES:
+        subset = regime_gate_df[regime_gate_df["regime"] == regime]
+        per_alpha = subset.groupby("alpha_name")["passed"].all()
+        regime_map[regime] = sorted(
+            per_alpha[per_alpha].index.tolist()
+        )
+    return regime_map
 
 
 def summarize_acceptance(gate_df):
@@ -160,6 +243,34 @@ def main():
         print(f"  未通过：{name} -> {rejection_summary[name]}")
 
     print(f"\n报告已保存到：{output_folder}")
+
+    if args.regime_conditional:
+        print("\n正在运行regime条件门槛（每个alpha分regime单独评估）...")
+        regime_gate_df, regime_fold_df = run_regime_conditional_gate(
+            frames, alpha_sets, args.folds, args.fee, args.slippage
+        )
+        regime_map = summarize_regime_acceptance(regime_gate_df)
+
+        regime_gate_df.to_csv(
+            output_folder / "regime_conditional_gate_results.csv",
+            index=False
+        )
+        regime_fold_df.to_csv(
+            output_folder / "regime_conditional_gate_folds.csv",
+            index=False
+        )
+        with (output_folder / "regime_conditional_gate_summary.json").open(
+            "w", encoding="utf-8"
+        ) as file:
+            json.dump(
+                {"fold_count": args.folds, "regime_alpha_map": regime_map},
+                file, ensure_ascii=False, indent=2
+            )
+
+        print("regime条件门槛结果（在所有测试品种上都通过才算license）：")
+        for regime, names in regime_map.items():
+            print(f"  {regime}：{len(names)}个 -> {names}")
+        print(f"regime条件报告已保存到：{output_folder}")
 
 
 if __name__ == "__main__":

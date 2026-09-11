@@ -137,5 +137,105 @@ class EnsembleWeightingTests(unittest.TestCase):
         self.assertListEqual(list(exposure), [0.0, 0.0, 0.0, 0.3, 1.0])
 
 
+class RegimeConditionalEnsembleTests(unittest.TestCase):
+    def setUp(self):
+        self.df = _make_ohlcv(rows=2000, seed=9)
+        all_alphas = alphas.build_single_asset_alphas(self.df)
+        self.alpha_signals = {
+            name: all_alphas[name]
+            for name in [
+                "A01_ts_momentum_24",
+                "A02_ema_distance_50",
+                "A06_rsi_reversion_14"
+            ]
+        }
+        rng = np.random.default_rng(21)
+        block_size = 40
+        block_count = len(self.df) // block_size + 1
+        block_regime = rng.choice(
+            ["trending", "ranging"], size=block_count
+        )
+        self.regime_labels = pd.Series(
+            np.repeat(block_regime, block_size)[:len(self.df)]
+        )
+
+    def test_alpha_only_gets_weight_in_its_licensed_regime(self):
+        regime_alpha_map = {
+            "trending": ["A02_ema_distance_50"],
+            "ranging": ["A06_rsi_reversion_14"],
+            "mixed": []
+        }
+        weights, _, _ = ensemble.build_regime_conditional_ensemble(
+            self.alpha_signals, self.df, self.regime_labels,
+            regime_alpha_map, method="equal"
+        )
+
+        # 跳过最前面的warmup区间：A02/A06都有几十根K线的滚动窗口，
+        # 在warmup期间normalized_signal本身是NaN，等权权重合法地是0，
+        # 这不代表regime licensing出了问题。
+        warmup_buffer = 200
+        trending_rows = (self.regime_labels == "trending") & (
+            self.regime_labels.index >= warmup_buffer
+        )
+        ranging_rows = (self.regime_labels == "ranging") & (
+            self.regime_labels.index >= warmup_buffer
+        )
+
+        self.assertTrue(
+            (weights.loc[ranging_rows, "A02_ema_distance_50"] == 0.0).all()
+        )
+        self.assertTrue(
+            (weights.loc[trending_rows, "A06_rsi_reversion_14"] == 0.0).all()
+        )
+        self.assertTrue(
+            (weights.loc[trending_rows, "A02_ema_distance_50"] > 0.0).all()
+        )
+        self.assertTrue(
+            (weights.loc[ranging_rows, "A06_rsi_reversion_14"] > 0.0).all()
+        )
+        # A01从来没有被任何regime license，权重应该恒为0
+        self.assertTrue((weights["A01_ts_momentum_24"] == 0.0).all())
+
+    def test_unlicensed_regime_produces_zero_exposure(self):
+        regime_alpha_map = {
+            "trending": ["A02_ema_distance_50"],
+            "ranging": [],
+            "mixed": []
+        }
+        weights, combined_alpha, exposure = (
+            ensemble.build_regime_conditional_ensemble(
+                self.alpha_signals, self.df, self.regime_labels,
+                regime_alpha_map, method="equal"
+            )
+        )
+        ranging_rows = self.regime_labels == "ranging"
+        self.assertTrue((weights.loc[ranging_rows].sum(axis=1) == 0.0).all())
+        self.assertTrue(
+            (combined_alpha.loc[ranging_rows.values] == 0.0).all()
+        )
+
+    def test_fully_licensed_map_matches_plain_ensemble_within_each_regime(self):
+        regime_alpha_map = {
+            "trending": list(self.alpha_signals.keys()),
+            "ranging": list(self.alpha_signals.keys()),
+            "mixed": list(self.alpha_signals.keys())
+        }
+        conditional_weights, _, _ = (
+            ensemble.build_regime_conditional_ensemble(
+                self.alpha_signals, self.df, self.regime_labels,
+                regime_alpha_map, method="equal"
+            )
+        )
+        plain_weights = ensemble.equal_weights(
+            ensemble.normalized_signal_matrix(self.alpha_signals)
+        )
+
+        pd.testing.assert_frame_equal(
+            conditional_weights.reset_index(drop=True),
+            plain_weights.reset_index(drop=True),
+            check_dtype=False
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

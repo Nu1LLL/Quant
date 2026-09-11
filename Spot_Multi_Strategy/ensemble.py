@@ -186,3 +186,60 @@ def build_ensemble(
     target_exposure = target_exposure_from_combined_alpha(combined_alpha)
 
     return weights, combined_alpha, target_exposure
+
+
+def build_regime_conditional_ensemble(
+    alpha_signals,
+    df,
+    regime_labels,
+    regime_alpha_map,
+    method="equal",
+    horizon=3,
+    delay=1,
+    window=500,
+    min_periods=100
+):
+    """regime条件集成：每个alpha只在alpha_gate_report.py用因果regime
+    分类验收过的regime里参与组合，而不是像build_ensemble那样无条件
+    始终参与。
+
+    regime_alpha_map: {regime名: [alpha名列表]}，通常来自
+    alpha_gate_report.summarize_regime_acceptance()的结果——只放
+    真正在该regime子集里通过walk-forward门槛的alpha。
+
+    实现方式：对每个regime分别用现有的build_ensemble（在这个regime
+    的"专家alpha"子集里）算出权重，再用该regime的因果mask把权重
+    贴到对应的时间段上，最后拼起来。因为regime_labels互斥穷尽
+    （每个bar恰好属于一个regime），拼接后每个bar的权重之和仍然是1
+    （或者在没有任何alpha被这个regime license时是0，代表这段时间
+    没有可用的专家alpha，敞口自然为0）。
+    """
+    all_names = list(alpha_signals.keys())
+    regime_labels = regime_labels.reset_index(drop=True)
+    combined_weights = pd.DataFrame(
+        0.0, index=range(len(df)), columns=all_names
+    )
+
+    for regime, licensed_names in regime_alpha_map.items():
+        licensed_names = [
+            name for name in licensed_names if name in alpha_signals
+        ]
+        if not licensed_names:
+            continue
+
+        subset = {name: alpha_signals[name] for name in licensed_names}
+        regime_weights, _, _ = build_ensemble(
+            subset, df, method=method, horizon=horizon, delay=delay,
+            window=window, min_periods=min_periods
+        )
+
+        mask = (regime_labels == regime).to_numpy()
+        for name in licensed_names:
+            combined_weights.loc[mask, name] = regime_weights.loc[
+                mask, name
+            ].to_numpy()
+
+    combined_alpha = combined_alpha_score(alpha_signals, combined_weights)
+    target_exposure = target_exposure_from_combined_alpha(combined_alpha)
+
+    return combined_weights, combined_alpha, target_exposure
