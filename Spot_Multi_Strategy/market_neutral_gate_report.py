@@ -44,7 +44,7 @@ def list_candidate_alpha_names(alpha_sets, min_symbol_coverage=3):
 
 def run_cross_sectional_gate(
     frames, alpha_sets, fold_count=6, fee=0.001, slippage=0.0005,
-    no_trade_band=0.05
+    no_trade_band=0.05, method="demean", rebalance_every_bars=1
 ):
     alpha_names = list_candidate_alpha_names(alpha_sets, len(frames))
     gate_records = []
@@ -54,7 +54,8 @@ def run_cross_sectional_gate(
         result = mn.evaluate_cross_sectional_alpha(
             alpha_name, frames, alpha_sets,
             fold_count=fold_count, fee_rate=fee, slippage_rate=slippage,
-            no_trade_band=no_trade_band
+            no_trade_band=no_trade_band, method=method,
+            rebalance_every_bars=rebalance_every_bars
         )
         fold_table = result.fold_table.copy()
         fold_tables.append(fold_table)
@@ -112,6 +113,15 @@ def parse_arguments():
     parser.add_argument("--fee", type=float, default=0.001)
     parser.add_argument("--slippage", type=float, default=0.0005)
     parser.add_argument("--no-trade-band", type=float, default=0.05)
+    parser.add_argument(
+        "--method", choices=["demean", "rank"], default="demean"
+    )
+    parser.add_argument(
+        "--rebalance-every-bars", type=int, default=1,
+        help="每隔多少根K线才更新一次目标（1=逐根K线跟踪，"
+             "42=4小时K线的周频，更接近动量/carry类因子文献里"
+             "的实际再平衡频率）"
+    )
     parser.add_argument("--no-funding", action="store_true")
     parser.add_argument("--output-folder", default="reports/mini_medallion_market_neutral")
     return parser.parse_args()
@@ -138,7 +148,8 @@ def main():
 
     gate_df, fold_df = run_cross_sectional_gate(
         frames, alpha_sets, args.folds, args.fee, args.slippage,
-        args.no_trade_band
+        args.no_trade_band, method=args.method,
+        rebalance_every_bars=args.rebalance_every_bars
     )
     accepted, rejected = summarize_acceptance(gate_df)
 

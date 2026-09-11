@@ -47,13 +47,40 @@ def align_by_open_time(frames, series_by_symbol):
 
 
 def cross_sectional_demean(master_frame):
-    """每个时间点减去当时所有有值资产的横截面均值。"""
+    """每个时间点减去当时所有有值资产的横截面均值（幅度加权版本）。"""
     row_mean = master_frame.mean(axis=1, skipna=True)
     return master_frame.sub(row_mean, axis=0)
 
 
-def build_cross_sectional_signal(frames, alpha_sets, alpha_name):
-    """返回一个日历时间对齐、横截面去均值后的信号矩阵（列=品种）。"""
+def cross_sectional_rank_demean(master_frame):
+    """Fama-French式的排名版本：每个时间点把各资产的分数换成横截面
+    百分位排名，再减去**当时那一行排名的实际均值**、乘以2映射到大致
+    [-1,1]。
+
+    注意：不能直接减去0.5——pandas的rank(pct=True)公式是rank/count，
+    N个资产且没有并列时排名是{1/N,...,N/N}，均值是(N+1)/(2N)，
+    只有N趋于无穷大时才趋近0.5。用实际行均值去中心化，才能保证
+    每一行去中心化后的排名和精确为0（多空名义金额相等），不受N
+    大小影响。
+
+    和幅度加权的cross_sectional_demean相比，排名对"今天分数比昨天
+    大了多少"这种连续幅度噪声不敏感——只要相对顺序没变，排名就不变，
+    这是学术因子研究（Fama-French排序法）的标准做法，用来降低
+    逐bar调仓的换手率，不是针对这份数据拟合出来的技巧。
+    """
+    rank = master_frame.rank(axis=1, pct=True, na_option="keep")
+    row_mean = rank.mean(axis=1, skipna=True)
+    return rank.sub(row_mean, axis=0) * 2.0
+
+
+def build_cross_sectional_signal(
+    frames, alpha_sets, alpha_name, method="demean"
+):
+    """返回一个日历时间对齐、横截面中性化后的信号矩阵（列=品种）。
+
+    method="demean"：减去横截面均值（幅度加权）。
+    method="rank"：换成横截面百分位排名（Fama-French式排序法）。
+    """
     scores = {
         symbol: alpha_sets[symbol][alpha_name].normalized_signal
         for symbol in frames
@@ -63,7 +90,32 @@ def build_cross_sectional_signal(frames, alpha_sets, alpha_name):
         raise ValueError(f"{alpha_name}至少需要2个品种才能做横截面对比")
 
     master = align_by_open_time(frames, scores)
-    return cross_sectional_demean(master)
+
+    if method == "demean":
+        return cross_sectional_demean(master)
+    if method == "rank":
+        return cross_sectional_rank_demean(master)
+    raise ValueError(f"未知的横截面中性化方式：{method}")
+
+
+def resample_to_rebalance_schedule(master_frame, rebalance_every_bars):
+    """把目标只在每隔rebalance_every_bars根K线的时间点更新一次，
+    中间沿用上一次的目标（前向填充）。
+
+    动量/carry类因子在文献和实盘里几乎从不逐根K线换仓——AQR的TSMOM
+    论文、经典的12-1动量构造都是月度或周度再平衡，这里默认给出接口，
+    不是为了让某个alpha通过验收才加的：4小时K线逐根跟踪一个本来是
+    周/月频的信号，产生的换手本身就不符合这类因子的正常使用方式。
+    rebalance_every_bars=1时完全不做任何改变（逐根K线跟踪，向后兼容
+    默认行为）。
+    """
+    if rebalance_every_bars <= 1:
+        return master_frame
+
+    schedule_mask = np.arange(len(master_frame)) % rebalance_every_bars == 0
+    resampled = master_frame.copy()
+    resampled.loc[~schedule_mask] = np.nan
+    return resampled.ffill()
 
 
 def build_cross_sectional_forward_return(frames, delay=1, horizon=1):
@@ -312,22 +364,35 @@ def evaluate_cross_sectional_alpha(
     max_year_pnl_share=0.60,
     max_cost_drag_ratio=0.70,
     min_positive_fold_ratio=0.60,
-    no_trade_band=0.05
+    no_trade_band=0.05,
+    method="demean",
+    rebalance_every_bars=1
 ):
-    """把一个alpha家族横截面去均值后，当成市场中性信号跑6折
+    """把一个alpha家族横截面中性化后，当成市场中性信号跑6折
     walk-forward验收——criteria和walk_forward.py里长仓Gate完全一样，
-    只是"敞口"和"收益"的定义换成了去均值/超额版本，不做gate层面的
-    资金费率建模（和长仓Gate一样，Gate是轻量诊断，完整成本放在
-    portfolio层面的回测里）。
+    只是"敞口"和"收益"的定义换成了横截面中性化/超额版本，不做gate
+    层面的资金费率建模（和长仓Gate一样，Gate是轻量诊断，完整成本
+    放在portfolio层面的回测里）。
+
+    method="demean"（幅度加权）或"rank"（Fama-French式百分位排名，
+    见build_cross_sectional_signal的说明）。
+
+    rebalance_every_bars：见resample_to_rebalance_schedule的说明——
+    动量/carry类因子在文献里几乎从不逐根K线换仓，默认值1是逐根K线
+    跟踪（向后兼容），设成比如42（4小时K线的周频）更接近这类因子
+    实际的使用方式。
 
     敞口先用scale_to_gross_cap封顶到1.0（100%总资金，不能直接用
     未封顶的clip(-1,1)——那样4个资产各自最多到1.0，总gross敞口可能
-    到4倍，不是"无净杠杆"的设定），再用apply_no_trade_band过滤掉
-    幅度不够的调仓——这是实测发现的必要步骤：没有不交易带时，
-    换手成本的绝对值足以吃掉这类信号本来就很薄的毛收益，即使
-    cost_drag_ratio这个相对指标看起来不高。
+    到4倍，不是"无净杠杆"的设定），再按rebalance_every_bars降频，
+    最后用apply_no_trade_band过滤掉剩余的幅度不够的调仓——这是实测
+    发现的必要步骤：没有不交易带时，换手成本的绝对值足以吃掉这类
+    信号本来就很薄的毛收益，即使cost_drag_ratio这个相对指标看起来
+    不高。
     """
-    signal_matrix = build_cross_sectional_signal(frames, alpha_sets, alpha_name)
+    signal_matrix = build_cross_sectional_signal(
+        frames, alpha_sets, alpha_name, method=method
+    )
     forward_return_matrix = build_cross_sectional_forward_return(
         frames, delay=delay, horizon=1
     )
@@ -337,7 +402,8 @@ def evaluate_cross_sectional_alpha(
     forward_return_matrix = forward_return_matrix[symbols]
 
     capped = scale_to_gross_cap(signal_matrix, gross_cap=1.0)
-    exposure, turnover = apply_no_trade_band(capped, no_trade_band=no_trade_band)
+    scheduled = resample_to_rebalance_schedule(capped, rebalance_every_bars)
+    exposure, turnover = apply_no_trade_band(scheduled, no_trade_band=no_trade_band)
 
     gross_pnl = exposure * forward_return_matrix
     cost = turnover * (fee_rate + slippage_rate) * 2.0
