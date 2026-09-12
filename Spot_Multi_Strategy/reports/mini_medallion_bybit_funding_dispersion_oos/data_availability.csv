@@ -1,0 +1,5 @@
+symbol,merged_observations,first_common_funding_mark,last_common_funding_mark,covers_2021_oos_start,status
+BTCUSDT,6604,2020-09-01 00:00:00+00:00,2026-09-11 00:00:00+00:00,True,available
+ETHUSDT,6018,2021-03-15 08:00:00+00:00,2026-09-11 00:00:00+00:00,False,late_start
+XRPUSDT,5840,2021-05-13 16:00:00+00:00,2026-09-11 00:00:00+00:00,False,late_start
+EOSUSDT,0,,,False,no_mark_price_history_returned
