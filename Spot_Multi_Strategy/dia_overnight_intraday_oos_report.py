@@ -51,7 +51,7 @@ def main():
     root = Path(__file__).resolve().parent
     output = root / "reports/mini_medallion_dia_overnight_intraday_oos"
     inputs = output / "inputs"
-    frame = strategy.load_ohlc(inputs, refresh=True)
+    frame = strategy.load_ohlc(inputs, refresh=False)
     results, monte_carlo, regimes = run_experiment(frame)
     frame.rename_axis("date").to_csv(output / "ohlc_adjusted.csv")
     rows = []
