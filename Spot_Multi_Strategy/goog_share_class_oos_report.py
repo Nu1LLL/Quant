@@ -55,7 +55,7 @@ def main():
     inputs = output / "inputs"
     prices = pd.concat({
         symbol: load_adjusted_close(
-            symbol, START, END, cache_folder=inputs, refresh=True
+            symbol, START, END, cache_folder=inputs, refresh=False
         ) for symbol in strategy.SYMBOLS
     }, axis=1, join="inner")
     prices.columns = list(strategy.SYMBOLS)
