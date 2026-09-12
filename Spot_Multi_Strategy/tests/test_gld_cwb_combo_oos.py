@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 
 import gld_cwb_combo_oos as combo
+import gld_cwb_combo_oos_report as report
 
 
 class AlignNetReturnsTests(unittest.TestCase):
@@ -69,6 +70,19 @@ class PearsonCorrelationTests(unittest.TestCase):
         base = pd.Series(rng.normal(0.0, 0.01, 50), index=dates)
         correlation = combo.pearson_correlation(base, -base)
         self.assertAlmostEqual(correlation, -1.0, places=6)
+
+
+class EvidenceLevelTests(unittest.TestCase):
+    def test_post_selection_combo_is_not_independent_oos(self):
+        dates = pd.bdate_range("2009-01-01", periods=4200, tz="UTC")
+        rng = np.random.default_rng(131)
+        gold = pd.Series(rng.normal(0.0002, 0.01, len(dates)), index=dates)
+        cwb = pd.Series(rng.normal(0.0002, 0.008, len(dates)), index=dates)
+        validation, _, _, _, _, _ = report.run_experiment(
+            gold, cwb, simulations=20
+        )
+        self.assertFalse(validation["checks"]["independent_oos"])
+        self.assertFalse(validation["passed"])
 
 
 if __name__ == "__main__":

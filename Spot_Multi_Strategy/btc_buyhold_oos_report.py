@@ -27,7 +27,7 @@ def run_experiment(prices, simulations=5000):
             "returns": returns,
             "detail": detail,
             "validation": strict_validation.evaluate_strict_oos(
-                returns, independent_oos=True, costs_included=True
+                returns, independent_oos=False, costs_included=True
             ),
         }
     primary = results[1.0]["returns"]

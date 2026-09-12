@@ -32,6 +32,7 @@ class RunExperimentTests(unittest.TestCase):
             checks = result["validation"]["checks"]
             self.assertIn("sample_at_least_5y", checks)
             self.assertIn("walk_forward_passed", checks)
+            self.assertFalse(checks["independent_oos"])
         self.assertIn("joint_target_probability", monte_carlo)
         self.assertIn("family", regimes.columns)
         self.assertTrue({"period", "event"}.issubset(set(regimes["family"])))

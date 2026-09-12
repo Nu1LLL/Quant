@@ -18,6 +18,8 @@ def run_experiment(gold_returns, cwb_returns, simulations=5000):
     correlation = combo.pearson_correlation(gold_returns, cwb_returns)
 
     validation = dbv_oos.evaluate_fifteen_year_oos(combined)
+    validation["checks"]["independent_oos"] = False
+    validation["passed"] = all(validation["checks"].values())
     monte_carlo = strict_validation.circular_block_monte_carlo(
         combined, simulations=simulations, block_length=21, seed=20090416
     )
