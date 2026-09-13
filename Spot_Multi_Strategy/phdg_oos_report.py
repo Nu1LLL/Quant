@@ -69,7 +69,7 @@ def main():
     root = Path(__file__).resolve().parent
     output = root / "reports/mini_medallion_phdg_oos"
     inputs = output / "inputs"
-    prices = load_adjusted_close(strategy.SYMBOL, START, END, cache_folder=inputs, refresh=True)
+    prices = load_adjusted_close(strategy.SYMBOL, START, END, cache_folder=inputs, refresh=False)
     results, monte_carlo, regimes = run_experiment(prices)
     prices.rename("adjusted_close").rename_axis("date").to_csv(output / "adjusted_close.csv")
     rows = []
