@@ -95,7 +95,7 @@ def main():
     inputs = output / "inputs"
     prices = pd.concat({
         symbol: strategy.normalize_daily_series(
-            load_adjusted_close(symbol, START, END, cache_folder=inputs, refresh=True)
+            load_adjusted_close(symbol, START, END, cache_folder=inputs, refresh=False)
         ) for symbol in strategy.SYMBOLS
     }, axis=1, join="inner")
     prices.columns = list(strategy.SYMBOLS)

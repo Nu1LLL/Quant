@@ -1,0 +1,4 @@
+,phdg_contribution,fx_trend_contribution,fx_cross_contribution
+phdg_contribution,1.0,-0.06069988015523241,-0.07756005103502124
+fx_trend_contribution,-0.06069988015523241,1.0,0.3608913391050385
+fx_cross_contribution,-0.07756005103502124,0.3608913391050385,1.0
