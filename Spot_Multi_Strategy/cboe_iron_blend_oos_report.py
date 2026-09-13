@@ -53,7 +53,7 @@ def run_experiment(levels, simulations=5000):
     return results, turnover, monte_carlo, regimes, sleeve_returns, audit
 
 
-def main(refresh=True):
+def main(refresh=False):
     root = Path(__file__).resolve().parent
     output = root / "reports/mini_medallion_cboe_iron_blend_oos"
     cache = output / "inputs"
