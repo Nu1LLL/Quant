@@ -1,0 +1,2 @@
+observations,start,end,coverage_ratio,max_gap_hours,scheduled_hours_valid,duplicate_count,span_years,passed
+6767,2020-07-10 08:00:00+00:00,2026-09-12 16:00:00+00:00,1.0,8.0,True,0,6.1738535249828885,True

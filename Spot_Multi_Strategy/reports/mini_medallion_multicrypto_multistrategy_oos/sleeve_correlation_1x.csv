@@ -1,0 +1,4 @@
+,basis_contribution,dispersion_contribution,trend_contribution
+basis_contribution,1.0,-0.0014096579766434735,-0.0204688195609706
+dispersion_contribution,-0.0014096579766434735,1.0,0.04420248943669072
+trend_contribution,-0.0204688195609706,0.04420248943669072,1.0

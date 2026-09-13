@@ -88,7 +88,7 @@ def main():
     output = root / "reports/mini_medallion_multicrypto_multistrategy_oos"
     inputs = output / "inputs"
     frames = {
-        symbol: strategy.load_symbol(symbol, START, END, inputs, refresh=True)
+        symbol: strategy.load_symbol(symbol, START, END, inputs, refresh=False)
         for symbol in strategy.SYMBOLS
     }
     panel = strategy.build_common_panel(frames)
