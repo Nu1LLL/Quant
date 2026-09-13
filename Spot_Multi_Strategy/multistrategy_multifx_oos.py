@@ -9,6 +9,15 @@ SYMBOLS = (PHDG,) + FX_SYMBOLS
 LATEST_ACCEPTABLE_START = pd.Timestamp("2013-01-31", tz="UTC")
 
 
+def normalize_daily_series(values):
+    series = pd.Series(values).copy().sort_index()
+    index = pd.to_datetime(series.index, utc=True).normalize()
+    if index.has_duplicates:
+        raise ValueError("Daily series has duplicate UTC calendar dates")
+    series.index = index
+    return series
+
+
 def validate_prices(prices):
     frame = pd.DataFrame(prices).copy().sort_index()
     if set(frame.columns) != set(SYMBOLS):

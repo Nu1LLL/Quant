@@ -68,6 +68,22 @@ class MultistrategyMultifxOosTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             strategy.validate_prices(self.prices.drop(self.index[100:115]))
 
+    def test_cross_market_close_times_align_by_calendar_date(self):
+        futures = pd.Series(
+            [1.0, 1.1],
+            index=pd.to_datetime(["2020-01-02 05:00Z", "2020-01-03 05:00Z"]),
+        )
+        etf = pd.Series(
+            [2.0, 2.1],
+            index=pd.to_datetime(["2020-01-02 14:30Z", "2020-01-03 14:30Z"]),
+        )
+        aligned = pd.concat({
+            "future": strategy.normalize_daily_series(futures),
+            "etf": strategy.normalize_daily_series(etf),
+        }, axis=1, join="inner")
+        self.assertEqual(len(aligned), 2)
+        self.assertTrue((aligned.index.hour == 0).all())
+
 
 if __name__ == "__main__":
     unittest.main()

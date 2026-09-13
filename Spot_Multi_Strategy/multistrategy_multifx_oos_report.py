@@ -94,8 +94,9 @@ def main():
     output = root / "reports/mini_medallion_multistrategy_multifx_oos"
     inputs = output / "inputs"
     prices = pd.concat({
-        symbol: load_adjusted_close(symbol, START, END, cache_folder=inputs, refresh=True)
-        for symbol in strategy.SYMBOLS
+        symbol: strategy.normalize_daily_series(
+            load_adjusted_close(symbol, START, END, cache_folder=inputs, refresh=True)
+        ) for symbol in strategy.SYMBOLS
     }, axis=1, join="inner")
     prices.columns = list(strategy.SYMBOLS)
     results, monte_carlo, regimes = run_experiment(prices)
