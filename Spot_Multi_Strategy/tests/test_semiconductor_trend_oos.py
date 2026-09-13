@@ -33,6 +33,10 @@ class SemiconductorTrendOosTests(unittest.TestCase):
         sample = pd.Series([0.1, -1.2, 0.8], index=self.index[:3])
         result = strategy.apply_bankruptcy(sample)
         self.assertEqual(result.tolist(), [0.1, -1.0, 0.0])
+        validation = report.evaluate_long_oos(result)
+        self.assertEqual(validation["metrics"]["cagr"], -1.0)
+        self.assertEqual(validation["metrics"]["final_value"], 0.0)
+        self.assertFalse(validation["checks"]["solvent"])
 
     def test_costs_borrow_financing_and_scenarios(self):
         _, one, weights, _ = strategy.run_scenario(self.prices, 1.0)

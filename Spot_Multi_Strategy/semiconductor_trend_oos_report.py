@@ -20,7 +20,12 @@ def evaluate_long_oos(returns):
     validation["checks"]["walk_forward_passed"] = bool(
         len(folds) >= 14 and not folds.empty and folds["fold_pass"].mean() >= 0.80
     )
-    validation["checks"]["solvent"] = not pd.Series(returns).le(-1.0).any()
+    solvent = not pd.Series(returns).le(-1.0).any()
+    validation["checks"]["solvent"] = solvent
+    if not solvent:
+        validation["metrics"]["total_return"] = -1.0
+        validation["metrics"]["final_value"] = 0.0
+        validation["metrics"]["cagr"] = -1.0
     validation["passed"] = all(validation["checks"].values())
     return validation
 
