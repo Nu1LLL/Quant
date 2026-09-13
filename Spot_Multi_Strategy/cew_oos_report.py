@@ -52,7 +52,7 @@ def main():
     output = root / "reports/mini_medallion_cew_oos"
     inputs = output / "inputs"
     prices = load_adjusted_close(
-        "CEW", START, END, cache_folder=inputs, refresh=True
+        "CEW", START, END, cache_folder=inputs, refresh=False
     )
     results, monte_carlo, regimes = run_experiment(prices)
     prices.rename_axis("date").to_csv(output / "adjusted_close.csv")
