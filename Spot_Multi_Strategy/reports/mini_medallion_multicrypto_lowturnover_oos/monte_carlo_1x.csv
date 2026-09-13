@@ -1,0 +1,2 @@
+simulations,block_length,cagr_p05,cagr_median,sharpe_p05,sharpe_median,max_drawdown_p05,profit_factor_p05,joint_target_probability
+5000,21,-0.1644299299323149,-0.05183244338349602,-0.7067889389098186,-0.13532591003599242,-0.8344849913991136,0.8755265385230522,0.0

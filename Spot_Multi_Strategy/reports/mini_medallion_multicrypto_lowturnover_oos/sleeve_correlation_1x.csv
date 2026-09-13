@@ -1,0 +1,4 @@
+,basis_contribution,funding_contribution,trend_contribution
+basis_contribution,1.0,-0.009996138073170551,0.007680812085255139
+funding_contribution,-0.009996138073170551,1.0,-0.020320253746376027
+trend_contribution,0.007680812085255139,-0.020320253746376027,1.0
