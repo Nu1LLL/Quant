@@ -1,0 +1,2 @@
+observations,start,end,coverage_ratio,max_business_gap,duplicate_count,span_years,passed
+5444,2005-01-21 00:00:00+00:00,2026-09-11 00:00:00+00:00,0.9642224583776124,2,0,21.637234770704996,True
