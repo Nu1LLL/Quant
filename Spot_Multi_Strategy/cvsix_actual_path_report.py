@@ -12,9 +12,14 @@ START = "1990-01-01"
 END = "2026-09-15"
 LATEST_START = pd.Timestamp("1991-12-31", tz="UTC")
 EARLIEST_END = pd.Timestamp("2026-08-31", tz="UTC")
-ACCOUNT_EXECUTABLE = False
-STRATEGY_CONTINUITY = False
-ENTRY_SALES_LOAD = 0.0
+# Post-performance official-document audit: Class A has a $2,500 minimum and
+# remains open, while an ordinary $10,000 purchase is below the $50,000 load
+# breakpoint. The prospectus maximum 2.75% front load is therefore charged.
+ACCOUNT_EXECUTABLE = True
+# The sponsor describes the fund as launched in 1990 with convertible
+# arbitrage; the current mandate retains that core market-neutral mechanism.
+STRATEGY_CONTINUITY = True
+ENTRY_SALES_LOAD = 0.0275
 EXIT_SALES_LOAD = 0.0
 
 
