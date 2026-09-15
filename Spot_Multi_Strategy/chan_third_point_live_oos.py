@@ -101,3 +101,23 @@ def run_portfolio(markets, leverage, leg_cost=core.LEG_COST,
     })
     return (net_return.rename("net_return"), positions, targets, boundaries,
             events, positioned_returns, detail)
+
+
+def one_x_sleeve_attribution(markets, positions, leg_cost=core.LEG_COST,
+                             annual_short_borrow=core.ANNUAL_SHORT_BORROW):
+    """Allocate the exact 1x portfolio PnL and costs back to each sleeve."""
+    if not np.allclose(positions.abs().sum(axis=1).to_numpy(),
+                       positions.abs().sum(axis=1).clip(upper=1.0).to_numpy()):
+        raise ValueError("Sleeve attribution is frozen to the 1x scenario")
+    rows = {}
+    for symbol in SYMBOLS:
+        asset_return = markets[symbol]["close"].pct_change(fill_method=None).fillna(0.0)
+        weight = positions[symbol]
+        gross = weight * asset_return.reindex(weight.index)
+        turnover = weight.diff().abs()
+        turnover.iloc[0] = abs(weight.iloc[0])
+        trading_cost = turnover * leg_cost
+        trading_cost.iloc[-1] += abs(weight.iloc[-1]) * leg_cost
+        short_borrow = weight.clip(upper=0.0).abs() * annual_short_borrow / 252.0
+        rows[symbol] = gross - trading_cost - short_borrow
+    return pd.DataFrame(rows)

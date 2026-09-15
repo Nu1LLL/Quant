@@ -53,3 +53,12 @@ def test_wrapper_uses_frozen_engine_and_fixed_equal_weights(monkeypatch):
     assert returns.index.equals(positions.index)
     assert np.allclose(positions.abs().sum(axis=1), 1.0)
     assert np.allclose(positions["SCHB"], 0.25)
+
+
+def test_one_x_sleeve_attribution_sums_to_portfolio_net():
+    aligned = markets()
+    returns, positions, _, _, _, _, _ = strategy.run_portfolio(aligned, 1.0)
+    sleeves = strategy.one_x_sleeve_attribution(aligned, positions)
+    pd.testing.assert_series_equal(
+        sleeves.sum(axis=1).rename("net_return"), returns, check_names=True
+    )

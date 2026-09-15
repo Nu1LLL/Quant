@@ -138,6 +138,18 @@ def main(refresh=False):
     results[1.0]["positioned_returns"].corr().to_csv(
         output / "positioned_return_correlation_1x.csv"
     )
+    sleeve_net = strategy.one_x_sleeve_attribution(
+        markets, results[1.0]["positions"]
+    )
+    sleeve_net.to_csv(output / "sleeve_net_returns_1x.csv")
+    sleeve_rows = []
+    for symbol in strategy.SYMBOLS:
+        metrics = strict_validation.metrics_for_returns(sleeve_net[symbol])
+        sleeve_rows.append({"symbol": symbol,
+                            "net_simple_contribution": float(sleeve_net[symbol].sum()),
+                            **metrics})
+    sleeve_summary = pd.DataFrame(sleeve_rows)
+    sleeve_summary.to_csv(output / "sleeve_attribution_1x.csv", index=False)
     event_rows, diagnostics = [], []
     for symbol in strategy.SYMBOLS:
         event = results[1.0]["events"][symbol].copy()
@@ -169,6 +181,8 @@ def main(refresh=False):
     print(summary[columns].to_string(index=False))
     print("SIGNALS", pd.DataFrame(diagnostics).to_dict("records"))
     print("COST_TOTALS_1X", cost_totals.to_dict())
+    print("SLEEVE_ATTRIBUTION_1X", sleeve_summary[["symbol", "net_simple_contribution",
+          "cagr", "sharpe_ratio", "max_drawdown", "profit_factor"]].to_dict("records"))
     print("CORRELATION\n", results[1.0]["positioned_returns"].corr().to_string())
     print("MONTE_CARLO", monte_carlo)
     print(regimes[["family", "regime", "observations", "cagr", "sharpe_ratio",
