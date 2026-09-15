@@ -33,14 +33,17 @@ class QgmnxActualPathTests(unittest.TestCase):
     def test_independent_first_read_and_execution_are_separate(self):
         returns, detail = qgmnx_actual_path.run_scenario(self.prices, 1.0)
         result = qgmnx_actual_path.evaluate_actual_path(
-            returns, bool(detail["solvent"].all()), account_executable=False
+            returns, bool(detail["solvent"].all()), account_executable=False,
+            strategy_continuity=False,
         )
         self.assertTrue(result["checks"]["independent_oos"])
         self.assertFalse(result["checks"]["account_executable_for_10000"])
+        self.assertFalse(result["checks"]["same_strategy_for_full_sample"])
 
     def test_report_has_five_frozen_scenarios(self):
         results, _, _, _ = qgmnx_actual_path_report.run_experiment(
-            self.prices, simulations=20, account_executable=True
+            self.prices, simulations=20, account_executable=True,
+            strategy_continuity=True,
         )
         self.assertEqual(set(results), set(qgmnx_actual_path.FROZEN_LEVERAGES))
 

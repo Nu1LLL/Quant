@@ -56,7 +56,9 @@ def run_scenario(
     return net, detail
 
 
-def evaluate_actual_path(returns, solvent, account_executable):
+def evaluate_actual_path(
+    returns, solvent, account_executable, strategy_continuity=False
+):
     result = strict_validation.evaluate_strict_oos(
         returns, independent_oos=True, costs_included=True
     )
@@ -77,6 +79,7 @@ def evaluate_actual_path(returns, solvent, account_executable):
     checks["walk_forward_passed"] = long_walk_forward
     checks["worst_rolling_3y_sharpe_at_least_1"] = worst_rolling >= 1.0
     checks["account_executable_for_10000"] = bool(account_executable)
+    checks["same_strategy_for_full_sample"] = bool(strategy_continuity)
     checks["solvent"] = bool(solvent)
     result["checks"] = checks
     result["metrics"]["worst_rolling_3y_sharpe"] = worst_rolling

@@ -12,7 +12,11 @@ START = "2014-01-01"
 END = "2026-09-15"
 LATEST_START = pd.Timestamp("2015-12-31", tz="UTC")
 EARLIEST_END = pd.Timestamp("2026-08-31", tz="UTC")
-ACCOUNT_EXECUTABLE = False
+# Post-performance prospectus audit: Class N has a $2,500 minimum and daily
+# NYSE-open-day dealing, but returns before 2021-10-19 belong to a different
+# strategy under the former AQR Global Macro Fund mandate.
+ACCOUNT_EXECUTABLE = True
+STRATEGY_CONTINUITY = False
 
 
 def coverage_checks(prices):
@@ -29,7 +33,10 @@ def coverage_checks(prices):
     }, coverage
 
 
-def run_experiment(prices, simulations=5000, account_executable=False):
+def run_experiment(
+    prices, simulations=5000, account_executable=False,
+    strategy_continuity=False,
+):
     prices = qgmnx_actual_path.validate_prices(prices)
     coverage, coverage_ratio = coverage_checks(prices)
     if not all(coverage.values()):
@@ -39,7 +46,8 @@ def run_experiment(prices, simulations=5000, account_executable=False):
     for leverage in qgmnx_actual_path.FROZEN_LEVERAGES:
         returns, detail = qgmnx_actual_path.run_scenario(prices, leverage)
         validation = qgmnx_actual_path.evaluate_actual_path(
-            returns, bool(detail["solvent"].all()), account_executable
+            returns, bool(detail["solvent"].all()), account_executable,
+            strategy_continuity,
         )
         validation["checks"].update(coverage)
         validation["passed"] = all(validation["checks"].values())
@@ -78,7 +86,8 @@ def main():
         "QGMNX", START, END, cache_folder=inputs, refresh=False
     )
     results, monte_carlo, regimes, coverage_ratio = run_experiment(
-        prices, account_executable=ACCOUNT_EXECUTABLE
+        prices, account_executable=ACCOUNT_EXECUTABLE,
+        strategy_continuity=STRATEGY_CONTINUITY,
     )
     prices.rename_axis("date").to_csv(output / "adjusted_nav.csv")
     rows = []
@@ -111,6 +120,7 @@ def main():
         "leverage", "path__cagr", "path__sharpe_ratio", "path__max_drawdown",
         "path__profit_factor", "path__worst_rolling_3y_sharpe", "ending_equity",
         "check__walk_forward_passed", "check__account_executable_for_10000",
+        "check__same_strategy_for_full_sample",
         "strict_gate_passed",
     ]].to_string(index=False))
     print("MONTE_CARLO_1x", monte_carlo)
