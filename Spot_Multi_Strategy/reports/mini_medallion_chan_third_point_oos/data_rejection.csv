@@ -1,0 +1,5 @@
+symbol,status,observations,reason
+ITOT,downloaded_not_evaluated,4955,Downloaded before the fixed-order CYB request failed; no signal or return was calculated
+CYB,rejected,0,Yahoo chart response contained no timestamps and no usable adjusted-close array
+DBB,not_requested,0,Stopped immediately after the fixed CYB data failure
+BIV,not_requested,0,Stopped immediately after the fixed CYB data failure
