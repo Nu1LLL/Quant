@@ -12,8 +12,11 @@ START = "2014-01-01"
 END = "2026-09-15"
 LATEST_START = pd.Timestamp("2015-12-31", tz="UTC")
 EARLIEST_END = pd.Timestamp("2026-08-31", tz="UTC")
+# The May 20, 2026 SEC supplement closes the fund to ordinary new investors
+# from June 19, 2026. Existing holders and listed exceptions may still buy.
 ACCOUNT_EXECUTABLE = False
-STRATEGY_CONTINUITY = False
+# No material strategy discontinuity was disclosed for the observed lifetime.
+STRATEGY_CONTINUITY = True
 
 
 def coverage_checks(prices):
