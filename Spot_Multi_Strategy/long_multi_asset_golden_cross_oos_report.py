@@ -53,7 +53,7 @@ def run_experiment(prices, simulations=5000):
     return results, monte_carlo, regimes, audit
 
 
-def main(refresh=True):
+def main(refresh=False):
     root = Path(__file__).resolve().parent
     output = root / "reports/mini_medallion_long_multi_asset_golden_cross_oos"
     inputs = output / "inputs"
