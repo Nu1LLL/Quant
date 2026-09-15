@@ -12,10 +12,14 @@ START = "2014-01-01"
 END = "2026-09-15"
 LATEST_START = pd.Timestamp("2016-06-30", tz="UTC")
 EARLIEST_END = pd.Timestamp("2026-08-31", tz="UTC")
-# Frozen as unknown until the post-performance official-document audit.
-ACCOUNT_EXECUTABLE = False
-STRATEGY_CONTINUITY = False
-ENTRY_SALES_LOAD = 0.0
+# Post-performance official-document audit: IOFAX is Class A, has a $2,500
+# regular-account minimum, remains daily redeemable, and charges a maximum
+# 4.75% front load below the first $50,000 breakpoint. The same sub-adviser and
+# portfolio managers have served since the May 2015 inception, with the same
+# mortgage/asset-backed mandate.
+ACCOUNT_EXECUTABLE = True
+STRATEGY_CONTINUITY = True
+ENTRY_SALES_LOAD = 0.0475
 EXIT_SALES_LOAD = 0.0
 
 
