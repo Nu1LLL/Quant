@@ -12,9 +12,9 @@ START = "2000-01-01"
 END = "2026-09-16"
 LATEST_START = pd.Timestamp("2003-12-31", tz="UTC")
 EARLIEST_END = pd.Timestamp("2026-08-31", tz="UTC")
-# Frozen as unknown until the post-performance official-document audit.
-ACCOUNT_EXECUTABLE = False
-STRATEGY_CONTINUITY = False
+# Resolved only after the first performance run from official documents.
+ACCOUNT_EXECUTABLE = True
+STRATEGY_CONTINUITY = True
 ENTRY_SALES_LOAD = 0.0
 EXIT_SALES_LOAD = 0.0
 
