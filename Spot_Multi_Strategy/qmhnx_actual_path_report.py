@@ -12,8 +12,11 @@ START = "2013-01-01"
 END = "2026-09-15"
 LATEST_START = pd.Timestamp("2013-12-31", tz="UTC")
 EARLIEST_END = pd.Timestamp("2026-08-31", tz="UTC")
-# Frozen as unknown until the preregistered post-performance prospectus check.
-ACCOUNT_EXECUTABLE = False
+# Post-performance operational check required by the preregistration: the
+# May 1, 2026 SEC summary prospectus lists a $2,500 Class N minimum and daily
+# purchase/redemption on NYSE-open days. Platform and residency eligibility
+# remain investor-specific, but the product-level $10,000 gate is satisfied.
+ACCOUNT_EXECUTABLE = True
 
 
 def coverage_checks(prices):
