@@ -1,0 +1,2 @@
+observations,start,end,span_years,weekday_coverage,start_by_2010_12_31,end_by_2026_08_31,span_at_least_15y,weekday_coverage_at_least_94pct,passed
+4667,2006-03-21 00:00:00+00:00,2024-10-07 00:00:00+00:00,18.548939082819988,0.9642561983471074,True,False,True,True,False

@@ -61,12 +61,15 @@ def main(refresh=False):
     inputs = output / "inputs"
     output.mkdir(parents=True, exist_ok=True)
     levels = strategy.load_levels(inputs, refresh=refresh)
+    audit = strategy.coverage_audit(levels)
+    levels.rename_axis("date").to_csv(output / "vstg_levels.csv")
+    pd.DataFrame([audit]).to_csv(output / "coverage_audit.csv", index=False)
+    if not audit["passed"]:
+        raise ValueError(f"VSTG coverage gate failed before performance: {audit}")
     results, monte_carlo, regimes, audit = run_experiment(
         levels, account_executable=ACCOUNT_EXECUTABLE,
         live_history_at_least_10y=LIVE_HISTORY_AT_LEAST_10Y,
     )
-    levels.rename_axis("date").to_csv(output / "vstg_levels.csv")
-    pd.DataFrame([audit]).to_csv(output / "coverage_audit.csv", index=False)
     rows = []
     for leverage, result in results.items():
         label = leverage_label(leverage)
