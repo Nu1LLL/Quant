@@ -12,9 +12,15 @@ START = "2019-01-01"
 END = "2026-09-15"
 LATEST_START = pd.Timestamp("2020-03-31", tz="UTC")
 EARLIEST_END = pd.Timestamp("2026-08-31", tz="UTC")
-# Frozen as unknown until the post-performance official-document audit.
+# Post-performance official-document audit: BLNDX is the Institutional Class,
+# not the Investor Class as the preregistration heading mistakenly stated. Its
+# direct minimum is $25,000, so the exact frozen ticker is not executable by a
+# $10,000 account. The lower-minimum Investor Class is REMIX and may not be
+# substituted after the result. Both classes transact at NAV without a fund
+# sales load; the prospectus and unchanged portfolio managers support strategy
+# continuity from the December 2019 inception.
 ACCOUNT_EXECUTABLE = False
-STRATEGY_CONTINUITY = False
+STRATEGY_CONTINUITY = True
 ENTRY_SALES_LOAD = 0.0
 EXIT_SALES_LOAD = 0.0
 
