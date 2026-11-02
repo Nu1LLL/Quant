@@ -1,0 +1,9 @@
+{
+  "code_commit": "1fc6d3e843b48f407527dc83b5d91f33380f14cd",
+  "finished_utc": "2026-11-02T10:10:50.045076+00:00",
+  "interpretation_commit": "2a9cbe9",
+  "preregistration_commit": "4ec84a3",
+  "reason": "markPriceKlines/AAVEUSDT: coverage 0.998621 below 0.999",
+  "started_utc": "2026-11-02T10:07:36.110994+00:00",
+  "status": "data_failure; no strategy result accepted"
+}
