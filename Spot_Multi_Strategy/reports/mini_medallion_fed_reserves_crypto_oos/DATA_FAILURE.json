@@ -1,0 +1,22 @@
+{
+  "started_utc": "2026-11-02T16:49:02.333367+00:00",
+  "sealed_utc": "2026-11-02T16:49:04.566454+00:00",
+  "code_commit": "32dbcf95103e6943748513cf39e03554036b4a33",
+  "prereg_commit": "690377e",
+  "evidence_grade": "preregistered_retrospective_historical_holdout",
+  "independent_oos": false,
+  "source_warnings": [
+    "H.4.1 archive pages may have been revised after their dated release.",
+    "Reserve balances are not an unambiguous monetary-policy stance measure.",
+    "Binance daily/monthly public ZIPs may have been revised after publication.",
+    "Historical lot-size and maintenance-margin tiers are only proxies.",
+    "Funding events up to 100ms after the nominal hour are mapped to that hour.",
+    "Neither H.4.1 release-date metadata nor this retrospective sample proves independent OOS."
+  ],
+  "status": "data-ineligible",
+  "reason": "reserve row is not in exact Table 1 context",
+  "error_type": "VintageDataError",
+  "pnl_computed": false,
+  "pnl_published": false,
+  "all_gate_passed": false
+}
