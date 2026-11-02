@@ -1,0 +1,45 @@
+{
+  "started_utc": "2026-11-02T18:36:37.801933+00:00",
+  "sealed_utc": "2026-11-02T18:38:12.081623+00:00",
+  "code_commit": "e2c7dbd356e1abc86dc65f2a73105f246767b295",
+  "prereg_commit": "70ee332",
+  "evidence_grade": "retrospective_current_vintage_btc_fee",
+  "independent_oos": false,
+  "full_gate": false,
+  "signal_publication_proxy": {
+    "rule": "Wednesday D 00:00 UTC observation assumed visible D+1 day 00:00 UTC; Monday decision imposes four more days of lag",
+    "actual_first_publication_time_verified": false,
+    "historical_as_of_vintages_verified": false
+  },
+  "source_attribution": {
+    "coin_metrics": {
+      "credit": "Coin Metrics Community BTC FeeTotNtv",
+      "license": "CC BY-NC 4.0",
+      "api_docs": "https://github.com/coinmetrics/docs-website/blob/master/api.md",
+      "license_reference": "https://github.com/coinmetrics/data/blob/master/README.md",
+      "modifications": "Daily native-unit BTC fees were aggregated into 28-day rolling sums and long/cash weekly directions."
+    },
+    "binance_vision": {
+      "credit": "Binance Vision USD-M historical archives",
+      "license": "CC BY-NC-SA 4.0",
+      "terms": "https://github.com/binance/binance-public-data/blob/master/TERMS_AND_CONDITIONS.md",
+      "modifications": "Historical bars and funding were transformed into derived backtest metrics.",
+      "derived_report_metrics_license": "CC BY-NC-SA 4.0; non-commercial research only"
+    }
+  },
+  "source_warnings": [
+    "Coin Metrics historical fees are a current vintage, not verified historical as-of values.",
+    "The D+1 visibility timestamp is an unverified research proxy, not an observed publication timestamp.",
+    "Coin Metrics Community API data is for non-commercial use; commercial or live use needs appropriate permission (https://github.com/coinmetrics/docs-website/blob/master/api.md).",
+    "Binance Vision datasets permit personal non-production backtesting only under their non-commercial terms; live trading requires separate authorization (https://github.com/binance/binance-public-data/blob/master/TERMS_AND_CONDITIONS.md).",
+    "BTC fees may reflect congestion or supply shocks rather than profitable demand and may follow prices.",
+    "Binance public ZIPs may be revised; historical margin tiers and lot limits are proxies.",
+    "Actual funding rows up to 100ms after nominal settlement are mapped to that hour.",
+    "The 2021–2025 retrospective holdout is not an independent prospective OOS test."
+  ],
+  "status": "code-failure",
+  "reason": "report object keys must be strings",
+  "error_type": "TypeError",
+  "pnl_published": false,
+  "all_gate_passed": false
+}
