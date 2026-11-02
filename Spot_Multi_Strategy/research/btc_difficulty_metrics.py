@@ -310,6 +310,9 @@ def block_monte_carlo(
         cagr = np.power(ending, ANNUAL_DAYS / n) - 1.0
         mean = sample.mean(axis=1)
         std = sample.std(axis=1, ddof=1) if n > 1 else np.zeros(batch)
+        # Floating summation can report ~1e-19 variance for an exactly
+        # constant nonzero sample; such paths have undefined Sharpe.
+        std[np.all(sample == sample[:, :1], axis=1)] = 0.0
         sharpe = np.full(batch, -np.inf)
         np.divide(math.sqrt(ANNUAL_DAYS) * mean, std, out=sharpe, where=std > 0)
         gains = np.maximum(sample, 0.0).sum(axis=1)

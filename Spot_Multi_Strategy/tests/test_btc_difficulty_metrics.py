@@ -157,6 +157,10 @@ class BtcDifficultyMetricsTests(unittest.TestCase):
         self.assertIsNone(flat["p05_sharpe"])
         self.assertIsNone(flat["p05_profit_factor_daily"])
         self.assertFalse(flat["passed"])
+        constant_positive = block_monte_carlo([0.0001] * 30, paths=20, block_days=21)
+        self.assertIsNone(constant_positive["p05_sharpe"])
+        self.assertIsNone(constant_positive["p05_profit_factor_daily"])
+        self.assertEqual(constant_positive["joint_numeric_gate_probability"], 0.0)
 
     def test_full_evaluation_has_fixed_calendar_benchmark_and_oos_lock(self):
         strategy_rows = synthetic_rows(lambda _: 0.0)
