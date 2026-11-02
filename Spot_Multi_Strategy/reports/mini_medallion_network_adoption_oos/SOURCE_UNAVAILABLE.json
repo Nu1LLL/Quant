@@ -1,0 +1,10 @@
+{
+  "code_commit": "29ca69c4718e73d24b9a568fc4204949d9e20cf0",
+  "funding_time_amendment_commit": "dd77ed7",
+  "observed_utc": "2026-11-02T14:29:08.773050+00:00",
+  "preregistration_commit": "cde1897",
+  "reason": "official archive unavailable (404): https://data.binance.vision/data/futures/um/monthly/fundingRate/MKRUSDT/MKRUSDT-fundingRate-2025-10.zip.CHECKSUM",
+  "source_integrity_amendment_commit": "ae6e677",
+  "started_utc": "2026-11-02T14:25:50.743036+00:00",
+  "status": "source_unavailable; no strategy result computed"
+}

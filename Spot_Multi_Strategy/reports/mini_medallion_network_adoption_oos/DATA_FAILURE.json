@@ -1,0 +1,12 @@
+{
+  "code_commit": "2ef56f63eb4dd7059b56cc2ccd9f58924f5a0e67",
+  "finished_utc": "2026-11-02T14:36:44.255242+00:00",
+  "funding_time_amendment_commit": "dd77ed7",
+  "mkr_notice_amendment_commit": "77efcc2",
+  "notice_manifest_commit": "337629f",
+  "preregistration_commit": "cde1897",
+  "reason": "BATUSDT/mark4: 12 missing bars; first=2022-10-02 00:00:00+00:00",
+  "source_integrity_amendment_commit": "ae6e677",
+  "started_utc": "2026-11-02T14:34:06.982654+00:00",
+  "status": "data_ineligible; no strategy result accepted"
+}
