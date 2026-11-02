@@ -1,0 +1,18 @@
+{
+  "started_utc": "2026-11-02T16:11:04.541639+00:00",
+  "sealed_utc": "2026-11-02T16:12:36.799232+00:00",
+  "code_commit": "463d8e69b3761feb9539787c19d09c782ebea5c7",
+  "prereg_commit": "c83917d",
+  "evidence_grade": "preregistered_retrospective_historical_holdout",
+  "independent_oos": false,
+  "source_warnings": [
+    "Today’s Wikimedia API response has no per-observation historical publication vintage.",
+    "Documented partial pageview traffic loss in 2021-06-04..2022-01-27 is not excluded.",
+    "The historical Binance lot sizes and maintenance-margin tiers are not fully reconstructed.",
+    "Binance public ZIPs and adjacent checksums can be updated after initial release."
+  ],
+  "status": "data-ineligible",
+  "reason": "markPriceKlines/BTCUSDT: incomplete 4h grid (missing=48, outside=0)",
+  "error_type": "ArchiveIntegrityError",
+  "pnl_computed": false
+}
