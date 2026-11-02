@@ -1,0 +1,10 @@
+{
+  "code_commit": "b44483600e46e55e68475953358fa0d86e78f7d1",
+  "finished_utc": "2026-11-02T12:42:09.034667+00:00",
+  "full_unified_gate_passed": false,
+  "interpretation_commit": "a9b1558",
+  "preregistration_commit": "83ec829",
+  "reason": "spot/BTCUSDT/2021-02: inconsistent bar close times",
+  "started_utc": "2026-11-02T12:42:07.153917+00:00",
+  "status": "data_ineligible_no_strategy_pnl_read"
+}
