@@ -1,7 +1,8 @@
 """One-shot, storage-light execution of the sealed network-adoption study.
 
-The preregistration is commit cde1897, funding-time amendment dd77ed7, and
-futures-notice source manifest 337629f. Official archive ZIPs are verified in
+The preregistration is commit cde1897, amendments dd77ed7/ae6e677/77efcc2,
+and futures-notice source manifest 337629f (updated at 77efcc2). Archives are
+verified in
 memory and never extracted or retained. Only metadata and compact outcomes
 may be written to the ignored study report folder after execution.
 """
@@ -58,8 +59,11 @@ NOTICES = {
     "CVCUSDT": datetime(2022, 11, 28, 3, 30, tzinfo=UTC),
     "RENUSDT": datetime(2024, 11, 26, 8, 30, tzinfo=UTC),
     "OMGUSDT": datetime(2024, 12, 6, 3, 0, tzinfo=UTC),
+    # Publication time has no explicit timezone.  Use the preregistered
+    # conservative end-of-UTC-date fallback, not a guessed 09:00 UTC.
+    "MKRUSDT": datetime(2025, 7, 18, 23, 59, 59, tzinfo=UTC),
 }
-SEALED_COMMITS = ("cde1897", "337629f", "dd77ed7", "ae6e677")
+SEALED_COMMITS = ("cde1897", "337629f", "dd77ed7", "ae6e677", "77efcc2")
 SEALED_PATHS = (
     "Spot_Multi_Strategy/research/network_adoption_binance.py",
     "Spot_Multi_Strategy/research/network_adoption_coinmetrics.py",
@@ -72,6 +76,7 @@ SEALED_PATHS = (
     "Spot_Multi_Strategy/reports/mini_medallion_network_adoption_oos/PREREGISTRATION.md",
     "Spot_Multi_Strategy/reports/mini_medallion_network_adoption_oos/AMENDMENT_01_FUNDING_TIME.md",
     "Spot_Multi_Strategy/reports/mini_medallion_network_adoption_oos/AMENDMENT_02_SOURCE_INTEGRITY.md",
+    "Spot_Multi_Strategy/reports/mini_medallion_network_adoption_oos/AMENDMENT_03_MKR_SOURCE_NOTICE.md",
     "Spot_Multi_Strategy/research/NETWORK_ADOPTION_ANNOUNCEMENTS.md",
 )
 
@@ -247,6 +252,7 @@ def load_archives(*, max_workers: int = 12) -> ArchiveBundle:
         "preregistration_commit": "cde1897",
         "funding_time_amendment_commit": "dd77ed7",
         "source_integrity_amendment_commit": "ae6e677",
+        "mkr_notice_amendment_commit": "77efcc2",
         "notice_manifest_commit": "337629f",
         "archive_count": len(records),
         "archive_metadata_sha256": digest,
@@ -286,6 +292,17 @@ def _write_json(path: Path, payload: dict[str, Any]) -> None:
     path.write_text(json.dumps(_json_safe(payload), ensure_ascii=False,
                                indent=2, sort_keys=True, allow_nan=False) + "\n",
                     encoding="utf-8")
+
+
+def _write_source_unavailable(payload: dict[str, Any]) -> None:
+    """Keep each no-P&L source interruption as a tiny append-only audit file."""
+    first = REPORT_DIR / "SOURCE_UNAVAILABLE.json"
+    path = first
+    ordinal = 2
+    while path.exists():
+        path = REPORT_DIR / f"SOURCE_UNAVAILABLE_{ordinal:02d}.json"
+        ordinal += 1
+    _write_json(path, payload)
 
 
 def _git_head() -> str:
@@ -385,6 +402,7 @@ def main() -> int:
             "funding_time_amendment_commit": "dd77ed7",
             "notice_manifest_commit": "337629f",
             "source_integrity_amendment_commit": "ae6e677",
+            "mkr_notice_amendment_commit": "77efcc2",
             "code_commit": code_commit,
             "started_utc": started,
             "finished_utc": datetime.now(UTC).isoformat(),
@@ -402,13 +420,14 @@ def main() -> int:
         # A missing or temporarily unreachable official object is not a
         # strategy outcome. Keep the one-shot formal-result lock open for a
         # later attempt under the identical sealed rules.
-        _write_json(REPORT_DIR / "SOURCE_UNAVAILABLE.json", {
+        _write_source_unavailable({
             "status": "source_unavailable; no strategy result computed",
             "reason": str(exc), "started_utc": started,
             "observed_utc": datetime.now(UTC).isoformat(),
             "preregistration_commit": "cde1897",
             "funding_time_amendment_commit": "dd77ed7",
             "source_integrity_amendment_commit": "ae6e677",
+            "mkr_notice_amendment_commit": "77efcc2",
             "code_commit": code_commit,
         })
         print(f"Official source unavailable; no strategy P&L computed: {exc}")
@@ -418,12 +437,13 @@ def main() -> int:
             "HTTP 429", "HTTP 500", "HTTP 502", "HTTP 503", "HTTP 504",
             "response failed",
         )):
-            _write_json(REPORT_DIR / "SOURCE_UNAVAILABLE.json", {
+            _write_source_unavailable({
                 "status": "source_unavailable; no strategy result computed",
                 "reason": str(exc), "started_utc": started,
                 "observed_utc": datetime.now(UTC).isoformat(),
                 "preregistration_commit": "cde1897",
                 "source_integrity_amendment_commit": "ae6e677",
+                "mkr_notice_amendment_commit": "77efcc2",
                 "code_commit": code_commit,
             })
             print(f"Network metric source unavailable; no strategy P&L computed: {exc}")
@@ -436,6 +456,7 @@ def main() -> int:
             "preregistration_commit": "cde1897",
             "funding_time_amendment_commit": "dd77ed7",
             "source_integrity_amendment_commit": "ae6e677",
+            "mkr_notice_amendment_commit": "77efcc2",
             "notice_manifest_commit": "337629f",
             "code_commit": code_commit,
         })
@@ -448,6 +469,7 @@ def main() -> int:
             "preregistration_commit": "cde1897",
             "funding_time_amendment_commit": "dd77ed7",
             "source_integrity_amendment_commit": "ae6e677",
+            "mkr_notice_amendment_commit": "77efcc2",
             "notice_manifest_commit": "337629f",
             "code_commit": code_commit,
             "started_utc": started,

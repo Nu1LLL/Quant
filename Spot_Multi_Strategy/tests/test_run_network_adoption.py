@@ -1,13 +1,17 @@
 from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
+import json
+from pathlib import Path
+from tempfile import TemporaryDirectory
 import unittest
 from unittest.mock import patch
 
 from research.network_adoption_binance import Bar, Funding, MonthArchive
 
 from research.run_network_adoption import (
-    NOTICES, SYMBOLS, StudyDataError, _json_safe, _months, archive_jobs,
+    NOTICES, SYMBOLS, StudyDataError, _json_safe, _months,
+    _write_source_unavailable, archive_jobs,
     load_archives, next_4h_open_after,
 )
 
@@ -41,6 +45,12 @@ class NetworkStudyRunnerTests(unittest.TestCase):
             last_month = next_4h_open_after(NOTICES[symbol]).strftime("%Y-%m")
             self.assertIn(("trade4", symbol, last_month), jobs)
         self.assertNotIn(("trade4", "CVCUSDT", "2025-05"), jobs)
+        self.assertEqual(
+            next_4h_open_after(NOTICES["MKRUSDT"]),
+            datetime(2025, 7, 19, tzinfo=UTC),
+        )
+        self.assertIn(("funding", "MKRUSDT", "2025-07"), jobs)
+        self.assertNotIn(("funding", "MKRUSDT", "2025-08"), jobs)
         self.assertIn(("trade4", "BATUSDT", "2026-01"), jobs)
         self.assertIn(("btc_spot1d", "BTCUSDT", "2020-12"), jobs)
         self.assertIn(("btc_spot1d", "BTCUSDT", "2025-12"), jobs)
@@ -50,6 +60,20 @@ class NetworkStudyRunnerTests(unittest.TestCase):
         self.assertEqual(_json_safe(float("inf")), "Infinity")
         with self.assertRaisesRegex(StudyDataError, "non-finite result"):
             _json_safe(float("nan"))
+
+    def test_source_interruption_log_preserves_first_event(self):
+        with TemporaryDirectory() as temp_dir, \
+             patch("research.run_network_adoption.REPORT_DIR", Path(temp_dir)):
+            _write_source_unavailable({"reason": "first"})
+            _write_source_unavailable({"reason": "second"})
+            self.assertEqual(
+                json.loads((Path(temp_dir) / "SOURCE_UNAVAILABLE.json").read_text())["reason"],
+                "first",
+            )
+            self.assertEqual(
+                json.loads((Path(temp_dir) / "SOURCE_UNAVAILABLE_02.json").read_text())["reason"],
+                "second",
+            )
 
     def test_missing_funding_across_month_boundary_is_rejected(self):
         # Exercise the runner's continuity gate using only invented bars and
