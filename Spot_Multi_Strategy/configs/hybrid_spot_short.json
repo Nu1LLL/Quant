@@ -1,0 +1,20 @@
+{
+  "spot_slow_ema_window": 130,
+  "spot_fast_ema_window": 100,
+  "spot_momentum_window": 120,
+  "spot_ema_slope_window": 10,
+  "spot_rebalance_bars": 12,
+  "spot_exposure": 0.33,
+  "short_slow_ema_window": 150,
+  "short_fast_ema_window": 80,
+  "short_momentum_window": 120,
+  "short_ema_slope_window": 10,
+  "short_rebalance_bars": 12,
+  "require_all_symbols_short": true,
+  "short_exposure": 0.10,
+  "atr_window": 14,
+  "short_stop_atr_multiple": 10.0,
+  "short_cooldown_bars": 12,
+  "maintenance_margin_rate": 0.01,
+  "liquidation_fee_rate": 0.01
+}

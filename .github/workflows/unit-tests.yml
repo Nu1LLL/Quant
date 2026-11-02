@@ -1,0 +1,27 @@
+name: Quant unit tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: Spot_Multi_Strategy/requirements.txt
+      - name: Install dependencies
+        run: python -m pip install -r Spot_Multi_Strategy/requirements.txt
+      - name: Run unit tests
+        working-directory: Spot_Multi_Strategy
+        run: python -m unittest discover -s tests -p 'test_*.py' -q

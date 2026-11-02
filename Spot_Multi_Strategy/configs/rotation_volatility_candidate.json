@@ -1,0 +1,12 @@
+{
+  "slow_ema_window": 130,
+  "fast_ema_window": 100,
+  "momentum_window": 120,
+  "ema_slope_window": 10,
+  "rebalance_bars": 12,
+  "exposure": 1.0,
+  "broad_market_exposure": 1.0,
+  "volatility_window": 75,
+  "target_volatility": 0.24,
+  "minimum_exposure": 0.1
+}

@@ -1,0 +1,15 @@
+{
+  "slow_ema_window": 130,
+  "fast_ema_window": 80,
+  "momentum_window": 120,
+  "ema_slope_window": 10,
+  "rebalance_bars": 12,
+  "atr_window": 14,
+  "trailing_stop_atr_multiple": 4.0,
+  "volatility_window": 42,
+  "annual_volatility_target": 0.22,
+  "max_leverage": 1.5,
+  "short_exposure_multiplier": 0.8,
+  "maintenance_margin_rate": 0.01,
+  "liquidation_fee_rate": 0.01
+}

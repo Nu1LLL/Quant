@@ -1,0 +1,42 @@
+# Python and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.DS_Store
+
+# Local environments and credentials
+.venv/
+venv/
+.env
+.env.*
+*.pem
+*.key
+
+# Downloaded or regenerated market data
+data_cache/
+futures_data_cache/
+btc_trend30_data_cache/
+cboe_options_data_cache/
+cross_asset_data_cache/
+yahoo_data_cache/
+
+# Regenerated research output. Markdown audit records remain versioned.
+alpha_reports/
+alpha_reports_1h/
+alpha_reports_multi_asset/
+hybrid_reports/
+rotation_reports/
+adaptive_rotation_reports/
+reports/**/*.csv
+reports/**/*.json
+reports/**/*.xlsx
+reports/**/*.parquet
+
+# Local paper-trading runtime state
+paper_state_rotation_candidate/
+paper_state/EMERGENCY_STOP
+paper_state/*.lock

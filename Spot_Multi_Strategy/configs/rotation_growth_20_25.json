@@ -1,0 +1,8 @@
+{
+  "slow_ema_window": 130,
+  "fast_ema_window": 100,
+  "momentum_window": 120,
+  "ema_slope_window": 10,
+  "rebalance_bars": 12,
+  "exposure": 0.33
+}
