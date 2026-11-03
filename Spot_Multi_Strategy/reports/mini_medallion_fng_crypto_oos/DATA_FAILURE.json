@@ -1,0 +1,51 @@
+{
+  "started_utc": "2026-11-03T15:05:46.059767+00:00",
+  "sealed_utc": "2026-11-03T15:05:48.146628+00:00",
+  "code_commit": "e35c21e3570b9e128e6019f301eb35ee1ff359c1",
+  "prereg_commit": "b2db5a6",
+  "evidence_grade": "retrospective_current_vintage_sentiment_snapshot_supported",
+  "independent_oos": false,
+  "full_gate": false,
+  "source_attribution": {
+    "alternative_me_fng": {
+      "credit": "Alternative.me Crypto Fear & Greed Index",
+      "source": "https://alternative.me/crypto/fear-and-greed-index/",
+      "api": "https://api.alternative.me/fng/?limit=0",
+      "modifications": "Historical daily observations were reduced to 261 Wednesday integers and fixed long, short or cash directions."
+    },
+    "binance_vision": {
+      "credit": "Binance Vision USD-M historical archives",
+      "terms": "https://github.com/binance/binance-public-data/blob/master/TERMS_AND_CONDITIONS.md",
+      "modifications": "Historical trade and mark bars and funding were transformed into derived backtest metrics."
+    }
+  },
+  "source_warnings": [
+    "FNG historical API is today's current vintage, not verified daily as-of vintages.",
+    "Dated images and HTTP metadata support, but do not prove, historical values as published.",
+    "The FNG index incorporates BTC price and volatility, so it is not price-independent.",
+    "The 2024-2025 time holdout is retrospective, not independent forward OOS.",
+    "Exchange archives may have been revised; actual order-book impact and historical margin tiers are proxies.",
+    "Alternative.me attribution and Binance Vision data terms apply; this study authorizes no live trading."
+  ],
+  "status": "data-ineligible",
+  "reason": "incomplete FNG UTC daily grid: 1 missing; first 2024-10-26",
+  "error_type": "FNGIntegrityError",
+  "pnl_computed": false,
+  "pnl_published": false,
+  "all_gate_passed": false,
+  "sources": {
+    "alternative_me_fng": {
+      "url": "https://api.alternative.me/fng/?limit=0",
+      "http_status": 200,
+      "http_content_type": "application/json",
+      "http_final_url": "https://api.alternative.me/fng/?limit=0",
+      "fetched_at_utc": "2026-11-03T15:05:46.069042+00:00",
+      "response_bytes": 301258,
+      "sha256": "dec5e524f09a37cb22d5b507d95a9615120e80b50e4f5e741665bb475d9b533a",
+      "coverage_start": "2020-12-30T00:00:00+00:00",
+      "coverage_end": "2025-12-24T00:00:00+00:00",
+      "coverage_days": 1821,
+      "source_attribution": "Alternative.me Crypto Fear & Greed Index"
+    }
+  }
+}
