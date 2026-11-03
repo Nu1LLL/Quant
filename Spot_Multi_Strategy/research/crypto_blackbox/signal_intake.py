@@ -106,7 +106,6 @@ class SignalIntake:
     """Small deterministic alert-history state machine, not a trade engine."""
 
     def __init__(self) -> None:
-        self._seen: set[tuple] = set()
         self._last_event: dict[tuple[str, ...], datetime] = {}
         self._last_asof: dict[tuple[str, ...], datetime] = {}
         self._last_alert: dict[
@@ -118,13 +117,13 @@ class SignalIntake:
     ) -> ObservationClassification:
         if not isinstance(observation, CryptoObservation):
             raise TypeError("observation must be a CryptoObservation")
-        duplicate_key = observation.duplicate_key
-        if duplicate_key in self._seen:
-            raise ValueError("duplicate source observation for the same window")
         stream_key = observation.stream_key
         previous_event = self._last_event.get(stream_key)
-        if previous_event is not None and observation.event_time < previous_event:
-            raise ValueError("observations must arrive in event-time order per stream")
+        if previous_event is not None:
+            if observation.event_time == previous_event:
+                raise ValueError("duplicate source observation for the same window")
+            if observation.event_time < previous_event:
+                raise ValueError("observations must arrive in event-time order per stream")
         previous_asof = self._last_asof.get(stream_key)
         if previous_asof is not None and asof_time < previous_asof:
             raise ValueError("decision asof_time cannot go backwards per stream")
@@ -134,7 +133,6 @@ class SignalIntake:
             prior_alert[0] if prior_alert is not None else None,
             prior_alert[1] if prior_alert is not None else None,
         )
-        self._seen.add(duplicate_key)
         self._last_event[stream_key] = observation.event_time
         self._last_asof[stream_key] = asof_time
         if label.label in {"FIRST_ALERT", "CONTINUATION"}:

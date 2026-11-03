@@ -14,7 +14,9 @@ from research.crypto_blackbox.binance_vision_5m import (
     archive_url,
     audit_monthly_klines,
     audit_months,
+    verified_monthly_klines,
 )
+from research.crypto_blackbox.kline_flow_adapter import KlineFlowAdapter
 
 
 HEADER = (
@@ -121,6 +123,50 @@ class BinanceVisionIntradayTests(unittest.TestCase):
     def test_unsupported_interval_rejected_before_fetch(self):
         with self.assertRaisesRegex(ValueError, "interval"):
             ArchiveRequest("spot", "BTCUSDT", "2021-02", "15m")
+
+    def test_verified_rows_are_available_only_after_whole_month_passes(self):
+        request = ArchiveRequest("spot", "BTCUSDT", "2021-02", "1m")
+        with verified_monthly_klines(request, fetch_chunks=_source(
+            request, HEADER + "".join(_month_rows(request)),
+        )) as rows:
+            first = next(rows)
+            self.assertEqual(first.open_time.isoformat(), "2021-02-01T00:00:00+00:00")
+            self.assertEqual(first.window_end.isoformat(), "2021-02-01T00:01:00+00:00")
+            self.assertEqual(first.quote_volume, 1000)
+            self.assertEqual(first.taker_buy_quote_volume, 600)
+            self.assertEqual(first.trade_count, 2)
+            self.assertEqual(len(first.archive_sha256), 64)
+            self.assertFalse(first.publication_time_verified)
+            self.assertEqual(sum(1 for _ in rows), 40_319)
+
+        missing = _month_rows(request)
+        missing.pop()
+        entered = False
+        with self.assertRaisesRegex(ArchiveIntegrityError, "month ends"):
+            with verified_monthly_klines(request, fetch_chunks=_source(
+                request, HEADER + "".join(missing),
+            )):
+                entered = True
+        self.assertFalse(entered)
+
+    def test_verified_archive_rows_feed_research_label_without_raw_trade_claim(self):
+        request = ArchiveRequest("spot", "BTCUSDT", "2021-02", "1m")
+        adapter = KlineFlowAdapter(availability_lag=timedelta(seconds=1))
+        with verified_monthly_klines(request, fetch_chunks=_source(
+            request, HEADER + "".join(_month_rows(request)),
+        )) as rows:
+            labels = []
+            for index, row in enumerate(rows):
+                result = adapter.consume(row)
+                if result is not None:
+                    labels.append(result)
+                if index == 64:
+                    break
+        self.assertEqual(len(labels), 1)
+        self.assertEqual(labels[0].classification.label, "NO_ALERT")
+        self.assertEqual(labels[0].observation.observed_fields["aggressor_buy_share_5m"], 0.6)
+        self.assertFalse(labels[0].archive_publication_time_verified)
+        self.assertFalse(labels[0].deployable)
 
     def test_missing_five_minute_bar_rejected(self):
         rows = self.old_rows[:100] + self.old_rows[101:]

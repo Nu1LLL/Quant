@@ -123,6 +123,21 @@ class CryptoSignalIntakeTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "event-time order"):
             intake.classify(old, old.available_time)
 
+    def test_long_stream_keeps_only_last_event_per_source(self):
+        intake = SignalIntake()
+        for index in range(1_000):
+            item = observation(
+                event_id=f"event-{index}",
+                event_time=BASE + timedelta(minutes=5 * index),
+            )
+            intake.classify(item, item.available_time)
+        self.assertEqual(len(intake._last_event), 1)
+        self.assertFalse(hasattr(intake, "_seen"))
+        last_time = BASE + timedelta(minutes=5 * 999)
+        duplicate = observation(event_id="changed-id", event_time=last_time)
+        with self.assertRaisesRegex(ValueError, "duplicate"):
+            intake.classify(duplicate, duplicate.available_time)
+
     def test_prior_alert_must_be_visible_and_decision_clock_monotone(self):
         first = observation()
         second = observation(event_id="second", event_time=BASE + timedelta(minutes=5))

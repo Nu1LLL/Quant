@@ -8,9 +8,10 @@ not a claim that a strategy observed each bar at its original close time.
 from __future__ import annotations
 
 from calendar import monthrange
+from contextlib import contextmanager
 import csv
-from dataclasses import dataclass
-from datetime import datetime, timezone
+from dataclasses import dataclass, field
+from datetime import datetime, timedelta, timezone
 from decimal import Decimal, InvalidOperation
 from hashlib import sha256
 import re
@@ -58,8 +59,53 @@ class ArchiveRequest:
             raise ValueError("symbol must be a canonical uppercase Binance symbol")
         if not _MONTH.fullmatch(self.month):
             raise ValueError("month must be YYYY-MM")
+        if int(self.month[:4]) < 1970:
+            raise ValueError("month year must be at least 1970")
         if self.interval not in _INTERVAL_SECONDS:
             raise ValueError("interval must be 1m or 5m")
+
+
+@dataclass(frozen=True)
+class VerifiedKline:
+    """One bar from a checksum-verified *whole* archive, not a live quote.
+
+    ``window_end`` is exclusive, unlike Binance's inclusive CSV close time.
+    The monthly ZIP checksum does not prove when an individual historical bar
+    was published or whether its archived value was ever revised.
+    """
+
+    request: ArchiveRequest
+    open_time: datetime
+    window_end: datetime
+    quote_volume: Decimal
+    taker_buy_quote_volume: Decimal
+    trade_count: int
+    archive_sha256: str
+    source_url: str
+    publication_time_verified: bool = field(default=False, init=False)
+
+    def __post_init__(self) -> None:
+        if not isinstance(self.request, ArchiveRequest):
+            raise TypeError("request must be ArchiveRequest")
+        if (not isinstance(self.open_time, datetime)
+                or not isinstance(self.window_end, datetime)
+                or self.open_time.tzinfo is None or self.open_time.utcoffset() != timedelta(0)
+                or self.window_end.tzinfo is None or self.window_end.utcoffset() != timedelta(0)):
+            raise ValueError("kline times must be UTC")
+        if self.window_end - self.open_time != timedelta(seconds=_INTERVAL_SECONDS[self.request.interval]):
+            raise ValueError("kline duration disagrees with request")
+        if (not isinstance(self.quote_volume, Decimal)
+                or not isinstance(self.taker_buy_quote_volume, Decimal)
+                or not self.quote_volume.is_finite()
+                or not self.taker_buy_quote_volume.is_finite()
+                or not 0 <= self.taker_buy_quote_volume <= self.quote_volume):
+            raise ValueError("invalid verified kline quote volumes")
+        if type(self.trade_count) is not int or self.trade_count < 0:
+            raise ValueError("invalid verified kline trade count")
+        if not re.fullmatch(r"[0-9a-f]{64}", self.archive_sha256):
+            raise ValueError("archive_sha256 must be lowercase SHA-256")
+        if self.source_url != archive_url(self.request)[0]:
+            raise ValueError("source_url disagrees with request")
 
 
 def archive_url(request: ArchiveRequest) -> tuple[str, str]:
@@ -197,6 +243,8 @@ def _audit_csv(member, request: ArchiveRequest) -> tuple[int, int]:
         count_text = parsed[8]
         if not count_text.isascii() or not count_text.isdigit():
             raise ArchiveIntegrityError("trade count must be a nonnegative integer")
+        if (int(count_text) == 0) != (quote == 0):
+            raise ArchiveIntegrityError("trade count and quote volume disagree")
         _decimal(parsed[11], "ignore field")
         expected_open += interval
         rows += 1
@@ -226,18 +274,19 @@ def _check_zip_directory(spool, zip_bytes: int) -> None:
         raise ArchiveIntegrityError("ZIP directory must contain one bounded CSV entry")
 
 
-def audit_monthly_klines(
+@contextmanager
+def _opened_verified_archive(
     request: ArchiveRequest,
     *,
     fetch_chunks: ChunkFetcher,
     max_zip_bytes: int = MAX_ZIP_BYTES,
-) -> dict[str, object]:
-    """Verify one entire month; return a small JSON-serializable manifest.
+) -> Iterator[tuple[ZipFile, object, dict[str, object]]]:
+    """Keep one fully verified ZIP open only within the caller's context.
 
     Compressed archive bytes are held in a temporary spooled file that rolls
     to temporary disk after a 4 MiB threshold, then is deleted on exit. The
-    fetcher must yield at most 64 KiB per chunk. The CSV is parsed line by
-    line and never materialized as a DataFrame or a second whole-file object.
+    fetcher must yield at most 64 KiB per chunk. The CSV is validated line by
+    line before any caller may inspect or emit a row.
     ``max_zip_bytes`` can tighten, but not expand, the 64 MiB hard cap.
     """
     url, basename = archive_url(request)
@@ -259,7 +308,11 @@ def audit_monthly_klines(
         _check_zip_directory(spool, zip_bytes)
         spool.seek(0)
         try:
-            with ZipFile(spool) as archive:
+            archive = ZipFile(spool)
+        except (BadZipFile, LargeZipFile, RuntimeError, EOFError) as exc:
+            raise ArchiveIntegrityError("invalid ZIP archive") from exc
+        with archive:
+            try:
                 members = archive.infolist()
                 expected_csv = basename[:-4] + ".csv"
                 if len(members) != 1 or members[0].filename != expected_csv:
@@ -271,28 +324,90 @@ def audit_monthly_klines(
                     rows, csv_bytes = _audit_csv(reader, request)
                 if csv_bytes != member.file_size:
                     raise ArchiveIntegrityError("ZIP member size does not match parsed CSV")
-        except (BadZipFile, LargeZipFile, RuntimeError, EOFError) as exc:
-            raise ArchiveIntegrityError("invalid ZIP archive") from exc
+            except (BadZipFile, LargeZipFile, RuntimeError, EOFError) as exc:
+                raise ArchiveIntegrityError("invalid ZIP archive") from exc
 
-    start_s, end_s, expected_rows = _month_limits(request)
-    return {
-        "source": url,
-        "market": request.market,
-        "symbol": request.symbol,
-        "month": request.month,
-        "interval": request.interval,
-        "sha256": actual_hash,
-        "zip_bytes": zip_bytes,
-        "csv_bytes": csv_bytes,
-        "rows": rows,
-        "expected_rows": expected_rows,
-        "first_open_utc": datetime.fromtimestamp(start_s, timezone.utc).isoformat(),
-        "last_open_utc": datetime.fromtimestamp(
-            end_s - _INTERVAL_SECONDS[request.interval], timezone.utc,
-        ).isoformat(),
-        "timestamp_unit": "microseconds" if request.market == "spot" and request.month >= "2025-01" else "milliseconds",
-        "publication_time_verified": False,
-    }
+            start_s, end_s, expected_rows = _month_limits(request)
+            manifest = {
+                "source": url,
+                "market": request.market,
+                "symbol": request.symbol,
+                "month": request.month,
+                "interval": request.interval,
+                "sha256": actual_hash,
+                "zip_bytes": zip_bytes,
+                "csv_bytes": csv_bytes,
+                "rows": rows,
+                "expected_rows": expected_rows,
+                "first_open_utc": datetime.fromtimestamp(start_s, timezone.utc).isoformat(),
+                "last_open_utc": datetime.fromtimestamp(
+                    end_s - _INTERVAL_SECONDS[request.interval], timezone.utc,
+                ).isoformat(),
+                "timestamp_unit": (
+                    "microseconds" if request.market == "spot" and request.month >= "2025-01"
+                    else "milliseconds"
+                ),
+                "publication_time_verified": False,
+            }
+            yield archive, member, manifest
+
+
+def audit_monthly_klines(
+    request: ArchiveRequest,
+    *,
+    fetch_chunks: ChunkFetcher,
+    max_zip_bytes: int = MAX_ZIP_BYTES,
+) -> dict[str, object]:
+    """Verify one entire month; return metadata, never a price or signal."""
+    with _opened_verified_archive(
+        request, fetch_chunks=fetch_chunks, max_zip_bytes=max_zip_bytes,
+    ) as (_, __, manifest):
+        return manifest
+
+
+@contextmanager
+def verified_monthly_klines(
+    request: ArchiveRequest,
+    *,
+    fetch_chunks: ChunkFetcher,
+    max_zip_bytes: int = MAX_ZIP_BYTES,
+) -> Iterator[Iterator[VerifiedKline]]:
+    """Expose bars only after an entire official month passes integrity checks.
+
+    Consume the iterator inside the ``with`` block. It rereads the validated
+    temporary ZIP member without redownloading or persisting a price table.
+    Each bar remains retrospective research input: archive publication time
+    and historical point-in-time visibility are **not** verified.
+    """
+    with _opened_verified_archive(
+        request, fetch_chunks=fetch_chunks, max_zip_bytes=max_zip_bytes,
+    ) as (archive, member, manifest):
+        unit = 1_000_000 if manifest["timestamp_unit"] == "microseconds" else 1_000
+        step = _INTERVAL_SECONDS[request.interval]
+
+        def rows() -> Iterator[VerifiedKline]:
+            with archive.open(member) as reader:
+                for raw_line in reader:
+                    fields = next(csv.reader([raw_line.decode("utf-8-sig")], strict=True))
+                    if tuple(fields) == _HEADER:
+                        continue
+                    opened = datetime.fromtimestamp(int(fields[0]) // unit, timezone.utc)
+                    yield VerifiedKline(
+                        request=request,
+                        open_time=opened,
+                        window_end=opened + timedelta(seconds=step),
+                        quote_volume=Decimal(fields[7]),
+                        taker_buy_quote_volume=Decimal(fields[10]),
+                        trade_count=int(fields[8]),
+                        archive_sha256=str(manifest["sha256"]),
+                        source_url=str(manifest["source"]),
+                    )
+
+        iterator = rows()
+        try:
+            yield iterator
+        finally:
+            iterator.close()
 
 
 def audit_months(
