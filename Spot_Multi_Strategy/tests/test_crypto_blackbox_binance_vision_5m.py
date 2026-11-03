@@ -1,4 +1,4 @@
-"""Synthetic-only monthly Binance Vision 5m ZIP integrity tests."""
+"""Synthetic-only monthly Binance Vision 1m/5m ZIP integrity tests."""
 
 from calendar import monthrange
 from datetime import datetime, timedelta, timezone
@@ -27,10 +27,11 @@ def _month_rows(request: ArchiveRequest) -> list[str]:
     year, month = map(int, request.month.split("-"))
     start = datetime(year, month, 1, tzinfo=timezone.utc)
     unit = 1_000_000 if request.market == "spot" and request.month >= "2025-01" else 1_000
+    step_minutes = 1 if request.interval == "1m" else 5
     rows = []
-    for offset in range(monthrange(year, month)[1] * 288):
-        opened = int((start + timedelta(minutes=5 * offset)).timestamp()) * unit
-        closed = opened + 300 * unit - 1
+    for offset in range(monthrange(year, month)[1] * 24 * 60 // step_minutes):
+        opened = int((start + timedelta(minutes=step_minutes * offset)).timestamp()) * unit
+        closed = opened + step_minutes * 60 * unit - 1
         rows.append(f"{opened},100,101,99,100,10,{closed},1000,2,6,600,0\n")
     return rows
 
@@ -54,7 +55,7 @@ def _source(request: ArchiveRequest, text: str, *, zip_bytes: bytes | None = Non
     return fetch
 
 
-class BinanceVisionFiveMinuteTests(unittest.TestCase):
+class BinanceVisionIntradayTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.old = ArchiveRequest("spot", "BTCUSDT", "2024-12")
@@ -86,6 +87,40 @@ class BinanceVisionFiveMinuteTests(unittest.TestCase):
         self.assertFalse(any(item["publication_time_verified"] for item in manifests))
         self.assertNotIn("close", manifests[0])
         json.dumps(manifests, allow_nan=False)
+
+    def test_complete_one_minute_month_uses_distinct_archive_and_grid(self):
+        request = ArchiveRequest("spot", "BTCUSDT", "2021-02", "1m")
+        url, basename = archive_url(request)
+        self.assertIn("/BTCUSDT/1m/", url)
+        self.assertEqual(basename, "BTCUSDT-1m-2021-02.zip")
+        manifest = audit_monthly_klines(request, fetch_chunks=_source(
+            request, HEADER + "".join(_month_rows(request)),
+        ))
+        self.assertEqual(manifest["rows"], 40_320)
+        self.assertEqual(manifest["interval"], "1m")
+        self.assertEqual(manifest["last_open_utc"], "2021-02-28T23:59:00+00:00")
+
+    def test_one_minute_spot_microseconds_and_futures_milliseconds(self):
+        for market, expected_unit in (("spot", "microseconds"), ("um", "milliseconds")):
+            with self.subTest(market=market):
+                request = ArchiveRequest(market, "BTCUSDT", "2025-01", "1m")
+                manifest = audit_monthly_klines(request, fetch_chunks=_source(
+                    request, HEADER + "".join(_month_rows(request)),
+                ))
+                self.assertEqual(manifest["rows"], 44_640)
+                self.assertEqual(manifest["timestamp_unit"], expected_unit)
+
+    def test_missing_one_minute_bar_rejected(self):
+        request = ArchiveRequest("spot", "BTCUSDT", "2021-02", "1m")
+        rows = _month_rows(request)
+        with self.assertRaisesRegex(ArchiveIntegrityError, "missing, duplicate"):
+            audit_monthly_klines(request, fetch_chunks=_source(
+                request, HEADER + "".join(rows[:100] + rows[101:]),
+            ))
+
+    def test_unsupported_interval_rejected_before_fetch(self):
+        with self.assertRaisesRegex(ValueError, "interval"):
+            ArchiveRequest("spot", "BTCUSDT", "2021-02", "15m")
 
     def test_missing_five_minute_bar_rejected(self):
         rows = self.old_rows[:100] + self.old_rows[101:]

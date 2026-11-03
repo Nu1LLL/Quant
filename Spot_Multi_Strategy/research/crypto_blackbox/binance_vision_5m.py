@@ -1,4 +1,4 @@
-"""Bounded, read-only audit of Binance Vision monthly five-minute klines.
+"""Bounded, read-only audit of Binance Vision monthly 1m/5m klines.
 
 This module emits archive integrity metadata, not prices, signals or returns.
 An HTTP fetcher must be passed explicitly. Historical ZIP publication time is
@@ -27,7 +27,7 @@ MAX_CSV_LINE_BYTES = 4096
 MAX_CENTRAL_DIRECTORY_BYTES = 4096
 SPOOL_MEMORY_BYTES = 4 * 1024 * 1024
 MAX_FETCH_CHUNK_BYTES = 64 * 1024
-_FIVE_MINUTES = 300
+_INTERVAL_SECONDS = {"1m": 60, "5m": 300}
 _SYMBOL = re.compile(r"[A-Z0-9]{3,32}\Z")
 _MONTH = re.compile(r"(\d{4})-(0[1-9]|1[0-2])\Z")
 _HEADER = (
@@ -49,6 +49,7 @@ class ArchiveRequest:
     market: str  # spot or USD-margined futures (um)
     symbol: str
     month: str
+    interval: str = "5m"
 
     def __post_init__(self) -> None:
         if self.market not in {"spot", "um"}:
@@ -57,17 +58,19 @@ class ArchiveRequest:
             raise ValueError("symbol must be a canonical uppercase Binance symbol")
         if not _MONTH.fullmatch(self.month):
             raise ValueError("month must be YYYY-MM")
+        if self.interval not in _INTERVAL_SECONDS:
+            raise ValueError("interval must be 1m or 5m")
 
 
 def archive_url(request: ArchiveRequest) -> tuple[str, str]:
-    """Return the documented monthly 5m ZIP URL and exact ZIP basename."""
+    """Return the documented monthly kline ZIP URL and exact ZIP basename."""
     if not isinstance(request, ArchiveRequest):
         raise TypeError("request must be ArchiveRequest")
-    basename = f"{request.symbol}-5m-{request.month}.zip"
+    basename = f"{request.symbol}-{request.interval}-{request.month}.zip"
     prefix = "spot" if request.market == "spot" else "futures/um"
     return (
         f"https://data.binance.vision/data/{prefix}/monthly/klines/"
-        f"{request.symbol}/5m/{basename}",
+        f"{request.symbol}/{request.interval}/{basename}",
         basename,
     )
 
@@ -123,7 +126,7 @@ def _month_limits(request: ArchiveRequest) -> tuple[int, int, int]:
     year, month = map(int, request.month.split("-"))
     start = int(datetime(year, month, 1, tzinfo=timezone.utc).timestamp())
     days = monthrange(year, month)[1]
-    return start, start + days * 86400, days * 288
+    return start, start + days * 86400, days * 86400 // _INTERVAL_SECONDS[request.interval]
 
 
 def _decimal(raw: str, label: str, *, positive: bool = False) -> Decimal:
@@ -143,7 +146,7 @@ def _audit_csv(member, request: ArchiveRequest) -> tuple[int, int]:
     digits = 16 if microseconds else 13
     expected_open = start_s * unit
     end_open = end_s * unit
-    interval = _FIVE_MINUTES * unit
+    interval = _INTERVAL_SECONDS[request.interval] * unit
     csv_bytes = rows = line_number = 0
 
     while True:
@@ -176,9 +179,9 @@ def _audit_csv(member, request: ArchiveRequest) -> tuple[int, int]:
         opened = int(opened_text)
         closed = int(closed_text)
         if opened != expected_open or opened >= end_open:
-            raise ArchiveIntegrityError("missing, duplicate or off-grid five-minute bar")
+            raise ArchiveIntegrityError("missing, duplicate or off-grid intraday bar")
         if closed != opened + interval - 1:
-            raise ArchiveIntegrityError("kline close time is not the five-minute boundary")
+            raise ArchiveIntegrityError("kline close time is not the interval boundary")
         high = _decimal(parsed[2], "high", positive=True)
         low = _decimal(parsed[3], "low", positive=True)
         opening = _decimal(parsed[1], "open", positive=True)
@@ -199,7 +202,7 @@ def _audit_csv(member, request: ArchiveRequest) -> tuple[int, int]:
         rows += 1
 
     if rows != expected_rows or expected_open != end_open:
-        raise ArchiveIntegrityError("month ends before the complete five-minute grid")
+        raise ArchiveIntegrityError("month ends before the complete intraday grid")
     return rows, csv_bytes
 
 
@@ -277,13 +280,16 @@ def audit_monthly_klines(
         "market": request.market,
         "symbol": request.symbol,
         "month": request.month,
+        "interval": request.interval,
         "sha256": actual_hash,
         "zip_bytes": zip_bytes,
         "csv_bytes": csv_bytes,
         "rows": rows,
         "expected_rows": expected_rows,
         "first_open_utc": datetime.fromtimestamp(start_s, timezone.utc).isoformat(),
-        "last_open_utc": datetime.fromtimestamp(end_s - _FIVE_MINUTES, timezone.utc).isoformat(),
+        "last_open_utc": datetime.fromtimestamp(
+            end_s - _INTERVAL_SECONDS[request.interval], timezone.utc,
+        ).isoformat(),
         "timestamp_unit": "microseconds" if request.market == "spot" and request.month >= "2025-01" else "milliseconds",
         "publication_time_verified": False,
     }
