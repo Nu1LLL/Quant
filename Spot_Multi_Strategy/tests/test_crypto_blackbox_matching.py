@@ -38,7 +38,7 @@ def evidence(**changes):
         walk_forward_years=5, walk_forward_success_fraction=0.80,
         monte_carlo_paths=5_000, monte_carlo_block_days=21,
         monte_carlo_joint_pass_fraction=0.06,
-        independent_oos=True, annual_walk_forward=True,
+        independent_oos=True, annual_walk_forward=True, walk_forward_passed=True,
         regimes_passed=True, block_monte_carlo_passed=True,
         data_integrity_passed=True, fees_slippage_included=True,
         funding_included_if_applicable=True, executable_for_10000_usd=True,
@@ -141,6 +141,25 @@ class EvidenceMatchingTests(unittest.TestCase):
         self.assertIn("fees_slippage_included_not_passed", failures)
         self.assertIn("funding_included_if_applicable_not_passed", failures)
         self.assertIn("executable_for_10000_usd_not_passed", failures)
+
+    def test_experiment_specific_success_rules_are_not_hardcoded(self):
+        # Success fractions are reported for audit, but each experiment must
+        # freeze its own success thresholds in its preregistration.
+        custom = evidence(walk_forward_success_fraction=0.60,
+                          monte_carlo_joint_pass_fraction=0.03)
+        self.assertEqual(reported_gate_failures(custom), ())
+        self.assertEqual(rank_shadow_candidates([candidate()], [custom], NOW)[0].status,
+                         "SHADOW_RANKED")
+        failed = evidence(walk_forward_passed=False,
+                          block_monte_carlo_passed=False,
+                          walk_forward_success_fraction=0.0,
+                          monte_carlo_joint_pass_fraction=0.0)
+        self.assertIn("walk_forward_passed_not_passed",
+                      reported_gate_failures(failed))
+        self.assertIn("block_monte_carlo_passed_not_passed",
+                      reported_gate_failures(failed))
+        self.assertEqual(rank_shadow_candidates([candidate()], [failed], NOW)[0].status,
+                         "GATE_FAILED")
 
     def test_sort_only_proven_candidates_and_never_select_on_missing_results(self):
         eth = candidate(symbol="ETHUSDT")
