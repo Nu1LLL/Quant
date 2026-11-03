@@ -22,7 +22,8 @@ The existing `microstructure_blackbox.py` contains experimental HMM and RBF mach
 - FlashAI-style first-report and continuation labels are rebuilt from allowed raw market records; this package does not scrape or integrate an unlicensed third-party alert service. A 5-minute volume multiple must use completed **prior** windows; a current 24-hour number or later price cannot leak into it.
 - MVRV, weekly moving averages, yields, and M2 may be logged as descriptive regime context only when a genuine point-in-time source/vintage is available. The one-off market post in the screenshots is not a time series or a fact source for a backtest.
 - The screenshots about video-channel growth and a personal body-composition report are separate from crypto trading. The latter contains private health information and is deliberately neither copied nor stored in this public repository.
-- A passing synthetic test proves software contract behavior only. No live market archive, genuine 5-year OOS PnL, monthly profitability, or Alpha has been produced by this package. Any future formal hypothesis must be preregistered in a separate commit **before** results are read, following `../SCOPE.md`; it can only enter small paper-trading after all gates pass.
+- A passing synthetic test proves software contract behavior only. Aside from the two-month integrity smoke check below, no full historical dataset, genuine five-year OOS PnL, monthly profitability, or Alpha has been produced by this package. Any future formal hypothesis must be preregistered in a separate commit **before** results are read, following `../SCOPE.md`; it can only enter small paper-trading after all gates pass.
+- `REAL_ARCHIVE_SMOKE.md` records a two-month, price-free integrity check. One 2020 archive has two timestamp gaps and is rejected; one 2025 archive passes. Neither result establishes a five-year dataset or any strategy return.
 
 ## Test
 
