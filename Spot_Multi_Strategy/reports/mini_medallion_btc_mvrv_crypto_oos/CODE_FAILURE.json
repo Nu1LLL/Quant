@@ -1,0 +1,33 @@
+{
+  "started_utc": "2026-11-07T17:20:12.365881+00:00",
+  "sealed_utc": "2026-11-07T17:21:57.972268+00:00",
+  "prereg_commit": "46d10cb",
+  "prereg_amendment_commit": "65cc374",
+  "code_commit": "6c05785e0f750af5ed005c63cf52359d66fd84eb",
+  "evidence_grade": "preregistered_retrospective_current_vintage_btc_mvrv",
+  "independent_executable_oos": false,
+  "full_gate": false,
+  "source_limitations": [
+    "Coin Metrics MVRV is a current historical vintage; original daily publication times and historical as-of versions are unverified.",
+    "D+1 visibility is an unverified proxy; Binance ZIPs may have been revised.",
+    "Historical order-book impact, margin tiers and live fills are not fully observed.",
+    "Coin Metrics and Binance Vision sources are for non-commercial research under their terms; live/commercial use requires separate rights."
+  ],
+  "source_attribution": {
+    "coin_metrics": {
+      "credit": "Coin Metrics Community CapMVRVCur",
+      "documentation": "https://docs.coinmetrics.io/network-data/network-data-overview/market/market-capitalization",
+      "community_terms": "https://docs.coinmetrics.io/packages/coin-metrics-community-data",
+      "modifications": "Daily MVRV was mapped to weekly 365-day median-relative directions."
+    },
+    "binance_vision": {
+      "credit": "Binance Vision USD-M historical archives",
+      "terms": "https://github.com/binance/binance-public-data/blob/master/TERMS_AND_CONDITIONS.md",
+      "modifications": "Official bars and funding were transformed into derived backtest metrics."
+    }
+  },
+  "status": "code-failure",
+  "reason": "report object keys must be strings",
+  "error_type": "TypeError",
+  "all_gate_passed": false
+}
