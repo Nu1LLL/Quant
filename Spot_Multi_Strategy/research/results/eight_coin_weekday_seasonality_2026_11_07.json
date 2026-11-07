@@ -1,0 +1,14 @@
+{
+  "data_verified": false,
+  "experiment_id": "eight_coin_weekday_seasonality_2026_11_07",
+  "failure_reason": "WeekdayDataError: funding event outside price tape: ADAUSDT 2021-01",
+  "finished_utc": "2026-11-07T13:57:45.684602+00:00",
+  "gate": {
+    "full": false
+  },
+  "metrics": null,
+  "preregistration_commit": "ac5f39b",
+  "runner_commit": "6360a0e4bcd44b83392d89020c04adbdccaa5387",
+  "started_utc": "2026-11-07T13:54:15.363899+00:00",
+  "status": "sealed_failed_run"
+}
