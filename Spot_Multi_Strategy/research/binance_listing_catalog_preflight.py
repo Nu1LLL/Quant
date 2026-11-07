@@ -80,7 +80,8 @@ def inventory() -> dict:
             article_id, code, title, released = (
                 row.get("id"), row.get("code"), row.get("title"), row.get("releaseDate"))
             if (type(article_id) is not int or article_id <= 0 or article_id in seen_ids
-                    or not isinstance(code, str) or not re.fullmatch(r"[0-9a-f]{32}", code)
+                    or not isinstance(code, str)
+                    or not re.fullmatch(r"(?:[0-9a-f]{32}|[0-9]{12})", code)
                     or code in seen_codes or not isinstance(title, str) or not title.strip()
                     or len(title) > 500 or type(released) is not int or released <= 0):
                 raise CatalogFailure(f"malformed or duplicate catalog article page {page}")
