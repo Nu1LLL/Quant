@@ -120,7 +120,7 @@ def main() -> None:
     rows = audit_all()
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=("month", "market", "symbol", "dataset", "sha256", "hours"))
+        writer = csv.DictWriter(handle, fieldnames=("month", "market", "symbol", "dataset", "sha256", "hours"), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     print(f"complete preflight: {len(rows)} pinned archives; {OUTPUT}", flush=True)

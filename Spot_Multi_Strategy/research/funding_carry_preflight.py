@@ -117,7 +117,7 @@ def main() -> None:
         (FUNDING_OUTPUT, funding, ("month", "market", "symbol", "dataset", "sha256", "events")),
     ):
         with path.open("w", encoding="utf-8", newline="") as handle:
-            writer = csv.DictWriter(handle, fieldnames=fields)
+            writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
             writer.writeheader()
             writer.writerows(rows)
     print(f"complete: {len(klines)} hourly ZIPs, {len(funding)} funding ZIPs", flush=True)
