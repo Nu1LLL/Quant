@@ -7,7 +7,7 @@ from tempfile import TemporaryDirectory
 import unittest
 
 from research.crypto_blackbox.whalewatcher_macro_journal import (
-    capture_current, read_asof, upcoming_confirmed,
+    capture_current, poll_coverage, read_asof, upcoming_confirmed,
 )
 
 
@@ -89,6 +89,16 @@ class MacroJournalTests(unittest.TestCase):
         with sqlite3.connect(self.journal) as db:
             with self.assertRaises(sqlite3.IntegrityError):
                 db.execute("DELETE FROM changes")
+
+    def test_source_outage_prevents_continuous_oos_claim(self):
+        self.write([event()])
+        capture_current(self.source.parents[1], self.journal, observed_at_ms=T0)
+        self.write([], generated=T0 - 700_000)
+        capture_current(self.source.parents[1], self.journal, observed_at_ms=T0 + 3_600_000)
+        coverage = poll_coverage(self.journal, T0, T0 + 5 * 365 * 86_400_000)
+        self.assertEqual(coverage.polls, 2)
+        self.assertEqual(coverage.unavailable_polls, 1)
+        self.assertFalse(coverage.five_year_continuous_source)
 
 
 if __name__ == "__main__":

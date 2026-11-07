@@ -23,6 +23,8 @@ MAX_SOURCE_BYTES = 4 * 1024 * 1024
 MAX_JOURNAL_BYTES = 16 * 1024 * 1024
 MAX_SOURCE_AGE_MS = 10 * 60_000
 MAX_ROWS = 100
+MAX_POLL_GAP_MS = 2 * 60 * 60_000
+MIN_OOS_MS = 5 * 365 * 24 * 60 * 60_000
 KINDS = {"cpi": "www.bls.gov", "nfp": "www.bls.gov",
          "pce": "www.bea.gov", "fomc": "www.federalreserve.gov"}
 PROVENANCE = re.compile(r"official_live|official_snapshot_\d{4}_\d{2}_\d{2}\Z")
@@ -51,6 +53,17 @@ class MacroCapture:
     changed_events: int
     execution_eligible: bool = False
     historical_oos_eligible: bool = False
+
+
+@dataclass(frozen=True)
+class MacroCoverage:
+    start_ms: int
+    end_ms: int
+    polls: int
+    unavailable_polls: int
+    largest_gap_ms: int
+    five_year_continuous_source: bool
+    execution_eligible: bool = False
 
 
 def _unique(pairs):
@@ -256,6 +269,28 @@ def read_asof(journal_path: str | Path, asof_ms: int) -> tuple[MacroEvent, ...]:
                             bool(metadata[3]), metadata[4], metadata[5],
                             metadata[7], bool(metadata[6]))
                  for identity, metadata in sorted(state.items()))
+
+
+def poll_coverage(journal_path: str | Path, start_ms: int, end_ms: int) -> MacroCoverage:
+    """Measure source continuity; this alone never proves trading Alpha."""
+    if (type(start_ms) is not int or type(end_ms) is not int
+            or not 0 < start_ms < end_ms):
+        raise ValueError("coverage requires increasing positive UTC milliseconds")
+    path = Path(journal_path)
+    if not path.is_file():
+        return MacroCoverage(start_ms, end_ms, 0, 0, end_ms - start_ms, False)
+    uri = f"file:{path.resolve().as_posix()}?mode=ro"
+    with closing(sqlite3.connect(uri, uri=True)) as db:
+        rows = db.execute(
+            "SELECT observed_at_ms,status FROM polls "
+            "WHERE observed_at_ms>=? AND observed_at_ms<=? "
+            "ORDER BY observed_at_ms,id", (start_ms, end_ms)).fetchall()
+    stamps = [start_ms, *(int(row[0]) for row in rows), end_ms]
+    largest = max(b - a for a, b in zip(stamps, stamps[1:]))
+    unavailable = sum(row[1] != "fresh" for row in rows)
+    continuous = (end_ms - start_ms >= MIN_OOS_MS and bool(rows)
+                  and largest <= MAX_POLL_GAP_MS and unavailable == 0)
+    return MacroCoverage(start_ms, end_ms, len(rows), unavailable, largest, continuous)
 
 
 def upcoming_confirmed(journal_path: str | Path, asof_ms: int,
