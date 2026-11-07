@@ -52,6 +52,19 @@ class AsOfValue:
     value: Decimal
 
 
+@dataclass(frozen=True)
+class SourceCoverage:
+    """Prospective source continuity, never a performance or execution pass."""
+
+    first_poll_at: datetime | None
+    last_poll_at: datetime | None
+    polls: int
+    missing_poll_days: int
+    largest_poll_gap_hours: float
+    missing_or_late_observation_days: int
+    five_year_continuous_source: bool
+
+
 def _utc(value: datetime) -> datetime:
     if not isinstance(value, datetime) or value.tzinfo is None:
         raise JournalError("UTC-aware datetime required")
@@ -169,6 +182,14 @@ def _schema(db: sqlite3.Connection) -> None:
         );
         CREATE INDEX IF NOT EXISTS versions_asof
             ON versions(observed_date, first_seen_at_utc DESC, id DESC);
+        CREATE TRIGGER IF NOT EXISTS polls_no_update BEFORE UPDATE ON polls
+            BEGIN SELECT RAISE(ABORT,'append-only'); END;
+        CREATE TRIGGER IF NOT EXISTS polls_no_delete BEFORE DELETE ON polls
+            BEGIN SELECT RAISE(ABORT,'append-only'); END;
+        CREATE TRIGGER IF NOT EXISTS versions_no_update BEFORE UPDATE ON versions
+            BEGIN SELECT RAISE(ABORT,'append-only'); END;
+        CREATE TRIGGER IF NOT EXISTS versions_no_delete BEFORE DELETE ON versions
+            BEGIN SELECT RAISE(ABORT,'append-only'); END;
     """)
 
 
@@ -186,6 +207,11 @@ def capture_current(path: str | Path, *, fetcher: Callable[[str], bytes] | None 
     stamp = received.strftime(_ISO_UTC)
     target = Path(path)
     target.parent.mkdir(parents=True, exist_ok=True)
+    if not target.exists():
+        try:
+            target.touch(mode=0o600, exist_ok=False)
+        except FileExistsError:
+            pass
     try:
         with sqlite3.connect(target, timeout=15) as db:
             db.execute("PRAGMA foreign_keys=ON")
@@ -243,10 +269,84 @@ def read_asof(path: str | Path, observed: date, decision_time: datetime) -> AsOf
     return AsOfValue(observed, first_seen, Decimal(row[1]))
 
 
+def source_coverage(path: str | Path, *, asof: datetime) -> SourceCoverage:
+    """Audit due UTC poll days and timely first sightings as of a real clock.
+
+    A daily value must first be seen within 72 hours of its UTC date's start.
+    Today's poll is due after 06:00 UTC, allowing the 02:15 UTC local schedule
+    time plus retry margin. The last two due dates are excluded because the
+    provider may publish with a daily lag. Historical rows imported at the
+    first poll never backfill earlier source coverage.
+    """
+    reference = _utc(asof)
+    target = Path(path)
+    empty = SourceCoverage(None, None, 0, 0, 0.0, 0, False)
+    if not target.is_file():
+        return empty
+    uri = f"file:{target.resolve()}?mode=ro"
+    try:
+        with sqlite3.connect(uri, uri=True, timeout=15) as db:
+            poll_rows = db.execute(
+                "SELECT fetched_at_utc FROM polls ORDER BY fetched_at_utc"
+            ).fetchall()
+            first_sightings = dict(db.execute(
+                "SELECT observed_date,MIN(first_seen_at_utc) "
+                "FROM versions GROUP BY observed_date"
+            ).fetchall())
+    except sqlite3.Error as exc:
+        raise JournalError("local source coverage read failed") from exc
+    if not poll_rows:
+        return empty
+    try:
+        times = [datetime.strptime(row[0], _ISO_UTC).replace(tzinfo=timezone.utc)
+                 for row in poll_rows]
+        first_seen = {
+            date.fromisoformat(day): datetime.strptime(stamp, _ISO_UTC).replace(
+                tzinfo=timezone.utc)
+            for day, stamp in first_sightings.items()
+        }
+    except (TypeError, ValueError) as exc:
+        raise JournalError("invalid stored coverage timestamp") from exc
+    first, last = times[0], times[-1]
+    if reference < last:
+        raise JournalError("coverage clock precedes last poll")
+    due_day = max(last.date(), (reference - timedelta(hours=6)).date())
+    covered_days = {stamp.date() for stamp in times}
+    expected_poll_days = (due_day - first.date()).days + 1
+    largest_gap_hours = max(
+        ((right - left).total_seconds() / 3600
+         for left, right in zip(times, times[1:] + [reference])),
+        default=0.0,
+    )
+    missing_observations = 0
+    expected_observations = max(0, (due_day - first.date()).days - 1)
+    for offset in range(expected_observations):
+        day = first.date() + timedelta(days=offset)
+        seen = first_seen.get(day)
+        if seen is None or seen > datetime.combine(day, datetime.min.time(), timezone.utc) + timedelta(hours=72):
+            missing_observations += 1
+    missing_polls = expected_poll_days - len(covered_days)
+    try:
+        fifth_anniversary = first.date().replace(year=first.year + 5)
+    except ValueError:  # 29 February has no counterpart in a non-leap year.
+        fifth_anniversary = date(first.year + 5, 3, 1)
+    continuous = (
+        due_day >= fifth_anniversary
+        and missing_polls == 0 and largest_gap_hours <= 36
+        and missing_observations == 0
+    )
+    return SourceCoverage(first, last, len(times), missing_polls,
+                          largest_gap_hours, missing_observations, continuous)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Capture BTC exchange supply for non-trading prospective research")
     parser.add_argument("--journal", type=Path, required=True)
+    parser.add_argument("--coverage", action="store_true", help="check source continuity without a network request")
     args = parser.parse_args()
+    if args.coverage:
+        print(source_coverage(args.journal, asof=datetime.now(timezone.utc)))
+        return
     result = capture_current(args.journal)
     print(f"exchange-supply poll: rows={result.rows}; new_versions={result.new_versions}; received_utc={result.fetched_at.isoformat()}")
 
