@@ -11,6 +11,7 @@ from unittest.mock import patch
 from research.crypto_blackbox.whalewatcher_prospective_journal import (
     capture_current, counts_asof, poll_coverage, read_asof,
 )
+from research.crypto_blackbox.whalewatcher_features import build_event_features
 
 
 NOW = 1_800_000_000_000
@@ -179,6 +180,55 @@ class ProspectiveJournalTests(unittest.TestCase):
         self.assertEqual(read_asof(self.db, NOW).events, ())
         self.assertEqual(read_asof(self.db, NOW + 2_000).events[0].quant_available_ms,
                          NOW + 2_000)
+
+    def test_features_use_quant_read_time_and_missing_poll_is_not_zero_news(self):
+        self.write(_event_snapshot(), _claim_snapshot())
+        capture_current(self.watcher, self.db)
+        with patch("research.crypto_blackbox.whalewatcher_features.time.time_ns",
+                   return_value=NOW * 1_000_000):
+            features = build_event_features(self.db, NOW)
+            missing = build_event_features(self.db, NOW - 1)
+            with self.assertRaises(ValueError):
+                build_event_features(self.db, NOW + 1)
+        self.assertTrue(features.source_available)
+        self.assertEqual(features.values["event_crypto_1h"], 1)
+        self.assertEqual(features.values["event_crypto_24h"], 1)
+        self.assertEqual(features.values["claim_BTC_short_24h"], 1)
+        self.assertEqual(features.values["claim_ETH_short_24h"], 0)
+        self.assertFalse(features.execution_eligible)
+        self.assertFalse(features.historical_oos_eligible)
+        self.assertFalse(missing.source_available)
+        self.assertEqual(dict(missing.values), {})
+
+    def test_features_wait_for_future_publication_and_expire_without_poll(self):
+        future = _event_snapshot()
+        future["records"][0]["event"]["published_at_ms"] = NOW + 2_000
+        self.write(future, _claim_snapshot(observations=[]))
+        capture_current(self.watcher, self.db)
+        with patch("research.crypto_blackbox.whalewatcher_features.time.time_ns",
+                   return_value=(NOW + 3 * 3_600_000) * 1_000_000):
+            early = build_event_features(self.db, NOW)
+            later = build_event_features(self.db, NOW + 2_000)
+            stale = build_event_features(self.db, NOW + 3 * 3_600_000)
+        self.assertEqual(early.values["event_crypto_1h"], 0)
+        self.assertEqual(later.values["event_crypto_1h"], 1)
+        self.assertFalse(stale.source_available)
+
+    def test_old_news_first_import_does_not_look_like_fresh_news(self):
+        old = _event_snapshot()
+        old["records"][0]["event"]["published_at_ms"] = NOW - 3 * 24 * 3_600_000
+        old["records"][0]["first_seen_at_ms"] = NOW - 24 * 3_600_000
+        old_claims = _claim_snapshot()
+        old_claims["symbols"]["BTC"]["observations"][0]["available_at_ms"] = NOW - 3 * 24 * 3_600_000
+        self.write(old, old_claims)
+        capture_current(self.watcher, self.db)
+        with patch("research.crypto_blackbox.whalewatcher_features.time.time_ns",
+                   return_value=NOW * 1_000_000):
+            features = build_event_features(self.db, NOW)
+        self.assertTrue(features.source_available)
+        self.assertEqual(features.values["event_crypto_1h"], 0)
+        self.assertEqual(features.values["event_crypto_24h"], 0)
+        self.assertEqual(features.values["claim_BTC_short_24h"], 0)
 
 
 if __name__ == "__main__":
