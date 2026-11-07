@@ -1,0 +1,46 @@
+{
+  "experiment": "tga_cash_release_crypto_2026_11_08",
+  "status": "sealed-code-failure-with-partial-diagnostics",
+  "sealed_utc": "2026-11-07T18:21:48.302391+00:00",
+  "code_commit": "e729c90",
+  "prereg_commit": "0fe3fb5",
+  "amendment_commit": "e42f242",
+  "evidence_grade": "preregistered_retrospective_tga_current_archive_temporal_holdout",
+  "independent_executable_oos": false,
+  "all_gate_passed": false,
+  "real_orders_placed": false,
+  "error_type": "TypeError",
+  "reason": "json.dump failed on numpy.bool_ annual_walk_forward[0].passed while serializing RESULT.json; the formal run was not repeated",
+  "partial_artifact": "RESULT.partial.json.gz",
+  "partial_uncompressed_bytes": 1006136,
+  "partial_sha256": "7745e6c99559532ff1c1147a6975f82cf1e0f1df315f0ebd53e83743e5c69b3c",
+  "source_audit_passed_before_failure": true,
+  "full_gate_evaluation_recorded": false,
+  "partial_diagnostics_recovered_from_written_prefix": {
+    "full": {
+      "days": 2099,
+      "initial_usdt": 10000.0,
+      "final_usdt": 7576.723260788032,
+      "cagr": -0.047141549429787766,
+      "sharpe": 0.21884833590476124,
+      "profit_factor_daily_dollar": 0.9898994878833594,
+      "conservative_4h_max_drawdown": -0.779938958828699,
+      "exposure_days": 1237
+    },
+    "time_holdout_2024_2026": {
+      "days": 1004,
+      "initial_usdt": 14186.006482967934,
+      "final_usdt": 7576.723260788032,
+      "cagr": -0.2040055693519942,
+      "sharpe": -0.28735841181294486,
+      "profit_factor_daily_dollar": 0.9124406362646728,
+      "conservative_4h_max_drawdown": -0.6774736855681004,
+      "exposure_days": 546
+    }
+  },
+  "known_numeric_rejection": true,
+  "failed_known_numeric_checks": {
+    "full_window": true,
+    "time_holdout": true
+  }
+}
