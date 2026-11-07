@@ -9,7 +9,7 @@ import unittest
 from unittest.mock import patch
 
 from research.crypto_blackbox.whalewatcher_prospective_journal import (
-    capture_current, counts_asof, read_asof,
+    capture_current, counts_asof, poll_coverage, read_asof,
 )
 
 
@@ -107,8 +107,11 @@ class ProspectiveJournalTests(unittest.TestCase):
                          ["unchanged"] * 3)
         with closing(sqlite3.connect(self.db)) as connection:
             self.assertEqual(connection.execute("SELECT count(*) FROM captures").fetchone()[0], 3)
+            self.assertEqual(connection.execute("SELECT count(*) FROM source_polls").fetchone()[0], 3)
             with self.assertRaises(sqlite3.DatabaseError):
                 connection.execute("DELETE FROM captures")
+            with self.assertRaises(sqlite3.DatabaseError):
+                connection.execute("DELETE FROM source_polls")
         raw = self.db.read_bytes()
         for forbidden in (b"PRIVATE", b"never-copy", b"BUY NOW", b"SELL NOW",
                           b"post_event_return_pct", b"trade_action"):
@@ -124,6 +127,10 @@ class ProspectiveJournalTests(unittest.TestCase):
                          {"events": 1, "BTC_claims": 1, "ETH_claims": 0})
         self.assertEqual(counts_asof(self.db, self.now),
                          {"events": 0, "BTC_claims": 0, "ETH_claims": 0})
+        coverage = poll_coverage(self.db, NOW - 1, self.now)
+        self.assertEqual(coverage.polls, 4)
+        self.assertEqual(coverage.unavailable_polls, 0)
+        self.assertFalse(coverage.five_year_continuous_source)
 
     def test_event_correction_is_visible_only_after_new_capture(self):
         self.write(_event_snapshot(), _claim_snapshot())
@@ -140,6 +147,26 @@ class ProspectiveJournalTests(unittest.TestCase):
         status = capture_current(self.watcher, self.db)
         self.assertEqual([row.status for row in status], ["unavailable"] * 3)
         self.assertFalse(self.db.exists())
+
+    def test_existing_journal_records_unavailable_source_poll(self):
+        self.write(_event_snapshot(), _claim_snapshot())
+        capture_current(self.watcher, self.db)
+        self.events.unlink()
+        self.claims.unlink()
+        self.now += 1_000
+        status = capture_current(self.watcher, self.db)
+        self.assertEqual([row.status for row in status], ["unavailable"] * 3)
+        coverage = poll_coverage(self.db, NOW - 1, self.now)
+        self.assertEqual(coverage.polls, 2)
+        self.assertEqual(coverage.unavailable_polls, 1)
+        self.assertFalse(coverage.five_year_continuous_source)
+
+    def test_old_journal_without_polls_cannot_prove_coverage(self):
+        with closing(sqlite3.connect(self.db)) as connection:
+            connection.execute("CREATE TABLE legacy (id INTEGER)")
+        coverage = poll_coverage(self.db, NOW, NOW + 1_000)
+        self.assertEqual(coverage.polls, 0)
+        self.assertFalse(coverage.five_year_continuous_source)
 
     def test_future_dated_source_event_is_not_visible_early(self):
         events = _event_snapshot()

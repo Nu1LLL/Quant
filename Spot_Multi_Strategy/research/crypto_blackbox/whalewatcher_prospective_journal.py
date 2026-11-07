@@ -18,6 +18,8 @@ from .whalewatcher_shadow_adapter import ShadowImport, read_whalewatcher_shadow_
 
 
 MAX_JOURNAL_BYTES = 64 * 1024 * 1024
+MAX_POLL_GAP_MS = 2 * 60 * 60 * 1_000
+MIN_OOS_MS = 5 * 365 * 24 * 60 * 60 * 1_000
 
 
 @dataclass(frozen=True)
@@ -67,6 +69,19 @@ class ProvenanceSnapshot:
     historical_oos_eligible: bool = False
 
 
+@dataclass(frozen=True)
+class PollCoverage:
+    """Source-observation continuity, never an Alpha or trading gate pass."""
+
+    start_ms: int
+    end_ms: int
+    polls: int
+    unavailable_polls: int
+    largest_gap_ms: int
+    five_year_continuous_source: bool
+    execution_eligible: bool = False
+
+
 def _initialize(db: sqlite3.Connection) -> None:
     db.execute("PRAGMA foreign_keys=ON")
     db.executescript("""
@@ -82,6 +97,21 @@ def _initialize(db: sqlite3.Connection) -> None:
         );
         CREATE INDEX IF NOT EXISTS captures_asof
             ON captures(kind,symbol,captured_at_ms DESC);
+        CREATE TABLE IF NOT EXISTS source_polls (
+            id INTEGER PRIMARY KEY,
+            observed_at_ms INTEGER NOT NULL CHECK(observed_at_ms > 0),
+            events_status TEXT NOT NULL,
+            btc_status TEXT NOT NULL,
+            eth_status TEXT NOT NULL,
+            events_generated_at_ms INTEGER,
+            btc_generated_at_ms INTEGER,
+            eth_generated_at_ms INTEGER,
+            CHECK(events_status IN ('fresh','fresh_no_events','unavailable')),
+            CHECK(btc_status IN ('fresh','fresh_no_claims','unavailable')),
+            CHECK(eth_status IN ('fresh','fresh_no_claims','unavailable'))
+        );
+        CREATE INDEX IF NOT EXISTS source_polls_asof
+            ON source_polls(observed_at_ms,id);
         CREATE TABLE IF NOT EXISTS event_changes (
             capture_id INTEGER NOT NULL REFERENCES captures(id),
             event_sha256 TEXT NOT NULL CHECK(length(event_sha256) = 64),
@@ -108,6 +138,10 @@ def _initialize(db: sqlite3.Connection) -> None:
         CREATE TRIGGER IF NOT EXISTS captures_no_update BEFORE UPDATE ON captures
             BEGIN SELECT RAISE(ABORT,'append-only'); END;
         CREATE TRIGGER IF NOT EXISTS captures_no_delete BEFORE DELETE ON captures
+            BEGIN SELECT RAISE(ABORT,'append-only'); END;
+        CREATE TRIGGER IF NOT EXISTS source_polls_no_update BEFORE UPDATE ON source_polls
+            BEGIN SELECT RAISE(ABORT,'append-only'); END;
+        CREATE TRIGGER IF NOT EXISTS source_polls_no_delete BEFORE DELETE ON source_polls
             BEGIN SELECT RAISE(ABORT,'append-only'); END;
         CREATE TRIGGER IF NOT EXISTS event_changes_no_update BEFORE UPDATE ON event_changes
             BEGIN SELECT RAISE(ABORT,'append-only'); END;
@@ -245,7 +279,7 @@ def capture_current(watcher_data_dir: str | Path, journal_path: str | Path
         read_whalewatcher_shadow_snapshot(external, "BTC"),
         read_whalewatcher_shadow_snapshot(external, "ETH"),
     )
-    if all(item.status == "unavailable" for item in imports):
+    if all(item.status == "unavailable" for item in imports) and not journal.is_file():
         return tuple(CaptureStatus(
             *_kind(item)[:2], "unavailable", 0, item.captured_at_ms,
         ) for item in imports)
@@ -256,11 +290,47 @@ def capture_current(watcher_data_dir: str | Path, journal_path: str | Path
         _initialize(db)
         with db:
             statuses = tuple(_append(db, item) for item in imports)
+            db.execute(
+                "INSERT INTO source_polls(observed_at_ms,events_status,btc_status,eth_status,"
+                "events_generated_at_ms,btc_generated_at_ms,eth_generated_at_ms) "
+                "VALUES (?,?,?,?,?,?,?)",
+                (max(item.captured_at_ms for item in imports),
+                 *(item.status for item in imports),
+                 *(item.snapshot_generated_at_ms for item in imports)),
+            )
             pages = db.execute("PRAGMA page_count").fetchone()[0]
             page_size = db.execute("PRAGMA page_size").fetchone()[0]
             if pages * page_size > MAX_JOURNAL_BYTES:
                 raise RuntimeError("prospective journal reached its 64 MiB storage cap")
             return statuses
+
+
+def poll_coverage(journal_path: str | Path, start_ms: int, end_ms: int) -> PollCoverage:
+    """Audit actual polls, including unchanged and unavailable source states."""
+    if (type(start_ms) is not int or type(end_ms) is not int
+            or not 0 < start_ms < end_ms):
+        raise ValueError("poll coverage needs increasing positive UTC milliseconds")
+    path = Path(journal_path)
+    if not path.is_file():
+        return PollCoverage(start_ms, end_ms, 0, 0, end_ms - start_ms, False)
+    uri = f"file:{path.resolve().as_posix()}?mode=ro"
+    with closing(sqlite3.connect(uri, uri=True)) as db:
+        try:
+            rows = db.execute(
+                "SELECT observed_at_ms,events_status,btc_status,eth_status "
+                "FROM source_polls WHERE observed_at_ms>=? AND observed_at_ms<=? "
+                "ORDER BY observed_at_ms,id", (start_ms, end_ms),
+            ).fetchall()
+        except sqlite3.OperationalError as exc:
+            if "no such table: source_polls" not in str(exc):
+                raise
+            rows = []  # Old journals without source polls cannot prove continuity.
+    times = [start_ms, *(int(row[0]) for row in rows), end_ms]
+    largest_gap = max(right - left for left, right in zip(times, times[1:]))
+    unavailable = sum("unavailable" in row[1:] for row in rows)
+    ready = (end_ms - start_ms >= MIN_OOS_MS and bool(rows)
+             and largest_gap <= MAX_POLL_GAP_MS and unavailable == 0)
+    return PollCoverage(start_ms, end_ms, len(rows), unavailable, largest_gap, ready)
 
 
 def counts_asof(journal_path: str | Path, asof_ms: int) -> dict[str, int]:
