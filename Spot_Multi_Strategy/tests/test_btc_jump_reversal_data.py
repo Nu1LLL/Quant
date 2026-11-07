@@ -13,7 +13,8 @@ from research.btc_jump_reversal_data import (
     read_pinned_manifest, validate_funding_sequence,
 )
 from research.btc_jump_reversal_sim import DataGateError, FundingRate, OOS_END_MS, OOS_START_MS
-from research.btc_jump_reversal_runner import run_one_shot
+from research.btc_jump_reversal_runner import run_one_shot, retry_complete_transport
+from research.crypto_blackbox.binance_vision_5m import ArchiveIntegrityError
 
 
 def zipped(name: str, content: str) -> bytes:
@@ -24,6 +25,23 @@ def zipped(name: str, content: str) -> bytes:
 
 
 class ArchiveFeedTests(unittest.TestCase):
+    def test_retry_transport_never_exposes_partial_attempt(self):
+        attempts = 0
+
+        def flaky(_url):
+            nonlocal attempts
+            attempts += 1
+            yield b"first"
+            if attempts == 1:
+                raise ArchiveIntegrityError("transient connection failure")
+            yield b"second"
+
+        self.assertEqual(
+            b"".join(retry_complete_transport(flaky)("https://example.test")),
+            b"firstsecond",
+        )
+        self.assertEqual(attempts, 2)
+
     def test_pinned_manifest_is_complete_and_rejects_mutation(self):
         manifest = read_pinned_manifest()
         self.assertEqual(len(manifest), 72)
