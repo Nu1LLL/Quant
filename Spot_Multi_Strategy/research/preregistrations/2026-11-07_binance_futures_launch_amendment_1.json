@@ -1,0 +1,211 @@
+{
+  "base_sha256": "a2edaae57fdcb8b337b45db3b4ca54c6364f716bb453d07c6edeef9b6efb3b23",
+  "decisions": [
+    {
+      "article_code": "ce9176af28a148d4993972a1caeffda0",
+      "contract_symbol": "OPUSDT",
+      "detail_sha256": "bd13b01d79ec83fc6a3b871806d090c8878a0dbf576be662c829482f2ed14c94",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "ee776592d1714f4cb6a53db72350ac63",
+      "contract_symbol": "GALUSDT",
+      "detail_sha256": "108bb639d1afa39e0f2c43004b31b4e3a462b8977e56c217f5ecddea487d4389",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "a9b63a16b820474cb372f4cba557cf82",
+      "contract_symbol": "DARUSDT",
+      "detail_sha256": "8fb38d3c64b0691a9607cdb2a5265b076fe0a30f5d918f2063b4c307f623233d",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "e2086878df7041069aa3653501235e68",
+      "contract_symbol": "JASMYUSDT",
+      "detail_sha256": "e4a7a7b8e343a9602f0fc7c6c6999dc1b6ab756e7a5e71617d8320d0f64fdd7e",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "986ab98c6628449facdf21ae8dbd2356",
+      "contract_symbol": "WOOUSDT",
+      "detail_sha256": "d444304d7dd82d685c83c724aed147734ddec8cc7666c4d6358ce2e70abe68c5",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "e15fac275e7a4e858dc4bb79ffc24c50",
+      "contract_symbol": "BNXUSDT",
+      "detail_sha256": "d572a46066e9e20213573e722d35637664e4c8444f6c485b55f6b6cd385ed168",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "bb98f3f2625143fc9d5d98c3aae55b1a",
+      "contract_symbol": "APEUSDT",
+      "detail_sha256": "6614454c868af9ff3fc63898e28264cb36dc43c8596ccb5e70280491bea368a6",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "b76223a20c604f718b1e124d1d049d0d",
+      "contract_symbol": "GMTUSDT",
+      "detail_sha256": "d03471c3f871601a2bd6ae5209865245072f2cb909277803adcd7ae9580e600f",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "8b6376b0ce804eb79017f35cb2eb9ac1",
+      "contract_symbol": "ANCUSDT",
+      "detail_sha256": "935248ccc0a4edb03c9dfca4ab907823823ea9cec2d388c7c0403ab5a75c41c8",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "3e091344eaaa4632bbdc1e5ded1237e1",
+      "contract_symbol": "API3USDT",
+      "detail_sha256": "7114194b382bd863ca7cc698ad5c0d51094afef2140e760314c0f7a6e8d4d064",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "e6de0a1dca5e49bea0b334304535934a",
+      "contract_symbol": "IMXUSDT",
+      "detail_sha256": "dc706df57a484fa67bd41d37bdff76bcc6a06e4c5a7b3ce482a2b3d56da976fb",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "4792aec2fe53444f87734e57bbb3038f",
+      "contract_symbol": "FLOWUSDT",
+      "detail_sha256": "6759b1565d9f1a734d71ab2b3b39ea5faa0fcc19ca4c022e5482e2cdd99b0412",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "b5c82d3590ea4087adeb15f8edcd8e1f",
+      "contract_symbol": "DUSKUSDT",
+      "detail_sha256": "0352b6ec2cf29f4b84a35544fae1d23d71239e34e5f12e421def7b9d2fe6f005",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "ccbdacbe197945b4a062ca0e3c830c4a",
+      "contract_symbol": "ROSEUSDT",
+      "detail_sha256": "7315aec2536874e95976149b4a9066807d689390174a33be1d2ebae38f87c48e",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "9a55ed80fb3f4c72b257aaad09e697c0",
+      "contract_symbol": "ANTUSDT",
+      "detail_sha256": "12cd484a5425b8aec0e9796f7f9c8d88ac5c8460ba2d31a0ac4eb7eda6d37027",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "e8caf8581cb84df7b8acfefe74548119",
+      "contract_symbol": "PEOPLEUSDT",
+      "detail_sha256": "2bd0de2903e6b41b34e8d9a1a41a6c1ed47d3406fcb5da68b29c30ac6660d952",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "5b8aa52ccd5f486c850ca737f68ead65",
+      "contract_symbol": "ENSUSDT",
+      "detail_sha256": "ac996acb8a341c899dd1e5abe161c1c82a44b3ca0933d2c4f0b27952ac237ee7",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "3bb1893a459145eabd8e217486a8daa8",
+      "contract_symbol": "LPTUSDT",
+      "detail_sha256": "81fbf3bd5dc1d0b31a73f8401f3e3851d7d099f805f0aa436dd3713a832286de",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "aa4a4f5e4f1344ae921ad13c90d7a21f",
+      "contract_symbol": "CTSIUSDT",
+      "detail_sha256": "e4f6247cf98a3aee16c2e544a0eefd34afc809c97fc48bcfbb8ed6f3eb159fd6",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "2ea9e8af0c6947f1afa9f8dab1557d2b",
+      "contract_symbol": "KLAYUSDT",
+      "detail_sha256": "df1b8aadb69160326f1f58bc3bb456290401c98ec33c6762ff9df853510d602b",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "59cf4a2e46e24af79c9bdd29151c70d5",
+      "contract_symbol": "GALAUSDT",
+      "detail_sha256": "9316c88db5894d57a871b26a9453ef53e390293e282a84c0d5badd68b7122b5f",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "a24db130a3bd48328bfbe7ad6e5e1a35",
+      "contract_symbol": "BAKEUSDT",
+      "detail_sha256": "4cb0a3125633b3854905105984ea13c45d0cb4fbb4d79968eb0af9223a92f830",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "a176d4cfd4c74a7fb8238e63d71c062a",
+      "contract_symbol": "ICPUSDT",
+      "detail_sha256": "658c8913892f3f193bf927fa9e4d58fc313456464e20d5b95d187eb15e367e81",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "c271315f57f54b08b6c81c6e81ba9ef8",
+      "contract_symbol": "DGBUSDT",
+      "detail_sha256": "a1f7987bdc963dd69f7d29cecb4ce9479f8289e173750f11b47513c394d316c0",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "7f25c9f82b964cbc91e8b997cd5b8320",
+      "contract_symbol": "NKNUSDT",
+      "detail_sha256": "c1251372593ee55da9e41959a37978febd9a5c07fb143079807b42e23557fc9e",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "76d42ca8c52e4d8ab374dbcb64c44800",
+      "contract_symbol": "OGNUSDT",
+      "detail_sha256": "8f2331e169e031af7f4921022e5ee9f986861c3ba46154e3e81e0ab50ffd672e",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "2f2d58933d004b888d7cb9b5e6ed5abc",
+      "contract_symbol": "MTLUSDT",
+      "detail_sha256": "f768020c14fdd9e72a81e27efbfa871cb8ea7d874fee73931f1ea215f0373089",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "e50421e9fea947d6a5d4d3f923671a2d",
+      "contract_symbol": "DENTUSDT",
+      "detail_sha256": "15d4aa85993ee2e0295924874b36e04ef55a81b9704889289259920b98a7e646",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "354bc5918cc345a2a4a7e2941912800c",
+      "contract_symbol": "LINAUSDT",
+      "detail_sha256": "b67f1c52a67fff39b8cf983c1b904b9087f72590b7f525abacbe41ffca82146d",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "45cb73bba8254e52b9c0d7ad597d0402",
+      "contract_symbol": "ONEUSDT",
+      "detail_sha256": "0c2e77691adf740b6633f955f2771ce6cf8d129913390f25975baace469f6a4e",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "09e302f8a778456aa42e0df634cc4e8f",
+      "contract_symbol": "ALICEUSDT",
+      "detail_sha256": "78cb0131f213db9eb756af8423a8c9981cb3422296b8d399774a57ddf6359a65",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "86f5ef4c343c4acda8358918e3f77698",
+      "contract_symbol": "CHRUSDT",
+      "detail_sha256": "0db0492aa2ef0f5b02229eb70ce2a54d1ebd3c601db05c7c6b62bafce0dcd8cf",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "53c007d040594d55a8b2ccc57de8efa4",
+      "contract_symbol": "COTIUSDT",
+      "detail_sha256": "f0ca7e4a323231a1942b91f2f1285c6d7bdb0b81d5cd40e72466200a67fc969b",
+      "new_status": "accepted_explicit_usdt_title"
+    },
+    {
+      "article_code": "148fb7ca409e43b3a7e8aa391e6302c9",
+      "contract_symbol": "DODOUSDT",
+      "detail_sha256": "33faa984d9ba39917175f19ee0c3d4f860aa939a237184496c9177eb7613865f",
+      "new_status": "accepted_explicit_usdt_title"
+    }
+  ],
+  "price_or_return_data_read": false,
+  "reason": "old explicit USDT-margined article titles need not repeat the full ticker in prose"
+}
