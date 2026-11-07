@@ -1,0 +1,203 @@
+{
+  "amendment_commit": "4bfac91",
+  "annual_folds": {
+    "2021": {
+      "cagr": 0.021767002278390013,
+      "max_drawdown": 0.08696363333120316,
+      "net_return": 0.02175194270212666,
+      "passes": true,
+      "profit_factor": 1.1176060565582224,
+      "sharpe": 0.2453132904334591,
+      "trades_entered": 24
+    },
+    "2022": {
+      "cagr": -0.16207261954472885,
+      "max_drawdown": 0.16879476316161945,
+      "net_return": -0.16197119962415607,
+      "passes": false,
+      "profit_factor": 0.43188365050324407,
+      "sharpe": -1.613619283275091,
+      "trades_entered": 35
+    },
+    "2023": {
+      "cagr": -0.20158155696227753,
+      "max_drawdown": 0.20145852084444082,
+      "net_return": -0.20145852084444082,
+      "passes": false,
+      "profit_factor": 0.3057543634976807,
+      "sharpe": -2.5435327211900995,
+      "trades_entered": 44
+    },
+    "2024": {
+      "cagr": -0.12692889323241463,
+      "max_drawdown": 0.12717220463331702,
+      "net_return": -0.12717220463331758,
+      "passes": false,
+      "profit_factor": 0.49327011817077215,
+      "sharpe": -1.4365714267740395,
+      "trades_entered": 37
+    },
+    "2025": {
+      "cagr": -0.11731609703138424,
+      "max_drawdown": 0.11724070129431707,
+      "net_return": -0.11724070129431707,
+      "passes": false,
+      "profit_factor": 0.25719651028250035,
+      "sharpe": -2.581086359991929,
+      "trades_entered": 30
+    }
+  },
+  "archive_manifest_sha256": "3c633e515979ed78998f3ff004f8414a9a2be5b71b971480b613809e908bf510",
+  "doubled_cost_ending_equity": 3152.252928159817,
+  "evidence_grade": "retrospective_blind_historical_holdout",
+  "experiment_id": "btc_2h_jump_reversal_2026_11_07",
+  "full_gate_pass": false,
+  "funding_archive_sha256": {
+    "2021-01": "cff916dc4b638ec3de97828e8911cd91cf7d7a3d0836ec0175869c374e66823d",
+    "2021-02": "819a7b107443686adb313fc5fc223302a29f3981e1d1bd9828ad0ade65a8a8af",
+    "2021-03": "2125fd300848938c7b992b8f7b7b5007d5b277a4ff1ebda7da083b40242729da",
+    "2021-04": "9cd888e3b0a1954813d0062c2e60426fdc8e34a7f258f6838371ec67f535b028",
+    "2021-05": "ed934afb9cf84df6ecae742e755147333a84244836a66b51523abc66dd5f63af",
+    "2021-06": "7b8d9bfb8816636b800764dafb2aa2307d19166c695bfa245adbf7d01d61f766",
+    "2021-07": "8ab3df641d3bcf40527491f8e26d046ad2b662d1950ead9555ad32975571b7fe",
+    "2021-08": "7eb681cc45b94176f4b9192a62c3a1925d79031ba001cea2d8dec6ff6e5b9c35",
+    "2021-09": "03f25a7c25eef18d5f5b5b7bb0b664cab7a210b409f37e95a54e141808a0752d",
+    "2021-10": "f25820d6add687addbca3ef43bee58f70853a6da53832a0c1bc22d00dc8ec64a",
+    "2021-11": "e2e6b2d7218607e7e4a38137d50f553c2cfb901275c19edf567024c1cc6de85f",
+    "2021-12": "bf3ce484faf41d7dccfd38c5cc3d8de34d8297df30ab10784e874cc10fd1b310",
+    "2022-01": "22ee19079b620f5c6d820e7d7f8bafa7fde866d89bd664863b8bd527749c12cb",
+    "2022-02": "fa95088258a905c79ab79e8984d2f6f66933ec2e814dbab4ef9da89b01ab484a",
+    "2022-03": "4cf0883bc07f4ed4cdd3b0d8c0d166b4d15d21e666ab752f9f44401af4d6172f",
+    "2022-04": "57e2776cc68b3169fc9f8632dad67278f470cd453407a8ebe6c87963c8a31357",
+    "2022-05": "bced8a5013d09742b96682e6fd01ad4456213515a03d7586ec2b1f2689af5255",
+    "2022-06": "0cd0708f8903829eb46f98cf60f4b2516c986e1ccddf6620a5912b48e16baf93",
+    "2022-07": "29d58cce0cd45f74c6a112039835c6d9ee5a7e60e7c38c2503beb7930453a4fe",
+    "2022-08": "6f4f0c6c84c05694b4b4a5c085776730fd4059723eecd98ee6ffeb3fde4da811",
+    "2022-09": "d62cd4e13009de37add446dc4f63ead4c56dcc4955a1e60f6726bcadc5a68fa9",
+    "2022-10": "ad9efed10d4ca1567b865d7a158790977cec1b925395634217069df6696c8bc9",
+    "2022-11": "8febe5bec1a029e993bbf27490761f8c47c32849bf7dd13441b2b2f6ec1ffb51",
+    "2022-12": "4218c78331bcc4dbeb5768fa112242a880971c1f2cfd1d3f32aaa26ca34069af",
+    "2023-01": "05e3df32f28d0d50f4c5a280adee9368b4a66fc68c6ddca1b3277087ac0d19f5",
+    "2023-02": "5227accd9aaa59f71f5e682abffb58be5f99573ed208ab968b1704c81ac11345",
+    "2023-03": "ab022adff9b853d2f33cf80154e77c770f57c3392f0bbc36564b2e2cdbd0e872",
+    "2023-04": "2931039d26818edc65d4faefba84945fd1ba52989dd58fb127dc3cd7a12c7fbf",
+    "2023-05": "5d026fece46df86293054c8c56c2c8de575d30161b82979b11831831217a246e",
+    "2023-06": "3ffdde6f1dc9c3c065d77ae43f3ba64d19d4cb76512d4bc1d541933d4fb2e6f7",
+    "2023-07": "0304baed9fd407293a8a8040b30a1b68bd344803b630d33530375b421733a930",
+    "2023-08": "516a8f50631c6ede6a9642f6d1590b6a22c33ba09935501d2ace8dc1396501fd",
+    "2023-09": "3fd9df6fd1eef33cf5fe625c27012359bc6d64a68c109305d7b44a0354f533c2",
+    "2023-10": "03105cc140150bffca834bcccbddc6cfee245e079d2df1759653243bd6e92448",
+    "2023-11": "8015d2997f8d5e757ff3707ee87800ca30a74da0129daa747b64117f07bcc186",
+    "2023-12": "8f02fdd2a2da261bbf13ab301c74bdb57fae005f19d5088e9ece5f8824c1a2a7",
+    "2024-01": "3e0d30870672aa8f0f937881056e3cfd55913ae5c780cd50b33f2763aa0ba58e",
+    "2024-02": "daf1e4901e3d6436d82ad60f90d007eb5300be8047cfef121007203a7212cde6",
+    "2024-03": "711dcaf2a341aedfd06447b4117b540f60adb0784c5e64a313c718e4cf092bc3",
+    "2024-04": "6d220b8e2815362a11d294d35dbca28568370d8295351937eceec10f2b359b85",
+    "2024-05": "aef8c5fdce1493fd570b5829a72f2f17c7e459483390f25544d16c2a30be592e",
+    "2024-06": "43fc4473820d1fb4fe340d1b1951a87555f6841aa352e684fa95d6adffce04c6",
+    "2024-07": "acab0593c1452660ce74a6c239fb215c1192b0a9c6e8c1689e6495de40a0174b",
+    "2024-08": "7003d29a43dd5f9357f838da8766834954939e22c1d80af682d9f33984f67b71",
+    "2024-09": "6ef23b02392b481ef9c3855434bf3644289fb6e228b4f7d9a0dfc6d3cdff1116",
+    "2024-10": "26db65ac8020d80ece35df79c254c5f7e24427529bcceeb2972748c4fe2d2707",
+    "2024-11": "e1b19cccfe2cdcba48b022790789b7b01edd86c075f39bc152e44c267d43bd51",
+    "2024-12": "069409f525ebf6370ee1c7defe475167de4b97284c5ac8e68768652968cd3dc9",
+    "2025-01": "df725010d55458866eb5a47e9ee708c6796c9d7e77b14c38342cea11f381815e",
+    "2025-02": "e918b90fb33df3a3317feea13807a892047f1ec86eeac100bdb7b3dd83285d46",
+    "2025-03": "a3b95cfb315641fbfddc61eb32adf2a2588afb7a3973a61f464aca007ad43e3f",
+    "2025-04": "01dbb7bd0135f98bd63bdde6b943cde1accc1770cabf92f68a1ec0653ced3888",
+    "2025-05": "e7355e2775b88009c984db1783bb8ed6b5f24ede2b52bb764151b5722d6a5e42",
+    "2025-06": "a1f4a40953740fa83ee9ad97776ff8325d1958654a67f1325614071a983819d4",
+    "2025-07": "b097dff828f6e43fece23db0d3cb98042a9d7bc19693b8cbfd051d88eb973b7b",
+    "2025-08": "1180129860b6e196e8d70bb9719e81573aa6b4acb423ba5ee7f82f10c836f7ab",
+    "2025-09": "21dc6570fc6bffad0e7b5f9e99211b82ad07c95ab4f18c3a2daa3b95ec98344c",
+    "2025-10": "9ecdedab6344fc4cdb154763266b8e09627a71c3cc5574cf868158b541c259c2",
+    "2025-11": "23735400405627d610123e3a43db3e98ae7addb93459cd670e65a7659a5f081b",
+    "2025-12": "35318b789f020b0e04c9043112480743855554e52e1d188437cbdaa67246d51d"
+  },
+  "funding_events_seen": 5478,
+  "gate": {
+    "annual_walk_forward": false,
+    "cost_net_metrics": false,
+    "doubled_adverse_cost_profitable": false,
+    "independent_executable_evidence": false,
+    "monte_carlo": false,
+    "regime_robustness": false
+  },
+  "ignored_oos_tail_signals": 0,
+  "ignored_open_position_signals": 9,
+  "metrics": {
+    "cagr": -0.12031551615883396,
+    "max_drawdown": 0.5340153790621656,
+    "profit_factor": 0.5223080513817545,
+    "sharpe": -1.3474208858753942
+  },
+  "monte_carlo": {
+    "block_days": 21,
+    "distributions": {
+      "cagr": {
+        "p05": -0.1838309479606468,
+        "p50": -0.1203046254480804,
+        "p95": -0.054077251897811096,
+        "undefined_count": 0
+      },
+      "max_drawdown": {
+        "p05": 0.314100871643349,
+        "p50": 0.5002638683460834,
+        "p95": 0.6480065669011449,
+        "undefined_count": 0
+      },
+      "profit_factor": {
+        "p05": 0.28836376456323776,
+        "p50": 0.481330507808454,
+        "p95": 0.7413196130429957,
+        "undefined_count": 0
+      },
+      "sharpe": {
+        "p05": -2.2669195533511544,
+        "p50": -1.3623156783896282,
+        "p95": -0.5230772144079191,
+        "undefined_count": 0
+      }
+    },
+    "joint_pass_count": 0,
+    "joint_pass_fraction": 0.0,
+    "paths": 5000,
+    "seed": 20261107
+  },
+  "monthly": {
+    "flat": 2,
+    "longest_losing_streak": 11,
+    "negative": 45,
+    "positive": 13,
+    "worst_return": -0.09115682167586536
+  },
+  "no_funding_credit_ending_equity": 5222.312666124966,
+  "preregistration_commit": "32bff50",
+  "regimes": {
+    "bear_high": {
+      "net_pnl": 529.6087618149513,
+      "trades": 19
+    },
+    "bear_low": {
+      "net_pnl": -2032.3038068349088,
+      "trades": 58
+    },
+    "bull_high": {
+      "net_pnl": -909.2071689979075,
+      "trades": 36
+    },
+    "bull_low": {
+      "net_pnl": -2319.7702785407755,
+      "trades": 57
+    },
+    "unknown": {
+      "net_pnl": 0.0,
+      "trades": 0
+    }
+  },
+  "research_status": "sealed_rejected",
+  "run_completed_at_utc": "2026-11-07T11:06:01.976012+00:00",
+  "runner_commit": "c971bcc",
+  "signal_count": 179,
+  "trade_count": 170
+}
