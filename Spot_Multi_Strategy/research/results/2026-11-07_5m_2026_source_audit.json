@@ -1,0 +1,20 @@
+{
+  "archives_checked": 72,
+  "complete_symbols": [],
+  "errors": [
+    "ADAUSDT 2026-10: five-minute grid changed: ADAUSDT 2026-10, row 7776",
+    "BCHUSDT 2026-10: five-minute grid changed: BCHUSDT 2026-10, row 7776",
+    "BNBUSDT 2026-10: five-minute grid changed: BNBUSDT 2026-10, row 7776",
+    "BTCUSDT 2026-10: five-minute grid changed: BTCUSDT 2026-10, row 7776",
+    "ETHUSDT 2026-10: five-minute grid changed: ETHUSDT 2026-10, row 7776",
+    "LINKUSDT 2026-10: five-minute grid changed: LINKUSDT 2026-10, row 7776",
+    "THETAUSDT 2026-10: five-minute grid changed: THETAUSDT 2026-10, row 7776",
+    "XMRUSDT 2026-10: five-minute grid changed: XMRUSDT 2026-10, row 7776"
+  ],
+  "issues": [],
+  "kind": "source_data_quality_only",
+  "market": "Binance USD-M 5m",
+  "period": "2026-01 through 2026-10",
+  "prices_or_returns_output": false,
+  "strategy_results_read": false
+}

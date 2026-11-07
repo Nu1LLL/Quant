@@ -1,0 +1,18 @@
+{
+  "archives_checked": 80,
+  "complete_symbols": [
+    "ADAUSDT",
+    "BCHUSDT",
+    "BNBUSDT",
+    "BTCUSDT",
+    "ETHUSDT",
+    "LINKUSDT",
+    "THETAUSDT",
+    "XMRUSDT"
+  ],
+  "errors": [],
+  "kind": "source_funding_time_only",
+  "period": "2026-01 through 2026-10",
+  "rates_read": false,
+  "strategy_results_read": false
+}
