@@ -1,0 +1,2404 @@
+{
+  "amendment_sha256": "d20ca7e384e09b05596014ea4638a70fcaa964ba74d36a032dacf083c39bace8",
+  "base_manifest_sha256": "a2edaae57fdcb8b337b45db3b4ca54c6364f716bb453d07c6edeef9b6efb3b23",
+  "event_count": 216,
+  "first_announcement_per_symbol": true,
+  "http_status_counts": {
+    "200": 661,
+    "404": 217
+  },
+  "price_or_return_data_read": false,
+  "rows": [
+    {
+      "article_code": "c476d5a0f48b4f64bd8886ac4d4e5d73",
+      "contract_symbol": "AKROUSDT",
+      "http_status": {
+        "funding_2021-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-01-19T07:00:00+00:00"
+    },
+    {
+      "article_code": "c83d9f0b88dd49f880b132e5102e0d03",
+      "contract_symbol": "LUNAUSDT",
+      "http_status": {
+        "funding_2021-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-01-28T07:00:00+00:00"
+    },
+    {
+      "article_code": "148fb7ca409e43b3a7e8aa391e6302c9",
+      "contract_symbol": "DODOUSDT",
+      "http_status": {
+        "funding_2021-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-02-19T13:00:00+00:00"
+    },
+    {
+      "article_code": "53c007d040594d55a8b2ccc57de8efa4",
+      "contract_symbol": "COTIUSDT",
+      "http_status": {
+        "funding_2021-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-03-10T07:00:00+00:00"
+    },
+    {
+      "article_code": "86f5ef4c343c4acda8358918e3f77698",
+      "contract_symbol": "CHRUSDT",
+      "http_status": {
+        "funding_2021-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-03-12T07:00:00+00:00"
+    },
+    {
+      "article_code": "09e302f8a778456aa42e0df634cc4e8f",
+      "contract_symbol": "ALICEUSDT",
+      "http_status": {
+        "funding_2021-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-03-16T03:00:00+00:00"
+    },
+    {
+      "article_code": "45cb73bba8254e52b9c0d7ad597d0402",
+      "contract_symbol": "ONEUSDT",
+      "http_status": {
+        "funding_2021-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-03-18T07:00:00+00:00"
+    },
+    {
+      "article_code": "354bc5918cc345a2a4a7e2941912800c",
+      "contract_symbol": "LINAUSDT",
+      "http_status": {
+        "funding_2021-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-03-19T07:00:00+00:00"
+    },
+    {
+      "article_code": "e50421e9fea947d6a5d4d3f923671a2d",
+      "contract_symbol": "DENTUSDT",
+      "http_status": {
+        "funding_2021-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-03-24T04:00:00+00:00"
+    },
+    {
+      "article_code": "2f2d58933d004b888d7cb9b5e6ed5abc",
+      "contract_symbol": "MTLUSDT",
+      "http_status": {
+        "funding_2021-03": 200,
+        "funding_2021-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-03-31T07:00:00+00:00"
+    },
+    {
+      "article_code": "76d42ca8c52e4d8ab374dbcb64c44800",
+      "contract_symbol": "OGNUSDT",
+      "http_status": {
+        "funding_2021-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-04-01T07:00:00+00:00"
+    },
+    {
+      "article_code": "7f25c9f82b964cbc91e8b997cd5b8320",
+      "contract_symbol": "NKNUSDT",
+      "http_status": {
+        "funding_2021-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-04-09T07:00:00+00:00"
+    },
+    {
+      "article_code": "c271315f57f54b08b6c81c6e81ba9ef8",
+      "contract_symbol": "DGBUSDT",
+      "http_status": {
+        "funding_2021-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-04-21T03:30:00+00:00"
+    },
+    {
+      "article_code": "fa934b93fea6494fb7361d45ca7cc98a",
+      "contract_symbol": "1000SHIBUSDT",
+      "http_status": {
+        "funding_2021-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-05-10T13:00:00+00:00"
+    },
+    {
+      "article_code": "a176d4cfd4c74a7fb8238e63d71c062a",
+      "contract_symbol": "ICPUSDT",
+      "http_status": {
+        "funding_2021-05": 404,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-05-11T03:00:00+00:00"
+    },
+    {
+      "article_code": "a24db130a3bd48328bfbe7ad6e5e1a35",
+      "contract_symbol": "BAKEUSDT",
+      "http_status": {
+        "funding_2021-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-05-19T07:00:00+00:00"
+    },
+    {
+      "article_code": "59cf4a2e46e24af79c9bdd29151c70d5",
+      "contract_symbol": "GALAUSDT",
+      "http_status": {
+        "funding_2021-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-09-18T03:30:00+00:00"
+    },
+    {
+      "article_code": "2ea9e8af0c6947f1afa9f8dab1557d2b",
+      "contract_symbol": "KLAYUSDT",
+      "http_status": {
+        "funding_2021-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-10-12T03:30:00+00:00"
+    },
+    {
+      "article_code": "aa4a4f5e4f1344ae921ad13c90d7a21f",
+      "contract_symbol": "CTSIUSDT",
+      "http_status": {
+        "funding_2021-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-10-26T03:30:00+00:00"
+    },
+    {
+      "article_code": "3bb1893a459145eabd8e217486a8daa8",
+      "contract_symbol": "LPTUSDT",
+      "http_status": {
+        "funding_2021-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-11-11T03:30:00+00:00"
+    },
+    {
+      "article_code": "5b8aa52ccd5f486c850ca737f68ead65",
+      "contract_symbol": "ENSUSDT",
+      "http_status": {
+        "funding_2021-11": 200,
+        "funding_2021-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-11-30T03:30:00+00:00"
+    },
+    {
+      "article_code": "e8caf8581cb84df7b8acfefe74548119",
+      "contract_symbol": "PEOPLEUSDT",
+      "http_status": {
+        "funding_2021-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-12-24T04:00:00+00:00"
+    },
+    {
+      "article_code": "9a55ed80fb3f4c72b257aaad09e697c0",
+      "contract_symbol": "ANTUSDT",
+      "http_status": {
+        "funding_2021-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-12-27T04:00:00+00:00"
+    },
+    {
+      "article_code": "ccbdacbe197945b4a062ca0e3c830c4a",
+      "contract_symbol": "ROSEUSDT",
+      "http_status": {
+        "funding_2021-12": 200,
+        "funding_2022-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2021-12-31T03:30:00+00:00"
+    },
+    {
+      "article_code": "b5c82d3590ea4087adeb15f8edcd8e1f",
+      "contract_symbol": "DUSKUSDT",
+      "http_status": {
+        "funding_2022-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-01-07T03:30:00+00:00"
+    },
+    {
+      "article_code": "4792aec2fe53444f87734e57bbb3038f",
+      "contract_symbol": "FLOWUSDT",
+      "http_status": {
+        "funding_2022-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-02-10T03:30:00+00:00"
+    },
+    {
+      "article_code": "e6de0a1dca5e49bea0b334304535934a",
+      "contract_symbol": "IMXUSDT",
+      "http_status": {
+        "funding_2022-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-02-11T03:30:00+00:00"
+    },
+    {
+      "article_code": "3e091344eaaa4632bbdc1e5ded1237e1",
+      "contract_symbol": "API3USDT",
+      "http_status": {
+        "funding_2022-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-02-22T03:30:00+00:00"
+    },
+    {
+      "article_code": "8b6376b0ce804eb79017f35cb2eb9ac1",
+      "contract_symbol": "ANCUSDT",
+      "http_status": {
+        "funding_2022-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-03-08T03:30:00+00:00"
+    },
+    {
+      "article_code": "b76223a20c604f718b1e124d1d049d0d",
+      "contract_symbol": "GMTUSDT",
+      "http_status": {
+        "funding_2022-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-03-15T04:00:00+00:00"
+    },
+    {
+      "article_code": "bb98f3f2625143fc9d5d98c3aae55b1a",
+      "contract_symbol": "APEUSDT",
+      "http_status": {
+        "funding_2022-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-03-17T15:00:00+00:00"
+    },
+    {
+      "article_code": "e15fac275e7a4e858dc4bb79ffc24c50",
+      "contract_symbol": "BNXUSDT",
+      "http_status": {
+        "funding_2022-04": 404,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-04-01T03:30:00+00:00"
+    },
+    {
+      "article_code": "986ab98c6628449facdf21ae8dbd2356",
+      "contract_symbol": "WOOUSDT",
+      "http_status": {
+        "funding_2022-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-04-08T03:30:00+00:00"
+    },
+    {
+      "article_code": "e2086878df7041069aa3653501235e68",
+      "contract_symbol": "JASMYUSDT",
+      "http_status": {
+        "funding_2022-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-04-20T03:30:00+00:00"
+    },
+    {
+      "article_code": "a9b63a16b820474cb372f4cba557cf82",
+      "contract_symbol": "DARUSDT",
+      "http_status": {
+        "funding_2022-04": 200,
+        "funding_2022-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-04-29T03:30:00+00:00"
+    },
+    {
+      "article_code": "ee776592d1714f4cb6a53db72350ac63",
+      "contract_symbol": "GALUSDT",
+      "http_status": {
+        "funding_2022-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-05-05T14:00:00+00:00"
+    },
+    {
+      "article_code": "ce9176af28a148d4993972a1caeffda0",
+      "contract_symbol": "OPUSDT",
+      "http_status": {
+        "funding_2022-06": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-06-01T14:00:00+00:00"
+    },
+    {
+      "article_code": "c562f0d46b0e404c89d9eb8e56a70a2c",
+      "contract_symbol": "INJUSDT",
+      "http_status": {
+        "funding_2022-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-08-17T02:45:00+00:00"
+    },
+    {
+      "article_code": "6d14423aa0034ae992c49f8b7340570b",
+      "contract_symbol": "STGUSDT",
+      "http_status": {
+        "funding_2022-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-08-25T12:00:00+00:00"
+    },
+    {
+      "article_code": "f132b42ab4af4a5bace989b62ce30b5a",
+      "contract_symbol": "SPELLUSDT",
+      "http_status": {
+        "funding_2022-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-09-06T12:00:00+00:00"
+    },
+    {
+      "article_code": "5b9bc7ef56834de895cf829af859207e",
+      "contract_symbol": "1000LUNCUSDT",
+      "http_status": {
+        "funding_2022-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-09-09T13:00:00+00:00"
+    },
+    {
+      "article_code": "3b7184c80d544586993045a0e6e36e57",
+      "contract_symbol": "LUNA2USDT",
+      "http_status": {
+        "funding_2022-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2022-09-10T03:00:00+00:00"
+    },
+    {
+      "article_code": "92f8c95638d94627961641c0e6a9edef",
+      "contract_symbol": "FETUSDT",
+      "http_status": {
+        "funding_2023-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-01-17T02:30:00+00:00"
+    },
+    {
+      "article_code": "8d0a29d6363e450db93e27f03287e81a",
+      "contract_symbol": "FXSUSDT",
+      "http_status": {
+        "funding_2023-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-01-20T03:00:00+00:00"
+    },
+    {
+      "article_code": "7ac9bbff06b94316af623560b3de21ad",
+      "contract_symbol": "HOOKUSDT",
+      "http_status": {
+        "funding_2023-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-01-23T03:00:00+00:00"
+    },
+    {
+      "article_code": "5d5f7e0d340a4a5699c80b0f5231ceb4",
+      "contract_symbol": "MAGICUSDT",
+      "http_status": {
+        "funding_2023-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-01-25T03:00:00+00:00"
+    },
+    {
+      "article_code": "499af13827e04741999c15f9139ff3de",
+      "contract_symbol": "RNDRUSDT",
+      "http_status": {
+        "funding_2023-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-02-03T02:30:00+00:00"
+    },
+    {
+      "article_code": "e04cf4bc4fbd41cbae44fb4a31ddcee0",
+      "contract_symbol": "ASTRUSDT",
+      "http_status": {
+        "funding_2023-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-02-14T02:30:00+00:00"
+    },
+    {
+      "article_code": "8ad0ecaa72ec43229bc32f8fc519e8ef",
+      "contract_symbol": "GMXUSDT",
+      "http_status": {
+        "funding_2023-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-02-17T14:30:00+00:00"
+    },
+    {
+      "article_code": "28408f1dd1ce440d874b795ccc40fe15",
+      "contract_symbol": "CFXUSDT",
+      "http_status": {
+        "funding_2023-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-02-20T14:30:00+00:00"
+    },
+    {
+      "article_code": "73fdad20457b41e09bda8c73c893b83d",
+      "contract_symbol": "ACHUSDT",
+      "http_status": {
+        "funding_2023-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-02-22T14:30:00+00:00"
+    },
+    {
+      "article_code": "58ae6bab2d9249039cc65146d5af44a0",
+      "contract_symbol": "SSVUSDT",
+      "http_status": {
+        "funding_2023-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-02-24T12:00:00+00:00"
+    },
+    {
+      "article_code": "885443a304ba4193bf850f9ebd28408b",
+      "contract_symbol": "CKBUSDT",
+      "http_status": {
+        "funding_2023-02": 200,
+        "funding_2023-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-02-28T12:00:00+00:00"
+    },
+    {
+      "article_code": "e970674b8a4048f69088d21d53a11cb4",
+      "contract_symbol": "PERPUSDT",
+      "http_status": {
+        "funding_2023-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-03-06T12:00:00+00:00"
+    },
+    {
+      "article_code": "19b802c37d4946b1bba1c0e7b4b5a922",
+      "contract_symbol": "TRUUSDT",
+      "http_status": {
+        "funding_2023-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-03-07T12:00:00+00:00"
+    },
+    {
+      "article_code": "dc1fa8e36e8c4cbdb6f200bd3aac916e",
+      "contract_symbol": "LQTYUSDT",
+      "http_status": {
+        "funding_2023-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-03-10T12:00:00+00:00"
+    },
+    {
+      "article_code": "57cdabc4f2f94e04b0503eb31bf7bc3e",
+      "contract_symbol": "IDUSDT",
+      "http_status": {
+        "funding_2023-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-03-23T14:30:00+00:00"
+    },
+    {
+      "article_code": "2698359b2ceb45ff94365f060d616b88",
+      "contract_symbol": "ARBUSDT",
+      "http_status": {
+        "funding_2023-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-03-23T17:00:00+00:00"
+    },
+    {
+      "article_code": "e9113e48b61a46ca93632920de9b0d19",
+      "contract_symbol": "JOEUSDT",
+      "http_status": {
+        "funding_2023-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-03-29T12:00:00+00:00"
+    },
+    {
+      "article_code": "264deffb7b1a4606867c760af485e81e",
+      "contract_symbol": "RDNTUSDT",
+      "http_status": {
+        "funding_2023-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-04-05T12:00:00+00:00"
+    },
+    {
+      "article_code": "8a9f1c722e8c4a91830cd84d29ee5e3e",
+      "contract_symbol": "HFTUSDT",
+      "http_status": {
+        "funding_2023-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-04-06T12:00:00+00:00"
+    },
+    {
+      "article_code": "7d5bc005a0ab4a82a6a4c08d5cee15ed",
+      "contract_symbol": "XVSUSDT",
+      "http_status": {
+        "funding_2023-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-04-13T02:30:00+00:00"
+    },
+    {
+      "article_code": "00b84a2f4a9b44e184722acdbb6d2629",
+      "contract_symbol": "BLURUSDT",
+      "http_status": {
+        "funding_2023-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-04-28T12:00:00+00:00"
+    },
+    {
+      "article_code": "e41c706aa7a7445f9848f1305f2b3e7f",
+      "contract_symbol": "EDUUSDT",
+      "http_status": {
+        "funding_2023-04": 200,
+        "funding_2023-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-04-30T12:00:00+00:00"
+    },
+    {
+      "article_code": "c43f0ab6145d47ce832234cb4be13816",
+      "contract_symbol": "IDEXUSDT",
+      "http_status": {
+        "funding_2023-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-05-03T12:00:00+00:00"
+    },
+    {
+      "article_code": "ac46aeff860747119efefe75df9854a1",
+      "contract_symbol": "SUIUSDT",
+      "http_status": {
+        "funding_2023-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-05-03T16:00:00+00:00"
+    },
+    {
+      "article_code": "41993e3389654713946bcb6b9b032eaf",
+      "contract_symbol": "1000PEPEUSDT",
+      "http_status": {
+        "funding_2023-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-05-05T16:30:00+00:00"
+    },
+    {
+      "article_code": "cb89820730db4065b1d406350f6c0d9d",
+      "contract_symbol": "1000FLOKIUSDT",
+      "http_status": {
+        "funding_2023-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-05-06T16:30:00+00:00"
+    },
+    {
+      "article_code": "81c80244a5fb4bfab3cea51cd2ed325b",
+      "contract_symbol": "RADUSDT",
+      "http_status": {
+        "funding_2023-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-05-10T12:00:00+00:00"
+    },
+    {
+      "article_code": "43b65b11d6ec4583ab47b3ff72b67601",
+      "contract_symbol": "UMAUSDT",
+      "http_status": {
+        "funding_2023-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-05-10T12:30:00+00:00"
+    },
+    {
+      "article_code": "90d4d1d939444d73b88309ea656a57ef",
+      "contract_symbol": "KEYUSDT",
+      "http_status": {
+        "funding_2023-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-05-24T12:00:00+00:00"
+    },
+    {
+      "article_code": "e3ac2a89692c4f31a1d9daca616b6ce9",
+      "contract_symbol": "COMBOUSDT",
+      "http_status": {
+        "funding_2023-06": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-06-02T12:00:00+00:00"
+    },
+    {
+      "article_code": "3e95295a2c554f87b27e7ecf544e1e61",
+      "contract_symbol": "NMRUSDT",
+      "http_status": {
+        "funding_2023-06": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-06-22T12:00:00+00:00"
+    },
+    {
+      "article_code": "cd356f940975408a8931e4768206a82e",
+      "contract_symbol": "MAVUSDT",
+      "http_status": {
+        "funding_2023-06": 200,
+        "funding_2023-07": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-06-29T12:00:00+00:00"
+    },
+    {
+      "article_code": "dd177db1a04e4c0ea6c1569b63bed988",
+      "contract_symbol": "MDTUSDT",
+      "http_status": {
+        "funding_2023-06": 200,
+        "funding_2023-07": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-06-30T12:00:00+00:00"
+    },
+    {
+      "article_code": "673af51d78494b5c945dadba6e5072b3",
+      "contract_symbol": "XVGUSDT",
+      "http_status": {
+        "funding_2023-07": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-07-05T12:00:00+00:00"
+    },
+    {
+      "article_code": "cb44d15ae417474ab97cbdb37072f39f",
+      "contract_symbol": "WLDUSDT",
+      "http_status": {
+        "funding_2023-07": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-07-24T12:00:00+00:00"
+    },
+    {
+      "article_code": "abd47df1217646639b297b8b9850d7db",
+      "contract_symbol": "PENDLEUSDT",
+      "http_status": {
+        "funding_2023-07": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-07-28T02:30:00+00:00"
+    },
+    {
+      "article_code": "25df92f5680242f3a45dd8fc53969830",
+      "contract_symbol": "ARKMUSDT",
+      "http_status": {
+        "funding_2023-07": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-07-28T02:45:00+00:00"
+    },
+    {
+      "article_code": "7bf08e1f38ed4316a9c5477bfbe21889",
+      "contract_symbol": "AGLDUSDT",
+      "http_status": {
+        "funding_2023-07": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-07-29T02:30:00+00:00"
+    },
+    {
+      "article_code": "41f762a6369445e9ae67b3766447552e",
+      "contract_symbol": "YGGUSDT",
+      "http_status": {
+        "funding_2023-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-08-05T03:30:00+00:00"
+    },
+    {
+      "article_code": "e59b61e52ad24b43bd1032052ea3a025",
+      "contract_symbol": "BNTUSDT",
+      "http_status": {
+        "funding_2023-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-08-10T12:00:00+00:00"
+    },
+    {
+      "article_code": "9d9f7625bf284091a590aff1e308f3d9",
+      "contract_symbol": "OXTUSDT",
+      "http_status": {
+        "funding_2023-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-08-11T12:00:00+00:00"
+    },
+    {
+      "article_code": "c2d4706a8bcc4fe9954cf044172e4ec2",
+      "contract_symbol": "SEIUSDT",
+      "http_status": {
+        "funding_2023-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-08-17T02:30:00+00:00"
+    },
+    {
+      "article_code": "524035d6614b448981533ce5f723d4da",
+      "contract_symbol": "CYBERUSDT",
+      "http_status": {
+        "funding_2023-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-08-21T12:00:00+00:00"
+    },
+    {
+      "article_code": "60e59bfb64ce4f76a1cf22d5cb7282aa",
+      "contract_symbol": "HIFIUSDT",
+      "http_status": {
+        "funding_2023-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-09-16T14:30:00+00:00"
+    },
+    {
+      "article_code": "fc3bcf1121494924a67be78e81060ec4",
+      "contract_symbol": "ARKUSDT",
+      "http_status": {
+        "funding_2023-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-09-19T14:30:00+00:00"
+    },
+    {
+      "article_code": "c6c680eb50fb4dc9b565a8522c49ffa6",
+      "contract_symbol": "FRONTUSDT",
+      "http_status": {
+        "funding_2023-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-09-22T14:30:00+00:00"
+    },
+    {
+      "article_code": "155dd1d3b26d48918d75d263833a5d1d",
+      "contract_symbol": "GLMRUSDT",
+      "http_status": {
+        "funding_2023-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-09-26T01:30:00+00:00"
+    },
+    {
+      "article_code": "9d38d2eb114b441ead0fc90a75893235",
+      "contract_symbol": "BICOUSDT",
+      "http_status": {
+        "funding_2023-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-09-28T12:30:00+00:00"
+    },
+    {
+      "article_code": "b64ac7bcfca54d2b8042c7aa0cfc5afe",
+      "contract_symbol": "STRAXUSDT",
+      "http_status": {
+        "funding_2023-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-10-11T02:30:00+00:00"
+    },
+    {
+      "article_code": "59cba52c3bab4059897ae88d9bbb31cf",
+      "contract_symbol": "LOOMUSDT",
+      "http_status": {
+        "funding_2023-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-10-11T14:30:00+00:00"
+    },
+    {
+      "article_code": "d956c31e085444c2ba4d97c554318476",
+      "contract_symbol": "BIGTIMEUSDT",
+      "http_status": {
+        "funding_2023-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-10-12T14:30:00+00:00"
+    },
+    {
+      "article_code": "175604613129423199f61fda5ffe3615",
+      "contract_symbol": "BONDUSDT",
+      "http_status": {
+        "funding_2023-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-10-15T14:30:00+00:00"
+    },
+    {
+      "article_code": "93710257326b4f33aed7d8b7b73746d1",
+      "contract_symbol": "ORBSUSDT",
+      "http_status": {
+        "funding_2023-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-10-17T06:00:00+00:00"
+    },
+    {
+      "article_code": "21802d4be7ce4e4a880e2990a6775422",
+      "contract_symbol": "BSVUSDT",
+      "http_status": {
+        "funding_2023-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-10-20T12:30:00+00:00"
+    },
+    {
+      "article_code": "cdeaa008a1484ba0974f4359a31d29c3",
+      "contract_symbol": "RIFUSDT",
+      "http_status": {
+        "funding_2023-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-10-21T12:30:00+00:00"
+    },
+    {
+      "article_code": "c40a1707de63466f9aa14fd046c75e81",
+      "contract_symbol": "POWRUSDT",
+      "http_status": {
+        "funding_2023-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-10-27T02:30:00+00:00"
+    },
+    {
+      "article_code": "5d8c7476197344d087b5af436bfc74ae",
+      "contract_symbol": "SLPUSDT",
+      "http_status": {
+        "funding_2023-10": 200,
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-10-31T14:30:00+00:00"
+    },
+    {
+      "article_code": "5e5eab2a19d444898e6961ba33d04849",
+      "contract_symbol": "TIAUSDT",
+      "http_status": {
+        "funding_2023-10": 200,
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-10-31T18:00:00+00:00"
+    },
+    {
+      "article_code": "2e53db8e7af34d7dae7310e4a4336cdd",
+      "contract_symbol": "SNTUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-02T12:30:00+00:00"
+    },
+    {
+      "article_code": "a33e70c5215841299b4d4614918b93a5",
+      "contract_symbol": "CAKEUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-02T12:45:00+00:00"
+    },
+    {
+      "article_code": "afcf1ccc7978458d8474f500da91a00d",
+      "contract_symbol": "MEMEUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-03T12:00:00+00:00"
+    },
+    {
+      "article_code": "a45e7c4a2ca44921b13da66f291e22b8",
+      "contract_symbol": "TWTUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-03T14:30:00+00:00"
+    },
+    {
+      "article_code": "d047f1923f8a40be8aedcc74387f09dc",
+      "contract_symbol": "TOKENUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-03T15:00:00+00:00"
+    },
+    {
+      "article_code": "5b64c7eaf295445584f222adfbf8d723",
+      "contract_symbol": "ORDIUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-07T12:30:00+00:00"
+    },
+    {
+      "article_code": "cc99eaae257f4443bfcee68d39092620",
+      "contract_symbol": "STEEMUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-08T14:30:00+00:00"
+    },
+    {
+      "article_code": "ed2fd215f6884f14a0a321e70f1fa5be",
+      "contract_symbol": "BADGERUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-09T12:30:00+00:00"
+    },
+    {
+      "article_code": "7af5eefa0e1c433c996aadce389bafe5",
+      "contract_symbol": "ILVUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-10T16:30:00+00:00"
+    },
+    {
+      "article_code": "ef915dd89edb4fa7a7438362bfb146d2",
+      "contract_symbol": "NTRNUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-14T12:00:00+00:00"
+    },
+    {
+      "article_code": "d7e84d0cbade4525bd55e61e7ee0f83a",
+      "contract_symbol": "MBLUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-14T15:00:00+00:00"
+    },
+    {
+      "article_code": "7cda5be3429d4e1da2ad8e23c120a7fb",
+      "contract_symbol": "KASUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-17T02:00:00+00:00"
+    },
+    {
+      "article_code": "25c05ab82d674c7396eab887d1384b05",
+      "contract_symbol": "BEAMXUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-17T13:30:00+00:00"
+    },
+    {
+      "article_code": "0712d23fc1934e17996a8c7a58716d30",
+      "contract_symbol": "SUPERUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-26T13:00:00+00:00"
+    },
+    {
+      "article_code": "91deccb2e146483383617db8b8fcaba1",
+      "contract_symbol": "USTCUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-27T12:30:00+00:00"
+    },
+    {
+      "article_code": "fc5b48ff9a6f4d01abd2acff0eee0c83",
+      "contract_symbol": "ONGUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-27T13:00:00+00:00"
+    },
+    {
+      "article_code": "57d1c97e35d84f278b071bd092626f51",
+      "contract_symbol": "ETHWUSDT",
+      "http_status": {
+        "funding_2023-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-11-28T12:30:00+00:00"
+    },
+    {
+      "article_code": "af3cc81ea3fe4547a221244c53c68837",
+      "contract_symbol": "JTOUSDT",
+      "http_status": {
+        "funding_2023-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-12-08T10:00:00+00:00"
+    },
+    {
+      "article_code": "a86323c8ac774e85ba77a497f8f88e7f",
+      "contract_symbol": "1000SATSUSDT",
+      "http_status": {
+        "funding_2023-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-12-12T14:00:00+00:00"
+    },
+    {
+      "article_code": "bc79a7505e2e432b87dfa1e3f4e59f5c",
+      "contract_symbol": "AUCTIONUSDT",
+      "http_status": {
+        "funding_2023-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-12-15T13:00:00+00:00"
+    },
+    {
+      "article_code": "c6eb2557f7a94f8db24ffda21ef0346e",
+      "contract_symbol": "1000RATSUSDT",
+      "http_status": {
+        "funding_2023-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-12-15T14:00:00+00:00"
+    },
+    {
+      "article_code": "e580de0ab2644098bafa59a8eebc1a6a",
+      "contract_symbol": "ACEUSDT",
+      "http_status": {
+        "funding_2023-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-12-18T10:00:00+00:00"
+    },
+    {
+      "article_code": "711588ec360e460d840d7a18472c9617",
+      "contract_symbol": "MOVRUSDT",
+      "http_status": {
+        "funding_2023-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-12-26T12:30:00+00:00"
+    },
+    {
+      "article_code": "c4617b2b970b46e5ad70c9c44cb0f6f2",
+      "contract_symbol": "NFPUSDT",
+      "http_status": {
+        "funding_2023-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2023-12-27T12:30:00+00:00"
+    },
+    {
+      "article_code": "5c6cb594550247aea7c93a47c0156b17",
+      "contract_symbol": "WIFUSDT",
+      "http_status": {
+        "funding_2024-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-01-18T14:15:00+00:00"
+    },
+    {
+      "article_code": "af6c1bbbe6ec406c8b2d087fe47c5554",
+      "contract_symbol": "ONDOUSDT",
+      "http_status": {
+        "funding_2024-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-01-20T13:00:00+00:00"
+    },
+    {
+      "article_code": "835091458d704f878ccdc17c287df31b",
+      "contract_symbol": "LSKUSDT",
+      "http_status": {
+        "funding_2024-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-01-25T14:15:00+00:00"
+    },
+    {
+      "article_code": "527d78a22905461f84c8c85e8b938d4d",
+      "contract_symbol": "ZETAUSDT",
+      "http_status": {
+        "funding_2024-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-02-02T08:30:00+00:00"
+    },
+    {
+      "article_code": "8a72fa2ab4cd474f8e5d62c6158eaeef",
+      "contract_symbol": "OMUSDT",
+      "http_status": {
+        "funding_2024-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-02-13T14:00:00+00:00"
+    },
+    {
+      "article_code": "521a6a71b21046f2b07b021edfd41b9f",
+      "contract_symbol": "MAVIAUSDT",
+      "http_status": {
+        "funding_2024-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-02-21T10:00:00+00:00"
+    },
+    {
+      "article_code": "876c56d9ebbb4b7c8857c3ac766fa141",
+      "contract_symbol": "GLMUSDT",
+      "http_status": {
+        "funding_2024-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-02-22T10:00:00+00:00"
+    },
+    {
+      "article_code": "57bb7f41d63a44b090b27c3df483344b",
+      "contract_symbol": "TONUSDT",
+      "http_status": {
+        "funding_2024-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-03-01T12:30:00+00:00"
+    },
+    {
+      "article_code": "de48474029954b2bb4c479251dbd6a01",
+      "contract_symbol": "VANRYUSDT",
+      "http_status": {
+        "funding_2024-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-03-13T17:30:00+00:00"
+    },
+    {
+      "article_code": "543fca9191ba4f3d937d56035a60699a",
+      "contract_symbol": "BOMEUSDT",
+      "http_status": {
+        "funding_2024-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-03-16T12:30:00+00:00"
+    },
+    {
+      "article_code": "03b61187504b4a6fb6b48b63c47f6440",
+      "contract_symbol": "TURBOUSDT",
+      "http_status": {
+        "funding_2024-05": 200,
+        "funding_2024-06": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-05-30T15:30:00+00:00"
+    },
+    {
+      "article_code": "a24509568bee43f48fa46501ecfb2264",
+      "contract_symbol": "MEWUSDT",
+      "http_status": {
+        "funding_2024-06": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-06-17T14:00:00+00:00"
+    },
+    {
+      "article_code": "78925b1330584febb9baca0b45ac8e40",
+      "contract_symbol": "BANANAUSDT",
+      "http_status": {
+        "funding_2024-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-08-15T02:00:00+00:00"
+    },
+    {
+      "article_code": "016d5773ad3b4d27bb17266161e130a3",
+      "contract_symbol": "SYNUSDT",
+      "http_status": {
+        "funding_2024-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-08-16T12:30:00+00:00"
+    },
+    {
+      "article_code": "c580a3bfd1624636849e277ac9b97a4f",
+      "contract_symbol": "SYSUSDT",
+      "http_status": {
+        "funding_2024-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-08-19T12:30:00+00:00"
+    },
+    {
+      "article_code": "e1ed21ef41494e02ae5c2c4cde57c766",
+      "contract_symbol": "VOXELUSDT",
+      "http_status": {
+        "funding_2024-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-08-20T10:30:00+00:00"
+    },
+    {
+      "article_code": "679489378226489d8247e4bd3cd5352a",
+      "contract_symbol": "BRETTUSDT",
+      "http_status": {
+        "funding_2024-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-08-20T10:35:00+00:00"
+    },
+    {
+      "article_code": "f8b2f7930f6149f29a6dbc3452da0820",
+      "contract_symbol": "ALPACAUSDT",
+      "http_status": {
+        "funding_2024-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-08-22T10:30:00+00:00"
+    },
+    {
+      "article_code": "a4e1e35e26b34b6ebbf808cb8ac676d2",
+      "contract_symbol": "VIDTUSDT",
+      "http_status": {
+        "funding_2024-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-08-23T09:30:00+00:00"
+    },
+    {
+      "article_code": "6d9d629b06cc4e958ff964000f7e0dfd",
+      "contract_symbol": "MBOXUSDT",
+      "http_status": {
+        "funding_2024-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-08-28T09:30:00+00:00"
+    },
+    {
+      "article_code": "93680bfd97264b48ae322fddd9f76723",
+      "contract_symbol": "CHESSUSDT",
+      "http_status": {
+        "funding_2024-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-08-29T07:30:00+00:00"
+    },
+    {
+      "article_code": "a94c75d222eb4eeab209f805ecc1dd85",
+      "contract_symbol": "FLUXUSDT",
+      "http_status": {
+        "funding_2024-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-09-03T07:00:00+00:00"
+    },
+    {
+      "article_code": "8313dd4c2dcd4285806f9b57c063154a",
+      "contract_symbol": "BSWUSDT",
+      "http_status": {
+        "funding_2024-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-09-05T06:00:00+00:00"
+    },
+    {
+      "article_code": "bf54c97c02e146848eb2c4584849a207",
+      "contract_symbol": "QUICKUSDT",
+      "http_status": {
+        "funding_2024-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-09-06T05:00:00+00:00"
+    },
+    {
+      "article_code": "30544d1d081a440eb05b576f4c80158c",
+      "contract_symbol": "NEIROETHUSDT",
+      "http_status": {
+        "funding_2024-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-09-06T14:00:00+00:00"
+    },
+    {
+      "article_code": "1aa255e593f140c3a7d76f543ed4a540",
+      "contract_symbol": "RPLUSDT",
+      "http_status": {
+        "funding_2024-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-09-09T12:30:00+00:00"
+    },
+    {
+      "article_code": "de870af81e8d42cd903b84a97fa5bc91",
+      "contract_symbol": "AERGOUSDT",
+      "http_status": {
+        "funding_2024-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-09-10T12:15:00+00:00"
+    },
+    {
+      "article_code": "9b691e1dece149c08d5fc0918d4bb9fb",
+      "contract_symbol": "UXLINKUSDT",
+      "http_status": {
+        "funding_2024-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-09-15T15:00:00+00:00"
+    },
+    {
+      "article_code": "abfcc4f0f4424827925ab6280e02d989",
+      "contract_symbol": "KDAUSDT",
+      "http_status": {
+        "funding_2024-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-09-18T13:30:00+00:00"
+    },
+    {
+      "article_code": "967f02731484419086c460185c1be4f8",
+      "contract_symbol": "FIDAUSDT",
+      "http_status": {
+        "funding_2024-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-09-19T12:30:00+00:00"
+    },
+    {
+      "article_code": "6313150ba4994a3db95d7685931e81be",
+      "contract_symbol": "FIOUSDT",
+      "http_status": {
+        "funding_2024-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-09-20T11:30:00+00:00"
+    },
+    {
+      "article_code": "5525973324074b1bb539bbf44ced52af",
+      "contract_symbol": "GHSTUSDT",
+      "http_status": {
+        "funding_2024-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-09-23T13:00:00+00:00"
+    },
+    {
+      "article_code": "c89673cbbb594b24b4b00e482c65b694",
+      "contract_symbol": "LOKAUSDT",
+      "http_status": {
+        "funding_2024-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-09-24T11:30:00+00:00"
+    },
+    {
+      "article_code": "a066420d0be84b5c9318e6603c33974e",
+      "contract_symbol": "REIUSDT",
+      "http_status": {
+        "funding_2024-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-09-27T11:00:00+00:00"
+    },
+    {
+      "article_code": "525dd04788a54d1eb762330ab7808b82",
+      "contract_symbol": "COSUSDT",
+      "http_status": {
+        "funding_2024-09": 200,
+        "funding_2024-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-09-30T13:00:00+00:00"
+    },
+    {
+      "article_code": "b2552cf226ed409990663ea2a8fc089f",
+      "contract_symbol": "DIAUSDT",
+      "http_status": {
+        "funding_2024-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-10-02T12:30:00+00:00"
+    },
+    {
+      "article_code": "ed43b9b4d8f8471087b6d200bffcb4ff",
+      "contract_symbol": "1000CATUSDT",
+      "http_status": {
+        "funding_2024-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-10-21T12:30:00+00:00"
+    },
+    {
+      "article_code": "ff1a4c64f1aa4fef870adc7ef802d700",
+      "contract_symbol": "GOATUSDT",
+      "http_status": {
+        "funding_2024-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-10-24T13:30:00+00:00"
+    },
+    {
+      "article_code": "5e93f7cd3f9a47e194085f969ac57b85",
+      "contract_symbol": "MOODENGUSDT",
+      "http_status": {
+        "funding_2024-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-10-25T10:00:00+00:00"
+    },
+    {
+      "article_code": "7b091f5c38324434a9bdd252e4788442",
+      "contract_symbol": "SAFEUSDT",
+      "http_status": {
+        "funding_2024-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-10-25T12:30:00+00:00"
+    },
+    {
+      "article_code": "dbd05b4f89ae4974912d790eba516b4c",
+      "contract_symbol": "SANTOSUSDT",
+      "http_status": {
+        "funding_2024-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-10-28T14:00:00+00:00"
+    },
+    {
+      "article_code": "bab086aed6a2414a8de85e45b6f54714",
+      "contract_symbol": "TROYUSDT",
+      "http_status": {
+        "funding_2024-10": 200,
+        "funding_2024-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-10-31T13:00:00+00:00"
+    },
+    {
+      "article_code": "a55d38732b34452ab9f78ac8832af59c",
+      "contract_symbol": "PONKEUSDT",
+      "http_status": {
+        "funding_2024-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-11-04T12:30:00+00:00"
+    },
+    {
+      "article_code": "209355888f0042f788899dd1a04a0052",
+      "contract_symbol": "1000000MOGUSDT",
+      "http_status": {
+        "funding_2024-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-11-07T12:30:00+00:00"
+    },
+    {
+      "article_code": "e25f171ca86342e9b7c160cc1697a090",
+      "contract_symbol": "DEGENUSDT",
+      "http_status": {
+        "funding_2024-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-11-15T11:30:00+00:00"
+    },
+    {
+      "article_code": "ac2a521d90164583bffd0a1be79e4d1f",
+      "contract_symbol": "MOCAUSDT",
+      "http_status": {
+        "funding_2024-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-12-16T11:30:00+00:00"
+    },
+    {
+      "article_code": "c6420ba80fe54282970e1d69cafa56a4",
+      "contract_symbol": "LUMIAUSDT",
+      "http_status": {
+        "funding_2024-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-12-18T11:30:00+00:00"
+    },
+    {
+      "article_code": "3711e9a08327401780ef31aea01ead1b",
+      "contract_symbol": "HIVEUSDT",
+      "http_status": {
+        "funding_2024-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-12-23T11:30:00+00:00"
+    },
+    {
+      "article_code": "a9c8bddb0f544726b4401718ee116ba7",
+      "contract_symbol": "DEXEUSDT",
+      "http_status": {
+        "funding_2024-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2024-12-24T11:30:00+00:00"
+    },
+    {
+      "article_code": "6bc1e2d898e7449da0f94fb63b7ff952",
+      "contract_symbol": "SONICUSDT",
+      "http_status": {
+        "funding_2025-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-01-08T07:00:00+00:00"
+    },
+    {
+      "article_code": "cdaaf231d42d4946a755b31a85019526",
+      "contract_symbol": "PROMUSDT",
+      "http_status": {
+        "funding_2025-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-01-15T12:30:00+00:00"
+    },
+    {
+      "article_code": "82ac4437417c4876895c7262a4245bf0",
+      "contract_symbol": "TRUMPUSDT",
+      "http_status": {
+        "funding_2025-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-01-18T13:00:00+00:00"
+    },
+    {
+      "article_code": "4587fb07ff3d42af85f5ccfa94c2e97c",
+      "contract_symbol": "MELANIAUSDT",
+      "http_status": {
+        "funding_2025-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-01-20T09:30:00+00:00"
+    },
+    {
+      "article_code": "8fec694cfde14cc281e66970b1ebb065",
+      "contract_symbol": "VTHOUSDT",
+      "http_status": {
+        "funding_2025-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-01-22T09:30:00+00:00"
+    },
+    {
+      "article_code": "d07c58c0c6c6475f891161e77b4e6153",
+      "contract_symbol": "VVVUSDT",
+      "http_status": {
+        "funding_2025-01": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-01-29T08:15:00+00:00"
+    },
+    {
+      "article_code": "10e7ffb4ea4c4b93a70b0fa55fbed8ce",
+      "contract_symbol": "B3USDT",
+      "http_status": {
+        "funding_2025-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-02-13T11:30:00+00:00"
+    },
+    {
+      "article_code": "1282745acaba40c78f68b6adbefe3bc9",
+      "contract_symbol": "IPUSDT",
+      "http_status": {
+        "funding_2025-02": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-02-13T17:00:00+00:00"
+    },
+    {
+      "article_code": "08e0ea0b2c534dffab50f42c3776895c",
+      "contract_symbol": "VICUSDT",
+      "http_status": {
+        "funding_2025-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-03-12T17:00:00+00:00"
+    },
+    {
+      "article_code": "407190c3e5894c679fb4dc1cd7de5982",
+      "contract_symbol": "PAXGUSDT",
+      "http_status": {
+        "funding_2025-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-03-27T10:30:00+00:00"
+    },
+    {
+      "article_code": "3175d8e47b044b48be5439c14f32b194",
+      "contract_symbol": "WALUSDT",
+      "http_status": {
+        "funding_2025-03": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-03-27T15:30:00+00:00"
+    },
+    {
+      "article_code": "6fa586322cfa4cdf899255841fee5a94",
+      "contract_symbol": "ATHUSDT",
+      "http_status": {
+        "funding_2025-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-04-02T15:45:00+00:00"
+    },
+    {
+      "article_code": "05d2c3270470451bb1238132dc93cf34",
+      "contract_symbol": "FORTHUSDT",
+      "http_status": {
+        "funding_2025-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-04-08T08:30:00+00:00"
+    },
+    {
+      "article_code": "37d3b9a537ad4edfa5d847877c2bce32",
+      "contract_symbol": "PROMPTUSDT",
+      "http_status": {
+        "funding_2025-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-04-11T06:30:00+00:00"
+    },
+    {
+      "article_code": "c3f1c445148049f8a5cbe3c152753fea",
+      "contract_symbol": "XCNUSDT",
+      "http_status": {
+        "funding_2025-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-04-11T15:30:00+00:00"
+    },
+    {
+      "article_code": "639d650204914c4f86c20e71c61228dd",
+      "contract_symbol": "BANKUSDT",
+      "http_status": {
+        "funding_2025-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-04-18T18:30:00+00:00"
+    },
+    {
+      "article_code": "96c5a17661a2488f894189ad4ab3cb83",
+      "contract_symbol": "DEEPUSDT",
+      "http_status": {
+        "funding_2025-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-04-22T08:30:00+00:00"
+    },
+    {
+      "article_code": "88b67d724cf64f3f9fd6b92ea0f91620",
+      "contract_symbol": "JSTUSDT",
+      "http_status": {
+        "funding_2025-04": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-04-28T09:30:00+00:00"
+    },
+    {
+      "article_code": "bbe829426ad844b9b9dac62f878d1e67",
+      "contract_symbol": "CVCUSDT",
+      "http_status": {
+        "funding_2025-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 200
+      },
+      "launch_utc": "2025-05-16T08:30:00+00:00"
+    },
+    {
+      "article_code": "191429f0e35b475d9a8159ffa63379d1",
+      "contract_symbol": "AGTUSDT",
+      "http_status": {
+        "funding_2025-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-05-20T10:30:00+00:00"
+    },
+    {
+      "article_code": "52c6f34173e44f898764fb45e9dbb4ca",
+      "contract_symbol": "BUSDT",
+      "http_status": {
+        "funding_2025-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-05-22T16:30:00+00:00"
+    },
+    {
+      "article_code": "282da00874f841d39a90929a50e883f4",
+      "contract_symbol": "SOONUSDT",
+      "http_status": {
+        "funding_2025-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-05-23T08:30:00+00:00"
+    },
+    {
+      "article_code": "90c9ef3a52a4420b8b8480dd9aeecc9b",
+      "contract_symbol": "MERLUSDT",
+      "http_status": {
+        "funding_2025-05": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-05-29T08:30:00+00:00"
+    },
+    {
+      "article_code": "9166fe6f7b8a4b438262df3a040b007b",
+      "contract_symbol": "HYPEUSDT",
+      "http_status": {
+        "funding_2025-05": 200,
+        "funding_2025-06": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-05-30T10:30:00+00:00"
+    },
+    {
+      "article_code": "9d12cbfb72bb46e6835313471b6b3c85",
+      "contract_symbol": "1000000BOBUSDT",
+      "http_status": {
+        "funding_2025-06": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-06-05T08:30:00+00:00"
+    },
+    {
+      "article_code": "f123a26bb0ae488b9f94e2571b2976aa",
+      "contract_symbol": "LAUSDT",
+      "http_status": {
+        "funding_2025-06": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-06-05T09:00:00+00:00"
+    },
+    {
+      "article_code": "80889caa7146492f9de2a2627fa30a4d",
+      "contract_symbol": "OLUSDT",
+      "http_status": {
+        "funding_2025-06": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-06-25T11:30:00+00:00"
+    },
+    {
+      "article_code": "39daafed88564fe08d932f470e00a810",
+      "contract_symbol": "MUSDT",
+      "http_status": {
+        "funding_2025-07": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-07-07T09:30:00+00:00"
+    },
+    {
+      "article_code": "76c269080e8247fea630b60c7449532e",
+      "contract_symbol": "USELESSUSDT",
+      "http_status": {
+        "funding_2025-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-08-15T12:15:00+00:00"
+    },
+    {
+      "article_code": "9863fef7b0de4928882d0deb0e8b7171",
+      "contract_symbol": "CUDISUSDT",
+      "http_status": {
+        "funding_2025-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-08-20T11:15:00+00:00"
+    },
+    {
+      "article_code": "3b5c8e367af94234a3bad81bbe1f58e7",
+      "contract_symbol": "BASUSDT",
+      "http_status": {
+        "funding_2025-08": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-08-26T13:30:00+00:00"
+    },
+    {
+      "article_code": "4426d75b5b7f47f89a11f622739d6186",
+      "contract_symbol": "XPINUSDT",
+      "http_status": {
+        "funding_2025-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-09-12T08:00:00+00:00"
+    },
+    {
+      "article_code": "c35543f806514588b13949a637d75bcd",
+      "contract_symbol": "FLUIDUSDT",
+      "http_status": {
+        "funding_2025-09": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-09-24T10:15:00+00:00"
+    },
+    {
+      "article_code": "17fabba926004325b780c4d6883f0729",
+      "contract_symbol": "4USDT",
+      "http_status": {
+        "funding_2025-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-10-08T11:30:00+00:00"
+    },
+    {
+      "article_code": "8272526b66b042dfbfbd7b717f3d4490",
+      "contract_symbol": "GIGGLEUSDT",
+      "http_status": {
+        "funding_2025-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-10-09T09:45:00+00:00"
+    },
+    {
+      "article_code": "eedd30f534f94583b64db6ba7f375ac0",
+      "contract_symbol": "ATUSDT",
+      "http_status": {
+        "funding_2025-10": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-10-29T11:30:00+00:00"
+    },
+    {
+      "article_code": "36c4f838c82b4f81920d5adc958d9a53",
+      "contract_symbol": "BOBUSDT",
+      "http_status": {
+        "funding_2025-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-11-21T10:45:00+00:00"
+    },
+    {
+      "article_code": "302095391f0f43c0a6d206b3a10c4e78",
+      "contract_symbol": "IRYSUSDT",
+      "http_status": {
+        "funding_2025-11": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-11-26T16:00:00+00:00"
+    },
+    {
+      "article_code": "76379c0d6b7f4fc4861a734db668803a",
+      "contract_symbol": "RLSUSDT",
+      "http_status": {
+        "funding_2025-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-12-02T10:00:00+00:00"
+    },
+    {
+      "article_code": "97c003f1e70f497e98f606ae8b3f1822",
+      "contract_symbol": "POWERUSDT",
+      "http_status": {
+        "funding_2025-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-12-06T09:00:00+00:00"
+    },
+    {
+      "article_code": "070db7effe984b69bd4bf2240cee4487",
+      "contract_symbol": "WETUSDT",
+      "http_status": {
+        "funding_2025-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-12-10T07:00:00+00:00"
+    },
+    {
+      "article_code": "675d519f99d34af29b4225a70a7995fa",
+      "contract_symbol": "NIGHTUSDT",
+      "http_status": {
+        "funding_2025-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-12-10T11:00:00+00:00"
+    },
+    {
+      "article_code": "51aa167664c542eb857533e11eb213bc",
+      "contract_symbol": "RAVEUSDT",
+      "http_status": {
+        "funding_2025-12": 200,
+        "launch_day": 200,
+        "next_day": 200,
+        "prior_day": 404
+      },
+      "launch_utc": "2025-12-14T15:30:00+00:00"
+    }
+  ],
+  "source": "https://data.binance.vision/data/futures/um"
+}
