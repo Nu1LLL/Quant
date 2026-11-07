@@ -1,0 +1,104 @@
+{
+  "kind": "source_data_quality_only",
+  "manifest": "2026-11-07_leadlag_5m_timestamp_manifest.csv",
+  "market": "Binance USD-M 5m",
+  "period": "2020-12 through 2025-12",
+  "prices_or_returns_output": false,
+  "strategy_results_read": false,
+  "symbols": {
+    "ADAUSDT": {
+      "bars_checked": 534816,
+      "months_checked": 61,
+      "numeric_issue_months": [],
+      "source_errors": [],
+      "status": "pass"
+    },
+    "BCHUSDT": {
+      "bars_checked": 534816,
+      "months_checked": 61,
+      "numeric_issue_months": [],
+      "source_errors": [],
+      "status": "pass"
+    },
+    "BNBUSDT": {
+      "bars_checked": 534816,
+      "months_checked": 61,
+      "numeric_issue_months": [],
+      "source_errors": [],
+      "status": "pass"
+    },
+    "BTCUSDT": {
+      "bars_checked": 534816,
+      "months_checked": 61,
+      "numeric_issue_months": [],
+      "source_errors": [],
+      "status": "pass"
+    },
+    "DOTUSDT": {
+      "bars_checked": 534816,
+      "months_checked": 61,
+      "numeric_issue_months": [
+        {
+          "bars_checked": 8640,
+          "first_issue_utc": {
+            "taker_base_exceeds_total": "2023-11-14T11:15:00+00:00"
+          },
+          "issue_counts": {
+            "taker_base_exceeds_total": 1
+          },
+          "month": "2023-11",
+          "symbol": "DOTUSDT"
+        }
+      ],
+      "source_errors": [],
+      "status": "reject"
+    },
+    "ETHUSDT": {
+      "bars_checked": 534816,
+      "months_checked": 61,
+      "numeric_issue_months": [],
+      "source_errors": [],
+      "status": "pass"
+    },
+    "LINKUSDT": {
+      "bars_checked": 534816,
+      "months_checked": 61,
+      "numeric_issue_months": [],
+      "source_errors": [],
+      "status": "pass"
+    },
+    "THETAUSDT": {
+      "bars_checked": 534816,
+      "months_checked": 61,
+      "numeric_issue_months": [],
+      "source_errors": [],
+      "status": "pass"
+    },
+    "XMRUSDT": {
+      "bars_checked": 534816,
+      "months_checked": 61,
+      "numeric_issue_months": [],
+      "source_errors": [],
+      "status": "pass"
+    },
+    "XTZUSDT": {
+      "bars_checked": 534816,
+      "months_checked": 61,
+      "numeric_issue_months": [
+        {
+          "bars_checked": 8640,
+          "first_issue_utc": {
+            "taker_base_exceeds_total": "2023-09-21T07:05:00+00:00"
+          },
+          "issue_counts": {
+            "taker_base_exceeds_total": 1
+          },
+          "month": "2023-09",
+          "symbol": "XTZUSDT"
+        }
+      ],
+      "source_errors": [],
+      "status": "reject"
+    }
+  }
+}
