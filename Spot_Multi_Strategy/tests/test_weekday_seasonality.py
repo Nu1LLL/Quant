@@ -5,12 +5,20 @@ from unittest.mock import patch
 
 import numpy as np
 
-from research.weekday_seasonality_data import WeekdayDataError, WeekdayTape
+from research.weekday_seasonality_data import (
+    BASE_MS, WeekdayDataError, WeekdayTape, _funding_bar_index,
+)
 from research.weekday_seasonality_sim import _Account, _ranking
 from research import weekday_seasonality_runner
 
 
 class WeekdaySeasonalityTests(unittest.TestCase):
+    def test_subsecond_funding_timestamp_maps_to_utc_hour(self):
+        self.assertEqual(_funding_bar_index(BASE_MS + 2, 288), 0)
+        self.assertEqual(_funding_bar_index(BASE_MS + 8 * 3_600_000 + 6, 288), 96)
+        with self.assertRaises(WeekdayDataError):
+            _funding_bar_index(BASE_MS + 1_000, 288)
+
     def test_rank_uses_only_twenty_prior_same_weekdays(self):
         returns = np.zeros((150, 8), dtype=float)
         target = 140

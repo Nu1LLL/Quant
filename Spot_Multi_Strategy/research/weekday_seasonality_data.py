@@ -187,6 +187,18 @@ def _funding_month(symbol: str, month: str, pin: dict[str, str]
     return tuple(events)
 
 
+def _funding_bar_index(stamp: int, total: int) -> int:
+    """Place sub-second source timestamps at their UTC-hour settlement bar."""
+    offset_ms = stamp % 3_600_000
+    if offset_ms >= 1_000:
+        raise WeekdayDataError("funding timestamp more than 999 ms after UTC hour")
+    settled_hour = stamp - offset_ms
+    delta = settled_hour - BASE_MS
+    if delta % 300_000 or not 0 <= delta // 300_000 < total:
+        raise WeekdayDataError("funding event outside price tape")
+    return delta // 300_000
+
+
 def load_tape() -> WeekdayTape:
     """Validate *all* consumed archives before a simulator sees any values."""
     price_pins = _pins(PRICE_MANIFESTS, PRICE_FIELDS, "5m")
@@ -218,9 +230,10 @@ def load_tape() -> WeekdayTape:
                                         funding_pins[(month, symbol)]) for symbol in SYMBOLS}
             for col, symbol in enumerate(SYMBOLS):
                 for stamp, rate in jobs[symbol].result():
-                    index = (stamp - BASE_MS) // 300_000
-                    if (stamp - BASE_MS) % 300_000 or not 0 <= index < total:
-                        raise WeekdayDataError(f"funding event outside price tape: {symbol} {month}")
+                    try:
+                        index = _funding_bar_index(stamp, total)
+                    except WeekdayDataError as exc:
+                        raise WeekdayDataError(f"{exc}: {symbol} {month}") from exc
                     funding.setdefault(index, []).append((col, rate))
     return WeekdayTape(*arrays,
                        {index: tuple(events) for index, events in sorted(funding.items())},
