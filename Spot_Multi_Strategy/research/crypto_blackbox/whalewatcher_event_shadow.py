@@ -3,7 +3,8 @@
 This reader never imports WhaleWatcher Python code or writes to its working
 tree. It accepts only a fresh local journal, copies no prose, review,
 post-event price, prediction probability, notification, or account detail,
-and assigns each event Quant's actual read time as its earliest usable time.
+and assigns each event the later of publication and Quant's actual read time
+as its earliest usable time.
 The output cannot establish historical point-in-time availability.
 """
 
@@ -141,7 +142,7 @@ def read_whalewatcher_event_shadow(path: str | Path, *, max_age_ms: int = MAX_AG
                 category=category,
                 source_publication_ms=published,
                 watcher_first_seen_ms=first_seen,
-                quant_available_ms=captured,
+                quant_available_ms=max(captured, published),
                 source_url_sha256=sha256(url.encode("utf-8")).hexdigest(),
             ))
         return EventShadowImport("fresh" if events else "fresh_no_events",

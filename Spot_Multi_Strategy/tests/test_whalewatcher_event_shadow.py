@@ -89,6 +89,13 @@ class EventShadowTests(unittest.TestCase):
         self.assertEqual(result.status, "fresh_no_events")
         self.assertEqual(result.events, ())
 
+    def test_future_dated_publication_waits_until_its_timestamp(self):
+        data = journal()
+        data["records"][0]["event"]["published_at_ms"] = NOW + 2_000
+        result = self.read(data)
+        self.assertEqual(result.status, "fresh")
+        self.assertEqual(result.events[0].quant_available_ms, NOW + 2_000)
+
 
 if __name__ == "__main__":
     unittest.main()
