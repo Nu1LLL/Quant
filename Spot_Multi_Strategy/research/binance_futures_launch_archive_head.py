@@ -13,6 +13,7 @@ from datetime import datetime, timedelta, timezone
 from hashlib import sha256
 import json
 from pathlib import Path
+import time
 
 import requests
 
@@ -65,10 +66,14 @@ def _urls(symbol: str, launch: datetime) -> dict[str, str]:
 
 
 def _head(url: str) -> int:
-    try:
-        response = requests.head(url, allow_redirects=True, timeout=(10, 25))
-    except requests.RequestException as exc:
-        raise PresenceFailure(f"archive HEAD transport error: {url}") from exc
+    for attempt in range(3):
+        try:
+            response = requests.head(url, allow_redirects=True, timeout=(10, 25))
+            break
+        except requests.RequestException as exc:
+            if attempt == 2:
+                raise PresenceFailure(f"archive HEAD transport error: {url}") from exc
+            time.sleep(attempt + 1)
     if response.status_code not in (200, 404):
         raise PresenceFailure(f"archive HEAD {response.status_code}: {url}")
     return response.status_code
@@ -89,7 +94,7 @@ def inventory() -> dict:
         for label, url in _urls(event["contract_symbol"], launch).items():
             tasks.append((event["article_code"], label, url))
     codes: dict[tuple[str, str], int] = {}
-    with ThreadPoolExecutor(max_workers=8) as pool:
+    with ThreadPoolExecutor(max_workers=4) as pool:
         futures = {pool.submit(_head, url): (code, label) for code, label, url in tasks}
         for future in as_completed(futures):
             code, label = futures[future]
