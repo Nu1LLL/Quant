@@ -10,11 +10,25 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 from research.alt_common_flow_data import (
     AltFlowDataError, FUNDING_MANIFEST, KLINE_MANIFEST, SYMBOLS,
-    _funding_month, iter_minutes, read_manifest,
+    _funding_month, _parse_price, iter_minutes, read_manifest,
 )
 
 
 class AltFlowFeedTests(unittest.TestCase):
+    def test_minute_close_timestamp_and_trade_count_are_checked(self):
+        stamp = 1_609_459_200_000
+        row = [str(stamp), "1", "1", "1", "1", "0", str(stamp + 59_999),
+               "100", "2", "0", "50", "0"]
+        self.assertEqual(_parse_price(row, stamp)[-2:], (100.0, 50.0))
+        bad_close = row.copy()
+        bad_close[6] = str(stamp + 60_000)
+        with self.assertRaises(AltFlowDataError):
+            _parse_price(bad_close, stamp)
+        bad_count = row.copy()
+        bad_count[8] = "-1"
+        with self.assertRaises(AltFlowDataError):
+            _parse_price(bad_count, stamp)
+
     def test_fixed_manifests_cover_three_symbols_and_five_oos_years(self):
         k = read_manifest(KLINE_MANIFEST, kind="kline")
         f = read_manifest(FUNDING_MANIFEST, kind="funding")

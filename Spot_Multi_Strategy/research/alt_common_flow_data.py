@@ -105,11 +105,13 @@ def _parse_price(fields: list[str], expected_ms: int) -> tuple[float, ...]:
         raise AltFlowDataError("minute grid changed after archive audit")
     try:
         o, h, l, c, q, b = (float(fields[j]) for j in (1, 2, 3, 4, 7, 10))
+        close_ms, trade_count = int(fields[6]), int(fields[8])
     except (ValueError, OverflowError) as exc:
         raise AltFlowDataError("invalid minute price or quote amount") from exc
     if (not all(math.isfinite(x) for x in (o, h, l, c, q, b))
             or min(o, h, l, c) <= 0 or h < max(o, c, l)
-            or l > min(o, c, h) or not 0 <= b <= q):
+            or l > min(o, c, h) or not 0 <= b <= q
+            or close_ms != expected_ms + _MINUTE_MS - 1 or trade_count < 0):
         raise AltFlowDataError("invalid OHLC or taker-quote volume")
     return o, h, l, c, q, b
 
