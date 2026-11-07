@@ -1,0 +1,33 @@
+{
+  "experiment_id": "alt_common_flow_reversal_2026_11_07",
+  "preregistration_commit": "690a7f5",
+  "pre_result_code_commits": ["716595a", "732ff0f", "f8e95bb", "57b5891"],
+  "status": "sealed_data_integrity_failure",
+  "gate": {
+    "complete_pinned_archives": false,
+    "full": false
+  },
+  "failure": {
+    "market": "Binance USD-M perpetual",
+    "symbol": "XRPUSDT",
+    "dataset": "monthly 1m K-line ZIP",
+    "month": "2022-02",
+    "url": "https://data.binance.vision/data/futures/um/monthly/klines/XRPUSDT/1m/XRPUSDT-1m-2022-02.zip",
+    "sha256": "c2427ac93c91a589c62f10193b9672cd3e7cca23e219e444bc12c945d6a245e7",
+    "matches_preregistered_manifest": true,
+    "matches_current_official_checksum": true,
+    "first_minute_utc": "2022-02-01T00:00:00Z",
+    "last_minute_utc": "2022-02-25T23:59:00Z",
+    "actual_rows": 36000,
+    "required_rows": 40320,
+    "missing_terminal_minutes": 4320,
+    "missing_interval_utc": "[2022-02-26T00:00:00Z, 2022-03-01T00:00:00Z)",
+    "other_fixed_coins_this_month": {
+      "ADAUSDT": {"rows": 40320, "pinned_and_official_hash_verified": true},
+      "DOGEUSDT": {"rows": 40320, "pinned_and_official_hash_verified": true}
+    }
+  },
+  "outcome": "No accepted trade, equity, CAGR, Sharpe, drawdown, profit factor, walk-forward, regime, or Monte Carlo result exists for this candidate.",
+  "transport_note": "An earlier Python CA-bundle transport interruption had no strategy output; verified host-TLS curl transport then exposed the independently confirmed archive gap.",
+  "interpretation": "This is a data Gate failure, not evidence that the economic signal wins or loses. No imputation, month deletion, symbol replacement, threshold change, or leverage change is permitted under this registration."
+}
