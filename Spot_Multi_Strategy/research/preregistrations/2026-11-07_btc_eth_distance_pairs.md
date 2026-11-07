@@ -183,7 +183,11 @@ no truncated or extra cycle.
   half-open holding interval `[entry_fill_time,exit_fill_time)`,
   use its archived signed rate and that leg's fixed quantity
   times the most recent **completed** one-minute trade-price close
-  before `calc_time` as a notional proxy. Long pays a positive
+  before `calc_time` as a notional proxy. The archived USD-M 1m
+  CSV assigns `[t-1min,t)` a `close_time` of `t-1ms`; therefore
+  both a funding event at exact anchor `t` and one at `t+1...47ms`
+  use that preceding bar's close. The bar `[t,t+1min)` is not
+  completed at either event. Long pays a positive
   rate and short receives it. Funding-time trade close is not
   the exchange's actual mark price; a no-beneficial-credit
   stress (credits set to zero, charges kept) is reported.
