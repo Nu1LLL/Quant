@@ -1,0 +1,5 @@
+# Spot–perpetual basis data preflight: no strategy test
+
+A timestamp-only, price-blind review of Binance monthly `1h` spot and USD-M perpetual archives for ADAUSDT, BNBUSDT and DOGEUSDT was attempted before defining any basis trade. The initial September 2020 warm-up review found an ADAUSDT spot grid gap in November 2020. A second review using December 2020 as warm-up found common spot-hour gaps in December 2020, February, March, April, August and September 2021, and March 2023; BNBUSDT and DOGEUSDT also showed a December 2021 gap. One ADAUSDT spot checksum request in December 2021 had a transport failure, so the second audit did not prove completeness even outside the documented gaps.
+
+The full spot–perpetual basis design cannot use these archives under the required no-imputation, complete-grid rule. No spot or perpetual prices, funding-rate values, signals or strategy PnL were inspected in this preflight. No basis strategy was preregistered or backtested. The USD-M perpetual hourly and funding data were then audited separately for a different, funding-spread mechanism; its data-only selection is documented in that mechanism's pre-registration.
