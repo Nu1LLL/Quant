@@ -9,7 +9,7 @@ import unittest
 
 from research.funding_spread_data import (
     FUNDING_MANIFEST, KLINE_MANIFEST, FundingEvent, FundingSpreadDataError,
-    HourBar, SYMBOLS, TerminalOpen, _pins, _price_month, _verified_zip,
+    HourBar, SYMBOLS, TerminalOpen, _funding_month, _pins, _price_month, _verified_zip,
     iter_hours, load_funding,
 )
 
@@ -89,6 +89,19 @@ class FundingSpreadDataTests(unittest.TestCase):
             returned = load_funding()
         self.assertEqual(len(returned), 3)
         self.assertTrue(all(event.time == first for event in returned))
+
+    def test_funding_interval_must_match_eight_hour_grid(self):
+        start = int(datetime(2021, 1, 1, tzinfo=UTC).timestamp() * 1000)
+        lines = ["calc_time,funding_interval_hours,last_funding_rate"]
+        for index in range(31 * 3):
+            interval = 4 if index == 1 else 8
+            lines.append(f"{start + index * 8 * 3_600_000},{interval},0.001")
+        payload = zip_payload("ADAUSDT-fundingRate-2021-01.zip",
+                              "\n".join(lines) + "\n")
+        with patch("research.funding_spread_data._verified_zip",
+                   side_effect=lambda *_: ZipFile(BytesIO(payload))):
+            with self.assertRaisesRegex(FundingSpreadDataError, "funding grid or rate"):
+                _funding_month("ADAUSDT", "2021-01", "0" * 64)
 
 
 if __name__ == "__main__":

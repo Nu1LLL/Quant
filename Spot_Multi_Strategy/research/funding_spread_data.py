@@ -209,7 +209,7 @@ def _funding_month(symbol: str, month: str, pin: str) -> tuple[FundingEvent, ...
                     except (ValueError, InvalidOperation, OverflowError) as exc:
                         raise FundingSpreadDataError("invalid funding numeric field") from exc
                     if (not expected <= ms < expected + 1000
-                            or not interval.is_finite() or interval <= 0
+                            or not interval.is_finite() or interval != 8
                             or not rate_decimal.is_finite() or not math.isfinite(rate)):
                         raise FundingSpreadDataError(f"funding grid or rate invalid: {symbol} {month}")
                     time = datetime.fromtimestamp(ms // 1000, UTC) + timedelta(milliseconds=ms % 1000)
