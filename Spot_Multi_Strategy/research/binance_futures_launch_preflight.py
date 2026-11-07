@@ -21,6 +21,7 @@ import time
 HERE = Path(__file__).parent
 CATALOG = HERE / "preregistrations/2026-11-07_binance_listing_catalog_metadata.json"
 OUTPUT = HERE / "preregistrations/2026-11-07_binance_futures_launch_metadata.json"
+CHECKPOINT = OUTPUT.with_name(OUTPUT.stem + ".partial.json")
 DETAIL_URL = "https://www.binance.com/bapi/composite/v1/public/cms/article/detail/query?articleCode={code}"
 TITLE = re.compile(
     r"^Binance Futures Will Launch (?:USDT-Margined|USDⓈ-M|USDⓈ-Margined) "
@@ -32,7 +33,7 @@ UTC_DATE = re.compile(
 )
 FIRST_YEAR = 2021
 LAST_YEAR = 2025
-DELAY_SECONDS = 1.0
+DELAY_SECONDS = 3.0
 
 
 class SourceFailure(ValueError):
@@ -115,8 +116,20 @@ def inventory() -> dict:
         raise SourceFailure("incomplete listing catalog")
     candidates = [(a, _candidate(a)) for a in catalog["articles"]]
     candidates = [(a, c) for a, c in candidates if c is not None]
-    rows = []
-    for index, (article, (token, symbol)) in enumerate(candidates, start=1):
+    catalog_hash = sha256(catalog_bytes).hexdigest()
+    if CHECKPOINT.exists():
+        partial = json.loads(CHECKPOINT.read_text(encoding="utf-8"))
+        if partial.get("catalog_sha256") != catalog_hash:
+            raise SourceFailure("checkpoint catalog hash mismatch")
+        rows = partial.get("rows")
+        if not isinstance(rows, list) or len(rows) > len(candidates):
+            raise SourceFailure("invalid checkpoint size")
+        if any(row.get("article_code") != candidates[i][0]["code"]
+               for i, row in enumerate(rows)):
+            raise SourceFailure("checkpoint article order mismatch")
+    else:
+        rows = []
+    for index, (article, (token, symbol)) in enumerate(candidates[len(rows):], start=len(rows) + 1):
         if index > 1:
             time.sleep(DELAY_SECONDS)
         detail, digest = _detail(article["code"])
@@ -155,11 +168,15 @@ def inventory() -> dict:
             "contract_symbol": symbol, "first_utc_schedule": launch.isoformat() if launch else None,
             "status": status,
         })
+        temporary = CHECKPOINT.with_suffix(".tmp")
+        temporary.write_text(json.dumps({"catalog_sha256": catalog_hash, "rows": rows},
+                                        ensure_ascii=False, sort_keys=True), encoding="utf-8")
+        temporary.replace(CHECKPOINT)
         if index % 25 == 0 or index == len(candidates):
             print(f"details {index}/{len(candidates)}", flush=True)
     result = {
         "source": "Binance official listing catalog and announcement detail API",
-        "catalog_sha256": sha256(catalog_bytes).hexdigest(),
+        "catalog_sha256": catalog_hash,
         "retrieved_at_utc": datetime.now(timezone.utc).isoformat(),
         "selection_rule": "single USDT-margined perpetual launch title; 2021-2025; no pre-market or TradFi title",
         "candidate_count": len(candidates),
@@ -170,6 +187,7 @@ def inventory() -> dict:
     with OUTPUT.open("x", encoding="utf-8") as handle:
         json.dump(result, handle, ensure_ascii=False, indent=2, sort_keys=True)
         handle.write("\n")
+    CHECKPOINT.unlink(missing_ok=True)
     return result
 
 
