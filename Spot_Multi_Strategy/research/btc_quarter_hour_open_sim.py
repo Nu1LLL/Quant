@@ -139,7 +139,7 @@ def _folds(factors: np.ndarray, lows: np.ndarray, highs: np.ndarray,
     out = {}
     for year in range(2021, 2027):
         begin = (date(year, 1, 1) - START).days
-        finish = min((date(year + 1, 1) - START).days, len(factors))
+        finish = min((date(year + 1, 1, 1) - START).days, len(factors))
         out[str(year)] = path_metrics(factors[begin:finish], lows[begin:finish],
                                       highs[begin:finish], local[begin:finish])
     start = (date(2024, 1, 1) - START).days

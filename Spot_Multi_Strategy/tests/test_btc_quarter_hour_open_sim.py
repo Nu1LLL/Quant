@@ -3,7 +3,7 @@ import unittest
 
 import numpy as np
 
-from research.btc_quarter_hour_open_sim import day_profile, path_metrics
+from research.btc_quarter_hour_open_sim import _folds, day_profile, path_metrics
 
 
 class QuarterHourReplayTests(unittest.TestCase):
@@ -37,6 +37,14 @@ class QuarterHourReplayTests(unittest.TestCase):
         self.assertAlmostEqual(m["max_drawdown"], .2)
         self.assertEqual(m["final_equity"], 10_000.0)
         self.assertTrue(math.isfinite(m["cagr"]))
+
+    def test_calendar_folds_use_exact_year_boundaries(self) -> None:
+        factor = np.full(2099, 1.00001)
+        zeros = np.zeros(2099)
+        folds = _folds(factor, factor, factor, zeros)
+        self.assertAlmostEqual(folds["2021"]["final_equity"], 10_000 * 1.00001 ** 365)
+        self.assertAlmostEqual(folds["2024"]["final_equity"], 10_000 * 1.00001 ** 366)
+        self.assertAlmostEqual(folds["2026"]["final_equity"], 10_000 * 1.00001 ** 273)
 
 
 if __name__ == "__main__":
