@@ -14,6 +14,7 @@ from pathlib import Path
 import sqlite3
 
 from .whalewatcher_event_shadow import EventShadowImport, read_whalewatcher_event_shadow
+from .whalewatcher_macro_journal import capture_current as capture_macro_current
 from .whalewatcher_shadow_adapter import ShadowImport, read_whalewatcher_shadow_snapshot
 
 
@@ -380,9 +381,13 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Capture WhaleWatcher provenance for shadow research only")
     parser.add_argument("--watcher-data-dir", required=True, type=Path)
     parser.add_argument("--journal", required=True, type=Path)
+    parser.add_argument("--macro-journal", type=Path)
     args = parser.parse_args()
     for item in capture_current(args.watcher_data_dir, args.journal):
         print(f"{item.kind}/{item.symbol}: {item.status}; items={item.count}")
+    macro_path = args.macro_journal or args.journal.with_name("whalewatcher_macro.sqlite")
+    macro = capture_macro_current(args.watcher_data_dir, macro_path)
+    print(f"macro_schedule: {macro.status}; items={macro.active_events}; changes={macro.changed_events}")
 
 
 if __name__ == "__main__":
