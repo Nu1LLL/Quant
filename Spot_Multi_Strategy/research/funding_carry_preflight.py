@@ -23,7 +23,7 @@ from .basis_hourly_preflight import PreflightError, _fetch, audit_one
 SYMBOLS = ("ADAUSDT", "BNBUSDT", "DOGEUSDT")
 START_MONTH = (2020, 12)
 KLINE_END_MONTH = (2026, 1)  # January 1 00:00 final exit-open is in this ZIP.
-FUNDING_END_MONTH = (2025, 12)
+FUNDING_END_MONTH = (2026, 1)  # January 1 00:00 final held funding event.
 FUNDING_START = (2021, 1)
 KLINE_OUTPUT = Path(__file__).parent / "preregistrations/2026-11-07_three_alt_funding_kline_1h_manifest.csv"
 FUNDING_OUTPUT = Path(__file__).parent / "preregistrations/2026-11-07_three_alt_funding_rate_manifest.csv"
