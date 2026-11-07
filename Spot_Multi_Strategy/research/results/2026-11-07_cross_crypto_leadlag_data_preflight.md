@@ -2,9 +2,10 @@
 
 This is **not a strategy pre-registration or return result**. No price, volume,
 funding rate, trading signal, fitted coefficient, return, or PnL was read.
-The script `research/leadlag_5m_preflight.py` inspected only the official ZIP
-checksum, CSV member, 5-minute open timestamp and close timestamp. No raw ZIP
-or CSV was retained.
+The price-audit script `research/leadlag_5m_preflight.py` inspected only the
+official ZIP checksum, CSV member, 5-minute open timestamp and close
+timestamp; `research/leadlag_funding_preflight.py` inspected funding timestamps
+and intervals without reading rate values. No raw ZIP or CSV was retained.
 
 The economic source for a possible later test is [Guo, Sang, Tu and Wang
 (2021)](https://ink.library.smu.edu.sg/lkcsb_research/6901/), who report
@@ -34,6 +35,18 @@ passed the full 5-minute timestamp grid, named-member and official-checksum
 audit: **610 of 610 symbol-month ZIPs**. Their SHA-256 digests and bar counts
 are in `research/preregistrations/2026-11-07_leadlag_5m_timestamp_manifest.csv`
 (56,343 bytes). The full ZIP contents are not stored locally.
+
+A separate **rate-blind** audit checked the same ten USD-M contracts' funding
+history ZIPs for every month in 2021–2025. All **600 of 600** archive members
+and official hashes passed. Across them, settlement counts vary from 84 to
+186 per month, consistent with changing contract intervals, but **zero
+settlement timestamps occur beyond the first second of a UTC hour**. The
+600 SHA-256 pins, event counts and off-hour counts are in
+`research/preregistrations/2026-11-07_leadlag_funding_timestamp_manifest.csv`
+(60,844 bytes). The rate column was not read. This supports a later rule that
+is flat around each top-of-hour funding event; it does not verify execution
+timing or prove that an exchange settlement cannot overrun its published
+schedule.
 
 This check proves continuity and current archive integrity only. It does not
 prove historical quote availability, funding settlement, fillability, absence
