@@ -1,0 +1,278 @@
+{
+  "actual_fill_participation_above_2pct": 38,
+  "actual_fill_zero_quote_volume": 0,
+  "amendment_commit": "92211d6",
+  "annual_folds": {
+    "year_1": {
+      "daily_sharpe": -1.029320747911842,
+      "days": 365,
+      "end_exclusive": "2022-05-21",
+      "net_return": -0.2710366889313144,
+      "pass": false,
+      "start": "2021-05-21",
+      "traded_days": 316
+    },
+    "year_2": {
+      "daily_sharpe": -0.760679734427717,
+      "days": 365,
+      "end_exclusive": "2023-05-21",
+      "net_return": -0.1273298388536086,
+      "pass": false,
+      "start": "2022-05-21",
+      "traded_days": 202
+    },
+    "year_3": {
+      "daily_sharpe": -1.0352107880890464,
+      "days": 366,
+      "end_exclusive": "2024-05-21",
+      "net_return": -0.09449847180363191,
+      "pass": false,
+      "start": "2023-05-21",
+      "traded_days": 63
+    },
+    "year_4": {
+      "daily_sharpe": -0.36091420988372325,
+      "days": 365,
+      "end_exclusive": "2025-05-21",
+      "net_return": -0.0509656772930539,
+      "pass": false,
+      "start": "2024-05-21",
+      "traded_days": 47
+    },
+    "year_5": {
+      "daily_sharpe": 0.6717038265765387,
+      "days": 365,
+      "end_exclusive": "2026-05-21",
+      "net_return": 0.014321886221782654,
+      "pass": true,
+      "start": "2025-05-21",
+      "traded_days": 2
+    }
+  },
+  "cash_weeks": 189,
+  "data_verified": true,
+  "evidence_grade": "post-publication historical temporal OOS; no archived executable bid/ask or prospective fills",
+  "experiment_id": "eight_coin_weekly_illiquidity_2026_11_07",
+  "finished_utc": "2026-11-07T14:39:47.240806+00:00",
+  "formal_cagr_within_40_to_60_percent_band": false,
+  "gate": {
+    "all_numeric": false,
+    "doubled_slippage_profitable": false,
+    "extra_bar_latency_profitable": false,
+    "five_annual_walk_forward_folds": false,
+    "four_market_states": false,
+    "full": false,
+    "independent_executable_oos": false,
+    "minimum_trade_weeks": false,
+    "monte_carlo": false,
+    "monthly_stability": false,
+    "no_funding_credit_profitable": false,
+    "primary_metrics": false,
+    "terminal_133_days": false
+  },
+  "market_states": {
+    "bear_high": {
+      "days": 522,
+      "net_pnl": 1666.068364224082,
+      "traded_days": 181
+    },
+    "bear_low": {
+      "days": 415,
+      "net_pnl": -2319.3916516138643,
+      "traded_days": 117
+    },
+    "bull_high": {
+      "days": 435,
+      "net_pnl": -2873.7773293553482,
+      "traded_days": 181
+    },
+    "bull_low": {
+      "days": 587,
+      "net_pnl": -927.884697630765,
+      "traded_days": 151
+    }
+  },
+  "metrics": {
+    "base_1x": {
+      "cagr": -0.10411681752800428,
+      "ending_equity": 5545.014685624113,
+      "max_drawdown": 0.5594595732957599,
+      "profit_factor": 0.8410329885438123,
+      "sharpe": -0.6472155492045522
+    },
+    "double_slippage_1x": {
+      "cagr": -0.11917172600638959,
+      "ending_equity": 5063.222054044735,
+      "max_drawdown": 0.5936714808674999,
+      "profit_factor": 0.8194063139421482,
+      "sharpe": -0.7588920652555193
+    },
+    "extra_bar_latency_1x": {
+      "cagr": -0.10805777660588689,
+      "ending_equity": 5415.437078353052,
+      "max_drawdown": 0.5638396678582405,
+      "profit_factor": 0.8345055823315225,
+      "sharpe": -0.6785000046520834
+    },
+    "no_funding_credit_1x": {
+      "cagr": -0.12383300349723247,
+      "ending_equity": 4921.162132570931,
+      "max_drawdown": 0.6043716422075522,
+      "profit_factor": 0.8123538494434417,
+      "sharpe": -0.7917467459789695
+    }
+  },
+  "monte_carlo": {
+    "block_days": 21,
+    "joint_pass_count": 0,
+    "joint_pass_fraction": 0.0,
+    "paths": 5000,
+    "percentiles": {
+      "cagr": {
+        "p05": -0.18769456409107088,
+        "p50": -0.10220760612575114,
+        "p95": -0.013473287238902964
+      },
+      "max_drawdown": {
+        "p05": 0.31129370509016835,
+        "p50": 0.5242962632305809,
+        "p95": 0.7085705643594931
+      },
+      "profit_factor": {
+        "p05": 0.7106742320964043,
+        "p50": 0.8362960269959472,
+        "p95": 0.9769335092712307
+      },
+      "sharpe": {
+        "p05": -1.2514213498564999,
+        "p50": -0.6458442214981418,
+        "p95": -0.021296903508318067
+      }
+    },
+    "rng": "numpy.random.Generator(numpy.random.PCG64)",
+    "seed": 20261114,
+    "undefined_counts": {
+      "cagr": 0,
+      "max_drawdown": 0,
+      "profit_factor": 0,
+      "sharpe": 0
+    }
+  },
+  "monthly_returns": {
+    "2021-05": 0.013252618980027497,
+    "2021-06": 0.053597868129535486,
+    "2021-07": -0.04276287308622728,
+    "2021-08": -0.053841092467413865,
+    "2021-09": -0.058514556104643733,
+    "2021-10": -0.07465672940200119,
+    "2021-11": -0.012352990261402352,
+    "2021-12": 0.020439122931204423,
+    "2022-01": -0.08894756030974549,
+    "2022-02": 0.015146457242108724,
+    "2022-03": 0.045245265712301475,
+    "2022-04": -0.06181332628796876,
+    "2022-05": -0.012699250375146187,
+    "2022-06": 0.05266834477052984,
+    "2022-07": -0.06634149215219887,
+    "2022-08": -0.003144673435723222,
+    "2022-09": -0.012895129050863208,
+    "2022-10": -0.027839523529917365,
+    "2022-11": 0.01917863651453211,
+    "2022-12": 0.0,
+    "2023-01": -0.0202703178685113,
+    "2023-02": -0.029181037805725896,
+    "2023-03": -0.08570064150382639,
+    "2023-04": 0.004266459139283141,
+    "2023-05": 0.0,
+    "2023-06": 0.01178506960039094,
+    "2023-07": 0.0,
+    "2023-08": 0.0,
+    "2023-09": 0.0,
+    "2023-10": 0.0,
+    "2023-11": 0.0017062639457650075,
+    "2023-12": -0.010260401226532267,
+    "2024-01": -0.07353946518394783,
+    "2024-02": 0.0,
+    "2024-03": -0.025655223749896372,
+    "2024-04": 0.0,
+    "2024-05": 0.0,
+    "2024-06": 0.0,
+    "2024-07": 0.0,
+    "2024-08": 0.0,
+    "2024-09": 0.0,
+    "2024-10": 0.0,
+    "2024-11": 0.0,
+    "2024-12": -0.05649496884573624,
+    "2025-01": -0.00979002498480952,
+    "2025-02": 0.0,
+    "2025-03": 0.0,
+    "2025-04": 0.0,
+    "2025-05": 0.030353376267401755,
+    "2025-06": 0.0,
+    "2025-07": 0.0,
+    "2025-08": 0.0,
+    "2025-09": 0.0,
+    "2025-10": 0.0,
+    "2025-11": 0.0,
+    "2025-12": 0.0,
+    "2026-01": 0.0,
+    "2026-02": 0.0,
+    "2026-03": 0.0,
+    "2026-04": 0.0,
+    "2026-05": 0.0,
+    "2026-06": 0.0,
+    "2026-07": 0.0,
+    "2026-08": 0.0,
+    "2026-09": 0.0
+  },
+  "monthly_summary": {
+    "flat": 34,
+    "longest_losing_streak": 5,
+    "negative": 20,
+    "positive": 11,
+    "worst_month": "2022-01",
+    "worst_month_return": -0.08894756030974549
+  },
+  "pnl_accounting": {
+    "base_1x": {
+      "executed_price_pnl": -3799.7818212297157,
+      "funding_pnl": 48.44160623581927,
+      "net": -4454.9853143758955,
+      "taker_fee_pnl": -703.645099381997
+    },
+    "double_slippage_1x": {
+      "executed_price_pnl": -4307.4442166763365,
+      "funding_pnl": 46.61345064431528,
+      "net": -4936.777945955254,
+      "taker_fee_pnl": -675.9471799232173
+    },
+    "extra_bar_latency_1x": {
+      "executed_price_pnl": -3938.4576139010937,
+      "funding_pnl": 48.23825707530553,
+      "net": -4584.562921646931,
+      "taker_fee_pnl": -694.3435648211492
+    },
+    "no_funding_credit_1x": {
+      "executed_price_pnl": -3578.233160379269,
+      "funding_pnl": -835.2056253128526,
+      "net": -5078.837867429049,
+      "taker_fee_pnl": -665.3990817369287
+    }
+  },
+  "preregistration_commit": "14cc42f",
+  "runner_commit": "540a71a16ba0719c3ceeccb0530f299a5e63c78a",
+  "schedule_sha256": "172c3c89510aaafa93665099d9e4eeb6939699e326484a2374d5a2e638074a36",
+  "started_utc": "2026-11-07T14:31:17.233847+00:00",
+  "status": "evaluated_rejected",
+  "terminal_cash_days": 6,
+  "terminal_holdout": {
+    "days": 133,
+    "net_return": 0.0,
+    "pass": false
+  },
+  "traded_weeks": 90,
+  "verified_archive_counts": {
+    "funding_archives": 552,
+    "price_archives": 552
+  }
+}
