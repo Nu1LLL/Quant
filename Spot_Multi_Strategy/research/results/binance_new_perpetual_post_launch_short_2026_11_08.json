@@ -1,0 +1,15 @@
+{
+  "amendment_commit": "894d2d4",
+  "data_verified": true,
+  "experiment_id": "binance_new_perpetual_post_launch_short_2026_11_08",
+  "failure_reason": "LaunchStrategyFailure: funding event is not on the 5m grid",
+  "finished_utc": "2026-11-07T16:51:16.124652+00:00",
+  "gate": {
+    "full": false
+  },
+  "metrics": null,
+  "preregistration_commit": "d2b23e0",
+  "runner_commit": "34fe9a2de0316d3358171e6f36f56dc755a61a37",
+  "started_utc": "2026-11-07T16:47:10.466494+00:00",
+  "status": "sealed_failed_run"
+}
