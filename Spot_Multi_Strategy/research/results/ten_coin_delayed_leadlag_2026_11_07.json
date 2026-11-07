@@ -1,0 +1,11 @@
+{
+  "experiment_id": "ten_coin_delayed_leadlag_2026_11_07",
+  "preregistration_commit": "0976483",
+  "boundary_amendment_commit": "982e707",
+  "status": "sealed_failed_run",
+  "failure_type": "LeadLagDataError",
+  "failure_reason": "invalid price/volume field: XTZUSDT 2023-09",
+  "gate": {
+    "full": false
+  }
+}
