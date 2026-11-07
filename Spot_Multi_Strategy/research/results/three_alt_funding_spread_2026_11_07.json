@@ -1,0 +1,11 @@
+{
+  "experiment_id": "three_alt_funding_spread_2026_11_07",
+  "preregistration_commit": "991a4ae",
+  "boundary_amendment_commit": "363b296",
+  "status": "sealed_failed_run",
+  "failure_type": "FundingStrategyFailure",
+  "failure_reason": "no_funding_credit_2x: nonpositive hourly equity",
+  "gate": {
+    "full": false
+  }
+}
