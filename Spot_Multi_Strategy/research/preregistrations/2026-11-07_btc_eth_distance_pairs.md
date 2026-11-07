@@ -192,7 +192,11 @@ no truncated or extra cycle.
   takes the worse of minute-end marks and a conservative
   simultaneous adverse 1m mark: low on the long and high on
   the short, even though those extrema may occur at different
-  seconds. Any minute marked equity <=0 is a strategy failure.
+  seconds. For each held minute, update the running regular-equity
+  peak with **that minute's close equity first**, then compare the
+  same minute's adverse mark with this peak. This conservative
+  same-minute ordering also defines the within-day `d` compression
+  used in Monte Carlo. Any minute marked equity <=0 is a strategy failure.
   A drawdown over 20% fails the Gate even if later recovered.
   Do not send any order. Historical liquidation/maintenance
   margin and $10,000 executable quotes are unverified.
