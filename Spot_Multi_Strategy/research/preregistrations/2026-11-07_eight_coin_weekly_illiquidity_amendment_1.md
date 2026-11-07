@@ -1,0 +1,5 @@
+# Weekly illiquidity preregistration amendment 1: daily boundary convention
+
+This clarification is committed and pushed before any formal-window illiquidity ranks, trades, returns or PnL are read. It changes no asset, signal, direction, holding time, cost, funding event, leverage or Gate threshold from preregistration `14cc42f`.
+
+The 1,959 daily account records are labeled by UTC **entry-boundary date** and cover successive `[d 00:05, (d+1) 00:05]` intervals. Both the week-ending exit fill and its exit fee at the right-hand `00:05` endpoint belong to the **preceding interval**, while a new position's entry at that same instant belongs to the new interval. Thus 2026-09-25 through 2026-09-30 remain six flat cash records after the last 2026-09-25 exit. This is the intended interpretation of “daily mark at 00:05” in `14cc42f` and supersedes its imprecise phrase that fees are assigned to the calendar day in which they occur. Each economic fee and funding payment is included exactly once in both continuous account equity and full-window PnL. Market state and month attribution follow these frozen record labels.
