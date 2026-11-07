@@ -1,0 +1,3746 @@
+{
+  "archive_sources": 223,
+  "bar_integrity_sha256": "232f22a3400afd9c23e82af9b796b24a803c4ee3f260ff522723456e4fab07f0",
+  "events": 215,
+  "presence_sha256": "5e4d46c7d78c615aa7cef12395167a301ca12458bd313bec12b5f9d83a5ca676",
+  "rest_fallback_sources": 2,
+  "rows": [
+    {
+      "article_code": "c476d5a0f48b4f64bd8886ac4d4e5d73",
+      "contract_symbol": "AKROUSDT",
+      "effective_launch_utc": "2021-01-19T07:00:00+00:00",
+      "entry_utc": "2021-01-19T07:30:00+00:00",
+      "exit_utc": "2021-01-20T07:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "54c1be6467c99754bd848d9f86e9f2cb0cdd758cc573de8e1ee91d08bdfb5c31",
+          "rows": 38,
+          "sha256": "691ebc990c31b53389ccf951436f6a4ce211e88acbb22d9c1543ab226e246219",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/AKROUSDT/AKROUSDT-fundingRate-2021-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "c83d9f0b88dd49f880b132e5102e0d03",
+      "contract_symbol": "LUNAUSDT",
+      "effective_launch_utc": "2021-01-28T07:00:00+00:00",
+      "entry_utc": "2021-01-28T07:30:00+00:00",
+      "exit_utc": "2021-01-29T07:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "33a2232909b6baa7ff2d04f47634b325aa1d403e9d37df2b8081850aadc94ab9",
+          "rows": 11,
+          "sha256": "5f0c327faf7ca1c88740bfac8c3b66c3576578e8cb0f91c174e42681d867007c",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LUNAUSDT/LUNAUSDT-fundingRate-2021-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "148fb7ca409e43b3a7e8aa391e6302c9",
+      "contract_symbol": "DODOUSDT",
+      "effective_launch_utc": "2021-02-19T13:00:00+00:00",
+      "entry_utc": "2021-02-19T13:30:00+00:00",
+      "exit_utc": "2021-02-20T13:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "390121f14f65b0d741e09d4a331711add8904f1de84d493ef44dadd0f8194218",
+          "rows": 28,
+          "sha256": "1cf50a51a6d2f0a95d6b9478a7b5d782d2dfcbb1ec48867863761e8775037dac",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/DODOUSDT/DODOUSDT-fundingRate-2021-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "53c007d040594d55a8b2ccc57de8efa4",
+      "contract_symbol": "COTIUSDT",
+      "effective_launch_utc": "2021-03-10T07:00:00+00:00",
+      "entry_utc": "2021-03-10T07:30:00+00:00",
+      "exit_utc": "2021-03-11T07:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "e26686e571fb09e6c08112c4077be12806f58c6775cd729976bfedd5aeb9eae5",
+          "rows": 65,
+          "sha256": "36b65398fea321ba0e57af5e738361040c93dca2b3fcd6343a02cfd173a51026",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/COTIUSDT/COTIUSDT-fundingRate-2021-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "86f5ef4c343c4acda8358918e3f77698",
+      "contract_symbol": "CHRUSDT",
+      "effective_launch_utc": "2021-03-12T07:00:00+00:00",
+      "entry_utc": "2021-03-12T07:30:00+00:00",
+      "exit_utc": "2021-03-13T07:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "45d6a2c48dc26396595a5de88087c72b85f9037abd3fd04df187af164249dd71",
+          "rows": 59,
+          "sha256": "d859281d76ad687c93eecb71d538bcdcae2b7b791966d998a8894a5bb2ece3f9",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/CHRUSDT/CHRUSDT-fundingRate-2021-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "09e302f8a778456aa42e0df634cc4e8f",
+      "contract_symbol": "ALICEUSDT",
+      "effective_launch_utc": "2021-03-16T03:00:00+00:00",
+      "entry_utc": "2021-03-16T03:30:00+00:00",
+      "exit_utc": "2021-03-17T03:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "d983a4f42e036c4676d3cbaff94f79a403c6c6da2626557a515db4e60b3383d3",
+          "rows": 49,
+          "sha256": "a9979ff83ceda8a67c4bab4997f02796bec6657fd3ea5f384fbff1c3a96518d1",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ALICEUSDT/ALICEUSDT-fundingRate-2021-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "45cb73bba8254e52b9c0d7ad597d0402",
+      "contract_symbol": "ONEUSDT",
+      "effective_launch_utc": "2021-03-18T07:00:00+00:00",
+      "entry_utc": "2021-03-18T07:30:00+00:00",
+      "exit_utc": "2021-03-19T07:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "4ae824edf259c53c388871ac42c62c36cc1011688d63a4f6d71cce3a50b23fe4",
+          "rows": 41,
+          "sha256": "7ecdcb75d6ab7b0069d161e2b7b7f04c10176f089dfb5682af2360d4afcf7237",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ONEUSDT/ONEUSDT-fundingRate-2021-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "354bc5918cc345a2a4a7e2941912800c",
+      "contract_symbol": "LINAUSDT",
+      "effective_launch_utc": "2021-03-19T07:00:00+00:00",
+      "entry_utc": "2021-03-19T07:30:00+00:00",
+      "exit_utc": "2021-03-20T07:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "10a50abbba5b5fc3d6318dab092f6b06cdf193e34a418ff0ce36970a3d0c352f",
+          "rows": 38,
+          "sha256": "f6e655b4595b462d0266db865375c737cd1acfc58c04d34f1f7aee52acc0d014",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LINAUSDT/LINAUSDT-fundingRate-2021-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "e50421e9fea947d6a5d4d3f923671a2d",
+      "contract_symbol": "DENTUSDT",
+      "effective_launch_utc": "2021-03-24T04:00:00+00:00",
+      "entry_utc": "2021-03-24T04:30:00+00:00",
+      "exit_utc": "2021-03-25T04:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "ad5d0346a8a643f1b37cc861133c9d6e7bbb7e5c522c7f61823d586455cfe516",
+          "rows": 23,
+          "sha256": "8a10094a6276972dc06c789aabc7ba866d4077e4548e33e00b8d81beff69b41d",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/DENTUSDT/DENTUSDT-fundingRate-2021-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "2f2d58933d004b888d7cb9b5e6ed5abc",
+      "contract_symbol": "MTLUSDT",
+      "effective_launch_utc": "2021-03-31T07:00:00+00:00",
+      "entry_utc": "2021-03-31T07:30:00+00:00",
+      "exit_utc": "2021-04-01T07:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "7cf85323612538420915b1fbe0ddf891835dc18593e8df04917254ce47f29a56",
+          "rows": 4,
+          "sha256": "bd65818e2e9f4d489e528ca71ff424a706836f5c442c9100441ae31fd08e3557",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MTLUSDT/MTLUSDT-fundingRate-2021-03.zip"
+        },
+        {
+          "checksum_sha256": "587266fd87c4df751dfce5829f87b9fd1d2232e02b1ecaa239185cbe86842bec",
+          "rows": 90,
+          "sha256": "7099577c0a94729fb589d95ecf7250f18d7b4d20a46d1b4f8028606ae25417dd",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MTLUSDT/MTLUSDT-fundingRate-2021-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "76d42ca8c52e4d8ab374dbcb64c44800",
+      "contract_symbol": "OGNUSDT",
+      "effective_launch_utc": "2021-04-01T07:00:00+00:00",
+      "entry_utc": "2021-04-01T07:30:00+00:00",
+      "exit_utc": "2021-04-02T07:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "087f567c5e14a7ff50f5603e57126d4f1fff28536722b150dca8a36f7e1fc24d",
+          "rows": 89,
+          "sha256": "42e34634f9fe0df759b42c5311160b073443d5d23ec66a40210700b0c58df8f7",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/OGNUSDT/OGNUSDT-fundingRate-2021-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "7f25c9f82b964cbc91e8b997cd5b8320",
+      "contract_symbol": "NKNUSDT",
+      "effective_launch_utc": "2021-04-09T07:00:00+00:00",
+      "entry_utc": "2021-04-09T07:30:00+00:00",
+      "exit_utc": "2021-04-10T07:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "07f4ca6d600608a59226ec42f2e7c2f4027a36a5b7a4f95029a9e1fe316327fa",
+          "rows": 65,
+          "sha256": "36a6a15af61e1e60532bc842c32b3fa741cc23005a421df80f9584f3ff640644",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/NKNUSDT/NKNUSDT-fundingRate-2021-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "c271315f57f54b08b6c81c6e81ba9ef8",
+      "contract_symbol": "DGBUSDT",
+      "effective_launch_utc": "2021-04-21T03:30:00+00:00",
+      "entry_utc": "2021-04-21T04:00:00+00:00",
+      "exit_utc": "2021-04-22T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "1ff2e9d6c4ca57d987f6d0037f4d0c88ef93695c94b0a3e122f7eb44bceed96b",
+          "rows": 31,
+          "sha256": "053b7fc0d34d541d7daa718b1b3f63da2a507922249fd6ee75f7a445811128c5",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/DGBUSDT/DGBUSDT-fundingRate-2021-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "fa934b93fea6494fb7361d45ca7cc98a",
+      "contract_symbol": "1000SHIBUSDT",
+      "effective_launch_utc": "2021-05-10T17:35:00+00:00",
+      "entry_utc": "2021-05-10T18:05:00+00:00",
+      "exit_utc": "2021-05-11T17:35:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "8df0cbd5b7d99baa48bfb595025021b25fcdfbbdf3ade529934463d77495c048",
+          "rows": 64,
+          "sha256": "a5859365a898713e475e06f6e8064dc1c1f7f76b7fd9d9212cb503a78f050e0c",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/1000SHIBUSDT/1000SHIBUSDT-fundingRate-2021-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "a176d4cfd4c74a7fb8238e63d71c062a",
+      "contract_symbol": "ICPUSDT",
+      "effective_launch_utc": "2021-05-11T03:00:00+00:00",
+      "entry_utc": "2021-05-11T03:30:00+00:00",
+      "exit_utc": "2021-05-12T03:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "request_params": {
+            "endTime": 1620788400000,
+            "limit": 1000,
+            "startTime": 1620703800000,
+            "symbol": "ICPUSDT"
+          },
+          "response_sha256": "51f21d96a98303bdcf31dd06f1e02ac4e7055fbbcfa515df9ba0e6b93445f39c",
+          "rows": 3,
+          "source": "historical_rest_gap_fallback",
+          "url": "https://fapi.binance.com/fapi/v1/fundingRate"
+        }
+      ]
+    },
+    {
+      "article_code": "a24db130a3bd48328bfbe7ad6e5e1a35",
+      "contract_symbol": "BAKEUSDT",
+      "effective_launch_utc": "2021-05-19T07:00:00+00:00",
+      "entry_utc": "2021-05-19T07:30:00+00:00",
+      "exit_utc": "2021-05-20T07:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "23bbe3a2ace890868971772e926645cfea7232140e74a8f745d237119e14a1a9",
+          "rows": 38,
+          "sha256": "13f9741df3b42427d9dca75db3ca70292ec00c0be4e0acb13f6ba7f58b26f14f",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BAKEUSDT/BAKEUSDT-fundingRate-2021-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "59cf4a2e46e24af79c9bdd29151c70d5",
+      "contract_symbol": "GALAUSDT",
+      "effective_launch_utc": "2021-09-18T03:30:00+00:00",
+      "entry_utc": "2021-09-18T04:00:00+00:00",
+      "exit_utc": "2021-09-19T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "3349f59836f6288822f1962079f5ee827eb462764a2a9e54ac1622fc34acaaf1",
+          "rows": 40,
+          "sha256": "61422f7c5bc4be3a2cbdb1a49cb7849c916ca58f6657a1b576dbbc09dd6ec89c",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/GALAUSDT/GALAUSDT-fundingRate-2021-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "2ea9e8af0c6947f1afa9f8dab1557d2b",
+      "contract_symbol": "KLAYUSDT",
+      "effective_launch_utc": "2021-10-12T03:30:00+00:00",
+      "entry_utc": "2021-10-12T04:00:00+00:00",
+      "exit_utc": "2021-10-13T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "76857226f83790d545bc29a070c2f9922264d92b6a6209688ab56d28cace29a4",
+          "rows": 61,
+          "sha256": "47e1bd396d3c860a4bac2dd3e545cffda020d5e679ea153332ddec3b128b305c",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/KLAYUSDT/KLAYUSDT-fundingRate-2021-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "aa4a4f5e4f1344ae921ad13c90d7a21f",
+      "contract_symbol": "CTSIUSDT",
+      "effective_launch_utc": "2021-10-26T03:30:00+00:00",
+      "entry_utc": "2021-10-26T04:00:00+00:00",
+      "exit_utc": "2021-10-27T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "9fa0684665951f68da64f63699ea0d895bd14ad93d44c7ee2273eaeb91293fd4",
+          "rows": 17,
+          "sha256": "075fa566825e32852eb251c3698a54d510a4a1dd586761d30c3fbac67d6c7339",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/CTSIUSDT/CTSIUSDT-fundingRate-2021-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "3bb1893a459145eabd8e217486a8daa8",
+      "contract_symbol": "LPTUSDT",
+      "effective_launch_utc": "2021-11-11T03:30:00+00:00",
+      "entry_utc": "2021-11-11T04:00:00+00:00",
+      "exit_utc": "2021-11-12T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "99dfc29bfb032f47c9b3f88bd3f0be1f3ee61305fb12d0e7999ce318dfbfd753",
+          "rows": 59,
+          "sha256": "bbf0e951ca15a9cad9a0084d973f244cb9039102b49dfc345fcba0f946a62ad6",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LPTUSDT/LPTUSDT-fundingRate-2021-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "5b8aa52ccd5f486c850ca737f68ead65",
+      "contract_symbol": "ENSUSDT",
+      "effective_launch_utc": "2021-11-30T03:30:00+00:00",
+      "entry_utc": "2021-11-30T04:00:00+00:00",
+      "exit_utc": "2021-12-01T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "4581ea92911525d5b2a825c8aba737eef1a26d58ee0c2211130069962b7669fe",
+          "rows": 4,
+          "sha256": "161fb9dacebf36049d574ae5f0fd6a64bf65f47febfb45a4283d106ab6ffb9de",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ENSUSDT/ENSUSDT-fundingRate-2021-11.zip"
+        },
+        {
+          "checksum_sha256": "b39a24db848eb0238ef253b9047646eaa0400f7257ca1a89a1dba6affcee6260",
+          "rows": 93,
+          "sha256": "f2838bda2b9aa66573a8887ccfe98015dab8dd6b36f54dd82b181c818e9cbcb0",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ENSUSDT/ENSUSDT-fundingRate-2021-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "e8caf8581cb84df7b8acfefe74548119",
+      "contract_symbol": "PEOPLEUSDT",
+      "effective_launch_utc": "2021-12-24T04:00:00+00:00",
+      "entry_utc": "2021-12-24T04:30:00+00:00",
+      "exit_utc": "2021-12-25T04:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "5b6c5f8a64f54964a3c45614c105977c734be2e883eb35f223ae2485c6bbd07d",
+          "rows": 25,
+          "sha256": "59d11dd98f768cc2b825f0396feedabb57081474549e94ab41dc9206001f0a18",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/PEOPLEUSDT/PEOPLEUSDT-fundingRate-2021-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "9a55ed80fb3f4c72b257aaad09e697c0",
+      "contract_symbol": "ANTUSDT",
+      "effective_launch_utc": "2021-12-27T04:00:00+00:00",
+      "entry_utc": "2021-12-27T04:30:00+00:00",
+      "exit_utc": "2021-12-28T04:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "f6582ac18a086093cd374e450c3e73cb2b4f762647697c3514c302208334c6a6",
+          "rows": 14,
+          "sha256": "f6060d5f0688d03ca8a8a7728e2a6120373a9fad100b77f6d7e9494389cd41e2",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ANTUSDT/ANTUSDT-fundingRate-2021-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "ccbdacbe197945b4a062ca0e3c830c4a",
+      "contract_symbol": "ROSEUSDT",
+      "effective_launch_utc": "2021-12-31T03:30:00+00:00",
+      "entry_utc": "2021-12-31T04:00:00+00:00",
+      "exit_utc": "2022-01-01T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "79ddcb17e77146a8c9f742f61f588fa2c5f26dabf9f9ecb76507656e17724e15",
+          "rows": 5,
+          "sha256": "691d8f3357d68461df3ccfadf0871836965cd44f2ac112b2d5593cb6e9e4b569",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ROSEUSDT/ROSEUSDT-fundingRate-2021-12.zip"
+        },
+        {
+          "checksum_sha256": "3c5b155ffc07158f5eb9c743746fda6e3f9c6c8570079395fea443f2cad11b01",
+          "rows": 93,
+          "sha256": "a049bfea6d1581558902bfe9e118ff68f3908a4a3f251d914ce47e77d7a38186",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ROSEUSDT/ROSEUSDT-fundingRate-2022-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "b5c82d3590ea4087adeb15f8edcd8e1f",
+      "contract_symbol": "DUSKUSDT",
+      "effective_launch_utc": "2022-01-07T03:30:00+00:00",
+      "entry_utc": "2022-01-07T04:00:00+00:00",
+      "exit_utc": "2022-01-08T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "5b741f5bef65d0c23afff423c6b7379ba45fd09bc6b35d3b2b18ac2eb405705f",
+          "rows": 76,
+          "sha256": "116822b76394f6533932a86bbd613d958ff48a2f9f9599b1b35a82a7e9a996ce",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/DUSKUSDT/DUSKUSDT-fundingRate-2022-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "4792aec2fe53444f87734e57bbb3038f",
+      "contract_symbol": "FLOWUSDT",
+      "effective_launch_utc": "2022-02-10T03:30:00+00:00",
+      "entry_utc": "2022-02-10T04:00:00+00:00",
+      "exit_utc": "2022-02-11T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "8d8f938835726a1297021da2c6f28ca756814cd743f25b25fe193c443a6d3884",
+          "rows": 58,
+          "sha256": "7dbb0ff86f4f3e7a48ff20248b370df7b4558423bfed42ee80a053cbdffbb6a7",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/FLOWUSDT/FLOWUSDT-fundingRate-2022-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "e6de0a1dca5e49bea0b334304535934a",
+      "contract_symbol": "IMXUSDT",
+      "effective_launch_utc": "2022-02-11T03:30:00+00:00",
+      "entry_utc": "2022-02-11T04:00:00+00:00",
+      "exit_utc": "2022-02-12T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "28874d71d47d407f41874db008c995a1ed16933c43679fd3866cf859bb7f25a0",
+          "rows": 53,
+          "sha256": "2ce34708f57f0ae349c3b51faf6a3b61fb5dd9d909e50a30028b40db42a240ad",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/IMXUSDT/IMXUSDT-fundingRate-2022-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "3e091344eaaa4632bbdc1e5ded1237e1",
+      "contract_symbol": "API3USDT",
+      "effective_launch_utc": "2022-02-22T03:30:00+00:00",
+      "entry_utc": "2022-02-22T04:00:00+00:00",
+      "exit_utc": "2022-02-23T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "b063fcf6bb5991ebf7d4d201854d291fba596d53f852c7bd96926adb200a1475",
+          "rows": 22,
+          "sha256": "44dbc16dc86d722db46761c5caa5006dc2feba591ab5d52b28eb8b0e8c14d1d8",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/API3USDT/API3USDT-fundingRate-2022-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "8b6376b0ce804eb79017f35cb2eb9ac1",
+      "contract_symbol": "ANCUSDT",
+      "effective_launch_utc": "2022-03-08T03:30:00+00:00",
+      "entry_utc": "2022-03-08T04:00:00+00:00",
+      "exit_utc": "2022-03-09T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "0e047c9b6f6b822e25acf6fff42c43e1f7b538d11ed6ad291b4b49dd3b87cd71",
+          "rows": 71,
+          "sha256": "dfa26e6a2cf9639a9598bfe7d3139f2a3ef8f01ee9632125c0e12ee9213329c4",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ANCUSDT/ANCUSDT-fundingRate-2022-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "b76223a20c604f718b1e124d1d049d0d",
+      "contract_symbol": "GMTUSDT",
+      "effective_launch_utc": "2022-03-15T04:00:00+00:00",
+      "entry_utc": "2022-03-15T04:30:00+00:00",
+      "exit_utc": "2022-03-16T04:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "7b92dbf8122f06671c2f4d2ca894588cdc42afbecd77f22f555d54b02d2c2826",
+          "rows": 52,
+          "sha256": "843b911d7c2b229d9b34a2bc706b0e2c053c89b9d9f816387752969580a3528b",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/GMTUSDT/GMTUSDT-fundingRate-2022-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "bb98f3f2625143fc9d5d98c3aae55b1a",
+      "contract_symbol": "APEUSDT",
+      "effective_launch_utc": "2022-03-17T15:00:00+00:00",
+      "entry_utc": "2022-03-17T15:30:00+00:00",
+      "exit_utc": "2022-03-18T15:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "d91e34ecff7e4b6bc316b7ad53212ca7867140e5ca9635224961441ae293f443",
+          "rows": 43,
+          "sha256": "d21bec45248c5799cd15b2f1799bc3638934b96e46007cde02aabb88c79aa120",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/APEUSDT/APEUSDT-fundingRate-2022-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "e15fac275e7a4e858dc4bb79ffc24c50",
+      "contract_symbol": "BNXUSDT",
+      "effective_launch_utc": "2022-04-01T03:30:00+00:00",
+      "entry_utc": "2022-04-01T04:00:00+00:00",
+      "exit_utc": "2022-04-02T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "request_params": {
+            "endTime": 1648870200000,
+            "limit": 1000,
+            "startTime": 1648785600000,
+            "symbol": "BNXUSDT"
+          },
+          "response_sha256": "ae62ec9af09519ae59005a76ba70f0503fa1ad852e34759a8482281154b5dec5",
+          "rows": 3,
+          "source": "historical_rest_gap_fallback",
+          "url": "https://fapi.binance.com/fapi/v1/fundingRate"
+        }
+      ]
+    },
+    {
+      "article_code": "986ab98c6628449facdf21ae8dbd2356",
+      "contract_symbol": "WOOUSDT",
+      "effective_launch_utc": "2022-04-08T03:30:00+00:00",
+      "entry_utc": "2022-04-08T04:00:00+00:00",
+      "exit_utc": "2022-04-09T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "bbc3887398872c154b8f80156b794f6e746c07bcb893415f016dbbc077ad5d21",
+          "rows": 70,
+          "sha256": "5bf9eabb3b9061c1b47a43dd58cc030e76bf942bd7a494927a938821436179a0",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/WOOUSDT/WOOUSDT-fundingRate-2022-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "e2086878df7041069aa3653501235e68",
+      "contract_symbol": "JASMYUSDT",
+      "effective_launch_utc": "2022-04-20T03:30:00+00:00",
+      "entry_utc": "2022-04-20T04:00:00+00:00",
+      "exit_utc": "2022-04-21T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "417a8362d20ce55fb1de31545d079ee290adb11e3d740505c332f559c1eda33d",
+          "rows": 35,
+          "sha256": "7ba579e63c7decc83b05614ca8234c24d260ea9a2245fed0864ca7f336b09242",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/JASMYUSDT/JASMYUSDT-fundingRate-2022-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "a9b63a16b820474cb372f4cba557cf82",
+      "contract_symbol": "DARUSDT",
+      "effective_launch_utc": "2022-04-29T03:30:00+00:00",
+      "entry_utc": "2022-04-29T04:00:00+00:00",
+      "exit_utc": "2022-04-30T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "8be4287d274d2174224ea0e5f47673740a2ee89a05f7403f4e6796c87f59bb4a",
+          "rows": 5,
+          "sha256": "9317d5d93c8b82345ca82b0473ef931e39c31b0189d5c536e7128153dc7effe5",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/DARUSDT/DARUSDT-fundingRate-2022-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "ee776592d1714f4cb6a53db72350ac63",
+      "contract_symbol": "GALUSDT",
+      "effective_launch_utc": "2022-05-05T14:00:00+00:00",
+      "entry_utc": "2022-05-05T14:30:00+00:00",
+      "exit_utc": "2022-05-06T14:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "c8d0575290e262438260f6ea8861eb1a6c134bd5e59416588341d8e4a53251dc",
+          "rows": 79,
+          "sha256": "d07ba31eca1f431e163b91dff922143f7a4d5783ce64b4041275ac823c757166",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/GALUSDT/GALUSDT-fundingRate-2022-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "ce9176af28a148d4993972a1caeffda0",
+      "contract_symbol": "OPUSDT",
+      "effective_launch_utc": "2022-06-01T14:00:00+00:00",
+      "entry_utc": "2022-06-01T14:30:00+00:00",
+      "exit_utc": "2022-06-02T14:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "978e348d2783af9cb877b2f38145a7140786ccc40b116cd640437c8bb00ccdac",
+          "rows": 89,
+          "sha256": "cb88b947821c4842dc2ee791eb7c77aadc512db24d76b5efaa1f41d5cc6eb98d",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/OPUSDT/OPUSDT-fundingRate-2022-06.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "c562f0d46b0e404c89d9eb8e56a70a2c",
+      "contract_symbol": "INJUSDT",
+      "effective_launch_utc": "2022-08-17T02:45:00+00:00",
+      "entry_utc": "2022-08-17T03:15:00+00:00",
+      "exit_utc": "2022-08-18T02:45:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "789b1178e5b5a4d919bc126f440b8580a4422ee5e9ad9dbc1a0359e6f00f92f0",
+          "rows": 46,
+          "sha256": "e6a7bfd310f656e055aafbff4ef14c73dd5416c308ee1172b29b154472bbfce6",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/INJUSDT/INJUSDT-fundingRate-2022-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "6d14423aa0034ae992c49f8b7340570b",
+      "contract_symbol": "STGUSDT",
+      "effective_launch_utc": "2022-08-25T12:00:00+00:00",
+      "entry_utc": "2022-08-25T12:30:00+00:00",
+      "exit_utc": "2022-08-26T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "983828a8c5c041e51444c8f18b312a97f26e19e9a49177532546a7812d5490a3",
+          "rows": 19,
+          "sha256": "56afe884bf7fad55aba877d6f6e063351930e1d9998fd51c522f69c969f0e17b",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/STGUSDT/STGUSDT-fundingRate-2022-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "f132b42ab4af4a5bace989b62ce30b5a",
+      "contract_symbol": "SPELLUSDT",
+      "effective_launch_utc": "2022-09-06T12:00:00+00:00",
+      "entry_utc": "2022-09-06T12:30:00+00:00",
+      "exit_utc": "2022-09-07T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "df4b03e6c43ba2d7720152e3d438f97b2a1fb1fc0cc158c55a4d51f55ebace00",
+          "rows": 73,
+          "sha256": "a26b8ddfffe7670ff1cf1cec728e2525d69dadb5d59356db1270861417dc72f3",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SPELLUSDT/SPELLUSDT-fundingRate-2022-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "5b9bc7ef56834de895cf829af859207e",
+      "contract_symbol": "1000LUNCUSDT",
+      "effective_launch_utc": "2022-09-09T13:00:00+00:00",
+      "entry_utc": "2022-09-09T13:30:00+00:00",
+      "exit_utc": "2022-09-10T13:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "6a4354292f8724e3533c0042ebde987a6c652cb561a7ebb5e12dea052a782ce6",
+          "rows": 64,
+          "sha256": "dac51a49c20560e8d7d59bc9c1b86a15983c50d13dc77ba00cbb73ab7e48a739",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/1000LUNCUSDT/1000LUNCUSDT-fundingRate-2022-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "3b7184c80d544586993045a0e6e36e57",
+      "contract_symbol": "LUNA2USDT",
+      "effective_launch_utc": "2022-09-10T03:00:00+00:00",
+      "entry_utc": "2022-09-10T03:30:00+00:00",
+      "exit_utc": "2022-09-11T03:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "3e96a5f8b1da9904e37d4131612565a784331e823bf6c3f682101fe39cc3ef79",
+          "rows": 63,
+          "sha256": "ca47804720837a6c263f34e3a3d53a124a7d5114d9576e2a2bdb0faddaa6aa3f",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LUNA2USDT/LUNA2USDT-fundingRate-2022-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "92f8c95638d94627961641c0e6a9edef",
+      "contract_symbol": "FETUSDT",
+      "effective_launch_utc": "2023-01-17T02:30:00+00:00",
+      "entry_utc": "2023-01-17T03:00:00+00:00",
+      "exit_utc": "2023-01-18T02:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "be5e48290fb344615d14a036acb1edce048116383bd3ebd4be8c01128b2f2ac3",
+          "rows": 47,
+          "sha256": "9bd9334eb7f9c1a89228744f218fe704656a392117762a87dc0291268d4a3638",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/FETUSDT/FETUSDT-fundingRate-2023-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "8d0a29d6363e450db93e27f03287e81a",
+      "contract_symbol": "FXSUSDT",
+      "effective_launch_utc": "2023-01-20T03:00:00+00:00",
+      "entry_utc": "2023-01-20T03:30:00+00:00",
+      "exit_utc": "2023-01-21T03:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "8514d98afb954cd5d45408b985d9cb571d86780cd7eb9cf287f66210325cc8c8",
+          "rows": 35,
+          "sha256": "3438975f225a97cb62b00efa9ad62df03acfd71167e2a67caf0be32cefe0983f",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/FXSUSDT/FXSUSDT-fundingRate-2023-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "7ac9bbff06b94316af623560b3de21ad",
+      "contract_symbol": "HOOKUSDT",
+      "effective_launch_utc": "2023-01-23T03:00:00+00:00",
+      "entry_utc": "2023-01-23T03:30:00+00:00",
+      "exit_utc": "2023-01-24T03:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "15be833477b4f764fa163efa8c558d0f7667ec3651d548d9ddaa594b1986eacd",
+          "rows": 35,
+          "sha256": "15ebcbe137547e8361893aaec527288ffc03796414fd5c6c9f467fd07ca9dd58",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/HOOKUSDT/HOOKUSDT-fundingRate-2023-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "5d5f7e0d340a4a5699c80b0f5231ceb4",
+      "contract_symbol": "MAGICUSDT",
+      "effective_launch_utc": "2023-01-25T03:00:00+00:00",
+      "entry_utc": "2023-01-25T03:30:00+00:00",
+      "exit_utc": "2023-01-26T03:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "1416349d05848542d36f3fb7aba920d969f088e9fcb5417e3a71533e40c7b285",
+          "rows": 25,
+          "sha256": "c84f115c374e2a0b64fedb99e633eaea9f8a1c52dec7c9007930e813ffaaa788",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MAGICUSDT/MAGICUSDT-fundingRate-2023-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "499af13827e04741999c15f9139ff3de",
+      "contract_symbol": "RNDRUSDT",
+      "effective_launch_utc": "2023-02-03T02:30:00+00:00",
+      "entry_utc": "2023-02-03T03:00:00+00:00",
+      "exit_utc": "2023-02-04T02:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "c968a35ac95258a727bc76df968f127dfd6ed94fdbaea51784274dcf6e6ecc00",
+          "rows": 77,
+          "sha256": "12bd86f211fe5771b0f718920671428d71b91fe25157fba41f99a136d4d8749d",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/RNDRUSDT/RNDRUSDT-fundingRate-2023-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "e04cf4bc4fbd41cbae44fb4a31ddcee0",
+      "contract_symbol": "ASTRUSDT",
+      "effective_launch_utc": "2023-02-14T02:30:00+00:00",
+      "entry_utc": "2023-02-14T03:00:00+00:00",
+      "exit_utc": "2023-02-15T02:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "ef627236f945d89ed3ba24e18ebe8ea8f86a28bbea7d6afd41005f4811fb5856",
+          "rows": 47,
+          "sha256": "9bace9089a6b14fafe33db10f474a78f74456655cf547f804cce15e71e45d756",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ASTRUSDT/ASTRUSDT-fundingRate-2023-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "8ad0ecaa72ec43229bc32f8fc519e8ef",
+      "contract_symbol": "GMXUSDT",
+      "effective_launch_utc": "2023-02-17T14:30:00+00:00",
+      "entry_utc": "2023-02-17T15:00:00+00:00",
+      "exit_utc": "2023-02-18T14:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "329ed268d5734cb72ba206d90b3c96e267f2364ae8ef971d8b730f3d9f6e9a40",
+          "rows": 35,
+          "sha256": "030b607af9b4c8d61263de658a97f143dbac7efc85ae32f07c054700bc3d258a",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/GMXUSDT/GMXUSDT-fundingRate-2023-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "28408f1dd1ce440d874b795ccc40fe15",
+      "contract_symbol": "CFXUSDT",
+      "effective_launch_utc": "2023-02-20T14:30:00+00:00",
+      "entry_utc": "2023-02-20T15:00:00+00:00",
+      "exit_utc": "2023-02-21T14:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "88a0ef029d6c0ef37dfb74049b7e576e0ea9180b35ab32f864b4bba97b784995",
+          "rows": 26,
+          "sha256": "8c2973329a88a3ba619acbc6ed844cb3d1812c15f4b394b81e7796a2266d3cd5",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/CFXUSDT/CFXUSDT-fundingRate-2023-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "73fdad20457b41e09bda8c73c893b83d",
+      "contract_symbol": "ACHUSDT",
+      "effective_launch_utc": "2023-02-22T14:30:00+00:00",
+      "entry_utc": "2023-02-22T15:00:00+00:00",
+      "exit_utc": "2023-02-23T14:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "6d14ab271c1f3ca93dce24898790064b2e72f6c180f1c6b393b14a49e7c76c77",
+          "rows": 20,
+          "sha256": "faec18489038e99d4d5a35f2670bef5732a3151009928ae08b11d27eca014b91",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ACHUSDT/ACHUSDT-fundingRate-2023-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "58ae6bab2d9249039cc65146d5af44a0",
+      "contract_symbol": "SSVUSDT",
+      "effective_launch_utc": "2023-02-24T12:00:00+00:00",
+      "entry_utc": "2023-02-24T12:30:00+00:00",
+      "exit_utc": "2023-02-25T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "0759632ceb5ba201db1bc936fe1b13dffbf3d66e19694f557a880ba13cfba421",
+          "rows": 17,
+          "sha256": "862a29acebe5dc63c34a86c5f828342910083dfc556e3be5b131be2905d8ddec",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SSVUSDT/SSVUSDT-fundingRate-2023-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "885443a304ba4193bf850f9ebd28408b",
+      "contract_symbol": "CKBUSDT",
+      "effective_launch_utc": "2023-02-28T12:00:00+00:00",
+      "entry_utc": "2023-02-28T12:30:00+00:00",
+      "exit_utc": "2023-03-01T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "758a3828b804630b08ba7acbd73e15f2cd5ed65b9a3995de797ecccd5c96df8a",
+          "rows": 2,
+          "sha256": "8be4fb5fb98584c9bd9a6b6a3063abc80252ee53eeafc25fb82e361dbf7c54f5",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/CKBUSDT/CKBUSDT-fundingRate-2023-02.zip"
+        },
+        {
+          "checksum_sha256": "ef458c7780f3d3023abac15f70458a99baf15ce83dbccb80bb8a23bc3a5376aa",
+          "rows": 93,
+          "sha256": "4bceede48f780712c5bd41c99ba6fe3e544bd6dd55487dbb2e31d422adcb86f8",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/CKBUSDT/CKBUSDT-fundingRate-2023-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "e970674b8a4048f69088d21d53a11cb4",
+      "contract_symbol": "PERPUSDT",
+      "effective_launch_utc": "2023-03-06T12:00:00+00:00",
+      "entry_utc": "2023-03-06T12:30:00+00:00",
+      "exit_utc": "2023-03-07T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "612a0a0c11b237d1a316ce99874a8ae18191685b7a647653006cd9843ba2926d",
+          "rows": 85,
+          "sha256": "ae19c9ef7019b3569ee13f33233e1f7f409ff26a5faf7188fa5d5fa7cb7fd3fc",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/PERPUSDT/PERPUSDT-fundingRate-2023-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "19b802c37d4946b1bba1c0e7b4b5a922",
+      "contract_symbol": "TRUUSDT",
+      "effective_launch_utc": "2023-03-07T12:00:00+00:00",
+      "entry_utc": "2023-03-07T12:30:00+00:00",
+      "exit_utc": "2023-03-08T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "62057962a4ac0ad25c057982161327fff7256d7a70296f4f97bac229b06825f2",
+          "rows": 76,
+          "sha256": "bfe59c07f50cc32c8d2271e857a16daed9641b4581b8d58511269a1c9791c090",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TRUUSDT/TRUUSDT-fundingRate-2023-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "dc1fa8e36e8c4cbdb6f200bd3aac916e",
+      "contract_symbol": "LQTYUSDT",
+      "effective_launch_utc": "2023-03-10T12:00:00+00:00",
+      "entry_utc": "2023-03-10T12:30:00+00:00",
+      "exit_utc": "2023-03-11T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "d90293acdb9ed4a6051a37a7257000fc4eaeaf1385ed42aba3deb3a4a6333199",
+          "rows": 67,
+          "sha256": "369f8653b9b43066abc03f17ab3c2640df3db6eb95d0a6229e538400c850ff15",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LQTYUSDT/LQTYUSDT-fundingRate-2023-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "57cdabc4f2f94e04b0503eb31bf7bc3e",
+      "contract_symbol": "IDUSDT",
+      "effective_launch_utc": "2023-03-23T14:30:00+00:00",
+      "entry_utc": "2023-03-23T15:00:00+00:00",
+      "exit_utc": "2023-03-24T14:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "1f2c47ff100a9e26c37a8abface95f2fb27cd496b9df7c5914c63cab048946d9",
+          "rows": 26,
+          "sha256": "d48eb314f3b33d11e715921d95c3197c0c1bdc982cc7f8f21580b17ac4764f02",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/IDUSDT/IDUSDT-fundingRate-2023-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "2698359b2ceb45ff94365f060d616b88",
+      "contract_symbol": "ARBUSDT",
+      "effective_launch_utc": "2023-03-23T17:00:00+00:00",
+      "entry_utc": "2023-03-23T17:30:00+00:00",
+      "exit_utc": "2023-03-24T17:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "d5254a1a8dbe8b7d40c6bd0eaa78caf06f3299870f4b039cb5122854655db326",
+          "rows": 26,
+          "sha256": "4f0fcc172f32daa74c222b85bfa244a4fa59a9e9b302c282d80a580e84a8ee35",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ARBUSDT/ARBUSDT-fundingRate-2023-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "e9113e48b61a46ca93632920de9b0d19",
+      "contract_symbol": "JOEUSDT",
+      "effective_launch_utc": "2023-03-29T12:10:00+00:00",
+      "entry_utc": "2023-03-29T12:40:00+00:00",
+      "exit_utc": "2023-03-30T12:10:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "f2c2cf74e0a38993aeb44664ff7e83eeca0e2cbf1bf958872f6041518a02fc26",
+          "rows": 10,
+          "sha256": "4faca99f40d3db53d7caab3ad3d19ab7aaccc85ec73aaec9a53490ea297275c5",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/JOEUSDT/JOEUSDT-fundingRate-2023-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "264deffb7b1a4606867c760af485e81e",
+      "contract_symbol": "RDNTUSDT",
+      "effective_launch_utc": "2023-04-05T12:00:00+00:00",
+      "entry_utc": "2023-04-05T12:30:00+00:00",
+      "exit_utc": "2023-04-06T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "8d8e2faa35c9209f021f8952c786f5d0eb983b3d8f7a66e86c8f765a7a2004d6",
+          "rows": 79,
+          "sha256": "c6d8992805bfd3eb3e982c2475ff4d6e9f6e699185c2d23267038dba664af75a",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/RDNTUSDT/RDNTUSDT-fundingRate-2023-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "8a9f1c722e8c4a91830cd84d29ee5e3e",
+      "contract_symbol": "HFTUSDT",
+      "effective_launch_utc": "2023-04-06T12:00:00+00:00",
+      "entry_utc": "2023-04-06T12:30:00+00:00",
+      "exit_utc": "2023-04-07T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "b9a59717a22c7050b8219420317a12dff70eee75b9c2cda68db4ccc8d446d72d",
+          "rows": 76,
+          "sha256": "2692716031b79fa94a54391d6f9603de93f7353596e631df0b8b4ed8dcbfd088",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/HFTUSDT/HFTUSDT-fundingRate-2023-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "7d5bc005a0ab4a82a6a4c08d5cee15ed",
+      "contract_symbol": "XVSUSDT",
+      "effective_launch_utc": "2023-04-13T02:30:00+00:00",
+      "entry_utc": "2023-04-13T03:00:00+00:00",
+      "exit_utc": "2023-04-14T02:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "db59cd89a1bf0fdfcf1ba7c68dd8bbd2a0b6f47c1500119d586004b758c77a3a",
+          "rows": 56,
+          "sha256": "b779470492049f7b018f19a2a019f46bedc49dbb06137935156a509c0b0fc1bd",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/XVSUSDT/XVSUSDT-fundingRate-2023-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "00b84a2f4a9b44e184722acdbb6d2629",
+      "contract_symbol": "BLURUSDT",
+      "effective_launch_utc": "2023-04-28T12:00:00+00:00",
+      "entry_utc": "2023-04-28T12:30:00+00:00",
+      "exit_utc": "2023-04-29T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "db5ac1294231389b8a534ae4a55f8181fb005ce1044339e939d4f5c1ff1a8dab",
+          "rows": 10,
+          "sha256": "4807ed85d5faa4123b66b9429c5e83c9bc20d54b94c1ac77927d6ea43aa84229",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BLURUSDT/BLURUSDT-fundingRate-2023-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "e41c706aa7a7445f9848f1305f2b3e7f",
+      "contract_symbol": "EDUUSDT",
+      "effective_launch_utc": "2023-04-30T12:00:00+00:00",
+      "entry_utc": "2023-04-30T12:30:00+00:00",
+      "exit_utc": "2023-05-01T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "ad824e439af30f693a1424f1f2a2fac215fab3051d083e3f796512251d5681aa",
+          "rows": 7,
+          "sha256": "e42f95aad6f40d74a1239e9300d8d31ef5f7d4f0a12dd8d168a179de3073dcf2",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/EDUUSDT/EDUUSDT-fundingRate-2023-04.zip"
+        },
+        {
+          "checksum_sha256": "df900601e177ddbd4c72a53cb90f26a27192e0cb45f9424083309a635a04c1e2",
+          "rows": 93,
+          "sha256": "926f613c556ce05bd222e62de0894bd50b9c2e4098c001050ac9e2fe636b7730",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/EDUUSDT/EDUUSDT-fundingRate-2023-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "c43f0ab6145d47ce832234cb4be13816",
+      "contract_symbol": "IDEXUSDT",
+      "effective_launch_utc": "2023-05-03T12:00:00+00:00",
+      "entry_utc": "2023-05-03T12:30:00+00:00",
+      "exit_utc": "2023-05-04T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "44c7bfe83801bc69beea3f9432f9f03314b46286e58aacea0c6d2c93dc14e832",
+          "rows": 89,
+          "sha256": "57b616ef558a7bc6acb449bed39b5f39074806b3dbc51026df3ae4671938cc0d",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/IDEXUSDT/IDEXUSDT-fundingRate-2023-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "ac46aeff860747119efefe75df9854a1",
+      "contract_symbol": "SUIUSDT",
+      "effective_launch_utc": "2023-05-03T16:00:00+00:00",
+      "entry_utc": "2023-05-03T16:30:00+00:00",
+      "exit_utc": "2023-05-04T16:00:00+00:00",
+      "funding_events_during_hold": 2,
+      "sources": [
+        {
+          "checksum_sha256": "1a253ea6e15bbd3cb547b6b955071f10af3523d2a065647f0ce522260f83b158",
+          "rows": 85,
+          "sha256": "98bc64e16b5021b300e1f67504e2aadabc9535ff8184237417a79940cbffcd6e",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SUIUSDT/SUIUSDT-fundingRate-2023-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "41993e3389654713946bcb6b9b032eaf",
+      "contract_symbol": "1000PEPEUSDT",
+      "effective_launch_utc": "2023-05-05T16:30:00+00:00",
+      "entry_utc": "2023-05-05T17:00:00+00:00",
+      "exit_utc": "2023-05-06T16:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "1701a2281a9fdeb344ca9e335b3d3af659118b74843805d414bff82cfbc5e3dd",
+          "rows": 79,
+          "sha256": "9de952d3c412071073cd3b24f07eb29036dcf97ee202219ddc46cb8e85f983b5",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/1000PEPEUSDT/1000PEPEUSDT-fundingRate-2023-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "cb89820730db4065b1d406350f6c0d9d",
+      "contract_symbol": "1000FLOKIUSDT",
+      "effective_launch_utc": "2023-05-06T16:30:00+00:00",
+      "entry_utc": "2023-05-06T17:00:00+00:00",
+      "exit_utc": "2023-05-07T16:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "6ee7eb4036edd40b6c3b62e343f80743c12b7be660d84e1e55c1214f38f303c9",
+          "rows": 76,
+          "sha256": "d575c42b26a4ac0e2d7ae858d2dccb6d179bf949c42d54ef050d40df1f9ad673",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/1000FLOKIUSDT/1000FLOKIUSDT-fundingRate-2023-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "81c80244a5fb4bfab3cea51cd2ed325b",
+      "contract_symbol": "RADUSDT",
+      "effective_launch_utc": "2023-05-10T12:00:00+00:00",
+      "entry_utc": "2023-05-10T12:30:00+00:00",
+      "exit_utc": "2023-05-11T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "3057ed328c63194ac000d68e8cdc70de9327ed83d623254e207194a9d965dc05",
+          "rows": 79,
+          "sha256": "eeac847d9ec64666cc1bffd7efaee0a819ac1b64196335b528101d2d3a102d93",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/RADUSDT/RADUSDT-fundingRate-2023-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "43b65b11d6ec4583ab47b3ff72b67601",
+      "contract_symbol": "UMAUSDT",
+      "effective_launch_utc": "2023-05-10T12:30:00+00:00",
+      "entry_utc": "2023-05-10T13:00:00+00:00",
+      "exit_utc": "2023-05-11T12:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "dee14e2864c38dbe2eab9d0aaef7d478fa00dc7cedb9728c6e13c5f30e9f5a14",
+          "rows": 68,
+          "sha256": "1c16b88b72cb3ca47e8909e7d1e63c3faac9b9c58cb2db962cb1a77c35be6681",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/UMAUSDT/UMAUSDT-fundingRate-2023-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "90d4d1d939444d73b88309ea656a57ef",
+      "contract_symbol": "KEYUSDT",
+      "effective_launch_utc": "2023-05-24T12:00:00+00:00",
+      "entry_utc": "2023-05-24T12:30:00+00:00",
+      "exit_utc": "2023-05-25T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "c894581b2283f7d0496f7d6c5c56f87fde7a3d97a714ed308d058903f10f2e4b",
+          "rows": 25,
+          "sha256": "26960710740ebcf56a2ebe4c1949cdee798a010b2b716413a9f500e4aa418dd1",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/KEYUSDT/KEYUSDT-fundingRate-2023-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "e3ac2a89692c4f31a1d9daca616b6ce9",
+      "contract_symbol": "COMBOUSDT",
+      "effective_launch_utc": "2023-06-02T12:00:00+00:00",
+      "entry_utc": "2023-06-02T12:30:00+00:00",
+      "exit_utc": "2023-06-03T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "a0e647e46d311fa6acc62e04eb0997ed8a8afe2db17eff8b5a3f1426f1d23a8a",
+          "rows": 86,
+          "sha256": "84c38298089c69f0d3c9d4130faf823b8fd392f308c82a97760358876bd3bb69",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/COMBOUSDT/COMBOUSDT-fundingRate-2023-06.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "3e95295a2c554f87b27e7ecf544e1e61",
+      "contract_symbol": "NMRUSDT",
+      "effective_launch_utc": "2023-06-22T12:00:00+00:00",
+      "entry_utc": "2023-06-22T12:30:00+00:00",
+      "exit_utc": "2023-06-23T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "48885e4bbdf8054e364fd57ba223badd52cd94e2e9e60c6d189f4dfc18d632f2",
+          "rows": 29,
+          "sha256": "9aa08cfd381d024df57a5134b8902868f5814083de12e0aea7cb8b02ff3339ff",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/NMRUSDT/NMRUSDT-fundingRate-2023-06.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "cd356f940975408a8931e4768206a82e",
+      "contract_symbol": "MAVUSDT",
+      "effective_launch_utc": "2023-06-29T12:00:00+00:00",
+      "entry_utc": "2023-06-29T12:30:00+00:00",
+      "exit_utc": "2023-06-30T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "b0fe2d3eae69ef2493670353bf1e63a8a9ed429b761cc1d4d7012b63d55f740e",
+          "rows": 7,
+          "sha256": "aef82287a7d3a8b2762ba087c0ad740b5850368d3ce7e4c7e4843b2020c456a0",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MAVUSDT/MAVUSDT-fundingRate-2023-06.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "dd177db1a04e4c0ea6c1569b63bed988",
+      "contract_symbol": "MDTUSDT",
+      "effective_launch_utc": "2023-06-30T12:00:00+00:00",
+      "entry_utc": "2023-06-30T12:30:00+00:00",
+      "exit_utc": "2023-07-01T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "7a25c72ded5acd145464c0cb9608cb7f44fc8bf81e799787ffcf368adaba79c9",
+          "rows": 4,
+          "sha256": "15fd4196c3d428d3ca1865566239f38ec839335b59da80ea7eb47962d6bb3add",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MDTUSDT/MDTUSDT-fundingRate-2023-06.zip"
+        },
+        {
+          "checksum_sha256": "52e03654bcdb5d539c4457b30a73ca9255d468fe8dcaae2e7553505f31420395",
+          "rows": 93,
+          "sha256": "f87e886827f366bd30463b04841dbf102df412ddddf3a174d631444ee9dad190",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MDTUSDT/MDTUSDT-fundingRate-2023-07.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "673af51d78494b5c945dadba6e5072b3",
+      "contract_symbol": "XVGUSDT",
+      "effective_launch_utc": "2023-07-05T12:00:00+00:00",
+      "entry_utc": "2023-07-05T12:30:00+00:00",
+      "exit_utc": "2023-07-06T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "adc1739cbac90b109b239a56cb4b541bbb3ad6fcfcee63f288adbd6d6b70a64f",
+          "rows": 96,
+          "sha256": "da2ddd7fe74140a6432d5e82769470115dc6560668c79e5d6eb0967a630d7886",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/XVGUSDT/XVGUSDT-fundingRate-2023-07.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "cb44d15ae417474ab97cbdb37072f39f",
+      "contract_symbol": "WLDUSDT",
+      "effective_launch_utc": "2023-07-24T12:00:00+00:00",
+      "entry_utc": "2023-07-24T12:30:00+00:00",
+      "exit_utc": "2023-07-25T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "298c1b79186b5833e4eca1b51b27606213684bdda88329e4bc7c412087c452c5",
+          "rows": 22,
+          "sha256": "879c2b549349b94f2b48d5ed1f05851df1149a8a64834fc8b3ee74fd3d1debec",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/WLDUSDT/WLDUSDT-fundingRate-2023-07.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "abd47df1217646639b297b8b9850d7db",
+      "contract_symbol": "PENDLEUSDT",
+      "effective_launch_utc": "2023-07-28T02:30:00+00:00",
+      "entry_utc": "2023-07-28T03:00:00+00:00",
+      "exit_utc": "2023-07-29T02:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "d9f7194ab1050fc86cdabe3f6a6e498ae9445631ec0f8191a295932121142a64",
+          "rows": 19,
+          "sha256": "583d1334c6cd83ca099a62299d53be9f5cf9430ec363304658131b19f5e42d2b",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/PENDLEUSDT/PENDLEUSDT-fundingRate-2023-07.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "25df92f5680242f3a45dd8fc53969830",
+      "contract_symbol": "ARKMUSDT",
+      "effective_launch_utc": "2023-07-28T02:45:00+00:00",
+      "entry_utc": "2023-07-28T03:15:00+00:00",
+      "exit_utc": "2023-07-29T02:45:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "897b147cda8612fea3eff14ee1a5a87b1fd8d156021981da17c7c0b825e67b74",
+          "rows": 13,
+          "sha256": "ca06ea7beaf86bdd0a52f6dde8aad993493ebe9f47b503dd0c1928e57da87c90",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ARKMUSDT/ARKMUSDT-fundingRate-2023-07.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "7bf08e1f38ed4316a9c5477bfbe21889",
+      "contract_symbol": "AGLDUSDT",
+      "effective_launch_utc": "2023-07-29T02:30:00+00:00",
+      "entry_utc": "2023-07-29T03:00:00+00:00",
+      "exit_utc": "2023-07-30T02:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "c18198fa054a8b2e579709dbd9434fe27a0e310e864e8e566646679a81a587c3",
+          "rows": 10,
+          "sha256": "f2608c43c197df947cd315c2f960dfe39aa243545c41e38bf248b55d9cd58655",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/AGLDUSDT/AGLDUSDT-fundingRate-2023-07.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "41f762a6369445e9ae67b3766447552e",
+      "contract_symbol": "YGGUSDT",
+      "effective_launch_utc": "2023-08-05T03:30:00+00:00",
+      "entry_utc": "2023-08-05T04:00:00+00:00",
+      "exit_utc": "2023-08-06T03:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "a57a3b6ef88653e87ec8e41a357c416fcbf1db810454c68e2e4e180674911b73",
+          "rows": 91,
+          "sha256": "62a0f9defe6a54368c7c147356db1412b34b56aaa9e0cd504504f618b74776ca",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/YGGUSDT/YGGUSDT-fundingRate-2023-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "e59b61e52ad24b43bd1032052ea3a025",
+      "contract_symbol": "BNTUSDT",
+      "effective_launch_utc": "2023-08-10T12:00:00+00:00",
+      "entry_utc": "2023-08-10T12:30:00+00:00",
+      "exit_utc": "2023-08-11T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "f92e1a355a2e0f171432befedda0dbcfc413e6097df391074c6e936ea360f371",
+          "rows": 68,
+          "sha256": "d4aee4ec6b4de024daa998b3e7e6d192171eb46e6f938881601848fc47a7c91c",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BNTUSDT/BNTUSDT-fundingRate-2023-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "9d9f7625bf284091a590aff1e308f3d9",
+      "contract_symbol": "OXTUSDT",
+      "effective_launch_utc": "2023-08-11T12:00:00+00:00",
+      "entry_utc": "2023-08-11T12:30:00+00:00",
+      "exit_utc": "2023-08-12T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "1dc29e33e3be31ef3184336be2843f99385be5f2a8b290d74963911b056f6903",
+          "rows": 64,
+          "sha256": "63f0ecee57003a8aa4cec6f415ecfdc879609f794d4a1c24be7d1cdc8415181c",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/OXTUSDT/OXTUSDT-fundingRate-2023-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "c2d4706a8bcc4fe9954cf044172e4ec2",
+      "contract_symbol": "SEIUSDT",
+      "effective_launch_utc": "2023-08-17T02:30:00+00:00",
+      "entry_utc": "2023-08-17T03:00:00+00:00",
+      "exit_utc": "2023-08-18T02:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "2021f5e0c623a71b3ef87614efbeebc1e9f126be91a3f12387b703275ce2d930",
+          "rows": 46,
+          "sha256": "fee6be0146e3dd755c84dca06f05d2a047e72171b4ea5155b4d2904d2bf718e7",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SEIUSDT/SEIUSDT-fundingRate-2023-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "524035d6614b448981533ce5f723d4da",
+      "contract_symbol": "CYBERUSDT",
+      "effective_launch_utc": "2023-08-21T12:00:00+00:00",
+      "entry_utc": "2023-08-21T12:30:00+00:00",
+      "exit_utc": "2023-08-22T12:00:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "b4e3e4430fcc4dd3c9837de9fa13174448aed7a4724d8ecc417fefc5ea89c6dd",
+          "rows": 48,
+          "sha256": "2c144a7453cc5dcc5cf36a2d38d84fb8d7ad13dd95fd26f5edfe15e11dd7448b",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/CYBERUSDT/CYBERUSDT-fundingRate-2023-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "60e59bfb64ce4f76a1cf22d5cb7282aa",
+      "contract_symbol": "HIFIUSDT",
+      "effective_launch_utc": "2023-09-16T14:30:00+00:00",
+      "entry_utc": "2023-09-16T15:00:00+00:00",
+      "exit_utc": "2023-09-17T14:30:00+00:00",
+      "funding_events_during_hold": 4,
+      "sources": [
+        {
+          "checksum_sha256": "f1d595e8061f87cb016a27899d3048abd7f8d510d2aa69018b3ff82ae28fbcbe",
+          "rows": 47,
+          "sha256": "e1d92dffd864aaabc0d3672f9fe3b60d58051c72d8b4ac9b001934ef103427ef",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/HIFIUSDT/HIFIUSDT-fundingRate-2023-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "fc3bcf1121494924a67be78e81060ec4",
+      "contract_symbol": "ARKUSDT",
+      "effective_launch_utc": "2023-09-19T16:00:00+00:00",
+      "entry_utc": "2023-09-19T16:30:00+00:00",
+      "exit_utc": "2023-09-20T16:00:00+00:00",
+      "funding_events_during_hold": 2,
+      "sources": [
+        {
+          "checksum_sha256": "e2ce6bee5a9e1c91d87fbbc10708919d40a1eb30a718794c12f7fbd059e6ff87",
+          "rows": 34,
+          "sha256": "3067d1fa6f70cde1c397ccaa368b80cce50ac43a2ba93eb34a6881ad7df25c0a",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ARKUSDT/ARKUSDT-fundingRate-2023-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "c6c680eb50fb4dc9b565a8522c49ffa6",
+      "contract_symbol": "FRONTUSDT",
+      "effective_launch_utc": "2023-09-22T14:30:00+00:00",
+      "entry_utc": "2023-09-22T15:00:00+00:00",
+      "exit_utc": "2023-09-23T14:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "09c6719e88b65c3eb0c350cda762d0b88ba44fa900f353bc2dd7ccb9ff2e5d8a",
+          "rows": 25,
+          "sha256": "68ce5cdf8dae08f93ca8c5572645811a4789c769b76f96782d8faa707e89b039",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/FRONTUSDT/FRONTUSDT-fundingRate-2023-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "155dd1d3b26d48918d75d263833a5d1d",
+      "contract_symbol": "GLMRUSDT",
+      "effective_launch_utc": "2023-09-26T01:30:00+00:00",
+      "entry_utc": "2023-09-26T02:00:00+00:00",
+      "exit_utc": "2023-09-27T01:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "c5ca6e6fba1906296b0cba8af83cf1e086df9ada5ad3d3759527a13f464572b0",
+          "rows": 16,
+          "sha256": "f3ac541d82df49c2a9e7b513ba7934bc7ed71310ee905cc63c3a61b92c727698",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/GLMRUSDT/GLMRUSDT-fundingRate-2023-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "9d38d2eb114b441ead0fc90a75893235",
+      "contract_symbol": "BICOUSDT",
+      "effective_launch_utc": "2023-09-28T12:30:00+00:00",
+      "entry_utc": "2023-09-28T13:00:00+00:00",
+      "exit_utc": "2023-09-29T12:30:00+00:00",
+      "funding_events_during_hold": 3,
+      "sources": [
+        {
+          "checksum_sha256": "83354f7fc6fae28c23d1d5ceb389f9b75d7cfea360196c6ad872d4ee288dcd39",
+          "rows": 8,
+          "sha256": "2e743e3f30cabe8029df00ef43c16031250013b3423b930fc604a78b6f430bf1",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BICOUSDT/BICOUSDT-fundingRate-2023-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "b64ac7bcfca54d2b8042c7aa0cfc5afe",
+      "contract_symbol": "STRAXUSDT",
+      "effective_launch_utc": "2023-10-11T02:30:00+00:00",
+      "entry_utc": "2023-10-11T03:00:00+00:00",
+      "exit_utc": "2023-10-12T02:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "0bfdb4a5205e6d9da31130b27a8d4e6fb057b593edcc874047827f1bd5ad32ee",
+          "rows": 127,
+          "sha256": "96aa78d475993cc63ff6c349526cdbc4ff486484ddb00a6dd409940e96529c1f",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/STRAXUSDT/STRAXUSDT-fundingRate-2023-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "59cba52c3bab4059897ae88d9bbb31cf",
+      "contract_symbol": "LOOMUSDT",
+      "effective_launch_utc": "2023-10-11T14:30:00+00:00",
+      "entry_utc": "2023-10-11T15:00:00+00:00",
+      "exit_utc": "2023-10-12T14:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "6178ef41839cb02f8000298c81930520b59b79590290e3fa1472149c85537fb8",
+          "rows": 123,
+          "sha256": "1e2e9f5c300f2bc46398ca992088fb5dd0706e81173498141ed8ef7c2b4707f6",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LOOMUSDT/LOOMUSDT-fundingRate-2023-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "d956c31e085444c2ba4d97c554318476",
+      "contract_symbol": "BIGTIMEUSDT",
+      "effective_launch_utc": "2023-10-12T14:30:00+00:00",
+      "entry_utc": "2023-10-12T15:00:00+00:00",
+      "exit_utc": "2023-10-13T14:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "6d9da04deb6f18f8c7d3507cb92e6846b175d52da147dc81d526c841abdd113b",
+          "rows": 116,
+          "sha256": "fe734a51df0f1d3fde5580992cb383910abc650f9c528b646ca1e6afa26b400c",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BIGTIMEUSDT/BIGTIMEUSDT-fundingRate-2023-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "175604613129423199f61fda5ffe3615",
+      "contract_symbol": "BONDUSDT",
+      "effective_launch_utc": "2023-10-15T14:30:00+00:00",
+      "entry_utc": "2023-10-15T15:00:00+00:00",
+      "exit_utc": "2023-10-16T14:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "b3c8d3c522f01e47e6c79f38caa00b146d5b4eacbd02ae7b206c93bd7ddde098",
+          "rows": 98,
+          "sha256": "478c220d55db85e28d3e3aca9526d8e3f0c41169ccc5e8f2cbd2329cd271a133",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BONDUSDT/BONDUSDT-fundingRate-2023-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "93710257326b4f33aed7d8b7b73746d1",
+      "contract_symbol": "ORBSUSDT",
+      "effective_launch_utc": "2023-10-17T06:00:00+00:00",
+      "entry_utc": "2023-10-17T06:30:00+00:00",
+      "exit_utc": "2023-10-18T06:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "f133701631ee4986ada62780cf8aa935d37836e4d261166d144963c185ae7999",
+          "rows": 88,
+          "sha256": "64914893507f7502d2b42496d714e61d85eeea09276ebca8500d1d3a95064e6a",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ORBSUSDT/ORBSUSDT-fundingRate-2023-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "21802d4be7ce4e4a880e2990a6775422",
+      "contract_symbol": "BSVUSDT",
+      "effective_launch_utc": "2023-10-20T12:30:00+00:00",
+      "entry_utc": "2023-10-20T13:00:00+00:00",
+      "exit_utc": "2023-10-21T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "1387fc9e0c03ba37ca4f7043252a14680cbe27350885f27e14cbf47fae727077",
+          "rows": 69,
+          "sha256": "b8af86d1675dceabcce3afac5a79e4a66937fb339ad3827269709afdc0b0116b",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BSVUSDT/BSVUSDT-fundingRate-2023-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "cdeaa008a1484ba0974f4359a31d29c3",
+      "contract_symbol": "RIFUSDT",
+      "effective_launch_utc": "2023-10-21T12:30:00+00:00",
+      "entry_utc": "2023-10-21T13:00:00+00:00",
+      "exit_utc": "2023-10-22T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "c5f6b447dd17bf9f47af94e73ed85dd3f5c2b3e824a176ec09e7f3d75e7ef620",
+          "rows": 63,
+          "sha256": "9f18fa8ba4aac63d80f7ccbac775c08e626eb90c9b0f9deca2615e921cdd661c",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/RIFUSDT/RIFUSDT-fundingRate-2023-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "c40a1707de63466f9aa14fd046c75e81",
+      "contract_symbol": "POWRUSDT",
+      "effective_launch_utc": "2023-10-27T02:30:00+00:00",
+      "entry_utc": "2023-10-27T03:00:00+00:00",
+      "exit_utc": "2023-10-28T02:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "0ffc56e23351c8975c299c5b175478114ad5acafd17ef9f3f0944e7ce68e34db",
+          "rows": 31,
+          "sha256": "8844cfbf16d26a830f7b86d35fb9983780251457157400ff9b3afc03c80d13f1",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/POWRUSDT/POWRUSDT-fundingRate-2023-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "5d8c7476197344d087b5af436bfc74ae",
+      "contract_symbol": "SLPUSDT",
+      "effective_launch_utc": "2023-10-31T14:30:00+00:00",
+      "entry_utc": "2023-10-31T15:00:00+00:00",
+      "exit_utc": "2023-11-01T14:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "7d612c06d164339248af9a93a38cf4b0fe9edda3facaca9c703323d072a1e425",
+          "rows": 3,
+          "sha256": "1edf53aed58a9c3a882db94ab561980280338b8cdf91cf94443ba2bcd9404b3f",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SLPUSDT/SLPUSDT-fundingRate-2023-10.zip"
+        },
+        {
+          "checksum_sha256": "5b30b469f3042b95c5979edc7b500567866d1e2b8dde40035f4b1cf167b23d56",
+          "rows": 180,
+          "sha256": "7652d684ed42a5afcec8540fe4b6944d338978a7aab31b8ffa3c5feefe19806a",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SLPUSDT/SLPUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "5e5eab2a19d444898e6961ba33d04849",
+      "contract_symbol": "TIAUSDT",
+      "effective_launch_utc": "2023-10-31T18:00:00+00:00",
+      "entry_utc": "2023-10-31T18:30:00+00:00",
+      "exit_utc": "2023-11-01T18:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "b803d6567bfbdb6d500ca3f561b504e31f238c54a0320ecb447f680d0dbbabaf",
+          "rows": 1,
+          "sha256": "6cd38ad584204daa3b9a7cbcfc67d6d547a86f5763e5e024faf2cbcc9e749618",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TIAUSDT/TIAUSDT-fundingRate-2023-10.zip"
+        },
+        {
+          "checksum_sha256": "c3886bdc553d633127ff3651ce98cd26348ce2e4a44d758ff153cc15ffbd1fa7",
+          "rows": 180,
+          "sha256": "dd9b1179780f0feeddf1fe81752d2fbb7da6f26441155a6a4675e9c1eac12d12",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TIAUSDT/TIAUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "2e53db8e7af34d7dae7310e4a4336cdd",
+      "contract_symbol": "SNTUSDT",
+      "effective_launch_utc": "2023-11-02T12:30:00+00:00",
+      "entry_utc": "2023-11-02T13:00:00+00:00",
+      "exit_utc": "2023-11-03T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "bb383a1381b5ede064a873381ebecbf34cae3c405daa861dc53c01013a655917",
+          "rows": 171,
+          "sha256": "9ae988653e7286965c70169715c97715cee2f91d2543fe6883e2580942e5023d",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SNTUSDT/SNTUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "a33e70c5215841299b4d4614918b93a5",
+      "contract_symbol": "CAKEUSDT",
+      "effective_launch_utc": "2023-11-02T12:45:00+00:00",
+      "entry_utc": "2023-11-02T13:15:00+00:00",
+      "exit_utc": "2023-11-03T12:45:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "cd5e928557becdbe3026d5698a2906d6e060afecca62600d4ebf613b8093ffbc",
+          "rows": 170,
+          "sha256": "aaca66aaf6cb0856f2e0e77ef394668bf29a2fe848c8508f989d912d9fa7b397",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/CAKEUSDT/CAKEUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "afcf1ccc7978458d8474f500da91a00d",
+      "contract_symbol": "MEMEUSDT",
+      "effective_launch_utc": "2023-11-03T12:00:00+00:00",
+      "entry_utc": "2023-11-03T12:30:00+00:00",
+      "exit_utc": "2023-11-04T12:00:00+00:00",
+      "funding_events_during_hold": 5,
+      "sources": [
+        {
+          "checksum_sha256": "10246c6a8598ec7eb64d1c0ca70640da5fb9cff4fd22af5b4214e94ba266733f",
+          "rows": 164,
+          "sha256": "971ffacba98adab82bf0d647bee61731ed079d5a5962207d197057cda2c5e032",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MEMEUSDT/MEMEUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "a45e7c4a2ca44921b13da66f291e22b8",
+      "contract_symbol": "TWTUSDT",
+      "effective_launch_utc": "2023-11-03T14:30:00+00:00",
+      "entry_utc": "2023-11-03T15:00:00+00:00",
+      "exit_utc": "2023-11-04T14:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "15aad07357d98a82c28c39bbc55dbe133a3bb1d2b789a09b9db26db7bf7ebd17",
+          "rows": 165,
+          "sha256": "1b68217d4df938e65a49ad2114782241f52fbba35215cf9d184e9ac3a9869c77",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TWTUSDT/TWTUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "d047f1923f8a40be8aedcc74387f09dc",
+      "contract_symbol": "TOKENUSDT",
+      "effective_launch_utc": "2023-11-03T15:00:00+00:00",
+      "entry_utc": "2023-11-03T15:30:00+00:00",
+      "exit_utc": "2023-11-04T15:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "fa532e35c230d27c4f52172ec362cd6a77f001c61d22cf5b2e1bfa3ceb01e4b5",
+          "rows": 164,
+          "sha256": "42ae2db79ac29e7003467abfd143b4d4f11ba2aa4f19af6a1be53374307bbe68",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TOKENUSDT/TOKENUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "5b64c7eaf295445584f222adfbf8d723",
+      "contract_symbol": "ORDIUSDT",
+      "effective_launch_utc": "2023-11-07T12:30:00+00:00",
+      "entry_utc": "2023-11-07T13:00:00+00:00",
+      "exit_utc": "2023-11-08T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "bf472ce99427bbe3777a75785a45de0a1be87a7914637163f8cc452665e7b5f3",
+          "rows": 140,
+          "sha256": "4a951b1b3b8750b0e4452ba52d100a1bd94d967b14a098b2064372a80262acd0",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ORDIUSDT/ORDIUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "cc99eaae257f4443bfcee68d39092620",
+      "contract_symbol": "STEEMUSDT",
+      "effective_launch_utc": "2023-11-08T14:30:00+00:00",
+      "entry_utc": "2023-11-08T15:00:00+00:00",
+      "exit_utc": "2023-11-09T14:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "39977b3c91c823190cb09c61ce13ebe0e56e9735a77a5eab8805d24b4433f18e",
+          "rows": 134,
+          "sha256": "6420c56ce893af72c87a54011a4233cf2c981c42e59c267a798c9bfbf1a8d6b8",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/STEEMUSDT/STEEMUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "ed2fd215f6884f14a0a321e70f1fa5be",
+      "contract_symbol": "BADGERUSDT",
+      "effective_launch_utc": "2023-11-09T12:30:00+00:00",
+      "entry_utc": "2023-11-09T13:00:00+00:00",
+      "exit_utc": "2023-11-10T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "15cf762f4e5e7c81fa8acd724bfb854b360e236b9962f1f1c171de477e4a1364",
+          "rows": 129,
+          "sha256": "1d03e110c242f8ca7bf2880bec153c00e28b304cdd2d992e6f03a46099cb4adc",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BADGERUSDT/BADGERUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "7af5eefa0e1c433c996aadce389bafe5",
+      "contract_symbol": "ILVUSDT",
+      "effective_launch_utc": "2023-11-10T16:30:00+00:00",
+      "entry_utc": "2023-11-10T17:00:00+00:00",
+      "exit_utc": "2023-11-11T16:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "5ac9ca4aada45d53015612a01237f89fe8f977a84537428f105cac5036a2106c",
+          "rows": 122,
+          "sha256": "5d5ab0ad66f10608b7ce11dbf212c352914981ab03b55fc673ade771019ecdd6",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ILVUSDT/ILVUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "ef915dd89edb4fa7a7438362bfb146d2",
+      "contract_symbol": "NTRNUSDT",
+      "effective_launch_utc": "2023-11-14T12:00:00+00:00",
+      "entry_utc": "2023-11-14T12:30:00+00:00",
+      "exit_utc": "2023-11-15T12:00:00+00:00",
+      "funding_events_during_hold": 5,
+      "sources": [
+        {
+          "checksum_sha256": "34c092ece7b070f8239de7e1bdb9041a0435f54f01651b727495c6c9ff4e0591",
+          "rows": 99,
+          "sha256": "39bbe50c052055524d833e56de2e662a261a6d911012cb2c733fea674a9005b4",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/NTRNUSDT/NTRNUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "d7e84d0cbade4525bd55e61e7ee0f83a",
+      "contract_symbol": "MBLUSDT",
+      "effective_launch_utc": "2023-11-14T15:00:00+00:00",
+      "entry_utc": "2023-11-14T15:30:00+00:00",
+      "exit_utc": "2023-11-15T15:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "3f06585d567f215160cd4751b76c3dfca6cc09f32dca690b4c04851e608c3648",
+          "rows": 98,
+          "sha256": "53d2dad8df03e2902a076de4f77d43512699692d6ac492538f48eda7a77cc351",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MBLUSDT/MBLUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "7cda5be3429d4e1da2ad8e23c120a7fb",
+      "contract_symbol": "KASUSDT",
+      "effective_launch_utc": "2023-11-17T02:00:00+00:00",
+      "entry_utc": "2023-11-17T02:30:00+00:00",
+      "exit_utc": "2023-11-18T02:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "2ba411ec3bfb827583194fa61a3bd501b56d67275e1f6c6ae1ba3923efd4a905",
+          "rows": 85,
+          "sha256": "a9c235bf4b3d9cdd67717a4aea03ec6f4b859aa11c727a6f45126b41c614060d",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/KASUSDT/KASUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "25c05ab82d674c7396eab887d1384b05",
+      "contract_symbol": "BEAMXUSDT",
+      "effective_launch_utc": "2023-11-17T13:30:00+00:00",
+      "entry_utc": "2023-11-17T14:00:00+00:00",
+      "exit_utc": "2023-11-18T13:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "5fc449a35b16de7443188129b7e01e45c342e97c92aa4edf60b79eef5f630634",
+          "rows": 81,
+          "sha256": "b5e60a5baca3c2700320929129b17f4096bd94127bb6ef1c95811f1b217e17bb",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BEAMXUSDT/BEAMXUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "0712d23fc1934e17996a8c7a58716d30",
+      "contract_symbol": "SUPERUSDT",
+      "effective_launch_utc": "2023-11-26T13:00:00+00:00",
+      "entry_utc": "2023-11-26T13:30:00+00:00",
+      "exit_utc": "2023-11-27T13:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "3696bcec34b9df95032d4bb4123e4c80b82d6599e1ea6e07c4a90f07d2e5d3b0",
+          "rows": 26,
+          "sha256": "b663f0b492acfb07b5ec65bf25be62e80d83a2972c86e42ba9d6da15d027be47",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SUPERUSDT/SUPERUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "91deccb2e146483383617db8b8fcaba1",
+      "contract_symbol": "USTCUSDT",
+      "effective_launch_utc": "2023-11-27T12:30:00+00:00",
+      "entry_utc": "2023-11-27T13:00:00+00:00",
+      "exit_utc": "2023-11-28T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "264f92d6ea371d7147a3621c1f36caf7a7bacaab0feed9a0550e961f623af0a7",
+          "rows": 21,
+          "sha256": "8728fe9a7d00777f2f214dfcb6159b04f61d12273756bb1c06b86eb70a86d45d",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/USTCUSDT/USTCUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "fc5b48ff9a6f4d01abd2acff0eee0c83",
+      "contract_symbol": "ONGUSDT",
+      "effective_launch_utc": "2023-11-27T13:00:00+00:00",
+      "entry_utc": "2023-11-27T13:30:00+00:00",
+      "exit_utc": "2023-11-28T13:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "f874889e0c0d4406eed8f4b8c08ab5d9c191dee680db961c1fb442a9d8e3811a",
+          "rows": 20,
+          "sha256": "1a67a4c62fe57b8e61933be8cd17d2f6c9914f845c9fff3cc61835efeb985076",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ONGUSDT/ONGUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "57d1c97e35d84f278b071bd092626f51",
+      "contract_symbol": "ETHWUSDT",
+      "effective_launch_utc": "2023-11-28T12:30:00+00:00",
+      "entry_utc": "2023-11-28T13:00:00+00:00",
+      "exit_utc": "2023-11-29T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "a2a90a474b02e2b41b2f6f52c953fcde9feda768ba2b62cddcf22c658c3bfe7a",
+          "rows": 14,
+          "sha256": "414f5ac16b2fa72314609ed21aa94be2ffc944584f99b16dc59f00b1114ee676",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ETHWUSDT/ETHWUSDT-fundingRate-2023-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "af3cc81ea3fe4547a221244c53c68837",
+      "contract_symbol": "JTOUSDT",
+      "effective_launch_utc": "2023-12-08T10:00:00+00:00",
+      "entry_utc": "2023-12-08T10:30:00+00:00",
+      "exit_utc": "2023-12-09T10:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "4f7538cbffb4269c4c821251e2c513bc134789758ed1be21cebb70a273b3861b",
+          "rows": 141,
+          "sha256": "e75f5b68b3e381fb6505bf74cb175bf1d039c8609a5e5ff61482604318c43488",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/JTOUSDT/JTOUSDT-fundingRate-2023-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "a86323c8ac774e85ba77a497f8f88e7f",
+      "contract_symbol": "1000SATSUSDT",
+      "effective_launch_utc": "2023-12-12T14:00:00+00:00",
+      "entry_utc": "2023-12-12T14:30:00+00:00",
+      "exit_utc": "2023-12-13T14:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "1f1cd5950051edc731506e220d0306c5dcaebb5030afe806d800078ed8e8de23",
+          "rows": 116,
+          "sha256": "5f1ec4007eeed6bf80eba667f8c611e925e7d3ff731fdca66e7d4ef6f53773d4",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/1000SATSUSDT/1000SATSUSDT-fundingRate-2023-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "bc79a7505e2e432b87dfa1e3f4e59f5c",
+      "contract_symbol": "AUCTIONUSDT",
+      "effective_launch_utc": "2023-12-15T13:00:00+00:00",
+      "entry_utc": "2023-12-15T13:30:00+00:00",
+      "exit_utc": "2023-12-16T13:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "8fefbcfedc15af6a215b67bcb68fbc7e8a8455ad3310efe1aa20b25d68e14188",
+          "rows": 98,
+          "sha256": "cd2b660cfafbfabb66731859ef85df1e09e9dde91dda4a45da4cfce8bdbd09c5",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/AUCTIONUSDT/AUCTIONUSDT-fundingRate-2023-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "c6eb2557f7a94f8db24ffda21ef0346e",
+      "contract_symbol": "1000RATSUSDT",
+      "effective_launch_utc": "2023-12-15T14:00:00+00:00",
+      "entry_utc": "2023-12-15T14:30:00+00:00",
+      "exit_utc": "2023-12-16T14:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "bf89d4634d79645e71b4cd4e0aaa15396a99797be910b4c4bd1d0282f9bb8643",
+          "rows": 98,
+          "sha256": "b0b1bae5800e0bc38a212fb746a64b3381723c8c3382ebde0e56bdbb6ea06e6f",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/1000RATSUSDT/1000RATSUSDT-fundingRate-2023-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "e580de0ab2644098bafa59a8eebc1a6a",
+      "contract_symbol": "ACEUSDT",
+      "effective_launch_utc": "2023-12-18T10:00:00+00:00",
+      "entry_utc": "2023-12-18T10:30:00+00:00",
+      "exit_utc": "2023-12-19T10:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "66332f2bb0d1cbbd83c62e3038b2f939c61a5f325bea2f21464baaae04891b3f",
+          "rows": 81,
+          "sha256": "0bc6a8824dc0f94d5da9b0682a49d29863cbca10adc08a42b8d53fc552accd8e",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ACEUSDT/ACEUSDT-fundingRate-2023-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "711588ec360e460d840d7a18472c9617",
+      "contract_symbol": "MOVRUSDT",
+      "effective_launch_utc": "2023-12-26T12:30:00+00:00",
+      "entry_utc": "2023-12-26T13:00:00+00:00",
+      "exit_utc": "2023-12-27T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "a34331128c36e846804882970298749261e7c8240c087c286257ac511979b987",
+          "rows": 32,
+          "sha256": "3efaa0a8a21d19d196739db7afed1c294cd49845828d1d6bb8012f3104fcf709",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MOVRUSDT/MOVRUSDT-fundingRate-2023-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "c4617b2b970b46e5ad70c9c44cb0f6f2",
+      "contract_symbol": "NFPUSDT",
+      "effective_launch_utc": "2023-12-27T13:30:00+00:00",
+      "entry_utc": "2023-12-27T14:00:00+00:00",
+      "exit_utc": "2023-12-28T13:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "63e2e17318f434d7fe2cb6a98f66a709d3793bdf478b7a7bfe064d14f93ddf49",
+          "rows": 26,
+          "sha256": "416122a9a8e2cfa100d5534476e20377b606a65d7cb64945a42a8c8678942ec2",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/NFPUSDT/NFPUSDT-fundingRate-2023-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "5c6cb594550247aea7c93a47c0156b17",
+      "contract_symbol": "WIFUSDT",
+      "effective_launch_utc": "2024-01-18T14:15:00+00:00",
+      "entry_utc": "2024-01-18T14:45:00+00:00",
+      "exit_utc": "2024-01-19T14:15:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "77ab471750c2fb359c1560512cedc550de18996fdccccbdecbcb9ed599490847",
+          "rows": 80,
+          "sha256": "d89fe4ef7f9773dd70693236bce0b8b7045dcd8e0b65cd59026a176447570605",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/WIFUSDT/WIFUSDT-fundingRate-2024-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "af6c1bbbe6ec406c8b2d087fe47c5554",
+      "contract_symbol": "ONDOUSDT",
+      "effective_launch_utc": "2024-01-20T13:00:00+00:00",
+      "entry_utc": "2024-01-20T13:30:00+00:00",
+      "exit_utc": "2024-01-21T13:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "1087b021aac6827d9df9b81f5b2159b27f5e177312192197df430d08d2196fb0",
+          "rows": 68,
+          "sha256": "1ae17840a1b5f055f3815fcbee442433faed9cdd9872a641c25a0fd8774aa62c",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ONDOUSDT/ONDOUSDT-fundingRate-2024-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "835091458d704f878ccdc17c287df31b",
+      "contract_symbol": "LSKUSDT",
+      "effective_launch_utc": "2024-01-25T14:15:00+00:00",
+      "entry_utc": "2024-01-25T14:45:00+00:00",
+      "exit_utc": "2024-01-26T14:15:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "cfc8338fb10ec373742ae7da6284a0800729ad3b2b4e0cbdcb60c4f8e98b3b53",
+          "rows": 38,
+          "sha256": "cb09ff472432e0ee06313201b0952e0dd367ac6c3a9b68be54e7406945165ae6",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LSKUSDT/LSKUSDT-fundingRate-2024-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "527d78a22905461f84c8c85e8b938d4d",
+      "contract_symbol": "ZETAUSDT",
+      "effective_launch_utc": "2024-02-02T08:30:00+00:00",
+      "entry_utc": "2024-02-02T09:00:00+00:00",
+      "exit_utc": "2024-02-03T08:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "cfd2cc03439ba1ec5cf34839e2cd9d7acb40177b17dabb3b0841263850d7793b",
+          "rows": 166,
+          "sha256": "9a8f17cb99a08ccad940e080d0f2355bf77efa549b7bff5bf0d683e1a7c15142",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ZETAUSDT/ZETAUSDT-fundingRate-2024-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "8a72fa2ab4cd474f8e5d62c6158eaeef",
+      "contract_symbol": "OMUSDT",
+      "effective_launch_utc": "2024-02-13T14:00:00+00:00",
+      "entry_utc": "2024-02-13T14:30:00+00:00",
+      "exit_utc": "2024-02-14T14:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "9968e86a34662fd88ced2034285f1b229973a56148c70e98fcfa3ba50cbdad31",
+          "rows": 99,
+          "sha256": "32eee47827336ee4b4782aae090c63825092f10d74addc33458201677cb863b6",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/OMUSDT/OMUSDT-fundingRate-2024-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "521a6a71b21046f2b07b021edfd41b9f",
+      "contract_symbol": "MAVIAUSDT",
+      "effective_launch_utc": "2024-02-21T10:00:00+00:00",
+      "entry_utc": "2024-02-21T10:30:00+00:00",
+      "exit_utc": "2024-02-22T10:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "60f666e68f3897a4042c63352b75862603dc7b451369079b84e0fface45d439f",
+          "rows": 51,
+          "sha256": "15b386e82d337c828d8ee8bb6d9a41d15227dac85453628805c96b8726e93610",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MAVIAUSDT/MAVIAUSDT-fundingRate-2024-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "876c56d9ebbb4b7c8857c3ac766fa141",
+      "contract_symbol": "GLMUSDT",
+      "effective_launch_utc": "2024-02-22T10:00:00+00:00",
+      "entry_utc": "2024-02-22T10:30:00+00:00",
+      "exit_utc": "2024-02-23T10:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "a5e3335ff7d444146f014e276326b785e311e856937c69f12d0efd91ff01b21f",
+          "rows": 46,
+          "sha256": "f6572ef6dd47a052d04736688480549e4836aa4bdf704417a2382d1a0eda3c29",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/GLMUSDT/GLMUSDT-fundingRate-2024-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "57bb7f41d63a44b090b27c3df483344b",
+      "contract_symbol": "TONUSDT",
+      "effective_launch_utc": "2024-03-01T12:30:00+00:00",
+      "entry_utc": "2024-03-01T13:00:00+00:00",
+      "exit_utc": "2024-03-02T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "82c5234f0b83310320578a976b8d578adf32bd263eb63467cf9ede2e7a256d01",
+          "rows": 183,
+          "sha256": "e7a774d425035006b225b868c06d615360a86e07012bcfb73e910e002de38882",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TONUSDT/TONUSDT-fundingRate-2024-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "de48474029954b2bb4c479251dbd6a01",
+      "contract_symbol": "VANRYUSDT",
+      "effective_launch_utc": "2024-03-13T17:30:00+00:00",
+      "entry_utc": "2024-03-13T18:00:00+00:00",
+      "exit_utc": "2024-03-14T17:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "d241472f45b85c650591fe0bda221b58fc50bdd4910e87a29001bbdb774de070",
+          "rows": 110,
+          "sha256": "8a2e1d3d296067970aa5033f3f1aed840047bb6eef93f7ea0b154901ff25a586",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/VANRYUSDT/VANRYUSDT-fundingRate-2024-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "543fca9191ba4f3d937d56035a60699a",
+      "contract_symbol": "BOMEUSDT",
+      "effective_launch_utc": "2024-03-16T12:30:00+00:00",
+      "entry_utc": "2024-03-16T13:00:00+00:00",
+      "exit_utc": "2024-03-17T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "63728751ec1e177eb0959fd614ae1e11cad762bb011b05e16ed7df3ef9e483ea",
+          "rows": 94,
+          "sha256": "8e081bcf8bef36d70a989ca04f53a33b5436f9a2d7717ed62e09599287ae6ea5",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BOMEUSDT/BOMEUSDT-fundingRate-2024-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "03b61187504b4a6fb6b48b63c47f6440",
+      "contract_symbol": "TURBOUSDT",
+      "effective_launch_utc": "2024-05-30T15:30:00+00:00",
+      "entry_utc": "2024-05-30T16:00:00+00:00",
+      "exit_utc": "2024-05-31T15:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "8960348c97e0f1a02a19e9a553b0453b815e199c3fbc46777ccee7afcde65178",
+          "rows": 8,
+          "sha256": "dea6a609f8671b4fe48fc4fd9a5618421ec1eb44648a92cc811d1bfb79586591",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TURBOUSDT/TURBOUSDT-fundingRate-2024-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "a24509568bee43f48fa46501ecfb2264",
+      "contract_symbol": "MEWUSDT",
+      "effective_launch_utc": "2024-06-17T14:00:00+00:00",
+      "entry_utc": "2024-06-17T14:30:00+00:00",
+      "exit_utc": "2024-06-18T14:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "c222d080bdc2badcb749b96b6237a7d86a254e62dda88bf901eba53eeb83bea5",
+          "rows": 80,
+          "sha256": "5eb77b12e950e92385c0db7be1bcddc3617f6fc603417f2691117bf34d6573fd",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MEWUSDT/MEWUSDT-fundingRate-2024-06.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "78925b1330584febb9baca0b45ac8e40",
+      "contract_symbol": "BANANAUSDT",
+      "effective_launch_utc": "2024-08-15T02:00:00+00:00",
+      "entry_utc": "2024-08-15T02:30:00+00:00",
+      "exit_utc": "2024-08-16T02:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "a5680cde2ec099b350749418b5bc4e101c3aaa0cfeb59e1eda9536f00af8e35e",
+          "rows": 103,
+          "sha256": "2f9b88a2e712c6993849ef4dc9ac2185fd41559a489a61f23d35950d29ef7672",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BANANAUSDT/BANANAUSDT-fundingRate-2024-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "016d5773ad3b4d27bb17266161e130a3",
+      "contract_symbol": "SYNUSDT",
+      "effective_launch_utc": "2024-08-16T12:30:00+00:00",
+      "entry_utc": "2024-08-16T13:00:00+00:00",
+      "exit_utc": "2024-08-17T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "80f4216b9b6af3167c8c61716d4652d7b67453b548fb3979a6c79408dc6d6332",
+          "rows": 92,
+          "sha256": "6ffc9574b5a49c0ca962873300dd9a1ce917ba792ea57e52027043e6b7c57c9b",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SYNUSDT/SYNUSDT-fundingRate-2024-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "c580a3bfd1624636849e277ac9b97a4f",
+      "contract_symbol": "SYSUSDT",
+      "effective_launch_utc": "2024-08-19T12:30:00+00:00",
+      "entry_utc": "2024-08-19T13:00:00+00:00",
+      "exit_utc": "2024-08-20T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "2b730a8c429eb21fb03e447b2307074e30dce2589c5c013d1611b6f4529b1e5a",
+          "rows": 75,
+          "sha256": "e3a1dc85812aefb0b9eb8ce6bdf509cb98857995850754e164782405e4aa3b90",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SYSUSDT/SYSUSDT-fundingRate-2024-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "e1ed21ef41494e02ae5c2c4cde57c766",
+      "contract_symbol": "VOXELUSDT",
+      "effective_launch_utc": "2024-08-20T10:30:00+00:00",
+      "entry_utc": "2024-08-20T11:00:00+00:00",
+      "exit_utc": "2024-08-21T10:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "a53d494362868a008893a2fdb2a87da8ae9988c01e3314c62fae062abd81e8f0",
+          "rows": 69,
+          "sha256": "8696b0271602f91e7514d2ce50a4bd2262559a1f7fbc9755bc58a7444d5ae4b2",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/VOXELUSDT/VOXELUSDT-fundingRate-2024-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "679489378226489d8247e4bd3cd5352a",
+      "contract_symbol": "BRETTUSDT",
+      "effective_launch_utc": "2024-08-20T10:35:00+00:00",
+      "entry_utc": "2024-08-20T11:05:00+00:00",
+      "exit_utc": "2024-08-21T10:35:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "41379f3cc3be40d36d7f58cf44f9f8b978208bc8725cf8fb80e2acabb8bc7ede",
+          "rows": 69,
+          "sha256": "b168c3746cc462235e88b8ef8612f33b208078b7ab381a8d6e28ef6a00e249a0",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BRETTUSDT/BRETTUSDT-fundingRate-2024-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "f8b2f7930f6149f29a6dbc3452da0820",
+      "contract_symbol": "ALPACAUSDT",
+      "effective_launch_utc": "2024-08-22T10:30:00+00:00",
+      "entry_utc": "2024-08-22T11:00:00+00:00",
+      "exit_utc": "2024-08-23T10:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "f27c0f5d89a0865c00a5af62c87e04d54dd46c445eba49df571f99d95e7c8c8b",
+          "rows": 57,
+          "sha256": "0bd972859dc9ac93b4baeb7956b8b43926d52800fa32a1efc9fa1cab16fbf641",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ALPACAUSDT/ALPACAUSDT-fundingRate-2024-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "a4e1e35e26b34b6ebbf808cb8ac676d2",
+      "contract_symbol": "VIDTUSDT",
+      "effective_launch_utc": "2024-08-23T09:30:00+00:00",
+      "entry_utc": "2024-08-23T10:00:00+00:00",
+      "exit_utc": "2024-08-24T09:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "0333b4e18c0be084aa883d3c4f15b9215b76e6785efa666c2ffbbd1c92c93564",
+          "rows": 52,
+          "sha256": "ff1b2188c4e797caae64b26b9177d3d824b6c285dc708a6b1a30ce1cd44642d2",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/VIDTUSDT/VIDTUSDT-fundingRate-2024-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "6d9d629b06cc4e958ff964000f7e0dfd",
+      "contract_symbol": "MBOXUSDT",
+      "effective_launch_utc": "2024-08-28T09:30:00+00:00",
+      "entry_utc": "2024-08-28T10:00:00+00:00",
+      "exit_utc": "2024-08-29T09:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "d4feefbf6357277bb1a38715864c5f228096e5efb641ac7dba92e9923475912f",
+          "rows": 21,
+          "sha256": "e5f8b453eda2e3290f6f7c4d56af8641e1a8d262274f5f668427f4c3063119c2",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MBOXUSDT/MBOXUSDT-fundingRate-2024-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "93680bfd97264b48ae322fddd9f76723",
+      "contract_symbol": "CHESSUSDT",
+      "effective_launch_utc": "2024-08-29T07:30:00+00:00",
+      "entry_utc": "2024-08-29T08:00:00+00:00",
+      "exit_utc": "2024-08-30T07:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "aa47ba86a9182875d70c00afa43a3dba238347896c4c42e45c11294d5aae297b",
+          "rows": 16,
+          "sha256": "dfba2049bbd22ecc4475c327e54cf7fa15c6f74f26432c95127e6dc693c33660",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/CHESSUSDT/CHESSUSDT-fundingRate-2024-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "a94c75d222eb4eeab209f805ecc1dd85",
+      "contract_symbol": "FLUXUSDT",
+      "effective_launch_utc": "2024-09-03T07:00:00+00:00",
+      "entry_utc": "2024-09-03T07:30:00+00:00",
+      "exit_utc": "2024-09-04T07:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "f7d4d1619c66f5cce8b5ba8b0864b144519c8e8b17bc8fe230308931194391ec",
+          "rows": 166,
+          "sha256": "48a33689ac463bfa17af4906db358a69fe4186d67d3a89ef13e0a9ed39b697a2",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/FLUXUSDT/FLUXUSDT-fundingRate-2024-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "8313dd4c2dcd4285806f9b57c063154a",
+      "contract_symbol": "BSWUSDT",
+      "effective_launch_utc": "2024-09-05T06:00:00+00:00",
+      "entry_utc": "2024-09-05T06:30:00+00:00",
+      "exit_utc": "2024-09-06T06:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "e4cd290dba0299965b0fc61cf42dbe465c64ea8bc86f5ffaae5b60f4dcac7cc1",
+          "rows": 154,
+          "sha256": "44e9c260633b25a5d3fdc54e81e5fff869cc2dd24e5b4c945c20537601657ed6",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BSWUSDT/BSWUSDT-fundingRate-2024-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "bf54c97c02e146848eb2c4584849a207",
+      "contract_symbol": "QUICKUSDT",
+      "effective_launch_utc": "2024-09-06T05:00:00+00:00",
+      "entry_utc": "2024-09-06T05:30:00+00:00",
+      "exit_utc": "2024-09-07T05:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "b03e2a41105e114ca0c64e245c2e304306b320be3ef6f9fa72e17c0dd45f2db3",
+          "rows": 148,
+          "sha256": "6119e53a868faadd54fa32b2204f9c5b60a5f345e13eedba8586590b389b4390",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/QUICKUSDT/QUICKUSDT-fundingRate-2024-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "30544d1d081a440eb05b576f4c80158c",
+      "contract_symbol": "NEIROETHUSDT",
+      "effective_launch_utc": "2024-09-06T14:00:00+00:00",
+      "entry_utc": "2024-09-06T14:30:00+00:00",
+      "exit_utc": "2024-09-07T14:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "84b3c4d4076bc2a8961fc171151288c89c7007cdd59ade1804e8e50540d605d4",
+          "rows": 146,
+          "sha256": "a8c3d38c44a4cb19273538dd56ddfea7b16cea843684f193ebd4ff60d59eb120",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/NEIROETHUSDT/NEIROETHUSDT-fundingRate-2024-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "1aa255e593f140c3a7d76f543ed4a540",
+      "contract_symbol": "RPLUSDT",
+      "effective_launch_utc": "2024-09-09T12:30:00+00:00",
+      "entry_utc": "2024-09-09T13:00:00+00:00",
+      "exit_utc": "2024-09-10T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "5e2eaef6b41c1e8e66dd3eed3a19fb6d0b95694378430d0aad54dd7cd9a2ef84",
+          "rows": 128,
+          "sha256": "ce7096ecaa2075902f3e570fe24b80c705ac6afa9969165e266e877808f97d73",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/RPLUSDT/RPLUSDT-fundingRate-2024-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "de870af81e8d42cd903b84a97fa5bc91",
+      "contract_symbol": "AERGOUSDT",
+      "effective_launch_utc": "2024-09-10T12:15:00+00:00",
+      "entry_utc": "2024-09-10T12:45:00+00:00",
+      "exit_utc": "2024-09-11T12:15:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "c53b74bd62d4074e03e14ead856dd432520448baafa1b92dd4d1ff38ee00398e",
+          "rows": 122,
+          "sha256": "15ac5effc54b5182332db85b78d965cf381ba67c5d023fd529f8bd1d3ba1b8be",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/AERGOUSDT/AERGOUSDT-fundingRate-2024-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "9b691e1dece149c08d5fc0918d4bb9fb",
+      "contract_symbol": "UXLINKUSDT",
+      "effective_launch_utc": "2024-09-15T15:00:00+00:00",
+      "entry_utc": "2024-09-15T15:30:00+00:00",
+      "exit_utc": "2024-09-16T15:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "99a904b826cd05a9ac41e3b3b7393832626c477eddab30f24cc60bcb2e86363e",
+          "rows": 92,
+          "sha256": "1621ea912be2337196a424e651a84bd435f0a63f386cbfbc13ecfbe0ec65670b",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/UXLINKUSDT/UXLINKUSDT-fundingRate-2024-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "abfcc4f0f4424827925ab6280e02d989",
+      "contract_symbol": "KDAUSDT",
+      "effective_launch_utc": "2024-09-18T13:30:00+00:00",
+      "entry_utc": "2024-09-18T14:00:00+00:00",
+      "exit_utc": "2024-09-19T13:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "4ba5caf22bc234f764c587de73b9fdbf25e54c289847c139bb990acf1d96b405",
+          "rows": 74,
+          "sha256": "cffd432aed570aa4c5dc10bfd91fdb47d58aaa8cd62a184068f539fc5f8c6629",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/KDAUSDT/KDAUSDT-fundingRate-2024-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "967f02731484419086c460185c1be4f8",
+      "contract_symbol": "FIDAUSDT",
+      "effective_launch_utc": "2024-09-19T12:30:00+00:00",
+      "entry_utc": "2024-09-19T13:00:00+00:00",
+      "exit_utc": "2024-09-20T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "8290e2bed48a13cc18dc8c76115060d21ecb9dcef3f48945df47e204b50fc56d",
+          "rows": 68,
+          "sha256": "7d806cd887947a9c370f9a9f829bf8fad53fd5b82473eca0074c859901b69811",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/FIDAUSDT/FIDAUSDT-fundingRate-2024-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "6313150ba4994a3db95d7685931e81be",
+      "contract_symbol": "FIOUSDT",
+      "effective_launch_utc": "2024-09-20T11:30:00+00:00",
+      "entry_utc": "2024-09-20T12:00:00+00:00",
+      "exit_utc": "2024-09-21T11:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "4330126b1d495c34086b1abaec2fafef05b1bf81ade01282527805ae0179b93f",
+          "rows": 63,
+          "sha256": "e08c9abc20b52aee67dd7641ebcf795e5ef570b934c36165d1f84bd441160505",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/FIOUSDT/FIOUSDT-fundingRate-2024-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "5525973324074b1bb539bbf44ced52af",
+      "contract_symbol": "GHSTUSDT",
+      "effective_launch_utc": "2024-09-23T13:00:00+00:00",
+      "entry_utc": "2024-09-23T13:30:00+00:00",
+      "exit_utc": "2024-09-24T13:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "7c94d09e8aca2a97ca19d3ef46cc2551196dbf9f994ad8faddbf7050055f2fd5",
+          "rows": 44,
+          "sha256": "e9c61fe9c6ff88b876cb8f81892c504c669d8d2a074d330887fbb46384931ee1",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/GHSTUSDT/GHSTUSDT-fundingRate-2024-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "c89673cbbb594b24b4b00e482c65b694",
+      "contract_symbol": "LOKAUSDT",
+      "effective_launch_utc": "2024-09-24T11:30:00+00:00",
+      "entry_utc": "2024-09-24T12:00:00+00:00",
+      "exit_utc": "2024-09-25T11:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "404ff7f3bd45e16068293780358bccc3fb6fba641e7461cbfe66d2f1ae3da615",
+          "rows": 39,
+          "sha256": "2adb5f9e97f77e8fe4e21deb17b74395e80196310b7556af82e346d9a9f26f17",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LOKAUSDT/LOKAUSDT-fundingRate-2024-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "a066420d0be84b5c9318e6603c33974e",
+      "contract_symbol": "REIUSDT",
+      "effective_launch_utc": "2024-09-27T11:00:00+00:00",
+      "entry_utc": "2024-09-27T11:30:00+00:00",
+      "exit_utc": "2024-09-28T11:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "10324133b1ebe5a817560ff288a89ce4b31fd338a0eaa78531fe1f15d1b3e400",
+          "rows": 21,
+          "sha256": "69d900f8d363992d768844c4aa274247fa34f27cab6366a2dbd06b900ee21062",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/REIUSDT/REIUSDT-fundingRate-2024-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "525dd04788a54d1eb762330ab7808b82",
+      "contract_symbol": "COSUSDT",
+      "effective_launch_utc": "2024-09-30T13:00:00+00:00",
+      "entry_utc": "2024-09-30T13:30:00+00:00",
+      "exit_utc": "2024-10-01T13:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "96d54acdeb02e4fe363eb8c9d86faa89fce82b935d30afe8f719e26ce112cd2f",
+          "rows": 2,
+          "sha256": "81574ac1ef68a48859e7333f5f0a77e5f2c7f4c371e870724e8403d03e2b8d9a",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/COSUSDT/COSUSDT-fundingRate-2024-09.zip"
+        },
+        {
+          "checksum_sha256": "46be97de8e1f880bf95667e2a99c50ae5af0c14cfa4e4265d5e187ff3aea406e",
+          "rows": 186,
+          "sha256": "67b35533b0ba3ec09c5f099d11858b2fc1c1c5e0d67e557e48addcff13de1a17",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/COSUSDT/COSUSDT-fundingRate-2024-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "b2552cf226ed409990663ea2a8fc089f",
+      "contract_symbol": "DIAUSDT",
+      "effective_launch_utc": "2024-10-02T12:30:00+00:00",
+      "entry_utc": "2024-10-02T13:00:00+00:00",
+      "exit_utc": "2024-10-03T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "b831c5a62eed5d350ceea7ce8ed167d9dcfaf5ecb20a8a2f37368e734e0c0800",
+          "rows": 176,
+          "sha256": "521829d98dcf13fa2058c280002fe83f8304d2d03481f3bc6976a9290ad1d9ce",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/DIAUSDT/DIAUSDT-fundingRate-2024-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "ed43b9b4d8f8471087b6d200bffcb4ff",
+      "contract_symbol": "1000CATUSDT",
+      "effective_launch_utc": "2024-10-21T12:30:00+00:00",
+      "entry_utc": "2024-10-21T13:00:00+00:00",
+      "exit_utc": "2024-10-22T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "41acd9e017d54ba92dcc605049415dead9393ed8ed8282909110f2cda75356ed",
+          "rows": 62,
+          "sha256": "3433da4aba645e5a52398517e1e512902e89aa22b3b31a72695220df658a0cf8",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/1000CATUSDT/1000CATUSDT-fundingRate-2024-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "ff1a4c64f1aa4fef870adc7ef802d700",
+      "contract_symbol": "GOATUSDT",
+      "effective_launch_utc": "2024-10-24T13:30:00+00:00",
+      "entry_utc": "2024-10-24T14:00:00+00:00",
+      "exit_utc": "2024-10-25T13:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "b7273b70e2f85ef3276a28ac99c06b5754c88eeb5878e3c8fcaa88cbab0c3e9f",
+          "rows": 44,
+          "sha256": "c9cf24d36eb8988568f10afa0ce6c462e7b0f6da48591615e205f71f092ebe65",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/GOATUSDT/GOATUSDT-fundingRate-2024-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "5e93f7cd3f9a47e194085f969ac57b85",
+      "contract_symbol": "MOODENGUSDT",
+      "effective_launch_utc": "2024-10-25T10:00:00+00:00",
+      "entry_utc": "2024-10-25T10:30:00+00:00",
+      "exit_utc": "2024-10-26T10:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "3c22f0b056821c30b1c6890caa691cb72fd44f8a879cf8b397f5ed99a263564d",
+          "rows": 39,
+          "sha256": "1aa242e1be847ffce961195f9bddca4659104a560cf6afef993a9feb3fe3eac8",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MOODENGUSDT/MOODENGUSDT-fundingRate-2024-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "7b091f5c38324434a9bdd252e4788442",
+      "contract_symbol": "SAFEUSDT",
+      "effective_launch_utc": "2024-10-25T12:30:00+00:00",
+      "entry_utc": "2024-10-25T13:00:00+00:00",
+      "exit_utc": "2024-10-26T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "64aa3c2ee019beb7dfe4cf61dd4d046de26b8a136e01722cd07abdf36ae638bb",
+          "rows": 38,
+          "sha256": "e77c2e17a852b9b8c62da270cb7fd044f7f23755fb2d572a8e2e4e4c1f9ffb58",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SAFEUSDT/SAFEUSDT-fundingRate-2024-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "dbd05b4f89ae4974912d790eba516b4c",
+      "contract_symbol": "SANTOSUSDT",
+      "effective_launch_utc": "2024-10-28T14:00:00+00:00",
+      "entry_utc": "2024-10-28T14:30:00+00:00",
+      "exit_utc": "2024-10-29T14:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "e8051017243da5e455e9c03d9fffc6aa2e4bbd7a61b6eb218b2935bd89187668",
+          "rows": 20,
+          "sha256": "c52ae400c78648d36f1e00657c492b01ea6b2c28aee3cf7497745ad6dafeca4f",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SANTOSUSDT/SANTOSUSDT-fundingRate-2024-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "bab086aed6a2414a8de85e45b6f54714",
+      "contract_symbol": "TROYUSDT",
+      "effective_launch_utc": "2024-10-31T13:00:00+00:00",
+      "entry_utc": "2024-10-31T13:30:00+00:00",
+      "exit_utc": "2024-11-01T13:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "71022f97519bb39973cda3b4e6d9a6e93380f7f30b4fc772ef34d95a43a42f7a",
+          "rows": 2,
+          "sha256": "2931f775aeecb4471282caeb2f4e01c4a9a10e4298e495477fc758d751821a72",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TROYUSDT/TROYUSDT-fundingRate-2024-10.zip"
+        },
+        {
+          "checksum_sha256": "512c0e0b8735451b0b0902f05b6c6ef0434491c861994dcaef2f6e93c27f7e2f",
+          "rows": 180,
+          "sha256": "25314b25140cbc19e9ef4623c5a7a74c30fb84a78bc444cd7f00950d3a7ef5c4",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TROYUSDT/TROYUSDT-fundingRate-2024-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "a55d38732b34452ab9f78ac8832af59c",
+      "contract_symbol": "PONKEUSDT",
+      "effective_launch_utc": "2024-11-04T12:30:00+00:00",
+      "entry_utc": "2024-11-04T13:00:00+00:00",
+      "exit_utc": "2024-11-05T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "9e287c91e797f7f18c27bedbf92dbbd643bd8b6a6064cb8a2460423ed6907efb",
+          "rows": 158,
+          "sha256": "ef1f8d859021d9e1fc8f7f2959a62b67ff8b5331e6b65864290614f617457ed4",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/PONKEUSDT/PONKEUSDT-fundingRate-2024-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "209355888f0042f788899dd1a04a0052",
+      "contract_symbol": "1000000MOGUSDT",
+      "effective_launch_utc": "2024-11-07T12:30:00+00:00",
+      "entry_utc": "2024-11-07T13:00:00+00:00",
+      "exit_utc": "2024-11-08T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "098f276f0dc62dd3beac618c39e4dc68e29be2df25d33cb2cc486c5ed7fee39b",
+          "rows": 140,
+          "sha256": "1e7d9d2f37a6cd4290711888ca633f168ecd5fc7d1e258ee3f33e790c91134ca",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/1000000MOGUSDT/1000000MOGUSDT-fundingRate-2024-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "e25f171ca86342e9b7c160cc1697a090",
+      "contract_symbol": "DEGENUSDT",
+      "effective_launch_utc": "2024-11-15T11:30:00+00:00",
+      "entry_utc": "2024-11-15T12:00:00+00:00",
+      "exit_utc": "2024-11-16T11:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "8cc2eb328eb2e48dca0d84a56c63f13d5296a3c10dbef0cb394f2e9094685093",
+          "rows": 93,
+          "sha256": "113db41a508e1e8f8ef29482d1bf3ffefd700ce00be9ff2e2b3584cd7a11c752",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/DEGENUSDT/DEGENUSDT-fundingRate-2024-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "ac2a521d90164583bffd0a1be79e4d1f",
+      "contract_symbol": "MOCAUSDT",
+      "effective_launch_utc": "2024-12-16T11:30:00+00:00",
+      "entry_utc": "2024-12-16T12:00:00+00:00",
+      "exit_utc": "2024-12-17T11:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "0eb469882483647a3d03a557c00ceab58db000f3323b445f48be4e4ce3c2d7a2",
+          "rows": 93,
+          "sha256": "9b135cc483fca30fc8788a2e43b6b1774a4dbb2434ab24707f6d83f718ba23ce",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MOCAUSDT/MOCAUSDT-fundingRate-2024-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "c6420ba80fe54282970e1d69cafa56a4",
+      "contract_symbol": "LUMIAUSDT",
+      "effective_launch_utc": "2024-12-18T11:30:00+00:00",
+      "entry_utc": "2024-12-18T12:00:00+00:00",
+      "exit_utc": "2024-12-19T11:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "33b1284120d91f454df38cc90b70a15063e6eae7e7773285777f97f0e46a55da",
+          "rows": 81,
+          "sha256": "564dd670205c0a84ed06b67145bbc9abdd53dbd6b4876f5e75d940abcd014405",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LUMIAUSDT/LUMIAUSDT-fundingRate-2024-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "3711e9a08327401780ef31aea01ead1b",
+      "contract_symbol": "HIVEUSDT",
+      "effective_launch_utc": "2024-12-23T11:30:00+00:00",
+      "entry_utc": "2024-12-23T12:00:00+00:00",
+      "exit_utc": "2024-12-24T11:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "3536a55f0d963cc527dfe339b62efae66f37c4ef917134a23c068e7535dd6d66",
+          "rows": 51,
+          "sha256": "6771ef6ffc6cb8b7f50cf974c63cb88dc236ce9770489b0ed75c9dfc38b4f991",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/HIVEUSDT/HIVEUSDT-fundingRate-2024-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "a9c8bddb0f544726b4401718ee116ba7",
+      "contract_symbol": "DEXEUSDT",
+      "effective_launch_utc": "2024-12-24T11:30:00+00:00",
+      "entry_utc": "2024-12-24T12:00:00+00:00",
+      "exit_utc": "2024-12-25T11:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "3c16fe140bdeac04a16359a31a4720fcaa438f6261d49de53a1b84e54fee714a",
+          "rows": 45,
+          "sha256": "ed2b40891f303991dc2e682322cd60ca563deba89a7694dfe7e53710aacbba12",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/DEXEUSDT/DEXEUSDT-fundingRate-2024-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "6bc1e2d898e7449da0f94fb63b7ff952",
+      "contract_symbol": "SONICUSDT",
+      "effective_launch_utc": "2025-01-08T07:00:00+00:00",
+      "entry_utc": "2025-01-08T07:30:00+00:00",
+      "exit_utc": "2025-01-09T07:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "b1a1404ed88e2c41f26b27d470d3461affd423986ea550a5b436150df25ada0c",
+          "rows": 142,
+          "sha256": "e7586446b5090bf5c2efdae08d43fdbb8e28f90279f804eeaef2efe0d3194e5d",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SONICUSDT/SONICUSDT-fundingRate-2025-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "cdaaf231d42d4946a755b31a85019526",
+      "contract_symbol": "PROMUSDT",
+      "effective_launch_utc": "2025-01-15T12:30:00+00:00",
+      "entry_utc": "2025-01-15T13:00:00+00:00",
+      "exit_utc": "2025-01-16T12:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "99f97fd5531f1d9dddb2bd807fcae85fd9de9443ebb2660a4769c33aa623ac30",
+          "rows": 98,
+          "sha256": "320607e19357117cac888f8f6432de2776af90cad9f0c41d9ba52676c5f1b33e",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/PROMUSDT/PROMUSDT-fundingRate-2025-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "82ac4437417c4876895c7262a4245bf0",
+      "contract_symbol": "TRUMPUSDT",
+      "effective_launch_utc": "2025-01-18T13:00:00+00:00",
+      "entry_utc": "2025-01-18T13:30:00+00:00",
+      "exit_utc": "2025-01-19T13:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "e868292af119d3c7ce2af113828eee254c72c32e9996180ebc90efe427fb57c9",
+          "rows": 80,
+          "sha256": "3b74814a60646fa808e06e8c75622587c252cac39bff77f20d02157ce61e2155",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/TRUMPUSDT/TRUMPUSDT-fundingRate-2025-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "4587fb07ff3d42af85f5ccfa94c2e97c",
+      "contract_symbol": "MELANIAUSDT",
+      "effective_launch_utc": "2025-01-20T09:30:00+00:00",
+      "entry_utc": "2025-01-20T10:00:00+00:00",
+      "exit_utc": "2025-01-21T09:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "9993e3393bdd4a18de0566065f3176afe24d41113a4f888932f502485488ed77",
+          "rows": 69,
+          "sha256": "8ba830be9ae724b859be34b004c32406e7891f7b331be70fbcba79cb0415c20b",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MELANIAUSDT/MELANIAUSDT-fundingRate-2025-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "8fec694cfde14cc281e66970b1ebb065",
+      "contract_symbol": "VTHOUSDT",
+      "effective_launch_utc": "2025-01-22T09:30:00+00:00",
+      "entry_utc": "2025-01-22T10:00:00+00:00",
+      "exit_utc": "2025-01-23T09:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "93c1963e4b5d03f1292ad4665a2f8f6013512b9b2464393d03e3835551cae3bc",
+          "rows": 57,
+          "sha256": "b1b7dc60a651ee00b793382436992da32b0e53a4781883f28ebd6d1566ed558f",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/VTHOUSDT/VTHOUSDT-fundingRate-2025-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "d07c58c0c6c6475f891161e77b4e6153",
+      "contract_symbol": "VVVUSDT",
+      "effective_launch_utc": "2025-01-29T08:15:00+00:00",
+      "entry_utc": "2025-01-29T08:45:00+00:00",
+      "exit_utc": "2025-01-30T08:15:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "135a9de5b67eff7ebf5569b96e8bf0396316e8ab25cb378575f18a4aae21d0dd",
+          "rows": 16,
+          "sha256": "2197819d43b27c3f157759d3ebf77b535ed821fb27215cadbe5888bbdba4e2cc",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/VVVUSDT/VVVUSDT-fundingRate-2025-01.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "10e7ffb4ea4c4b93a70b0fa55fbed8ce",
+      "contract_symbol": "B3USDT",
+      "effective_launch_utc": "2025-02-13T11:30:00+00:00",
+      "entry_utc": "2025-02-13T12:00:00+00:00",
+      "exit_utc": "2025-02-14T11:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "124bc70b00b098f8c3e7d7641c78dcf7dcd348e20d7184b540eda2e0fca9fd4e",
+          "rows": 93,
+          "sha256": "a50211ac075fdbf036c8d9cb77d0448f25333cdd9403d73d043ed70843d2d33d",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/B3USDT/B3USDT-fundingRate-2025-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "1282745acaba40c78f68b6adbefe3bc9",
+      "contract_symbol": "IPUSDT",
+      "effective_launch_utc": "2025-02-13T17:00:00+00:00",
+      "entry_utc": "2025-02-13T17:30:00+00:00",
+      "exit_utc": "2025-02-14T17:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "6d5f9f22b9b44bfe01e2e34a9b717440ea9446e3c7d52c7df33d8b56d917a43a",
+          "rows": 92,
+          "sha256": "69db8f9bfd9380a6aa87cb9ee46df39d739e47add10730ac80e3ceedde251496",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/IPUSDT/IPUSDT-fundingRate-2025-02.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "08e0ea0b2c534dffab50f42c3776895c",
+      "contract_symbol": "VICUSDT",
+      "effective_launch_utc": "2025-03-12T17:00:00+00:00",
+      "entry_utc": "2025-03-12T17:30:00+00:00",
+      "exit_utc": "2025-03-13T17:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "09f2eec93fbe151d8b05066c144fa11712cdd0d38f3768ac1d3987ef4218f45b",
+          "rows": 115,
+          "sha256": "6cc36b5f25e46b3c00435863d832d9e363fe1419f5c602f4e3d6b1da69f07eec",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/VICUSDT/VICUSDT-fundingRate-2025-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "407190c3e5894c679fb4dc1cd7de5982",
+      "contract_symbol": "PAXGUSDT",
+      "effective_launch_utc": "2025-03-27T10:30:00+00:00",
+      "entry_utc": "2025-03-27T11:00:00+00:00",
+      "exit_utc": "2025-03-28T10:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "cc86b35da931fb961c2f67641bb6342a555e5d13c5c802c11fbced40d2ac1a4c",
+          "rows": 28,
+          "sha256": "7261c6e6c57662b31a4d100982daeb744bb94d272a390900ef1f4c6d37f46022",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/PAXGUSDT/PAXGUSDT-fundingRate-2025-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "3175d8e47b044b48be5439c14f32b194",
+      "contract_symbol": "WALUSDT",
+      "effective_launch_utc": "2025-03-27T15:30:00+00:00",
+      "entry_utc": "2025-03-27T16:00:00+00:00",
+      "exit_utc": "2025-03-28T15:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "14ce0dff99ba848403a21b23e5d332cd96e1494edd90318bcaff68ec4782785f",
+          "rows": 26,
+          "sha256": "19a521133192f694458ac10dea5980b4078b791b00e6499ee9af0f62d498f44a",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/WALUSDT/WALUSDT-fundingRate-2025-03.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "6fa586322cfa4cdf899255841fee5a94",
+      "contract_symbol": "ATHUSDT",
+      "effective_launch_utc": "2025-04-02T15:45:00+00:00",
+      "entry_utc": "2025-04-02T16:15:00+00:00",
+      "exit_utc": "2025-04-03T15:45:00+00:00",
+      "funding_events_during_hold": 5,
+      "sources": [
+        {
+          "checksum_sha256": "9286e7a59282e7e16781899d349b92cca246f6183b7cee9041667d767a47f96b",
+          "rows": 170,
+          "sha256": "ed7d4bca8f7fb01277439efbd446f53bb9d6f75bf9a50cce16bf5abe01cd6d32",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ATHUSDT/ATHUSDT-fundingRate-2025-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "05d2c3270470451bb1238132dc93cf34",
+      "contract_symbol": "FORTHUSDT",
+      "effective_launch_utc": "2025-04-08T08:30:00+00:00",
+      "entry_utc": "2025-04-08T09:00:00+00:00",
+      "exit_utc": "2025-04-09T08:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "8ab9239fd794f5946ef69e272db53943908a71ff8b74b1116fe3724c92e2250c",
+          "rows": 136,
+          "sha256": "f7a584d1afb3d68958f5a4594b50a9a92d0ecbb4caee9d81ff9cb454a7c0a151",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/FORTHUSDT/FORTHUSDT-fundingRate-2025-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "37d3b9a537ad4edfa5d847877c2bce32",
+      "contract_symbol": "PROMPTUSDT",
+      "effective_launch_utc": "2025-04-11T06:30:00+00:00",
+      "entry_utc": "2025-04-11T07:00:00+00:00",
+      "exit_utc": "2025-04-12T06:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "5776078aa1e458ed0b4163c44f9b86aef53b77652d427483386a5ed023693929",
+          "rows": 118,
+          "sha256": "2fbdd044023feb546058d893256999ec7cdc44e98d1debdc826a7507fc618102",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/PROMPTUSDT/PROMPTUSDT-fundingRate-2025-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "c3f1c445148049f8a5cbe3c152753fea",
+      "contract_symbol": "XCNUSDT",
+      "effective_launch_utc": "2025-04-11T15:30:00+00:00",
+      "entry_utc": "2025-04-11T16:00:00+00:00",
+      "exit_utc": "2025-04-12T15:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "abbe04c1973739b8baaf18cb7e2143fb7cc8035c3e833bb43436661690a19a67",
+          "rows": 116,
+          "sha256": "b77011658ed33dab0e1fb3837a744ce29f61f9344865f4e35a2bbd05c8b855e8",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/XCNUSDT/XCNUSDT-fundingRate-2025-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "639d650204914c4f86c20e71c61228dd",
+      "contract_symbol": "BANKUSDT",
+      "effective_launch_utc": "2025-04-18T18:30:00+00:00",
+      "entry_utc": "2025-04-18T19:00:00+00:00",
+      "exit_utc": "2025-04-19T18:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "11911a006cc03c368d0d25ea7c741b421e1c20e2b4a78636d70f8be8e26eaa62",
+          "rows": 73,
+          "sha256": "9265d3522d00e11526964a268aa42fed56fbe8bc968db60af2c81eb648446e66",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BANKUSDT/BANKUSDT-fundingRate-2025-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "96c5a17661a2488f894189ad4ab3cb83",
+      "contract_symbol": "DEEPUSDT",
+      "effective_launch_utc": "2025-04-22T08:30:00+00:00",
+      "entry_utc": "2025-04-22T09:00:00+00:00",
+      "exit_utc": "2025-04-23T08:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "3b40d50df19c197b2836d795be93c9d847b763958ecef255a29632a4863fb88a",
+          "rows": 51,
+          "sha256": "c19e3638848685aa745e769b856f730a0eed9691c2f6f9ac7afdb3632ab0d05a",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/DEEPUSDT/DEEPUSDT-fundingRate-2025-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "88b67d724cf64f3f9fd6b92ea0f91620",
+      "contract_symbol": "JSTUSDT",
+      "effective_launch_utc": "2025-04-28T09:30:00+00:00",
+      "entry_utc": "2025-04-28T10:00:00+00:00",
+      "exit_utc": "2025-04-29T09:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "bcf07d6a9ec8de8c9a4fd78a32d29f3bfda40dc7a808ef0ca9ffc10f084aee96",
+          "rows": 15,
+          "sha256": "7484ca1f1fa3e56f349e0240cd7b72f0c1daf00b177ca5d2dd67732029d85f25",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/JSTUSDT/JSTUSDT-fundingRate-2025-04.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "191429f0e35b475d9a8159ffa63379d1",
+      "contract_symbol": "AGTUSDT",
+      "effective_launch_utc": "2025-05-20T10:30:00+00:00",
+      "entry_utc": "2025-05-20T11:00:00+00:00",
+      "exit_utc": "2025-05-21T10:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "a0a05c86222b0de3deb6eaee7fa5724982427421875b4c4d496c81e0e00dc5a1",
+          "rows": 69,
+          "sha256": "25ffc94a5c248ecf28720558a01b3464129f7e9780c53343f45f363e7d38f17a",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/AGTUSDT/AGTUSDT-fundingRate-2025-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "52c6f34173e44f898764fb45e9dbb4ca",
+      "contract_symbol": "BUSDT",
+      "effective_launch_utc": "2025-05-22T16:30:00+00:00",
+      "entry_utc": "2025-05-22T17:00:00+00:00",
+      "exit_utc": "2025-05-23T16:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "07ab283d94740b84e93bf21f727ce38c5223e3be28d5ee046c95538a9bd0d6f3",
+          "rows": 56,
+          "sha256": "3f509635b6eab1cd75ae2801e2cc56f41ae907fa437f5716419198dc0ec78a1d",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BUSDT/BUSDT-fundingRate-2025-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "282da00874f841d39a90929a50e883f4",
+      "contract_symbol": "SOONUSDT",
+      "effective_launch_utc": "2025-05-23T08:30:00+00:00",
+      "entry_utc": "2025-05-23T09:00:00+00:00",
+      "exit_utc": "2025-05-24T08:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "b38f57da1be644046b70bac06dae2e8b5ed330bc8a6f11f7d083f20ebc949b83",
+          "rows": 52,
+          "sha256": "526409f1c5921972457b2e39a13bc56ed82badc0045c223f95099369c4392325",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/SOONUSDT/SOONUSDT-fundingRate-2025-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "90c9ef3a52a4420b8b8480dd9aeecc9b",
+      "contract_symbol": "MERLUSDT",
+      "effective_launch_utc": "2025-05-29T08:30:00+00:00",
+      "entry_utc": "2025-05-29T09:00:00+00:00",
+      "exit_utc": "2025-05-30T08:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "bcbcaf0df8ca62ff28e0d7a7e7018caf233d0e7734732d0857f4e7470a81f0e9",
+          "rows": 15,
+          "sha256": "987002079851e00a0f44b85045dbcb5f055b424424b07f71a553a44b505c74ad",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MERLUSDT/MERLUSDT-fundingRate-2025-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "9166fe6f7b8a4b438262df3a040b007b",
+      "contract_symbol": "HYPEUSDT",
+      "effective_launch_utc": "2025-05-30T10:30:00+00:00",
+      "entry_utc": "2025-05-30T11:00:00+00:00",
+      "exit_utc": "2025-05-31T10:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "aeac7d674b34094fed6543905688617c71d7b3093420edc8d41683aa09207513",
+          "rows": 9,
+          "sha256": "aa0ed4470dc5e3894832ab74e09931c8522c2ca9352d40a14ac24ac8fc594718",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/HYPEUSDT/HYPEUSDT-fundingRate-2025-05.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "9d12cbfb72bb46e6835313471b6b3c85",
+      "contract_symbol": "1000000BOBUSDT",
+      "effective_launch_utc": "2025-06-05T08:30:00+00:00",
+      "entry_utc": "2025-06-05T09:00:00+00:00",
+      "exit_utc": "2025-06-06T08:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "b266f6214a186c2fe9c41ec56e0898d6a7c77992adc962b7334a9d5a377eabc0",
+          "rows": 154,
+          "sha256": "f93cbe5639b566ceccd35a3231e0cf84f5945c3d5f38bad488133316489bb58e",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/1000000BOBUSDT/1000000BOBUSDT-fundingRate-2025-06.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "f123a26bb0ae488b9f94e2571b2976aa",
+      "contract_symbol": "LAUSDT",
+      "effective_launch_utc": "2025-06-05T09:00:00+00:00",
+      "entry_utc": "2025-06-05T09:30:00+00:00",
+      "exit_utc": "2025-06-06T09:00:00+00:00",
+      "funding_events_during_hold": 21,
+      "sources": [
+        {
+          "checksum_sha256": "e9c52cdeb7e29d74afbc680636e4e8aaa9e03ffc88eef7aa3ef6ecff281079cf",
+          "rows": 613,
+          "sha256": "21f0d8611ba3a849041c0579b2d2f36430bdd2c5f654eb041a415c3fd8179493",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/LAUSDT/LAUSDT-fundingRate-2025-06.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "80889caa7146492f9de2a2627fa30a4d",
+      "contract_symbol": "OLUSDT",
+      "effective_launch_utc": "2025-06-25T11:30:00+00:00",
+      "entry_utc": "2025-06-25T12:00:00+00:00",
+      "exit_utc": "2025-06-26T11:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "41ee38c279df5f597f77de4476f59d139ba1fea416c8badad0abbcf2120f0fa3",
+          "rows": 33,
+          "sha256": "869aa0b5f4f7a6cedd23c88d4965ca18ebb87bb5e9308e8aa76c94e476b34bd4",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/OLUSDT/OLUSDT-fundingRate-2025-06.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "39daafed88564fe08d932f470e00a810",
+      "contract_symbol": "MUSDT",
+      "effective_launch_utc": "2025-07-07T09:30:00+00:00",
+      "entry_utc": "2025-07-07T10:00:00+00:00",
+      "exit_utc": "2025-07-08T09:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "ce58f0716b4bd891476feeb097ec6f58c4f9853144ca9d53ffa64fad881204c0",
+          "rows": 363,
+          "sha256": "f94ccaf052a069764bfb6b878ea947f5059e41a27b70caf370c4fe5b2cdf277f",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/MUSDT/MUSDT-fundingRate-2025-07.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "76c269080e8247fea630b60c7449532e",
+      "contract_symbol": "USELESSUSDT",
+      "effective_launch_utc": "2025-08-15T12:15:00+00:00",
+      "entry_utc": "2025-08-15T12:45:00+00:00",
+      "exit_utc": "2025-08-16T12:15:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "1d5987c9c4bdd3f760cca78dfc0f56903de3c349c219ae0511b6438c7163a093",
+          "rows": 99,
+          "sha256": "b8a33da633766015a3189e5d1fbd0e5edc024d9f28acfaf0763910e187083384",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/USELESSUSDT/USELESSUSDT-fundingRate-2025-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "9863fef7b0de4928882d0deb0e8b7171",
+      "contract_symbol": "CUDISUSDT",
+      "effective_launch_utc": "2025-08-20T11:15:00+00:00",
+      "entry_utc": "2025-08-20T11:45:00+00:00",
+      "exit_utc": "2025-08-21T11:15:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "00715af10fa80d8179e6ad65e252f01b1ca685c1aef2e4b30ca057e30880dea2",
+          "rows": 69,
+          "sha256": "cce330c2e78875f02e8addbd2523bc0f0eac715edf6f20a325d917b73d903d42",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/CUDISUSDT/CUDISUSDT-fundingRate-2025-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "3b5c8e367af94234a3bad81bbe1f58e7",
+      "contract_symbol": "BASUSDT",
+      "effective_launch_utc": "2025-08-26T13:30:00+00:00",
+      "entry_utc": "2025-08-26T14:00:00+00:00",
+      "exit_utc": "2025-08-27T13:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "98ae8246b425930e921859b1c36eea89e748998ed34c6bf039780c8e0cdf56d6",
+          "rows": 32,
+          "sha256": "a9ca900d0897042035cd189703b8a122ff878997c37dd43963cafbb8733c2660",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BASUSDT/BASUSDT-fundingRate-2025-08.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "4426d75b5b7f47f89a11f622739d6186",
+      "contract_symbol": "XPINUSDT",
+      "effective_launch_utc": "2025-09-12T08:00:00+00:00",
+      "entry_utc": "2025-09-12T08:30:00+00:00",
+      "exit_utc": "2025-09-13T08:00:00+00:00",
+      "funding_events_during_hold": 5,
+      "sources": [
+        {
+          "checksum_sha256": "578ad14a65d295677f2a1fa4d1cd4fa6d84563d9aa80fc1ced392dc8be4e3e6a",
+          "rows": 112,
+          "sha256": "bfccb533ce6b5232198ac8bbf4cd936da21180fea3e2905174e5d163ae297aa4",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/XPINUSDT/XPINUSDT-fundingRate-2025-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "c35543f806514588b13949a637d75bcd",
+      "contract_symbol": "FLUIDUSDT",
+      "effective_launch_utc": "2025-09-24T10:15:00+00:00",
+      "entry_utc": "2025-09-24T10:45:00+00:00",
+      "exit_utc": "2025-09-25T10:15:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "9727de3cfbba41460dbbdf5900facae8e2abd7e3a7a7f5a7a0f8e8eda981bd27",
+          "rows": 39,
+          "sha256": "dbb6215d374be79d55a65a362e6df8a157b0c13a7b068f325faccb3e95c9b2cb",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/FLUIDUSDT/FLUIDUSDT-fundingRate-2025-09.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "17fabba926004325b780c4d6883f0729",
+      "contract_symbol": "4USDT",
+      "effective_launch_utc": "2025-10-08T11:30:00+00:00",
+      "entry_utc": "2025-10-08T12:00:00+00:00",
+      "exit_utc": "2025-10-09T11:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "c75e91fa57ec4e2b9657135084227424e96f8c78b92cdad420a0df3992d2b708",
+          "rows": 141,
+          "sha256": "e43c76b9941a4167e2b9aa3bd66855dedf99c817ed379b06a313a0cd694ee79e",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/4USDT/4USDT-fundingRate-2025-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "8272526b66b042dfbfbd7b717f3d4490",
+      "contract_symbol": "GIGGLEUSDT",
+      "effective_launch_utc": "2025-10-09T09:45:00+00:00",
+      "entry_utc": "2025-10-09T10:15:00+00:00",
+      "exit_utc": "2025-10-10T09:45:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "faf23d968a4bb55c49ed9f6b75139fd2ed58a1015141b417891f1c58730c6a90",
+          "rows": 135,
+          "sha256": "3114c5c360ef02aaca7001c1179498b24ae91c29757075bf65935d93a6ad6a7f",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/GIGGLEUSDT/GIGGLEUSDT-fundingRate-2025-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "eedd30f534f94583b64db6ba7f375ac0",
+      "contract_symbol": "ATUSDT",
+      "effective_launch_utc": "2025-10-29T11:30:00+00:00",
+      "entry_utc": "2025-10-29T12:00:00+00:00",
+      "exit_utc": "2025-10-30T11:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "b2ba7f7f14ad46c5721ad01510f97af20f39658799ae6724c2a36c5c32160e8d",
+          "rows": 15,
+          "sha256": "56237648d830065e949814a60f96c6708acb7d2d66dd67344c86d2bcc1c762e1",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/ATUSDT/ATUSDT-fundingRate-2025-10.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "36c4f838c82b4f81920d5adc958d9a53",
+      "contract_symbol": "BOBUSDT",
+      "effective_launch_utc": "2025-11-21T10:45:00+00:00",
+      "entry_utc": "2025-11-21T11:15:00+00:00",
+      "exit_utc": "2025-11-22T10:45:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "4419d3b84f1f6632b0e15a9717ee61bda2eed8ecb0fa891e9967e29707e1ef5d",
+          "rows": 57,
+          "sha256": "1d7bbf7375ddab6743e3643149447787bca464a8ee2050de9d1784e5c382fd2b",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/BOBUSDT/BOBUSDT-fundingRate-2025-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "302095391f0f43c0a6d206b3a10c4e78",
+      "contract_symbol": "IRYSUSDT",
+      "effective_launch_utc": "2025-11-26T16:00:00+00:00",
+      "entry_utc": "2025-11-26T16:30:00+00:00",
+      "exit_utc": "2025-11-27T16:00:00+00:00",
+      "funding_events_during_hold": 5,
+      "sources": [
+        {
+          "checksum_sha256": "e2ee8bc47d3d6226c06e15f4a3e25e913c5a2bfc4a3c22e80facfa33b8b7fb97",
+          "rows": 26,
+          "sha256": "ee216ed1ccf4079356ea87f954a935235903d139fff101c04cb03ceeda4ed5e3",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/IRYSUSDT/IRYSUSDT-fundingRate-2025-11.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "76379c0d6b7f4fc4861a734db668803a",
+      "contract_symbol": "RLSUSDT",
+      "effective_launch_utc": "2025-12-02T10:00:00+00:00",
+      "entry_utc": "2025-12-02T10:30:00+00:00",
+      "exit_utc": "2025-12-03T10:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "ad6b94be42133b06a9dcc9dab5240f5f245ab81e811cbad3453cee5c4f39aa6d",
+          "rows": 177,
+          "sha256": "2a8021a41be509d12a7785e7ee7a5ccec4bc65a6ab045e93bc6b31293f85f9cc",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/RLSUSDT/RLSUSDT-fundingRate-2025-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "97c003f1e70f497e98f606ae8b3f1822",
+      "contract_symbol": "POWERUSDT",
+      "effective_launch_utc": "2025-12-06T09:00:00+00:00",
+      "entry_utc": "2025-12-06T09:30:00+00:00",
+      "exit_utc": "2025-12-07T09:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "ea688828c9911a4d8fb4f11fac51d5b650d0773a85ecce2eff09e29f9b4a1e65",
+          "rows": 153,
+          "sha256": "5d004f9c52c0edd1549c537636b347813ed1ad2dd0dffb98451182439cbbf724",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/POWERUSDT/POWERUSDT-fundingRate-2025-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "070db7effe984b69bd4bf2240cee4487",
+      "contract_symbol": "WETUSDT",
+      "effective_launch_utc": "2025-12-10T07:00:00+00:00",
+      "entry_utc": "2025-12-10T07:30:00+00:00",
+      "exit_utc": "2025-12-11T07:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "91c2b208be5ec1810402d551c061fb4ef0a611e7422378ac08feb9b63a6b1a56",
+          "rows": 427,
+          "sha256": "eccbe6f26cb720be46d8fc8a1c895f29916b15a2f1c990052f81b902dd0b6c2c",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/WETUSDT/WETUSDT-fundingRate-2025-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "675d519f99d34af29b4225a70a7995fa",
+      "contract_symbol": "NIGHTUSDT",
+      "effective_launch_utc": "2025-12-10T11:00:00+00:00",
+      "entry_utc": "2025-12-10T11:30:00+00:00",
+      "exit_utc": "2025-12-11T11:00:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "8ef6af41841bf0f7e7731bad6114776648975d3383a7e5c217e1f838acd08963",
+          "rows": 129,
+          "sha256": "1c7e99955bba164bd399d314e3defead2bf5f128ea0e533f4456b1990457de11",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/NIGHTUSDT/NIGHTUSDT-fundingRate-2025-12.zip"
+        }
+      ]
+    },
+    {
+      "article_code": "51aa167664c542eb857533e11eb213bc",
+      "contract_symbol": "RAVEUSDT",
+      "effective_launch_utc": "2025-12-14T15:30:00+00:00",
+      "entry_utc": "2025-12-14T16:00:00+00:00",
+      "exit_utc": "2025-12-15T15:30:00+00:00",
+      "funding_events_during_hold": 6,
+      "sources": [
+        {
+          "checksum_sha256": "161821f9666ca14d393e9381876c36a730615cc1e2073a7ec0468f7de55a0ad1",
+          "rows": 104,
+          "sha256": "36e6501860700f49bbb3f4ebbb4bebd1e521e5101029e26a1a4df25447d011d4",
+          "source": "checksum_zip",
+          "url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/RAVEUSDT/RAVEUSDT-fundingRate-2025-12.zip"
+        }
+      ]
+    }
+  ],
+  "source_integrity_only_no_strategy_return_calculated": true,
+  "zero_funding_event_holds": 0
+}
