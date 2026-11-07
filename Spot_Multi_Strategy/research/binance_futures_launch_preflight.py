@@ -122,12 +122,14 @@ def inventory() -> dict:
         detail, digest = _detail(article["code"])
         if detail.get("code") != article["code"] or detail.get("id") != article["id"]:
             raise SourceFailure(f"detail identity mismatch {article['code']}")
-        if detail.get("publishDate") != article["release_date_ms"]:
-            raise SourceFailure(f"publication date mismatch {article['code']}")
+        detail_publish_ms = detail.get("publishDate")
+        if type(detail_publish_ms) is not int or detail_publish_ms <= 0:
+            raise SourceFailure(f"invalid detail publication date {article['code']}")
         if not isinstance(detail.get("body"), str):
             raise SourceFailure(f"missing article body {article['code']}")
         prose = _prose(detail["body"])
-        publication = datetime.fromtimestamp(article["release_date_ms"] / 1000, timezone.utc)
+        publication = datetime.fromtimestamp(
+            max(article["release_date_ms"], detail_publish_ms) / 1000, timezone.utc)
         stamps = []
         for match in UTC_DATE.finditer(prose[:1800]):
             try:
@@ -136,7 +138,9 @@ def inventory() -> dict:
                 pass
         launch = stamps[0] if stamps else None
         status = "accepted"
-        if launch is None:
+        if abs(detail_publish_ms - article["release_date_ms"]) > 60_000:
+            status = "publication_date_disagreement_over_60s"
+        elif launch is None:
             status = "no_utc_schedule"
         elif not publication <= launch <= publication + timedelta(days=7):
             status = "schedule_outside_publication_window"
@@ -145,6 +149,8 @@ def inventory() -> dict:
         rows.append({
             "article_id": article["id"], "article_code": article["code"],
             "article_title": article["title"], "detail_sha256": digest,
+            "catalog_release_date_ms": article["release_date_ms"],
+            "detail_publish_date_ms": detail_publish_ms,
             "published_utc": publication.isoformat(), "title_token": token,
             "contract_symbol": symbol, "first_utc_schedule": launch.isoformat() if launch else None,
             "status": status,
