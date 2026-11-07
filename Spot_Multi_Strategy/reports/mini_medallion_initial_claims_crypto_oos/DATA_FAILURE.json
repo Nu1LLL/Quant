@@ -1,0 +1,16 @@
+{
+  "experiment": "initial_claims_crypto_2026_11_08",
+  "started_utc": "2026-11-07T18:26:16.006489+00:00",
+  "sealed_utc": "2026-11-07T18:26:16.799389+00:00",
+  "code_commit": "632a3922d092d2100d97ea0cf1f638ae9346c7cf",
+  "prereg_commit": "048b66d",
+  "evidence_grade": "preregistered_retrospective_current_icsa_temporal_holdout",
+  "independent_executable_oos": false,
+  "all_gate_passed": false,
+  "historical_icsa_vintage_verified": false,
+  "real_orders_placed": false,
+  "status": "data-ineligible",
+  "reason": "FRED header or weekly row count changed",
+  "error_type": "ClaimsSourceError",
+  "pnl_computed": false
+}
