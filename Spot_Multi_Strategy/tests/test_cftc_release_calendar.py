@@ -27,6 +27,8 @@ def test_appropriations_lapse_2025():
 
 def test_normal_rule_is_conservative_and_inputs_fail_closed():
     assert conservative_eligible_at(date(2024, 7, 2)) == datetime(2024, 7, 15, tzinfo=timezone.utc)
+    assert conservative_eligible_at(date(2024, 7, 2), minimum_lag_days=8) == datetime(2024, 7, 10, tzinfo=timezone.utc)
+    assert conservative_eligible_at(date(2025, 9, 30), minimum_lag_days=8) == datetime(2025, 11, 20, tzinfo=timezone.utc)
     try:
         latest_eligible_report((date(2024, 7, 2),), datetime(2024, 7, 15))
     except ValueError:

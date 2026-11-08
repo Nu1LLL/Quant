@@ -36,15 +36,18 @@ _KNOWN_LATE_RELEASES = {
 }
 
 
-def conservative_eligible_at(report_date: date) -> datetime:
-    """Require 13 calendar days and, for known delays, a full publication day.
+def conservative_eligible_at(report_date: date, *, minimum_lag_days: int = 13) -> datetime:
+    """Require a frozen minimum lag and, for known delays, a full publication day.
 
     The default 13 days is still a proxy for unlisted exceptional delays.
     These archives lack first-published vintages and cannot certify true OOS.
     """
     if type(report_date) is not date:
         raise ValueError("report_date must be a calendar date")
-    normal = datetime.combine(report_date + timedelta(days=13), time.min, timezone.utc)
+    if type(minimum_lag_days) is not int or not 1 <= minimum_lag_days <= 30:
+        raise ValueError("minimum_lag_days must be a fixed integer from 1 to 30")
+    normal = datetime.combine(report_date + timedelta(days=minimum_lag_days),
+                              time.min, timezone.utc)
     published = _KNOWN_LATE_RELEASES.get(report_date)
     if published is None:
         return normal
@@ -52,12 +55,15 @@ def conservative_eligible_at(report_date: date) -> datetime:
     return max(normal, buffer)
 
 
-def latest_eligible_report(report_dates: Iterable[date], decision_at: datetime) -> date | None:
+def latest_eligible_report(report_dates: Iterable[date], decision_at: datetime,
+                           *, minimum_lag_days: int = 13) -> date | None:
     """Select the latest report whose availability bound precedes a UTC decision."""
     if decision_at.tzinfo is None or decision_at.utcoffset() != timedelta(0):
         raise ValueError("decision_at must be UTC aware")
     dates = list(report_dates)
     if dates != sorted(set(dates)):
         raise ValueError("report dates must be strictly increasing and unique")
-    available = [day for day in dates if conservative_eligible_at(day) <= decision_at]
+    available = [day for day in dates
+                 if conservative_eligible_at(day, minimum_lag_days=minimum_lag_days)
+                 <= decision_at]
     return available[-1] if available else None
