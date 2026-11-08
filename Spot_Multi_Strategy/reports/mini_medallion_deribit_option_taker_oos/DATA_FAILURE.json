@@ -1,0 +1,14 @@
+{
+  "experiment": "deribit_btc_option_taker_pressure_2026_11_09",
+  "prereg_commit": "210400b",
+  "code_commit": "5ef02e8ee090129559eb93f83618c8392fe4aa93",
+  "started_utc": "2026-11-08T17:30:37.741753+00:00",
+  "evidence_grade": "preregistered_retrospective_cross_venue_option_taker_flow",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "status": "sealed_source_or_execution_failure",
+  "sealed_utc": "2026-11-08T17:30:52.045417+00:00",
+  "reason": "2022-05-09: malformed Deribit trade: 2022-05-09: trade ID order/uniqueness/time invalid",
+  "error_type": "SourceFailure",
+  "gate_passed": false
+}
