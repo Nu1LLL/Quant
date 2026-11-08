@@ -1,0 +1,14 @@
+{
+  "experiment": "cme_btc_asset_manager_growth_2026_11_08",
+  "prereg_commit": "fd077d3",
+  "code_commit": "be1a42320c7db8e949b652bf85d09f93321453c7",
+  "started_utc": "2026-11-08T09:08:38.410065+00:00",
+  "evidence_grade": "preregistered_current_vintage_retrospective_cftc_archive",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "status": "sealed_source_or_execution_failure",
+  "sealed_utc": "2026-11-08T09:08:38.410553+00:00",
+  "reason": "CFTC manifest URL/hash malformed",
+  "error_type": "SourceFailure",
+  "gate_passed": false
+}
