@@ -1,0 +1,20 @@
+# Prospective Binance spot trade-flow source contract
+
+Fixed before source activation on 2026-11-09 00:00 UTC. This is a read-only market-data collector, **not** a strategy preregistration, signal result, executable order book, PnL record, or evidence that any Gate passed.
+
+## Source and fixed universe
+
+- Public Binance market-data-only combined WebSocket `wss://data-stream.binance.vision`, using `<symbol>@aggTrade`. No API key, account permission, or user-data stream is involved. [Binance's WebSocket specification](https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.md) documents the endpoint, 24-hour disconnect, 1024-stream limit, aggregate-trade fields and `m` (buyer is maker). `m=true` is a sell aggressor, not an account short position. An aggregate trade may represent multiple matched trades from a single taker order; counts here are **aggregate-trade messages**, not individual fills.
+- Twelve fixed, currently trading spot/USDT pairs: `BTCUSDT, ETHUSDT, BNBUSDT, XRPUSDT, ADAUSDT, DOGEUSDT, SOLUSDT, LINKUSDT, LTCUSDT, TRXUSDT, DOTUSDT, AVAXUSDT`. Their `TRADING` and spot-enabled status was checked using Binance's public `exchangeInfo` metadata on 2026-11-08, before source activation. This metadata check did not inspect future prices or strategy outcomes. Membership is frozen; delisting or a source outage is a missing-data event, not a reason to replace a coin after looking at returns.
+- The machine begins listening at most ten minutes before the fixed cutover. It stores no historical trade backfill. Prior local observations and Binance archives are **not** prospective evidence. A process restart does not reconstruct missing hours as live observations.
+
+## Recording and integrity
+
+- One append-only SQLite row per symbol and complete UTC hour, stored outside Git at `~/Library/Application Support/MiniMedallion/binance_spot_flow_prospective.sqlite`. The database is capped at 96 MiB. Raw messages, prices, individual trades, order books, user data, credentials, returns and orders are not stored. It records aggregate-trade count, buy/sell count, buy/sell USDT notional in millionths, first/last aggregate IDs and local receipt times.
+- `observed` requires the local socket to have connected before the hour began, to have appeared connected through the hour, and no detected aggregate-ID gap, duplicate or parse failure; sealing waits 60 seconds. `empty` has no received messages and is not eligible as a zero-flow observation. `invalid` means a detected gap, malformed data or interruption. `unavailable` means the listener was not ready for the full hour. The rows cannot be updated or deleted by the collector. A late event for an already sealed hour stops the process rather than revising a result.
+- `observed` means **apparent local continuity**, not independently proven exchange completeness. A websocket can be silent while connected, Binance may omit messages, and the collector has no independent order-book or fill reconciliation. Any use of this source for alpha must audit gaps, latency and coverage first. Five years of independent out-of-sample history do not exist at launch.
+- The 96 MiB cap stops collection with a visible error rather than pruning older evidence. Estimate and monitor capacity before long-term use; if the cap becomes restrictive, a new documented storage contract must be committed prospectively. Do not remove evidence silently.
+
+## Research boundary
+
+The stored data can later test aggressor-flow hypotheses over a genuinely prospective period, with independent fees/slippage/funding and execution data where needed. It cannot substantiate minute order-book liquidity, maker fills, liquidation path or the user's CAGR/Sharpe/drawdown target. No trading is enabled. The user's original mature strategy and existing sealed reports remain untouched.
