@@ -1,0 +1,11 @@
+# Hyperliquid public trade-flow prospective source contract
+
+This is a **source collector, not a trading hypothesis or a preregistered alpha test**. No performance result is read or reported. A later use of these records must preregister one precise signal, sample split, execution, costs and Gate in a separate commit before evaluating returns.
+
+- The collector reads only WhaleWatcher's public Hyperliquid perpetual trade feed for BTC and ETH. It begins with the first whole UTC hour on **2026-11-09**. All earlier source data, including the approximately 16 local days already present before this source contract, are excluded from prospective evidence.
+- Every hourly window is read only after a five-minute delay. It records actual Quant observation time, source-health timestamp, executed-trade counts, aggressor-buy/sell notional in USD cents, and a source-row digest. It stores no wallet addresses, prices, orders, forecasts or returns. Missing hours are never filled as if they had been observed live.
+- A capture more than 15 minutes after window close is marked `late`; source outages, malformed rows and empty hours have separate status. A source row more than five minutes late or inserted after observation invalidates its whole capture. Entries are immutable and repeated launches do not replace them. The separate local journal is capped at 64 MiB.
+- Hyperliquid's [official notation](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/notation) defines B/A as **aggressing trade sides**, not opening long/short positions. Its [WebSocket schema](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/websocket/subscriptions) lists users as buyer and seller. The WhaleWatcher adapter's `long` and `short` labels map to B and A; downstream research must not mistake those labels for wallet inventory changes.
+- The local feed currently has about 16 days of history. This collector cannot supply five years of independent OOS, an alpha estimate, or executable fill evidence now. Raw records remain in WhaleWatcher. If that database is pruned before an independently archived source exists, the compact summaries alone cannot reconstruct individual trades.
+
+All use is read-only and paper-only. The protected mature strategy and sealed reports are outside this module.
