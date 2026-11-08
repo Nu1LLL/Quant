@@ -1,0 +1,14 @@
+{
+  "experiment": "us_weekly_claims_btc_2026_11_08",
+  "prereg_commit": "9a261c6",
+  "code_commit": "711f78b5fc0629832c0f7962859bbb23d58026a6",
+  "started_utc": "2026-11-08T14:31:06.853685+00:00",
+  "evidence_grade": "preregistered_retrospective_current_vintage_labor_proxy",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "status": "sealed_source_or_execution_failure",
+  "sealed_utc": "2026-11-08T14:34:18.110694+00:00",
+  "reason": "source request failed: https://fred.stlouisfed.org/graph/fredgraph.csv?id=ICSA: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=35)",
+  "error_type": "SourceFailure",
+  "all_gate_passed": false
+}
