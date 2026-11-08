@@ -31,6 +31,10 @@ FAMILY_ALIASES = {
         "交易所储备", "exchange supply", "exchange reserves",
         "exchange-wallet inventory", "SplyExNtv",
     ),
+    "dollar_strength": (
+        "美元指数", "美元强弱", "dollar index", "dollar strength",
+        "DXY", "DTWEXBGS", "DX-Y.NYB",
+    ),
 }
 
 

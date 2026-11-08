@@ -43,6 +43,15 @@ class NoveltyInventoryTests(unittest.TestCase):
         self.assertTrue(any("mini_medallion_tips_real_yield_crypto_oos/"
                             "PREREGISTRATION.md" in hit["path"] for hit in hits))
 
+    def test_dollar_index_source_change_finds_prior_dxy_experiment(self):
+        repo = Path(__file__).resolve().parents[2]
+        paths = tracked_documents(repo)
+        hits = find_mentions(repo, paths, FAMILY_ALIASES["dollar_strength"])
+        self.assertTrue(any(
+            "mini_medallion_dxy_trend_oos/PREREGISTRATION.md" in hit["path"]
+            for hit in hits
+        ))
+
 
 if __name__ == "__main__":
     unittest.main()
