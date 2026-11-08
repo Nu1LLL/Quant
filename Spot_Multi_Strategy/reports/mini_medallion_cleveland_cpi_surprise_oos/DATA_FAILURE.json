@@ -1,0 +1,14 @@
+{
+  "experiment": "cleveland_cpi_surprise_btc_spot_2026_11_08",
+  "prereg_commit": "799c64f",
+  "code_commit": "d219fa208a04bc8dadffd24092c68c9e7881545e",
+  "started_utc": "2026-11-08T16:06:48.026338+00:00",
+  "evidence_grade": "preregistered_retrospective_historical_nowcast_chart",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "status": "sealed_source_or_execution_failure",
+  "sealed_utc": "2026-11-08T16:06:50.509540+00:00",
+  "reason": "first headline CPI actual: nowcast point schema changed",
+  "error_type": "SourceFailure",
+  "gate_passed": false
+}

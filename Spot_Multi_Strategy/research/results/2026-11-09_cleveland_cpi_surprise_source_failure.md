@@ -1,0 +1,7 @@
+# Cleveland CPI surprise: sealed source/parser failure
+
+Experiment `cleveland_cpi_surprise_btc_spot_2026_11_08` was preregistered and pushed at `799c64f`; isolated implementation and four synthetic tests were pushed at `d219fa2` before opening any CPI numeric value or BTC price. The **only formal run** wrote `reports/mini_medallion_cleveland_cpi_surprise_oos/DATA_FAILURE.json` at 2026-11-08 16:06:50 UTC. No return, PnL, Sharpe or Gate result exists, and no orders were placed. This hypothesis remains rejected and will not be retried on the same history.
+
+The pinned Cleveland Fed JSON **did not change** (SHA-256 `9253b45d839c5fe1e5fd1e2d583f9f7aa48bedeb02b4a4060a04041d598c17cd`). A post-failure **schema-only** inspection, without printing numeric values, found that forecast points have keys `value, tooltext`, while the first actual-release point additionally has `anchorradius, anchorbgcolor, anchorbordercolor, anchorborderthickness`. The implementation required exact equality to the forecast-point key set for both point types, so it raised `SourceFailure` before fetching any Binance market archive. This is an overly strict parser assumption, not evidence of a changed Fed source or failed market signal.
+
+Protocol lesson for future, economically distinct registrations: inspect and freeze the **forecast and actual point shapes separately** during metadata-only preflight, and test each shape synthetically before the preregistration is committed. Do not use this incident to amend the sealed signal, read its historical returns, or claim a backtest result.
