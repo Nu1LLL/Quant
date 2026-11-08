@@ -23,6 +23,7 @@ ACTIVATION_MS = 1_794_182_400_000  # 2026-11-09 00:00 UTC
 GRACE_MS = 60_000
 MAX_EVENT_LAG_MS = 10_000
 MAX_DB_BYTES = 96 * 1024 * 1024
+DB_HEADROOM_BYTES = 4 * 1024 * 1024
 SYMBOLS = (
     "BTCUSDT", "ETHUSDT", "BNBUSDT", "XRPUSDT", "ADAUSDT", "DOGEUSDT",
     "SOLUSDT", "LINKUSDT", "LTCUSDT", "TRXUSDT", "DOTUSDT", "AVAXUSDT",
@@ -207,8 +208,8 @@ class FlowCollector:
     def seal_due(self, now_ms: int) -> int:
         count = 0
         while self.next_start + HOUR_MS + GRACE_MS <= now_ms:
-            if _db_bytes(self.path) >= MAX_DB_BYTES:
-                raise RuntimeError("prospective Binance journal reached 96 MiB cap")
+            if _db_bytes(self.path) >= MAX_DB_BYTES - DB_HEADROOM_BYTES:
+                raise RuntimeError("prospective Binance journal reached 96 MiB safety threshold")
             start = self.next_start
             rows = []
             for symbol in SYMBOLS:
