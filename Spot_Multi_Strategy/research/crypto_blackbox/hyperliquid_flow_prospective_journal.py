@@ -60,7 +60,7 @@ def _journal_connection(path: Path) -> sqlite3.Connection:
             window_end_ms INTEGER NOT NULL,
             observed_at_ms INTEGER NOT NULL,
             status TEXT NOT NULL CHECK(status IN
-                ('fresh','late','unavailable','empty','invalid')),
+                ('timely','late','unavailable','empty','invalid')),
             source_health_at_ms INTEGER,
             trade_count INTEGER NOT NULL CHECK(trade_count>=0),
             buy_count INTEGER NOT NULL CHECK(buy_count>=0),
@@ -203,7 +203,7 @@ def capture_once(source_path: Path = SOURCE, journal_path: Path = JOURNAL,
                           "unavailable" if not source_ok else
                           "empty" if count == 0 else
                           "late" if observed - end > MAX_FRESH_DELAY_MS else
-                          "fresh")
+                          "timely")
                 journal.execute("""
                     INSERT INTO hourly_flow VALUES (?,?,?,?,?,?,?,?,?,?,?,?)
                 """, (symbol, start, end, observed, status, health_time,

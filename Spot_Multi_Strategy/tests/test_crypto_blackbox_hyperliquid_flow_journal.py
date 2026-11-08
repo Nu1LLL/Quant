@@ -47,13 +47,13 @@ class FlowJournalTest(unittest.TestCase):
                       event_time + (600_000 if malformed and row_id == 2 else 10),
                       "hyperliquid", "perpetual", "executed", symbol))
 
-    def test_fresh_aggregates_and_append_only(self):
+    def test_timely_aggregates_and_append_only(self):
         start = ACTIVATION_MS + HOUR_MS
         now = start + HOUR_MS + FIVE_MIN_MS + 60_000
         self._seed_hour(start, now)
         captures = capture_once(self.source, self.journal, now_ms=now)
         self.assertEqual([(x.symbol, x.status, x.trade_count) for x in captures],
-                         [("BTC", "fresh", 2), ("ETH", "fresh", 1)])
+                         [("BTC", "timely", 2), ("ETH", "timely", 1)])
         self.assertEqual((captures[0].buy_cents, captures[0].sell_cents),
                          (10010, 3020))
         self.assertEqual(capture_once(self.source, self.journal, now_ms=now), ())
@@ -77,7 +77,7 @@ class FlowJournalTest(unittest.TestCase):
                 "SELECT DISTINCT window_start_ms FROM hourly_flow ORDER BY 1")]
         self.assertEqual(windows, [first, later])
 
-    def test_late_and_invalid_source_cannot_be_fresh(self):
+    def test_late_and_invalid_source_cannot_be_timely(self):
         start = ACTIVATION_MS + HOUR_MS
         late_now = start + HOUR_MS + 20 * 60_000
         self._seed_hour(start, late_now)
