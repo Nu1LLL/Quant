@@ -9,7 +9,7 @@ from research.crypto_blackbox.binance_spot_flow_prospective import (
     ACTIVATION_MS, GRACE_MS, HOUR_MS, FlowCollector, Trade, _connect,
     parse_trade,
 )
-from research.crypto_blackbox.binance_spot_flow_coverage import audit
+from research.crypto_blackbox.binance_spot_flow_coverage import CoverageError, audit
 
 
 class BinanceSpotFlowTests(unittest.TestCase):
@@ -101,6 +101,22 @@ class BinanceSpotFlowTests(unittest.TestCase):
         self.assertEqual(report["observed_hours_all_symbols"], 0)
         self.assertEqual(report["status_counts"]["ADAUSDT"]["empty"], 1)
         self.assertFalse(report["five_year_independent_oos_proven"])
+
+    def test_audit_rejects_gap_even_if_rows_claim_observed(self):
+        c = self.collector
+        c.connected(ACTIVATION_MS - 600_000)
+        c.ingest(Trade("ADAUSDT", 7, ACTIVATION_MS + 5000,
+                       ACTIVATION_MS + 5100, 5_000_000, 0), ACTIVATION_MS + 5200)
+        c.seal_due(ACTIVATION_MS + HOUR_MS + GRACE_MS)
+        second = ACTIVATION_MS + HOUR_MS
+        with self.db:
+            self.db.execute("""INSERT INTO hourly_flow VALUES
+                (?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                ("ADAUSDT", second, second + HOUR_MS + GRACE_MS,
+                 "observed", 1, 1, 0, 5_000_000, 0, 9, 9,
+                 second + 5000, second + 5000))
+        with self.assertRaisesRegex(CoverageError, "ID gap"):
+            audit(self.path, as_of_ms=second + HOUR_MS + GRACE_MS)
 
 
 if __name__ == "__main__":

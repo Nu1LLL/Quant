@@ -77,6 +77,7 @@ def audit(path: Path = JOURNAL, *, as_of_ms: int | None = None) -> dict:
             seen: dict[int, set[str]] = {}
             observed: dict[int, int] = {}
             status_counts = {symbol: Counter() for symbol in SYMBOLS}
+            previous_id: dict[str, int] = {}
             total_rows = 0
             for row in rows:
                 symbol, start, recorded, status = (row["symbol"], row["window_start_ms"],
@@ -97,8 +98,16 @@ def audit(path: Path = JOURNAL, *, as_of_ms: int | None = None) -> dict:
                         or (count > 0 and (any(type(v) is not int or v < 0 for v in (*ids, *stamps))
                                            or ids[0] > ids[1] or stamps[0] > stamps[1]))
                         or (status == "observed" and count == 0)
+                        or (status == "observed" and ids[1] - ids[0] + 1 != count)
                         or (status == "empty" and count != 0)):
                     raise CoverageError("invalid prospective source row")
+                if status == "observed":
+                    prior_id = previous_id.get(symbol)
+                    if prior_id is not None and ids[0] != prior_id + 1:
+                        raise CoverageError("aggregate-trade ID gap across observed hours")
+                    previous_id[symbol] = ids[1]
+                elif status in {"invalid", "unavailable"}:
+                    previous_id.pop(symbol, None)
                 slot = seen.setdefault(start, set())
                 if symbol in slot:
                     raise CoverageError("duplicate source symbol/hour")
