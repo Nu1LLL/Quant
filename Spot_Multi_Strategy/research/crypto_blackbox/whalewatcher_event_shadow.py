@@ -18,9 +18,9 @@ import time
 from urllib.parse import urlsplit
 
 
-MAX_BYTES = 24 * 1024 * 1024
+MAX_BYTES = 64 * 1024 * 1024
 MAX_AGE_MS = 10 * 60_000
-MAX_ROWS = 2_000
+MAX_ROWS = 5_000
 SOURCES = {
     "bloomberg": {"bloomberg.com", "www.bloomberg.com"},
     "jin10": {"flash.jin10.com", "xnews.jin10.com", "www.jin10.com", "jin10.com"},
