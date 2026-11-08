@@ -1,0 +1,14 @@
+{
+  "experiment": "btc_eth_native_transfer_growth_rotation_2026_11_08",
+  "prereg_commit": "4bcb280",
+  "code_commit": "f223d03bd326162571c3d1168351f7c4b268d0b3",
+  "started_utc": "2026-11-08T14:47:10.822043+00:00",
+  "evidence_grade": "preregistered_retrospective_current_vintage_transfer_rotation",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "status": "sealed_source_or_execution_failure",
+  "sealed_utc": "2026-11-08T14:47:43.981045+00:00",
+  "reason": "source request failed: https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-05.zip.CHECKSUM; exit=35; curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to data.binance.vision:443 \n",
+  "error_type": "SourceFailure",
+  "all_gate_passed": false
+}
