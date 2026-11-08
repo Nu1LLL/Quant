@@ -1,0 +1,158 @@
+{
+  "by_asset": {
+    "1INCHUSDT": {
+      "net_pnl": -81.7654307326111,
+      "trades": 1
+    },
+    "AAVEUSDT": {
+      "net_pnl": 773.9436119830041,
+      "trades": 14
+    },
+    "COMPUSDT": {
+      "net_pnl": 642.9203022104093,
+      "trades": 2
+    },
+    "SUSHIUSDT": {
+      "net_pnl": -477.852623035081,
+      "trades": 1
+    },
+    "UNIUSDT": {
+      "net_pnl": -46.05065474287653,
+      "trades": 8
+    }
+  },
+  "closed_trades": 26,
+  "evidence_grade": "preregistered_retrospective_historical_holdout",
+  "full_gate": false,
+  "holdout_metrics": {
+    "cagr": 0.014833539582320698,
+    "max_drawdown": -0.17324085052219151,
+    "net_return": 0.029907872578244232,
+    "profit_factor": 1.246632449186712,
+    "sharpe": 0.39974237106777816
+  },
+  "ignored_while_open": 9,
+  "independent_oos": false,
+  "initial_equity": 10000.0,
+  "longest_negative_month_run": 4,
+  "median_holding_days": 7,
+  "metrics": {
+    "cagr": 0.01572389487326875,
+    "max_drawdown": -0.17486645206177565,
+    "net_return": 0.08111952056828597,
+    "profit_factor": 1.1449781169531048,
+    "sharpe": 0.255274818033018
+  },
+  "monte_carlo": {
+    "block_days": 30,
+    "joint_gate_fraction": 0.0,
+    "paths": 5000,
+    "percentiles": {
+      "cagr": [
+        -0.02770439240578198,
+        0.015006331713561027,
+        0.07114448060503212
+      ],
+      "max_drawdown": [
+        -0.23454982306360364,
+        -0.12936348407700227,
+        -0.060884920153571394
+      ],
+      "profit_factor": [
+        0.7924379371772362,
+        1.1472721263287953,
+        1.659061580104559
+      ],
+      "sharpe": [
+        -0.4055247743079934,
+        0.2618016761033027,
+        0.9707167122991214
+      ]
+    },
+    "seed": 20261108
+  },
+  "numerical_gate": false,
+  "passive_comparison": {
+    "cagr": -0.09108462022831643,
+    "max_drawdown": -0.9359483042221431,
+    "net_return": -0.3796373391259015,
+    "profit_factor": 1.0610143733782527,
+    "sharpe": 0.4040070264711543,
+    "terminal_equity": 6203.62660874097
+  },
+  "positive_months": 10,
+  "regime_days": {
+    "bear": 314,
+    "bull": 686,
+    "sideways": 826
+  },
+  "regime_metrics": {
+    "bear": {
+      "cagr": -0.06342699509812955,
+      "max_drawdown": -0.07095908457024258,
+      "net_return": -0.054775941604755185,
+      "profit_factor": 0.6563249037549884,
+      "sharpe": -0.9296866302556145
+    },
+    "bull": {
+      "cagr": -0.006845997886125499,
+      "max_drawdown": -0.05437817322490812,
+      "net_return": -0.012819256846610783,
+      "profit_factor": 0.8477585480242311,
+      "sharpe": -0.24805467414620652
+    },
+    "sideways": {
+      "cagr": 0.06727101028473825,
+      "max_drawdown": -0.14576571119574355,
+      "net_return": 0.15862332400588586,
+      "profit_factor": 1.4072964302156095,
+      "sharpe": 0.7412319828337459
+    }
+  },
+  "sample_days": 1826,
+  "signal_diagnostics": {
+    "eligible_proposals": 1190,
+    "high_turnout_events": 37,
+    "source_ineligible": 264,
+    "terminal_skips": 1
+  },
+  "terminal_equity": 10811.195205682849,
+  "total_traded_notional_usd": 107668.99404775008,
+  "year_metrics": {
+    "2021": {
+      "cagr": 0.0,
+      "max_drawdown": 0.0,
+      "net_return": 0.0,
+      "profit_factor": null,
+      "sharpe": null
+    },
+    "2022": {
+      "cagr": -0.022528329717009687,
+      "max_drawdown": -0.15473273807030696,
+      "net_return": -0.02251308480721881,
+      "profit_factor": 0.9691955138793705,
+      "sharpe": -0.09232295117003185
+    },
+    "2023": {
+      "cagr": 0.07395377030494799,
+      "max_drawdown": -0.023344694521955756,
+      "net_return": 0.07390132577663477,
+      "profit_factor": 1.9308333452813802,
+      "sharpe": 1.464159795238287
+    },
+    "2024": {
+      "cagr": -0.02860514450424656,
+      "max_drawdown": -0.042425649079853245,
+      "net_return": -0.02866303201865872,
+      "profit_factor": 0.49939456306791746,
+      "sharpe": -1.1888568942794984
+    },
+    "2025": {
+      "cagr": 0.0603417869659888,
+      "max_drawdown": -0.02907537531484372,
+      "net_return": 0.06029926434142241,
+      "profit_factor": 1.878409312485974,
+      "sharpe": 1.2187117819909217
+    }
+  }
+}
