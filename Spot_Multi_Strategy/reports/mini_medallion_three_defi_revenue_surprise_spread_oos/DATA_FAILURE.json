@@ -1,0 +1,14 @@
+{
+  "experiment": "three_defi_revenue_surprise_spread_2026_11_08",
+  "prereg_commit": "433422d",
+  "code_commit": "e4281055ba21c00580e46189644ef5c774b38c31",
+  "started_utc": "2026-11-08T07:45:08.841121+00:00",
+  "evidence_grade": "preregistered_retrospective_current_protocol_vintage",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "status": "sealed_source_or_execution_failure",
+  "sealed_utc": "2026-11-08T07:53:36.778158+00:00",
+  "reason": "net: ruined or above five-times gross leverage",
+  "error_type": "ReplayFailure",
+  "gate_passed": false
+}
