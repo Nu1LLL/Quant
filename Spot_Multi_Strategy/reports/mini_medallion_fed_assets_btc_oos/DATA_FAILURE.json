@@ -1,0 +1,14 @@
+{
+  "experiment": "fed_walcl_btc_liquidity_2026_11_08",
+  "prereg_commit": "1512f73",
+  "code_commit": "9c78babf5d6e1e5e76d5c1c53339d27d0b766c72",
+  "started_utc": "2026-11-08T09:45:12.396541+00:00",
+  "evidence_grade": "preregistered_current_vintage_retrospective_fed_balance_sheet",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "status": "sealed_source_or_execution_failure",
+  "sealed_utc": "2026-11-08T09:48:23.990485+00:00",
+  "reason": "source request failed: https://fred.stlouisfed.org/graph/fredgraph.csv?id=WALCL&cosd=2020-01-01&coed=2025-12-31: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=35)",
+  "error_type": "SourceFailure",
+  "gate_passed": false
+}
