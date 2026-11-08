@@ -1,0 +1,5 @@
+# Wikipedia-attention preregistration: not run
+
+Preregistration commit `1c7e211` was pushed before reading any Wikipedia view level, price/funding value, signal or strategy return for this proposed experiment. A subsequent repository-code audit found pre-existing `wiki_attention_sim.py` and its tests, which implement a five-coin Wikipedia-attention strategy on overlapping historical dates. Although the newly registered assets, holding horizon and sign differ, its economic source is **not independent** of the already studied Wikipedia-attention family. Running it would amount to revisiting that family with different choices on a reused historical market.
+
+**Disposition:** invalidate the proposed formal experiment before data or outcomes are read. Do not run it, compute metrics, or interpret the preregistration as a successful independent hypothesis. Keep the committed document and this note as an auditable record; use a genuinely different source for the next single preregistered test. No change to the protected mature strategy or any sealed result.
