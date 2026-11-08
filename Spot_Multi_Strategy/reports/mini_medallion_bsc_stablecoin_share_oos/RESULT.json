@@ -1,0 +1,1063 @@
+{
+  "experiment": "bsc_stablecoin_share_bnb_2026_11_08",
+  "prereg_commit": "de978ed",
+  "code_commit": "26d160aabcb98b53883a0a649750d1b82890a4c1",
+  "started_utc": "2026-11-08T12:50:07.441822+00:00",
+  "evidence_grade": "preregistered_retrospective_current_bsc_stablecoin_share_vintage",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "status": "sealed_formal_result",
+  "sealed_utc": "2026-11-08T12:50:38.770613+00:00",
+  "sources": {
+    "stablecoin_charts": {
+      "BSC": {
+        "url": "https://stablecoins.llama.fi/stablecoincharts/BSC",
+        "selected_subset_sha256": "be5d580e1fb1e36a11dcf5d8a9a4de04ad37ec5617fc8c4466949f273212a5a0",
+        "rows": 1857,
+        "first": "2020-12-01",
+        "last": "2025-12-31",
+        "response_bytes": 722312,
+        "current_vintage_not_first_published": true
+      },
+      "all": {
+        "url": "https://stablecoins.llama.fi/stablecoincharts/all",
+        "selected_subset_sha256": "28f1afbed6a5c29f9bd053b3fe55cc7ca9dc6a72596ebeeca95646a3cf020301",
+        "rows": 1857,
+        "first": "2020-12-01",
+        "last": "2025-12-31",
+        "response_bytes": 1342141,
+        "current_vintage_not_first_published": true
+      }
+    },
+    "spot": [
+      {
+        "month": "2020-12",
+        "symbol": "BNBUSDT",
+        "sha256": "1048783fa6c029b138af6364a82208a51b9ee45acf2a62c278829e4a7b1f9d22",
+        "bytes": 2078
+      },
+      {
+        "month": "2021-01",
+        "symbol": "BNBUSDT",
+        "sha256": "417c1e3b8cd487e59678bdeb773132a6ce1a5cf0d294789a438a397874b2ef1c",
+        "bytes": 2089
+      },
+      {
+        "month": "2021-02",
+        "symbol": "BNBUSDT",
+        "sha256": "3444a8ef1ae5a8b9e3f16e61f92eae7835b4e28f717c0599452da2d5e4981f8b",
+        "bytes": 2010
+      },
+      {
+        "month": "2021-03",
+        "symbol": "BNBUSDT",
+        "sha256": "43612d792baf8f308de7f4d4c32166a133eaa8f1eb69f0135e9c4f694d0f6215",
+        "bytes": 2212
+      },
+      {
+        "month": "2021-04",
+        "symbol": "BNBUSDT",
+        "sha256": "f15db2922aa07f2826eab095b01d46b5f8824861e5763278b1d0f4ed25012d59",
+        "bytes": 2170
+      },
+      {
+        "month": "2021-05",
+        "symbol": "BNBUSDT",
+        "sha256": "e6899ad8a8a79080d14327995c987d0f926bcf2a081e8fd46023cc1ba2fe623d",
+        "bytes": 2129
+      },
+      {
+        "month": "2021-06",
+        "symbol": "BNBUSDT",
+        "sha256": "0b99bf9addf12772d6f71f69558b8ab878ccc1a4fd4959cb49ce7a25e96eedb6",
+        "bytes": 2048
+      },
+      {
+        "month": "2021-07",
+        "symbol": "BNBUSDT",
+        "sha256": "4dc5d043750d0b653096e1432d3bd8e7a915a1966a4e950cb129fa8e8c243049",
+        "bytes": 2064
+      },
+      {
+        "month": "2021-08",
+        "symbol": "BNBUSDT",
+        "sha256": "3e2dcb5b1151dac49010da797d12aac49a528f0051d10c10bed5cef371e635cf",
+        "bytes": 2075
+      },
+      {
+        "month": "2021-09",
+        "symbol": "BNBUSDT",
+        "sha256": "fd6877569527c31fea8ce934f711a229563dcb6f58a189e13ecee85832729865",
+        "bytes": 1882
+      },
+      {
+        "month": "2021-10",
+        "symbol": "BNBUSDT",
+        "sha256": "225eb581ce9e11c1338081f93bc9523dafdc4c12775b15682e59a5c0de18f322",
+        "bytes": 1926
+      },
+      {
+        "month": "2021-11",
+        "symbol": "BNBUSDT",
+        "sha256": "a513976de0e411231b2a6dd56961604d8973668a0fc0dacff601f243317a42a6",
+        "bytes": 1877
+      },
+      {
+        "month": "2021-12",
+        "symbol": "BNBUSDT",
+        "sha256": "1f320541f2b83adbdaacf150e5f8f9d796b19af043e72233cc33791e8d2410b4",
+        "bytes": 1908
+      },
+      {
+        "month": "2022-01",
+        "symbol": "BNBUSDT",
+        "sha256": "662a4e0172144ca01f445e543a95985b7e74625876e82b7fd3d39b7955eaf848",
+        "bytes": 1884
+      },
+      {
+        "month": "2022-02",
+        "symbol": "BNBUSDT",
+        "sha256": "885a69c5de1c88dc85ae9dc00894bbce4d7b2adad386ad9a6f9fd47f8b6bcf4c",
+        "bytes": 1717
+      },
+      {
+        "month": "2022-03",
+        "symbol": "BNBUSDT",
+        "sha256": "b90ca82881847acca7ae92a0fa683d667e1eb324e074d393107c2f83e5702366",
+        "bytes": 1861
+      },
+      {
+        "month": "2022-04",
+        "symbol": "BNBUSDT",
+        "sha256": "5bab193539510bf059623e85ce3e531a512d45c499b9c7f830ff4a122132dddb",
+        "bytes": 1821
+      },
+      {
+        "month": "2022-05",
+        "symbol": "BNBUSDT",
+        "sha256": "f73bffec1e556dbaef3e02539cd7d7f6f72e13e213cf402e3ed208a881c39f39",
+        "bytes": 1907
+      },
+      {
+        "month": "2022-06",
+        "symbol": "BNBUSDT",
+        "sha256": "fcb679a1d470123c6de42bd5d75eae964187e324cb66ea16f0a9ccd9b3a5a389",
+        "bytes": 1821
+      },
+      {
+        "month": "2022-07",
+        "symbol": "BNBUSDT",
+        "sha256": "46f6d4b2166e7227745d88bf0d6772c3c5a1f86be612bb32f47c05352f09253c",
+        "bytes": 1831
+      },
+      {
+        "month": "2022-08",
+        "symbol": "BNBUSDT",
+        "sha256": "3dcc2907868a36cceffe7ce64404c9a109d4b34c7da7b7fa8a5e678b0f71480c",
+        "bytes": 1846
+      },
+      {
+        "month": "2022-09",
+        "symbol": "BNBUSDT",
+        "sha256": "ee847c48fe6f37cac5c68e64bbf38c134d81fdce442a16a3f0e4d0ee9a12af52",
+        "bytes": 1784
+      },
+      {
+        "month": "2022-10",
+        "symbol": "BNBUSDT",
+        "sha256": "0f78133575aa5a2ec24e9a813e6aacdbd414ba86c492d495ee94f4f6d17f6446",
+        "bytes": 1819
+      },
+      {
+        "month": "2022-11",
+        "symbol": "BNBUSDT",
+        "sha256": "8a00ca305b5e0849dac8f04508890b521260518c4930cf0b70af8c311b7906a8",
+        "bytes": 1817
+      },
+      {
+        "month": "2022-12",
+        "symbol": "BNBUSDT",
+        "sha256": "cfbd0e1a447f02ddc84ea313147644c4d8b7e2ebdee9693a7c54febab0a5b8ca",
+        "bytes": 1833
+      },
+      {
+        "month": "2023-01",
+        "symbol": "BNBUSDT",
+        "sha256": "05be0f46d31ecf6caca990c4be77f866f52cf5481361ff4abbdbd3e2a4ea374a",
+        "bytes": 1834
+      },
+      {
+        "month": "2023-02",
+        "symbol": "BNBUSDT",
+        "sha256": "410fbb22da231870ad59911391bdf07bb4aa8665aa3949c64aaf2c54ce64c849",
+        "bytes": 1675
+      },
+      {
+        "month": "2023-03",
+        "symbol": "BNBUSDT",
+        "sha256": "26fd3b5676cf6931773f5e87d341e7cc9c17cfee57b11a64921346c3bce725a0",
+        "bytes": 1825
+      },
+      {
+        "month": "2023-04",
+        "symbol": "BNBUSDT",
+        "sha256": "b4cd24822818759814338a0a86b2e36e88ad888690c8cface82f9efde3ac4b96",
+        "bytes": 1765
+      },
+      {
+        "month": "2023-05",
+        "symbol": "BNBUSDT",
+        "sha256": "3ab0a70edd10567d640dd6c7c35926716153292708b0651d939f42e5adf4fda4",
+        "bytes": 1808
+      },
+      {
+        "month": "2023-06",
+        "symbol": "BNBUSDT",
+        "sha256": "34b239403a1c0b3fdf062080dcf195e0ccd336cd192c7d85dcc8b7c5e26b1cbe",
+        "bytes": 1799
+      },
+      {
+        "month": "2023-07",
+        "symbol": "BNBUSDT",
+        "sha256": "82ef4a7e5cfefe5916b50bb6225b134baf854d7125395b292442deb27e0322df",
+        "bytes": 1818
+      },
+      {
+        "month": "2023-08",
+        "symbol": "BNBUSDT",
+        "sha256": "391f00309a8c85ad58517287ffd288156c8b50c2e129b5ca430315d4cbcbd2a5",
+        "bytes": 1805
+      },
+      {
+        "month": "2023-09",
+        "symbol": "BNBUSDT",
+        "sha256": "8bd6326ced778911b9ccd13a7b9d475fd72a4990b2e08946a0ad435d7a53ca6b",
+        "bytes": 1723
+      },
+      {
+        "month": "2023-10",
+        "symbol": "BNBUSDT",
+        "sha256": "1b12d8d8687a2c3184612fadb23d403815e4b38011b2dc8ad9c7aaab53c85a49",
+        "bytes": 1807
+      },
+      {
+        "month": "2023-11",
+        "symbol": "BNBUSDT",
+        "sha256": "265f43677cdca9c19e7cef1cee1614339bd2589a1207733f6f6f8a24fceff628",
+        "bytes": 1819
+      },
+      {
+        "month": "2023-12",
+        "symbol": "BNBUSDT",
+        "sha256": "cd892efd72678fe5885b47607a6dd57422bcfacfd899a23155a4c832a3349b98",
+        "bytes": 1874
+      },
+      {
+        "month": "2024-01",
+        "symbol": "BNBUSDT",
+        "sha256": "5d4bdb84616da2d4b6a83b9b9360c40eec0871648a0cac65734e33444faf678c",
+        "bytes": 1874
+      },
+      {
+        "month": "2024-02",
+        "symbol": "BNBUSDT",
+        "sha256": "1ab8349b900bb461b5099079b33c8e81225bcf405788b6f3b2c818a8a31f882f",
+        "bytes": 1743
+      },
+      {
+        "month": "2024-03",
+        "symbol": "BNBUSDT",
+        "sha256": "fa6108d195ab1e9ba3a93edd617fd09fc5af2ca8a58f655dc710d91415c517ae",
+        "bytes": 1915
+      },
+      {
+        "month": "2024-04",
+        "symbol": "BNBUSDT",
+        "sha256": "d7fc923f6a8b776a567eb475a6fa86cb471b06588455e6e3f4648b292d7d5d17",
+        "bytes": 1813
+      },
+      {
+        "month": "2024-05",
+        "symbol": "BNBUSDT",
+        "sha256": "805a64670052eedac4a271e180555347e4a027c2a551c57ea66b2827e4fd9eac",
+        "bytes": 1846
+      },
+      {
+        "month": "2024-06",
+        "symbol": "BNBUSDT",
+        "sha256": "3295c5a0ecb21631caa8f5c95d8d895c434c34edb2c3d4699155a0e2893cf949",
+        "bytes": 1803
+      },
+      {
+        "month": "2024-07",
+        "symbol": "BNBUSDT",
+        "sha256": "7d2b8921df19108e5f92ca27e5a846bf06831d03fc072879de63c1f66aebd33a",
+        "bytes": 1864
+      },
+      {
+        "month": "2024-08",
+        "symbol": "BNBUSDT",
+        "sha256": "074f124320c2aff60894d49aa3de8a76284c27af73379e41fe88fa0c2f191c28",
+        "bytes": 1862
+      },
+      {
+        "month": "2024-09",
+        "symbol": "BNBUSDT",
+        "sha256": "c6594d1164647e075218c6c61fd98081c655c27db443fb2fa7d5543fbeae6afd",
+        "bytes": 1803
+      },
+      {
+        "month": "2024-10",
+        "symbol": "BNBUSDT",
+        "sha256": "b9d1534493268393431f6a189a905041a794ae553f242b495c102fcd5292c3ae",
+        "bytes": 1850
+      },
+      {
+        "month": "2024-11",
+        "symbol": "BNBUSDT",
+        "sha256": "e056a4d76b86fae5d833a9d2ad1c2fdf4e33d894c93a10fb12135fa258ef152b",
+        "bytes": 1915
+      },
+      {
+        "month": "2024-12",
+        "symbol": "BNBUSDT",
+        "sha256": "cb56172239def1e8e6c983b6050971333bb6aeb3d3305be702e780d3ee2becf0",
+        "bytes": 2014
+      },
+      {
+        "month": "2025-01",
+        "symbol": "BNBUSDT",
+        "sha256": "50d7646f9fdeebba62408547b775ca328f85d1464139a1e22a761b6068edcd8d",
+        "bytes": 1998
+      },
+      {
+        "month": "2025-02",
+        "symbol": "BNBUSDT",
+        "sha256": "ca8f4a9bdf0be827132459db5ab7da08f633456dfb99ae4e3bb1fe54225597ba",
+        "bytes": 1846
+      },
+      {
+        "month": "2025-03",
+        "symbol": "BNBUSDT",
+        "sha256": "71231a1cb118abbe98f2a5e330c699afe37e2998f025c13f3e7abbf0b034705b",
+        "bytes": 2005
+      },
+      {
+        "month": "2025-04",
+        "symbol": "BNBUSDT",
+        "sha256": "a90bca13bf407336c7c5646ba8c54d0cd5bceb923d30a1dd904050b83ae0116b",
+        "bytes": 1913
+      },
+      {
+        "month": "2025-05",
+        "symbol": "BNBUSDT",
+        "sha256": "0ec9f578274d77a7a6550a78f60fcb958e53ed4f96dc2e3bfae3bfa8f0f41552",
+        "bytes": 2002
+      },
+      {
+        "month": "2025-06",
+        "symbol": "BNBUSDT",
+        "sha256": "0724ea1a2ca134c138acf4c27f88c99a7271d2ac9f065ca1f2c2ebd1361838ed",
+        "bytes": 1906
+      },
+      {
+        "month": "2025-07",
+        "symbol": "BNBUSDT",
+        "sha256": "060a89450cfa7baf8b2068962b9d961c63b6a533970256d7fc8356162ba00905",
+        "bytes": 2009
+      },
+      {
+        "month": "2025-08",
+        "symbol": "BNBUSDT",
+        "sha256": "3a26bfe42a85f8b7abef970107417d2c777f64976f84ad9137ee6b31b91d7663",
+        "bytes": 2026
+      },
+      {
+        "month": "2025-09",
+        "symbol": "BNBUSDT",
+        "sha256": "6742bc46e9a4b297ac5f3d33b940a114e444bbdfd0181f71c07d06f1853b5458",
+        "bytes": 1981
+      },
+      {
+        "month": "2025-10",
+        "symbol": "BNBUSDT",
+        "sha256": "721bbfffa88553681a7dd9422e58ccef9499a875f51efadc35ae22538c4975ef",
+        "bytes": 2078
+      },
+      {
+        "month": "2025-11",
+        "symbol": "BNBUSDT",
+        "sha256": "63fbd535e881fadbf1a7e66cb3f646537f09ea0ec7af78f1ae0e635a7b1df816",
+        "bytes": 1981
+      },
+      {
+        "month": "2025-12",
+        "symbol": "BNBUSDT",
+        "sha256": "2c80ad1f432956cc84b4e03ccb3c77c6bda03b18dd9a61a53a572d25ccaeaf55",
+        "bytes": 1985
+      },
+      {
+        "month": "2026-01",
+        "symbol": "BNBUSDT",
+        "sha256": "e936735fca3f568a7908b0c04d6c949164bb4a140bf0f79e8ab9ea9c79280ace",
+        "bytes": 1993
+      }
+    ],
+    "terminal_grid_days": 31
+  },
+  "full": {
+    "days": 1826,
+    "start": 10000.0,
+    "end": 29202.855502459173,
+    "cagr": 0.23907560973411468,
+    "sharpe": 0.6346776070861673,
+    "max_drawdown": 0.7568930404122242,
+    "profit_factor_daily_dollar": 1.071988992919343,
+    "total_pnl": 19202.855502459173,
+    "positive_days": 369
+  },
+  "gross_no_cost": {
+    "days": 1826,
+    "start": 10000.0,
+    "end": 31889.30336340001,
+    "cagr": 0.26108046241803806,
+    "sharpe": 0.6636379396280467,
+    "max_drawdown": 0.7549410700896197,
+    "profit_factor_daily_dollar": 1.0799339581397704,
+    "total_pnl": 21889.30336340001,
+    "positive_days": 378
+  },
+  "bnb_buy_and_hold": {
+    "days": 1826,
+    "start": 10000.0,
+    "end": 230425.05584631537,
+    "cagr": 0.8730235996704581,
+    "sharpe": 1.1440005193552656,
+    "max_drawdown": 0.7348829392049245,
+    "profit_factor_daily_dollar": 1.0824060778530755,
+    "total_pnl": 220425.05584631534,
+    "positive_days": 951
+  },
+  "holdout_Y4_Y5": {
+    "days": 731,
+    "start": 20864.19069789386,
+    "end": 29202.855502459173,
+    "cagr": 0.18293790534985965,
+    "sharpe": 0.6632247238959438,
+    "max_drawdown": 0.368760304653164,
+    "profit_factor_daily_dollar": 1.1040343132856156,
+    "total_pnl": 8338.664804565313,
+    "positive_days": 174
+  },
+  "folds": {
+    "Y1": {
+      "days": 365,
+      "start": 10000.0,
+      "end": 34202.47161060814,
+      "cagr": 2.423129142930815,
+      "sharpe": 1.5833972665827545,
+      "max_drawdown": 0.5952403111215919,
+      "profit_factor_daily_dollar": 1.211765901745446,
+      "total_pnl": 24202.47161060814,
+      "positive_days": 75
+    },
+    "Y2": {
+      "days": 365,
+      "start": 34202.47161060814,
+      "end": 21852.899207336053,
+      "cagr": -0.3612685225908029,
+      "sharpe": -0.6570079388670905,
+      "max_drawdown": 0.5401006780480262,
+      "profit_factor_daily_dollar": 0.7696039666651565,
+      "total_pnl": -12349.572403272086,
+      "positive_days": 57
+    },
+    "Y3": {
+      "days": 365,
+      "start": 21852.899207336053,
+      "end": 20864.19069789386,
+      "cagr": -0.04527409069441457,
+      "sharpe": -0.1347321597568728,
+      "max_drawdown": 0.2956334626107059,
+      "profit_factor_daily_dollar": 0.9471385736059317,
+      "total_pnl": -988.7085094421927,
+      "positive_days": 63
+    },
+    "Y4": {
+      "days": 366,
+      "start": 20864.19069789386,
+      "end": 23428.065331361373,
+      "cagr": 0.12261731829604305,
+      "sharpe": 0.5434749261555236,
+      "max_drawdown": 0.3179678421748411,
+      "profit_factor_daily_dollar": 1.095673390043524,
+      "total_pnl": 2563.8746334675125,
+      "positive_days": 58
+    },
+    "Y5": {
+      "days": 365,
+      "start": 23428.065331361373,
+      "end": 29202.855502459173,
+      "cagr": 0.24667839572846018,
+      "sharpe": 0.7643614940831515,
+      "max_drawdown": 0.368760304653164,
+      "profit_factor_daily_dollar": 1.108233702874687,
+      "total_pnl": 5774.7901710978,
+      "positive_days": 116
+    }
+  },
+  "monthly": {
+    "returns": {
+      "2021-01": 0.047265222784573346,
+      "2021-02": 0.9090982238913732,
+      "2021-03": 0.4384020018923931,
+      "2021-04": 1.059212132348037,
+      "2021-05": -0.4633723445867285,
+      "2021-06": 0.0,
+      "2021-07": 0.0,
+      "2021-08": 0.0,
+      "2021-09": 0.0,
+      "2021-10": 0.0,
+      "2021-11": 0.07626227559102872,
+      "2021-12": 0.0,
+      "2022-01": 0.0,
+      "2022-02": 0.0,
+      "2022-03": 0.0,
+      "2022-04": -0.11113120848569613,
+      "2022-05": -0.14903167173345122,
+      "2022-06": -0.2735016485778373,
+      "2022-07": 0.16229900092395955,
+      "2022-08": 0.08850818430937535,
+      "2022-09": -0.0016415464605218366,
+      "2022-10": 0.10485791104874531,
+      "2022-11": -0.1668496310612959,
+      "2022-12": 0.0,
+      "2023-01": 0.09293343558841083,
+      "2023-02": 0.014314379468167493,
+      "2023-03": 0.0,
+      "2023-04": 0.044421580595360055,
+      "2023-05": -0.09544113607019822,
+      "2023-06": -0.03647972078033146,
+      "2023-07": -0.007398024302723183,
+      "2023-08": -0.11329517930238264,
+      "2023-09": -0.004501989487651792,
+      "2023-10": 0.07345750602406587,
+      "2023-11": 0.005942593685097197,
+      "2023-12": 0.0,
+      "2024-01": 0.0,
+      "2024-02": 0.13113457916340332,
+      "2024-03": 0.0,
+      "2024-04": 0.0,
+      "2024-05": 0.054670970039669475,
+      "2024-06": -0.0366270406030067,
+      "2024-07": 0.0,
+      "2024-08": 0.0,
+      "2024-09": 0.0,
+      "2024-10": -0.016158919006539763,
+      "2024-11": 0.04783119523060919,
+      "2024-12": -0.052251986306269704,
+      "2025-01": -0.050783442542996826,
+      "2025-02": 0.0,
+      "2025-03": 0.0,
+      "2025-04": 0.02725090801993435,
+      "2025-05": 0.09690147815693484,
+      "2025-06": -0.007657580082081505,
+      "2025-07": 0.19217188355472414,
+      "2025-08": 0.1074794908336858,
+      "2025-09": 0.0,
+      "2025-10": 0.058669929076269556,
+      "2025-11": -0.17716255093971323,
+      "2025-12": 0.021100953664166644
+    },
+    "positive": 22,
+    "months": 60,
+    "longest_nonpositive_streak": 7,
+    "worst": -0.4633723445867285
+  },
+  "regimes": {
+    "bull_high": {
+      "days": 241,
+      "net_dollar_pnl": 25241.118495466584
+    },
+    "bull_low": {
+      "days": 769,
+      "net_dollar_pnl": 11355.694769574213
+    },
+    "bear_high": {
+      "days": 213,
+      "net_dollar_pnl": -6498.835674829497
+    },
+    "bear_low": {
+      "days": 603,
+      "net_dollar_pnl": -10895.122087752126
+    }
+  },
+  "monte_carlo": {
+    "paths": 5000,
+    "joint_passes": 0,
+    "joint_pass_rate": 0.0,
+    "ruined": 0,
+    "undefined": 0,
+    "cagr": {
+      "p05": -0.19834568978500586,
+      "p50": 0.23223951113974328,
+      "p95": 0.9317134497954428
+    },
+    "sharpe": {
+      "p05": -0.15568680015600805,
+      "p50": 0.6441925587722879,
+      "p95": 1.288287530244711
+    },
+    "max_drawdown": {
+      "p05": 0.4709852638546671,
+      "p50": 0.6856483014029797,
+      "p95": 0.8961436185431526
+    },
+    "profit_factor": {
+      "p05": 0.8937391030773705,
+      "p50": 1.0995215179389808,
+      "p95": 1.387614880134307
+    }
+  },
+  "checks": {
+    "numerical_full": false,
+    "min_10_entries": true,
+    "annual_walk_forward": false,
+    "historical_Y4_Y5_holdout": false,
+    "monthly_stability": false,
+    "four_regimes": false,
+    "block_monte_carlo": false,
+    "double_slippage": true,
+    "one_day_latency": true,
+    "incremental_alpha_vs_buy_and_hold": false,
+    "independent_executable_oos": false
+  },
+  "all_gate_passed": false,
+  "buys": 22,
+  "fills_by_fold": {
+    "Y1": 6,
+    "Y2": 10,
+    "Y3": 12,
+    "Y4": 7,
+    "Y5": 8
+  },
+  "entries_by_fold": {
+    "Y1": 3,
+    "Y2": 5,
+    "Y3": 6,
+    "Y4": 4,
+    "Y5": 4
+  },
+  "held_by_fold": {
+    "Y1": true,
+    "Y2": true,
+    "Y3": true,
+    "Y4": true,
+    "Y5": true
+  },
+  "fills": [
+    {
+      "day": "2021-01-07",
+      "side": "buy",
+      "reference": 42.244,
+      "execution": 42.286243999999996,
+      "quantity": 236.247,
+      "notional": 9989.998286267999,
+      "fee": 9.989998286268
+    },
+    {
+      "day": "2021-02-04",
+      "side": "sell",
+      "reference": 52.12,
+      "execution": 52.067879999999995,
+      "quantity": 236.247,
+      "notional": 12300.880446359999,
+      "fee": 12.300880446359999
+    },
+    {
+      "day": "2021-02-11",
+      "side": "buy",
+      "reference": 128.9463,
+      "execution": 129.0752463,
+      "quantity": 95.10900000000001,
+      "notional": 12276.217600346701,
+      "fee": 12.276217600346701
+    },
+    {
+      "day": "2021-05-20",
+      "side": "sell",
+      "reference": 334.8,
+      "execution": 334.46520000000004,
+      "quantity": 95.10900000000001,
+      "notional": 31810.650706800006,
+      "fee": 31.810650706800008
+    },
+    {
+      "day": "2021-11-04",
+      "side": "buy",
+      "reference": 568.4,
+      "execution": 568.9683999999999,
+      "quantity": 55.797000000000004,
+      "notional": 31746.729814799994,
+      "fee": 31.746729814799995
+    },
+    {
+      "day": "2021-11-11",
+      "side": "sell",
+      "reference": 614.2,
+      "execution": 613.5858000000001,
+      "quantity": 55.797000000000004,
+      "notional": 34236.246882600004,
+      "fee": 34.23624688260001
+    },
+    {
+      "day": "2022-04-14",
+      "side": "buy",
+      "reference": 423.4,
+      "execution": 423.82339999999994,
+      "quantity": 80.619,
+      "notional": 34168.2186846,
+      "fee": 34.1682186846
+    },
+    {
+      "day": "2022-06-16",
+      "side": "sell",
+      "reference": 233.6,
+      "execution": 233.3664,
+      "quantity": 80.619,
+      "notional": 18813.7658016,
+      "fee": 18.8137658016
+    },
+    {
+      "day": "2022-07-14",
+      "side": "buy",
+      "reference": 230.5,
+      "execution": 230.73049999999998,
+      "quantity": 81.377,
+      "notional": 18776.155898499997,
+      "fee": 18.776155898499997
+    },
+    {
+      "day": "2022-07-21",
+      "side": "sell",
+      "reference": 258.3,
+      "execution": 258.0417,
+      "quantity": 81.377,
+      "notional": 20998.6594209,
+      "fee": 20.9986594209
+    },
+    {
+      "day": "2022-07-28",
+      "side": "buy",
+      "reference": 271.6,
+      "execution": 271.8716,
+      "quantity": 77.083,
+      "notional": 20956.6785428,
+      "fee": 20.956678542800002
+    },
+    {
+      "day": "2022-08-11",
+      "side": "sell",
+      "reference": 328.8,
+      "execution": 328.4712,
+      "quantity": 77.083,
+      "notional": 25319.5455096,
+      "fee": 25.3195455096
+    },
+    {
+      "day": "2022-08-25",
+      "side": "buy",
+      "reference": 296.4,
+      "execution": 296.6963999999999,
+      "quantity": 85.168,
+      "notional": 25269.038995199997,
+      "fee": 25.2690389952
+    },
+    {
+      "day": "2022-09-01",
+      "side": "sell",
+      "reference": 279.3,
+      "execution": 279.02070000000003,
+      "quantity": 85.168,
+      "notional": 23763.634977600006,
+      "fee": 23.763634977600006
+    },
+    {
+      "day": "2022-10-06",
+      "side": "buy",
+      "reference": 294.2,
+      "execution": 294.4942,
+      "quantity": 80.531,
+      "notional": 23715.9124202,
+      "fee": 23.7159124202
+    },
+    {
+      "day": "2022-11-17",
+      "side": "sell",
+      "reference": 271.9,
+      "execution": 271.62809999999996,
+      "quantity": 80.531,
+      "notional": 21874.4825211,
+      "fee": 21.8744825211
+    },
+    {
+      "day": "2023-01-12",
+      "side": "buy",
+      "reference": 284.9,
+      "execution": 285.18489999999997,
+      "quantity": 76.55,
+      "notional": 21830.904094999998,
+      "fee": 21.830904094999998
+    },
+    {
+      "day": "2023-02-02",
+      "side": "sell",
+      "reference": 317.1,
+      "execution": 316.78290000000004,
+      "quantity": 76.55,
+      "notional": 24249.730995,
+      "fee": 24.249730995000004
+    },
+    {
+      "day": "2023-04-20",
+      "side": "buy",
+      "reference": 322.5,
+      "execution": 322.8225,
+      "quantity": 74.968,
+      "notional": 24201.35718,
+      "fee": 24.20135718
+    },
+    {
+      "day": "2023-05-25",
+      "side": "sell",
+      "reference": 305.9,
+      "execution": 305.59409999999997,
+      "quantity": 74.968,
+      "notional": 22909.7784888,
+      "fee": 22.9097784888
+    },
+    {
+      "day": "2023-06-22",
+      "side": "buy",
+      "reference": 248.9,
+      "execution": 249.14889999999997,
+      "quantity": 91.768,
+      "notional": 22863.896255199998,
+      "fee": 22.863896255199997
+    },
+    {
+      "day": "2023-07-06",
+      "side": "sell",
+      "reference": 239.0,
+      "execution": 238.761,
+      "quantity": 91.768,
+      "notional": 21910.619448,
+      "fee": 21.910619448000002
+    },
+    {
+      "day": "2023-08-10",
+      "side": "buy",
+      "reference": 243.9,
+      "execution": 244.14389999999997,
+      "quantity": 89.566,
+      "notional": 21866.992547399997,
+      "fee": 21.8669925474
+    },
+    {
+      "day": "2023-09-07",
+      "side": "sell",
+      "reference": 215.2,
+      "execution": 214.98479999999998,
+      "quantity": 89.566,
+      "notional": 19255.3285968,
+      "fee": 19.2553285968
+    },
+    {
+      "day": "2023-09-14",
+      "side": "buy",
+      "reference": 212.5,
+      "execution": 212.71249999999998,
+      "quantity": 90.342,
+      "notional": 19216.872675,
+      "fee": 19.216872674999998
+    },
+    {
+      "day": "2023-09-21",
+      "side": "sell",
+      "reference": 214.3,
+      "execution": 214.0857,
+      "quantity": 90.342,
+      "notional": 19340.9303094,
+      "fee": 19.3409303094
+    },
+    {
+      "day": "2023-10-19",
+      "side": "buy",
+      "reference": 210.3,
+      "execution": 210.5103,
+      "quantity": 91.69200000000001,
+      "notional": 19302.1104276,
+      "fee": 19.302110427600002
+    },
+    {
+      "day": "2023-11-02",
+      "side": "sell",
+      "reference": 228.0,
+      "execution": 227.772,
+      "quantity": 91.69200000000001,
+      "notional": 20884.870224000002,
+      "fee": 20.884870224000004
+    },
+    {
+      "day": "2024-02-15",
+      "side": "buy",
+      "reference": 333.9,
+      "execution": 334.23389999999995,
+      "quantity": 62.361000000000004,
+      "notional": 20843.1602379,
+      "fee": 20.8431602379
+    },
+    {
+      "day": "2024-02-22",
+      "side": "sell",
+      "reference": 379.2,
+      "execution": 378.82079999999996,
+      "quantity": 62.361000000000004,
+      "notional": 23623.6439088,
+      "fee": 23.623643908800002
+    },
+    {
+      "day": "2024-05-02",
+      "side": "buy",
+      "reference": 561.8,
+      "execution": 562.3617999999999,
+      "quantity": 41.924,
+      "notional": 23576.456103199995,
+      "fee": 23.576456103199995
+    },
+    {
+      "day": "2024-06-27",
+      "side": "sell",
+      "reference": 573.1,
+      "execution": 572.5269000000001,
+      "quantity": 41.924,
+      "notional": 24002.617755600004,
+      "fee": 24.002617755600003
+    },
+    {
+      "day": "2024-10-24",
+      "side": "buy",
+      "reference": 584.9,
+      "execution": 585.4848999999999,
+      "quantity": 40.914,
+      "notional": 23954.529198599997,
+      "fee": 23.9545291986
+    },
+    {
+      "day": "2024-11-21",
+      "side": "sell",
+      "reference": 605.39,
+      "execution": 604.7846099999999,
+      "quantity": 40.914,
+      "notional": 24744.157533539998,
+      "fee": 24.744157533539997
+    },
+    {
+      "day": "2024-12-05",
+      "side": "buy",
+      "reference": 739.54,
+      "execution": 740.2795399999999,
+      "quantity": 33.359,
+      "notional": 24694.985174859998,
+      "fee": 24.694985174859998
+    },
+    {
+      "day": "2025-01-30",
+      "side": "sell",
+      "reference": 667.97,
+      "execution": 667.3020300000001,
+      "quantity": 33.359,
+      "notional": 22260.52841877,
+      "fee": 22.26052841877
+    },
+    {
+      "day": "2025-04-17",
+      "side": "buy",
+      "reference": 582.8,
+      "execution": 583.3827999999999,
+      "quantity": 38.081,
+      "notional": 22215.800406799997,
+      "fee": 22.215800406799996
+    },
+    {
+      "day": "2025-06-19",
+      "side": "sell",
+      "reference": 644.77,
+      "execution": 644.12523,
+      "quantity": 38.081,
+      "notional": 24528.93288363,
+      "fee": 24.528932883630002
+    },
+    {
+      "day": "2025-06-26",
+      "side": "buy",
+      "reference": 646.06,
+      "execution": 646.7060599999999,
+      "quantity": 37.853,
+      "notional": 24479.764489179997,
+      "fee": 24.47976448918
+    },
+    {
+      "day": "2025-08-21",
+      "side": "sell",
+      "reference": 869.05,
+      "execution": 868.1809499999999,
+      "quantity": 37.853,
+      "notional": 32863.25350035,
+      "fee": 32.863253500350005
+    },
+    {
+      "day": "2025-10-02",
+      "side": "buy",
+      "reference": 1026.5,
+      "execution": 1027.5265,
+      "quantity": 31.919,
+      "notional": 32797.6183535,
+      "fee": 32.7976183535
+    },
+    {
+      "day": "2025-11-20",
+      "side": "sell",
+      "reference": 897.78,
+      "execution": 896.88222,
+      "quantity": 31.919,
+      "notional": 28627.58358018,
+      "fee": 28.627583580179998
+    },
+    {
+      "day": "2025-12-18",
+      "side": "buy",
+      "reference": 843.07,
+      "execution": 843.91307,
+      "quantity": 33.855000000000004,
+      "notional": 28570.67698485,
+      "fee": 28.570676984850003
+    },
+    {
+      "day": "2026-01-01",
+      "side": "sell",
+      "reference": 864.31,
+      "execution": 863.4456899999999,
+      "quantity": 33.855000000000004,
+      "notional": 29231.95383495,
+      "fee": 29.23195383495,
+      "forced_terminal": true
+    }
+  ],
+  "fees_usdt": 1034.8658701161849,
+  "slippage_reference_drag_usdt": 1034.8871427247,
+  "net_final_usdt": 29202.855502459173,
+  "gross_final_usdt": 31889.30336340001,
+  "double_slippage_final_usdt": 27946.10948238025,
+  "one_day_latency_final_usdt": 31602.26129000344
+}
