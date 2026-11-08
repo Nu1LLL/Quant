@@ -43,7 +43,7 @@ class FlowJournalTest(unittest.TestCase):
                 event_time = start + row_id * 1000
                 db.execute("""
                     INSERT OR REPLACE INTO market_flow_trades VALUES (?,?,?,?,?,?,?,?,?,?)
-                """, (row_id, str(row_id), event_time, side, amount,
+                """, (row_id, f"{event_time}:{row_id}", event_time, side, amount,
                       event_time + (600_000 if malformed and row_id == 2 else 10),
                       "hyperliquid", "perpetual", "executed", symbol))
 
@@ -96,6 +96,15 @@ class FlowJournalTest(unittest.TestCase):
         with closing(sqlite3.connect(self.source)) as db, db:
             db.execute("UPDATE market_flow_trades SET inserted_at_ms=? WHERE row_id=2",
                        (now + 1000,))
+        captures = capture_once(self.source, self.journal, now_ms=now)
+        self.assertEqual([item.status for item in captures], ["invalid", "invalid"])
+
+    def test_old_hyperliquid_tid_only_format_is_not_eligible(self):
+        start = ACTIVATION_MS + HOUR_MS
+        now = start + HOUR_MS + FIVE_MIN_MS + 60_000
+        self._seed_hour(start, now)
+        with closing(sqlite3.connect(self.source)) as db, db:
+            db.execute("UPDATE market_flow_trades SET trade_id='2' WHERE row_id=2")
         captures = capture_once(self.source, self.journal, now_ms=now)
         self.assertEqual([item.status for item in captures], ["invalid", "invalid"])
 

@@ -119,14 +119,18 @@ def _read_symbol(source: sqlite3.Connection, symbol: str, start: int,
     for row in rows:
         timestamp = int(row["timestamp_ms"])
         inserted = int(row["inserted_at_ms"])
+        trade_id = str(row["trade_id"])
+        parts = trade_id.split(":")
         if (row["venue"] != "hyperliquid" or row["market_type"] != "perpetual"
                 or row["confirmation_status"] != "executed"
                 or row["side"] not in ("long", "short")
+                or len(parts) != 2 or parts[0] != str(timestamp)
+                or not parts[1].isdecimal()
                 or inserted < timestamp or inserted - timestamp > MAX_SOURCE_LAG_MS
                 or inserted > observed):
             raise ValueError("source row violates real-time trade contract")
         cents = _cents(row["notional_usd"])
-        canonical = (int(row["row_id"]), str(row["trade_id"]), timestamp,
+        canonical = (int(row["row_id"]), trade_id, timestamp,
                      row["side"], cents, inserted)
         digest.update(json.dumps(canonical, separators=(",", ":")).encode() + b"\n")
         count += 1
