@@ -1,0 +1,12 @@
+# CFTC release-date integrity correction for the sealed CME BTC study
+
+**Status:** prior retrospective performance is **causally invalid**, even though its original numerical Gate already failed. This is a correction notice, not a rerun or a new strategy result. The sealed [`RESULT.json`](../../reports/mini_medallion_cme_asset_manager_growth_hash_v2_oos/RESULT.json) and [`REPORT.md`](../../reports/mini_medallion_cme_asset_manager_growth_hash_v2_oos/REPORT.md) remain byte-for-byte unchanged.
+
+The CME asset-manager study assumed that every report could be used 13 calendar days after its CFTC as-of date. [CFTC's 2023 historical announcements](https://www.cftc.gov/MarketReports/CommitmentsofTraders/HistoricalSpecialAnnouncements/index.htm) document seven weeks of delayed reports after the ION incident. [CFTC's revised 2025 catch-up schedule](https://www.cftc.gov/PressRoom/PressReleases/9147-25) documents releases delayed by weeks during the federal appropriations lapse. A date-only audit of the six already pinned CFTC futures archives finds **15 Monday decisions** where the sealed runner selected a report **before its actual public release**:
+
+- 2023-02-13, 02-20, 02-27, 03-06 and 03-13 (five decisions).
+- 2025-10-13, 10-20, 10-27, 11-03, 11-10, 11-17, 11-24, 12-01, 12-08 and 12-15 (ten decisions).
+
+The audit selected report dates using the sealed runner's `report_date <= Monday−13 days` rule and compared only dates with CFTC's documented actual publication dates; it did not inspect position or price values, change the strategy, or compute replacement PnL. It means the reported −0.92% CAGR and other retrospective metrics **must not be interpreted as executable or even causally timed historical evidence**. The original rejection stands; the performance numbers are retained only as an auditable record of the invalid run. No same-history retuning or corrected performance run is authorized for this sealed candidate.
+
+The new isolated `cftc_release_calendar.py` records the known 2023/2025 exceptions, requires a full UTC day after an exceptional release, and otherwise applies the original conservative 13-day delay. It fails closed on duplicate report dates and non-UTC decision times. This prevents the **documented** 15 cases for any future CFTC-derived hypothesis; it does not prove that all historical first-release timestamps, revisions or other unlisted disruptions are known. Such a study remains retrospective current-vintage evidence with `independent_executable_oos=false` until separately validated prospectively.
