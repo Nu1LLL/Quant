@@ -1,0 +1,1323 @@
+{
+  "experiment": "lido_stake_acceleration_eth_timestamp_v2_2026_11_08",
+  "prereg_commit": "2d11bf0",
+  "code_commit": "7e8e3238a89b759f97e2053514243680d28905cb",
+  "started_utc": "2026-11-08T08:54:44.115848+00:00",
+  "evidence_grade": "preregistered_retrospective_current_lido_vintage",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "previous_data_failure_seal": "15ec3b8",
+  "status": "sealed_formal_result",
+  "sealed_utc": "2026-11-08T08:55:08.986353+00:00",
+  "sources": {
+    "lido": {
+      "source": "https://api.llama.fi/protocol/lido",
+      "ethereum_weth_sunday_sha256": "004a5b99837e8b1584fe19c2932fe24165d50a90543f606dc19d41a331afa0e5",
+      "sunday_timestamp_sha256": "787adfdb0e39b5d3e3de3047bf33503e7f82376a4395eec5dcc821e0b3664947",
+      "utc_clock_counts": {
+        "00:00:00": 239,
+        "22:00:00": 7,
+        "23:00:00": 17
+      },
+      "sundays": 263,
+      "first": "2020-12-20",
+      "last": "2025-12-28",
+      "raw_response_bytes": 2088701,
+      "first_published_vintage_unavailable": true
+    },
+    "binance_spot_verified_sha256": [
+      {
+        "month": "2020-11",
+        "rows": 30,
+        "first": "2020-11-01 00:00:00+00:00",
+        "last": "2020-11-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2020-11.zip",
+        "sha256": "ab032f6eecf184ac52f3bc1eefff55031e98bedf256523b7e495b952197f08e0",
+        "bytes": 2076
+      },
+      {
+        "month": "2020-12",
+        "rows": 31,
+        "first": "2020-12-01 00:00:00+00:00",
+        "last": "2020-12-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2020-12.zip",
+        "sha256": "40dd3b625132d93b36397f9f4dcceaf6be13f50ffb357c28d06003370fd11176",
+        "bytes": 2129
+      },
+      {
+        "month": "2021-01",
+        "rows": 31,
+        "first": "2021-01-01 00:00:00+00:00",
+        "last": "2021-01-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2021-01.zip",
+        "sha256": "9c077a151ad30786ffbf2d560f457fb727ea3fc4f0932e6e287e2bf22ce5ba16",
+        "bytes": 2214
+      },
+      {
+        "month": "2021-02",
+        "rows": 28,
+        "first": "2021-02-01 00:00:00+00:00",
+        "last": "2021-02-28 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2021-02.zip",
+        "sha256": "07b43daa2cd8487fc7a652c58237b93a7a07108e5f4d5cb9ec086d7737898d99",
+        "bytes": 2005
+      },
+      {
+        "month": "2021-03",
+        "rows": 31,
+        "first": "2021-03-01 00:00:00+00:00",
+        "last": "2021-03-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2021-03.zip",
+        "sha256": "0f3fe06236480c4aed3460eac7b2d4e0ef621ec4cc5da20445797cb682b74dc2",
+        "bytes": 2195
+      },
+      {
+        "month": "2021-04",
+        "rows": 30,
+        "first": "2021-04-01 00:00:00+00:00",
+        "last": "2021-04-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2021-04.zip",
+        "sha256": "d483115836d4c285943064b22461670ff30ef1601b1183c4034c7edb4fffeedf",
+        "bytes": 2115
+      },
+      {
+        "month": "2021-05",
+        "rows": 31,
+        "first": "2021-05-01 00:00:00+00:00",
+        "last": "2021-05-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2021-05.zip",
+        "sha256": "bc68e71360869ed2f1d06bfa07ec6599c5bdb38406d6b712635afe2c6f1df7fa",
+        "bytes": 2240
+      },
+      {
+        "month": "2021-06",
+        "rows": 30,
+        "first": "2021-06-01 00:00:00+00:00",
+        "last": "2021-06-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2021-06.zip",
+        "sha256": "b8ddb26be6c48876a04a7fddfbc3f4c8842f53b8e217613eac9dd15a55836597",
+        "bytes": 2136
+      },
+      {
+        "month": "2021-07",
+        "rows": 31,
+        "first": "2021-07-01 00:00:00+00:00",
+        "last": "2021-07-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2021-07.zip",
+        "sha256": "c33ea50dc263d559315e7bf3dd6ab87a40f12747fe6fd0c16b5dff28dbd7b58f",
+        "bytes": 2186
+      },
+      {
+        "month": "2021-08",
+        "rows": 31,
+        "first": "2021-08-01 00:00:00+00:00",
+        "last": "2021-08-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2021-08.zip",
+        "sha256": "3cffa7628cff71c9b2ec5f33085c90317fc1d9866ac701ca9742322344182397",
+        "bytes": 2200
+      },
+      {
+        "month": "2021-09",
+        "rows": 30,
+        "first": "2021-09-01 00:00:00+00:00",
+        "last": "2021-09-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2021-09.zip",
+        "sha256": "14e849630ad4d5ae2f899c289c395736c12f1b699486b9dcfd1d7e058e4fff18",
+        "bytes": 2089
+      },
+      {
+        "month": "2021-10",
+        "rows": 31,
+        "first": "2021-10-01 00:00:00+00:00",
+        "last": "2021-10-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2021-10.zip",
+        "sha256": "4f9e66dc56961d8552082782b2cdac5a149e125da90694885ab90363a63e8ff5",
+        "bytes": 2129
+      },
+      {
+        "month": "2021-11",
+        "rows": 30,
+        "first": "2021-11-01 00:00:00+00:00",
+        "last": "2021-11-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2021-11.zip",
+        "sha256": "8e9ebb3bcc07d3080db603ceafaec29fe66612bd160ad737235a3476fc8eafe9",
+        "bytes": 2080
+      },
+      {
+        "month": "2021-12",
+        "rows": 31,
+        "first": "2021-12-01 00:00:00+00:00",
+        "last": "2021-12-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2021-12.zip",
+        "sha256": "2f30c04c60988621d47afa115e2b7771785440ee3effe87355d5f7038d234361",
+        "bytes": 2114
+      },
+      {
+        "month": "2022-01",
+        "rows": 31,
+        "first": "2022-01-01 00:00:00+00:00",
+        "last": "2022-01-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2022-01.zip",
+        "sha256": "d992b05664b21cef2e104aa93ab1de487fe396f68dc9767380d87998cc7969a1",
+        "bytes": 2139
+      },
+      {
+        "month": "2022-02",
+        "rows": 28,
+        "first": "2022-02-01 00:00:00+00:00",
+        "last": "2022-02-28 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2022-02.zip",
+        "sha256": "2d7eeb5c0c0574ebfff2d7369f3b991e2693fe81a2defc87525c667598c3ceef",
+        "bytes": 1948
+      },
+      {
+        "month": "2022-03",
+        "rows": 31,
+        "first": "2022-03-01 00:00:00+00:00",
+        "last": "2022-03-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2022-03.zip",
+        "sha256": "0cfffeb995ad02f64b0a1235db34fbca7982aef8b104ee4bb7fd52605323ad53",
+        "bytes": 2131
+      },
+      {
+        "month": "2022-04",
+        "rows": 30,
+        "first": "2022-04-01 00:00:00+00:00",
+        "last": "2022-04-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2022-04.zip",
+        "sha256": "2e3269eb718fd3c75f41a11f03c91f3e3af91bd14815b79b216ec371a876ec57",
+        "bytes": 2041
+      },
+      {
+        "month": "2022-05",
+        "rows": 31,
+        "first": "2022-05-01 00:00:00+00:00",
+        "last": "2022-05-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2022-05.zip",
+        "sha256": "fe39dd94b5e65aced7b4979fd6357fcd3700ae556a9d03c507d9983d507a628e",
+        "bytes": 2144
+      },
+      {
+        "month": "2022-06",
+        "rows": 30,
+        "first": "2022-06-01 00:00:00+00:00",
+        "last": "2022-06-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2022-06.zip",
+        "sha256": "62633207619685b148ef58bdc910b78a33fef724ac2b507ef57e7878145516dc",
+        "bytes": 2060
+      },
+      {
+        "month": "2022-07",
+        "rows": 31,
+        "first": "2022-07-01 00:00:00+00:00",
+        "last": "2022-07-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2022-07.zip",
+        "sha256": "6b4b9bdc7b0e1e6b87b95e750343d898c0df36d9d885bfeae594ca4e29ac0981",
+        "bytes": 2130
+      },
+      {
+        "month": "2022-08",
+        "rows": 31,
+        "first": "2022-08-01 00:00:00+00:00",
+        "last": "2022-08-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2022-08.zip",
+        "sha256": "9f54ee2471795608f083a175285cbfd77f5de473cbeaa0d491b3751cf791a3a9",
+        "bytes": 2118
+      },
+      {
+        "month": "2022-09",
+        "rows": 30,
+        "first": "2022-09-01 00:00:00+00:00",
+        "last": "2022-09-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2022-09.zip",
+        "sha256": "64daaa8bedcb3e82736d5b6426974aadd814007067fc81380ae87e04e1112714",
+        "bytes": 2022
+      },
+      {
+        "month": "2022-10",
+        "rows": 31,
+        "first": "2022-10-01 00:00:00+00:00",
+        "last": "2022-10-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2022-10.zip",
+        "sha256": "01a81d5a27053ead87542d1329763bfd22978080f6c3e7ee588f189cd49ff8d6",
+        "bytes": 2088
+      },
+      {
+        "month": "2022-11",
+        "rows": 30,
+        "first": "2022-11-01 00:00:00+00:00",
+        "last": "2022-11-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2022-11.zip",
+        "sha256": "83cef6abcb76dffbac6c6ad0e2842dd218f226e1e4a1839e78e35b12dd68a015",
+        "bytes": 2061
+      },
+      {
+        "month": "2022-12",
+        "rows": 31,
+        "first": "2022-12-01 00:00:00+00:00",
+        "last": "2022-12-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2022-12.zip",
+        "sha256": "e3f2c5851ef573c35733f29293188310099683948692d8e8ba008b17fdbd508f",
+        "bytes": 2050
+      },
+      {
+        "month": "2023-01",
+        "rows": 31,
+        "first": "2023-01-01 00:00:00+00:00",
+        "last": "2023-01-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2023-01.zip",
+        "sha256": "811ff55e20735e6fff55ef37c0c3e922eb6d26d41fe84fc04b2a03c0179549ad",
+        "bytes": 2087
+      },
+      {
+        "month": "2023-02",
+        "rows": 28,
+        "first": "2023-02-01 00:00:00+00:00",
+        "last": "2023-02-28 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2023-02.zip",
+        "sha256": "2f6cdf5aa6613ab3621dbd730a234935e8909f980f1195f7581abf145e422cce",
+        "bytes": 1916
+      },
+      {
+        "month": "2023-03",
+        "rows": 31,
+        "first": "2023-03-01 00:00:00+00:00",
+        "last": "2023-03-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2023-03.zip",
+        "sha256": "dbfe653bf62ebac3e4e2bf5c96160de6c76bcbd76e4979ca2105d11cf2bdf77e",
+        "bytes": 2098
+      },
+      {
+        "month": "2023-04",
+        "rows": 30,
+        "first": "2023-04-01 00:00:00+00:00",
+        "last": "2023-04-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2023-04.zip",
+        "sha256": "d316aea182914c088b06d03640812bae72e889a347ed9dcc78bb8ad10ed1bdf9",
+        "bytes": 2019
+      },
+      {
+        "month": "2023-05",
+        "rows": 31,
+        "first": "2023-05-01 00:00:00+00:00",
+        "last": "2023-05-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2023-05.zip",
+        "sha256": "a86ef09c35c764e6f0066953074ffb0dc93239afe92e3d73e232fbc95cdeab51",
+        "bytes": 2087
+      },
+      {
+        "month": "2023-06",
+        "rows": 30,
+        "first": "2023-06-01 00:00:00+00:00",
+        "last": "2023-06-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2023-06.zip",
+        "sha256": "4932a5fd8853ddf99f3853a501e5f35ffad45a07a466bbf4603ddb7fb4c821ac",
+        "bytes": 1994
+      },
+      {
+        "month": "2023-07",
+        "rows": 31,
+        "first": "2023-07-01 00:00:00+00:00",
+        "last": "2023-07-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2023-07.zip",
+        "sha256": "f66293651e4a841fe9bc36cc76483bdb9c1faaa085377fbbd2fd064cd401cd5e",
+        "bytes": 2036
+      },
+      {
+        "month": "2023-08",
+        "rows": 31,
+        "first": "2023-08-01 00:00:00+00:00",
+        "last": "2023-08-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2023-08.zip",
+        "sha256": "e694749c085b888401f51002dbd21bc8cf0c4d801d2da311e72d6c1ae97627d4",
+        "bytes": 2058
+      },
+      {
+        "month": "2023-09",
+        "rows": 30,
+        "first": "2023-09-01 00:00:00+00:00",
+        "last": "2023-09-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2023-09.zip",
+        "sha256": "c1faa848529e17e15deafb208d817155576ef51e556813109cdb60c0153ac73d",
+        "bytes": 1985
+      },
+      {
+        "month": "2023-10",
+        "rows": 31,
+        "first": "2023-10-01 00:00:00+00:00",
+        "last": "2023-10-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2023-10.zip",
+        "sha256": "baadc74c685a63d7ba453531c9f4d1df81a5719200501ab229018352a1be9630",
+        "bytes": 2059
+      },
+      {
+        "month": "2023-11",
+        "rows": 30,
+        "first": "2023-11-01 00:00:00+00:00",
+        "last": "2023-11-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2023-11.zip",
+        "sha256": "8faf9f53efe268d25d01b987b3a364cd9f1983703ab2f78486192c29218b1faf",
+        "bytes": 2022
+      },
+      {
+        "month": "2023-12",
+        "rows": 31,
+        "first": "2023-12-01 00:00:00+00:00",
+        "last": "2023-12-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2023-12.zip",
+        "sha256": "1778c56d995fe5d32a0816a5214feabcd84d594f4e882315b4e225d6e86e5275",
+        "bytes": 2086
+      },
+      {
+        "month": "2024-01",
+        "rows": 31,
+        "first": "2024-01-01 00:00:00+00:00",
+        "last": "2024-01-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2024-01.zip",
+        "sha256": "49598e812edcbf446f20d21a3ffc382a6f51fc1982a7e4224b78a416dbe36e8d",
+        "bytes": 2109
+      },
+      {
+        "month": "2024-02",
+        "rows": 29,
+        "first": "2024-02-01 00:00:00+00:00",
+        "last": "2024-02-29 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2024-02.zip",
+        "sha256": "36ebece2c2a6fcccdc4ee2924cd037870e88fa09877208843e2cbdf5f5c93a44",
+        "bytes": 1976
+      },
+      {
+        "month": "2024-03",
+        "rows": 31,
+        "first": "2024-03-01 00:00:00+00:00",
+        "last": "2024-03-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2024-03.zip",
+        "sha256": "78f5a6edba263350c1df6d4678596570ae5ce5df38edd4e253ec89431fbddfc0",
+        "bytes": 2125
+      },
+      {
+        "month": "2024-04",
+        "rows": 30,
+        "first": "2024-04-01 00:00:00+00:00",
+        "last": "2024-04-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2024-04.zip",
+        "sha256": "d0a5088a3d49cea7269dc3bf7f29912e23a390c87fb7b14acbed210ac9be8177",
+        "bytes": 2050
+      },
+      {
+        "month": "2024-05",
+        "rows": 31,
+        "first": "2024-05-01 00:00:00+00:00",
+        "last": "2024-05-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2024-05.zip",
+        "sha256": "d0c98ff2f16913e1c1f9bb72165086056ae9923db5b07f113ca6eaf334b87bbf",
+        "bytes": 2109
+      },
+      {
+        "month": "2024-06",
+        "rows": 30,
+        "first": "2024-06-01 00:00:00+00:00",
+        "last": "2024-06-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2024-06.zip",
+        "sha256": "5198557b48b8df354f5dc07e76270e988416f9e8972e577d9c327b31d2cb1db1",
+        "bytes": 2014
+      },
+      {
+        "month": "2024-07",
+        "rows": 31,
+        "first": "2024-07-01 00:00:00+00:00",
+        "last": "2024-07-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2024-07.zip",
+        "sha256": "ae4a1a154d9c4e27bb7551293216d6824a0455fef7ecea0efb5084e145ba1ac5",
+        "bytes": 2093
+      },
+      {
+        "month": "2024-08",
+        "rows": 31,
+        "first": "2024-08-01 00:00:00+00:00",
+        "last": "2024-08-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2024-08.zip",
+        "sha256": "e41fc2dcefc5d0737fd74e943602327cfdbcde04dec40d94030cfcf01720e593",
+        "bytes": 2107
+      },
+      {
+        "month": "2024-09",
+        "rows": 30,
+        "first": "2024-09-01 00:00:00+00:00",
+        "last": "2024-09-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2024-09.zip",
+        "sha256": "6e6add68412a0d89199fb6185b88b24994c32522e4ee67ac88d02ab8b81eb1c1",
+        "bytes": 2030
+      },
+      {
+        "month": "2024-10",
+        "rows": 31,
+        "first": "2024-10-01 00:00:00+00:00",
+        "last": "2024-10-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2024-10.zip",
+        "sha256": "cc2ae0b168f8ddd7b45441a30ae9aa95f748ec9ecaa19ab3cf5e9ec21fc63783",
+        "bytes": 2084
+      },
+      {
+        "month": "2024-11",
+        "rows": 30,
+        "first": "2024-11-01 00:00:00+00:00",
+        "last": "2024-11-30 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2024-11.zip",
+        "sha256": "fe8b32f1ab7a3a72316b404ffc9d7002cb75801364f12dc52eddfedbb3e3af43",
+        "bytes": 2074
+      },
+      {
+        "month": "2024-12",
+        "rows": 31,
+        "first": "2024-12-01 00:00:00+00:00",
+        "last": "2024-12-31 00:00:00+00:00",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2024-12.zip",
+        "sha256": "e36880cb5d79157599878eb97db2d20a5bc10f904384501f0b3571a09c1b6bcc",
+        "bytes": 2128
+      },
+      {
+        "month": "2025-01",
+        "rows": 31,
+        "first": "2025-01-01 00:00:00+00:00",
+        "last": "2025-01-31 00:00:00+00:00",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2025-01.zip",
+        "sha256": "fb1c6329259282a4174c646629515704da03c713bff9106f8da01ec188112a09",
+        "bytes": 2157
+      },
+      {
+        "month": "2025-02",
+        "rows": 28,
+        "first": "2025-02-01 00:00:00+00:00",
+        "last": "2025-02-28 00:00:00+00:00",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2025-02.zip",
+        "sha256": "ed3cf4f55aa296a25e092d73170c6772fa33e089c8ee5bdd379198fa94675361",
+        "bytes": 1988
+      },
+      {
+        "month": "2025-03",
+        "rows": 31,
+        "first": "2025-03-01 00:00:00+00:00",
+        "last": "2025-03-31 00:00:00+00:00",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2025-03.zip",
+        "sha256": "37a2a5d88861944141de683f7584d01cfeb23c0a69ba0aa2613fa6ec14b33960",
+        "bytes": 2172
+      },
+      {
+        "month": "2025-04",
+        "rows": 30,
+        "first": "2025-04-01 00:00:00+00:00",
+        "last": "2025-04-30 00:00:00+00:00",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2025-04.zip",
+        "sha256": "88554fccbad3d445fb7aad16440ef62aeb7b5a0d0d0be26101919753a455e106",
+        "bytes": 2107
+      },
+      {
+        "month": "2025-05",
+        "rows": 31,
+        "first": "2025-05-01 00:00:00+00:00",
+        "last": "2025-05-31 00:00:00+00:00",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2025-05.zip",
+        "sha256": "05f9099dc0225439cdcd08661281bc958f4984a02c5219ff019c7988140a4511",
+        "bytes": 2150
+      },
+      {
+        "month": "2025-06",
+        "rows": 30,
+        "first": "2025-06-01 00:00:00+00:00",
+        "last": "2025-06-30 00:00:00+00:00",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2025-06.zip",
+        "sha256": "1a436c3f4e79c6ef65e06749c7be302800f2bbe84b283f36b670688f1fe8e706",
+        "bytes": 2077
+      },
+      {
+        "month": "2025-07",
+        "rows": 31,
+        "first": "2025-07-01 00:00:00+00:00",
+        "last": "2025-07-31 00:00:00+00:00",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2025-07.zip",
+        "sha256": "507452f08f6df58e28c66a56eb114c274a601908b7a36cca028f4f1fe685c5a0",
+        "bytes": 2148
+      },
+      {
+        "month": "2025-08",
+        "rows": 31,
+        "first": "2025-08-01 00:00:00+00:00",
+        "last": "2025-08-31 00:00:00+00:00",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2025-08.zip",
+        "sha256": "caaf73478addeaf0d1a1d470284448a8eea201ec8b54acbf4996327ee5fd30d3",
+        "bytes": 2173
+      },
+      {
+        "month": "2025-09",
+        "rows": 30,
+        "first": "2025-09-01 00:00:00+00:00",
+        "last": "2025-09-30 00:00:00+00:00",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2025-09.zip",
+        "sha256": "2362f78fe5ef79628fe7a16fcd720ba5e2490bd05806943d092d0c2bbc025403",
+        "bytes": 2104
+      },
+      {
+        "month": "2025-10",
+        "rows": 31,
+        "first": "2025-10-01 00:00:00+00:00",
+        "last": "2025-10-31 00:00:00+00:00",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2025-10.zip",
+        "sha256": "7ac29ddc8e5af97d63293df20ca5fe2d31952754d06fa7592992cd1b9ccc2fbb",
+        "bytes": 2174
+      },
+      {
+        "month": "2025-11",
+        "rows": 30,
+        "first": "2025-11-01 00:00:00+00:00",
+        "last": "2025-11-30 00:00:00+00:00",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2025-11.zip",
+        "sha256": "ca97638b3e43fa8fc6cfe9e01ebec4cd6b59ac5b37b694f951ae30719424bbed",
+        "bytes": 2101
+      },
+      {
+        "month": "2025-12",
+        "rows": 31,
+        "first": "2025-12-01 00:00:00+00:00",
+        "last": "2025-12-31 00:00:00+00:00",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2025-12.zip",
+        "sha256": "eaf731c713e58a6d0e7a196c9887c41c5ed6066c73de68f878dfbe4a48de05e8",
+        "bytes": 2165
+      },
+      {
+        "month": "2026-01",
+        "terminal_open_only": true,
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1d/ETHUSDT-1d-2026-01.zip",
+        "sha256": "809eceed4a7a4eddf08f70e4c505f454ecf9d715d72269fa36db37964e4159f4",
+        "bytes": 2151
+      }
+    ]
+  },
+  "full": {
+    "days": 1826,
+    "start": 10000.0,
+    "end": 27128.003238154077,
+    "cagr": 0.22094312481717937,
+    "sharpe": 0.6552965853261307,
+    "max_drawdown": 0.660379553397958,
+    "profit_factor_daily_dollar": 1.1458834462370826,
+    "total_pnl": 17128.003238154077,
+    "positive_days": 380
+  },
+  "buy_and_hold": {
+    "days": 1826,
+    "start": 10000.0,
+    "end": 40231.63620824427,
+    "cagr": 0.3210829681891101,
+    "sharpe": 0.7465530774686596,
+    "max_drawdown": 0.8189065773366332,
+    "profit_factor_daily_dollar": 1.0345243415482421,
+    "total_pnl": 30231.636208244272,
+    "positive_days": 935
+  },
+  "gross_no_cost": {
+    "days": 1826,
+    "start": 10000.0,
+    "end": 28978.754346,
+    "cagr": 0.23716776422707175,
+    "sharpe": 0.6825483586600245,
+    "max_drawdown": 0.6562778992294319,
+    "profit_factor_daily_dollar": 1.158311775190002,
+    "total_pnl": 18978.754346,
+    "positive_days": 387
+  },
+  "annual": {
+    "2021": {
+      "days": 365,
+      "start": 10000.0,
+      "end": 10975.109153564743,
+      "cagr": 0.09758086121286724,
+      "sharpe": 0.4883278859537977,
+      "max_drawdown": 0.6046520918378002,
+      "profit_factor_daily_dollar": 1.0286548176761918,
+      "total_pnl": 975.1091535647429,
+      "positive_days": 61
+    },
+    "2022": {
+      "days": 365,
+      "start": 10975.109153564743,
+      "end": 8882.923627543241,
+      "cagr": -0.19074728146504738,
+      "sharpe": -0.06410216998448319,
+      "max_drawdown": 0.45977952987768356,
+      "profit_factor_daily_dollar": 0.9197816316804329,
+      "total_pnl": -2092.1855260215016,
+      "positive_days": 97
+    },
+    "2023": {
+      "days": 365,
+      "start": 8882.923627543241,
+      "end": 9533.097847092335,
+      "cagr": 0.07324564485785601,
+      "sharpe": 0.37657706928324153,
+      "max_drawdown": 0.2830449235401893,
+      "profit_factor_daily_dollar": 1.0427443876494495,
+      "total_pnl": 650.1742195490933,
+      "positive_days": 91
+    },
+    "2024": {
+      "days": 366,
+      "start": 9533.097847092335,
+      "end": 20666.186734530453,
+      "cagr": 1.1644009712839183,
+      "sharpe": 2.4949453635075063,
+      "max_drawdown": 0.31350679540760507,
+      "profit_factor_daily_dollar": 1.6545261538035765,
+      "total_pnl": 11133.088887438118,
+      "positive_days": 82
+    },
+    "2025": {
+      "days": 365,
+      "start": 20666.186734530453,
+      "end": 27128.003238154077,
+      "cagr": 0.3129204385360942,
+      "sharpe": 0.9894474183277431,
+      "max_drawdown": 0.3700489408244362,
+      "profit_factor_daily_dollar": 1.257668193223716,
+      "total_pnl": 6461.816503623624,
+      "positive_days": 49
+    }
+  },
+  "annual_entries": {
+    "2021": 4,
+    "2022": 3,
+    "2023": 5,
+    "2024": 6,
+    "2025": 4
+  },
+  "holdout_2024_2025": {
+    "days": 731,
+    "start": 9533.097847092335,
+    "end": 27128.003238154077,
+    "cagr": 0.6863066760884329,
+    "sharpe": 1.7448602788799856,
+    "max_drawdown": 0.3700489408244362,
+    "profit_factor_daily_dollar": 1.4180559664997385,
+    "total_pnl": 17594.905391061744,
+    "positive_days": 131
+  },
+  "monthly": {
+    "returns": {
+      "2021-01": 0.0,
+      "2021-02": 0.0,
+      "2021-03": 0.0,
+      "2021-04": 0.17445655731532161,
+      "2021-05": -0.023903223346270375,
+      "2021-06": -0.036902480172872676,
+      "2021-07": 0.09837640091052058,
+      "2021-08": 0.22099626873404232,
+      "2021-09": -0.10407490038120881,
+      "2021-10": 0.0,
+      "2021-11": 0.0,
+      "2021-12": -0.17268382691496376,
+      "2022-01": -0.3310220130794682,
+      "2022-02": 0.08817121505352699,
+      "2022-03": 0.12343795660626378,
+      "2022-04": -0.06402250301475132,
+      "2022-05": 0.0,
+      "2022-06": 0.0,
+      "2022-07": 0.0,
+      "2022-08": 0.020663916025748685,
+      "2022-09": 0.06496955398350313,
+      "2022-10": 0.18361104907698178,
+      "2022-11": -0.17691201573433735,
+      "2022-12": -0.0014994853199691294,
+      "2023-01": -0.017987626598679918,
+      "2023-02": 0.012552561179130173,
+      "2023-03": 0.13474049374087338,
+      "2023-04": 0.0462787983048234,
+      "2023-05": -0.01800236801187971,
+      "2023-06": -0.1511619824620143,
+      "2023-07": 0.0,
+      "2023-08": -0.02162117102716732,
+      "2023-09": -0.03009325198642665,
+      "2023-10": 0.0,
+      "2023-11": -0.006947560790557694,
+      "2023-12": 0.15732446825300261,
+      "2024-01": 0.01999931414506695,
+      "2024-02": 0.46293280300242134,
+      "2024-03": 0.19720747877126188,
+      "2024-04": 0.0,
+      "2024-05": 0.004931978242906476,
+      "2024-06": -0.11199736230040713,
+      "2024-07": -0.016342317940572615,
+      "2024-08": 0.0,
+      "2024-09": 0.0,
+      "2024-10": 0.15329254148990068,
+      "2024-11": 0.16029637559843657,
+      "2024-12": 0.03306890715157462,
+      "2025-01": 0.0,
+      "2025-02": 0.0,
+      "2025-03": 0.0,
+      "2025-04": 0.07199259817664694,
+      "2025-05": 0.0,
+      "2025-06": 0.026150695843810468,
+      "2025-07": 0.4576065801261886,
+      "2025-08": 0.0,
+      "2025-09": 0.0,
+      "2025-10": -0.015571369578658678,
+      "2025-11": -0.22264275545181433,
+      "2025-12": 0.06981662430341506
+    },
+    "positive": 23,
+    "months": 60,
+    "longest_nonpositive_streak": 7,
+    "worst": -0.3310220130794682
+  },
+  "regimes": {
+    "bull_high": {
+      "days": 279,
+      "net_dollar_pnl": -2564.680286983945
+    },
+    "bull_low": {
+      "days": 643,
+      "net_dollar_pnl": 21859.77266944089
+    },
+    "bear_high": {
+      "days": 387,
+      "net_dollar_pnl": 8698.230183260086
+    },
+    "bear_low": {
+      "days": 517,
+      "net_dollar_pnl": -10865.319327562953
+    }
+  },
+  "monte_carlo": {
+    "paths": 5000,
+    "joint_passes": 0,
+    "joint_pass_rate": 0.0,
+    "ruined": 0,
+    "undefined": 0,
+    "cagr": {
+      "p05": -0.13673581119213915,
+      "p50": 0.21905815867239875,
+      "p95": 0.7247194749209281
+    },
+    "sharpe": {
+      "p05": -0.03387826347498525,
+      "p50": 0.6600906849878099,
+      "p95": 1.428579596190163
+    },
+    "max_drawdown": {
+      "p05": 0.4321367104393044,
+      "p50": 0.6312156231526971,
+      "p95": 0.8467315298089898
+    },
+    "profit_factor": {
+      "p05": 0.932962899974698,
+      "p50": 1.0987470115964348,
+      "p95": 1.3830781838393207
+    }
+  },
+  "checks": {
+    "numerical_full": false,
+    "at_least_20_entries": true,
+    "annual_walk_forward": false,
+    "historical_2024_2025_holdout": false,
+    "monthly_stability": false,
+    "four_regimes": false,
+    "block_monte_carlo": false,
+    "double_slippage": true,
+    "one_day_latency": true,
+    "independent_executable_oos": false
+  },
+  "all_gate_passed": false,
+  "inside_40_to_60_percent_target_band": false,
+  "entries": 22,
+  "net_final_usdt": 27128.003238154077,
+  "benchmark_final_usdt": 40231.63620824427,
+  "gross_final_usdt": 28978.754346,
+  "double_slippage_final_usdt": 26538.318175834207,
+  "one_day_latency_final_usdt": 28122.41579267392,
+  "fees_usdt": 641.8515467664596,
+  "funding_usdt": 0.0,
+  "reference_slippage_drag_usdt": 320.9302960795,
+  "trades": [
+    {
+      "day": "2021-04-22",
+      "side": "buy",
+      "quantity": 4.2362,
+      "reference": 2357.06,
+      "execution": 2358.2385299999996,
+      "notional": 9989.970060786,
+      "fee": 9.989970060786
+    },
+    {
+      "day": "2021-06-10",
+      "side": "sell",
+      "quantity": 4.2362,
+      "reference": 2610.2,
+      "execution": 2608.8949,
+      "notional": 11051.800575379999,
+      "fee": 11.05180057538,
+      "forced": false
+    },
+    {
+      "day": "2021-07-29",
+      "side": "buy",
+      "quantity": 4.7912,
+      "reference": 2300.9,
+      "execution": 2302.05045,
+      "notional": 11029.584116040001,
+      "fee": 11.029584116040002
+    },
+    {
+      "day": "2021-08-05",
+      "side": "sell",
+      "quantity": 4.7912,
+      "reference": 2724.55,
+      "execution": 2723.1877250000002,
+      "notional": 13047.337028020002,
+      "fee": 13.047337028020001,
+      "forced": false
+    },
+    {
+      "day": "2021-08-19",
+      "side": "buy",
+      "quantity": 4.3179,
+      "reference": 3014.18,
+      "execution": 3015.6870899999994,
+      "notional": 13021.435285910997,
+      "fee": 13.021435285910997
+    },
+    {
+      "day": "2021-09-23",
+      "side": "sell",
+      "quantity": 4.3179,
+      "reference": 3076.92,
+      "execution": 3075.3815400000003,
+      "notional": 13279.189951566,
+      "fee": 13.279189951566002,
+      "forced": false
+    },
+    {
+      "day": "2021-12-09",
+      "side": "buy",
+      "quantity": 2.9854000000000003,
+      "reference": 4436.91,
+      "execution": 4439.128455,
+      "notional": 13252.574089557002,
+      "fee": 13.252574089557001
+    },
+    {
+      "day": "2022-01-27",
+      "side": "sell",
+      "quantity": 2.9854000000000003,
+      "reference": 2463.0,
+      "execution": 2461.7685,
+      "notional": 7349.363679900001,
+      "fee": 7.3493636799000015,
+      "forced": false
+    },
+    {
+      "day": "2022-02-03",
+      "side": "buy",
+      "quantity": 2.7352000000000003,
+      "reference": 2680.25,
+      "execution": 2681.5901249999997,
+      "notional": 7334.6853099,
+      "fee": 7.3346853099
+    },
+    {
+      "day": "2022-04-21",
+      "side": "sell",
+      "quantity": 2.7352000000000003,
+      "reference": 3076.03,
+      "execution": 3074.4919850000006,
+      "notional": 8409.350477372003,
+      "fee": 8.409350477372003,
+      "forced": false
+    },
+    {
+      "day": "2022-08-04",
+      "side": "buy",
+      "quantity": 5.1839,
+      "reference": 1618.16,
+      "execution": 1618.96908,
+      "notional": 8392.573813812001,
+      "fee": 8.392573813812001
+    },
+    {
+      "day": "2022-08-25",
+      "side": "sell",
+      "quantity": 5.1839,
+      "reference": 1656.56,
+      "execution": 1655.73172,
+      "notional": 8583.147663308,
+      "fee": 8.583147663308,
+      "forced": false
+    },
+    {
+      "day": "2022-09-22",
+      "side": "buy",
+      "quantity": 6.8725000000000005,
+      "reference": 1245.79,
+      "execution": 1246.412895,
+      "notional": 8565.9726208875,
+      "fee": 8.5659726208875
+    },
+    {
+      "day": "2022-12-01",
+      "side": "sell",
+      "quantity": 6.8725000000000005,
+      "reference": 1294.46,
+      "execution": 1293.81277,
+      "notional": 8891.728261825001,
+      "fee": 8.891728261825001,
+      "forced": false
+    },
+    {
+      "day": "2023-01-26",
+      "side": "buy",
+      "quantity": 5.502400000000001,
+      "reference": 1611.95,
+      "execution": 1612.755975,
+      "notional": 8874.028476840002,
+      "fee": 8.874028476840001
+    },
+    {
+      "day": "2023-04-06",
+      "side": "sell",
+      "quantity": 5.502400000000001,
+      "reference": 1908.68,
+      "execution": 1907.72566,
+      "notional": 10497.069671584002,
+      "fee": 10.497069671584002,
+      "forced": false
+    },
+    {
+      "day": "2023-05-04",
+      "side": "buy",
+      "quantity": 5.4961,
+      "reference": 1905.12,
+      "execution": 1906.0725599999998,
+      "notional": 10475.965397016,
+      "fee": 10.475965397016
+    },
+    {
+      "day": "2023-06-15",
+      "side": "sell",
+      "quantity": 5.4961,
+      "reference": 1650.95,
+      "execution": 1650.1245250000002,
+      "notional": 9069.249401852501,
+      "fee": 9.0692494018525,
+      "forced": false
+    },
+    {
+      "day": "2023-06-22",
+      "side": "buy",
+      "quantity": 4.7889,
+      "reference": 1889.1,
+      "execution": 1890.0445499999998,
+      "notional": 9051.234345494999,
+      "fee": 9.051234345494999
+    },
+    {
+      "day": "2023-06-29",
+      "side": "sell",
+      "quantity": 4.7889,
+      "reference": 1828.03,
+      "execution": 1827.1159850000001,
+      "notional": 8749.8757405665,
+      "fee": 8.7498757405665,
+      "forced": false
+    },
+    {
+      "day": "2023-08-24",
+      "side": "buy",
+      "quantity": 5.196400000000001,
+      "reference": 1679.61,
+      "execution": 1680.4498049999997,
+      "notional": 8732.289366702,
+      "fee": 8.732289366702
+    },
+    {
+      "day": "2023-09-28",
+      "side": "sell",
+      "quantity": 5.196400000000001,
+      "reference": 1598.63,
+      "execution": 1597.8306850000001,
+      "notional": 8302.967371534001,
+      "fee": 8.302967371534,
+      "forced": false
+    },
+    {
+      "day": "2023-11-23",
+      "side": "buy",
+      "quantity": 4.0143,
+      "reference": 2063.22,
+      "execution": 2064.25161,
+      "notional": 8286.525238023,
+      "fee": 8.286525238023
+    },
+    {
+      "day": "2023-12-28",
+      "side": "sell",
+      "quantity": 4.0143,
+      "reference": 2378.35,
+      "execution": 2377.160825,
+      "notional": 9542.6366997975,
+      "fee": 9.5426366997975,
+      "forced": false
+    },
+    {
+      "day": "2024-01-25",
+      "side": "buy",
+      "quantity": 4.258900000000001,
+      "reference": 2235.02,
+      "execution": 2236.13751,
+      "notional": 9523.486041339002,
+      "fee": 9.523486041339002
+    },
+    {
+      "day": "2024-03-14",
+      "side": "sell",
+      "quantity": 4.258900000000001,
+      "reference": 4004.79,
+      "execution": 4002.787605,
+      "notional": 17047.4721309345,
+      "fee": 17.0474721309345,
+      "forced": false
+    },
+    {
+      "day": "2024-05-23",
+      "side": "buy",
+      "quantity": 4.5495,
+      "reference": 3737.72,
+      "execution": 3739.5888599999994,
+      "notional": 17013.259518569997,
+      "fee": 17.01325951857
+    },
+    {
+      "day": "2024-05-30",
+      "side": "sell",
+      "quantity": 4.5495,
+      "reference": 3767.44,
+      "execution": 3765.5562800000002,
+      "notional": 17131.398295860003,
+      "fee": 17.131398295860002,
+      "forced": false
+    },
+    {
+      "day": "2024-06-06",
+      "side": "buy",
+      "quantity": 4.4202,
+      "reference": 3866.0,
+      "execution": 3867.933,
+      "notional": 17097.037446600003,
+      "fee": 17.0970374466
+    },
+    {
+      "day": "2024-07-18",
+      "side": "sell",
+      "quantity": 4.4202,
+      "reference": 3387.05,
+      "execution": 3385.3564750000005,
+      "notional": 14963.952690795004,
+      "fee": 14.963952690795004,
+      "forced": false
+    },
+    {
+      "day": "2024-10-10",
+      "side": "buy",
+      "quantity": 6.297000000000001,
+      "reference": 2370.47,
+      "execution": 2371.6552349999997,
+      "notional": 14934.313014795,
+      "fee": 14.934313014795
+    },
+    {
+      "day": "2024-10-17",
+      "side": "sell",
+      "quantity": 6.297000000000001,
+      "reference": 2611.1,
+      "execution": 2609.79445,
+      "notional": 16433.87565165,
+      "fee": 16.43387565165,
+      "forced": false
+    },
+    {
+      "day": "2024-10-24",
+      "side": "buy",
+      "quantity": 6.493200000000001,
+      "reference": 2524.6,
+      "execution": 2525.8623,
+      "notional": 16400.92908636,
+      "fee": 16.40092908636
+    },
+    {
+      "day": "2024-10-31",
+      "side": "sell",
+      "quantity": 6.493200000000001,
+      "reference": 2659.19,
+      "execution": 2657.8604050000004,
+      "notional": 17258.019181746004,
+      "fee": 17.258019181746004,
+      "forced": false
+    },
+    {
+      "day": "2024-11-14",
+      "side": "buy",
+      "quantity": 5.401400000000001,
+      "reference": 3187.16,
+      "execution": 3188.7535799999996,
+      "notional": 17223.733587012,
+      "fee": 17.223733587012
+    },
+    {
+      "day": "2024-12-12",
+      "side": "sell",
+      "quantity": 5.401400000000001,
+      "reference": 3831.82,
+      "execution": 3829.9040900000005,
+      "notional": 20686.843951726005,
+      "fee": 20.686843951726004,
+      "forced": false
+    },
+    {
+      "day": "2025-04-10",
+      "side": "buy",
+      "quantity": 12.360000000000001,
+      "reference": 1669.51,
+      "execution": 1670.3447549999999,
+      "notional": 20645.4611718,
+      "fee": 20.6454611718
+    },
+    {
+      "day": "2025-04-24",
+      "side": "sell",
+      "quantity": 12.360000000000001,
+      "reference": 1795.08,
+      "execution": 1794.18246,
+      "notional": 22176.095205600002,
+      "fee": 22.176095205600003,
+      "forced": false
+    },
+    {
+      "day": "2025-06-26",
+      "side": "buy",
+      "quantity": 9.1464,
+      "reference": 2418.5,
+      "execution": 2419.70925,
+      "notional": 22131.628684199997,
+      "fee": 22.1316286842
+    },
+    {
+      "day": "2025-07-24",
+      "side": "sell",
+      "quantity": 9.1464,
+      "reference": 3628.29,
+      "execution": 3626.475855,
+      "notional": 33169.198760172,
+      "fee": 33.169198760172,
+      "forced": false
+    },
+    {
+      "day": "2025-10-30",
+      "side": "buy",
+      "quantity": 8.4772,
+      "reference": 3903.0,
+      "execution": 3904.9514999999997,
+      "notional": 33103.054855799994,
+      "fee": 33.103054855799996
+    },
+    {
+      "day": "2025-12-04",
+      "side": "sell",
+      "quantity": 8.4772,
+      "reference": 3188.39,
+      "execution": 3186.795805,
+      "notional": 27015.105398146003,
+      "fee": 27.015105398146,
+      "forced": false
+    },
+    {
+      "day": "2025-12-25",
+      "side": "buy",
+      "quantity": 9.1426,
+      "reference": 2947.48,
+      "execution": 2948.95374,
+      "notional": 26961.104463323998,
+      "fee": 26.961104463324
+    },
+    {
+      "day": "2026-01-01",
+      "side": "sell",
+      "quantity": 9.1426,
+      "reference": 2971.65,
+      "execution": 2970.1641750000003,
+      "notional": 27155.022986355,
+      "fee": 27.155022986355,
+      "forced": true
+    }
+  ]
+}
