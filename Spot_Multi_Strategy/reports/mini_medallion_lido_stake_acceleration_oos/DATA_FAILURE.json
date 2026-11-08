@@ -1,0 +1,14 @@
+{
+  "experiment": "lido_stake_acceleration_eth_2026_11_08",
+  "prereg_commit": "edf28d8",
+  "code_commit": "6573964881ed305691d5ca1c085145ca1e129206",
+  "started_utc": "2026-11-08T08:50:06.922140+00:00",
+  "evidence_grade": "preregistered_retrospective_current_lido_vintage",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "status": "sealed_source_or_execution_failure",
+  "sealed_utc": "2026-11-08T08:50:07.756035+00:00",
+  "reason": "Lido Sunday timestamp gap: 2020-12-20",
+  "error_type": "SourceFailure",
+  "gate_passed": false
+}
