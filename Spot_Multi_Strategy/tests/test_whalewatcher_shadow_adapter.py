@@ -27,6 +27,25 @@ def snapshot():
         "promotion_eligible": False,
         "manual_review_required": True,
         "performance_calibration_used": False,
+        "source_health": {
+            "schema_version": 1,
+            "generated_at_ms": GENERATED_MS,
+            "signal_role": "external_intelligence_shadow",
+            "execution_eligible": False,
+            "credentials_present_in_state": False,
+            "status": "ready",
+            "configured_source_count": 1,
+            "ready_source_count": 1,
+            "any_source_ready": True,
+            "all_configured_sources_ready": True,
+        },
+        "readiness": {
+            "status": "ready",
+            "configured_source_count": 1,
+            "ready_source_count": 1,
+            "any_source_ready": True,
+            "all_configured_sources_ready": True,
+        },
         "symbols": {
             "BTC": {
                 "manual_review_required": True,
@@ -153,6 +172,29 @@ class WhaleWatcherShadowAdapterTests(unittest.TestCase):
         result = self.read()
         self.assertEqual(result.status, "fresh_no_claims")
         self.assertEqual(result.claims, ())
+
+    def test_unconfigured_or_degraded_sources_are_unavailable_not_empty_news(self):
+        for key, value in (
+            ("configured_source_count", 0),
+            ("ready_source_count", 0),
+            ("status", "unconfigured"),
+            ("status", "degraded"),
+            ("any_source_ready", False),
+            ("all_configured_sources_ready", False),
+            ("generated_at_ms", GENERATED_MS - 600_001),
+        ):
+            with self.subTest(key=key, value=value):
+                payload = snapshot()
+                payload["symbols"]["BTC"]["observations"] = []
+                payload["source_health"][key] = value
+                if key in payload["readiness"]:
+                    payload["readiness"][key] = value
+                self.write(payload)
+                self.assertEqual(self.read().status, "unavailable")
+        payload = snapshot()
+        del payload["source_health"]
+        self.write(payload)
+        self.assertEqual(self.read().status, "unavailable")
 
     def test_unsafe_peer_symbol_invalidates_the_whole_snapshot(self):
         payload = snapshot()

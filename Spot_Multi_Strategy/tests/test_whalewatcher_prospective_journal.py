@@ -50,6 +50,19 @@ def _claim_snapshot(generated=NOW - 1_000, observations=None):
         "execution_eligible": False, "operator_execution_eligible": False,
         "promotion_eligible": False, "manual_review_required": True,
         "performance_calibration_used": False,
+        "source_health": {
+            "schema_version": 1, "generated_at_ms": generated,
+            "signal_role": "external_intelligence_shadow",
+            "execution_eligible": False, "credentials_present_in_state": False,
+            "status": "ready", "configured_source_count": 1,
+            "ready_source_count": 1, "any_source_ready": True,
+            "all_configured_sources_ready": True,
+        },
+        "readiness": {
+            "status": "ready", "configured_source_count": 1,
+            "ready_source_count": 1, "any_source_ready": True,
+            "all_configured_sources_ready": True,
+        },
         "symbols": {
             "BTC": {"manual_review_required": True, "execution_eligible": False,
                     "observations": observations},

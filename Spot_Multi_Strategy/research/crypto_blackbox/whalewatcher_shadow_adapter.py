@@ -85,6 +85,33 @@ def _safe_fact_group(value) -> bool:
     )
 
 
+def _ready_source_health(payload, generated_at_ms: int, max_age_ms: int) -> bool:
+    """A fresh empty claim set is meaningful only with healthy real sources."""
+    health = payload.get("source_health")
+    readiness = payload.get("readiness")
+    if not isinstance(health, dict) or not isinstance(readiness, dict):
+        return False
+    if (health.get("schema_version") != 1
+            or health.get("signal_role") != _SIGNAL_ROLE
+            or health.get("execution_eligible") is not False
+            or health.get("credentials_present_in_state") is not False
+            or health.get("status") != "ready"
+            or health.get("any_source_ready") is not True
+            or health.get("all_configured_sources_ready") is not True):
+        return False
+    configured = health.get("configured_source_count")
+    ready = health.get("ready_source_count")
+    health_time = health.get("generated_at_ms")
+    if (type(configured) is not int or configured <= 0
+            or type(ready) is not int or ready != configured
+            or not _valid_ms(health_time, generated_at_ms)
+            or generated_at_ms - health_time > max_age_ms):
+        return False
+    return all(readiness.get(key) == health[key]
+               for key in ("status", "configured_source_count", "ready_source_count",
+                           "any_source_ready", "all_configured_sources_ready"))
+
+
 def _claims_for_symbol(row, *, generated_at_ms: int, captured_at_ms: int):
     if (
         not isinstance(row, dict)
@@ -200,6 +227,7 @@ def read_whalewatcher_shadow_snapshot(
         if (
             not _valid_ms(generated_at_ms, captured_at_ms)
             or captured_at_ms - generated_at_ms > max_age_ms
+            or not _ready_source_health(payload, generated_at_ms, max_age_ms)
         ):
             return unavailable
         symbols = payload.get("symbols")
