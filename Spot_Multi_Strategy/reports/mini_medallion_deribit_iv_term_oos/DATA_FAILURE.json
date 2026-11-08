@@ -1,0 +1,14 @@
+{
+  "experiment": "deribit_btc_iv_term_structure_2026_11_09",
+  "prereg_commit": "7a31ecc",
+  "code_commit": "5ba144852ab12720b19fdbc0f19e58e554fc43ef",
+  "started_utc": "2026-11-08T17:58:42.559490+00:00",
+  "evidence_grade": "preregistered_retrospective_crypto_option_term_structure",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "status": "sealed_source_or_execution_failure",
+  "sealed_utc": "2026-11-08T17:58:48.198933+00:00",
+  "reason": "2021-01-04: Deribit archive failed: SourceFailure: invalid option strike/index/amount/IV",
+  "error_type": "SourceFailure",
+  "gate_passed": false
+}
