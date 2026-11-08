@@ -1,0 +1,1559 @@
+{
+  "experiment": "coinbase_premium_corrected_btc_2026_11_08",
+  "prereg_commit": "e63231d",
+  "code_commit": "a5ecd95c867031c15dcdc01b80c959de9fe1598e",
+  "started_utc": "2026-11-08T07:07:45.077435+00:00",
+  "evidence_grade": "preregistered_retrospective_cross_venue_temporal_holdout",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "status": "sealed_formal_result",
+  "sealed_utc": "2026-11-08T07:08:13.342053+00:00",
+  "sources": {
+    "coinbase": [
+      {
+        "pair": "BTC-USD",
+        "first": "2021-09-01",
+        "last": "2022-05-08",
+        "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=86400&start=2021-09-01T00%3A00%3A00Z&end=2022-05-08T00%3A00%3A00Z",
+        "sha256": "1a6bbfbb060803c72a4a9a0dd85a81fcd1d86b7a2b97f6c9353c89f793f9582d",
+        "bytes": 15311,
+        "days": 250
+      },
+      {
+        "pair": "BTC-USD",
+        "first": "2022-05-09",
+        "last": "2023-01-13",
+        "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=86400&start=2022-05-09T00%3A00%3A00Z&end=2023-01-13T00%3A00%3A00Z",
+        "sha256": "5491fb623222e05354d76b3d28dc102c576d8f9b1e607767735dcd60ec72e3a4",
+        "bytes": 15525,
+        "days": 250
+      },
+      {
+        "pair": "BTC-USD",
+        "first": "2023-01-14",
+        "last": "2023-09-20",
+        "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=86400&start=2023-01-14T00%3A00%3A00Z&end=2023-09-20T00%3A00%3A00Z",
+        "sha256": "e6803c345a955dda042bf7d7b2d14d586acd565ef50acac44d93ac70c8260bfb",
+        "bytes": 15511,
+        "days": 250
+      },
+      {
+        "pair": "BTC-USD",
+        "first": "2023-09-21",
+        "last": "2024-05-27",
+        "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=86400&start=2023-09-21T00%3A00%3A00Z&end=2024-05-27T00%3A00%3A00Z",
+        "sha256": "64fe09e1834497387ab00c51cdfcdb4e93813d267de2602d417337085441bb21",
+        "bytes": 15449,
+        "days": 250
+      },
+      {
+        "pair": "BTC-USD",
+        "first": "2024-05-28",
+        "last": "2025-02-01",
+        "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=86400&start=2024-05-28T00%3A00%3A00Z&end=2025-02-01T00%3A00%3A00Z",
+        "sha256": "6e0eb595bf80dfb7fd5b122e23a0f0baefbbf6caf124328e747dc0ab42077234",
+        "bytes": 15502,
+        "days": 250
+      },
+      {
+        "pair": "BTC-USD",
+        "first": "2025-02-02",
+        "last": "2025-10-09",
+        "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=86400&start=2025-02-02T00%3A00%3A00Z&end=2025-10-09T00%3A00%3A00Z",
+        "sha256": "454ca6d4ef7b0c7836e4409a8a58c130335db8f39e7eb8efa72c9bbc0060c339",
+        "bytes": 15972,
+        "days": 250
+      },
+      {
+        "pair": "BTC-USD",
+        "first": "2025-10-10",
+        "last": "2026-06-16",
+        "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=86400&start=2025-10-10T00%3A00%3A00Z&end=2026-06-16T00%3A00%3A00Z",
+        "sha256": "e4fa350c13abc2f0598849775a25d07f61d67005d2d517f1e7b4ee9ffad8af6a",
+        "bytes": 15402,
+        "days": 250
+      },
+      {
+        "pair": "BTC-USD",
+        "first": "2026-06-17",
+        "last": "2026-09-30",
+        "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=86400&start=2026-06-17T00%3A00%3A00Z&end=2026-09-30T00%3A00%3A00Z",
+        "sha256": "8b8550beeaaef89cadcd0586de1813bc29825dd2eb306376010a00f223d76342",
+        "bytes": 6510,
+        "days": 106
+      },
+      {
+        "pair": "USDT-USD",
+        "first": "2021-09-01",
+        "last": "2022-05-08",
+        "url": "https://api.exchange.coinbase.com/products/USDT-USD/candles?granularity=86400&start=2021-09-01T00%3A00%3A00Z&end=2022-05-08T00%3A00%3A00Z",
+        "sha256": "8e5d2bd9d4895ce0735bfc9d52142c773db98dc62c0b8c1b6da751d1bf6a20a9",
+        "bytes": 12741,
+        "days": 250
+      },
+      {
+        "pair": "USDT-USD",
+        "first": "2022-05-09",
+        "last": "2023-01-13",
+        "url": "https://api.exchange.coinbase.com/products/USDT-USD/candles?granularity=86400&start=2022-05-09T00%3A00%3A00Z&end=2023-01-13T00%3A00%3A00Z",
+        "sha256": "db95b1910d1257fc206efde3a1ca8db3b5a875c37e7bfed6020f4e8de2c21422",
+        "bytes": 13736,
+        "days": 250
+      },
+      {
+        "pair": "USDT-USD",
+        "first": "2023-01-14",
+        "last": "2023-09-20",
+        "url": "https://api.exchange.coinbase.com/products/USDT-USD/candles?granularity=86400&start=2023-01-14T00%3A00%3A00Z&end=2023-09-20T00%3A00%3A00Z",
+        "sha256": "05dfd1c365e38f71259c1955a1c666f1afc2353bc815ff92f9e3cd3f3e247b2c",
+        "bytes": 14065,
+        "days": 250
+      },
+      {
+        "pair": "USDT-USD",
+        "first": "2023-09-21",
+        "last": "2024-05-27",
+        "url": "https://api.exchange.coinbase.com/products/USDT-USD/candles?granularity=86400&start=2023-09-21T00%3A00%3A00Z&end=2024-05-27T00%3A00%3A00Z",
+        "sha256": "8e6c3ca8a98eb09340483d4d73b3212947fbd98da0c6cbb3d8cad224b92ec949",
+        "bytes": 14122,
+        "days": 250
+      },
+      {
+        "pair": "USDT-USD",
+        "first": "2024-05-28",
+        "last": "2025-02-01",
+        "url": "https://api.exchange.coinbase.com/products/USDT-USD/candles?granularity=86400&start=2024-05-28T00%3A00%3A00Z&end=2025-02-01T00%3A00%3A00Z",
+        "sha256": "0c02a8f6453cf7b2441bd77fb733b016fa373f995c7c0440cc0f8a890bbce026",
+        "bytes": 14176,
+        "days": 250
+      },
+      {
+        "pair": "USDT-USD",
+        "first": "2025-02-02",
+        "last": "2025-10-09",
+        "url": "https://api.exchange.coinbase.com/products/USDT-USD/candles?granularity=86400&start=2025-02-02T00%3A00%3A00Z&end=2025-10-09T00%3A00%3A00Z",
+        "sha256": "06385837f1d1ac378f98e4a0235c22f42ff4ff2f85a97ed94cff1ebee5c3ac7d",
+        "bytes": 14058,
+        "days": 250
+      },
+      {
+        "pair": "USDT-USD",
+        "first": "2025-10-10",
+        "last": "2026-06-16",
+        "url": "https://api.exchange.coinbase.com/products/USDT-USD/candles?granularity=86400&start=2025-10-10T00%3A00%3A00Z&end=2026-06-16T00%3A00%3A00Z",
+        "sha256": "f6c23698571b5757ce429b8a5df67c420e2c896eaaf20786311ea1f7b9bb3e38",
+        "bytes": 13807,
+        "days": 250
+      },
+      {
+        "pair": "USDT-USD",
+        "first": "2026-06-17",
+        "last": "2026-09-30",
+        "url": "https://api.exchange.coinbase.com/products/USDT-USD/candles?granularity=86400&start=2026-06-17T00%3A00%3A00Z&end=2026-09-30T00%3A00%3A00Z",
+        "sha256": "fbb6d1c7f49ee3bdf3596d357d693481f8d203bd798f089f34aa2e66dc96bd6c",
+        "bytes": 5883,
+        "days": 106
+      }
+    ],
+    "binance": [
+      {
+        "month": "2021-08",
+        "days": 31,
+        "first": "2021-08-01",
+        "last": "2021-08-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-08.zip",
+        "sha256": "68612e3fb74c184f97e4d3b2e061dd3743156401a6813ab897014b0b35caedd7",
+        "bytes": 2246
+      },
+      {
+        "month": "2021-09",
+        "days": 30,
+        "first": "2021-09-01",
+        "last": "2021-09-30",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-09.zip",
+        "sha256": "9f6535a0fe8a417b0909d230e4a02f6a9933eb23c770f54c9f6bf140e8d02257",
+        "bytes": 2156
+      },
+      {
+        "month": "2021-10",
+        "days": 31,
+        "first": "2021-10-01",
+        "last": "2021-10-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-10.zip",
+        "sha256": "ba50ff3dab5726ca8b9fa26065fe3a8f612aed4baa978ecdd9d39647cd108684",
+        "bytes": 2210
+      },
+      {
+        "month": "2021-11",
+        "days": 30,
+        "first": "2021-11-01",
+        "last": "2021-11-30",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-11.zip",
+        "sha256": "64162d8ec11458e9d02f49d8569e47765517852bcf0a908cd4d71211e3912e62",
+        "bytes": 2166
+      },
+      {
+        "month": "2021-12",
+        "days": 31,
+        "first": "2021-12-01",
+        "last": "2021-12-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2021-12.zip",
+        "sha256": "6231b57d3a3b71fb76a1a34078a01a01275a59870857bf60408ccd3ba4618e75",
+        "bytes": 2196
+      },
+      {
+        "month": "2022-01",
+        "days": 31,
+        "first": "2022-01-01",
+        "last": "2022-01-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-01.zip",
+        "sha256": "a4a2e0432a8f0b42e2da71ac26599b2e6385b579ca4feba692a95cb897decdcd",
+        "bytes": 2183
+      },
+      {
+        "month": "2022-02",
+        "days": 28,
+        "first": "2022-02-01",
+        "last": "2022-02-28",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-02.zip",
+        "sha256": "faffa5eadb9ebf0b32742773777596d0dbf3f282e94a16dd05cf1eb7b53a3763",
+        "bytes": 2011
+      },
+      {
+        "month": "2022-03",
+        "days": 31,
+        "first": "2022-03-01",
+        "last": "2022-03-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-03.zip",
+        "sha256": "452129b478585b18931f728f89daed9d2a19d4824b932af7a099366efd4db639",
+        "bytes": 2206
+      },
+      {
+        "month": "2022-04",
+        "days": 30,
+        "first": "2022-04-01",
+        "last": "2022-04-30",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-04.zip",
+        "sha256": "70413f67212d012ebfd600a6ebf20c03a9c8311bf764ab6d21d1bfd2d21d1b19",
+        "bytes": 2117
+      },
+      {
+        "month": "2022-05",
+        "days": 31,
+        "first": "2022-05-01",
+        "last": "2022-05-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-05.zip",
+        "sha256": "53eee1be2d5b461dabc67645ad706610b0465d8bbacd5f9cd99fc790c68f18f5",
+        "bytes": 2212
+      },
+      {
+        "month": "2022-06",
+        "days": 30,
+        "first": "2022-06-01",
+        "last": "2022-06-30",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-06.zip",
+        "sha256": "dd5047ce33c16231bcb01f534951a709937bbfe0c0667c61f20f188cf9b94de4",
+        "bytes": 2169
+      },
+      {
+        "month": "2022-07",
+        "days": 31,
+        "first": "2022-07-01",
+        "last": "2022-07-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-07.zip",
+        "sha256": "216567f1a8bc1dbeaada097f7eddff12dafde177c16b26507c762a613a57eb5f",
+        "bytes": 2245
+      },
+      {
+        "month": "2022-08",
+        "days": 31,
+        "first": "2022-08-01",
+        "last": "2022-08-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-08.zip",
+        "sha256": "fc8bd69e95141afb6f83c5a4450c3f6b49c4a1cb16e42d90eb960c3ffa9e766e",
+        "bytes": 2237
+      },
+      {
+        "month": "2022-09",
+        "days": 30,
+        "first": "2022-09-01",
+        "last": "2022-09-30",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-09.zip",
+        "sha256": "68a8357e23277ebd98842fd88d492b012d53dd578b5061cafb8c070c440b235e",
+        "bytes": 2213
+      },
+      {
+        "month": "2022-10",
+        "days": 31,
+        "first": "2022-10-01",
+        "last": "2022-10-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-10.zip",
+        "sha256": "5b086535cba596ef1b465f247a26385b4ccfd12673a76f225e2dd9e00dddadfd",
+        "bytes": 2219
+      },
+      {
+        "month": "2022-11",
+        "days": 30,
+        "first": "2022-11-01",
+        "last": "2022-11-30",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-11.zip",
+        "sha256": "142202b226078f54342c4a1d74c8c6081a98c655d7d6f6fba06314f9c101e2d9",
+        "bytes": 2191
+      },
+      {
+        "month": "2022-12",
+        "days": 31,
+        "first": "2022-12-01",
+        "last": "2022-12-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2022-12.zip",
+        "sha256": "aff24746afa9a3dbd355dd3462bcef80e59e96ed9aa55f79007532f9e07991bf",
+        "bytes": 2222
+      },
+      {
+        "month": "2023-01",
+        "days": 31,
+        "first": "2023-01-01",
+        "last": "2023-01-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-01.zip",
+        "sha256": "a9fd53b75add7cc42fb4779a545811606260f79810f3826215d6ebecda11bb36",
+        "bytes": 2250
+      },
+      {
+        "month": "2023-02",
+        "days": 28,
+        "first": "2023-02-01",
+        "last": "2023-02-28",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-02.zip",
+        "sha256": "13df1e3633f15be3eeba4768d0cc323ef221191002657b53936a6d0fb5e6556f",
+        "bytes": 2072
+      },
+      {
+        "month": "2023-03",
+        "days": 31,
+        "first": "2023-03-01",
+        "last": "2023-03-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-03.zip",
+        "sha256": "1cb1209700ec74fa4592048de2e4ea4a38ab2bd622dfe03f1d6195c249501381",
+        "bytes": 2265
+      },
+      {
+        "month": "2023-04",
+        "days": 30,
+        "first": "2023-04-01",
+        "last": "2023-04-30",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-04.zip",
+        "sha256": "999e86be73731ebc347c6ada94abceb5e291b65e7f1b4df2ce390af1aa2a4a08",
+        "bytes": 2108
+      },
+      {
+        "month": "2023-05",
+        "days": 31,
+        "first": "2023-05-01",
+        "last": "2023-05-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-05.zip",
+        "sha256": "c343e4689784c29f83d25147a096dd44b6ae5c1063c909f8adda82b56414469d",
+        "bytes": 2168
+      },
+      {
+        "month": "2023-06",
+        "days": 30,
+        "first": "2023-06-01",
+        "last": "2023-06-30",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-06.zip",
+        "sha256": "634919565c55a29729543d730927ca4b547c0e52d118a38de730f37fdd7617ef",
+        "bytes": 2099
+      },
+      {
+        "month": "2023-07",
+        "days": 31,
+        "first": "2023-07-01",
+        "last": "2023-07-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-07.zip",
+        "sha256": "32363d37de02e6ad8d334ac332c685f8cdf5684733a9f2cfbca40e15e591396b",
+        "bytes": 2132
+      },
+      {
+        "month": "2023-08",
+        "days": 31,
+        "first": "2023-08-01",
+        "last": "2023-08-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-08.zip",
+        "sha256": "8c5e47bfe3f0b0273534379e8ba5c93e69c84d67e8b9a03f293d6621bead2a5f",
+        "bytes": 2160
+      },
+      {
+        "month": "2023-09",
+        "days": 30,
+        "first": "2023-09-01",
+        "last": "2023-09-30",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-09.zip",
+        "sha256": "2fe68ecad48d6927a9280d89700e991cb6481dc2767698c785f2b2d1c0b14744",
+        "bytes": 2080
+      },
+      {
+        "month": "2023-10",
+        "days": 31,
+        "first": "2023-10-01",
+        "last": "2023-10-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-10.zip",
+        "sha256": "358b83bf0c2a5d5390a4bc4d4ae14fa9df0f56139642ad996c0df0f7bc712400",
+        "bytes": 2154
+      },
+      {
+        "month": "2023-11",
+        "days": 30,
+        "first": "2023-11-01",
+        "last": "2023-11-30",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-11.zip",
+        "sha256": "fac9823cac7bf56a3a6038c3b79417e949b00c172939e62000451c8c25edd7c1",
+        "bytes": 2102
+      },
+      {
+        "month": "2023-12",
+        "days": 31,
+        "first": "2023-12-01",
+        "last": "2023-12-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2023-12.zip",
+        "sha256": "056dad65795c9264ef90ee668a4c245e8fec73ebcbb272d28f5596c389913979",
+        "bytes": 2177
+      },
+      {
+        "month": "2024-01",
+        "days": 31,
+        "first": "2024-01-01",
+        "last": "2024-01-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-01.zip",
+        "sha256": "474c1ce6fbb09e42cfc7231fee249aecc58af2fb5918570ffeba37998926b4a4",
+        "bytes": 2190
+      },
+      {
+        "month": "2024-02",
+        "days": 29,
+        "first": "2024-02-01",
+        "last": "2024-02-29",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-02.zip",
+        "sha256": "4dae0b3d6b8ea59e39e6493b7964040c52459ea7b0a50b9c2793dcbfae53800d",
+        "bytes": 2053
+      },
+      {
+        "month": "2024-03",
+        "days": 31,
+        "first": "2024-03-01",
+        "last": "2024-03-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-03.zip",
+        "sha256": "f7cd4fcafe79d1fac0c830d5fe152f7b3b9100e7c97e40352188766388af0ae0",
+        "bytes": 2224
+      },
+      {
+        "month": "2024-04",
+        "days": 30,
+        "first": "2024-04-01",
+        "last": "2024-04-30",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-04.zip",
+        "sha256": "b4a8542c33e5251fb53f8a3352dd4e6f3cde4ac25f2c24935db8089aa1a2c3a0",
+        "bytes": 2141
+      },
+      {
+        "month": "2024-05",
+        "days": 31,
+        "first": "2024-05-01",
+        "last": "2024-05-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-05.zip",
+        "sha256": "0175f696039b9e30f06c6398d218c99e577661ac30424869c648fe9770507248",
+        "bytes": 2185
+      },
+      {
+        "month": "2024-06",
+        "days": 30,
+        "first": "2024-06-01",
+        "last": "2024-06-30",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-06.zip",
+        "sha256": "8a0f6416c2a83cfa15ba26c688d716fdafe35bb1748dd244f0550e8b2f7e38f7",
+        "bytes": 2095
+      },
+      {
+        "month": "2024-07",
+        "days": 31,
+        "first": "2024-07-01",
+        "last": "2024-07-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-07.zip",
+        "sha256": "9a2963ef6541b4d7630eff8df7b2eaee48ece33180af03c34b0bf92675692899",
+        "bytes": 2203
+      },
+      {
+        "month": "2024-08",
+        "days": 31,
+        "first": "2024-08-01",
+        "last": "2024-08-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-08.zip",
+        "sha256": "df41fe3260920b85da86855b4880f34618982e689081317d3d63b9b3bbcb1d53",
+        "bytes": 2190
+      },
+      {
+        "month": "2024-09",
+        "days": 30,
+        "first": "2024-09-01",
+        "last": "2024-09-30",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-09.zip",
+        "sha256": "89e459b2a8f4b138dc742d9358c0084fcabf719d40468e156c3149a3635f3359",
+        "bytes": 2106
+      },
+      {
+        "month": "2024-10",
+        "days": 31,
+        "first": "2024-10-01",
+        "last": "2024-10-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-10.zip",
+        "sha256": "d442a5f158d45d9ff7b1584b35023a4161cf915a3857f5e71a2a2e6aa68c69c5",
+        "bytes": 2203
+      },
+      {
+        "month": "2024-11",
+        "days": 30,
+        "first": "2024-11-01",
+        "last": "2024-11-30",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-11.zip",
+        "sha256": "b197219d9e8b5e933226e1cd24fe2b7bfc3a2e8a3e74e6f7dc08a48f314da8c3",
+        "bytes": 2157
+      },
+      {
+        "month": "2024-12",
+        "days": 31,
+        "first": "2024-12-01",
+        "last": "2024-12-31",
+        "timestamp_unit": "ms",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2024-12.zip",
+        "sha256": "82ec90210f492694b9d01722f97f579108ee787968b8485b53d736ea735700da",
+        "bytes": 2218
+      },
+      {
+        "month": "2025-01",
+        "days": 31,
+        "first": "2025-01-01",
+        "last": "2025-01-31",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-01.zip",
+        "sha256": "3a3eb1b723d944deb4dbef5ae361bbe39340a17fe987fe22e397ef03dca268d2",
+        "bytes": 2254
+      },
+      {
+        "month": "2025-02",
+        "days": 28,
+        "first": "2025-02-01",
+        "last": "2025-02-28",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-02.zip",
+        "sha256": "27cfde08c9eb8e3801fb049e3be351a3e50ab46abd8553c24023fa98ea5e919e",
+        "bytes": 2039
+      },
+      {
+        "month": "2025-03",
+        "days": 31,
+        "first": "2025-03-01",
+        "last": "2025-03-31",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-03.zip",
+        "sha256": "5874e405f55c46f040de1a8ea9daae583dc12b5bcaef6078b21aae9c627cedcc",
+        "bytes": 2249
+      },
+      {
+        "month": "2025-04",
+        "days": 30,
+        "first": "2025-04-01",
+        "last": "2025-04-30",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-04.zip",
+        "sha256": "8068a571425857cb0f5f71f75e733d3bc1e731362a09f84f835bbea6e087aeb2",
+        "bytes": 2165
+      },
+      {
+        "month": "2025-05",
+        "days": 31,
+        "first": "2025-05-01",
+        "last": "2025-05-31",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-05.zip",
+        "sha256": "2b87aa0c63641ba1e954855bcfed96d7fc4eb21efe7936f354ff74e8e06cfcea",
+        "bytes": 2253
+      },
+      {
+        "month": "2025-06",
+        "days": 30,
+        "first": "2025-06-01",
+        "last": "2025-06-30",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-06.zip",
+        "sha256": "dc4bbe2c75f04372b909febe8e6b379b053f88423d78cdb3ad8b0be3a66d6ede",
+        "bytes": 2170
+      },
+      {
+        "month": "2025-07",
+        "days": 31,
+        "first": "2025-07-01",
+        "last": "2025-07-31",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-07.zip",
+        "sha256": "1ea64a346f6be0aaf455eb1ce107e6d38367164d97d0dd3719b9f9bb239796f4",
+        "bytes": 2232
+      },
+      {
+        "month": "2025-08",
+        "days": 31,
+        "first": "2025-08-01",
+        "last": "2025-08-31",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-08.zip",
+        "sha256": "6720b573210cfbb98765f4a0de6826033d203fda42a6c8364455144b703ceace",
+        "bytes": 2237
+      },
+      {
+        "month": "2025-09",
+        "days": 30,
+        "first": "2025-09-01",
+        "last": "2025-09-30",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-09.zip",
+        "sha256": "9934e6d98a90139039bb070a90ba409ff1832ad80116920adcf088090ce4c996",
+        "bytes": 2154
+      },
+      {
+        "month": "2025-10",
+        "days": 31,
+        "first": "2025-10-01",
+        "last": "2025-10-31",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-10.zip",
+        "sha256": "3597639a18f343c768e374157e8bd08dd046bb33693495ff4e13380abac1260e",
+        "bytes": 2262
+      },
+      {
+        "month": "2025-11",
+        "days": 30,
+        "first": "2025-11-01",
+        "last": "2025-11-30",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-11.zip",
+        "sha256": "9eded1225f9e3f3d4f127fad46111eb403553c1125cf6d11995e69d91d037290",
+        "bytes": 2185
+      },
+      {
+        "month": "2025-12",
+        "days": 31,
+        "first": "2025-12-01",
+        "last": "2025-12-31",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2025-12.zip",
+        "sha256": "b12a106198f3be3ba5916195f75c1c6d34d8e5302ab77b8fd7c4b1b58b6144f4",
+        "bytes": 2230
+      },
+      {
+        "month": "2026-01",
+        "days": 31,
+        "first": "2026-01-01",
+        "last": "2026-01-31",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-01.zip",
+        "sha256": "b7775ddec3ddd3edafc6ad5abcc94d6ab8b8f063a0911d8a3f3daae6a8bbad2e",
+        "bytes": 2237
+      },
+      {
+        "month": "2026-02",
+        "days": 28,
+        "first": "2026-02-01",
+        "last": "2026-02-28",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-02.zip",
+        "sha256": "f8806308002477a1a28d6cc55ec9ea7bd91bfd4b44c04500d9fc4aec50fd9464",
+        "bytes": 2030
+      },
+      {
+        "month": "2026-03",
+        "days": 31,
+        "first": "2026-03-01",
+        "last": "2026-03-31",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-03.zip",
+        "sha256": "b81fb1942f9653564f355e3bd62dc06e0552d1c64bc966f7dce5a9c1f8780c47",
+        "bytes": 2242
+      },
+      {
+        "month": "2026-04",
+        "days": 30,
+        "first": "2026-04-01",
+        "last": "2026-04-30",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-04.zip",
+        "sha256": "1f7da05da9f9a8f30945bde41872ca649c61d6e6e324e916f4c3cbafa0a9276a",
+        "bytes": 2151
+      },
+      {
+        "month": "2026-05",
+        "days": 31,
+        "first": "2026-05-01",
+        "last": "2026-05-31",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-05.zip",
+        "sha256": "978936e8f1f80b570248f8d4478d6fe08d94b98bc1c7d372feb27573ff466cde",
+        "bytes": 2223
+      },
+      {
+        "month": "2026-06",
+        "days": 30,
+        "first": "2026-06-01",
+        "last": "2026-06-30",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-06.zip",
+        "sha256": "7020d4d850a875b93f0b0fa6df4a4c36ab615273e2ab03f9e896852330dad77e",
+        "bytes": 2144
+      },
+      {
+        "month": "2026-07",
+        "days": 31,
+        "first": "2026-07-01",
+        "last": "2026-07-31",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-07.zip",
+        "sha256": "74ddc3e39aae9445b9f9dae00d53fe2ce6ff503ee469417e207a8f5970bad11a",
+        "bytes": 2193
+      },
+      {
+        "month": "2026-08",
+        "days": 31,
+        "first": "2026-08-01",
+        "last": "2026-08-31",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-08.zip",
+        "sha256": "fd8374a811ac7d3f4144d9c857c4f10796402c178316a25ed0c2f0ca6e16a8c1",
+        "bytes": 2185
+      },
+      {
+        "month": "2026-09",
+        "days": 30,
+        "first": "2026-09-01",
+        "last": "2026-09-30",
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-09.zip",
+        "sha256": "4944279ced64d3b1822c7c535043f2bbf41bc97d9000b8d857753352c1949769",
+        "bytes": 2112
+      },
+      {
+        "month": "2026-10",
+        "terminal_first_open_only": true,
+        "timestamp_unit": "us",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1d/BTCUSDT-1d-2026-10.zip",
+        "sha256": "be8a089a8c5902915ed13abdf7a5ce78f7cc4c4b8e0ed0c0b489f7bcf6eb08e8",
+        "bytes": 2224
+      }
+    ],
+    "first": "2021-09-01",
+    "last": "2026-09-30",
+    "historical_source_vintages_unverified": true
+  },
+  "full": {
+    "days": 1826,
+    "start": 10000.0,
+    "end": 14437.503795756753,
+    "cagr": 0.07622428961302763,
+    "sharpe": 0.3841700008232623,
+    "max_drawdown": 0.6585848755909012,
+    "profit_factor_daily_dollar": 1.0352361863222925,
+    "total_pnl": 4437.503795756751,
+    "positive_days": 642
+  },
+  "gross_no_cost": {
+    "days": 1826,
+    "start": 10000.0,
+    "end": 15749.433757100005,
+    "cagr": 0.09511162804213047,
+    "sharpe": 0.42640908583353543,
+    "max_drawdown": 0.654472298684256,
+    "profit_factor_daily_dollar": 1.04425669258092,
+    "total_pnl": 5749.433757100005,
+    "positive_days": 653
+  },
+  "holdout_2024_2026": {
+    "days": 1004,
+    "start": 10754.959603308022,
+    "end": 14437.503795756753,
+    "cagr": 0.11307208820089776,
+    "sharpe": 0.4753944854579278,
+    "max_drawdown": 0.41746107600147164,
+    "profit_factor_daily_dollar": 1.043644422439528,
+    "total_pnl": 3682.5441924487313,
+    "positive_days": 325
+  },
+  "annual": {
+    "2021": {
+      "days": 92,
+      "start": 10000.0,
+      "end": 8960.295356521448,
+      "cagr": -0.3532827431095228,
+      "sharpe": -0.9715662201505396,
+      "max_drawdown": 0.18319061016590044,
+      "profit_factor_daily_dollar": 0.7895453726905478,
+      "total_pnl": -1039.7046434785516,
+      "positive_days": 17
+    },
+    "2022": {
+      "days": 365,
+      "start": 8960.295356521448,
+      "end": 4329.939233518415,
+      "cagr": -0.5170044306090638,
+      "sharpe": -1.1664861531304374,
+      "max_drawdown": 0.6125531101003172,
+      "profit_factor_daily_dollar": 0.7657561395783893,
+      "total_pnl": -4630.356123003034,
+      "positive_days": 124
+    },
+    "2023": {
+      "days": 365,
+      "start": 4329.939233518415,
+      "end": 10754.959603308022,
+      "cagr": 1.4854075707440715,
+      "sharpe": 2.318169795107764,
+      "max_drawdown": 0.22577412301589672,
+      "profit_factor_daily_dollar": 1.3812524741959515,
+      "total_pnl": 6425.020369789607,
+      "positive_days": 176
+    },
+    "2024": {
+      "days": 366,
+      "start": 10754.959603308022,
+      "end": 18273.776323523627,
+      "cagr": 0.6972575917420576,
+      "sharpe": 1.301134830475425,
+      "max_drawdown": 0.41746107600147164,
+      "profit_factor_daily_dollar": 1.1566033680695769,
+      "total_pnl": 7518.8167202156055,
+      "positive_days": 177
+    },
+    "2025": {
+      "days": 365,
+      "start": 18273.776323523627,
+      "end": 15274.825909878637,
+      "cagr": -0.16421486784466577,
+      "sharpe": -0.4313865262471397,
+      "max_drawdown": 0.33203155407270224,
+      "profit_factor_daily_dollar": 0.8983384528706423,
+      "total_pnl": -2998.9504136449905,
+      "positive_days": 109
+    },
+    "2026": {
+      "days": 273,
+      "start": 15274.825909878637,
+      "end": 14437.503795756753,
+      "cagr": -0.07265283347933071,
+      "sharpe": -0.45903306399176796,
+      "max_drawdown": 0.12367320849642016,
+      "profit_factor_daily_dollar": 0.8780276374115564,
+      "total_pnl": -837.3221141218837,
+      "positive_days": 39
+    }
+  },
+  "monthly": {
+    "returns": {
+      "2021-10": -0.012863710903288306,
+      "2021-11": -0.007830429645363846,
+      "2021-12": -0.08513017292108915,
+      "2022-01": -0.1676840166888537,
+      "2022-02": -0.039363433034136364,
+      "2022-03": 0.1962138219231353,
+      "2022-04": -0.028588657943696028,
+      "2022-05": -0.20151818821646528,
+      "2022-06": -0.372891941724253,
+      "2022-07": 0.036368701117844404,
+      "2022-08": -0.08262301013826412,
+      "2022-09": 0.11967402644849434,
+      "2022-10": 0.054993389695019435,
+      "2022-11": -0.04998604776873883,
+      "2022-12": -0.026447728501185153,
+      "2023-01": 0.39791869060480045,
+      "2023-02": 0.0007108994827067505,
+      "2023-03": 0.25313289345418766,
+      "2023-04": 0.026974195673872048,
+      "2023-05": -0.06919558898348532,
+      "2023-06": 0.11986475635828953,
+      "2023-07": -0.040683910552779534,
+      "2023-08": -0.11259438847231029,
+      "2023-09": 0.012511835183885767,
+      "2023-10": 0.25798707432372847,
+      "2023-11": 0.08903477514627145,
+      "2023-12": 0.12086636012733254,
+      "2024-01": 0.007010200854386417,
+      "2024-02": 0.4356682846927955,
+      "2024-03": 0.1660196593237786,
+      "2024-04": -0.14882059267327208,
+      "2024-05": 0.11319804333432115,
+      "2024-06": -0.07059465393379638,
+      "2024-07": -0.016196569243395187,
+      "2024-08": -0.2189865439078974,
+      "2024-09": 0.07382193523053204,
+      "2024-10": 0.04200867859847568,
+      "2024-11": 0.3715286384423404,
+      "2024-12": -0.02937465697104702,
+      "2025-01": 0.09461225562744668,
+      "2025-02": -0.17650558565921382,
+      "2025-03": -0.038509112956214175,
+      "2025-04": 0.06438080464583051,
+      "2025-05": 0.020519147863351295,
+      "2025-06": -0.008827400263647589,
+      "2025-07": 0.08042716438696784,
+      "2025-08": -0.06493945842391957,
+      "2025-09": 0.03372677321715445,
+      "2025-10": -0.11655722240200816,
+      "2025-11": -0.029054319161883613,
+      "2025-12": 0.0,
+      "2026-01": 0.0,
+      "2026-02": 0.0,
+      "2026-03": 0.0,
+      "2026-04": 0.0365694608803524,
+      "2026-05": -0.060852316822625596,
+      "2026-06": 0.0,
+      "2026-07": 0.007365622764639479,
+      "2026-08": 0.01774236327725065,
+      "2026-09": -0.052981282588493994
+    },
+    "positive": 28,
+    "months": 60,
+    "longest_nonpositive_streak": 6,
+    "worst": -0.372891941724253
+  },
+  "regimes": {
+    "bull_high": {
+      "days": 20,
+      "net_dollar_pnl": 639.6020595000018
+    },
+    "bull_low": {
+      "days": 947,
+      "net_dollar_pnl": 7466.09265307688
+    },
+    "bear_high": {
+      "days": 105,
+      "net_dollar_pnl": -1126.5724032930193
+    },
+    "bear_low": {
+      "days": 754,
+      "net_dollar_pnl": -2541.61851352711
+    }
+  },
+  "monte_carlo": {
+    "paths": 5000,
+    "joint_passes": 0,
+    "joint_pass_rate": 0.0,
+    "ruined": 0,
+    "undefined": 0,
+    "cagr": {
+      "p05": -0.22383001167718355,
+      "p50": 0.08283728459071171,
+      "p95": 0.5088920478570569
+    },
+    "sharpe": {
+      "p05": -0.406056244938228,
+      "p50": 0.3994495443622673,
+      "p95": 1.2073052181209767
+    },
+    "max_drawdown": {
+      "p05": 0.42384083928621785,
+      "p50": 0.63432262840903,
+      "p95": 0.8654454126333458
+    },
+    "profit_factor": {
+      "p05": 0.8939715058087775,
+      "p50": 1.0327093929229916,
+      "p95": 1.2078733551477856
+    }
+  },
+  "checks": {
+    "numerical_full": false,
+    "min_20_buys": true,
+    "annual_walk_forward": false,
+    "historical_2024_2026_holdout": false,
+    "monthly_stability": false,
+    "four_regimes": false,
+    "block_monte_carlo": false,
+    "double_slippage": true,
+    "one_day_latency": true,
+    "independent_executable_oos": false
+  },
+  "all_gate_passed": false,
+  "buys": 29,
+  "fills_per_year": {
+    "2021": 3,
+    "2022": 16,
+    "2023": 4,
+    "2024": 8,
+    "2025": 15,
+    "2026": 11
+  },
+  "fills": [
+    {
+      "day": "2021-10-19",
+      "side": "buy",
+      "reference": 62005.6,
+      "execution": 62036.60279999999,
+      "quantity": 0.16103,
+      "notional": 9989.754148884,
+      "fee": 9.989754148884
+    },
+    {
+      "day": "2021-11-02",
+      "side": "sell",
+      "reference": 60911.12,
+      "execution": 60880.66444000001,
+      "quantity": 0.16103,
+      "notional": 9803.613394773201,
+      "fee": 9.803613394773201
+    },
+    {
+      "day": "2021-12-07",
+      "side": "buy",
+      "reference": 50441.91,
+      "execution": 50467.130955,
+      "quantity": 0.19387000000000001,
+      "notional": 9784.062678245851,
+      "fee": 9.784062678245851
+    },
+    {
+      "day": "2022-02-22",
+      "side": "sell",
+      "reference": 37008.16,
+      "execution": 36989.655920000005,
+      "quantity": 0.19387000000000001,
+      "notional": 7171.1845932104015,
+      "fee": 7.171184593210402
+    },
+    {
+      "day": "2022-03-08",
+      "side": "buy",
+      "reference": 37988.01,
+      "execution": 38007.004005,
+      "quantity": 0.18830000000000002,
+      "notional": 7156.718854141502,
+      "fee": 7.156718854141502
+    },
+    {
+      "day": "2022-04-05",
+      "side": "sell",
+      "reference": 46580.5,
+      "execution": 46557.20975,
+      "quantity": 0.18830000000000002,
+      "notional": 8766.722595925,
+      "fee": 8.766722595925001
+    },
+    {
+      "day": "2022-04-12",
+      "side": "buy",
+      "reference": 39530.45,
+      "execution": 39550.21522499999,
+      "quantity": 0.22122000000000003,
+      "notional": 8749.298612074499,
+      "fee": 8.749298612074499
+    },
+    {
+      "day": "2022-05-10",
+      "side": "sell",
+      "reference": 30074.23,
+      "execution": 30059.192885,
+      "quantity": 0.22122000000000003,
+      "notional": 6649.694650019701,
+      "fee": 6.649694650019701
+    },
+    {
+      "day": "2022-05-31",
+      "side": "buy",
+      "reference": 31734.23,
+      "execution": 31750.097114999997,
+      "quantity": 0.20902,
+      "notional": 6636.4052989773,
+      "fee": 6.6364052989773
+    },
+    {
+      "day": "2022-07-12",
+      "side": "sell",
+      "reference": 19963.61,
+      "execution": 19953.628195,
+      "quantity": 0.20902,
+      "notional": 4170.707365318901,
+      "fee": 4.170707365318901
+    },
+    {
+      "day": "2022-07-19",
+      "side": "buy",
+      "reference": 22432.58,
+      "execution": 22443.796290000002,
+      "quantity": 0.18546,
+      "notional": 4162.426459943401,
+      "fee": 4.162426459943401
+    },
+    {
+      "day": "2022-08-23",
+      "side": "sell",
+      "reference": 21400.75,
+      "execution": 21390.049625,
+      "quantity": 0.18546,
+      "notional": 3966.9986034525004,
+      "fee": 3.9669986034525007
+    },
+    {
+      "day": "2022-09-06",
+      "side": "buy",
+      "reference": 19795.34,
+      "execution": 19805.23767,
+      "quantity": 0.19991,
+      "notional": 3959.2650626096997,
+      "fee": 3.9592650626097
+    },
+    {
+      "day": "2022-09-13",
+      "side": "sell",
+      "reference": 22395.44,
+      "execution": 22384.24228,
+      "quantity": 0.19991,
+      "notional": 4474.8338741948,
+      "fee": 4.4748338741948
+    },
+    {
+      "day": "2022-09-20",
+      "side": "buy",
+      "reference": 19537.02,
+      "execution": 19546.78851,
+      "quantity": 0.22847,
+      "notional": 4465.8547708797,
+      "fee": 4.4658547708797
+    },
+    {
+      "day": "2022-11-08",
+      "side": "sell",
+      "reference": 20590.67,
+      "execution": 20580.374665,
+      "quantity": 0.22847,
+      "notional": 4701.99819971255,
+      "fee": 4.70199819971255
+    },
+    {
+      "day": "2022-11-15",
+      "side": "buy",
+      "reference": 16617.72,
+      "execution": 16626.02886,
+      "quantity": 0.28224000000000005,
+      "notional": 4692.5303854464,
+      "fee": 4.6925303854464
+    },
+    {
+      "day": "2022-11-22",
+      "side": "sell",
+      "reference": 15781.29,
+      "execution": 15773.399355000001,
+      "quantity": 0.28224000000000005,
+      "notional": 4451.884233955201,
+      "fee": 4.451884233955202
+    },
+    {
+      "day": "2022-12-06",
+      "side": "buy",
+      "reference": 16966.35,
+      "execution": 16974.833174999996,
+      "quantity": 0.26174000000000003,
+      "notional": 4442.9928352245,
+      "fee": 4.4429928352245
+    },
+    {
+      "day": "2023-03-21",
+      "side": "sell",
+      "reference": 27717.01,
+      "execution": 27703.151495,
+      "quantity": 0.26174000000000003,
+      "notional": 7251.022872301301,
+      "fee": 7.2510228723013
+    },
+    {
+      "day": "2023-03-28",
+      "side": "buy",
+      "reference": 27124.9,
+      "execution": 27138.46245,
+      "quantity": 0.26665,
+      "notional": 7236.4710122925,
+      "fee": 7.2364710122925
+    },
+    {
+      "day": "2023-09-26",
+      "side": "sell",
+      "reference": 26304.8,
+      "execution": 26291.6476,
+      "quantity": 0.26665,
+      "notional": 7010.66783254,
+      "fee": 7.01066783254
+    },
+    {
+      "day": "2023-10-03",
+      "side": "buy",
+      "reference": 27494.51,
+      "execution": 27508.257254999997,
+      "quantity": 0.25435,
+      "notional": 6996.72523280925,
+      "fee": 6.99672523280925
+    },
+    {
+      "day": "2024-07-16",
+      "side": "sell",
+      "reference": 64724.06,
+      "execution": 64691.69797,
+      "quantity": 0.25435,
+      "notional": 16454.3333786695,
+      "fee": 16.4543333786695
+    },
+    {
+      "day": "2024-07-23",
+      "side": "buy",
+      "reference": 67532.0,
+      "execution": 67565.766,
+      "quantity": 0.24304,
+      "notional": 16421.18376864,
+      "fee": 16.42118376864
+    },
+    {
+      "day": "2024-08-06",
+      "side": "sell",
+      "reference": 54018.82,
+      "execution": 53991.81059,
+      "quantity": 0.24304,
+      "notional": 13122.169645793601,
+      "fee": 13.122169645793601
+    },
+    {
+      "day": "2024-08-13",
+      "side": "buy",
+      "reference": 59346.64,
+      "execution": 59376.313319999994,
+      "quantity": 0.22056,
+      "notional": 13096.0396658592,
+      "fee": 13.0960396658592
+    },
+    {
+      "day": "2024-08-20",
+      "side": "sell",
+      "reference": 59438.5,
+      "execution": 59408.780750000005,
+      "quantity": 0.22056,
+      "notional": 13103.200682220002,
+      "fee": 13.103200682220002
+    },
+    {
+      "day": "2024-08-27",
+      "side": "buy",
+      "reference": 62834.0,
+      "execution": 62865.416999999994,
+      "quantity": 0.20802,
+      "notional": 13077.26404434,
+      "fee": 13.07726404434
+    },
+    {
+      "day": "2024-10-08",
+      "side": "sell",
+      "reference": 62224.01,
+      "execution": 62192.89799500001,
+      "quantity": 0.20802,
+      "notional": 12937.366640919901,
+      "fee": 12.937366640919901
+    },
+    {
+      "day": "2024-10-15",
+      "side": "buy",
+      "reference": 66084.0,
+      "execution": 66117.042,
+      "quantity": 0.19528,
+      "notional": 12911.335961760002,
+      "fee": 12.911335961760003
+    },
+    {
+      "day": "2025-03-04",
+      "side": "sell",
+      "reference": 86221.16,
+      "execution": 86178.04942000001,
+      "quantity": 0.19528,
+      "notional": 16828.849490737604,
+      "fee": 16.828849490737603
+    },
+    {
+      "day": "2025-03-25",
+      "side": "buy",
+      "reference": 87498.16,
+      "execution": 87541.90908,
+      "quantity": 0.19185000000000002,
+      "notional": 16794.915256998,
+      "fee": 16.794915256998
+    },
+    {
+      "day": "2025-04-08",
+      "side": "sell",
+      "reference": 79163.24,
+      "execution": 79123.65838000001,
+      "quantity": 0.19185000000000002,
+      "notional": 15179.873860203003,
+      "fee": 15.179873860203003
+    },
+    {
+      "day": "2025-04-15",
+      "side": "buy",
+      "reference": 84591.58,
+      "execution": 84633.87578999999,
+      "quantity": 0.17900000000000002,
+      "notional": 15149.463766410001,
+      "fee": 15.149463766410001
+    },
+    {
+      "day": "2025-05-06",
+      "side": "sell",
+      "reference": 94733.68,
+      "execution": 94686.31316,
+      "quantity": 0.17900000000000002,
+      "notional": 16948.850055640003,
+      "fee": 16.948850055640005
+    },
+    {
+      "day": "2025-05-13",
+      "side": "buy",
+      "reference": 102791.32,
+      "execution": 102842.71566,
+      "quantity": 0.16448000000000002,
+      "notional": 16915.5698717568,
+      "fee": 16.9155698717568
+    },
+    {
+      "day": "2025-06-03",
+      "side": "sell",
+      "reference": 105858.0,
+      "execution": 105805.07100000001,
+      "quantity": 0.16448000000000002,
+      "notional": 17402.818078080003,
+      "fee": 17.402818078080003
+    },
+    {
+      "day": "2025-06-10",
+      "side": "buy",
+      "reference": 110263.02,
+      "execution": 110318.15151,
+      "quantity": 0.15743000000000001,
+      "notional": 17367.3865922193,
+      "fee": 17.3673865922193
+    },
+    {
+      "day": "2025-06-17",
+      "side": "sell",
+      "reference": 106794.53,
+      "execution": 106741.132735,
+      "quantity": 0.15743000000000001,
+      "notional": 16804.256526471054,
+      "fee": 16.804256526471054
+    },
+    {
+      "day": "2025-06-24",
+      "side": "buy",
+      "reference": 105333.94,
+      "execution": 105386.60697,
+      "quantity": 0.15914,
+      "notional": 16771.2246332058,
+      "fee": 16.771224633205797
+    },
+    {
+      "day": "2025-09-09",
+      "side": "sell",
+      "reference": 112065.23,
+      "execution": 112009.197385,
+      "quantity": 0.15914,
+      "notional": 17825.143671848902,
+      "fee": 17.825143671848902
+    },
+    {
+      "day": "2025-10-07",
+      "side": "buy",
+      "reference": 124658.54,
+      "execution": 124720.86926999998,
+      "quantity": 0.14263,
+      "notional": 17788.9375839801,
+      "fee": 17.7889375839801
+    },
+    {
+      "day": "2025-10-14",
+      "side": "sell",
+      "reference": 115166.0,
+      "execution": 115108.417,
+      "quantity": 0.14263,
+      "notional": 16417.91351671,
+      "fee": 16.41791351671
+    },
+    {
+      "day": "2025-10-28",
+      "side": "buy",
+      "reference": 114107.65,
+      "execution": 114164.70382499999,
+      "quantity": 0.14352,
+      "notional": 16384.918292964,
+      "fee": 16.384918292964002
+    },
+    {
+      "day": "2025-11-04",
+      "side": "sell",
+      "reference": 106583.05,
+      "execution": 106529.75847500001,
+      "quantity": 0.14352,
+      "notional": 15289.150936332002,
+      "fee": 15.289150936332002
+    },
+    {
+      "day": "2026-04-14",
+      "side": "buy",
+      "reference": 74418.0,
+      "execution": 74455.209,
+      "quantity": 0.20494,
+      "notional": 15258.850532460001,
+      "fee": 15.258850532460002
+    },
+    {
+      "day": "2026-04-28",
+      "side": "sell",
+      "reference": 77371.32,
+      "execution": 77332.63434,
+      "quantity": 0.20494,
+      "notional": 15848.550081639602,
+      "fee": 15.848550081639601
+    },
+    {
+      "day": "2026-05-12",
+      "side": "buy",
+      "reference": 81745.66,
+      "execution": 81786.53283,
+      "quantity": 0.19340000000000002,
+      "notional": 15817.515449322,
+      "fee": 15.817515449322
+    },
+    {
+      "day": "2026-05-19",
+      "side": "sell",
+      "reference": 77001.88,
+      "execution": 76963.37906,
+      "quantity": 0.19340000000000002,
+      "notional": 14884.717510204002,
+      "fee": 14.884717510204002
+    },
+    {
+      "day": "2026-07-14",
+      "side": "buy",
+      "reference": 62334.52,
+      "execution": 62365.68725999999,
+      "quantity": 0.23819,
+      "notional": 14854.883048459398,
+      "fee": 14.8548830484594
+    },
+    {
+      "day": "2026-08-18",
+      "side": "sell",
+      "reference": 64532.11,
+      "execution": 64499.843945,
+      "quantity": 0.23819,
+      "notional": 15363.21782925955,
+      "fee": 15.36321782925955
+    },
+    {
+      "day": "2026-08-25",
+      "side": "buy",
+      "reference": 78992.76,
+      "execution": 79032.25637999999,
+      "quantity": 0.194,
+      "notional": 15332.25773772,
+      "fee": 15.33225773772
+    },
+    {
+      "day": "2026-09-01",
+      "side": "sell",
+      "reference": 78581.3,
+      "execution": 78542.00935000001,
+      "quantity": 0.194,
+      "notional": 15237.149813900001,
+      "fee": 15.237149813900002
+    },
+    {
+      "day": "2026-09-08",
+      "side": "buy",
+      "reference": 79112.0,
+      "execution": 79151.556,
+      "quantity": 0.19212,
+      "notional": 15206.59693872,
+      "fee": 15.20659693872
+    },
+    {
+      "day": "2026-09-15",
+      "side": "sell",
+      "reference": 78189.2,
+      "execution": 78150.1054,
+      "quantity": 0.19212,
+      "notional": 15014.198249448002,
+      "fee": 15.014198249448002
+    },
+    {
+      "day": "2026-09-22",
+      "side": "buy",
+      "reference": 86620.01,
+      "execution": 86663.32000499999,
+      "quantity": 0.17290000000000003,
+      "notional": 14984.0880288645,
+      "fee": 14.9840880288645
+    },
+    {
+      "day": "2026-10-01",
+      "side": "sell",
+      "reference": 83623.59,
+      "execution": 83581.778205,
+      "quantity": 0.17290000000000003,
+      "notional": 14451.289451644501,
+      "fee": 14.451289451644502,
+      "forced_terminal": true
+    }
+  ],
+  "fees_usdt": 689.9373141603324,
+  "slippage_reference_drag_usdt": 344.97002518295017,
+  "net_final_usdt": 14437.503795756753,
+  "gross_final_usdt": 15749.433757100005,
+  "double_slippage_final_usdt": 14024.684339061107,
+  "one_day_latency_final_usdt": 11433.559743057756
+}
