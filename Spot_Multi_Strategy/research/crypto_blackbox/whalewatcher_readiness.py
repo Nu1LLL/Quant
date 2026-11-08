@@ -41,6 +41,9 @@ class JointReadiness:
     joint_start_ms: int | None
     joint_span_ms: int
     five_year_continuous_source: bool
+    news_macro_start_ms: int | None = None
+    news_macro_span_ms: int = 0
+    news_macro_five_year_continuous_source: bool = False
     independent_trading_oos_proven: bool = False
     execution_eligible: bool = False
 
@@ -149,7 +152,20 @@ def assess(journal_dir: str | Path, now_ms: int | None = None) -> JointReadiness
                    and joint_span >= MIN_OOS_MS
                    and joint_start is not None
                    and _five_calendar_years_elapsed(joint_start, now_ms))
-    return JointReadiness(news, events, macro, joint_start, joint_span, joint_ready)
+    if news.latest_continuous_start_ms is None or macro.latest_continuous_start_ms is None:
+        news_macro_start = None
+        news_macro_span = 0
+    else:
+        news_macro_start = max(news.latest_continuous_start_ms,
+                               macro.latest_continuous_start_ms)
+        news_macro_span = now_ms - news_macro_start
+    news_macro_ready = (news.five_year_continuous_source
+                        and macro.five_year_continuous_source
+                        and news_macro_start is not None
+                        and news_macro_span >= MIN_OOS_MS
+                        and _five_calendar_years_elapsed(news_macro_start, now_ms))
+    return JointReadiness(news, events, macro, joint_start, joint_span, joint_ready,
+                          news_macro_start, news_macro_span, news_macro_ready)
 
 
 def main() -> None:

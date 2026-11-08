@@ -7,9 +7,10 @@ from pathlib import Path
 import sqlite3
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from research.crypto_blackbox.whalewatcher_readiness import (
-    MAX_POLL_GAP_MS, _five_calendar_years_elapsed, _stream, assess,
+    MAX_POLL_GAP_MS, StreamReadiness, _five_calendar_years_elapsed, _stream, assess,
 )
 
 
@@ -96,7 +97,29 @@ class WhaleWatcherReadinessTests(unittest.TestCase):
             self.assertEqual(result.news_events.state, "fresh")
             self.assertEqual(result.events_claims.state, "unavailable")
             self.assertEqual(result.joint_span_ms, 0)
+            self.assertEqual(result.news_macro_start_ms, base)
+            self.assertEqual(result.news_macro_span_ms, 1_000)
+            self.assertFalse(result.news_macro_five_year_continuous_source)
             self.assertFalse(result.five_year_continuous_source)
+
+    def test_five_year_news_macro_does_not_require_claim_provider(self):
+        first = ms(datetime(2026, 1, 1, tzinfo=timezone.utc))
+        now = ms(datetime(2031, 1, 1, tzinfo=timezone.utc))
+        span = now - first
+        news = StreamReadiness("news_events", "fresh", 21_000, 21_000,
+                               first, now, 0, 0, span, True)
+        claims = StreamReadiness("events_claims", "unavailable", 21_000, 0,
+                                 None, now, 0, 21_000, 0, False)
+        macro = StreamReadiness("macro_schedule", "fresh", 21_000, 21_000,
+                                first, now, 0, 0, span, True)
+        with patch("research.crypto_blackbox.whalewatcher_readiness._read_rows",
+                   return_value=[]), patch(
+                       "research.crypto_blackbox.whalewatcher_readiness._stream",
+                       side_effect=[news, claims, macro]):
+            result = assess("/unused/synthetic/path", now)
+        self.assertTrue(result.news_macro_five_year_continuous_source)
+        self.assertFalse(result.five_year_continuous_source)
+        self.assertFalse(result.independent_trading_oos_proven)
 
 
 if __name__ == "__main__":
