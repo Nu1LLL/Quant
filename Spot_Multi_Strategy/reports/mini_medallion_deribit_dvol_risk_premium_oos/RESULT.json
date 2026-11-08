@@ -1,0 +1,2578 @@
+{
+  "experiment": "deribit_dvol_risk_premium_basket_2026_11_08",
+  "prereg_commit": "5e1f4bf",
+  "code_commit": "2627dcc74e8b739c07cecae0d8d472e7a4730256",
+  "started_utc": "2026-11-08T08:40:26.577364+00:00",
+  "evidence_grade": "preregistered_retrospective_current_dvol_vintage",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "status": "sealed_formal_result",
+  "sealed_utc": "2026-11-08T08:40:48.340547+00:00",
+  "sources": {
+    "deribit_dvol_verified_sha256": [
+      {
+        "currency": "BTC",
+        "year": 2021,
+        "rows": 283,
+        "sha256": "3a484dfa3e876ce0fb248128336141a66bddce1c204769af49637b9e3f66f2f4",
+        "first": "2021-03-24",
+        "last": "2021-12-31"
+      },
+      {
+        "currency": "ETH",
+        "year": 2021,
+        "rows": 283,
+        "sha256": "2b546e4f693bbf4388774eeef1001af59e08724ce6faf2b036d0ac56fddceebd",
+        "first": "2021-03-24",
+        "last": "2021-12-31"
+      },
+      {
+        "currency": "BTC",
+        "year": 2022,
+        "rows": 365,
+        "sha256": "064a6e031902fd60a83e9fabaedda37a4d68c2d02160050246c5533603ed5aed",
+        "first": "2022-01-01",
+        "last": "2022-12-31"
+      },
+      {
+        "currency": "ETH",
+        "year": 2022,
+        "rows": 365,
+        "sha256": "19bbad706f487269b8fe73a67f5e6ea4f7b10d6702cb325d1ea25e09dfdd1131",
+        "first": "2022-01-01",
+        "last": "2022-12-31"
+      },
+      {
+        "currency": "BTC",
+        "year": 2023,
+        "rows": 365,
+        "sha256": "810be58b1ad09905e67ad93b80aeba0fc5df0c6feb6fb9c006e27a4440478443",
+        "first": "2023-01-01",
+        "last": "2023-12-31"
+      },
+      {
+        "currency": "ETH",
+        "year": 2023,
+        "rows": 365,
+        "sha256": "84e2dadf6a0dd9dd169826cd550e05c4028daab4e8a7e0fa44e8342b28a64d01",
+        "first": "2023-01-01",
+        "last": "2023-12-31"
+      },
+      {
+        "currency": "BTC",
+        "year": 2024,
+        "rows": 366,
+        "sha256": "fb03db68a718bfc76b89b6b4f3d81ae1f01d85293c5f83ca049de662cea439dc",
+        "first": "2024-01-01",
+        "last": "2024-12-31"
+      },
+      {
+        "currency": "ETH",
+        "year": 2024,
+        "rows": 366,
+        "sha256": "23de90913c2cd63042f6cb49bd9f8b9a7152c3913e2cc0d14f45c81785cab93c",
+        "first": "2024-01-01",
+        "last": "2024-12-31"
+      },
+      {
+        "currency": "BTC",
+        "year": 2025,
+        "rows": 365,
+        "sha256": "82a29233f8bd2b9f1ef655c6d6429bbd90d9ef08f0a800572d692103d1867335",
+        "first": "2025-01-01",
+        "last": "2025-12-31"
+      },
+      {
+        "currency": "ETH",
+        "year": 2025,
+        "rows": 365,
+        "sha256": "b066429088524b905e743b56e80f16e9bf58570c1180961396acc82be7859e90",
+        "first": "2025-01-01",
+        "last": "2025-12-31"
+      },
+      {
+        "currency": "BTC",
+        "year": 2026,
+        "rows": 273,
+        "sha256": "a31ed345a0e51eecc1b666fa36955189ea58ccc309c7e4c1870d2ccaa2658072",
+        "first": "2026-01-01",
+        "last": "2026-09-30"
+      },
+      {
+        "currency": "ETH",
+        "year": 2026,
+        "rows": 273,
+        "sha256": "af72c298892409553df879efac2b1287fbb5677c46f543d1610c5249944de5bb",
+        "first": "2026-01-01",
+        "last": "2026-09-30"
+      }
+    ],
+    "binance_spot_verified_sha256": [
+      {
+        "month": "2021-03",
+        "symbol": "BTCUSDT",
+        "sha256": "f43e48b5efc8e0b06e0520b91aad4e5668844c766933c0c5cf403115dba03303",
+        "bytes": 2282
+      },
+      {
+        "month": "2021-03",
+        "symbol": "ETHUSDT",
+        "sha256": "0f3fe06236480c4aed3460eac7b2d4e0ef621ec4cc5da20445797cb682b74dc2",
+        "bytes": 2195
+      },
+      {
+        "month": "2021-04",
+        "symbol": "BTCUSDT",
+        "sha256": "3dd852f06608173dec98b7210f6a38728ef221f08717b362b4f3f09436e0a5fe",
+        "bytes": 2189
+      },
+      {
+        "month": "2021-04",
+        "symbol": "ETHUSDT",
+        "sha256": "d483115836d4c285943064b22461670ff30ef1601b1183c4034c7edb4fffeedf",
+        "bytes": 2115
+      },
+      {
+        "month": "2021-05",
+        "symbol": "BTCUSDT",
+        "sha256": "3122e1ebaa1376937d479964563dced19f850636a700bb7cb97d7872ea8c8f28",
+        "bytes": 2283
+      },
+      {
+        "month": "2021-05",
+        "symbol": "ETHUSDT",
+        "sha256": "bc68e71360869ed2f1d06bfa07ec6599c5bdb38406d6b712635afe2c6f1df7fa",
+        "bytes": 2240
+      },
+      {
+        "month": "2021-06",
+        "symbol": "BTCUSDT",
+        "sha256": "9875e11e890f75ef6eb0188ef7f952e5c0ba6919bd6d72d3da4d6847b84c5ccf",
+        "bytes": 2204
+      },
+      {
+        "month": "2021-06",
+        "symbol": "ETHUSDT",
+        "sha256": "b8ddb26be6c48876a04a7fddfbc3f4c8842f53b8e217613eac9dd15a55836597",
+        "bytes": 2136
+      },
+      {
+        "month": "2021-07",
+        "symbol": "BTCUSDT",
+        "sha256": "636f588a6abb568f977aea3ae798f34ced4135f2f96fbc1493a2f9ab54a844eb",
+        "bytes": 2264
+      },
+      {
+        "month": "2021-07",
+        "symbol": "ETHUSDT",
+        "sha256": "c33ea50dc263d559315e7bf3dd6ab87a40f12747fe6fd0c16b5dff28dbd7b58f",
+        "bytes": 2186
+      },
+      {
+        "month": "2021-08",
+        "symbol": "BTCUSDT",
+        "sha256": "68612e3fb74c184f97e4d3b2e061dd3743156401a6813ab897014b0b35caedd7",
+        "bytes": 2246
+      },
+      {
+        "month": "2021-08",
+        "symbol": "ETHUSDT",
+        "sha256": "3cffa7628cff71c9b2ec5f33085c90317fc1d9866ac701ca9742322344182397",
+        "bytes": 2200
+      },
+      {
+        "month": "2021-09",
+        "symbol": "BTCUSDT",
+        "sha256": "9f6535a0fe8a417b0909d230e4a02f6a9933eb23c770f54c9f6bf140e8d02257",
+        "bytes": 2156
+      },
+      {
+        "month": "2021-09",
+        "symbol": "ETHUSDT",
+        "sha256": "14e849630ad4d5ae2f899c289c395736c12f1b699486b9dcfd1d7e058e4fff18",
+        "bytes": 2089
+      },
+      {
+        "month": "2021-10",
+        "symbol": "BTCUSDT",
+        "sha256": "ba50ff3dab5726ca8b9fa26065fe3a8f612aed4baa978ecdd9d39647cd108684",
+        "bytes": 2210
+      },
+      {
+        "month": "2021-10",
+        "symbol": "ETHUSDT",
+        "sha256": "4f9e66dc56961d8552082782b2cdac5a149e125da90694885ab90363a63e8ff5",
+        "bytes": 2129
+      },
+      {
+        "month": "2021-11",
+        "symbol": "BTCUSDT",
+        "sha256": "64162d8ec11458e9d02f49d8569e47765517852bcf0a908cd4d71211e3912e62",
+        "bytes": 2166
+      },
+      {
+        "month": "2021-11",
+        "symbol": "ETHUSDT",
+        "sha256": "8e9ebb3bcc07d3080db603ceafaec29fe66612bd160ad737235a3476fc8eafe9",
+        "bytes": 2080
+      },
+      {
+        "month": "2021-12",
+        "symbol": "BTCUSDT",
+        "sha256": "6231b57d3a3b71fb76a1a34078a01a01275a59870857bf60408ccd3ba4618e75",
+        "bytes": 2196
+      },
+      {
+        "month": "2021-12",
+        "symbol": "ETHUSDT",
+        "sha256": "2f30c04c60988621d47afa115e2b7771785440ee3effe87355d5f7038d234361",
+        "bytes": 2114
+      },
+      {
+        "month": "2022-01",
+        "symbol": "BTCUSDT",
+        "sha256": "a4a2e0432a8f0b42e2da71ac26599b2e6385b579ca4feba692a95cb897decdcd",
+        "bytes": 2183
+      },
+      {
+        "month": "2022-01",
+        "symbol": "ETHUSDT",
+        "sha256": "d992b05664b21cef2e104aa93ab1de487fe396f68dc9767380d87998cc7969a1",
+        "bytes": 2139
+      },
+      {
+        "month": "2022-02",
+        "symbol": "BTCUSDT",
+        "sha256": "faffa5eadb9ebf0b32742773777596d0dbf3f282e94a16dd05cf1eb7b53a3763",
+        "bytes": 2011
+      },
+      {
+        "month": "2022-02",
+        "symbol": "ETHUSDT",
+        "sha256": "2d7eeb5c0c0574ebfff2d7369f3b991e2693fe81a2defc87525c667598c3ceef",
+        "bytes": 1948
+      },
+      {
+        "month": "2022-03",
+        "symbol": "BTCUSDT",
+        "sha256": "452129b478585b18931f728f89daed9d2a19d4824b932af7a099366efd4db639",
+        "bytes": 2206
+      },
+      {
+        "month": "2022-03",
+        "symbol": "ETHUSDT",
+        "sha256": "0cfffeb995ad02f64b0a1235db34fbca7982aef8b104ee4bb7fd52605323ad53",
+        "bytes": 2131
+      },
+      {
+        "month": "2022-04",
+        "symbol": "BTCUSDT",
+        "sha256": "70413f67212d012ebfd600a6ebf20c03a9c8311bf764ab6d21d1bfd2d21d1b19",
+        "bytes": 2117
+      },
+      {
+        "month": "2022-04",
+        "symbol": "ETHUSDT",
+        "sha256": "2e3269eb718fd3c75f41a11f03c91f3e3af91bd14815b79b216ec371a876ec57",
+        "bytes": 2041
+      },
+      {
+        "month": "2022-05",
+        "symbol": "BTCUSDT",
+        "sha256": "53eee1be2d5b461dabc67645ad706610b0465d8bbacd5f9cd99fc790c68f18f5",
+        "bytes": 2212
+      },
+      {
+        "month": "2022-05",
+        "symbol": "ETHUSDT",
+        "sha256": "fe39dd94b5e65aced7b4979fd6357fcd3700ae556a9d03c507d9983d507a628e",
+        "bytes": 2144
+      },
+      {
+        "month": "2022-06",
+        "symbol": "BTCUSDT",
+        "sha256": "dd5047ce33c16231bcb01f534951a709937bbfe0c0667c61f20f188cf9b94de4",
+        "bytes": 2169
+      },
+      {
+        "month": "2022-06",
+        "symbol": "ETHUSDT",
+        "sha256": "62633207619685b148ef58bdc910b78a33fef724ac2b507ef57e7878145516dc",
+        "bytes": 2060
+      },
+      {
+        "month": "2022-07",
+        "symbol": "BTCUSDT",
+        "sha256": "216567f1a8bc1dbeaada097f7eddff12dafde177c16b26507c762a613a57eb5f",
+        "bytes": 2245
+      },
+      {
+        "month": "2022-07",
+        "symbol": "ETHUSDT",
+        "sha256": "6b4b9bdc7b0e1e6b87b95e750343d898c0df36d9d885bfeae594ca4e29ac0981",
+        "bytes": 2130
+      },
+      {
+        "month": "2022-08",
+        "symbol": "BTCUSDT",
+        "sha256": "fc8bd69e95141afb6f83c5a4450c3f6b49c4a1cb16e42d90eb960c3ffa9e766e",
+        "bytes": 2237
+      },
+      {
+        "month": "2022-08",
+        "symbol": "ETHUSDT",
+        "sha256": "9f54ee2471795608f083a175285cbfd77f5de473cbeaa0d491b3751cf791a3a9",
+        "bytes": 2118
+      },
+      {
+        "month": "2022-09",
+        "symbol": "BTCUSDT",
+        "sha256": "68a8357e23277ebd98842fd88d492b012d53dd578b5061cafb8c070c440b235e",
+        "bytes": 2213
+      },
+      {
+        "month": "2022-09",
+        "symbol": "ETHUSDT",
+        "sha256": "64daaa8bedcb3e82736d5b6426974aadd814007067fc81380ae87e04e1112714",
+        "bytes": 2022
+      },
+      {
+        "month": "2022-10",
+        "symbol": "BTCUSDT",
+        "sha256": "5b086535cba596ef1b465f247a26385b4ccfd12673a76f225e2dd9e00dddadfd",
+        "bytes": 2219
+      },
+      {
+        "month": "2022-10",
+        "symbol": "ETHUSDT",
+        "sha256": "01a81d5a27053ead87542d1329763bfd22978080f6c3e7ee588f189cd49ff8d6",
+        "bytes": 2088
+      },
+      {
+        "month": "2022-11",
+        "symbol": "BTCUSDT",
+        "sha256": "142202b226078f54342c4a1d74c8c6081a98c655d7d6f6fba06314f9c101e2d9",
+        "bytes": 2191
+      },
+      {
+        "month": "2022-11",
+        "symbol": "ETHUSDT",
+        "sha256": "83cef6abcb76dffbac6c6ad0e2842dd218f226e1e4a1839e78e35b12dd68a015",
+        "bytes": 2061
+      },
+      {
+        "month": "2022-12",
+        "symbol": "BTCUSDT",
+        "sha256": "aff24746afa9a3dbd355dd3462bcef80e59e96ed9aa55f79007532f9e07991bf",
+        "bytes": 2222
+      },
+      {
+        "month": "2022-12",
+        "symbol": "ETHUSDT",
+        "sha256": "e3f2c5851ef573c35733f29293188310099683948692d8e8ba008b17fdbd508f",
+        "bytes": 2050
+      },
+      {
+        "month": "2023-01",
+        "symbol": "BTCUSDT",
+        "sha256": "a9fd53b75add7cc42fb4779a545811606260f79810f3826215d6ebecda11bb36",
+        "bytes": 2250
+      },
+      {
+        "month": "2023-01",
+        "symbol": "ETHUSDT",
+        "sha256": "811ff55e20735e6fff55ef37c0c3e922eb6d26d41fe84fc04b2a03c0179549ad",
+        "bytes": 2087
+      },
+      {
+        "month": "2023-02",
+        "symbol": "BTCUSDT",
+        "sha256": "13df1e3633f15be3eeba4768d0cc323ef221191002657b53936a6d0fb5e6556f",
+        "bytes": 2072
+      },
+      {
+        "month": "2023-02",
+        "symbol": "ETHUSDT",
+        "sha256": "2f6cdf5aa6613ab3621dbd730a234935e8909f980f1195f7581abf145e422cce",
+        "bytes": 1916
+      },
+      {
+        "month": "2023-03",
+        "symbol": "BTCUSDT",
+        "sha256": "1cb1209700ec74fa4592048de2e4ea4a38ab2bd622dfe03f1d6195c249501381",
+        "bytes": 2265
+      },
+      {
+        "month": "2023-03",
+        "symbol": "ETHUSDT",
+        "sha256": "dbfe653bf62ebac3e4e2bf5c96160de6c76bcbd76e4979ca2105d11cf2bdf77e",
+        "bytes": 2098
+      },
+      {
+        "month": "2023-04",
+        "symbol": "BTCUSDT",
+        "sha256": "999e86be73731ebc347c6ada94abceb5e291b65e7f1b4df2ce390af1aa2a4a08",
+        "bytes": 2108
+      },
+      {
+        "month": "2023-04",
+        "symbol": "ETHUSDT",
+        "sha256": "d316aea182914c088b06d03640812bae72e889a347ed9dcc78bb8ad10ed1bdf9",
+        "bytes": 2019
+      },
+      {
+        "month": "2023-05",
+        "symbol": "BTCUSDT",
+        "sha256": "c343e4689784c29f83d25147a096dd44b6ae5c1063c909f8adda82b56414469d",
+        "bytes": 2168
+      },
+      {
+        "month": "2023-05",
+        "symbol": "ETHUSDT",
+        "sha256": "a86ef09c35c764e6f0066953074ffb0dc93239afe92e3d73e232fbc95cdeab51",
+        "bytes": 2087
+      },
+      {
+        "month": "2023-06",
+        "symbol": "BTCUSDT",
+        "sha256": "634919565c55a29729543d730927ca4b547c0e52d118a38de730f37fdd7617ef",
+        "bytes": 2099
+      },
+      {
+        "month": "2023-06",
+        "symbol": "ETHUSDT",
+        "sha256": "4932a5fd8853ddf99f3853a501e5f35ffad45a07a466bbf4603ddb7fb4c821ac",
+        "bytes": 1994
+      },
+      {
+        "month": "2023-07",
+        "symbol": "BTCUSDT",
+        "sha256": "32363d37de02e6ad8d334ac332c685f8cdf5684733a9f2cfbca40e15e591396b",
+        "bytes": 2132
+      },
+      {
+        "month": "2023-07",
+        "symbol": "ETHUSDT",
+        "sha256": "f66293651e4a841fe9bc36cc76483bdb9c1faaa085377fbbd2fd064cd401cd5e",
+        "bytes": 2036
+      },
+      {
+        "month": "2023-08",
+        "symbol": "BTCUSDT",
+        "sha256": "8c5e47bfe3f0b0273534379e8ba5c93e69c84d67e8b9a03f293d6621bead2a5f",
+        "bytes": 2160
+      },
+      {
+        "month": "2023-08",
+        "symbol": "ETHUSDT",
+        "sha256": "e694749c085b888401f51002dbd21bc8cf0c4d801d2da311e72d6c1ae97627d4",
+        "bytes": 2058
+      },
+      {
+        "month": "2023-09",
+        "symbol": "BTCUSDT",
+        "sha256": "2fe68ecad48d6927a9280d89700e991cb6481dc2767698c785f2b2d1c0b14744",
+        "bytes": 2080
+      },
+      {
+        "month": "2023-09",
+        "symbol": "ETHUSDT",
+        "sha256": "c1faa848529e17e15deafb208d817155576ef51e556813109cdb60c0153ac73d",
+        "bytes": 1985
+      },
+      {
+        "month": "2023-10",
+        "symbol": "BTCUSDT",
+        "sha256": "358b83bf0c2a5d5390a4bc4d4ae14fa9df0f56139642ad996c0df0f7bc712400",
+        "bytes": 2154
+      },
+      {
+        "month": "2023-10",
+        "symbol": "ETHUSDT",
+        "sha256": "baadc74c685a63d7ba453531c9f4d1df81a5719200501ab229018352a1be9630",
+        "bytes": 2059
+      },
+      {
+        "month": "2023-11",
+        "symbol": "BTCUSDT",
+        "sha256": "fac9823cac7bf56a3a6038c3b79417e949b00c172939e62000451c8c25edd7c1",
+        "bytes": 2102
+      },
+      {
+        "month": "2023-11",
+        "symbol": "ETHUSDT",
+        "sha256": "8faf9f53efe268d25d01b987b3a364cd9f1983703ab2f78486192c29218b1faf",
+        "bytes": 2022
+      },
+      {
+        "month": "2023-12",
+        "symbol": "BTCUSDT",
+        "sha256": "056dad65795c9264ef90ee668a4c245e8fec73ebcbb272d28f5596c389913979",
+        "bytes": 2177
+      },
+      {
+        "month": "2023-12",
+        "symbol": "ETHUSDT",
+        "sha256": "1778c56d995fe5d32a0816a5214feabcd84d594f4e882315b4e225d6e86e5275",
+        "bytes": 2086
+      },
+      {
+        "month": "2024-01",
+        "symbol": "BTCUSDT",
+        "sha256": "474c1ce6fbb09e42cfc7231fee249aecc58af2fb5918570ffeba37998926b4a4",
+        "bytes": 2190
+      },
+      {
+        "month": "2024-01",
+        "symbol": "ETHUSDT",
+        "sha256": "49598e812edcbf446f20d21a3ffc382a6f51fc1982a7e4224b78a416dbe36e8d",
+        "bytes": 2109
+      },
+      {
+        "month": "2024-02",
+        "symbol": "BTCUSDT",
+        "sha256": "4dae0b3d6b8ea59e39e6493b7964040c52459ea7b0a50b9c2793dcbfae53800d",
+        "bytes": 2053
+      },
+      {
+        "month": "2024-02",
+        "symbol": "ETHUSDT",
+        "sha256": "36ebece2c2a6fcccdc4ee2924cd037870e88fa09877208843e2cbdf5f5c93a44",
+        "bytes": 1976
+      },
+      {
+        "month": "2024-03",
+        "symbol": "BTCUSDT",
+        "sha256": "f7cd4fcafe79d1fac0c830d5fe152f7b3b9100e7c97e40352188766388af0ae0",
+        "bytes": 2224
+      },
+      {
+        "month": "2024-03",
+        "symbol": "ETHUSDT",
+        "sha256": "78f5a6edba263350c1df6d4678596570ae5ce5df38edd4e253ec89431fbddfc0",
+        "bytes": 2125
+      },
+      {
+        "month": "2024-04",
+        "symbol": "BTCUSDT",
+        "sha256": "b4a8542c33e5251fb53f8a3352dd4e6f3cde4ac25f2c24935db8089aa1a2c3a0",
+        "bytes": 2141
+      },
+      {
+        "month": "2024-04",
+        "symbol": "ETHUSDT",
+        "sha256": "d0a5088a3d49cea7269dc3bf7f29912e23a390c87fb7b14acbed210ac9be8177",
+        "bytes": 2050
+      },
+      {
+        "month": "2024-05",
+        "symbol": "BTCUSDT",
+        "sha256": "0175f696039b9e30f06c6398d218c99e577661ac30424869c648fe9770507248",
+        "bytes": 2185
+      },
+      {
+        "month": "2024-05",
+        "symbol": "ETHUSDT",
+        "sha256": "d0c98ff2f16913e1c1f9bb72165086056ae9923db5b07f113ca6eaf334b87bbf",
+        "bytes": 2109
+      },
+      {
+        "month": "2024-06",
+        "symbol": "BTCUSDT",
+        "sha256": "8a0f6416c2a83cfa15ba26c688d716fdafe35bb1748dd244f0550e8b2f7e38f7",
+        "bytes": 2095
+      },
+      {
+        "month": "2024-06",
+        "symbol": "ETHUSDT",
+        "sha256": "5198557b48b8df354f5dc07e76270e988416f9e8972e577d9c327b31d2cb1db1",
+        "bytes": 2014
+      },
+      {
+        "month": "2024-07",
+        "symbol": "BTCUSDT",
+        "sha256": "9a2963ef6541b4d7630eff8df7b2eaee48ece33180af03c34b0bf92675692899",
+        "bytes": 2203
+      },
+      {
+        "month": "2024-07",
+        "symbol": "ETHUSDT",
+        "sha256": "ae4a1a154d9c4e27bb7551293216d6824a0455fef7ecea0efb5084e145ba1ac5",
+        "bytes": 2093
+      },
+      {
+        "month": "2024-08",
+        "symbol": "BTCUSDT",
+        "sha256": "df41fe3260920b85da86855b4880f34618982e689081317d3d63b9b3bbcb1d53",
+        "bytes": 2190
+      },
+      {
+        "month": "2024-08",
+        "symbol": "ETHUSDT",
+        "sha256": "e41fc2dcefc5d0737fd74e943602327cfdbcde04dec40d94030cfcf01720e593",
+        "bytes": 2107
+      },
+      {
+        "month": "2024-09",
+        "symbol": "BTCUSDT",
+        "sha256": "89e459b2a8f4b138dc742d9358c0084fcabf719d40468e156c3149a3635f3359",
+        "bytes": 2106
+      },
+      {
+        "month": "2024-09",
+        "symbol": "ETHUSDT",
+        "sha256": "6e6add68412a0d89199fb6185b88b24994c32522e4ee67ac88d02ab8b81eb1c1",
+        "bytes": 2030
+      },
+      {
+        "month": "2024-10",
+        "symbol": "BTCUSDT",
+        "sha256": "d442a5f158d45d9ff7b1584b35023a4161cf915a3857f5e71a2a2e6aa68c69c5",
+        "bytes": 2203
+      },
+      {
+        "month": "2024-10",
+        "symbol": "ETHUSDT",
+        "sha256": "cc2ae0b168f8ddd7b45441a30ae9aa95f748ec9ecaa19ab3cf5e9ec21fc63783",
+        "bytes": 2084
+      },
+      {
+        "month": "2024-11",
+        "symbol": "BTCUSDT",
+        "sha256": "b197219d9e8b5e933226e1cd24fe2b7bfc3a2e8a3e74e6f7dc08a48f314da8c3",
+        "bytes": 2157
+      },
+      {
+        "month": "2024-11",
+        "symbol": "ETHUSDT",
+        "sha256": "fe8b32f1ab7a3a72316b404ffc9d7002cb75801364f12dc52eddfedbb3e3af43",
+        "bytes": 2074
+      },
+      {
+        "month": "2024-12",
+        "symbol": "BTCUSDT",
+        "sha256": "82ec90210f492694b9d01722f97f579108ee787968b8485b53d736ea735700da",
+        "bytes": 2218
+      },
+      {
+        "month": "2024-12",
+        "symbol": "ETHUSDT",
+        "sha256": "e36880cb5d79157599878eb97db2d20a5bc10f904384501f0b3571a09c1b6bcc",
+        "bytes": 2128
+      },
+      {
+        "month": "2025-01",
+        "symbol": "BTCUSDT",
+        "sha256": "3a3eb1b723d944deb4dbef5ae361bbe39340a17fe987fe22e397ef03dca268d2",
+        "bytes": 2254
+      },
+      {
+        "month": "2025-01",
+        "symbol": "ETHUSDT",
+        "sha256": "fb1c6329259282a4174c646629515704da03c713bff9106f8da01ec188112a09",
+        "bytes": 2157
+      },
+      {
+        "month": "2025-02",
+        "symbol": "BTCUSDT",
+        "sha256": "27cfde08c9eb8e3801fb049e3be351a3e50ab46abd8553c24023fa98ea5e919e",
+        "bytes": 2039
+      },
+      {
+        "month": "2025-02",
+        "symbol": "ETHUSDT",
+        "sha256": "ed3cf4f55aa296a25e092d73170c6772fa33e089c8ee5bdd379198fa94675361",
+        "bytes": 1988
+      },
+      {
+        "month": "2025-03",
+        "symbol": "BTCUSDT",
+        "sha256": "5874e405f55c46f040de1a8ea9daae583dc12b5bcaef6078b21aae9c627cedcc",
+        "bytes": 2249
+      },
+      {
+        "month": "2025-03",
+        "symbol": "ETHUSDT",
+        "sha256": "37a2a5d88861944141de683f7584d01cfeb23c0a69ba0aa2613fa6ec14b33960",
+        "bytes": 2172
+      },
+      {
+        "month": "2025-04",
+        "symbol": "BTCUSDT",
+        "sha256": "8068a571425857cb0f5f71f75e733d3bc1e731362a09f84f835bbea6e087aeb2",
+        "bytes": 2165
+      },
+      {
+        "month": "2025-04",
+        "symbol": "ETHUSDT",
+        "sha256": "88554fccbad3d445fb7aad16440ef62aeb7b5a0d0d0be26101919753a455e106",
+        "bytes": 2107
+      },
+      {
+        "month": "2025-05",
+        "symbol": "BTCUSDT",
+        "sha256": "2b87aa0c63641ba1e954855bcfed96d7fc4eb21efe7936f354ff74e8e06cfcea",
+        "bytes": 2253
+      },
+      {
+        "month": "2025-05",
+        "symbol": "ETHUSDT",
+        "sha256": "05f9099dc0225439cdcd08661281bc958f4984a02c5219ff019c7988140a4511",
+        "bytes": 2150
+      },
+      {
+        "month": "2025-06",
+        "symbol": "BTCUSDT",
+        "sha256": "dc4bbe2c75f04372b909febe8e6b379b053f88423d78cdb3ad8b0be3a66d6ede",
+        "bytes": 2170
+      },
+      {
+        "month": "2025-06",
+        "symbol": "ETHUSDT",
+        "sha256": "1a436c3f4e79c6ef65e06749c7be302800f2bbe84b283f36b670688f1fe8e706",
+        "bytes": 2077
+      },
+      {
+        "month": "2025-07",
+        "symbol": "BTCUSDT",
+        "sha256": "1ea64a346f6be0aaf455eb1ce107e6d38367164d97d0dd3719b9f9bb239796f4",
+        "bytes": 2232
+      },
+      {
+        "month": "2025-07",
+        "symbol": "ETHUSDT",
+        "sha256": "507452f08f6df58e28c66a56eb114c274a601908b7a36cca028f4f1fe685c5a0",
+        "bytes": 2148
+      },
+      {
+        "month": "2025-08",
+        "symbol": "BTCUSDT",
+        "sha256": "6720b573210cfbb98765f4a0de6826033d203fda42a6c8364455144b703ceace",
+        "bytes": 2237
+      },
+      {
+        "month": "2025-08",
+        "symbol": "ETHUSDT",
+        "sha256": "caaf73478addeaf0d1a1d470284448a8eea201ec8b54acbf4996327ee5fd30d3",
+        "bytes": 2173
+      },
+      {
+        "month": "2025-09",
+        "symbol": "BTCUSDT",
+        "sha256": "9934e6d98a90139039bb070a90ba409ff1832ad80116920adcf088090ce4c996",
+        "bytes": 2154
+      },
+      {
+        "month": "2025-09",
+        "symbol": "ETHUSDT",
+        "sha256": "2362f78fe5ef79628fe7a16fcd720ba5e2490bd05806943d092d0c2bbc025403",
+        "bytes": 2104
+      },
+      {
+        "month": "2025-10",
+        "symbol": "BTCUSDT",
+        "sha256": "3597639a18f343c768e374157e8bd08dd046bb33693495ff4e13380abac1260e",
+        "bytes": 2262
+      },
+      {
+        "month": "2025-10",
+        "symbol": "ETHUSDT",
+        "sha256": "7ac29ddc8e5af97d63293df20ca5fe2d31952754d06fa7592992cd1b9ccc2fbb",
+        "bytes": 2174
+      },
+      {
+        "month": "2025-11",
+        "symbol": "BTCUSDT",
+        "sha256": "9eded1225f9e3f3d4f127fad46111eb403553c1125cf6d11995e69d91d037290",
+        "bytes": 2185
+      },
+      {
+        "month": "2025-11",
+        "symbol": "ETHUSDT",
+        "sha256": "ca97638b3e43fa8fc6cfe9e01ebec4cd6b59ac5b37b694f951ae30719424bbed",
+        "bytes": 2101
+      },
+      {
+        "month": "2025-12",
+        "symbol": "BTCUSDT",
+        "sha256": "b12a106198f3be3ba5916195f75c1c6d34d8e5302ab77b8fd7c4b1b58b6144f4",
+        "bytes": 2230
+      },
+      {
+        "month": "2025-12",
+        "symbol": "ETHUSDT",
+        "sha256": "eaf731c713e58a6d0e7a196c9887c41c5ed6066c73de68f878dfbe4a48de05e8",
+        "bytes": 2165
+      },
+      {
+        "month": "2026-01",
+        "symbol": "BTCUSDT",
+        "sha256": "b7775ddec3ddd3edafc6ad5abcc94d6ab8b8f063a0911d8a3f3daae6a8bbad2e",
+        "bytes": 2237
+      },
+      {
+        "month": "2026-01",
+        "symbol": "ETHUSDT",
+        "sha256": "809eceed4a7a4eddf08f70e4c505f454ecf9d715d72269fa36db37964e4159f4",
+        "bytes": 2151
+      },
+      {
+        "month": "2026-02",
+        "symbol": "BTCUSDT",
+        "sha256": "f8806308002477a1a28d6cc55ec9ea7bd91bfd4b44c04500d9fc4aec50fd9464",
+        "bytes": 2030
+      },
+      {
+        "month": "2026-02",
+        "symbol": "ETHUSDT",
+        "sha256": "c853802f359f27a9e935f9ea48cdc66207b0c7bd6d22241e7bf240722d0e1600",
+        "bytes": 1965
+      },
+      {
+        "month": "2026-03",
+        "symbol": "BTCUSDT",
+        "sha256": "b81fb1942f9653564f355e3bd62dc06e0552d1c64bc966f7dce5a9c1f8780c47",
+        "bytes": 2242
+      },
+      {
+        "month": "2026-03",
+        "symbol": "ETHUSDT",
+        "sha256": "ce8ec50be4226da6d0c7724dac25c1a35dac8d75c8f3207d5aa8a0991ee54d9a",
+        "bytes": 2149
+      },
+      {
+        "month": "2026-04",
+        "symbol": "BTCUSDT",
+        "sha256": "1f7da05da9f9a8f30945bde41872ca649c61d6e6e324e916f4c3cbafa0a9276a",
+        "bytes": 2151
+      },
+      {
+        "month": "2026-04",
+        "symbol": "ETHUSDT",
+        "sha256": "c557fd27446c4a07abbfe6afbb8ca7eac8c42ed689bc71f6eacc75764e740668",
+        "bytes": 2075
+      },
+      {
+        "month": "2026-05",
+        "symbol": "BTCUSDT",
+        "sha256": "978936e8f1f80b570248f8d4478d6fe08d94b98bc1c7d372feb27573ff466cde",
+        "bytes": 2223
+      },
+      {
+        "month": "2026-05",
+        "symbol": "ETHUSDT",
+        "sha256": "68144fec96f98d4dee301b12c58de1769024de73d3675edf0897467ea1885f37",
+        "bytes": 2124
+      },
+      {
+        "month": "2026-06",
+        "symbol": "BTCUSDT",
+        "sha256": "7020d4d850a875b93f0b0fa6df4a4c36ab615273e2ab03f9e896852330dad77e",
+        "bytes": 2144
+      },
+      {
+        "month": "2026-06",
+        "symbol": "ETHUSDT",
+        "sha256": "d22d6b4c69773795dfa271c571814efe19b6a579366e056e7f740fe937fd408d",
+        "bytes": 2065
+      },
+      {
+        "month": "2026-07",
+        "symbol": "BTCUSDT",
+        "sha256": "74ddc3e39aae9445b9f9dae00d53fe2ce6ff503ee469417e207a8f5970bad11a",
+        "bytes": 2193
+      },
+      {
+        "month": "2026-07",
+        "symbol": "ETHUSDT",
+        "sha256": "6d4ae181331392a59efb8064c24392ccbfc80818bf0261a403900d7143966a10",
+        "bytes": 2109
+      },
+      {
+        "month": "2026-08",
+        "symbol": "BTCUSDT",
+        "sha256": "fd8374a811ac7d3f4144d9c857c4f10796402c178316a25ed0c2f0ca6e16a8c1",
+        "bytes": 2185
+      },
+      {
+        "month": "2026-08",
+        "symbol": "ETHUSDT",
+        "sha256": "6c9cc2988041dea44dfd0a16dcc8c201ead6ead44a24e642db279e378239f3f1",
+        "bytes": 2121
+      },
+      {
+        "month": "2026-09",
+        "symbol": "BTCUSDT",
+        "sha256": "4944279ced64d3b1822c7c535043f2bbf41bc97d9000b8d857753352c1949769",
+        "bytes": 2112
+      },
+      {
+        "month": "2026-09",
+        "symbol": "ETHUSDT",
+        "sha256": "89fab70a5619b0da4bddc7d174e1ae6abf6ecd7656c89804d67b649dc716e2c4",
+        "bytes": 2074
+      },
+      {
+        "month": "2026-10",
+        "symbol": "BTCUSDT",
+        "sha256": "be8a089a8c5902915ed13abdf7a5ce78f7cc4c4b8e0ed0c0b489f7bcf6eb08e8",
+        "bytes": 2224
+      },
+      {
+        "month": "2026-10",
+        "symbol": "ETHUSDT",
+        "sha256": "93d89721f5f0d5ab9dae2fac65dd15ed93e95784eea33530e512a82f0086ad46",
+        "bytes": 2148
+      }
+    ]
+  },
+  "full": {
+    "days": 1979,
+    "start": 10000.0,
+    "end": 11650.038820025904,
+    "cagr": 0.028588283246260948,
+    "sharpe": 0.28960208456061676,
+    "max_drawdown": 0.6283171512175463,
+    "profit_factor_daily_dollar": 1.0140146302851414,
+    "total_pnl": 1650.038820025904,
+    "positive_days": 569
+  },
+  "buy_and_hold": {
+    "days": 1979,
+    "start": 10000.0,
+    "end": 12054.465382607526,
+    "cagr": 0.035087115416345016,
+    "sharpe": 0.3661775744726033,
+    "max_drawdown": 0.7887661027341566,
+    "profit_factor_daily_dollar": 1.0100011910544313,
+    "total_pnl": 2054.4653826075264,
+    "positive_days": 1009
+  },
+  "gross_no_cost": {
+    "days": 1979,
+    "start": 10000.0,
+    "end": 12861.872380499994,
+    "cagr": 0.04754695927634023,
+    "sharpe": 0.32990069047898335,
+    "max_drawdown": 0.6204344436965605,
+    "profit_factor_daily_dollar": 1.0232121385695863,
+    "total_pnl": 2861.8723804999936,
+    "positive_days": 583
+  },
+  "annual": {
+    "2021": {
+      "days": 245,
+      "start": 10000.0,
+      "end": 10560.733265105384,
+      "cagr": 0.08473464678896936,
+      "sharpe": 0.46279950382525675,
+      "max_drawdown": 0.5454085183614263,
+      "profit_factor_daily_dollar": 1.0326627393946888,
+      "total_pnl": 560.7332651053839,
+      "positive_days": 60
+    },
+    "2022": {
+      "days": 365,
+      "start": 10560.733265105384,
+      "end": 7793.114804079814,
+      "cagr": -0.26222047049387287,
+      "sharpe": -0.32017487962232566,
+      "max_drawdown": 0.5797691735266927,
+      "profit_factor_daily_dollar": 0.8722712315473101,
+      "total_pnl": -2767.6184610255696,
+      "positive_days": 95
+    },
+    "2023": {
+      "days": 365,
+      "start": 7793.114804079814,
+      "end": 13289.790696233866,
+      "cagr": 0.7059481965212024,
+      "sharpe": 1.9162166854565652,
+      "max_drawdown": 0.2203780014659037,
+      "profit_factor_daily_dollar": 1.4405919796118565,
+      "total_pnl": 5496.675892154051,
+      "positive_days": 95
+    },
+    "2024": {
+      "days": 366,
+      "start": 13289.790696233866,
+      "end": 11546.07502991213,
+      "cagr": -0.13095671974588208,
+      "sharpe": -0.18330674567004276,
+      "max_drawdown": 0.46401793392548785,
+      "profit_factor_daily_dollar": 0.9235959381180692,
+      "total_pnl": -1743.7156663217356,
+      "positive_days": 101
+    },
+    "2025": {
+      "days": 365,
+      "start": 11546.07502991213,
+      "end": 11548.353803340022,
+      "cagr": 0.00019749866338303335,
+      "sharpe": 0.19143926641939465,
+      "max_drawdown": 0.3824881939792695,
+      "profit_factor_daily_dollar": 1.0000966666593467,
+      "total_pnl": 2.2787734278917924,
+      "positive_days": 103
+    },
+    "2026": {
+      "days": 273,
+      "start": 11548.353803340022,
+      "end": 11650.038820025904,
+      "cagr": 0.01179801175819506,
+      "sharpe": 0.2525651026617206,
+      "max_drawdown": 0.3817369672768002,
+      "profit_factor_daily_dollar": 1.0050766089222007,
+      "total_pnl": 101.68501668588215,
+      "positive_days": 115
+    }
+  },
+  "annual_basket_entries": {
+    "2021": 4,
+    "2022": 7,
+    "2023": 6,
+    "2024": 6,
+    "2025": 7,
+    "2026": 3
+  },
+  "holdout_2025_2026": {
+    "days": 638,
+    "start": 11546.07502991213,
+    "end": 11650.038820025904,
+    "cagr": 0.005144985480158626,
+    "sharpe": 0.21949640763454858,
+    "max_drawdown": 0.5492672258691902,
+    "profit_factor_daily_dollar": 1.0023842922887234,
+    "total_pnl": 103.96379011377394,
+    "positive_days": 218
+  },
+  "monthly": {
+    "returns": {
+      "2021-05": -0.22457627990615725,
+      "2021-06": -0.09190890742371916,
+      "2021-07": 0.06945561082299445,
+      "2021-08": 0.0,
+      "2021-09": 0.06734920008013368,
+      "2021-10": 0.3746722021165103,
+      "2021-11": 0.0,
+      "2021-12": -0.044221772466992104,
+      "2022-01": -0.10856352699799365,
+      "2022-02": -0.04286123809037001,
+      "2022-03": 0.08817602542122294,
+      "2022-04": 0.017632277254728823,
+      "2022-05": -0.23065681700517815,
+      "2022-06": -0.3677531594658756,
+      "2022-07": 0.3039580071249868,
+      "2022-08": 0.09099394307969,
+      "2022-09": 0.015185670211026236,
+      "2022-10": -0.010660049617960077,
+      "2022-11": 0.09513466303071572,
+      "2022-12": 0.026148929091010187,
+      "2023-01": 0.0,
+      "2023-02": 0.03557398007710866,
+      "2023-03": 0.20675661022510816,
+      "2023-04": 0.1090145278660295,
+      "2023-05": -0.008336358659649767,
+      "2023-06": 0.1414185983689744,
+      "2023-07": -0.041539903363661645,
+      "2023-08": -0.05762862685824066,
+      "2023-09": 0.027228481238332547,
+      "2023-10": 0.002947614879102778,
+      "2023-11": 0.05691179110449007,
+      "2023-12": 0.10529832959644514,
+      "2024-01": -0.06666482971465326,
+      "2024-02": 0.1603095176887228,
+      "2024-03": 0.015785175892716996,
+      "2024-04": -0.09387021210192448,
+      "2024-05": -0.03554670811250382,
+      "2024-06": -0.09260034437439835,
+      "2024-07": -0.020337599919025617,
+      "2024-08": -0.15538003406466083,
+      "2024-09": 0.05610034445267309,
+      "2024-10": -0.05010821129230347,
+      "2024-11": 0.1172661167295852,
+      "2024-12": 0.0738878551497808,
+      "2025-01": 0.0,
+      "2025-02": -0.03658768689407166,
+      "2025-03": -0.10881559529958618,
+      "2025-04": 0.06715150608667453,
+      "2025-05": 0.3149297883227884,
+      "2025-06": 0.0,
+      "2025-07": 0.20587605200967163,
+      "2025-08": -0.03986621646085986,
+      "2025-09": -0.009750837028497661,
+      "2025-10": -0.05013057645748542,
+      "2025-11": -0.21780068133668862,
+      "2025-12": -0.025421014805963926,
+      "2026-01": -0.08056940603114682,
+      "2026-02": -0.17305914609101647,
+      "2026-03": 0.04376399213497151,
+      "2026-04": 0.09623018012292883,
+      "2026-05": -0.02808263861794058,
+      "2026-06": -0.04716932027664522,
+      "2026-07": 0.1290513079479647,
+      "2026-08": 0.03189669306642462,
+      "2026-09": 0.07476832029475733
+    },
+    "positive": 31,
+    "months": 65,
+    "longest_nonpositive_streak": 7,
+    "worst": -0.3677531594658756
+  },
+  "regimes": {
+    "bull_high": {
+      "days": 22,
+      "net_dollar_pnl": -1503.9949752272405
+    },
+    "bull_low": {
+      "days": 1004,
+      "net_dollar_pnl": 10830.294837253055
+    },
+    "bear_high": {
+      "days": 165,
+      "net_dollar_pnl": -3689.0022937702915
+    },
+    "bear_low": {
+      "days": 788,
+      "net_dollar_pnl": -3987.2587482296185
+    }
+  },
+  "monte_carlo": {
+    "paths": 5000,
+    "joint_passes": 0,
+    "joint_pass_rate": 0.0,
+    "ruined": 0,
+    "undefined": 0,
+    "cagr": {
+      "p05": -0.2690028602944265,
+      "p50": 0.03158317435785951,
+      "p95": 0.4159049486648059
+    },
+    "sharpe": {
+      "p05": -0.40855350484301367,
+      "p50": 0.2953767411830166,
+      "p95": 1.025566036736093
+    },
+    "max_drawdown": {
+      "p05": 0.4960012820539052,
+      "p50": 0.7085177044859314,
+      "p95": 0.9126414188581846
+    },
+    "profit_factor": {
+      "p05": 0.8717810602093347,
+      "p50": 1.0131797071449258,
+      "p95": 1.1813934577867686
+    }
+  },
+  "checks": {
+    "numerical_full": false,
+    "at_least_20_basket_entries": true,
+    "annual_walk_forward": false,
+    "historical_2025_2026_holdout": false,
+    "monthly_stability": false,
+    "four_regimes": false,
+    "block_monte_carlo": false,
+    "double_slippage": true,
+    "one_day_latency": false,
+    "independent_executable_oos": false
+  },
+  "all_gate_passed": false,
+  "inside_40_to_60_percent_target_band": false,
+  "risk_on_entries": 33,
+  "net_final_usdt": 11650.038820025904,
+  "benchmark_final_usdt": 12054.465382607526,
+  "gross_final_usdt": 12861.872380499994,
+  "double_slippage_final_usdt": 10906.008136918716,
+  "one_day_latency_final_usdt": 9733.970817679103,
+  "fees_usdt": 357.06236488183197,
+  "funding_usdt": 0.0,
+  "reference_slippage_drag_usdt": 714.1274509922998,
+  "trades": [
+    {
+      "day": "2021-05-05",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.09383000000000001,
+      "reference": 53205.05,
+      "execution": 53258.25505,
+      "notional": 4997.222071341501,
+      "fee": 2.4986110356707503
+    },
+    {
+      "day": "2021-05-05",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 1.5413000000000001,
+      "reference": 3239.01,
+      "execution": 3242.24901,
+      "notional": 4997.278399113,
+      "fee": 2.4986391995565
+    },
+    {
+      "day": "2021-05-26",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.09383000000000001,
+      "reference": 38324.72,
+      "execution": 38286.395280000004,
+      "notional": 3592.412469122401,
+      "fee": 1.7962062345612007,
+      "forced": false
+    },
+    {
+      "day": "2021-05-26",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 1.5413000000000001,
+      "reference": 2705.1,
+      "execution": 2702.3949,
+      "notional": 4165.20125937,
+      "fee": 2.082600629685,
+      "forced": false
+    },
+    {
+      "day": "2021-06-02",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.10550000000000001,
+      "reference": 36694.85,
+      "execution": 36731.54484999999,
+      "notional": 3875.1779816749995,
+      "fee": 1.9375889908374997
+    },
+    {
+      "day": "2021-06-02",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 1.4695,
+      "reference": 2634.31,
+      "execution": 2636.94431,
+      "notional": 3874.989663545,
+      "fee": 1.9374948317725
+    },
+    {
+      "day": "2021-07-28",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.10550000000000001,
+      "reference": 39456.61,
+      "execution": 39417.15339,
+      "notional": 4158.509682645001,
+      "fee": 2.0792548413225003,
+      "forced": false
+    },
+    {
+      "day": "2021-07-28",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 1.4695,
+      "reference": 2299.47,
+      "execution": 2297.17053,
+      "notional": 3375.692093835,
+      "fee": 1.6878460469175,
+      "forced": false
+    },
+    {
+      "day": "2021-09-29",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.09164000000000001,
+      "reference": 41025.01,
+      "execution": 41066.03501,
+      "notional": 3763.2914483164004,
+      "fee": 1.8816457241582003
+    },
+    {
+      "day": "2021-09-29",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 1.3402,
+      "reference": 2805.15,
+      "execution": 2807.95515,
+      "notional": 3763.22149203,
+      "fee": 1.881610746015
+    },
+    {
+      "day": "2021-10-27",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.09164000000000001,
+      "reference": 60328.81,
+      "execution": 60268.48119,
+      "notional": 5523.003616251601,
+      "fee": 2.7615018081258005,
+      "forced": false
+    },
+    {
+      "day": "2021-10-27",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 1.3402,
+      "reference": 4131.52,
+      "execution": 4127.3884800000005,
+      "notional": 5531.526040896001,
+      "fee": 2.765763020448001,
+      "forced": false
+    },
+    {
+      "day": "2021-12-22",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.11283000000000001,
+      "reference": 48887.59,
+      "execution": 48936.47758999999,
+      "notional": 5521.502766479699,
+      "fee": 2.7607513832398496
+    },
+    {
+      "day": "2021-12-22",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 1.3741,
+      "reference": 4014.41,
+      "execution": 4018.4244099999996,
+      "notional": 5521.716981781,
+      "fee": 2.7608584908905
+    },
+    {
+      "day": "2021-12-29",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.11283000000000001,
+      "reference": 47543.74,
+      "execution": 47496.19626,
+      "notional": 5358.9958240158,
+      "fee": 2.6794979120079003,
+      "forced": false
+    },
+    {
+      "day": "2021-12-29",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 1.3741,
+      "reference": 3792.75,
+      "execution": 3788.95725,
+      "notional": 5206.406157225,
+      "fee": 2.6032030786125,
+      "forced": false
+    },
+    {
+      "day": "2022-01-05",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.11503000000000001,
+      "reference": 45832.01,
+      "execution": 45877.84201,
+      "notional": 5277.328166410301,
+      "fee": 2.6386640832051502
+    },
+    {
+      "day": "2022-01-05",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 1.3929,
+      "reference": 3785.1,
+      "execution": 3788.8850999999995,
+      "notional": 5277.53805579,
+      "fee": 2.638769027895
+    },
+    {
+      "day": "2022-01-12",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.11503000000000001,
+      "reference": 42729.29,
+      "execution": 42686.56071,
+      "notional": 4910.2350784713,
+      "fee": 2.45511753923565,
+      "forced": false
+    },
+    {
+      "day": "2022-01-12",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 1.3929,
+      "reference": 3239.73,
+      "execution": 3236.4902700000002,
+      "notional": 4508.107297083,
+      "fee": 2.2540536485415,
+      "forced": false
+    },
+    {
+      "day": "2022-02-09",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.10671000000000001,
+      "reference": 44043.0,
+      "execution": 44087.043,
+      "notional": 4704.52835853,
+      "fee": 2.352264179265
+    },
+    {
+      "day": "2022-02-09",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 1.508,
+      "reference": 3116.69,
+      "execution": 3119.80669,
+      "notional": 4704.66848852,
+      "fee": 2.35233424426
+    },
+    {
+      "day": "2022-04-06",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.10671000000000001,
+      "reference": 45497.54,
+      "execution": 45452.042460000004,
+      "notional": 4850.187450906601,
+      "fee": 2.4250937254533005,
+      "forced": false
+    },
+    {
+      "day": "2022-04-06",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 1.508,
+      "reference": 3407.0,
+      "execution": 3403.593,
+      "notional": 5132.618244,
+      "fee": 2.5663091220000003,
+      "forced": false
+    },
+    {
+      "day": "2022-05-04",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.13203,
+      "reference": 37728.95,
+      "execution": 37766.678949999994,
+      "notional": 4986.334621768499,
+      "fee": 2.4931673108842496
+    },
+    {
+      "day": "2022-05-04",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 1.7908000000000002,
+      "reference": 2781.7,
+      "execution": 2784.4816999999994,
+      "notional": 4986.44982836,
+      "fee": 2.49322491418
+    },
+    {
+      "day": "2022-06-15",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.13203,
+      "reference": 22136.42,
+      "execution": 22114.28358,
+      "notional": 2919.7488610674,
+      "fee": 1.4598744305337,
+      "forced": false
+    },
+    {
+      "day": "2022-06-15",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 1.7908000000000002,
+      "reference": 1208.9,
+      "execution": 1207.6911,
+      "notional": 2162.73322188,
+      "fee": 1.0813666109400002,
+      "forced": false
+    },
+    {
+      "day": "2022-06-22",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.12238000000000002,
+      "reference": 20723.51,
+      "execution": 20744.233509999995,
+      "notional": 2538.6792969537996,
+      "fee": 1.2693396484768997
+    },
+    {
+      "day": "2022-06-22",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.2528,
+      "reference": 1125.86,
+      "execution": 1126.9858599999998,
+      "notional": 2538.8737454079996,
+      "fee": 1.2694368727039997
+    },
+    {
+      "day": "2022-07-20",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.12238000000000002,
+      "reference": 23398.48,
+      "execution": 23375.08152,
+      "notional": 2860.6424764176004,
+      "fee": 1.4303212382088002,
+      "forced": false
+    },
+    {
+      "day": "2022-07-20",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.2528,
+      "reference": 1542.33,
+      "execution": 1540.78767,
+      "notional": 3471.086462976,
+      "fee": 1.735543231488,
+      "forced": false
+    },
+    {
+      "day": "2022-08-03",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.13746,
+      "reference": 22985.93,
+      "execution": 23008.91593,
+      "notional": 3162.8055837377997,
+      "fee": 1.5814027918689
+    },
+    {
+      "day": "2022-08-03",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 1.9373,
+      "reference": 1630.91,
+      "execution": 1632.54091,
+      "notional": 3162.721504943,
+      "fee": 1.5813607524715
+    },
+    {
+      "day": "2022-08-17",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.13746,
+      "reference": 23856.15,
+      "execution": 23832.293850000002,
+      "notional": 3275.987112621,
+      "fee": 1.6379935563105001,
+      "forced": false
+    },
+    {
+      "day": "2022-08-17",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 1.9373,
+      "reference": 1876.67,
+      "execution": 1874.79333,
+      "notional": 3632.037118209,
+      "fee": 1.8160185591045,
+      "forced": false
+    },
+    {
+      "day": "2022-09-21",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.18263000000000001,
+      "reference": 18874.31,
+      "execution": 18893.18431,
+      "notional": 3450.4622505353004,
+      "fee": 1.7252311252676502
+    },
+    {
+      "day": "2022-09-21",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.6056,
+      "reference": 1322.94,
+      "execution": 1324.2629399999998,
+      "notional": 3450.4995164639995,
+      "fee": 1.7252497582319999
+    },
+    {
+      "day": "2022-10-19",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.18263000000000001,
+      "reference": 19327.44,
+      "execution": 19308.112559999998,
+      "notional": 3526.2405968328,
+      "fee": 1.7631202984164,
+      "forced": false
+    },
+    {
+      "day": "2022-10-19",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.6056,
+      "reference": 1310.71,
+      "execution": 1309.39929,
+      "notional": 3411.7707900240002,
+      "fee": 1.705885395012,
+      "forced": false
+    },
+    {
+      "day": "2022-11-23",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.21334000000000003,
+      "reference": 16227.96,
+      "execution": 16244.187959999997,
+      "notional": 3465.5350593864,
+      "fee": 1.7327675296932001
+    },
+    {
+      "day": "2022-11-23",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 3.0381,
+      "reference": 1139.59,
+      "execution": 1140.7295899999997,
+      "notional": 3465.650567378999,
+      "fee": 1.7328252836894995
+    },
+    {
+      "day": "2022-12-14",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.21334000000000003,
+      "reference": 17775.82,
+      "execution": 17758.04418,
+      "notional": 3788.5011453612005,
+      "fee": 1.8942505726806003,
+      "forced": false
+    },
+    {
+      "day": "2022-12-14",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 3.0381,
+      "reference": 1320.69,
+      "execution": 1319.36931,
+      "notional": 4008.375900711,
+      "fee": 2.0041879503555,
+      "forced": false
+    },
+    {
+      "day": "2023-02-15",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.17525000000000002,
+      "reference": 22199.84,
+      "execution": 22222.039839999998,
+      "notional": 3894.41248196,
+      "fee": 1.9472062409800002
+    },
+    {
+      "day": "2023-02-15",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.5009,
+      "reference": 1555.7,
+      "execution": 1557.2557,
+      "notional": 3894.54078013,
+      "fee": 1.947270390065
+    },
+    {
+      "day": "2023-03-22",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.17525000000000002,
+      "reference": 28107.81,
+      "execution": 28079.70219,
+      "notional": 4920.967808797501,
+      "fee": 2.4604839043987505,
+      "forced": false
+    },
+    {
+      "day": "2023-03-22",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.5009,
+      "reference": 1801.23,
+      "execution": 1799.42877,
+      "notional": 4500.1914108930005,
+      "fee": 2.2500957054465003,
+      "forced": false
+    },
+    {
+      "day": "2023-03-29",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.17245000000000002,
+      "reference": 27261.06,
+      "execution": 27288.32106,
+      "notional": 4705.870966797001,
+      "fee": 2.3529354833985003
+    },
+    {
+      "day": "2023-03-29",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.6516,
+      "reference": 1773.0,
+      "execution": 1774.773,
+      "notional": 4705.9880868,
+      "fee": 2.3529940434
+    },
+    {
+      "day": "2023-04-19",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.17245000000000002,
+      "reference": 30380.01,
+      "execution": 30349.629989999998,
+      "notional": 5233.7936917755005,
+      "fee": 2.61689684588775,
+      "forced": false
+    },
+    {
+      "day": "2023-04-19",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.6516,
+      "reference": 2103.51,
+      "execution": 2101.4064900000003,
+      "notional": 5572.089448884001,
+      "fee": 2.7860447244420006,
+      "forced": false
+    },
+    {
+      "day": "2023-05-10",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.19517,
+      "reference": 27628.28,
+      "execution": 27655.908279999996,
+      "notional": 5397.603619007599,
+      "fee": 2.6988018095037996
+    },
+    {
+      "day": "2023-05-10",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.9201,
+      "reference": 1846.53,
+      "execution": 1848.3765299999998,
+      "notional": 5397.444305253,
+      "fee": 2.6987221526265
+    },
+    {
+      "day": "2023-05-24",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.19517,
+      "reference": 27219.61,
+      "execution": 27192.39039,
+      "notional": 5307.1388324163,
+      "fee": 2.6535694162081502,
+      "forced": false
+    },
+    {
+      "day": "2023-05-24",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.9201,
+      "reference": 1854.06,
+      "execution": 1852.20594,
+      "notional": 5408.626565394001,
+      "fee": 2.7043132826970004,
+      "forced": false
+    },
+    {
+      "day": "2023-06-14",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.20618000000000003,
+      "reference": 25934.24,
+      "execution": 25960.17424,
+      "notional": 5352.4687248032005,
+      "fee": 2.6762343624016003
+    },
+    {
+      "day": "2023-06-14",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 3.0729,
+      "reference": 1740.12,
+      "execution": 1741.8601199999996,
+      "notional": 5352.561962747999,
+      "fee": 2.6762809813739996
+    },
+    {
+      "day": "2023-07-26",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.20618000000000003,
+      "reference": 29228.91,
+      "execution": 29199.68109,
+      "notional": 6020.390247136201,
+      "fee": 3.0101951235681006,
+      "forced": false
+    },
+    {
+      "day": "2023-07-26",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 3.0729,
+      "reference": 1857.66,
+      "execution": 1855.8023400000002,
+      "notional": 5702.6950105860005,
+      "fee": 2.8513475052930004,
+      "forced": false
+    },
+    {
+      "day": "2023-08-30",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.21106000000000003,
+      "reference": 27716.34,
+      "execution": 27744.056339999996,
+      "notional": 5855.660531120399,
+      "fee": 2.9278302655601998
+    },
+    {
+      "day": "2023-08-30",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 3.3826,
+      "reference": 1729.41,
+      "execution": 1731.13941,
+      "notional": 5855.752168266,
+      "fee": 2.927876084133
+    },
+    {
+      "day": "2023-10-04",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.21106000000000003,
+      "reference": 27426.45,
+      "execution": 27399.02355,
+      "notional": 5782.837910463001,
+      "fee": 2.891418955231501,
+      "forced": false
+    },
+    {
+      "day": "2023-10-04",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 3.3826,
+      "reference": 1656.88,
+      "execution": 1655.22312,
+      "notional": 5598.957725712001,
+      "fee": 2.7994788628560006,
+      "forced": false
+    },
+    {
+      "day": "2023-11-22",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.1589,
+      "reference": 35741.65,
+      "execution": 35777.39165,
+      "notional": 5685.027533185,
+      "fee": 2.8425137665925
+    },
+    {
+      "day": "2023-11-22",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.9382,
+      "reference": 1933.01,
+      "execution": 1934.9430099999997,
+      "notional": 5685.2495519819995,
+      "fee": 2.8426247759909997
+    },
+    {
+      "day": "2023-12-27",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.1589,
+      "reference": 42508.93,
+      "execution": 42466.42107,
+      "notional": 6747.914308023,
+      "fee": 3.3739571540115,
+      "forced": false
+    },
+    {
+      "day": "2023-12-27",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.9382,
+      "reference": 2230.88,
+      "execution": 2228.64912,
+      "notional": 6548.216844384,
+      "fee": 3.274108422192,
+      "forced": false
+    },
+    {
+      "day": "2024-01-17",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.15380000000000002,
+      "reference": 43137.94,
+      "execution": 43181.077939999996,
+      "notional": 6641.249787172,
+      "fee": 3.320624893586
+    },
+    {
+      "day": "2024-01-17",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.5643000000000002,
+      "reference": 2587.41,
+      "execution": 2589.9974099999995,
+      "notional": 6641.530358462999,
+      "fee": 3.3207651792314996
+    },
+    {
+      "day": "2024-02-14",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.15380000000000002,
+      "reference": 49699.6,
+      "execution": 49649.9004,
+      "notional": 7636.154681520001,
+      "fee": 3.8180773407600004,
+      "forced": false
+    },
+    {
+      "day": "2024-02-14",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.5643000000000002,
+      "reference": 2639.99,
+      "execution": 2637.3500099999997,
+      "notional": 6762.956630643,
+      "fee": 3.3814783153215,
+      "forced": false
+    },
+    {
+      "day": "2024-03-27",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.10266000000000002,
+      "reference": 69987.99,
+      "execution": 70057.97799,
+      "notional": 7192.152020453401,
+      "fee": 3.5960760102267004
+    },
+    {
+      "day": "2024-03-27",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.0029,
+      "reference": 3587.32,
+      "execution": 3590.90732,
+      "notional": 7192.228271227999,
+      "fee": 3.5961141356139996
+    },
+    {
+      "day": "2024-04-24",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.10266000000000002,
+      "reference": 66414.0,
+      "execution": 66347.586,
+      "notional": 6811.243178760001,
+      "fee": 3.4056215893800004,
+      "forced": false
+    },
+    {
+      "day": "2024-04-24",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.0029,
+      "reference": 3219.46,
+      "execution": 3216.2405400000002,
+      "notional": 6441.808177566,
+      "fee": 3.220904088783,
+      "forced": false
+    },
+    {
+      "day": "2024-05-01",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.10900000000000001,
+      "reference": 60672.01,
+      "execution": 60732.68201,
+      "notional": 6619.86233909,
+      "fee": 3.309931169545
+    },
+    {
+      "day": "2024-05-01",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.1942,
+      "reference": 3014.04,
+      "execution": 3017.0540399999995,
+      "notional": 6620.019974567998,
+      "fee": 3.3100099872839994
+    },
+    {
+      "day": "2024-05-15",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.10900000000000001,
+      "reference": 61577.49,
+      "execution": 61515.912509999995,
+      "notional": 6705.23446359,
+      "fee": 3.352617231795,
+      "forced": false
+    },
+    {
+      "day": "2024-05-15",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.1942,
+      "reference": 2881.93,
+      "execution": 2879.04807,
+      "notional": 6317.2072751939995,
+      "fee": 3.158603637597,
+      "forced": false
+    },
+    {
+      "day": "2024-05-29",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.095,
+      "reference": 68398.4,
+      "execution": 68466.79839999999,
+      "notional": 6504.345847999999,
+      "fee": 3.2521729239999995
+    },
+    {
+      "day": "2024-05-29",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 1.6902000000000001,
+      "reference": 3844.69,
+      "execution": 3848.5346899999995,
+      "notional": 6504.793333038,
+      "fee": 3.252396666519
+    },
+    {
+      "day": "2024-06-26",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.095,
+      "reference": 61806.01,
+      "execution": 61744.20399,
+      "notional": 5865.69937905,
+      "fee": 2.9328496895250002,
+      "forced": false
+    },
+    {
+      "day": "2024-06-26",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 1.6902000000000001,
+      "reference": 3394.91,
+      "execution": 3391.51509,
+      "notional": 5732.338805118,
+      "fee": 2.866169402559,
+      "forced": false
+    },
+    {
+      "day": "2024-07-31",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.08744,
+      "reference": 66188.0,
+      "execution": 66254.188,
+      "notional": 5793.26619872,
+      "fee": 2.8966330993600002
+    },
+    {
+      "day": "2024-07-31",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 1.7650000000000001,
+      "reference": 3279.2,
+      "execution": 3282.4791999999993,
+      "notional": 5793.575787999999,
+      "fee": 2.8967878939999996
+    },
+    {
+      "day": "2024-10-02",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.08744,
+      "reference": 60804.92,
+      "execution": 60744.115079999996,
+      "notional": 5311.4654225952,
+      "fee": 2.6557327112976,
+      "forced": false
+    },
+    {
+      "day": "2024-10-02",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 1.7650000000000001,
+      "reference": 2447.78,
+      "execution": 2445.3322200000002,
+      "notional": 4316.011368300001,
+      "fee": 2.1580056841500004,
+      "forced": false
+    },
+    {
+      "day": "2024-11-13",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.05462,
+      "reference": 87952.0,
+      "execution": 88039.95199999999,
+      "notional": 4808.74217824,
+      "fee": 2.40437108912
+    },
+    {
+      "day": "2024-11-13",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 1.4811,
+      "reference": 3243.79,
+      "execution": 3247.0337899999995,
+      "notional": 4809.1817463689995,
+      "fee": 2.4045908731844996
+    },
+    {
+      "day": "2024-12-18",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.05462,
+      "reference": 106133.74,
+      "execution": 106027.60626,
+      "notional": 5791.2278539212,
+      "fee": 2.8956139269606003,
+      "forced": false
+    },
+    {
+      "day": "2024-12-18",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 1.4811,
+      "reference": 3893.01,
+      "execution": 3889.1169900000004,
+      "notional": 5760.171173889001,
+      "fee": 2.8800855869445003,
+      "forced": false
+    },
+    {
+      "day": "2025-02-05",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.058960000000000005,
+      "reference": 97763.14,
+      "execution": 97860.90314,
+      "notional": 5769.8788491344,
+      "fee": 2.8849394245672
+    },
+    {
+      "day": "2025-02-05",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.1105,
+      "reference": 2731.19,
+      "execution": 2733.9211899999996,
+      "notional": 5769.940671494999,
+      "fee": 2.8849703357474996
+    },
+    {
+      "day": "2025-02-12",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.058960000000000005,
+      "reference": 95778.21,
+      "execution": 95682.43179,
+      "notional": 5641.436178338401,
+      "fee": 2.8207180891692007,
+      "forced": false
+    },
+    {
+      "day": "2025-02-12",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.1105,
+      "reference": 2602.59,
+      "execution": 2599.98741,
+      "notional": 5487.273428805001,
+      "fee": 2.7436367144025002,
+      "forced": false
+    },
+    {
+      "day": "2025-03-05",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.06362000000000001,
+      "reference": 87281.98,
+      "execution": 87369.26197999998,
+      "notional": 5558.4324471676,
+      "fee": 2.7792162235838003
+    },
+    {
+      "day": "2025-03-05",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.5574000000000003,
+      "reference": 2171.5,
+      "execution": 2173.6715,
+      "notional": 5558.947494100001,
+      "fee": 2.7794737470500004
+    },
+    {
+      "day": "2025-05-14",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.06362000000000001,
+      "reference": 104103.72,
+      "execution": 103999.61628,
+      "notional": 6616.4555877336015,
+      "fee": 3.3082277938668008,
+      "forced": false
+    },
+    {
+      "day": "2025-05-14",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.5574000000000003,
+      "reference": 2679.71,
+      "execution": 2677.03029,
+      "notional": 6846.237263646001,
+      "fee": 3.4231186318230007,
+      "forced": false
+    },
+    {
+      "day": "2025-05-21",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.06287000000000001,
+      "reference": 106850.0,
+      "execution": 106956.84999999999,
+      "notional": 6724.377159500001,
+      "fee": 3.3621885797500006
+    },
+    {
+      "day": "2025-05-21",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.6615,
+      "reference": 2524.19,
+      "execution": 2526.7141899999997,
+      "notional": 6724.8498166849995,
+      "fee": 3.3624249083424997
+    },
+    {
+      "day": "2025-05-28",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.06287000000000001,
+      "reference": 108938.17,
+      "execution": 108829.23183,
+      "notional": 6842.093805152102,
+      "fee": 3.421046902576051,
+      "forced": false
+    },
+    {
+      "day": "2025-05-28",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.6615,
+      "reference": 2660.81,
+      "execution": 2658.14919,
+      "notional": 7074.664069185001,
+      "fee": 3.5373320345925006,
+      "forced": false
+    },
+    {
+      "day": "2025-07-02",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.06571,
+      "reference": 105681.13,
+      "execution": 105786.81112999999,
+      "notional": 6951.2513593523,
+      "fee": 3.47562567967615
+    },
+    {
+      "day": "2025-07-02",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.8876,
+      "reference": 2405.01,
+      "execution": 2407.41501,
+      "notional": 6951.651582876,
+      "fee": 3.4758257914380004
+    },
+    {
+      "day": "2025-07-16",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.06571,
+      "reference": 117758.08,
+      "execution": 117640.32192,
+      "notional": 7730.145553363201,
+      "fee": 3.8650727766816004,
+      "forced": false
+    },
+    {
+      "day": "2025-07-16",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.8876,
+      "reference": 3137.9,
+      "execution": 3134.7621,
+      "notional": 9051.93903996,
+      "fee": 4.52596951998,
+      "forced": false
+    },
+    {
+      "day": "2025-08-27",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.07493000000000001,
+      "reference": 111763.22,
+      "execution": 111874.98322,
+      "notional": 8382.7924926746,
+      "fee": 4.1913962463373
+    },
+    {
+      "day": "2025-08-27",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 1.8203,
+      "reference": 4600.63,
+      "execution": 4605.23063,
+      "notional": 8382.901315789,
+      "fee": 4.1914506578945
+    },
+    {
+      "day": "2025-09-24",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.07493000000000001,
+      "reference": 111998.8,
+      "execution": 111886.8012,
+      "notional": 8383.678013916002,
+      "fee": 4.191839006958001,
+      "forced": false
+    },
+    {
+      "day": "2025-09-24",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 1.8203,
+      "reference": 4164.25,
+      "execution": 4160.08575,
+      "notional": 7572.604090725001,
+      "fee": 3.7863020453625005,
+      "forced": false
+    },
+    {
+      "day": "2025-10-15",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.07044,
+      "reference": 113028.13,
+      "execution": 113141.15813,
+      "notional": 7969.6631786772,
+      "fee": 3.9848315893386004
+    },
+    {
+      "day": "2025-10-15",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 1.9302000000000001,
+      "reference": 4125.01,
+      "execution": 4129.13501,
+      "notional": 7970.056396302,
+      "fee": 3.9850281981510003
+    },
+    {
+      "day": "2025-11-26",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.07044,
+      "reference": 87369.97,
+      "execution": 87282.60003,
+      "notional": 6148.186346113201,
+      "fee": 3.0740931730566006,
+      "forced": false
+    },
+    {
+      "day": "2025-11-26",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 1.9302000000000001,
+      "reference": 2959.36,
+      "execution": 2956.4006400000003,
+      "notional": 5706.444515328001,
+      "fee": 2.8532222576640005,
+      "forced": false
+    },
+    {
+      "day": "2025-12-03",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.06481,
+      "reference": 91277.88,
+      "execution": 91369.15788,
+      "notional": 5921.635122202801,
+      "fee": 2.9608175611014005
+    },
+    {
+      "day": "2025-12-03",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 1.9745000000000001,
+      "reference": 2996.07,
+      "execution": 2999.06607,
+      "notional": 5921.655955215,
+      "fee": 2.9608279776075
+    },
+    {
+      "day": "2026-01-07",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.06481,
+      "reference": 93747.97,
+      "execution": 93654.22203,
+      "notional": 6069.730129764301,
+      "fee": 3.0348650648821502,
+      "forced": false
+    },
+    {
+      "day": "2026-01-07",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 1.9745000000000001,
+      "reference": 3296.83,
+      "execution": 3293.5331699999997,
+      "notional": 6503.081244165,
+      "fee": 3.2515406220825,
+      "forced": false
+    },
+    {
+      "day": "2026-01-28",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.07029,
+      "reference": 89249.99,
+      "execution": 89339.23999,
+      "notional": 6279.655178897101,
+      "fee": 3.139827589448551
+    },
+    {
+      "day": "2026-01-28",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.0728,
+      "reference": 3026.77,
+      "execution": 3029.7967699999995,
+      "notional": 6280.162744855998,
+      "fee": 3.1400813724279995
+    },
+    {
+      "day": "2026-05-20",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.07029,
+      "reference": 76834.36,
+      "execution": 76757.52564,
+      "notional": 5395.286477235601,
+      "fee": 2.6976432386178004,
+      "forced": false
+    },
+    {
+      "day": "2026-05-20",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.0728,
+      "reference": 2111.93,
+      "execution": 2109.81807,
+      "notional": 4373.230895496,
+      "fee": 2.186615447748,
+      "forced": false
+    },
+    {
+      "day": "2026-06-10",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.07897000000000001,
+      "reference": 61730.0,
+      "execution": 61791.729999999996,
+      "notional": 4879.6929181000005,
+      "fee": 2.4398464590500004
+    },
+    {
+      "day": "2026-06-10",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.9733,
+      "reference": 1639.52,
+      "execution": 1641.1595199999997,
+      "notional": 4879.6596008159995,
+      "fee": 2.439829800408
+    },
+    {
+      "day": "2026-08-19",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.07897000000000001,
+      "reference": 64725.42,
+      "execution": 64660.694579999996,
+      "notional": 5106.255050982601,
+      "fee": 2.5531275254913,
+      "forced": false
+    },
+    {
+      "day": "2026-08-19",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.9733,
+      "reference": 1917.85,
+      "execution": 1915.9321499999999,
+      "notional": 5696.641061595,
+      "fee": 2.8483205307975,
+      "forced": false
+    },
+    {
+      "day": "2026-08-26",
+      "side": "buy",
+      "symbol": "BTCUSDT",
+      "quantity": 0.06863000000000001,
+      "reference": 78539.13,
+      "execution": 78617.66913,
+      "notional": 5395.5306323919,
+      "fee": 2.6977653161959503
+    },
+    {
+      "day": "2026-08-26",
+      "side": "buy",
+      "symbol": "ETHUSDT",
+      "quantity": 2.2069,
+      "reference": 2442.65,
+      "execution": 2445.09265,
+      "notional": 5396.074969285,
+      "fee": 2.6980374846425
+    },
+    {
+      "day": "2026-10-01",
+      "side": "sell",
+      "symbol": "BTCUSDT",
+      "quantity": 0.06863000000000001,
+      "reference": 83623.59,
+      "execution": 83539.96641,
+      "notional": 5733.3478947183,
+      "fee": 2.8666739473591503,
+      "forced": true
+    },
+    {
+      "day": "2026-10-01",
+      "side": "sell",
+      "symbol": "ETHUSDT",
+      "quantity": 2.2069,
+      "reference": 2686.01,
+      "execution": 2683.3239900000003,
+      "notional": 5921.827713531001,
+      "fee": 2.9609138567655005,
+      "forced": true
+    }
+  ]
+}
