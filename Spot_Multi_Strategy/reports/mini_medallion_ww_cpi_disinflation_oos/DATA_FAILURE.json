@@ -1,0 +1,14 @@
+{
+  "experiment": "ww_cpi_disinflation_btc_2026_11_08",
+  "prereg_commit": "c8c02e4",
+  "code_commit": "55e2e9ed09ff8a13763ba75fea5f0defa87297b2",
+  "started_utc": "2026-11-08T10:19:56.493422+00:00",
+  "evidence_grade": "preregistered_retrospective_current_vintage_cpi_calendar_bridge",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "status": "sealed_source_or_execution_failure",
+  "sealed_utc": "2026-11-08T10:23:07.725105+00:00",
+  "reason": "source request failed: https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=35)",
+  "error_type": "SourceFailure",
+  "gate_passed": false
+}
