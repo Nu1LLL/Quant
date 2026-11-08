@@ -1,0 +1,22 @@
+{
+  "experiment_id": "binance_spot_listing_first_day_reversal_2026_11_08",
+  "status": "sealed_source_failure_before_strategy_scoring",
+  "preregistration_commit": "ae0d11e",
+  "data_verified": false,
+  "failure_reason": "Checksum-verified official BADGERUSDT 2021-03 spot 1h archive omits 2021-03-06 02:00 UTC within the preregistered first-96h signal/position window; no fallback or event deletion permitted.",
+  "source": {
+    "article_code": "a2aa2ee0e80e4291aa8d3f22f9793948",
+    "symbol": "BADGERUSDT",
+    "published_utc": "2021-03-02T05:00:06.073000+00:00",
+    "t0_utc": "2021-03-02T08:00:00+00:00",
+    "missing_utc": ["2021-03-06T02:00:00+00:00"],
+    "archive_sha256": "a84fa68fa707228d42729b119409f4332470faee2478da8d6b4f453fcb0b6549"
+  },
+  "strategy_metrics": null,
+  "strategy_return_or_pnl_calculated": false,
+  "gate": {
+    "source_integrity": false,
+    "independent_executable_oos": false,
+    "full": false
+  }
+}
