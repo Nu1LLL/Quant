@@ -1,0 +1,2869 @@
+{
+  "candidate_count": 130,
+  "candidates": [
+    {
+      "code": "ff209dd797b2418198c312a1a266e73a",
+      "event_month": {
+        "content_length": 31012,
+        "month": "2025-10",
+        "status": 200,
+        "symbol": "ASTERUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ASTERUSDT/1h/ASTERUSDT-1h-2025-10.zip"
+      },
+      "month": "2025-10",
+      "prior_month": {
+        "content_length": null,
+        "month": "2025-09",
+        "status": 404,
+        "symbol": "ASTERUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ASTERUSDT/1h/ASTERUSDT-1h-2025-09.zip"
+      },
+      "published_ms": 1759736929954,
+      "symbol": "ASTERUSDT",
+      "ticker": "ASTER",
+      "title": "Binance Will List Aster (ASTER) with Seed Tag Applied"
+    },
+    {
+      "code": "50ff03bc1d94471181887c43b930d3f0",
+      "event_month": {
+        "content_length": 20155,
+        "month": "2025-09",
+        "status": 200,
+        "symbol": "AVNTUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/AVNTUSDT/1h/AVNTUSDT-1h-2025-09.zip"
+      },
+      "month": "2025-09",
+      "prior_month": {
+        "content_length": null,
+        "month": "2025-08",
+        "status": 404,
+        "symbol": "AVNTUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/AVNTUSDT/1h/AVNTUSDT-1h-2025-08.zip"
+      },
+      "published_ms": 1757908021934,
+      "symbol": "AVNTUSDT",
+      "ticker": "AVNT",
+      "title": "Binance Will List Avantis (AVNT) with Seed Tag Applied"
+    },
+    {
+      "code": "94ab969a74a8480799d03934b4720411",
+      "event_month": {
+        "content_length": 24497,
+        "month": "2025-09",
+        "status": 200,
+        "symbol": "PUMPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/PUMPUSDT/1h/PUMPUSDT-1h-2025-09.zip"
+      },
+      "month": "2025-09",
+      "prior_month": {
+        "content_length": null,
+        "month": "2025-08",
+        "status": 404,
+        "symbol": "PUMPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/PUMPUSDT/1h/PUMPUSDT-1h-2025-08.zip"
+      },
+      "published_ms": 1757590673797,
+      "symbol": "PUMPUSDT",
+      "ticker": "PUMP",
+      "title": "Binance Will List Pump.fun (PUMP) with Seed Tag Applied"
+    },
+    {
+      "code": "aebac85d4dd3470c9cd52df6f98d0811",
+      "event_month": {
+        "content_length": 18894,
+        "month": "2025-09",
+        "status": 200,
+        "symbol": "USDEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/USDEUSDT/1h/USDEUSDT-1h-2025-09.zip"
+      },
+      "month": "2025-09",
+      "prior_month": {
+        "content_length": null,
+        "month": "2025-08",
+        "status": 404,
+        "symbol": "USDEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/USDEUSDT/1h/USDEUSDT-1h-2025-08.zip"
+      },
+      "published_ms": 1757401201439,
+      "symbol": "USDEUSDT",
+      "ticker": "USDE",
+      "title": "Binance Will List Ethena USDe (USDE)"
+    },
+    {
+      "code": "503b79756ba04a1cac0dfd6216958422",
+      "event_month": {
+        "content_length": 35050,
+        "month": "2025-09",
+        "status": 200,
+        "symbol": "WLFIUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/WLFIUSDT/1h/WLFIUSDT-1h-2025-09.zip"
+      },
+      "month": "2025-09",
+      "prior_month": {
+        "content_length": null,
+        "month": "2025-08",
+        "status": 404,
+        "symbol": "WLFIUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/WLFIUSDT/1h/WLFIUSDT-1h-2025-08.zip"
+      },
+      "published_ms": 1756691345082,
+      "symbol": "WLFIUSDT",
+      "ticker": "WLFI",
+      "title": "Binance Will List  World Liberty Financial (WLFI) with Seed Tag Applied"
+    },
+    {
+      "code": "3eec9de75b1c4ab78efd1d53478e7340",
+      "event_month": {
+        "content_length": 8091,
+        "month": "2025-05",
+        "status": 200,
+        "symbol": "USD1USDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/USD1USDT/1h/USD1USDT-1h-2025-05.zip"
+      },
+      "month": "2025-05",
+      "prior_month": {
+        "content_length": null,
+        "month": "2025-04",
+        "status": 404,
+        "symbol": "USD1USDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/USD1USDT/1h/USD1USDT-1h-2025-04.zip"
+      },
+      "published_ms": 1747884601965,
+      "symbol": "USD1USDT",
+      "ticker": "USD1",
+      "title": "Binance Will List World Liberty Financial USD (USD1)"
+    },
+    {
+      "code": "65af5039eae04563b47e424b9cae77ed",
+      "event_month": {
+        "content_length": 9291,
+        "month": "2025-03",
+        "status": 200,
+        "symbol": "XUSDUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/XUSDUSDT/1h/XUSDUSDT-1h-2025-03.zip"
+      },
+      "month": "2025-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2025-02",
+        "status": 404,
+        "symbol": "XUSDUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/XUSDUSDT/1h/XUSDUSDT-1h-2025-02.zip"
+      },
+      "published_ms": 1742194803529,
+      "symbol": "XUSDUSDT",
+      "ticker": "XUSD",
+      "title": "Binance Will List StraitsX USD (XUSD) and Introduce XUSD Zero Trading Fee Promotion"
+    },
+    {
+      "code": "098d3a7afe5244b5ba6ea728f933817f",
+      "event_month": {
+        "content_length": 16593,
+        "month": "2025-01",
+        "status": 200,
+        "symbol": "TRUMPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TRUMPUSDT/1h/TRUMPUSDT-1h-2025-01.zip"
+      },
+      "month": "2025-01",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-12",
+        "status": 404,
+        "symbol": "TRUMPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TRUMPUSDT/1h/TRUMPUSDT-1h-2024-12.zip"
+      },
+      "published_ms": 1737259542151,
+      "symbol": "TRUMPUSDT",
+      "ticker": "TRUMP",
+      "title": "Binance Will List OFFICIAL TRUMP (TRUMP) with Seed Tag Applied"
+    },
+    {
+      "code": "4f8e9e0b5dd54e9095b7d718f289d9d4",
+      "event_month": {
+        "content_length": 21481,
+        "month": "2024-12",
+        "status": 200,
+        "symbol": "VELODROMEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/VELODROMEUSDT/1h/VELODROMEUSDT-1h-2024-12.zip"
+      },
+      "month": "2024-12",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-11",
+        "status": 404,
+        "symbol": "VELODROMEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/VELODROMEUSDT/1h/VELODROMEUSDT-1h-2024-11.zip"
+      },
+      "published_ms": 1734077277826,
+      "symbol": "VELODROMEUSDT",
+      "ticker": "VELODROME",
+      "title": "Binance Will List Velodrome Finance (VELODROME) with Seed Tag Applied"
+    },
+    {
+      "code": "d4f72bdd82d44a0591ee40d41f0b44d5",
+      "event_month": {
+        "content_length": 25251,
+        "month": "2024-12",
+        "status": 200,
+        "symbol": "MEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MEUSDT/1h/MEUSDT-1h-2024-12.zip"
+      },
+      "month": "2024-12",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-11",
+        "status": 404,
+        "symbol": "MEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MEUSDT/1h/MEUSDT-1h-2024-11.zip"
+      },
+      "published_ms": 1733815340546,
+      "symbol": "MEUSDT",
+      "ticker": "ME",
+      "title": "Binance Will List Magic Eden (ME) with Seed Tag Applied"
+    },
+    {
+      "code": "56398cfbd9c4419d9c0b54a0d1da2a7b",
+      "event_month": {
+        "content_length": 14706,
+        "month": "2024-10",
+        "status": 200,
+        "symbol": "BNSOLUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BNSOLUSDT/1h/BNSOLUSDT-1h-2024-10.zip"
+      },
+      "month": "2024-10",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-09",
+        "status": 404,
+        "symbol": "BNSOLUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BNSOLUSDT/1h/BNSOLUSDT-1h-2024-09.zip"
+      },
+      "published_ms": 1728457213876,
+      "symbol": "BNSOLUSDT",
+      "ticker": "BNSOL",
+      "title": "Binance Will List Binance Staked SOL (BNSOL) and Introduce BNSOL Boosted APR Promotion"
+    },
+    {
+      "code": "29494a3db1034233b65522b9e122d079",
+      "event_month": {
+        "content_length": null,
+        "month": "2024-09",
+        "status": 404,
+        "symbol": "EIGENUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/EIGENUSDT/1h/EIGENUSDT-1h-2024-09.zip"
+      },
+      "month": "2024-09",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-08",
+        "status": 404,
+        "symbol": "EIGENUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/EIGENUSDT/1h/EIGENUSDT-1h-2024-08.zip"
+      },
+      "published_ms": 1727684397115,
+      "symbol": "EIGENUSDT",
+      "ticker": "EIGEN",
+      "title": "Binance Will List EigenLayer (EIGEN) with Seed Tag Applied"
+    },
+    {
+      "code": "e8c6134371e945df961ae1854e863a62",
+      "event_month": {
+        "content_length": 3865,
+        "month": "2024-08",
+        "status": 200,
+        "symbol": "EURIUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/EURIUSDT/1h/EURIUSDT-1h-2024-08.zip"
+      },
+      "month": "2024-08",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-07",
+        "status": 404,
+        "symbol": "EURIUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/EURIUSDT/1h/EURIUSDT-1h-2024-07.zip"
+      },
+      "published_ms": 1724655603568,
+      "symbol": "EURIUSDT",
+      "ticker": "EURI",
+      "title": "Binance Will List Eurite (EURI) and Introduce EURI Zero Trading Fee Promotions"
+    },
+    {
+      "code": "abba626aa0974b828f91c166bdc12afd",
+      "event_month": {
+        "content_length": 27491,
+        "month": "2024-08",
+        "status": 200,
+        "symbol": "TONUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TONUSDT/1h/TONUSDT-1h-2024-08.zip"
+      },
+      "month": "2024-08",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-07",
+        "status": 404,
+        "symbol": "TONUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TONUSDT/1h/TONUSDT-1h-2024-07.zip"
+      },
+      "published_ms": 1723095568744,
+      "symbol": "TONUSDT",
+      "ticker": "TON",
+      "title": "Binance Will List Toncoin (TON) with Seed Tag Applied"
+    },
+    {
+      "code": "28a21b10ed23416386b40d263b71cd99",
+      "event_month": {
+        "content_length": 12458,
+        "month": "2024-06",
+        "status": 200,
+        "symbol": "ZROUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ZROUSDT/1h/ZROUSDT-1h-2024-06.zip"
+      },
+      "month": "2024-06",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-05",
+        "status": 404,
+        "symbol": "ZROUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ZROUSDT/1h/ZROUSDT-1h-2024-05.zip"
+      },
+      "published_ms": 1718864370953,
+      "symbol": "ZROUSDT",
+      "ticker": "ZRO",
+      "title": "Binance Will List LayerZero (ZRO) with Seed Tag Applied"
+    },
+    {
+      "code": "d87a9b01d6634ad1a36d984cc54595ee",
+      "event_month": {
+        "content_length": 16117,
+        "month": "2024-06",
+        "status": 200,
+        "symbol": "ZKUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ZKUSDT/1h/ZKUSDT-1h-2024-06.zip"
+      },
+      "month": "2024-06",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-05",
+        "status": 404,
+        "symbol": "ZKUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ZKUSDT/1h/ZKUSDT-1h-2024-05.zip"
+      },
+      "published_ms": 1718589610865,
+      "symbol": "ZKUSDT",
+      "ticker": "ZK",
+      "title": "Binance Will List ZKsync (ZK) with ZK Token Distribution Program"
+    },
+    {
+      "code": "dd856efc9c1a4a209eb48992e190e4d6",
+      "event_month": {
+        "content_length": 22850,
+        "month": "2024-04",
+        "status": 200,
+        "symbol": "TAOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TAOUSDT/1h/TAOUSDT-1h-2024-04.zip"
+      },
+      "month": "2024-04",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-03",
+        "status": 404,
+        "symbol": "TAOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TAOUSDT/1h/TAOUSDT-1h-2024-03.zip"
+      },
+      "published_ms": 1712817838489,
+      "symbol": "TAOUSDT",
+      "ticker": "TAO",
+      "title": "Binance Will List Bittensor (TAO) with Seed Tag Applied"
+    },
+    {
+      "code": "6eeb77d6863948eb8e79fc40bacabdbc",
+      "event_month": {
+        "content_length": 26721,
+        "month": "2024-04",
+        "status": 200,
+        "symbol": "TNSRUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TNSRUSDT/1h/TNSRUSDT-1h-2024-04.zip"
+      },
+      "month": "2024-04",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-03",
+        "status": 404,
+        "symbol": "TNSRUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TNSRUSDT/1h/TNSRUSDT-1h-2024-03.zip"
+      },
+      "published_ms": 1712576657942,
+      "symbol": "TNSRUSDT",
+      "ticker": "TNSR",
+      "title": "Binance Will List Tensor (TNSR) with Seed Tag Applied"
+    },
+    {
+      "code": "bca0f355cf004367b90d7e48fee3470c",
+      "event_month": {
+        "content_length": 20234,
+        "month": "2024-03",
+        "status": 200,
+        "symbol": "BOMEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BOMEUSDT/1h/BOMEUSDT-1h-2024-03.zip"
+      },
+      "month": "2024-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-02",
+        "status": 404,
+        "symbol": "BOMEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BOMEUSDT/1h/BOMEUSDT-1h-2024-02.zip"
+      },
+      "published_ms": 1710581406588,
+      "symbol": "BOMEUSDT",
+      "ticker": "BOME",
+      "title": "Binance Will List BOOK OF MEME (BOME) with Seed Tag Applied"
+    },
+    {
+      "code": "a73748f501dc48f6ba3d68d724052492",
+      "event_month": {
+        "content_length": 23580,
+        "month": "2024-03",
+        "status": 200,
+        "symbol": "METISUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/METISUSDT/1h/METISUSDT-1h-2024-03.zip"
+      },
+      "month": "2024-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-02",
+        "status": 404,
+        "symbol": "METISUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/METISUSDT/1h/METISUSDT-1h-2024-02.zip"
+      },
+      "published_ms": 1710143970976,
+      "symbol": "METISUSDT",
+      "ticker": "METIS",
+      "title": "Binance Will List Metis (METIS) with Seed Tag Applied"
+    },
+    {
+      "code": "90ad67fe5be7483ea058191bfde677e4",
+      "event_month": {
+        "content_length": 34497,
+        "month": "2024-03",
+        "status": 200,
+        "symbol": "WIFUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/WIFUSDT/1h/WIFUSDT-1h-2024-03.zip"
+      },
+      "month": "2024-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-02",
+        "status": 404,
+        "symbol": "WIFUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/WIFUSDT/1h/WIFUSDT-1h-2024-02.zip"
+      },
+      "published_ms": 1709632897364,
+      "symbol": "WIFUSDT",
+      "ticker": "WIF",
+      "title": "Binance Will List Dogwifhat (WIF) with Seed Tag Applied"
+    },
+    {
+      "code": "2eb66d061d214c31a096cff35ede9360",
+      "event_month": {
+        "content_length": 36981,
+        "month": "2024-03",
+        "status": 200,
+        "symbol": "AXLUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/AXLUSDT/1h/AXLUSDT-1h-2024-03.zip"
+      },
+      "month": "2024-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-02",
+        "status": 404,
+        "symbol": "AXLUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/AXLUSDT/1h/AXLUSDT-1h-2024-02.zip"
+      },
+      "published_ms": 1709277537028,
+      "symbol": "AXLUSDT",
+      "ticker": "AXL",
+      "title": "Binance Will List Axelar (AXL) with Seed Tag Applied"
+    },
+    {
+      "code": "cb15311b17c440d0b0cf077a9b9979a3",
+      "event_month": {
+        "content_length": 11414,
+        "month": "2024-02",
+        "status": 200,
+        "symbol": "STRKUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/STRKUSDT/1h/STRKUSDT-1h-2024-02.zip"
+      },
+      "month": "2024-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-01",
+        "status": 404,
+        "symbol": "STRKUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/STRKUSDT/1h/STRKUSDT-1h-2024-01.zip"
+      },
+      "published_ms": 1708395922135,
+      "symbol": "STRKUSDT",
+      "ticker": "STRK",
+      "title": "Binance Will List Starknet (STRK) with Seed Tag Applied"
+    },
+    {
+      "code": "00095277601046a38159f649b5f0e55b",
+      "event_month": {
+        "content_length": 26014,
+        "month": "2024-02",
+        "status": 200,
+        "symbol": "DYMUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/DYMUSDT/1h/DYMUSDT-1h-2024-02.zip"
+      },
+      "month": "2024-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-01",
+        "status": 404,
+        "symbol": "DYMUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/DYMUSDT/1h/DYMUSDT-1h-2024-01.zip"
+      },
+      "published_ms": 1707211617933,
+      "symbol": "DYMUSDT",
+      "ticker": "DYM",
+      "title": "Binance Will List Dymension (DYM) with Seed Tag Applied"
+    },
+    {
+      "code": "dfea1e2ae7fd475196b215e673193c63",
+      "event_month": {
+        "content_length": 27851,
+        "month": "2024-02",
+        "status": 200,
+        "symbol": "RONINUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RONINUSDT/1h/RONINUSDT-1h-2024-02.zip"
+      },
+      "month": "2024-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-01",
+        "status": 404,
+        "symbol": "RONINUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RONINUSDT/1h/RONINUSDT-1h-2024-01.zip"
+      },
+      "published_ms": 1707124296210,
+      "symbol": "RONINUSDT",
+      "ticker": "RONIN",
+      "title": "Binance Will List Ronin (RONIN) with Seed Tag Applied"
+    },
+    {
+      "code": "f36074f9caa6474fa44fdb18503183d6",
+      "event_month": {
+        "content_length": 31967,
+        "month": "2024-02",
+        "status": 200,
+        "symbol": "PYTHUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/PYTHUSDT/1h/PYTHUSDT-1h-2024-02.zip"
+      },
+      "month": "2024-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2024-01",
+        "status": 404,
+        "symbol": "PYTHUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/PYTHUSDT/1h/PYTHUSDT-1h-2024-01.zip"
+      },
+      "published_ms": 1706860207072,
+      "symbol": "PYTHUSDT",
+      "ticker": "PYTH",
+      "title": "Binance Will List Pyth Network (PYTH) with Seed Tag Applied"
+    },
+    {
+      "code": "7b5c643c3d8a4c9a9d443b1ceefb0015",
+      "event_month": {
+        "content_length": 585,
+        "month": "2024-01",
+        "status": 200,
+        "symbol": "JUPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/JUPUSDT/1h/JUPUSDT-1h-2024-01.zip"
+      },
+      "month": "2024-01",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-12",
+        "status": 404,
+        "symbol": "JUPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/JUPUSDT/1h/JUPUSDT-1h-2023-12.zip"
+      },
+      "published_ms": 1706684813622,
+      "symbol": "JUPUSDT",
+      "ticker": "JUP",
+      "title": "Binance Will List Jupiter (JUP) with Seed Tag Applied"
+    },
+    {
+      "code": "1592b7a6ec9a408daf4b778f50ab1ca6",
+      "event_month": {
+        "content_length": 22104,
+        "month": "2023-12",
+        "status": 200,
+        "symbol": "BONKUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BONKUSDT/1h/BONKUSDT-1h-2023-12.zip"
+      },
+      "month": "2023-12",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-11",
+        "status": 404,
+        "symbol": "BONKUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BONKUSDT/1h/BONKUSDT-1h-2023-11.zip"
+      },
+      "published_ms": 1702612713180,
+      "symbol": "BONKUSDT",
+      "ticker": "BONK",
+      "title": "Binance Will List Bonk (BONK) with Seed Tag Applied"
+    },
+    {
+      "code": "67d516a4ecec4c3ca17760d9afe04570",
+      "event_month": {
+        "content_length": 25430,
+        "month": "2023-12",
+        "status": 200,
+        "symbol": "1000SATSUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/1000SATSUSDT/1h/1000SATSUSDT-1h-2023-12.zip"
+      },
+      "month": "2023-12",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-11",
+        "status": 404,
+        "symbol": "1000SATSUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/1000SATSUSDT/1h/1000SATSUSDT-1h-2023-11.zip"
+      },
+      "published_ms": 1702361370579,
+      "symbol": "1000SATSUSDT",
+      "ticker": "1000SATS",
+      "title": "Binance Will List BRC-20 Sats (1000SATS) with Seed Tag Applied"
+    },
+    {
+      "code": "6282d0aaa23040b6a68c1b9ad9fc3e74",
+      "event_month": {
+        "content_length": 29606,
+        "month": "2023-12",
+        "status": 200,
+        "symbol": "JTOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/JTOUSDT/1h/JTOUSDT-1h-2023-12.zip"
+      },
+      "month": "2023-12",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-11",
+        "status": 404,
+        "symbol": "JTOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/JTOUSDT/1h/JTOUSDT-1h-2023-11.zip"
+      },
+      "published_ms": 1701950138787,
+      "symbol": "JTOUSDT",
+      "ticker": "JTO",
+      "title": "Binance Will List Jito (JTO) with Seed Tag Applied"
+    },
+    {
+      "code": "e1f106b5767546faa4c16751d8410a89",
+      "event_month": {
+        "content_length": 24494,
+        "month": "2023-12",
+        "status": 200,
+        "symbol": "AEURUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/AEURUSDT/1h/AEURUSDT-1h-2023-12.zip"
+      },
+      "month": "2023-12",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-11",
+        "status": 404,
+        "symbol": "AEURUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/AEURUSDT/1h/AEURUSDT-1h-2023-11.zip"
+      },
+      "published_ms": 1701663251934,
+      "symbol": "AEURUSDT",
+      "ticker": "AEUR",
+      "title": "Binance Will List Anchored Coins EUR (AEUR) and Introduce AEUR Zero Trading Fee Promotions"
+    },
+    {
+      "code": "85306854c60347a6a4131493ec8d26a6",
+      "event_month": {
+        "content_length": 8005,
+        "month": "2023-11",
+        "status": 200,
+        "symbol": "BLURUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BLURUSDT/1h/BLURUSDT-1h-2023-11.zip"
+      },
+      "month": "2023-11",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-10",
+        "status": 404,
+        "symbol": "BLURUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BLURUSDT/1h/BLURUSDT-1h-2023-10.zip"
+      },
+      "published_ms": 1700806187186,
+      "symbol": "BLURUSDT",
+      "ticker": "BLUR",
+      "title": "Binance Will List Blur (BLUR) with Seed Tag Applied"
+    },
+    {
+      "code": "4bd64404aa384fe5a00e0f9b131035db",
+      "event_month": {
+        "content_length": 28379,
+        "month": "2023-11",
+        "status": 200,
+        "symbol": "ORDIUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ORDIUSDT/1h/ORDIUSDT-1h-2023-11.zip"
+      },
+      "month": "2023-11",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-10",
+        "status": 404,
+        "symbol": "ORDIUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ORDIUSDT/1h/ORDIUSDT-1h-2023-10.zip"
+      },
+      "published_ms": 1699339453500,
+      "symbol": "ORDIUSDT",
+      "ticker": "ORDI",
+      "title": "Binance Will List ORDI (ORDI) with Seed Tag Applied"
+    },
+    {
+      "code": "4492f05f8b0e40f2a6dc9321aba0ba27",
+      "event_month": {
+        "content_length": 578,
+        "month": "2023-10",
+        "status": 200,
+        "symbol": "TIAUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TIAUSDT/1h/TIAUSDT-1h-2023-10.zip"
+      },
+      "month": "2023-10",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-09",
+        "status": 404,
+        "symbol": "TIAUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TIAUSDT/1h/TIAUSDT-1h-2023-09.zip"
+      },
+      "published_ms": 1698671932206,
+      "symbol": "TIAUSDT",
+      "ticker": "TIA",
+      "title": "Binance Will List Celestia (TIA) with Seed Tag Applied"
+    },
+    {
+      "code": "51b509f93a3245738b0c4ec2d64d1fa8",
+      "event_month": {
+        "content_length": 23969,
+        "month": "2023-10",
+        "status": 200,
+        "symbol": "NTRNUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/NTRNUSDT/1h/NTRNUSDT-1h-2023-10.zip"
+      },
+      "month": "2023-10",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-09",
+        "status": 404,
+        "symbol": "NTRNUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/NTRNUSDT/1h/NTRNUSDT-1h-2023-09.zip"
+      },
+      "published_ms": 1696923917379,
+      "symbol": "NTRNUSDT",
+      "ticker": "NTRN",
+      "title": "Binance Will List Neutron (NTRN) with Seed Tag Applied"
+    },
+    {
+      "code": "065a0d561cc147ffaa74554360b9a042",
+      "event_month": {
+        "content_length": 4202,
+        "month": "2023-07",
+        "status": 200,
+        "symbol": "FDUSDUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/FDUSDUSDT/1h/FDUSDUSDT-1h-2023-07.zip"
+      },
+      "month": "2023-07",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-06",
+        "status": 404,
+        "symbol": "FDUSDUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/FDUSDUSDT/1h/FDUSDUSDT-1h-2023-06.zip"
+      },
+      "published_ms": 1690344003220,
+      "symbol": "FDUSDUSDT",
+      "ticker": "FDUSD",
+      "title": "Binance Will List First Digital USD (FDUSD) and Introduce FDUSD Zero Trading Fee Promotions"
+    },
+    {
+      "code": "9bc08522433c44b1b0b9978d65c4f5e5",
+      "event_month": {
+        "content_length": 8663,
+        "month": "2023-07",
+        "status": 200,
+        "symbol": "WLDUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/WLDUSDT/1h/WLDUSDT-1h-2023-07.zip"
+      },
+      "month": "2023-07",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-06",
+        "status": 404,
+        "symbol": "WLDUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/WLDUSDT/1h/WLDUSDT-1h-2023-06.zip"
+      },
+      "published_ms": 1690182131620,
+      "symbol": "WLDUSDT",
+      "ticker": "WLD",
+      "title": "Binance Will List Worldcoin (WLD)"
+    },
+    {
+      "code": "56c9c5899f3747b2b9a0452450f5eb24",
+      "event_month": {
+        "content_length": 30982,
+        "month": "2023-07",
+        "status": 200,
+        "symbol": "PENDLEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/PENDLEUSDT/1h/PENDLEUSDT-1h-2023-07.zip"
+      },
+      "month": "2023-07",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-06",
+        "status": 404,
+        "symbol": "PENDLEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/PENDLEUSDT/1h/PENDLEUSDT-1h-2023-06.zip"
+      },
+      "published_ms": 1688365335567,
+      "symbol": "PENDLEUSDT",
+      "ticker": "PENDLE",
+      "title": "Binance Will List Pendle (PENDLE) in the Innovation Zone"
+    },
+    {
+      "code": "2fc7b93cb25040cea40a6c6e24573cce",
+      "event_month": {
+        "content_length": 2070,
+        "month": "2023-03",
+        "status": 200,
+        "symbol": "RDNTUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RDNTUSDT/1h/RDNTUSDT-1h-2023-03.zip"
+      },
+      "month": "2023-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-02",
+        "status": 404,
+        "symbol": "RDNTUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RDNTUSDT/1h/RDNTUSDT-1h-2023-02.zip"
+      },
+      "published_ms": 1680146454557,
+      "symbol": "RDNTUSDT",
+      "ticker": "RDNT",
+      "title": "Binance Will List Radiant Capital (RDNT) in the Innovation Zone"
+    },
+    {
+      "code": "c9cae13aa4ed405e97af29da3e509b46",
+      "event_month": {
+        "content_length": 10534,
+        "month": "2023-03",
+        "status": 200,
+        "symbol": "ARBUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ARBUSDT/1h/ARBUSDT-1h-2023-03.zip"
+      },
+      "month": "2023-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-02",
+        "status": 404,
+        "symbol": "ARBUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ARBUSDT/1h/ARBUSDT-1h-2023-02.zip"
+      },
+      "published_ms": 1679306561345,
+      "symbol": "ARBUSDT",
+      "ticker": "ARB",
+      "title": "Binance Will List Arbitrum (ARB)"
+    },
+    {
+      "code": "7600fd9241174af2832e055cdb333cfb",
+      "event_month": {
+        "content_length": 792,
+        "month": "2023-02",
+        "status": 200,
+        "symbol": "LQTYUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/LQTYUSDT/1h/LQTYUSDT-1h-2023-02.zip"
+      },
+      "month": "2023-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-01",
+        "status": 404,
+        "symbol": "LQTYUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/LQTYUSDT/1h/LQTYUSDT-1h-2023-01.zip"
+      },
+      "published_ms": 1677568518334,
+      "symbol": "LQTYUSDT",
+      "ticker": "LQTY",
+      "title": "Binance Will List Liquity (LQTY) in the Innovation Zone"
+    },
+    {
+      "code": "891a788211d9432e9c85b9b87f35ebfa",
+      "event_month": {
+        "content_length": 7634,
+        "month": "2023-02",
+        "status": 200,
+        "symbol": "SYNUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/SYNUSDT/1h/SYNUSDT-1h-2023-02.zip"
+      },
+      "month": "2023-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-01",
+        "status": 404,
+        "symbol": "SYNUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/SYNUSDT/1h/SYNUSDT-1h-2023-01.zip"
+      },
+      "published_ms": 1677047419653,
+      "symbol": "SYNUSDT",
+      "ticker": "SYN",
+      "title": "Binance Will List Synapse (SYN) in the Innovation Zone"
+    },
+    {
+      "code": "879934f2ae8c40b8a6fab68f713bb73a",
+      "event_month": {
+        "content_length": 13163,
+        "month": "2023-02",
+        "status": 200,
+        "symbol": "GNSUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/GNSUSDT/1h/GNSUSDT-1h-2023-02.zip"
+      },
+      "month": "2023-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2023-01",
+        "status": 404,
+        "symbol": "GNSUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/GNSUSDT/1h/GNSUSDT-1h-2023-01.zip"
+      },
+      "published_ms": 1676619260939,
+      "symbol": "GNSUSDT",
+      "ticker": "GNS",
+      "title": "Binance Will List Gains Network (GNS) in the Innovation Zone"
+    },
+    {
+      "code": "ee74e04671294f8786765415f8c287bb",
+      "event_month": {
+        "content_length": 13880,
+        "month": "2023-01",
+        "status": 200,
+        "symbol": "RPLUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RPLUSDT/1h/RPLUSDT-1h-2023-01.zip"
+      },
+      "month": "2023-01",
+      "prior_month": {
+        "content_length": null,
+        "month": "2022-12",
+        "status": 404,
+        "symbol": "RPLUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RPLUSDT/1h/RPLUSDT-1h-2022-12.zip"
+      },
+      "published_ms": 1674014406526,
+      "symbol": "RPLUSDT",
+      "ticker": "RPL",
+      "title": "Binance Will List Rocket Pool (RPL) in the Innovation Zone"
+    },
+    {
+      "code": "d40748b0370b49a4a8fe46c73519005c",
+      "event_month": {
+        "content_length": 21681,
+        "month": "2022-12",
+        "status": 200,
+        "symbol": "MAGICUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MAGICUSDT/1h/MAGICUSDT-1h-2022-12.zip"
+      },
+      "month": "2022-12",
+      "prior_month": {
+        "content_length": null,
+        "month": "2022-11",
+        "status": 404,
+        "symbol": "MAGICUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MAGICUSDT/1h/MAGICUSDT-1h-2022-11.zip"
+      },
+      "published_ms": 1670818244836,
+      "symbol": "MAGICUSDT",
+      "ticker": "MAGIC",
+      "title": "Binance Will List Magic (MAGIC) in the Innovation Zone"
+    },
+    {
+      "code": "0c5d8ebc2ce1441ebb86c350a9950b65",
+      "event_month": {
+        "content_length": 4157,
+        "month": "2022-10",
+        "status": 200,
+        "symbol": "OSMOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/OSMOUSDT/1h/OSMOUSDT-1h-2022-10.zip"
+      },
+      "month": "2022-10",
+      "prior_month": {
+        "content_length": null,
+        "month": "2022-09",
+        "status": 404,
+        "symbol": "OSMOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/OSMOUSDT/1h/OSMOUSDT-1h-2022-09.zip"
+      },
+      "published_ms": 1666929652539,
+      "symbol": "OSMOUSDT",
+      "ticker": "OSMO",
+      "title": "Binance Will List Osmosis (OSMO) in the Innovation Zone"
+    },
+    {
+      "code": "1139c7e87dd84664abb62f73c5e1dea2",
+      "event_month": {
+        "content_length": 16902,
+        "month": "2022-10",
+        "status": 200,
+        "symbol": "APTUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/APTUSDT/1h/APTUSDT-1h-2022-10.zip"
+      },
+      "month": "2022-10",
+      "prior_month": {
+        "content_length": null,
+        "month": "2022-09",
+        "status": 404,
+        "symbol": "APTUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/APTUSDT/1h/APTUSDT-1h-2022-09.zip"
+      },
+      "published_ms": 1666055040591,
+      "symbol": "APTUSDT",
+      "ticker": "APT",
+      "title": "Binance Will List Aptos (APT)"
+    },
+    {
+      "code": "766022428cf94796914209b44261d3a8",
+      "event_month": {
+        "content_length": 28775,
+        "month": "2022-10",
+        "status": 200,
+        "symbol": "GMXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/GMXUSDT/1h/GMXUSDT-1h-2022-10.zip"
+      },
+      "month": "2022-10",
+      "prior_month": {
+        "content_length": null,
+        "month": "2022-09",
+        "status": 404,
+        "symbol": "GMXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/GMXUSDT/1h/GMXUSDT-1h-2022-09.zip"
+      },
+      "published_ms": 1664949629449,
+      "symbol": "GMXUSDT",
+      "ticker": "GMX",
+      "title": "Binance Will List GMX (GMX) in the Innovation Zone"
+    },
+    {
+      "code": "04619e62e3784dc09b17fea81ad4d0fd",
+      "event_month": {
+        "content_length": 15301,
+        "month": "2022-08",
+        "status": 200,
+        "symbol": "STGUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/STGUSDT/1h/STGUSDT-1h-2022-08.zip"
+      },
+      "month": "2022-08",
+      "prior_month": {
+        "content_length": null,
+        "month": "2022-07",
+        "status": 404,
+        "symbol": "STGUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/STGUSDT/1h/STGUSDT-1h-2022-07.zip"
+      },
+      "published_ms": 1660889501192,
+      "symbol": "STGUSDT",
+      "ticker": "STG",
+      "title": "Binance Will List Stargate (STG) in the Innovation Zone"
+    },
+    {
+      "code": "5071ca5162df4f5696f93df1dacd260a",
+      "event_month": {
+        "content_length": 34101,
+        "month": "2022-06",
+        "status": 200,
+        "symbol": "OPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/OPUSDT/1h/OPUSDT-1h-2022-06.zip"
+      },
+      "month": "2022-06",
+      "prior_month": {
+        "content_length": null,
+        "month": "2022-05",
+        "status": 404,
+        "symbol": "OPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/OPUSDT/1h/OPUSDT-1h-2022-05.zip"
+      },
+      "published_ms": 1654045214413,
+      "symbol": "OPUSDT",
+      "ticker": "OP",
+      "title": "Binance Will List Optimism (OP)"
+    },
+    {
+      "code": "b76eb4e952a94959afb5964c32ddbb7a",
+      "event_month": {
+        "content_length": 23964,
+        "month": "2022-05",
+        "status": 200,
+        "symbol": "LDOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/LDOUSDT/1h/LDOUSDT-1h-2022-05.zip"
+      },
+      "month": "2022-05",
+      "prior_month": {
+        "content_length": null,
+        "month": "2022-04",
+        "status": 404,
+        "symbol": "LDOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/LDOUSDT/1h/LDOUSDT-1h-2022-04.zip"
+      },
+      "published_ms": 1652079437647,
+      "symbol": "LDOUSDT",
+      "ticker": "LDO",
+      "title": "Binance Will List Lido DAO (LDO)"
+    },
+    {
+      "code": "8cdabd95618c4e8aab7f0b9c347d8c70",
+      "event_month": {
+        "content_length": 12405,
+        "month": "2022-03",
+        "status": 200,
+        "symbol": "BSWUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BSWUSDT/1h/BSWUSDT-1h-2022-03.zip"
+      },
+      "month": "2022-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2022-02",
+        "status": 404,
+        "symbol": "BSWUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BSWUSDT/1h/BSWUSDT-1h-2022-02.zip"
+      },
+      "published_ms": 1647855364219,
+      "symbol": "BSWUSDT",
+      "ticker": "BSW",
+      "title": "Binance Will List Biswap (BSW) in the Innovation Zone"
+    },
+    {
+      "code": "089704e00ad1473dac72bf7bb9a5ce89",
+      "event_month": {
+        "content_length": 19358,
+        "month": "2022-03",
+        "status": 200,
+        "symbol": "APEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/APEUSDT/1h/APEUSDT-1h-2022-03.zip"
+      },
+      "month": "2022-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2022-02",
+        "status": 404,
+        "symbol": "APEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/APEUSDT/1h/APEUSDT-1h-2022-02.zip"
+      },
+      "published_ms": 1647500570924,
+      "symbol": "APEUSDT",
+      "ticker": "APE",
+      "title": "Binance Will List ApeCoin (APE)"
+    },
+    {
+      "code": "05519b80be9a48e188840f74b774469a",
+      "event_month": {
+        "content_length": 22888,
+        "month": "2022-03",
+        "status": 200,
+        "symbol": "KDAUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/KDAUSDT/1h/KDAUSDT-1h-2022-03.zip"
+      },
+      "month": "2022-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2022-02",
+        "status": 404,
+        "symbol": "KDAUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/KDAUSDT/1h/KDAUSDT-1h-2022-02.zip"
+      },
+      "published_ms": 1646975827515,
+      "symbol": "KDAUSDT",
+      "ticker": "KDA",
+      "title": "Binance Will List Kadena (KDA)"
+    },
+    {
+      "code": "e9542fb981594bb2831eedbd18056f6a",
+      "event_month": {
+        "content_length": 795,
+        "month": "2022-02",
+        "status": 200,
+        "symbol": "ASTRUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ASTRUSDT/1h/ASTRUSDT-1h-2022-02.zip"
+      },
+      "month": "2022-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2022-01",
+        "status": 404,
+        "symbol": "ASTRUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ASTRUSDT/1h/ASTRUSDT-1h-2022-01.zip"
+      },
+      "published_ms": 1646033043037,
+      "symbol": "ASTRUSDT",
+      "ticker": "ASTR",
+      "title": "Binance Will List Astar (ASTR) in the Innovation Zone"
+    },
+    {
+      "code": "8bd474c77c55450fbe828ec536963162",
+      "event_month": {
+        "content_length": 23383,
+        "month": "2022-02",
+        "status": 200,
+        "symbol": "WOOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/WOOUSDT/1h/WOOUSDT-1h-2022-02.zip"
+      },
+      "month": "2022-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2022-01",
+        "status": 404,
+        "symbol": "WOOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/WOOUSDT/1h/WOOUSDT-1h-2022-01.zip"
+      },
+      "published_ms": 1644286833903,
+      "symbol": "WOOUSDT",
+      "ticker": "WOO",
+      "title": "Binance Will List WOO Network (WOO)"
+    },
+    {
+      "code": "25dfef7a745d4e9d9eef111ed054c3d4",
+      "event_month": {
+        "content_length": 7184,
+        "month": "2022-01",
+        "status": 200,
+        "symbol": "ANCUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ANCUSDT/1h/ANCUSDT-1h-2022-01.zip"
+      },
+      "month": "2022-01",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-12",
+        "status": 404,
+        "symbol": "ANCUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ANCUSDT/1h/ANCUSDT-1h-2021-12.zip"
+      },
+      "published_ms": 1643086336145,
+      "symbol": "ANCUSDT",
+      "ticker": "ANC",
+      "title": "Binance Will List Anchor Protocol (ANC)"
+    },
+    {
+      "code": "5242f6cd0f89435b8617512e0a8c26c3",
+      "event_month": {
+        "content_length": 7417,
+        "month": "2022-01",
+        "status": 200,
+        "symbol": "ACAUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ACAUSDT/1h/ACAUSDT-1h-2022-01.zip"
+      },
+      "month": "2022-01",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-12",
+        "status": 404,
+        "symbol": "ACAUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ACAUSDT/1h/ACAUSDT-1h-2021-12.zip"
+      },
+      "published_ms": 1643076171074,
+      "symbol": "ACAUSDT",
+      "ticker": "ACA",
+      "title": "Binance Will List Acala (ACA)"
+    },
+    {
+      "code": "43b644d339394646bf65bf5c1e70d031",
+      "event_month": {
+        "content_length": 11797,
+        "month": "2022-01",
+        "status": 200,
+        "symbol": "API3USDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/API3USDT/1h/API3USDT-1h-2022-01.zip"
+      },
+      "month": "2022-01",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-12",
+        "status": 404,
+        "symbol": "API3USDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/API3USDT/1h/API3USDT-1h-2021-12.zip"
+      },
+      "published_ms": 1642746484252,
+      "symbol": "API3USDT",
+      "ticker": "API3",
+      "title": "Binance Will List API3 (API3)"
+    },
+    {
+      "code": "6a6a9b138e7549fb97379d89ef778cc0",
+      "event_month": {
+        "content_length": 24382,
+        "month": "2022-01",
+        "status": 200,
+        "symbol": "GLMRUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/GLMRUSDT/1h/GLMRUSDT-1h-2022-01.zip"
+      },
+      "month": "2022-01",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-12",
+        "status": 404,
+        "symbol": "GLMRUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/GLMRUSDT/1h/GLMRUSDT-1h-2021-12.zip"
+      },
+      "published_ms": 1641881720254,
+      "symbol": "GLMRUSDT",
+      "ticker": "GLMR",
+      "title": "Binance Will List Glimmer (GLMR)"
+    },
+    {
+      "code": "278d0e13f8484d2fb90d784b5277a0e5",
+      "event_month": {
+        "content_length": 4160,
+        "month": "2021-12",
+        "status": 200,
+        "symbol": "JOEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/JOEUSDT/1h/JOEUSDT-1h-2021-12.zip"
+      },
+      "month": "2021-12",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-11",
+        "status": 404,
+        "symbol": "JOEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/JOEUSDT/1h/JOEUSDT-1h-2021-11.zip"
+      },
+      "published_ms": 1640667410829,
+      "symbol": "JOEUSDT",
+      "ticker": "JOE",
+      "title": "Binance Will List JOE (JOE)"
+    },
+    {
+      "code": "2647bcc9c3d6493680f287529e2d0ecc",
+      "event_month": {
+        "content_length": 16765,
+        "month": "2021-12",
+        "status": 200,
+        "symbol": "HIGHUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/HIGHUSDT/1h/HIGHUSDT-1h-2021-12.zip"
+      },
+      "month": "2021-12",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-11",
+        "status": 404,
+        "symbol": "HIGHUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/HIGHUSDT/1h/HIGHUSDT-1h-2021-11.zip"
+      },
+      "published_ms": 1639706209800,
+      "symbol": "HIGHUSDT",
+      "ticker": "HIGH",
+      "title": "Binance Will List Highstreet (HIGH)"
+    },
+    {
+      "code": "17855992b37d4057aba20eb8da980d68",
+      "event_month": {
+        "content_length": 24443,
+        "month": "2021-12",
+        "status": 200,
+        "symbol": "FLUXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/FLUXUSDT/1h/FLUXUSDT-1h-2021-12.zip"
+      },
+      "month": "2021-12",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-11",
+        "status": 404,
+        "symbol": "FLUXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/FLUXUSDT/1h/FLUXUSDT-1h-2021-11.zip"
+      },
+      "published_ms": 1639101539909,
+      "symbol": "FLUXUSDT",
+      "ticker": "FLUX",
+      "title": "Binance Will List Flux (FLUX)"
+    },
+    {
+      "code": "2bd41061311e4ae287ec3e21db9a1fcf",
+      "event_month": {
+        "content_length": 25636,
+        "month": "2021-12",
+        "status": 200,
+        "symbol": "BICOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BICOUSDT/1h/BICOUSDT-1h-2021-12.zip"
+      },
+      "month": "2021-12",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-11",
+        "status": 404,
+        "symbol": "BICOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BICOUSDT/1h/BICOUSDT-1h-2021-11.zip"
+      },
+      "published_ms": 1639014974947,
+      "symbol": "BICOUSDT",
+      "ticker": "BICO",
+      "title": "Binance Will List Biconomy (BICO)"
+    },
+    {
+      "code": "331e59fda31149618f697f628d08b6e7",
+      "event_month": {
+        "content_length": 28690,
+        "month": "2021-12",
+        "status": 200,
+        "symbol": "ANYUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ANYUSDT/1h/ANYUSDT-1h-2021-12.zip"
+      },
+      "month": "2021-12",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-11",
+        "status": 404,
+        "symbol": "ANYUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ANYUSDT/1h/ANYUSDT-1h-2021-11.zip"
+      },
+      "published_ms": 1638583296089,
+      "symbol": "ANYUSDT",
+      "ticker": "ANY",
+      "title": "Binance Will List Anyswap (ANY)"
+    },
+    {
+      "code": "3a60c4b165264424a5690807a30bd40a",
+      "event_month": {
+        "content_length": 30876,
+        "month": "2021-12",
+        "status": 200,
+        "symbol": "MCUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MCUSDT/1h/MCUSDT-1h-2021-12.zip"
+      },
+      "month": "2021-12",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-11",
+        "status": 404,
+        "symbol": "MCUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MCUSDT/1h/MCUSDT-1h-2021-11.zip"
+      },
+      "published_ms": 1638417768146,
+      "symbol": "MCUSDT",
+      "ticker": "MC",
+      "title": "Binance Will List Merit Circle (MC)"
+    },
+    {
+      "code": "946b303fef6c4b4386f9d06d5486c776",
+      "event_month": {
+        "content_length": 1000,
+        "month": "2021-11",
+        "status": 200,
+        "symbol": "ALCXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ALCXUSDT/1h/ALCXUSDT-1h-2021-11.zip"
+      },
+      "month": "2021-11",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-10",
+        "status": 404,
+        "symbol": "ALCXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ALCXUSDT/1h/ALCXUSDT-1h-2021-10.zip"
+      },
+      "published_ms": 1638237546799,
+      "symbol": "ALCXUSDT",
+      "ticker": "ALCX",
+      "title": "Binance Will List Alchemix (ALCX)"
+    },
+    {
+      "code": "75041025aefd416596f12fbdb90b3521",
+      "event_month": {
+        "content_length": 4229,
+        "month": "2021-11",
+        "status": 200,
+        "symbol": "RNDRUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RNDRUSDT/1h/RNDRUSDT-1h-2021-11.zip"
+      },
+      "month": "2021-11",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-10",
+        "status": 404,
+        "symbol": "RNDRUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RNDRUSDT/1h/RNDRUSDT-1h-2021-10.zip"
+      },
+      "published_ms": 1637992664388,
+      "symbol": "RNDRUSDT",
+      "ticker": "RNDR",
+      "title": "Binance Will List Render (RNDR)"
+    },
+    {
+      "code": "1be990aec041437baf2bd1b132c3992a",
+      "event_month": {
+        "content_length": 5668,
+        "month": "2021-11",
+        "status": 200,
+        "symbol": "PYRUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/PYRUSDT/1h/PYRUSDT-1h-2021-11.zip"
+      },
+      "month": "2021-11",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-10",
+        "status": 404,
+        "symbol": "PYRUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/PYRUSDT/1h/PYRUSDT-1h-2021-10.zip"
+      },
+      "published_ms": 1637898301794,
+      "symbol": "PYRUSDT",
+      "ticker": "PYR",
+      "title": "Binance Will List Vulcan Forged PYR (PYR)"
+    },
+    {
+      "code": "f86958f1977248a691d752da735be408",
+      "event_month": {
+        "content_length": 10004,
+        "month": "2021-11",
+        "status": 200,
+        "symbol": "JASMYUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/JASMYUSDT/1h/JASMYUSDT-1h-2021-11.zip"
+      },
+      "month": "2021-11",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-10",
+        "status": 404,
+        "symbol": "JASMYUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/JASMYUSDT/1h/JASMYUSDT-1h-2021-10.zip"
+      },
+      "published_ms": 1637567982715,
+      "symbol": "JASMYUSDT",
+      "ticker": "JASMY",
+      "title": "Binance Will List JasmyCoin (JASMY)"
+    },
+    {
+      "code": "2c26b9c367a34812bfd21722db38aba7",
+      "event_month": {
+        "content_length": 17338,
+        "month": "2021-11",
+        "status": 200,
+        "symbol": "QIUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/QIUSDT/1h/QIUSDT-1h-2021-11.zip"
+      },
+      "month": "2021-11",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-10",
+        "status": 404,
+        "symbol": "QIUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/QIUSDT/1h/QIUSDT-1h-2021-10.zip"
+      },
+      "published_ms": 1636941505934,
+      "symbol": "QIUSDT",
+      "ticker": "QI",
+      "title": "Binance Will List BENQI (QI)"
+    },
+    {
+      "code": "6dcf651bba03484b87666d49474f8c07",
+      "event_month": {
+        "content_length": 23773,
+        "month": "2021-11",
+        "status": 200,
+        "symbol": "ENSUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ENSUSDT/1h/ENSUSDT-1h-2021-11.zip"
+      },
+      "month": "2021-11",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-10",
+        "status": 404,
+        "symbol": "ENSUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ENSUSDT/1h/ENSUSDT-1h-2021-10.zip"
+      },
+      "published_ms": 1636513929547,
+      "symbol": "ENSUSDT",
+      "ticker": "ENS",
+      "title": "Binance Will List Ethereum Name Service (ENS)"
+    },
+    {
+      "code": "737d3e387d9c450e91621e65a1206a95",
+      "event_month": {
+        "content_length": 20710,
+        "month": "2021-11",
+        "status": 200,
+        "symbol": "CITYUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/CITYUSDT/1h/CITYUSDT-1h-2021-11.zip"
+      },
+      "month": "2021-11",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-10",
+        "status": 404,
+        "symbol": "CITYUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/CITYUSDT/1h/CITYUSDT-1h-2021-10.zip"
+      },
+      "published_ms": 1636509782964,
+      "symbol": "CITYUSDT",
+      "ticker": "CITY",
+      "title": "Binance Will List Manchester City Fan Token (CITY)"
+    },
+    {
+      "code": "cfef2fc1127d4a9fbeb8f29f4f223cf8",
+      "event_month": {
+        "content_length": 24537,
+        "month": "2021-11",
+        "status": 200,
+        "symbol": "MOVRUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MOVRUSDT/1h/MOVRUSDT-1h-2021-11.zip"
+      },
+      "month": "2021-11",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-10",
+        "status": 404,
+        "symbol": "MOVRUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MOVRUSDT/1h/MOVRUSDT-1h-2021-10.zip"
+      },
+      "published_ms": 1636336753642,
+      "symbol": "MOVRUSDT",
+      "ticker": "MOVR",
+      "title": "Binance Will List Moonriver (MOVR)"
+    },
+    {
+      "code": "f9e1123ffc12458795716a0e027ff07a",
+      "event_month": {
+        "content_length": 26198,
+        "month": "2021-11",
+        "status": 200,
+        "symbol": "RGTUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RGTUSDT/1h/RGTUSDT-1h-2021-11.zip"
+      },
+      "month": "2021-11",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-10",
+        "status": 404,
+        "symbol": "RGTUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RGTUSDT/1h/RGTUSDT-1h-2021-10.zip"
+      },
+      "published_ms": 1636078142923,
+      "symbol": "RGTUSDT",
+      "ticker": "RGT",
+      "title": "Binance Will List Rari Governance Token (RGT)"
+    },
+    {
+      "code": "0337a0095c5b47f09a4882b6af624bdd",
+      "event_month": {
+        "content_length": 28074,
+        "month": "2021-11",
+        "status": 200,
+        "symbol": "BNXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BNXUSDT/1h/BNXUSDT-1h-2021-11.zip"
+      },
+      "month": "2021-11",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-10",
+        "status": 404,
+        "symbol": "BNXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BNXUSDT/1h/BNXUSDT-1h-2021-10.zip"
+      },
+      "published_ms": 1636008945632,
+      "symbol": "BNXUSDT",
+      "ticker": "BNX",
+      "title": "Binance Will List BinaryX (BNX) in the Innovation Zone"
+    },
+    {
+      "code": "75ee0166b3ec43aba2266ef98893dd56",
+      "event_month": {
+        "content_length": 10669,
+        "month": "2021-10",
+        "status": 200,
+        "symbol": "CHESSUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/CHESSUSDT/1h/CHESSUSDT-1h-2021-10.zip"
+      },
+      "month": "2021-10",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-09",
+        "status": 404,
+        "symbol": "CHESSUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/CHESSUSDT/1h/CHESSUSDT-1h-2021-09.zip"
+      },
+      "published_ms": 1634870199802,
+      "symbol": "CHESSUSDT",
+      "ticker": "CHESS",
+      "title": "Binance Will List Tranchess (CHESS) in the Innovation Zone"
+    },
+    {
+      "code": "abccb898c2144bfda3647031b2a60bc7",
+      "event_month": {
+        "content_length": 22065,
+        "month": "2021-10",
+        "status": 200,
+        "symbol": "RAREUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RAREUSDT/1h/RAREUSDT-1h-2021-10.zip"
+      },
+      "month": "2021-10",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-09",
+        "status": 404,
+        "symbol": "RAREUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RAREUSDT/1h/RAREUSDT-1h-2021-09.zip"
+      },
+      "published_ms": 1633917838716,
+      "symbol": "RAREUSDT",
+      "ticker": "RARE",
+      "title": "Binance Will List SuperRare (RARE)"
+    },
+    {
+      "code": "fb2941023f6f4612b51a3e659319a9ef",
+      "event_month": {
+        "content_length": 25889,
+        "month": "2021-10",
+        "status": 200,
+        "symbol": "RADUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RADUSDT/1h/RADUSDT-1h-2021-10.zip"
+      },
+      "month": "2021-10",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-09",
+        "status": 404,
+        "symbol": "RADUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RADUSDT/1h/RADUSDT-1h-2021-09.zip"
+      },
+      "published_ms": 1633577062094,
+      "symbol": "RADUSDT",
+      "ticker": "RAD",
+      "title": "Binance Will List Radicle (RAD)"
+    },
+    {
+      "code": "4a0b5201a6874cfe98adad4f74b6a75b",
+      "event_month": {
+        "content_length": 28369,
+        "month": "2021-10",
+        "status": 200,
+        "symbol": "AGLDUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/AGLDUSDT/1h/AGLDUSDT-1h-2021-10.zip"
+      },
+      "month": "2021-10",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-09",
+        "status": 404,
+        "symbol": "AGLDUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/AGLDUSDT/1h/AGLDUSDT-1h-2021-09.zip"
+      },
+      "published_ms": 1633401482769,
+      "symbol": "AGLDUSDT",
+      "ticker": "AGLD",
+      "title": "Binance Will List Adventure Gold (AGLD) in the Innovation Zone"
+    },
+    {
+      "code": "817e2583e2314d9eaa0b4f3b5136387c",
+      "event_month": {
+        "content_length": 722,
+        "month": "2021-09",
+        "status": 200,
+        "symbol": "FIDAUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/FIDAUSDT/1h/FIDAUSDT-1h-2021-09.zip"
+      },
+      "month": "2021-09",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-08",
+        "status": 404,
+        "symbol": "FIDAUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/FIDAUSDT/1h/FIDAUSDT-1h-2021-08.zip"
+      },
+      "published_ms": 1632968961908,
+      "symbol": "FIDAUSDT",
+      "ticker": "FIDA",
+      "title": "Binance Will List Bonfida (FIDA)"
+    },
+    {
+      "code": "0d1799104b494a93956bd4dcbfa442a7",
+      "event_month": {
+        "content_length": 7527,
+        "month": "2021-09",
+        "status": 200,
+        "symbol": "YGGUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/YGGUSDT/1h/YGGUSDT-1h-2021-09.zip"
+      },
+      "month": "2021-09",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-08",
+        "status": 404,
+        "symbol": "YGGUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/YGGUSDT/1h/YGGUSDT-1h-2021-08.zip"
+      },
+      "published_ms": 1632448730277,
+      "symbol": "YGGUSDT",
+      "ticker": "YGG",
+      "title": "Binance Will List Yield Guild Games (YGG)"
+    },
+    {
+      "code": "4695824836c64d5f8b621c93c2bb13a3",
+      "event_month": {
+        "content_length": 9465,
+        "month": "2021-09",
+        "status": 200,
+        "symbol": "ILVUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ILVUSDT/1h/ILVUSDT-1h-2021-09.zip"
+      },
+      "month": "2021-09",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-08",
+        "status": 404,
+        "symbol": "ILVUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ILVUSDT/1h/ILVUSDT-1h-2021-08.zip"
+      },
+      "published_ms": 1632281198989,
+      "symbol": "ILVUSDT",
+      "ticker": "ILV",
+      "title": "Binance Will List Illuvium (ILV)"
+    },
+    {
+      "code": "e01f0f9ff68c4150b7fb6ee2fcd5159b",
+      "event_month": {
+        "content_length": 21848,
+        "month": "2021-09",
+        "status": 200,
+        "symbol": "GALAUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/GALAUSDT/1h/GALAUSDT-1h-2021-09.zip"
+      },
+      "month": "2021-09",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-08",
+        "status": 404,
+        "symbol": "GALAUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/GALAUSDT/1h/GALAUSDT-1h-2021-08.zip"
+      },
+      "published_ms": 1631498440769,
+      "symbol": "GALAUSDT",
+      "ticker": "GALA",
+      "title": "Binance Will List Gala (GALA)"
+    },
+    {
+      "code": "f932763eb4854916b8456497ccd8ff88",
+      "event_month": {
+        "content_length": 27036,
+        "month": "2021-09",
+        "status": 200,
+        "symbol": "DYDXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/DYDXUSDT/1h/DYDXUSDT-1h-2021-09.zip"
+      },
+      "month": "2021-09",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-08",
+        "status": 404,
+        "symbol": "DYDXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/DYDXUSDT/1h/DYDXUSDT-1h-2021-08.zip"
+      },
+      "published_ms": 1631113186919,
+      "symbol": "DYDXUSDT",
+      "ticker": "DYDX",
+      "title": "Binance Will List dYdX (DYDX) in the Innovation Zone"
+    },
+    {
+      "code": "fdd3140e7acc46a79cd19afa3e0b8136",
+      "event_month": {
+        "content_length": 2080,
+        "month": "2021-08",
+        "status": 200,
+        "symbol": "GNOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/GNOUSDT/1h/GNOUSDT-1h-2021-08.zip"
+      },
+      "month": "2021-08",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-07",
+        "status": 404,
+        "symbol": "GNOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/GNOUSDT/1h/GNOUSDT-1h-2021-07.zip"
+      },
+      "published_ms": 1630288892172,
+      "symbol": "GNOUSDT",
+      "ticker": "GNO",
+      "title": "Binance Will List Gnosis (GNO)"
+    },
+    {
+      "code": "d22b03e28ba64f3cbde5e8a0aea55c66",
+      "event_month": {
+        "content_length": 8518,
+        "month": "2021-08",
+        "status": 200,
+        "symbol": "TRIBEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TRIBEUSDT/1h/TRIBEUSDT-1h-2021-08.zip"
+      },
+      "month": "2021-08",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-07",
+        "status": 404,
+        "symbol": "TRIBEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TRIBEUSDT/1h/TRIBEUSDT-1h-2021-07.zip"
+      },
+      "published_ms": 1629770342734,
+      "symbol": "TRIBEUSDT",
+      "ticker": "TRIBE",
+      "title": "Binance Will List Tribe (TRIBE)"
+    },
+    {
+      "code": "3c5c8af23a624818a75bf18b1faeb7c0",
+      "event_month": {
+        "content_length": 9879,
+        "month": "2021-08",
+        "status": 200,
+        "symbol": "WAXPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/WAXPUSDT/1h/WAXPUSDT-1h-2021-08.zip"
+      },
+      "month": "2021-08",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-07",
+        "status": 404,
+        "symbol": "WAXPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/WAXPUSDT/1h/WAXPUSDT-1h-2021-07.zip"
+      },
+      "published_ms": 1629685828439,
+      "symbol": "WAXPUSDT",
+      "ticker": "WAXP",
+      "title": "Binance Will List WAX (WAXP)"
+    },
+    {
+      "code": "1423a4dfd8a247a0a94acf20ac47d111",
+      "event_month": {
+        "content_length": 14657,
+        "month": "2021-08",
+        "status": 200,
+        "symbol": "MBOXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MBOXUSDT/1h/MBOXUSDT-1h-2021-08.zip"
+      },
+      "month": "2021-08",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-07",
+        "status": 404,
+        "symbol": "MBOXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MBOXUSDT/1h/MBOXUSDT-1h-2021-07.zip"
+      },
+      "published_ms": 1629341958170,
+      "symbol": "MBOXUSDT",
+      "ticker": "MBOX",
+      "title": "Binance Will List MOBOX (MBOX)"
+    },
+    {
+      "code": "d00fe25c21ef4db5afe5c12e32b4fe27",
+      "event_month": {
+        "content_length": 1842,
+        "month": "2021-07",
+        "status": 200,
+        "symbol": "FLOWUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/FLOWUSDT/1h/FLOWUSDT-1h-2021-07.zip"
+      },
+      "month": "2021-07",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-06",
+        "status": 404,
+        "symbol": "FLOWUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/FLOWUSDT/1h/FLOWUSDT-1h-2021-06.zip"
+      },
+      "published_ms": 1627628415523,
+      "symbol": "FLOWUSDT",
+      "ticker": "FLOW",
+      "title": "Binance Will List Flow (FLOW)"
+    },
+    {
+      "code": "705e87b0886d4a3c87b04ac3cf2119e5",
+      "event_month": {
+        "content_length": null,
+        "month": "2021-07",
+        "status": 404,
+        "symbol": "QUICKUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/QUICKUSDT/1h/QUICKUSDT-1h-2021-07.zip"
+      },
+      "month": "2021-07",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-06",
+        "status": 404,
+        "symbol": "QUICKUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/QUICKUSDT/1h/QUICKUSDT-1h-2021-06.zip"
+      },
+      "published_ms": 1627012836770,
+      "symbol": "QUICKUSDT",
+      "ticker": "QUICK",
+      "title": "Binance Will List QuickSwap (QUICK) in the Innovation Zone"
+    },
+    {
+      "code": "524db9d9791a4a989f6c242508e26dd3",
+      "event_month": {
+        "content_length": 7100,
+        "month": "2021-06",
+        "status": 200,
+        "symbol": "KLAYUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/KLAYUSDT/1h/KLAYUSDT-1h-2021-06.zip"
+      },
+      "month": "2021-06",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-05",
+        "status": 404,
+        "symbol": "KLAYUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/KLAYUSDT/1h/KLAYUSDT-1h-2021-05.zip"
+      },
+      "published_ms": 1624506135747,
+      "symbol": "KLAYUSDT",
+      "ticker": "KLAY",
+      "title": "Binance Will List Klaytn (KLAY)"
+    },
+    {
+      "code": "829faf920da247999d33700fb1068795",
+      "event_month": {
+        "content_length": 8865,
+        "month": "2021-06",
+        "status": 200,
+        "symbol": "ERNUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ERNUSDT/1h/ERNUSDT-1h-2021-06.zip"
+      },
+      "month": "2021-06",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-05",
+        "status": 404,
+        "symbol": "ERNUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ERNUSDT/1h/ERNUSDT-1h-2021-05.zip"
+      },
+      "published_ms": 1624329492432,
+      "symbol": "ERNUSDT",
+      "ticker": "ERN",
+      "title": "Binance Will List Ethernity Chain (ERN) in the Innovation Zone"
+    },
+    {
+      "code": "ed88b0ac99554ad7a5c7cae58fb0f492",
+      "event_month": {
+        "content_length": 14858,
+        "month": "2021-06",
+        "status": 200,
+        "symbol": "KEEPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/KEEPUSDT/1h/KEEPUSDT-1h-2021-06.zip"
+      },
+      "month": "2021-06",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-05",
+        "status": 404,
+        "symbol": "KEEPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/KEEPUSDT/1h/KEEPUSDT-1h-2021-05.zip"
+      },
+      "published_ms": 1623897290178,
+      "symbol": "KEEPUSDT",
+      "ticker": "KEEP",
+      "title": "Binance Will List Keep Network (KEEP)"
+    },
+    {
+      "code": "2d4e19b8c4854f969d95dd35bf65b182",
+      "event_month": {
+        "content_length": 19943,
+        "month": "2021-06",
+        "status": 200,
+        "symbol": "TORNUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TORNUSDT/1h/TORNUSDT-1h-2021-06.zip"
+      },
+      "month": "2021-06",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-05",
+        "status": 404,
+        "symbol": "TORNUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TORNUSDT/1h/TORNUSDT-1h-2021-05.zip"
+      },
+      "published_ms": 1623378723635,
+      "symbol": "TORNUSDT",
+      "ticker": "TORN",
+      "title": "Binance Will List Tornado Cash (TORN)"
+    },
+    {
+      "code": "df28017f9ea34d2f9d58c4ad467e0b88",
+      "event_month": {
+        "content_length": 21987,
+        "month": "2021-06",
+        "status": 200,
+        "symbol": "GTCUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/GTCUSDT/1h/GTCUSDT-1h-2021-06.zip"
+      },
+      "month": "2021-06",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-05",
+        "status": 404,
+        "symbol": "GTCUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/GTCUSDT/1h/GTCUSDT-1h-2021-05.zip"
+      },
+      "published_ms": 1623306940686,
+      "symbol": "GTCUSDT",
+      "ticker": "GTC",
+      "title": "Binance Will List Gitcoin (GTC)"
+    },
+    {
+      "code": "42b8a2c991a54523a8249d4691b6154c",
+      "event_month": {
+        "content_length": 27568,
+        "month": "2021-06",
+        "status": 200,
+        "symbol": "NUUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/NUUSDT/1h/NUUSDT-1h-2021-06.zip"
+      },
+      "month": "2021-06",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-05",
+        "status": 404,
+        "symbol": "NUUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/NUUSDT/1h/NUUSDT-1h-2021-05.zip"
+      },
+      "published_ms": 1622773625650,
+      "symbol": "NUUSDT",
+      "ticker": "NU",
+      "title": "Binance Will List NuCypher (NU)"
+    },
+    {
+      "code": "a5ba29e416bc4bc2900c0f3d4d1bfa8a",
+      "event_month": {
+        "content_length": 4035,
+        "month": "2021-05",
+        "status": 200,
+        "symbol": "LPTUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/LPTUSDT/1h/LPTUSDT-1h-2021-05.zip"
+      },
+      "month": "2021-05",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-04",
+        "status": 404,
+        "symbol": "LPTUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/LPTUSDT/1h/LPTUSDT-1h-2021-04.zip"
+      },
+      "published_ms": 1622167978377,
+      "symbol": "LPTUSDT",
+      "ticker": "LPT",
+      "title": "Binance Will List Livepeer (LPT)"
+    },
+    {
+      "code": "36bf2dc22d544ee09bc8760011bdebd3",
+      "event_month": {
+        "content_length": 7505,
+        "month": "2021-05",
+        "status": 200,
+        "symbol": "MASKUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MASKUSDT/1h/MASKUSDT-1h-2021-05.zip"
+      },
+      "month": "2021-05",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-04",
+        "status": 404,
+        "symbol": "MASKUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MASKUSDT/1h/MASKUSDT-1h-2021-04.zip"
+      },
+      "published_ms": 1621912203792,
+      "symbol": "MASKUSDT",
+      "ticker": "MASK",
+      "title": "Binance Will List Mask Network (MASK)"
+    },
+    {
+      "code": "b8f30e3a15f6493185c32398184871c6",
+      "event_month": {
+        "content_length": 9311,
+        "month": "2021-05",
+        "status": 200,
+        "symbol": "MDXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MDXUSDT/1h/MDXUSDT-1h-2021-05.zip"
+      },
+      "month": "2021-05",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-04",
+        "status": 404,
+        "symbol": "MDXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MDXUSDT/1h/MDXUSDT-1h-2021-04.zip"
+      },
+      "published_ms": 1621835694835,
+      "symbol": "MDXUSDT",
+      "ticker": "MDX",
+      "title": "Binance Will List Mdex (MDX) in the Innovation Zone"
+    },
+    {
+      "code": "7335f149d9c14da199298505cf0375b6",
+      "event_month": {
+        "content_length": 14145,
+        "month": "2021-05",
+        "status": 200,
+        "symbol": "POLSUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/POLSUSDT/1h/POLSUSDT-1h-2021-05.zip"
+      },
+      "month": "2021-05",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-04",
+        "status": 404,
+        "symbol": "POLSUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/POLSUSDT/1h/POLSUSDT-1h-2021-04.zip"
+      },
+      "published_ms": 1621396685822,
+      "symbol": "POLSUSDT",
+      "ticker": "POLS",
+      "title": "Binance Will List Polkastarter (POLS) in the Innovation Zone"
+    },
+    {
+      "code": "169a715af77a419c918c932897e65b2c",
+      "event_month": {
+        "content_length": 19733,
+        "month": "2021-05",
+        "status": 200,
+        "symbol": "ARUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ARUSDT/1h/ARUSDT-1h-2021-05.zip"
+      },
+      "month": "2021-05",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-04",
+        "status": 404,
+        "symbol": "ARUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ARUSDT/1h/ARUSDT-1h-2021-04.zip"
+      },
+      "published_ms": 1620967012596,
+      "symbol": "ARUSDT",
+      "ticker": "AR",
+      "title": "Binance Will List Arweave (AR)"
+    },
+    {
+      "code": "33b6e8116ce54705ac89e898d1a05510",
+      "event_month": {
+        "content_length": 24658,
+        "month": "2021-05",
+        "status": 200,
+        "symbol": "ICPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ICPUSDT/1h/ICPUSDT-1h-2021-05.zip"
+      },
+      "month": "2021-05",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-04",
+        "status": 404,
+        "symbol": "ICPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ICPUSDT/1h/ICPUSDT-1h-2021-04.zip"
+      },
+      "published_ms": 1620654774074,
+      "symbol": "ICPUSDT",
+      "ticker": "ICP",
+      "title": "Binance Will List Internet Computer (ICP)"
+    },
+    {
+      "code": "f1fe616e688b452f9d736753cb2d947a",
+      "event_month": {
+        "content_length": 29501,
+        "month": "2021-05",
+        "status": 200,
+        "symbol": "SHIBUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/SHIBUSDT/1h/SHIBUSDT-1h-2021-05.zip"
+      },
+      "month": "2021-05",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-04",
+        "status": 404,
+        "symbol": "SHIBUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/SHIBUSDT/1h/SHIBUSDT-1h-2021-04.zip"
+      },
+      "published_ms": 1620632679878,
+      "symbol": "SHIBUSDT",
+      "ticker": "SHIB",
+      "title": "Binance Will List SHIBA INU (SHIB) in the Innovation Zone"
+    },
+    {
+      "code": "272f913f85b8430d92f520ec04feee38",
+      "event_month": {
+        "content_length": 9330,
+        "month": "2021-04",
+        "status": 200,
+        "symbol": "FORTHUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/FORTHUSDT/1h/FORTHUSDT-1h-2021-04.zip"
+      },
+      "month": "2021-04",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-03",
+        "status": 404,
+        "symbol": "FORTHUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/FORTHUSDT/1h/FORTHUSDT-1h-2021-03.zip"
+      },
+      "published_ms": 1619157884672,
+      "symbol": "FORTHUSDT",
+      "ticker": "FORTH",
+      "title": "Binance Will List Ampleforth Governance Token (FORTH)"
+    },
+    {
+      "code": "bc5b4c305f0a4dcdbef2796b39e252d3",
+      "event_month": {
+        "content_length": 11604,
+        "month": "2021-04",
+        "status": 200,
+        "symbol": "BARUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BARUSDT/1h/BARUSDT-1h-2021-04.zip"
+      },
+      "month": "2021-04",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-03",
+        "status": 404,
+        "symbol": "BARUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BARUSDT/1h/BARUSDT-1h-2021-03.zip"
+      },
+      "published_ms": 1618977613203,
+      "symbol": "BARUSDT",
+      "ticker": "BAR",
+      "title": "Binance Will List FC Barcelona Fan Token (BAR) in the Innovation Zone. Purchase BAR Tokens with BNB at a 30% Discount Prior to Trading Using the Launchpad Subscription Format!"
+    },
+    {
+      "code": "62a72f3052674fc589ad401e973ce9ab",
+      "event_month": {
+        "content_length": 13401,
+        "month": "2021-04",
+        "status": 200,
+        "symbol": "MIRUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MIRUSDT/1h/MIRUSDT-1h-2021-04.zip"
+      },
+      "month": "2021-04",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-03",
+        "status": 404,
+        "symbol": "MIRUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/MIRUSDT/1h/MIRUSDT-1h-2021-03.zip"
+      },
+      "published_ms": 1618821719989,
+      "symbol": "MIRUSDT",
+      "ticker": "MIR",
+      "title": "Binance Will List Mirror Protocol (MIR) in the Innovation Zone"
+    },
+    {
+      "code": "cd4d635399374a68ace90874ce8b9eb2",
+      "event_month": {
+        "content_length": 3210,
+        "month": "2021-03",
+        "status": 200,
+        "symbol": "CFXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/CFXUSDT/1h/CFXUSDT-1h-2021-03.zip"
+      },
+      "month": "2021-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "CFXUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/CFXUSDT/1h/CFXUSDT-1h-2021-02.zip"
+      },
+      "published_ms": 1617000842522,
+      "symbol": "CFXUSDT",
+      "ticker": "CFX",
+      "title": "Binance Will List Conflux Network (CFX)"
+    },
+    {
+      "code": "5a39df5ea166490f91f04c85cf37f76c",
+      "event_month": {
+        "content_length": 8261,
+        "month": "2021-03",
+        "status": 200,
+        "symbol": "SUPERUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/SUPERUSDT/1h/SUPERUSDT-1h-2021-03.zip"
+      },
+      "month": "2021-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "SUPERUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/SUPERUSDT/1h/SUPERUSDT-1h-2021-02.zip"
+      },
+      "published_ms": 1616657030236,
+      "symbol": "SUPERUSDT",
+      "ticker": "SUPER",
+      "title": "Binance Will List SuperFarm (SUPER) in the Innovation Zone"
+    },
+    {
+      "code": "a5da7668d80a407595a18c6b729fa55a",
+      "event_month": {
+        "content_length": 11885,
+        "month": "2021-03",
+        "status": 200,
+        "symbol": "RAMPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RAMPUSDT/1h/RAMPUSDT-1h-2021-03.zip"
+      },
+      "month": "2021-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "RAMPUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RAMPUSDT/1h/RAMPUSDT-1h-2021-02.zip"
+      },
+      "published_ms": 1616392572034,
+      "symbol": "RAMPUSDT",
+      "ticker": "RAMP",
+      "title": "Binance Will List RAMP (RAMP) in the Innovation Zone"
+    },
+    {
+      "code": "c127757cde714989947d673777e1d5a4",
+      "event_month": {
+        "content_length": 16668,
+        "month": "2021-03",
+        "status": 200,
+        "symbol": "LINAUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/LINAUSDT/1h/LINAUSDT-1h-2021-03.zip"
+      },
+      "month": "2021-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "LINAUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/LINAUSDT/1h/LINAUSDT-1h-2021-02.zip"
+      },
+      "published_ms": 1616040009455,
+      "symbol": "LINAUSDT",
+      "ticker": "LINA",
+      "title": "Binance Will List Linear (LINA) in the Innovation Zone. Purchase LINA Tokens with BNB at a 30% Discount Prior to Trading Using the Launchpad Subscription Format!"
+    },
+    {
+      "code": "f616b3b12724418eb8de89ce58fe3c27",
+      "event_month": {
+        "content_length": null,
+        "month": "2021-03",
+        "status": 404,
+        "symbol": "BIFIUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BIFIUSDT/1h/BIFIUSDT-1h-2021-03.zip"
+      },
+      "month": "2021-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "BIFIUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BIFIUSDT/1h/BIFIUSDT-1h-2021-02.zip"
+      },
+      "published_ms": 1615872604155,
+      "symbol": "BIFIUSDT",
+      "ticker": "BIFI",
+      "title": "Binance Will List Beefy.Finance (BIFI) in the Innovation Zone"
+    },
+    {
+      "code": "7a11ed69a25744fe9e08f8aedea019c6",
+      "event_month": {
+        "content_length": 26573,
+        "month": "2021-03",
+        "status": 200,
+        "symbol": "DEGOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/DEGOUSDT/1h/DEGOUSDT-1h-2021-03.zip"
+      },
+      "month": "2021-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "DEGOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/DEGOUSDT/1h/DEGOUSDT-1h-2021-02.zip"
+      },
+      "published_ms": 1615348807223,
+      "symbol": "DEGOUSDT",
+      "ticker": "DEGO",
+      "title": "Binance Will List Dego Finance (DEGO) in the Innovation Zone. Purchase DEGO Tokens with BNB at a 40% Discount Prior to Trading Using the Launchpad Subscription Format!"
+    },
+    {
+      "code": "70f7134ad2bd493db68df020623f39ea",
+      "event_month": {
+        "content_length": 26783,
+        "month": "2021-03",
+        "status": 200,
+        "symbol": "PONDUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/PONDUSDT/1h/PONDUSDT-1h-2021-03.zip"
+      },
+      "month": "2021-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "PONDUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/PONDUSDT/1h/PONDUSDT-1h-2021-02.zip"
+      },
+      "published_ms": 1615266009176,
+      "symbol": "PONDUSDT",
+      "ticker": "POND",
+      "title": "Binance Will List Marlin (POND) in the Innovation Zone"
+    },
+    {
+      "code": "8ccb514ecc664a7d93c71ea9eb173905",
+      "event_month": {
+        "content_length": 28355,
+        "month": "2021-03",
+        "status": 200,
+        "symbol": "OMUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/OMUSDT/1h/OMUSDT-1h-2021-03.zip"
+      },
+      "month": "2021-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "OMUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/OMUSDT/1h/OMUSDT-1h-2021-02.zip"
+      },
+      "published_ms": 1615183207818,
+      "symbol": "OMUSDT",
+      "ticker": "OM",
+      "title": "Binance Will List MANTRA DAO (OM) in the Innovation Zone"
+    },
+    {
+      "code": "4dfae5ce3d894504bc50c423356846f0",
+      "event_month": {
+        "content_length": 32412,
+        "month": "2021-03",
+        "status": 200,
+        "symbol": "FISUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/FISUSDT/1h/FISUSDT-1h-2021-03.zip"
+      },
+      "month": "2021-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "FISUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/FISUSDT/1h/FISUSDT-1h-2021-02.zip"
+      },
+      "published_ms": 1614747605650,
+      "symbol": "FISUSDT",
+      "ticker": "FIS",
+      "title": "Binance Will List Stafi (FIS) in the Innovation Zone"
+    },
+    {
+      "code": "a2aa2ee0e80e4291aa8d3f22f9793948",
+      "event_month": {
+        "content_length": 34209,
+        "month": "2021-03",
+        "status": 200,
+        "symbol": "BADGERUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BADGERUSDT/1h/BADGERUSDT-1h-2021-03.zip"
+      },
+      "month": "2021-03",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "BADGERUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BADGERUSDT/1h/BADGERUSDT-1h-2021-02.zip"
+      },
+      "published_ms": 1614661206073,
+      "symbol": "BADGERUSDT",
+      "ticker": "BADGER",
+      "title": "Binance Will List Badger DAO (BADGER) in the Innovation Zone"
+    },
+    {
+      "code": "31c14ad157af4daa89bd58633791a6a5",
+      "event_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "TVKUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TVKUSDT/1h/TVKUSDT-1h-2021-02.zip"
+      },
+      "month": "2021-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-01",
+        "status": 404,
+        "symbol": "TVKUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TVKUSDT/1h/TVKUSDT-1h-2021-01.zip"
+      },
+      "published_ms": 1614317208119,
+      "symbol": "TVKUSDT",
+      "ticker": "TVK",
+      "title": "Binance Will List Terra Virtua (TVK) in the Innovation Zone"
+    },
+    {
+      "code": "d6baaf7a59d74cb4bcf1d95efd2bf19c",
+      "event_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "PHAUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/PHAUSDT/1h/PHAUSDT-1h-2021-02.zip"
+      },
+      "month": "2021-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-01",
+        "status": 404,
+        "symbol": "PHAUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/PHAUSDT/1h/PHAUSDT-1h-2021-01.zip"
+      },
+      "published_ms": 1614231014413,
+      "symbol": "PHAUSDT",
+      "ticker": "PHA",
+      "title": "Binance Will List Phala Network (PHA) in the Innovation Zone"
+    },
+    {
+      "code": "b7f145caed29417982bd8bf253bdbcfb",
+      "event_month": {
+        "content_length": 5702,
+        "month": "2021-02",
+        "status": 200,
+        "symbol": "ACMUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ACMUSDT/1h/ACMUSDT-1h-2021-02.zip"
+      },
+      "month": "2021-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-01",
+        "status": 404,
+        "symbol": "ACMUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/ACMUSDT/1h/ACMUSDT-1h-2021-01.zip"
+      },
+      "published_ms": 1614139268504,
+      "symbol": "ACMUSDT",
+      "ticker": "ACM",
+      "title": "Binance Will List AC Milan Fan Token (ACM). Purchase ACM Tokens with BNB at a 25% Discount Prior to Trading Using the Launchpad Subscription Format!"
+    },
+    {
+      "code": "5e90d04a95994f768f411d08bfbd181e",
+      "event_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "UFTUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/UFTUSDT/1h/UFTUSDT-1h-2021-02.zip"
+      },
+      "month": "2021-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-01",
+        "status": 404,
+        "symbol": "UFTUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/UFTUSDT/1h/UFTUSDT-1h-2021-01.zip"
+      },
+      "published_ms": 1614058209014,
+      "symbol": "UFTUSDT",
+      "ticker": "UFT",
+      "title": "Binance Will List UniLend (UFT) in the Innovation Zone"
+    },
+    {
+      "code": "c9bc5a0f776c417fa57fa613e24c1b7e",
+      "event_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "FXSUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/FXSUSDT/1h/FXSUSDT-1h-2021-02.zip"
+      },
+      "month": "2021-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-01",
+        "status": 404,
+        "symbol": "FXSUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/FXSUSDT/1h/FXSUSDT-1h-2021-01.zip"
+      },
+      "published_ms": 1613627404541,
+      "symbol": "FXSUSDT",
+      "ticker": "FXS",
+      "title": "Binance Will List Frax Share (FXS) in the Innovation Zone"
+    },
+    {
+      "code": "61661d11e2344c8396beb8b28d726bf2",
+      "event_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "VAIUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/VAIUSDT/1h/VAIUSDT-1h-2021-02.zip"
+      },
+      "month": "2021-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-01",
+        "status": 404,
+        "symbol": "VAIUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/VAIUSDT/1h/VAIUSDT-1h-2021-01.zip"
+      },
+      "published_ms": 1612410517494,
+      "symbol": "VAIUSDT",
+      "ticker": "VAI",
+      "title": "Binance Will List Vai (VAI) in the Innovation Zone"
+    },
+    {
+      "code": "2d0541bb2957448bb682a327740ae3ee",
+      "event_month": {
+        "content_length": null,
+        "month": "2021-02",
+        "status": 404,
+        "symbol": "PROSUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/PROSUSDT/1h/PROSUSDT-1h-2021-02.zip"
+      },
+      "month": "2021-02",
+      "prior_month": {
+        "content_length": null,
+        "month": "2021-01",
+        "status": 404,
+        "symbol": "PROSUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/PROSUSDT/1h/PROSUSDT-1h-2021-01.zip"
+      },
+      "published_ms": 1612328405006,
+      "symbol": "PROSUSDT",
+      "ticker": "PROS",
+      "title": "Binance Will List Prosper (PROS) in the Innovation Zone"
+    },
+    {
+      "code": "f6d7c24dc4cc4143b04ca6186d184280",
+      "event_month": {
+        "content_length": 5944,
+        "month": "2021-01",
+        "status": 200,
+        "symbol": "TWTUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TWTUSDT/1h/TWTUSDT-1h-2021-01.zip"
+      },
+      "month": "2021-01",
+      "prior_month": {
+        "content_length": null,
+        "month": "2020-12",
+        "status": 404,
+        "symbol": "TWTUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TWTUSDT/1h/TWTUSDT-1h-2020-12.zip"
+      },
+      "published_ms": 1611723606390,
+      "symbol": "TWTUSDT",
+      "ticker": "TWT",
+      "title": "Binance Will List Trust Wallet Token (TWT) in the Innovation Zone"
+    },
+    {
+      "code": "71d82e6debf3469e9aefaafba3f9779e",
+      "event_month": {
+        "content_length": 6539,
+        "month": "2021-01",
+        "status": 200,
+        "symbol": "CKBUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/CKBUSDT/1h/CKBUSDT-1h-2021-01.zip"
+      },
+      "month": "2021-01",
+      "prior_month": {
+        "content_length": null,
+        "month": "2020-12",
+        "status": 404,
+        "symbol": "CKBUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/CKBUSDT/1h/CKBUSDT-1h-2020-12.zip"
+      },
+      "published_ms": 1611644408452,
+      "symbol": "CKBUSDT",
+      "ticker": "CKB",
+      "title": "Binance Will List Nervos Network (CKB)"
+    },
+    {
+      "code": "a439ef291fb0402fa76a5757e0587cd4",
+      "event_month": {
+        "content_length": null,
+        "month": "2021-01",
+        "status": 404,
+        "symbol": "DEXEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/DEXEUSDT/1h/DEXEUSDT-1h-2021-01.zip"
+      },
+      "month": "2021-01",
+      "prior_month": {
+        "content_length": null,
+        "month": "2020-12",
+        "status": 404,
+        "symbol": "DEXEUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/DEXEUSDT/1h/DEXEUSDT-1h-2020-12.zip"
+      },
+      "published_ms": 1611208812034,
+      "symbol": "DEXEUSDT",
+      "ticker": "DEXE",
+      "title": "Binance Will List DeXe (DEXE) in the Innovation Zone"
+    },
+    {
+      "code": "26aba13db00c473085bf51ddd2c81839",
+      "event_month": {
+        "content_length": 14516,
+        "month": "2021-01",
+        "status": 200,
+        "symbol": "TRUUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TRUUSDT/1h/TRUUSDT-1h-2021-01.zip"
+      },
+      "month": "2021-01",
+      "prior_month": {
+        "content_length": null,
+        "month": "2020-12",
+        "status": 404,
+        "symbol": "TRUUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/TRUUSDT/1h/TRUUSDT-1h-2020-12.zip"
+      },
+      "published_ms": 1611028828709,
+      "symbol": "TRUUSDT",
+      "ticker": "TRU",
+      "title": "Binance Will List TrueFi (TRU) in the Innovation Zone"
+    },
+    {
+      "code": "31a36b80e92f4823a63078dc4a7e1bdc",
+      "event_month": {
+        "content_length": 26972,
+        "month": "2021-01",
+        "status": 200,
+        "symbol": "RIFUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RIFUSDT/1h/RIFUSDT-1h-2021-01.zip"
+      },
+      "month": "2021-01",
+      "prior_month": {
+        "content_length": null,
+        "month": "2020-12",
+        "status": 404,
+        "symbol": "RIFUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/RIFUSDT/1h/RIFUSDT-1h-2020-12.zip"
+      },
+      "published_ms": 1609995606106,
+      "symbol": "RIFUSDT",
+      "ticker": "RIF",
+      "title": "Binance Will List RSK Infrastructure Framework (RIF)"
+    },
+    {
+      "code": "61735e6cf5f4434593a502c5a16a9efb",
+      "event_month": {
+        "content_length": 30524,
+        "month": "2021-01",
+        "status": 200,
+        "symbol": "CELOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/CELOUSDT/1h/CELOUSDT-1h-2021-01.zip"
+      },
+      "month": "2021-01",
+      "prior_month": {
+        "content_length": null,
+        "month": "2020-12",
+        "status": 404,
+        "symbol": "CELOUSDT",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/CELOUSDT/1h/CELOUSDT-1h-2020-12.zip"
+      },
+      "published_ms": 1609817785204,
+      "symbol": "CELOUSDT",
+      "ticker": "CELO",
+      "title": "Binance Will List Celo (CELO)"
+    }
+  ],
+  "catalog_sha256": "750e420147f306687f97541612e32524999a68c26904b1160b165dddc5846f6c",
+  "price_or_return_data_read": false,
+  "retrieved_at_utc": "2026-11-08T13:44:18.103494+00:00",
+  "source": "Binance official announcement catalog and Binance Vision spot 1h ZIP HEAD"
+}
