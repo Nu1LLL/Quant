@@ -9,6 +9,7 @@ from research.crypto_blackbox.binance_spot_flow_prospective import (
     ACTIVATION_MS, GRACE_MS, HOUR_MS, FlowCollector, Trade, _connect,
     parse_trade,
 )
+from research.crypto_blackbox.binance_spot_flow_coverage import audit
 
 
 class BinanceSpotFlowTests(unittest.TestCase):
@@ -88,6 +89,18 @@ class BinanceSpotFlowTests(unittest.TestCase):
         self.assertEqual(self.db.execute(
             "SELECT status FROM hourly_flow WHERE symbol='ADAUSDT'"
         ).fetchone()[0], "invalid")
+
+    def test_coverage_is_read_only_and_never_claims_alpha(self):
+        missing = self.path.parent / "missing.sqlite"
+        before = audit(missing, as_of_ms=ACTIVATION_MS + HOUR_MS + GRACE_MS)
+        self.assertEqual(before["status"], "journal_missing")
+        self.assertFalse(missing.exists())
+        self.collector.connected(ACTIVATION_MS - 600_000)
+        self.collector.seal_due(ACTIVATION_MS + HOUR_MS + GRACE_MS)
+        report = audit(self.path, as_of_ms=ACTIVATION_MS + HOUR_MS + GRACE_MS)
+        self.assertEqual(report["observed_hours_all_symbols"], 0)
+        self.assertEqual(report["status_counts"]["ADAUSDT"]["empty"], 1)
+        self.assertFalse(report["five_year_independent_oos_proven"])
 
 
 if __name__ == "__main__":
