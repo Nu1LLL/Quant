@@ -35,6 +35,7 @@ class StreamReadiness:
 
 @dataclass(frozen=True)
 class JointReadiness:
+    news_events: StreamReadiness
     events_claims: StreamReadiness
     macro_schedule: StreamReadiness
     joint_start_ms: int | None
@@ -81,10 +82,13 @@ def _stream(name: str, rows: list[tuple] | None, now_ms: int) -> StreamReadiness
             start = last_valid = None
             continuous_polls = 0
         last_seen = stamp
-        valid = (all(status != "unavailable" and status in
-                     ("fresh", "fresh_no_events", "fresh_no_claims")
-                     for status in item[1:]) if name == "events_claims"
-                 else item[1] == "fresh")
+        if name == "events_claims":
+            valid = all(status in ("fresh", "fresh_no_events", "fresh_no_claims")
+                        for status in item[1:])
+        elif name == "news_events":
+            valid = item[1] in ("fresh", "fresh_no_events")
+        else:
+            valid = item[1] == "fresh"
         if not valid:
             breaks += 1
             start = last_valid = None
@@ -122,10 +126,14 @@ def assess(journal_dir: str | Path, now_ms: int | None = None) -> JointReadiness
     if type(now_ms) is not int or now_ms <= 0:
         raise ValueError("now_ms must be a positive UTC millisecond integer")
     directory = Path(journal_dir)
-    events = _stream("events_claims", _read_rows(
+    source_rows = _read_rows(
         directory / "whalewatcher_shadow.sqlite",
         "SELECT observed_at_ms,events_status,btc_status,eth_status "
-        "FROM source_polls ORDER BY observed_at_ms,id"), now_ms)
+        "FROM source_polls ORDER BY observed_at_ms,id")
+    news = _stream("news_events",
+                   [(row[0], row[1]) for row in source_rows]
+                   if source_rows is not None else None, now_ms)
+    events = _stream("events_claims", source_rows, now_ms)
     macro = _stream("macro_schedule", _read_rows(
         directory / "whalewatcher_macro.sqlite",
         "SELECT observed_at_ms,status FROM polls ORDER BY observed_at_ms,id"), now_ms)
@@ -141,7 +149,7 @@ def assess(journal_dir: str | Path, now_ms: int | None = None) -> JointReadiness
                    and joint_span >= MIN_OOS_MS
                    and joint_start is not None
                    and _five_calendar_years_elapsed(joint_start, now_ms))
-    return JointReadiness(events, macro, joint_start, joint_span, joint_ready)
+    return JointReadiness(news, events, macro, joint_start, joint_span, joint_ready)
 
 
 def main() -> None:

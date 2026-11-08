@@ -27,6 +27,14 @@ The existing `microstructure_blackbox.py` contains experimental HMM and RBF mach
 - A passing synthetic test proves software contract behavior only. Aside from the two-month integrity smoke check below, no full historical dataset, genuine five-year OOS PnL, monthly profitability, or Alpha has been produced by this package. Any future formal hypothesis must be preregistered in a separate commit **before** results are read, following `../SCOPE.md`; it can only enter small paper-trading after all gates pass.
 - `REAL_ARCHIVE_SMOKE.md` records a two-month, price-free integrity check. One 2020 archive has two timestamp gaps and is rejected; one 2025 archive passes. Neither result establishes a five-year dataset or any strategy return.
 
+The news-only interface in whalewatcher_news_features.py exposes a separate
+17-field count vector using only the event source's actual poll status and
+as-of changes. An unavailable BTC/ETH directional-claim feed stays unavailable
+in the existing combined vector and joint readiness Gate; it no longer erases
+fresh news observations. A missing or stale news poll is unavailable, never
+zero news. The vector excludes claims, prices, article text, AI advice and
+trade direction. It remains research-only and cannot qualify an Alpha/order.
+
 ## Test
 
 Run the isolated synthetic suite from the repository root:

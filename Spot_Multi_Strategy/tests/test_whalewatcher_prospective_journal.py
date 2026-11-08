@@ -9,9 +9,10 @@ import unittest
 from unittest.mock import patch
 
 from research.crypto_blackbox.whalewatcher_prospective_journal import (
-    capture_current, counts_asof, poll_coverage, read_asof,
+    capture_current, counts_asof, poll_coverage, read_asof, read_events_asof,
 )
 from research.crypto_blackbox.whalewatcher_features import build_event_features
+from research.crypto_blackbox.whalewatcher_news_features import build_news_features
 
 
 NOW = 1_800_000_000_000
@@ -226,6 +227,65 @@ class ProspectiveJournalTests(unittest.TestCase):
         self.assertEqual(early.values["event_crypto_1h"], 0)
         self.assertEqual(later.values["event_crypto_1h"], 1)
         self.assertFalse(stale.source_available)
+
+    def test_news_remains_available_when_claim_feed_is_unavailable(self):
+        self.write(_event_snapshot(), _claim_snapshot())
+        capture_current(self.watcher, self.db)
+        self.now += 1_000
+        self.claims.unlink()
+        statuses = capture_current(self.watcher, self.db)
+        self.assertEqual([row.status for row in statuses],
+                         ["unchanged", "unavailable", "unavailable"])
+        self.assertEqual(poll_coverage(self.db, NOW - 1, self.now,
+                                       stream="events").unavailable_polls, 0)
+        self.assertEqual(poll_coverage(self.db, NOW - 1, self.now,
+                                       stream="joint").unavailable_polls, 1)
+        self.assertEqual(len(read_events_asof(self.db, self.now)), 1)
+        with patch("research.crypto_blackbox.whalewatcher_news_features.time.time_ns",
+                   return_value=self.now * 1_000_000):
+            news = build_news_features(self.db, self.now)
+        with patch("research.crypto_blackbox.whalewatcher_features.time.time_ns",
+                   return_value=self.now * 1_000_000):
+            combined = build_event_features(self.db, self.now)
+        self.assertTrue(news.source_available)
+        self.assertEqual(news.values["event_crypto_1h"], 1)
+        self.assertFalse(news.execution_eligible)
+        self.assertFalse(news.historical_oos_eligible)
+        self.assertFalse(combined.source_available)
+        self.assertEqual(dict(combined.values), {})
+        self.now += 1_000
+        self.events.unlink()
+        capture_current(self.watcher, self.db)
+        with patch("research.crypto_blackbox.whalewatcher_news_features.time.time_ns",
+                   return_value=self.now * 1_000_000):
+            missing = build_news_features(self.db, self.now)
+        self.assertFalse(missing.source_available)
+        self.assertEqual(dict(missing.values), {})
+
+    def test_news_only_feature_waits_for_publication_and_ignores_old_import(self):
+        future = _event_snapshot()
+        future["records"][0]["event"]["published_at_ms"] = NOW + 2_000
+        self.write(future, _claim_snapshot())
+        self.claims.unlink()
+        capture_current(self.watcher, self.db)
+        with patch("research.crypto_blackbox.whalewatcher_news_features.time.time_ns",
+                   return_value=(NOW + 2_000) * 1_000_000):
+            early = build_news_features(self.db, NOW)
+            later = build_news_features(self.db, NOW + 2_000)
+        self.assertEqual(early.values["event_crypto_1h"], 0)
+        self.assertEqual(later.values["event_crypto_1h"], 1)
+        self.now += 3_000
+        old = _event_snapshot(self.now - 100)
+        old["records"][0]["event"]["published_at_ms"] = self.now - 3 * 24 * 3_600_000
+        old["records"][0]["first_seen_at_ms"] = self.now - 24 * 3_600_000
+        self.write(old, _claim_snapshot())
+        self.claims.unlink()
+        capture_current(self.watcher, self.db)
+        with patch("research.crypto_blackbox.whalewatcher_news_features.time.time_ns",
+                   return_value=self.now * 1_000_000):
+            delayed = build_news_features(self.db, self.now)
+        self.assertTrue(delayed.source_available)
+        self.assertEqual(delayed.values["event_crypto_24h"], 0)
 
     def test_old_news_first_import_does_not_look_like_fresh_news(self):
         old = _event_snapshot()

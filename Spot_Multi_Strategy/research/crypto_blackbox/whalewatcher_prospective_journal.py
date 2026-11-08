@@ -306,11 +306,14 @@ def capture_current(watcher_data_dir: str | Path, journal_path: str | Path
             return statuses
 
 
-def poll_coverage(journal_path: str | Path, start_ms: int, end_ms: int) -> PollCoverage:
-    """Audit actual polls, including unchanged and unavailable source states."""
+def poll_coverage(journal_path: str | Path, start_ms: int, end_ms: int,
+                  *, stream: str = "joint") -> PollCoverage:
+    """Audit actual polls for the selected stream without promoting other feeds."""
     if (type(start_ms) is not int or type(end_ms) is not int
             or not 0 < start_ms < end_ms):
         raise ValueError("poll coverage needs increasing positive UTC milliseconds")
+    if stream not in ("joint", "events", "BTC", "ETH"):
+        raise ValueError("unknown WhaleWatcher source stream")
     path = Path(journal_path)
     if not path.is_file():
         return PollCoverage(start_ms, end_ms, 0, 0, end_ms - start_ms, False)
@@ -328,7 +331,9 @@ def poll_coverage(journal_path: str | Path, start_ms: int, end_ms: int) -> PollC
             rows = []  # Old journals without source polls cannot prove continuity.
     times = [start_ms, *(int(row[0]) for row in rows), end_ms]
     largest_gap = max(right - left for left, right in zip(times, times[1:]))
-    unavailable = sum("unavailable" in row[1:] for row in rows)
+    column = {"events": 1, "BTC": 2, "ETH": 3}.get(stream)
+    unavailable = sum(("unavailable" in row[1:] if column is None
+                       else row[column] == "unavailable") for row in rows)
     ready = (end_ms - start_ms >= MIN_OOS_MS and bool(rows)
              and largest_gap <= MAX_POLL_GAP_MS and unavailable == 0)
     return PollCoverage(start_ms, end_ms, len(rows), unavailable, largest_gap, ready)
@@ -375,6 +380,23 @@ def read_asof(journal_path: str | Path, asof_ms: int) -> ProvenanceSnapshot:
         for identity, (metadata, available) in sorted(events.items())
     )
     return ProvenanceSnapshot(asof_ms, event_result, claim_rows(btc), claim_rows(eth))
+
+
+def read_events_asof(journal_path: str | Path, asof_ms: int) -> tuple[JournalEvent, ...]:
+    """Read only the event changes, independent of a missing claims schema/feed."""
+    if type(asof_ms) is not int or asof_ms <= 0:
+        raise ValueError("asof_ms must be a positive integer")
+    path = Path(journal_path)
+    if not path.is_file():
+        return ()
+    uri = f"file:{path.resolve().as_posix()}?mode=ro"
+    with closing(sqlite3.connect(uri, uri=True)) as db:
+        events = _state(db, "events", "ALL", asof_ms=asof_ms)
+    return tuple(
+        JournalEvent(identity, metadata[0], metadata[1], metadata[2], metadata[3],
+                     available, metadata[4])
+        for identity, (metadata, available) in sorted(events.items())
+    )
 
 
 def main() -> None:

@@ -58,6 +58,7 @@ class WhaleWatcherReadinessTests(unittest.TestCase):
             root = Path(tmp)
             missing = assess(root, base)
             self.assertEqual(missing.events_claims.state, "missing")
+            self.assertEqual(missing.news_events.state, "missing")
             self.assertEqual(list(root.iterdir()), [])
             with sqlite3.connect(root / "whalewatcher_shadow.sqlite") as db:
                 db.execute("CREATE TABLE source_polls (id INTEGER PRIMARY KEY, "
@@ -72,9 +73,30 @@ class WhaleWatcherReadinessTests(unittest.TestCase):
                            (base + 1_000, "fresh"))
             status = assess(root, base + 2_000)
             self.assertEqual(status.joint_start_ms, base + 1_000)
+            self.assertEqual(status.news_events.state, "fresh")
             self.assertFalse(status.five_year_continuous_source)
             self.assertFalse(status.independent_trading_oos_proven)
             self.assertFalse(status.execution_eligible)
+
+    def test_news_continuity_is_separate_from_claim_outage(self):
+        base = ms(datetime(2026, 11, 8, tzinfo=timezone.utc))
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            with sqlite3.connect(root / "whalewatcher_shadow.sqlite") as db:
+                db.execute("CREATE TABLE source_polls (id INTEGER PRIMARY KEY, "
+                           "observed_at_ms INTEGER, events_status TEXT, "
+                           "btc_status TEXT, eth_status TEXT)")
+                db.execute("INSERT INTO source_polls VALUES (1,?,?,?,?)",
+                           (base, "fresh", "unavailable", "unavailable"))
+            with sqlite3.connect(root / "whalewatcher_macro.sqlite") as db:
+                db.execute("CREATE TABLE polls (id INTEGER PRIMARY KEY, "
+                           "observed_at_ms INTEGER, status TEXT)")
+                db.execute("INSERT INTO polls VALUES (1,?,?)", (base, "fresh"))
+            result = assess(root, base + 1_000)
+            self.assertEqual(result.news_events.state, "fresh")
+            self.assertEqual(result.events_claims.state, "unavailable")
+            self.assertEqual(result.joint_span_ms, 0)
+            self.assertFalse(result.five_year_continuous_source)
 
 
 if __name__ == "__main__":
