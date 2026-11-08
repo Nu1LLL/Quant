@@ -1,0 +1,3648 @@
+{
+  "annual": {
+    "2021": {
+      "cagr": 0.8172855099855982,
+      "days": 365,
+      "end": 18165.42647190136,
+      "max_drawdown": 0.8665064726853038,
+      "positive_days": 108,
+      "profit_factor_daily_dollar": 1.0254832969306331,
+      "sharpe": 1.041239525007374,
+      "start": 10000.0,
+      "total_pnl": 8165.426471901359
+    },
+    "2022": {
+      "cagr": 0.32296729743010477,
+      "days": 365,
+      "end": 24027.66185471559,
+      "max_drawdown": 0.28880630499427773,
+      "positive_days": 83,
+      "profit_factor_daily_dollar": 1.1401060863925325,
+      "sharpe": 0.8458610773406349,
+      "start": 18165.42647190136,
+      "total_pnl": 5862.2353828142295
+    },
+    "2023": {
+      "cagr": -0.1410371951486853,
+      "days": 365,
+      "end": 20641.015584800767,
+      "max_drawdown": 0.26310969564741904,
+      "positive_days": 91,
+      "profit_factor_daily_dollar": 0.9068900782953125,
+      "sharpe": -0.3926675382496134,
+      "start": 24027.66185471559,
+      "total_pnl": -3386.6462699148215
+    },
+    "2024": {
+      "cagr": 1.1662483622906232,
+      "days": 366,
+      "end": 44784.59472612005,
+      "max_drawdown": 0.5085642602785536,
+      "positive_days": 101,
+      "profit_factor_daily_dollar": 1.333542724486841,
+      "sharpe": 1.0977750646146,
+      "start": 20641.015584800767,
+      "total_pnl": 24143.579141319282
+    },
+    "2025": {
+      "cagr": -0.41011097720602196,
+      "days": 365,
+      "end": 26427.48665032347,
+      "max_drawdown": 0.5237144861540757,
+      "positive_days": 80,
+      "profit_factor_daily_dollar": 0.7663617249867949,
+      "sharpe": -0.8592482329042783,
+      "start": 44784.59472612005,
+      "total_pnl": -18357.10807579658
+    }
+  },
+  "annual_pass": {
+    "2021": true,
+    "2022": true,
+    "2023": false,
+    "2024": true,
+    "2025": false
+  },
+  "completed_buys": 84,
+  "data_verified": true,
+  "double_slippage": {
+    "cagr": 0.13562460584836056,
+    "days": 1826,
+    "end": 18885.833798414857,
+    "max_drawdown": 0.8928450197468741,
+    "positive_days": 456,
+    "profit_factor_daily_dollar": 1.0178668448299915,
+    "sharpe": 0.5095321845043295,
+    "start": 10000.0,
+    "total_pnl": 8885.833798414857
+  },
+  "equal_weight_buyhold": {
+    "cagr": 0.6062446884811881,
+    "days": 1826,
+    "end": 106885.2192287989,
+    "max_drawdown": 0.7190997565154477,
+    "positive_days": 974,
+    "profit_factor_daily_dollar": 1.0871164545371346,
+    "sharpe": 1.0141512761634617,
+    "start": 10000.0,
+    "total_pnl": 96885.2192287989
+  },
+  "experiment_id": "three_chain_dex_volume_rotation_2026_11_08",
+  "fee_rate_per_fill": 0.001,
+  "fees": 5138.9997272745795,
+  "fills": [
+    {
+      "day": "2021-01-07",
+      "execution": 42.328488,
+      "fee": 9.989988781368,
+      "notional": 9989.988781368,
+      "quantity": 236.011,
+      "reason": "weekly_target",
+      "reference": 42.244,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-01-12",
+      "execution": 34.9673252,
+      "fee": 8.252673387777198,
+      "notional": 8252.673387777199,
+      "quantity": 236.011,
+      "reason": "next_day_stop",
+      "reference": 35.0374,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-01-14",
+      "execution": 40.191622800000005,
+      "fee": 8.236187919044403,
+      "notional": 8236.187919044401,
+      "quantity": 204.923,
+      "reason": "weekly_target",
+      "reference": 40.1114,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-01-21",
+      "execution": 42.5203888,
+      "fee": 8.713405634062399,
+      "notional": 8713.4056340624,
+      "quantity": 204.923,
+      "reason": "weekly_switch",
+      "reference": 42.6056,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-01-21",
+      "execution": 0.03054096,
+      "fee": 8.69598862272,
+      "notional": 8695.98862272,
+      "quantity": 284732.0,
+      "reason": "weekly_target",
+      "reference": 0.03048,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-01-23",
+      "execution": 0.026307280000000002,
+      "fee": 7.490524448960001,
+      "notional": 7490.524448960001,
+      "quantity": 284732.0,
+      "reason": "next_day_stop",
+      "reference": 0.02636,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-02-04",
+      "execution": 52.224239999999995,
+      "fee": 7.47553438632,
+      "notional": 7475.53438632,
+      "quantity": 143.143,
+      "reason": "weekly_target",
+      "reference": 52.12,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-03-11",
+      "execution": 277.7954956,
+      "fee": 39.764480626670796,
+      "notional": 39764.4806266708,
+      "quantity": 143.143,
+      "reason": "weekly_switch",
+      "reference": 278.3522,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-03-11",
+      "execution": 0.05152284,
+      "fee": 39.685055327280004,
+      "notional": 39685.05532728,
+      "quantity": 770242.0,
+      "reason": "weekly_target",
+      "reference": 0.05142,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-03-18",
+      "execution": 0.05473032,
+      "fee": 42.155591137440005,
+      "notional": 42155.59113744,
+      "quantity": 770242.0,
+      "reason": "weekly_switch",
+      "reference": 0.05484,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-03-25",
+      "execution": 0.0557613,
+      "fee": 42.071343237,
+      "notional": 42071.343237,
+      "quantity": 754490.0,
+      "reason": "weekly_target",
+      "reference": 0.05565,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-04-29",
+      "execution": 0.12241468000000001,
+      "fee": 92.36065191320002,
+      "notional": 92360.65191320001,
+      "quantity": 754490.0,
+      "reason": "weekly_switch",
+      "reference": 0.12266,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-04-29",
+      "execution": 563.9055599999999,
+      "fee": 92.1760028376,
+      "notional": 92176.0028376,
+      "quantity": 163.46,
+      "reason": "weekly_target",
+      "reference": 562.78,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-05-18",
+      "execution": 482.034,
+      "fee": 78.79327764,
+      "notional": 78793.27764,
+      "quantity": 163.46,
+      "reason": "next_day_stop",
+      "reference": 483.0,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-05-20",
+      "execution": 2443.79784,
+      "fee": 78.63579375616801,
+      "notional": 78635.79375616802,
+      "quantity": 32.1777,
+      "reason": "weekly_target",
+      "reference": 2438.92,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2021-05-22",
+      "execution": 2096.798,
+      "fee": 67.47013700459999,
+      "notional": 67470.1370046,
+      "quantity": 32.1777,
+      "reason": "next_day_stop",
+      "reference": 2101.0,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2021-05-27",
+      "execution": 2890.58964,
+      "fee": 67.33541848690801,
+      "notional": 67335.418486908,
+      "quantity": 23.294700000000002,
+      "reason": "weekly_target",
+      "reference": 2884.82,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2021-05-29",
+      "execution": 2322.72524,
+      "fee": 54.10718764822801,
+      "notional": 54107.18764822801,
+      "quantity": 23.294700000000002,
+      "reason": "next_day_stop",
+      "reference": 2327.38,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2021-07-01",
+      "execution": 0.06841655999999999,
+      "fee": 53.99920672776,
+      "notional": 53999.20672775999,
+      "quantity": 789271.0,
+      "reason": "weekly_target",
+      "reference": 0.06828,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-07-09",
+      "execution": 0.06006962,
+      "fee": 47.41120904702,
+      "notional": 47411.20904702,
+      "quantity": 789271.0,
+      "reason": "next_day_stop",
+      "reference": 0.06019,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-08-05",
+      "execution": 335.44955999999996,
+      "fee": 47.31616678667999,
+      "notional": 47316.16678667999,
+      "quantity": 141.053,
+      "reason": "weekly_target",
+      "reference": 334.78,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-08-12",
+      "execution": 390.13816,
+      "fee": 55.030157882480005,
+      "notional": 55030.15788248,
+      "quantity": 141.053,
+      "reason": "weekly_switch",
+      "reference": 390.92,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-08-12",
+      "execution": 0.0835668,
+      "fee": 54.920518793999996,
+      "notional": 54920.518793999996,
+      "quantity": 657205.0,
+      "reason": "weekly_target",
+      "reference": 0.0834,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-09-02",
+      "execution": 0.09481998,
+      "fee": 62.3161649559,
+      "notional": 62316.1649559,
+      "quantity": 657205.0,
+      "reason": "weekly_switch",
+      "reference": 0.09501,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-09-02",
+      "execution": 490.479,
+      "fee": 62.191265763,
+      "notional": 62191.265762999996,
+      "quantity": 126.797,
+      "reason": "weekly_target",
+      "reference": 489.5,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-09-08",
+      "execution": 368.262,
+      "fee": 46.694516814,
+      "notional": 46694.516814,
+      "quantity": 126.797,
+      "reason": "next_day_stop",
+      "reference": 369.0,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-09-09",
+      "execution": 416.0304,
+      "fee": 46.6012292256,
+      "notional": 46601.2292256,
+      "quantity": 112.014,
+      "reason": "weekly_target",
+      "reference": 415.2,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-09-16",
+      "execution": 430.3376,
+      "fee": 48.203835926400004,
+      "notional": 48203.8359264,
+      "quantity": 112.014,
+      "reason": "weekly_switch",
+      "reference": 431.2,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-09-16",
+      "execution": 0.12093138,
+      "fee": 48.10783320918001,
+      "notional": 48107.833209180004,
+      "quantity": 397811.0,
+      "reason": "weekly_target",
+      "reference": 0.12069,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-09-18",
+      "execution": 0.10316326,
+      "fee": 41.039479623860004,
+      "notional": 41039.47962386,
+      "quantity": 397811.0,
+      "reason": "next_day_stop",
+      "reference": 0.10337,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-09-23",
+      "execution": 0.09895752000000001,
+      "fee": 40.95752795280001,
+      "notional": 40957.5279528,
+      "quantity": 413890.0,
+      "reason": "weekly_target",
+      "reference": 0.09876,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-09-25",
+      "execution": 0.08582799999999999,
+      "fee": 35.52335092,
+      "notional": 35523.35092,
+      "quantity": 413890.0,
+      "reason": "next_day_stop",
+      "reference": 0.086,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-10-21",
+      "execution": 502.3026,
+      "fee": 35.45201520540001,
+      "notional": 35452.01520540001,
+      "quantity": 70.57900000000001,
+      "reason": "weekly_target",
+      "reference": 501.3,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-10-28",
+      "execution": 434.4294,
+      "fee": 30.6615926226,
+      "notional": 30661.5926226,
+      "quantity": 70.57900000000001,
+      "reason": "next_day_stop",
+      "reference": 435.3,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-10-28",
+      "execution": 3929.83398,
+      "fee": 30.600438252066002,
+      "notional": 30600.438252066,
+      "quantity": 7.786700000000001,
+      "reason": "weekly_target",
+      "reference": 3921.99,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2021-11-11",
+      "execution": 4619.422640000001,
+      "fee": 35.97005827088801,
+      "notional": 35970.05827088801,
+      "quantity": 7.786700000000001,
+      "reason": "weekly_switch",
+      "reference": 4628.68,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2021-11-11",
+      "execution": 615.4284,
+      "fee": 35.897938572,
+      "notional": 35897.938572,
+      "quantity": 58.33,
+      "reason": "weekly_target",
+      "reference": 614.2,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-11-19",
+      "execution": 508.98,
+      "fee": 29.6888034,
+      "notional": 29688.8034,
+      "quantity": 58.33,
+      "reason": "next_day_stop",
+      "reference": 510.0,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2021-12-02",
+      "execution": 0.09705372,
+      "fee": 29.630015447399998,
+      "notional": 29630.015447399997,
+      "quantity": 305295.0,
+      "reason": "weekly_target",
+      "reference": 0.09686,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-12-05",
+      "execution": 0.07290390000000001,
+      "fee": 22.257196150500004,
+      "notional": 22257.196150500004,
+      "quantity": 305295.0,
+      "reason": "next_day_stop",
+      "reference": 0.07305,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-12-16",
+      "execution": 0.08771508,
+      "fee": 22.21270371396,
+      "notional": 22212.70371396,
+      "quantity": 253237.0,
+      "reason": "weekly_target",
+      "reference": 0.08754,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-12-21",
+      "execution": 0.07473024,
+      "fee": 18.924461786880002,
+      "notional": 18924.46178688,
+      "quantity": 253237.0,
+      "reason": "next_day_stop",
+      "reference": 0.07488,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-12-23",
+      "execution": 0.07927824,
+      "fee": 18.88661367168,
+      "notional": 18886.61367168,
+      "quantity": 238232.0,
+      "reason": "weekly_target",
+      "reference": 0.07912,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2021-12-30",
+      "execution": 0.07632704000000001,
+      "fee": 18.183543393280004,
+      "notional": 18183.543393280004,
+      "quantity": 238232.0,
+      "reason": "weekly_switch",
+      "reference": 0.07648,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-01-13",
+      "execution": 0.06820614000000001,
+      "fee": 18.147266639100003,
+      "notional": 18147.266639100002,
+      "quantity": 266065.0,
+      "reason": "weekly_target",
+      "reference": 0.06807,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-01-20",
+      "execution": 0.06901170000000001,
+      "fee": 18.361597960500003,
+      "notional": 18361.597960500003,
+      "quantity": 266065.0,
+      "reason": "weekly_switch",
+      "reference": 0.06915,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-01-27",
+      "execution": 0.05630238,
+      "fee": 18.32490452574,
+      "notional": 18324.90452574,
+      "quantity": 325473.0,
+      "reason": "weekly_target",
+      "reference": 0.05619,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-02-10",
+      "execution": 0.06977018,
+      "fee": 22.708309795140003,
+      "notional": 22708.30979514,
+      "quantity": 325473.0,
+      "reason": "weekly_switch",
+      "reference": 0.06991,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-03-03",
+      "execution": 0.06165306,
+      "fee": 22.662925019280003,
+      "notional": 22662.925019280003,
+      "quantity": 367588.0,
+      "reason": "weekly_target",
+      "reference": 0.06153,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-03-17",
+      "execution": 0.06094786,
+      "fee": 22.40370196168,
+      "notional": 22403.70196168,
+      "quantity": 367588.0,
+      "reason": "weekly_switch",
+      "reference": 0.06107,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-04-07",
+      "execution": 420.9402,
+      "fee": 22.3586596632,
+      "notional": 22358.6596632,
+      "quantity": 53.116,
+      "reason": "weekly_target",
+      "reference": 420.1,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2022-04-14",
+      "execution": 422.5532,
+      "fee": 22.4443357712,
+      "notional": 22444.3357712,
+      "quantity": 53.116,
+      "reason": "weekly_switch",
+      "reference": 423.4,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2022-04-14",
+      "execution": 0.061623,
+      "fee": 22.399775631,
+      "notional": 22399.775631,
+      "quantity": 363497.0,
+      "reason": "weekly_target",
+      "reference": 0.0615,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-04-21",
+      "execution": 0.06248478,
+      "fee": 22.713030075659997,
+      "notional": 22713.030075659997,
+      "quantity": 363497.0,
+      "reason": "weekly_switch",
+      "reference": 0.06261,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-05-12",
+      "execution": 0.0750999,
+      "fee": 22.667628116699998,
+      "notional": 22667.628116699998,
+      "quantity": 301833.0,
+      "reason": "weekly_target",
+      "reference": 0.07495,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-05-13",
+      "execution": 0.06545882,
+      "fee": 19.75763201706,
+      "notional": 19757.63201706,
+      "quantity": 301833.0,
+      "reason": "next_day_stop",
+      "reference": 0.06559,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-05-19",
+      "execution": 0.07115202000000001,
+      "fee": 19.718145846540004,
+      "notional": 19718.145846540003,
+      "quantity": 277127.0,
+      "reason": "weekly_target",
+      "reference": 0.07101,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-05-26",
+      "execution": 0.0845306,
+      "fee": 23.4257115862,
+      "notional": 23425.7115862,
+      "quantity": 277127.0,
+      "reason": "weekly_switch",
+      "reference": 0.0847,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-05-26",
+      "execution": 326.3514,
+      "fee": 23.3788352418,
+      "notional": 23378.8352418,
+      "quantity": 71.637,
+      "reason": "weekly_target",
+      "reference": 325.7,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2022-06-02",
+      "execution": 299.899,
+      "fee": 21.483864663000002,
+      "notional": 21483.864663,
+      "quantity": 71.637,
+      "reason": "weekly_switch",
+      "reference": 300.5,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2022-06-23",
+      "execution": 1052.2903800000001,
+      "fee": 21.441047866728006,
+      "notional": 21441.047866728004,
+      "quantity": 20.375600000000002,
+      "reason": "weekly_target",
+      "reference": 1050.19,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2022-06-30",
+      "execution": 1098.0095800000001,
+      "fee": 22.372603998248007,
+      "notional": 22372.603998248007,
+      "quantity": 20.375600000000002,
+      "reason": "weekly_switch",
+      "reference": 1100.21,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2022-06-30",
+      "execution": 0.06504984000000001,
+      "fee": 22.327902231120003,
+      "notional": 22327.902231120002,
+      "quantity": 343243.0,
+      "reason": "weekly_target",
+      "reference": 0.06492,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-07-07",
+      "execution": 0.06742487999999999,
+      "fee": 23.143118085839998,
+      "notional": 23143.118085839997,
+      "quantity": 343243.0,
+      "reason": "weekly_switch",
+      "reference": 0.06756,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-07-28",
+      "execution": 1639.0114800000001,
+      "fee": 23.096785875012003,
+      "notional": 23096.785875012003,
+      "quantity": 14.0919,
+      "reason": "weekly_target",
+      "reference": 1635.74,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2022-08-11",
+      "execution": 1849.87284,
+      "fee": 26.068223073996,
+      "notional": 26068.223073996,
+      "quantity": 14.0919,
+      "reason": "weekly_switch",
+      "reference": 1853.58,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2022-09-01",
+      "execution": 1557.21822,
+      "fee": 26.016133357896,
+      "notional": 26016.133357896,
+      "quantity": 16.7068,
+      "reason": "weekly_target",
+      "reference": 1554.11,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2022-09-08",
+      "execution": 1626.74,
+      "fee": 27.177619832,
+      "notional": 27177.619832,
+      "quantity": 16.7068,
+      "reason": "weekly_switch",
+      "reference": 1630.0,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2022-10-06",
+      "execution": 0.06256488,
+      "fee": 27.123439602,
+      "notional": 27123.439602000002,
+      "quantity": 433525.0,
+      "reason": "weekly_target",
+      "reference": 0.06244,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-11-03",
+      "execution": 0.06144686,
+      "fee": 26.638749981500002,
+      "notional": 26638.7499815,
+      "quantity": 433525.0,
+      "reason": "weekly_switch",
+      "reference": 0.06157,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-11-03",
+      "execution": 1521.36666,
+      "fee": 26.585425973502,
+      "notional": 26585.425973502002,
+      "quantity": 17.474700000000002,
+      "reason": "weekly_target",
+      "reference": 1518.33,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2022-11-09",
+      "execution": 1230.534,
+      "fee": 21.503212489800003,
+      "notional": 21503.212489800004,
+      "quantity": 17.474700000000002,
+      "reason": "next_day_stop",
+      "reference": 1233.0,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2022-11-10",
+      "execution": 1104.93546,
+      "fee": 21.460277491212,
+      "notional": 21460.277491212,
+      "quantity": 19.4222,
+      "reason": "weekly_target",
+      "reference": 1102.73,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2022-11-24",
+      "execution": 1182.15096,
+      "fee": 22.959972375312,
+      "notional": 22959.972375311998,
+      "quantity": 19.4222,
+      "reason": "weekly_switch",
+      "reference": 1184.52,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2022-11-24",
+      "execution": 0.05191362,
+      "fee": 22.9141527318,
+      "notional": 22914.1527318,
+      "quantity": 441390.0,
+      "reason": "weekly_target",
+      "reference": 0.05181,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2022-12-01",
+      "execution": 0.054490800000000006,
+      "fee": 24.051694212,
+      "notional": 24051.694212000002,
+      "quantity": 441390.0,
+      "reason": "weekly_switch",
+      "reference": 0.0546,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2023-01-19",
+      "execution": 0.0590178,
+      "fee": 24.0036015804,
+      "notional": 24003.6015804,
+      "quantity": 406718.0,
+      "reason": "weekly_target",
+      "reference": 0.0589,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2023-01-26",
+      "execution": 0.06168638,
+      "fee": 25.08896110084,
+      "notional": 25088.96110084,
+      "quantity": 406718.0,
+      "reason": "weekly_switch",
+      "reference": 0.06181,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2023-01-26",
+      "execution": 1615.1739,
+      "fee": 25.03874883258,
+      "notional": 25038.74883258,
+      "quantity": 15.5022,
+      "reason": "weekly_target",
+      "reference": 1611.95,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2023-02-09",
+      "execution": 1647.11916,
+      "fee": 25.533970642152,
+      "notional": 25533.970642152,
+      "quantity": 15.5022,
+      "reason": "weekly_switch",
+      "reference": 1650.42,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2023-02-16",
+      "execution": 318.135,
+      "fee": 25.482931634999996,
+      "notional": 25482.931634999997,
+      "quantity": 80.101,
+      "reason": "weekly_target",
+      "reference": 317.5,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2023-03-09",
+      "execution": 286.5258,
+      "fee": 22.951003105799998,
+      "notional": 22951.0031058,
+      "quantity": 80.101,
+      "reason": "weekly_switch",
+      "reference": 287.1,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2023-03-16",
+      "execution": 1653.2499,
+      "fee": 22.905281389530003,
+      "notional": 22905.281389530002,
+      "quantity": 13.854700000000001,
+      "reason": "weekly_target",
+      "reference": 1649.95,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2023-03-30",
+      "execution": 1789.47388,
+      "fee": 24.792623765236005,
+      "notional": 24792.623765236003,
+      "quantity": 13.854700000000001,
+      "reason": "weekly_switch",
+      "reference": 1793.06,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2023-04-20",
+      "execution": 323.145,
+      "fee": 24.742889505,
+      "notional": 24742.889505,
+      "quantity": 76.569,
+      "reason": "weekly_target",
+      "reference": 322.5,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2023-05-11",
+      "execution": 313.6714,
+      "fee": 24.0175054266,
+      "notional": 24017.5054266,
+      "quantity": 76.569,
+      "reason": "weekly_switch",
+      "reference": 314.3,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2023-05-18",
+      "execution": 1825.76424,
+      "fee": 23.969728401264003,
+      "notional": 23969.728401264,
+      "quantity": 13.1286,
+      "reason": "weekly_target",
+      "reference": 1822.12,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2023-05-25",
+      "execution": 1796.29022,
+      "fee": 23.582775782292003,
+      "notional": 23582.775782292003,
+      "quantity": 13.1286,
+      "reason": "weekly_switch",
+      "reference": 1799.89,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2023-06-15",
+      "execution": 238.3758,
+      "fee": 23.5355578614,
+      "notional": 23535.5578614,
+      "quantity": 98.733,
+      "reason": "weekly_target",
+      "reference": 237.9,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2023-06-29",
+      "execution": 230.1388,
+      "fee": 22.722294140400003,
+      "notional": 22722.2941404,
+      "quantity": 98.733,
+      "reason": "weekly_switch",
+      "reference": 230.6,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2023-07-20",
+      "execution": 241.3818,
+      "fee": 22.6768545828,
+      "notional": 22676.8545828,
+      "quantity": 93.946,
+      "reason": "weekly_target",
+      "reference": 240.9,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2023-07-27",
+      "execution": 238.522,
+      "fee": 22.408187812,
+      "notional": 22408.187812,
+      "quantity": 93.946,
+      "reason": "weekly_switch",
+      "reference": 239.0,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2023-07-27",
+      "execution": 0.08257482,
+      "fee": 22.36357335096,
+      "notional": 22363.57335096,
+      "quantity": 270828.0,
+      "reason": "weekly_target",
+      "reference": 0.08241,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2023-08-10",
+      "execution": 0.07658652,
+      "fee": 20.741774038560003,
+      "notional": 20741.77403856,
+      "quantity": 270828.0,
+      "reason": "weekly_switch",
+      "reference": 0.07674,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2023-08-24",
+      "execution": 217.1334,
+      "fee": 20.7001955556,
+      "notional": 20700.1955556,
+      "quantity": 95.334,
+      "reason": "weekly_target",
+      "reference": 216.7,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2023-09-07",
+      "execution": 214.7696,
+      "fee": 20.474845046400002,
+      "notional": 20474.8450464,
+      "quantity": 95.334,
+      "reason": "weekly_switch",
+      "reference": 215.2,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2023-09-21",
+      "execution": 0.08459886000000001,
+      "fee": 20.434008644400006,
+      "notional": 20434.008644400004,
+      "quantity": 241540.0,
+      "reason": "weekly_target",
+      "reference": 0.08443,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2023-10-05",
+      "execution": 0.08873218000000001,
+      "fee": 21.4323707572,
+      "notional": 21432.370757200002,
+      "quantity": 241540.0,
+      "reason": "weekly_switch",
+      "reference": 0.08891,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2023-11-02",
+      "execution": 0.10034028,
+      "fee": 21.389537487600002,
+      "notional": 21389.537487600002,
+      "quantity": 213170.0,
+      "reason": "weekly_target",
+      "reference": 0.10014,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2023-11-09",
+      "execution": 0.09813334,
+      "fee": 20.919084087799998,
+      "notional": 20919.084087799998,
+      "quantity": 213170.0,
+      "reason": "weekly_switch",
+      "reference": 0.09833,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2023-11-09",
+      "execution": 247.1934,
+      "fee": 20.8772129838,
+      "notional": 20877.2129838,
+      "quantity": 84.45700000000001,
+      "reason": "weekly_target",
+      "reference": 246.7,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2023-11-16",
+      "execution": 253.1926,
+      "fee": 21.383887418200004,
+      "notional": 21383.887418200004,
+      "quantity": 84.45700000000001,
+      "reason": "weekly_switch",
+      "reference": 253.7,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2023-11-16",
+      "execution": 0.10426812,
+      "fee": 21.34128599724,
+      "notional": 21341.28599724,
+      "quantity": 204677.0,
+      "reason": "weekly_target",
+      "reference": 0.10406,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2023-11-30",
+      "execution": 0.10321316,
+      "fee": 21.12535994932,
+      "notional": 21125.359949319998,
+      "quantity": 204677.0,
+      "reason": "weekly_switch",
+      "reference": 0.10342,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2023-12-21",
+      "execution": 0.10293546,
+      "fee": 21.083137981740002,
+      "notional": 21083.13798174,
+      "quantity": 204819.0,
+      "reason": "weekly_target",
+      "reference": 0.10273,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2023-12-28",
+      "execution": 0.1051393,
+      "fee": 21.534526286700004,
+      "notional": 21534.526286700002,
+      "quantity": 204819.0,
+      "reason": "weekly_switch",
+      "reference": 0.10535,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2023-12-28",
+      "execution": 324.648,
+      "fee": 21.491372952000003,
+      "notional": 21491.372952,
+      "quantity": 66.199,
+      "reason": "weekly_target",
+      "reference": 324.0,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2024-01-04",
+      "execution": 315.2682,
+      "fee": 20.8704395718,
+      "notional": 20870.439571799998,
+      "quantity": 66.199,
+      "reason": "weekly_switch",
+      "reference": 315.9,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2024-01-04",
+      "execution": 0.1069635,
+      "fee": 20.8288953915,
+      "notional": 20828.895391500002,
+      "quantity": 194729.0,
+      "reason": "weekly_target",
+      "reference": 0.10675,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2024-01-25",
+      "execution": 0.10860236,
+      "fee": 21.148028960439998,
+      "notional": 21148.02896044,
+      "quantity": 194729.0,
+      "reason": "weekly_switch",
+      "reference": 0.10882,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2024-02-22",
+      "execution": 0.13999944,
+      "fee": 21.10575557664,
+      "notional": 21105.75557664,
+      "quantity": 150756.0,
+      "reason": "weekly_target",
+      "reference": 0.13972,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2024-02-29",
+      "execution": 0.14184574,
+      "fee": 21.384096379440003,
+      "notional": 21384.09637944,
+      "quantity": 150756.0,
+      "reason": "weekly_switch",
+      "reference": 0.14213,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2024-02-29",
+      "execution": 415.5294,
+      "fee": 21.3411744546,
+      "notional": 21341.1744546,
+      "quantity": 51.359,
+      "reason": "weekly_target",
+      "reference": 414.7,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2024-03-06",
+      "execution": 355.3878,
+      "fee": 18.252362020200003,
+      "notional": 18252.362020200002,
+      "quantity": 51.359,
+      "reason": "next_day_stop",
+      "reference": 356.1,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2024-03-07",
+      "execution": 430.25879999999995,
+      "fee": 18.2158668156,
+      "notional": 18215.8668156,
+      "quantity": 42.337,
+      "reason": "weekly_target",
+      "reference": 429.4,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2024-04-04",
+      "execution": 560.4768,
+      "fee": 23.728906281600004,
+      "notional": 23728.906281600004,
+      "quantity": 42.337,
+      "reason": "weekly_switch",
+      "reference": 561.6,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2024-04-18",
+      "execution": 2991.38082,
+      "fee": 23.681565399612,
+      "notional": 23681.565399612,
+      "quantity": 7.916600000000001,
+      "reason": "weekly_target",
+      "reference": 2985.41,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2024-04-25",
+      "execution": 3134.50842,
+      "fee": 24.814649357772005,
+      "notional": 24814.649357772003,
+      "quantity": 7.916600000000001,
+      "reason": "weekly_switch",
+      "reference": 3140.79,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2024-04-25",
+      "execution": 0.11352659999999999,
+      "fee": 24.7651466304,
+      "notional": 24765.1466304,
+      "quantity": 218144.0,
+      "reason": "weekly_target",
+      "reference": 0.1133,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2024-05-02",
+      "execution": 0.12019912,
+      "fee": 26.220716833280004,
+      "notional": 26220.716833280003,
+      "quantity": 218144.0,
+      "reason": "weekly_switch",
+      "reference": 0.12044,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2024-05-30",
+      "execution": 3774.97488,
+      "fee": 26.16812586816,
+      "notional": 26168.12586816,
+      "quantity": 6.932,
+      "reason": "weekly_target",
+      "reference": 3767.44,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2024-06-13",
+      "execution": 3553.00974,
+      "fee": 24.62946351768,
+      "notional": 24629.46351768,
+      "quantity": 6.932,
+      "reason": "weekly_switch",
+      "reference": 3560.13,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2024-07-11",
+      "execution": 0.13173294,
+      "fee": 24.58044447342,
+      "notional": 24580.444473419997,
+      "quantity": 186593.0,
+      "reason": "weekly_target",
+      "reference": 0.13147,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2024-07-25",
+      "execution": 0.1340314,
+      "fee": 25.009321020199998,
+      "notional": 25009.321020199997,
+      "quantity": 186593.0,
+      "reason": "weekly_switch",
+      "reference": 0.1343,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2024-08-08",
+      "execution": 0.1249494,
+      "fee": 24.9593923464,
+      "notional": 24959.3923464,
+      "quantity": 199756.0,
+      "reason": "weekly_target",
+      "reference": 0.1247,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2024-08-22",
+      "execution": 0.1534924,
+      "fee": 30.6610278544,
+      "notional": 30661.0278544,
+      "quantity": 199756.0,
+      "reason": "weekly_switch",
+      "reference": 0.1538,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2024-08-29",
+      "execution": 0.1585164,
+      "fee": 30.5996888232,
+      "notional": 30599.688823200002,
+      "quantity": 193038.0,
+      "reason": "weekly_target",
+      "reference": 0.1582,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2024-09-12",
+      "execution": 0.1529934,
+      "fee": 29.5335399492,
+      "notional": 29533.5399492,
+      "quantity": 193038.0,
+      "reason": "weekly_switch",
+      "reference": 0.1533,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2024-10-03",
+      "execution": 543.585,
+      "fee": 29.474265870000004,
+      "notional": 29474.265870000003,
+      "quantity": 54.222,
+      "reason": "weekly_target",
+      "reference": 542.5,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2024-10-17",
+      "execution": 599.798,
+      "fee": 32.522247156,
+      "notional": 32522.247156,
+      "quantity": 54.222,
+      "reason": "weekly_switch",
+      "reference": 601.0,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2024-11-14",
+      "execution": 3193.5343199999998,
+      "fee": 32.45748606132,
+      "notional": 32457.48606132,
+      "quantity": 10.1635,
+      "reason": "weekly_target",
+      "reference": 3187.16,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2024-11-21",
+      "execution": 3063.83006,
+      "fee": 31.13923681481,
+      "notional": 31139.23681481,
+      "quantity": 10.1635,
+      "reason": "weekly_switch",
+      "reference": 3069.97,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2024-11-21",
+      "execution": 0.1951896,
+      "fee": 31.077112164,
+      "notional": 31077.112164,
+      "quantity": 159215.0,
+      "reason": "weekly_target",
+      "reference": 0.1948,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2024-12-05",
+      "execution": 0.329839,
+      "fee": 52.515316385,
+      "notional": 52515.316385,
+      "quantity": 159215.0,
+      "reason": "weekly_switch",
+      "reference": 0.3305,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2024-12-05",
+      "execution": 3845.4756,
+      "fee": 52.41037149996001,
+      "notional": 52410.371499960005,
+      "quantity": 13.629100000000001,
+      "reason": "weekly_target",
+      "reference": 3837.8,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2024-12-12",
+      "execution": 3824.15636,
+      "fee": 52.119809446076005,
+      "notional": 52119.809446076004,
+      "quantity": 13.629100000000001,
+      "reason": "weekly_switch",
+      "reference": 3831.82,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2024-12-12",
+      "execution": 0.28266420000000003,
+      "fee": 52.01558341980001,
+      "notional": 52015.58341980001,
+      "quantity": 184019.0,
+      "reason": "weekly_target",
+      "reference": 0.2821,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2024-12-20",
+      "execution": 0.24361180000000002,
+      "fee": 44.8291998242,
+      "notional": 44829.199824200005,
+      "quantity": 184019.0,
+      "reason": "next_day_stop",
+      "reference": 0.2441,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2025-01-23",
+      "execution": 3249.09522,
+      "fee": 44.739716269878,
+      "notional": 44739.716269878,
+      "quantity": 13.7699,
+      "reason": "weekly_target",
+      "reference": 3242.61,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2025-01-30",
+      "execution": 3107.6722,
+      "fee": 42.79233542678001,
+      "notional": 42792.33542678,
+      "quantity": 13.7699,
+      "reason": "weekly_switch",
+      "reference": 3113.9,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2025-01-30",
+      "execution": 0.2406804,
+      "fee": 42.706811536800004,
+      "notional": 42706.8115368,
+      "quantity": 177442.0,
+      "reason": "weekly_target",
+      "reference": 0.2402,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2025-02-04",
+      "execution": 0.2006978,
+      "fee": 35.612219027600005,
+      "notional": 35612.219027600004,
+      "quantity": 177442.0,
+      "reason": "next_day_stop",
+      "reference": 0.2011,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2025-02-20",
+      "execution": 654.68676,
+      "fee": 35.540980140120006,
+      "notional": 35540.98014012,
+      "quantity": 54.287,
+      "reason": "weekly_target",
+      "reference": 653.38,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2025-03-01",
+      "execution": 558.59058,
+      "fee": 30.324206816460002,
+      "notional": 30324.206816460002,
+      "quantity": 54.287,
+      "reason": "next_day_stop",
+      "reference": 559.71,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2025-03-13",
+      "execution": 0.22334579999999998,
+      "fee": 30.263802591599998,
+      "notional": 30263.802591599997,
+      "quantity": 135502.0,
+      "reason": "weekly_target",
+      "reference": 0.2229,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2025-03-20",
+      "execution": 0.23043819999999998,
+      "fee": 31.2248369764,
+      "notional": 31224.836976399998,
+      "quantity": 135502.0,
+      "reason": "weekly_switch",
+      "reference": 0.2309,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2025-04-03",
+      "execution": 591.8513399999999,
+      "fee": 31.162156753679998,
+      "notional": 31162.156753679996,
+      "quantity": 52.652,
+      "reason": "weekly_target",
+      "reference": 590.67,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2025-04-08",
+      "execution": 518.96,
+      "fee": 27.32428192,
+      "notional": 27324.28192,
+      "quantity": 52.652,
+      "reason": "next_day_stop",
+      "reference": 520.0,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2025-04-17",
+      "execution": 1580.3043,
+      "fee": 27.26988903123,
+      "notional": 27269.88903123,
+      "quantity": 17.2561,
+      "reason": "weekly_target",
+      "reference": 1577.15,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2025-04-24",
+      "execution": 1791.48984,
+      "fee": 30.914127828024,
+      "notional": 30914.127828024,
+      "quantity": 17.2561,
+      "reason": "weekly_switch",
+      "reference": 1795.08,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2025-04-24",
+      "execution": 0.2467926,
+      "fee": 30.8522833038,
+      "notional": 30852.2833038,
+      "quantity": 125013.0,
+      "reason": "weekly_target",
+      "reference": 0.2463,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2025-05-15",
+      "execution": 0.2741506,
+      "fee": 34.272388957800004,
+      "notional": 34272.3889578,
+      "quantity": 125013.0,
+      "reason": "weekly_switch",
+      "reference": 0.2747,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2025-05-15",
+      "execution": 653.77494,
+      "fee": 34.20354353598,
+      "notional": 34203.54353598,
+      "quantity": 52.317,
+      "reason": "weekly_target",
+      "reference": 652.47,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2025-06-12",
+      "execution": 666.08516,
+      "fee": 34.84757731572,
+      "notional": 34847.57731572,
+      "quantity": 52.317,
+      "reason": "weekly_switch",
+      "reference": 667.42,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2025-07-24",
+      "execution": 3635.54658,
+      "fee": 34.778365693596,
+      "notional": 34778.365693596,
+      "quantity": 9.5662,
+      "reason": "weekly_target",
+      "reference": 3628.29,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2025-07-31",
+      "execution": 3802.38,
+      "fee": 36.374327556000004,
+      "notional": 36374.327556000004,
+      "quantity": 9.5662,
+      "reason": "weekly_switch",
+      "reference": 3810.0,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2025-07-31",
+      "execution": 0.32805480000000004,
+      "fee": 36.3015600036,
+      "notional": 36301.5600036,
+      "quantity": 110657.0,
+      "reason": "weekly_target",
+      "reference": 0.3274,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2025-08-14",
+      "execution": 0.361276,
+      "fee": 39.977718331999995,
+      "notional": 39977.718332,
+      "quantity": 110657.0,
+      "reason": "weekly_switch",
+      "reference": 0.362,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2025-08-21",
+      "execution": 4344.8323199999995,
+      "fee": 39.897726228096,
+      "notional": 39897.726228096,
+      "quantity": 9.1828,
+      "reason": "weekly_target",
+      "reference": 4336.16,
+      "side": "buy",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2025-08-28",
+      "execution": 4497.69658,
+      "fee": 41.301448154824,
+      "notional": 41301.448154824,
+      "quantity": 9.1828,
+      "reason": "weekly_switch",
+      "reference": 4506.71,
+      "side": "sell",
+      "symbol": "ETHUSDT"
+    },
+    {
+      "day": "2025-09-25",
+      "execution": 1020.52698,
+      "fee": 41.2190847222,
+      "notional": 41219.0847222,
+      "quantity": 40.39,
+      "reason": "weekly_target",
+      "reference": 1018.49,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2025-10-11",
+      "execution": 858.38978,
+      "fee": 34.6703632142,
+      "notional": 34670.3632142,
+      "quantity": 40.39,
+      "reason": "next_day_stop",
+      "reference": 860.11,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2025-10-16",
+      "execution": 1164.8951399999999,
+      "fee": 34.600880343419995,
+      "notional": 34600.880343419994,
+      "quantity": 29.703,
+      "reason": "weekly_target",
+      "reference": 1162.57,
+      "side": "buy",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2025-10-18",
+      "execution": 1018.958,
+      "fee": 30.266109473999997,
+      "notional": 30266.109473999997,
+      "quantity": 29.703,
+      "reason": "next_day_stop",
+      "reference": 1021.0,
+      "side": "sell",
+      "symbol": "BNBUSDT"
+    },
+    {
+      "day": "2025-10-23",
+      "execution": 0.3232452,
+      "fee": 30.205970959200002,
+      "notional": 30205.9709592,
+      "quantity": 93446.0,
+      "reason": "weekly_target",
+      "reference": 0.3226,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2025-10-30",
+      "execution": 0.2955078,
+      "fee": 27.6140218788,
+      "notional": 27614.0218788,
+      "quantity": 93446.0,
+      "reason": "weekly_switch",
+      "reference": 0.2961,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2025-11-20",
+      "execution": 0.2874738,
+      "fee": 27.558963310800003,
+      "notional": 27558.9633108,
+      "quantity": 95866.0,
+      "reason": "weekly_target",
+      "reference": 0.2869,
+      "side": "buy",
+      "symbol": "TRXUSDT"
+    },
+    {
+      "day": "2025-11-27",
+      "execution": 0.275947,
+      "fee": 26.453935102,
+      "notional": 26453.935102,
+      "quantity": 95866.0,
+      "reason": "weekly_switch",
+      "reference": 0.2765,
+      "side": "sell",
+      "symbol": "TRXUSDT"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:13:02.116119+00:00",
+  "friday_latency": {
+    "cagr": 0.3416014176953488,
+    "days": 1826,
+    "end": 43454.04293143797,
+    "max_drawdown": 0.8862197628706482,
+    "positive_days": 470,
+    "profit_factor_daily_dollar": 1.0650247121720988,
+    "sharpe": 0.7021292264943498,
+    "start": 10000.0,
+    "total_pnl": 33454.04293143799
+  },
+  "full": {
+    "cagr": 0.2145705018962507,
+    "days": 1826,
+    "end": 26427.48665032347,
+    "max_drawdown": 0.8709525039301075,
+    "positive_days": 463,
+    "profit_factor_daily_dollar": 1.029890300530107,
+    "sharpe": 0.5877300189006002,
+    "start": 10000.0,
+    "total_pnl": 16427.486650323473
+  },
+  "gate": {
+    "all_numeric": false,
+    "annual_forward_folds": false,
+    "at_least_20_buys": true,
+    "beats_equal_weight_buyhold": false,
+    "double_slippage_profitable": true,
+    "four_btc_states": false,
+    "friday_latency_profitable": true,
+    "full": false,
+    "historical_holdout_numeric": false,
+    "independent_executable_oos": false,
+    "monte_carlo": false,
+    "monthly_stability": false,
+    "numerical_full": false
+  },
+  "gross_no_cost": {
+    "cagr": 0.3691960974043633,
+    "days": 1826,
+    "end": 48109.94466420001,
+    "max_drawdown": 0.8596597943076761,
+    "positive_days": 475,
+    "profit_factor_daily_dollar": 1.0583024069889926,
+    "sharpe": 0.727710761051552,
+    "start": 10000.0,
+    "total_pnl": 38109.94466420001
+  },
+  "holdout_2024_2025": {
+    "cagr": 0.1314248038266641,
+    "days": 731,
+    "end": 26427.48665032347,
+    "max_drawdown": 0.637526287471142,
+    "positive_days": 181,
+    "profit_factor_daily_dollar": 1.0383321944916255,
+    "sharpe": 0.46747524248204164,
+    "start": 20641.015584800767,
+    "total_pnl": 5786.471065522703
+  },
+  "monte_carlo": {
+    "block_days": 21,
+    "joint_pass_count": 0,
+    "joint_pass_fraction": 0.0,
+    "paths": 5000,
+    "percentiles": {
+      "cagr": {
+        "p05": -0.3637874148981421,
+        "p50": 0.17279333429470822,
+        "p95": 1.3828193867078575
+      },
+      "max_drawdown": {
+        "p05": 0.6127339339652141,
+        "p50": 0.8195205925585263,
+        "p95": 0.9652041769410755
+      },
+      "profit_factor": {
+        "p05": 0.8401855188492863,
+        "p50": 1.0397214285288727,
+        "p95": 1.3383687841556815
+      },
+      "sharpe": {
+        "p05": -0.3465409096862664,
+        "p50": 0.5491232110469156,
+        "p95": 1.3055733145262192
+      }
+    },
+    "rng": "numpy.random.Generator(numpy.random.PCG64)",
+    "seed": 20261129,
+    "undefined_counts": {
+      "cagr": 0,
+      "max_drawdown": 0,
+      "profit_factor": 0,
+      "sharpe": 0
+    }
+  },
+  "monthly": {
+    "longest_nonpositive_streak": 4,
+    "months": 60,
+    "positive": 30,
+    "returns": {
+      "2021-01": -0.2516940621126734,
+      "2021-02": 3.0211739487890767,
+      "2021-03": 1.3308688467371583,
+      "2021-04": 0.4511298467730418,
+      "2021-05": -0.46891345243620375,
+      "2021-06": 0.0,
+      "2021-07": -0.12375598946152355,
+      "2021-08": 0.23146684806358264,
+      "2021-09": -0.3915700660732906,
+      "2021-10": -0.0592979320045528,
+      "2021-11": -0.11154766057561216,
+      "2021-12": -0.38753744782650146,
+      "2022-01": 0.058189022325993545,
+      "2022-02": 0.180162530085056,
+      "2022-03": -0.01341332841620313,
+      "2022-04": 0.0138068083344971,
+      "2022-05": 0.013137734644741439,
+      "2022-06": -0.03231368192294792,
+      "2022-07": 0.06304223860087821,
+      "2022-08": 0.10124551268461057,
+      "2022-09": 0.04255744993867672,
+      "2022-10": 0.009940610931452154,
+      "2022-11": -0.12093639730302175,
+      "2022-12": -0.00318056511009146,
+      "2023-01": 0.022831272791468793,
+      "2023-02": -0.017644649926277678,
+      "2023-03": 0.025898414031305217,
+      "2023-04": 0.04337900446120879,
+      "2023-05": -0.0883457661580942,
+      "2023-06": -0.036483462798353905,
+      "2023-07": -0.07034329835164743,
+      "2023-08": -0.02103516924231008,
+      "2023-09": 0.03589201967641631,
+      "2023-10": 0.000490380247585076,
+      "2023-11": -0.014326343755081572,
+      "2023-12": -0.021950329497181897,
+      "2024-01": 0.023539422022142764,
+      "2024-02": -0.02905680799891408,
+      "2024-03": 0.25218627096518054,
+      "2024-04": 0.015389330264303558,
+      "2024-05": -3.451645209373577e-05,
+      "2024-06": -0.05656946498306892,
+      "2024-07": 0.015414937877184176,
+      "2024-08": 0.21844880157697721,
+      "2024-09": -0.030815270288897634,
+      "2024-10": 0.10120553484253447,
+      "2024-11": 0.004097188114857042,
+      "2024-12": 0.37278077230769746,
+      "2025-01": 0.005193843067935022,
+      "2025-02": -0.29083092565839663,
+      "2025-03": -0.022901556615310903,
+      "2025-04": -0.012510191502597134,
+      "2025-05": 0.11759321746112028,
+      "2025-06": 0.011259623176181455,
+      "2025-07": 0.03304689471179367,
+      "2025-08": 0.14727968940508274,
+      "2025-09": -0.012762431971713784,
+      "2025-10": -0.32276343235371874,
+      "2025-11": -0.04201475145403777,
+      "2025-12": 0.0
+    },
+    "worst": -0.46891345243620375
+  },
+  "net_final_usdt": 26427.48665032347,
+  "preregistration_commit": "09edb76",
+  "reference_slippage": 10278.126833002005,
+  "regimes": {
+    "bear_high": {
+      "days": 146,
+      "net_dollar_pnl": -46762.84216402043
+    },
+    "bear_low": {
+      "days": 711,
+      "net_dollar_pnl": -16481.328700232618
+    },
+    "bull_high": {
+      "days": 88,
+      "net_dollar_pnl": 31605.684271967024
+    },
+    "bull_low": {
+      "days": 881,
+      "net_dollar_pnl": 48065.9732426095
+    }
+  },
+  "runner_commit": "9d89600b64184fc7efee69fb6f02e328a39dafb9",
+  "slippage_per_fill": 0.002,
+  "source_audit": {
+    "dex": [
+      {
+        "chain": "BSC",
+        "current_vintage_not_point_in_time": true,
+        "days": 1857,
+        "subset_sha256": "4f036d30bcfff9caf8c9b542df22bc5452387a9c92f1d747f069de5bcbdfbe93",
+        "url": "https://api.llama.fi/overview/dexs/BSC?excludeTotalDataChartBreakdown=true&dataType=dailyVolume"
+      },
+      {
+        "chain": "Ethereum",
+        "current_vintage_not_point_in_time": true,
+        "days": 1857,
+        "subset_sha256": "dba04a8f6e4a6ca7722a44b4a7688f059d9c0091df14a9eaa056e9f92d7f5a28",
+        "url": "https://api.llama.fi/overview/dexs/Ethereum?excludeTotalDataChartBreakdown=true&dataType=dailyVolume"
+      },
+      {
+        "chain": "Tron",
+        "current_vintage_not_point_in_time": true,
+        "days": 1857,
+        "subset_sha256": "7ba65571d4de5347d9cda0c3edf949add76f737d07cdc7eacd03348975bc3c6d",
+        "url": "https://api.llama.fi/overview/dexs/Tron?excludeTotalDataChartBreakdown=true&dataType=dailyVolume"
+      }
+    ],
+    "spot": [
+      {
+        "bytes": 2078,
+        "month": "2020-12",
+        "sha256": "1048783fa6c029b138af6364a82208a51b9ee45acf2a62c278829e4a7b1f9d22",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2231,
+        "month": "2020-12",
+        "sha256": "77e2c7fa9a940828b3f36f7212f6def777acfc1402d173bdfad958d2e37ea469",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2129,
+        "month": "2020-12",
+        "sha256": "40dd3b625132d93b36397f9f4dcceaf6be13f50ffb357c28d06003370fd11176",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 2089,
+        "month": "2021-01",
+        "sha256": "417c1e3b8cd487e59678bdeb773132a6ce1a5cf0d294789a438a397874b2ef1c",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2295,
+        "month": "2021-01",
+        "sha256": "6ff53d94f600e2a208882bfd5c00e2133cff8f07e57b7f373af29f85f86e0284",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2214,
+        "month": "2021-01",
+        "sha256": "9c077a151ad30786ffbf2d560f457fb727ea3fc4f0932e6e287e2bf22ce5ba16",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 2010,
+        "month": "2021-02",
+        "sha256": "3444a8ef1ae5a8b9e3f16e61f92eae7835b4e28f717c0599452da2d5e4981f8b",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2103,
+        "month": "2021-02",
+        "sha256": "f18254dc4a70f396494be83a6081cfafd1935aaef42aef5a12f18b0244edeb27",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2005,
+        "month": "2021-02",
+        "sha256": "07b43daa2cd8487fc7a652c58237b93a7a07108e5f4d5cb9ec086d7737898d99",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 2212,
+        "month": "2021-03",
+        "sha256": "43612d792baf8f308de7f4d4c32166a133eaa8f1eb69f0135e9c4f694d0f6215",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2282,
+        "month": "2021-03",
+        "sha256": "f43e48b5efc8e0b06e0520b91aad4e5668844c766933c0c5cf403115dba03303",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2195,
+        "month": "2021-03",
+        "sha256": "0f3fe06236480c4aed3460eac7b2d4e0ef621ec4cc5da20445797cb682b74dc2",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 2170,
+        "month": "2021-04",
+        "sha256": "f15db2922aa07f2826eab095b01d46b5f8824861e5763278b1d0f4ed25012d59",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2189,
+        "month": "2021-04",
+        "sha256": "3dd852f06608173dec98b7210f6a38728ef221f08717b362b4f3f09436e0a5fe",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2115,
+        "month": "2021-04",
+        "sha256": "d483115836d4c285943064b22461670ff30ef1601b1183c4034c7edb4fffeedf",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 2129,
+        "month": "2021-05",
+        "sha256": "e6899ad8a8a79080d14327995c987d0f926bcf2a081e8fd46023cc1ba2fe623d",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2283,
+        "month": "2021-05",
+        "sha256": "3122e1ebaa1376937d479964563dced19f850636a700bb7cb97d7872ea8c8f28",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2240,
+        "month": "2021-05",
+        "sha256": "bc68e71360869ed2f1d06bfa07ec6599c5bdb38406d6b712635afe2c6f1df7fa",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 2048,
+        "month": "2021-06",
+        "sha256": "0b99bf9addf12772d6f71f69558b8ab878ccc1a4fd4959cb49ce7a25e96eedb6",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2204,
+        "month": "2021-06",
+        "sha256": "9875e11e890f75ef6eb0188ef7f952e5c0ba6919bd6d72d3da4d6847b84c5ccf",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2136,
+        "month": "2021-06",
+        "sha256": "b8ddb26be6c48876a04a7fddfbc3f4c8842f53b8e217613eac9dd15a55836597",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 2064,
+        "month": "2021-07",
+        "sha256": "4dc5d043750d0b653096e1432d3bd8e7a915a1966a4e950cb129fa8e8c243049",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2264,
+        "month": "2021-07",
+        "sha256": "636f588a6abb568f977aea3ae798f34ced4135f2f96fbc1493a2f9ab54a844eb",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2186,
+        "month": "2021-07",
+        "sha256": "c33ea50dc263d559315e7bf3dd6ab87a40f12747fe6fd0c16b5dff28dbd7b58f",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 2075,
+        "month": "2021-08",
+        "sha256": "3e2dcb5b1151dac49010da797d12aac49a528f0051d10c10bed5cef371e635cf",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2246,
+        "month": "2021-08",
+        "sha256": "68612e3fb74c184f97e4d3b2e061dd3743156401a6813ab897014b0b35caedd7",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2200,
+        "month": "2021-08",
+        "sha256": "3cffa7628cff71c9b2ec5f33085c90317fc1d9866ac701ca9742322344182397",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1882,
+        "month": "2021-09",
+        "sha256": "fd6877569527c31fea8ce934f711a229563dcb6f58a189e13ecee85832729865",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2156,
+        "month": "2021-09",
+        "sha256": "9f6535a0fe8a417b0909d230e4a02f6a9933eb23c770f54c9f6bf140e8d02257",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2089,
+        "month": "2021-09",
+        "sha256": "14e849630ad4d5ae2f899c289c395736c12f1b699486b9dcfd1d7e058e4fff18",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1926,
+        "month": "2021-10",
+        "sha256": "225eb581ce9e11c1338081f93bc9523dafdc4c12775b15682e59a5c0de18f322",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2210,
+        "month": "2021-10",
+        "sha256": "ba50ff3dab5726ca8b9fa26065fe3a8f612aed4baa978ecdd9d39647cd108684",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2129,
+        "month": "2021-10",
+        "sha256": "4f9e66dc56961d8552082782b2cdac5a149e125da90694885ab90363a63e8ff5",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1877,
+        "month": "2021-11",
+        "sha256": "a513976de0e411231b2a6dd56961604d8973668a0fc0dacff601f243317a42a6",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2166,
+        "month": "2021-11",
+        "sha256": "64162d8ec11458e9d02f49d8569e47765517852bcf0a908cd4d71211e3912e62",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2080,
+        "month": "2021-11",
+        "sha256": "8e9ebb3bcc07d3080db603ceafaec29fe66612bd160ad737235a3476fc8eafe9",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1908,
+        "month": "2021-12",
+        "sha256": "1f320541f2b83adbdaacf150e5f8f9d796b19af043e72233cc33791e8d2410b4",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2196,
+        "month": "2021-12",
+        "sha256": "6231b57d3a3b71fb76a1a34078a01a01275a59870857bf60408ccd3ba4618e75",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2114,
+        "month": "2021-12",
+        "sha256": "2f30c04c60988621d47afa115e2b7771785440ee3effe87355d5f7038d234361",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1884,
+        "month": "2022-01",
+        "sha256": "662a4e0172144ca01f445e543a95985b7e74625876e82b7fd3d39b7955eaf848",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2183,
+        "month": "2022-01",
+        "sha256": "a4a2e0432a8f0b42e2da71ac26599b2e6385b579ca4feba692a95cb897decdcd",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2139,
+        "month": "2022-01",
+        "sha256": "d992b05664b21cef2e104aa93ab1de487fe396f68dc9767380d87998cc7969a1",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1717,
+        "month": "2022-02",
+        "sha256": "885a69c5de1c88dc85ae9dc00894bbce4d7b2adad386ad9a6f9fd47f8b6bcf4c",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2011,
+        "month": "2022-02",
+        "sha256": "faffa5eadb9ebf0b32742773777596d0dbf3f282e94a16dd05cf1eb7b53a3763",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 1948,
+        "month": "2022-02",
+        "sha256": "2d7eeb5c0c0574ebfff2d7369f3b991e2693fe81a2defc87525c667598c3ceef",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1861,
+        "month": "2022-03",
+        "sha256": "b90ca82881847acca7ae92a0fa683d667e1eb324e074d393107c2f83e5702366",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2206,
+        "month": "2022-03",
+        "sha256": "452129b478585b18931f728f89daed9d2a19d4824b932af7a099366efd4db639",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2131,
+        "month": "2022-03",
+        "sha256": "0cfffeb995ad02f64b0a1235db34fbca7982aef8b104ee4bb7fd52605323ad53",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1821,
+        "month": "2022-04",
+        "sha256": "5bab193539510bf059623e85ce3e531a512d45c499b9c7f830ff4a122132dddb",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2117,
+        "month": "2022-04",
+        "sha256": "70413f67212d012ebfd600a6ebf20c03a9c8311bf764ab6d21d1bfd2d21d1b19",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2041,
+        "month": "2022-04",
+        "sha256": "2e3269eb718fd3c75f41a11f03c91f3e3af91bd14815b79b216ec371a876ec57",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1907,
+        "month": "2022-05",
+        "sha256": "f73bffec1e556dbaef3e02539cd7d7f6f72e13e213cf402e3ed208a881c39f39",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2212,
+        "month": "2022-05",
+        "sha256": "53eee1be2d5b461dabc67645ad706610b0465d8bbacd5f9cd99fc790c68f18f5",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2144,
+        "month": "2022-05",
+        "sha256": "fe39dd94b5e65aced7b4979fd6357fcd3700ae556a9d03c507d9983d507a628e",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1821,
+        "month": "2022-06",
+        "sha256": "fcb679a1d470123c6de42bd5d75eae964187e324cb66ea16f0a9ccd9b3a5a389",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2169,
+        "month": "2022-06",
+        "sha256": "dd5047ce33c16231bcb01f534951a709937bbfe0c0667c61f20f188cf9b94de4",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2060,
+        "month": "2022-06",
+        "sha256": "62633207619685b148ef58bdc910b78a33fef724ac2b507ef57e7878145516dc",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1831,
+        "month": "2022-07",
+        "sha256": "46f6d4b2166e7227745d88bf0d6772c3c5a1f86be612bb32f47c05352f09253c",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2245,
+        "month": "2022-07",
+        "sha256": "216567f1a8bc1dbeaada097f7eddff12dafde177c16b26507c762a613a57eb5f",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2130,
+        "month": "2022-07",
+        "sha256": "6b4b9bdc7b0e1e6b87b95e750343d898c0df36d9d885bfeae594ca4e29ac0981",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1846,
+        "month": "2022-08",
+        "sha256": "3dcc2907868a36cceffe7ce64404c9a109d4b34c7da7b7fa8a5e678b0f71480c",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2237,
+        "month": "2022-08",
+        "sha256": "fc8bd69e95141afb6f83c5a4450c3f6b49c4a1cb16e42d90eb960c3ffa9e766e",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2118,
+        "month": "2022-08",
+        "sha256": "9f54ee2471795608f083a175285cbfd77f5de473cbeaa0d491b3751cf791a3a9",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1784,
+        "month": "2022-09",
+        "sha256": "ee847c48fe6f37cac5c68e64bbf38c134d81fdce442a16a3f0e4d0ee9a12af52",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2213,
+        "month": "2022-09",
+        "sha256": "68a8357e23277ebd98842fd88d492b012d53dd578b5061cafb8c070c440b235e",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2022,
+        "month": "2022-09",
+        "sha256": "64daaa8bedcb3e82736d5b6426974aadd814007067fc81380ae87e04e1112714",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1819,
+        "month": "2022-10",
+        "sha256": "0f78133575aa5a2ec24e9a813e6aacdbd414ba86c492d495ee94f4f6d17f6446",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2219,
+        "month": "2022-10",
+        "sha256": "5b086535cba596ef1b465f247a26385b4ccfd12673a76f225e2dd9e00dddadfd",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2088,
+        "month": "2022-10",
+        "sha256": "01a81d5a27053ead87542d1329763bfd22978080f6c3e7ee588f189cd49ff8d6",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1817,
+        "month": "2022-11",
+        "sha256": "8a00ca305b5e0849dac8f04508890b521260518c4930cf0b70af8c311b7906a8",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2191,
+        "month": "2022-11",
+        "sha256": "142202b226078f54342c4a1d74c8c6081a98c655d7d6f6fba06314f9c101e2d9",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2061,
+        "month": "2022-11",
+        "sha256": "83cef6abcb76dffbac6c6ad0e2842dd218f226e1e4a1839e78e35b12dd68a015",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1833,
+        "month": "2022-12",
+        "sha256": "cfbd0e1a447f02ddc84ea313147644c4d8b7e2ebdee9693a7c54febab0a5b8ca",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2222,
+        "month": "2022-12",
+        "sha256": "aff24746afa9a3dbd355dd3462bcef80e59e96ed9aa55f79007532f9e07991bf",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2050,
+        "month": "2022-12",
+        "sha256": "e3f2c5851ef573c35733f29293188310099683948692d8e8ba008b17fdbd508f",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1834,
+        "month": "2023-01",
+        "sha256": "05be0f46d31ecf6caca990c4be77f866f52cf5481361ff4abbdbd3e2a4ea374a",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2250,
+        "month": "2023-01",
+        "sha256": "a9fd53b75add7cc42fb4779a545811606260f79810f3826215d6ebecda11bb36",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2087,
+        "month": "2023-01",
+        "sha256": "811ff55e20735e6fff55ef37c0c3e922eb6d26d41fe84fc04b2a03c0179549ad",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1675,
+        "month": "2023-02",
+        "sha256": "410fbb22da231870ad59911391bdf07bb4aa8665aa3949c64aaf2c54ce64c849",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2072,
+        "month": "2023-02",
+        "sha256": "13df1e3633f15be3eeba4768d0cc323ef221191002657b53936a6d0fb5e6556f",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 1916,
+        "month": "2023-02",
+        "sha256": "2f6cdf5aa6613ab3621dbd730a234935e8909f980f1195f7581abf145e422cce",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1825,
+        "month": "2023-03",
+        "sha256": "26fd3b5676cf6931773f5e87d341e7cc9c17cfee57b11a64921346c3bce725a0",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2265,
+        "month": "2023-03",
+        "sha256": "1cb1209700ec74fa4592048de2e4ea4a38ab2bd622dfe03f1d6195c249501381",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2098,
+        "month": "2023-03",
+        "sha256": "dbfe653bf62ebac3e4e2bf5c96160de6c76bcbd76e4979ca2105d11cf2bdf77e",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1765,
+        "month": "2023-04",
+        "sha256": "b4cd24822818759814338a0a86b2e36e88ad888690c8cface82f9efde3ac4b96",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2108,
+        "month": "2023-04",
+        "sha256": "999e86be73731ebc347c6ada94abceb5e291b65e7f1b4df2ce390af1aa2a4a08",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2019,
+        "month": "2023-04",
+        "sha256": "d316aea182914c088b06d03640812bae72e889a347ed9dcc78bb8ad10ed1bdf9",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1808,
+        "month": "2023-05",
+        "sha256": "3ab0a70edd10567d640dd6c7c35926716153292708b0651d939f42e5adf4fda4",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2168,
+        "month": "2023-05",
+        "sha256": "c343e4689784c29f83d25147a096dd44b6ae5c1063c909f8adda82b56414469d",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2087,
+        "month": "2023-05",
+        "sha256": "a86ef09c35c764e6f0066953074ffb0dc93239afe92e3d73e232fbc95cdeab51",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1799,
+        "month": "2023-06",
+        "sha256": "34b239403a1c0b3fdf062080dcf195e0ccd336cd192c7d85dcc8b7c5e26b1cbe",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2099,
+        "month": "2023-06",
+        "sha256": "634919565c55a29729543d730927ca4b547c0e52d118a38de730f37fdd7617ef",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 1994,
+        "month": "2023-06",
+        "sha256": "4932a5fd8853ddf99f3853a501e5f35ffad45a07a466bbf4603ddb7fb4c821ac",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1818,
+        "month": "2023-07",
+        "sha256": "82ef4a7e5cfefe5916b50bb6225b134baf854d7125395b292442deb27e0322df",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2132,
+        "month": "2023-07",
+        "sha256": "32363d37de02e6ad8d334ac332c685f8cdf5684733a9f2cfbca40e15e591396b",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2036,
+        "month": "2023-07",
+        "sha256": "f66293651e4a841fe9bc36cc76483bdb9c1faaa085377fbbd2fd064cd401cd5e",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1805,
+        "month": "2023-08",
+        "sha256": "391f00309a8c85ad58517287ffd288156c8b50c2e129b5ca430315d4cbcbd2a5",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2160,
+        "month": "2023-08",
+        "sha256": "8c5e47bfe3f0b0273534379e8ba5c93e69c84d67e8b9a03f293d6621bead2a5f",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2058,
+        "month": "2023-08",
+        "sha256": "e694749c085b888401f51002dbd21bc8cf0c4d801d2da311e72d6c1ae97627d4",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1723,
+        "month": "2023-09",
+        "sha256": "8bd6326ced778911b9ccd13a7b9d475fd72a4990b2e08946a0ad435d7a53ca6b",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2080,
+        "month": "2023-09",
+        "sha256": "2fe68ecad48d6927a9280d89700e991cb6481dc2767698c785f2b2d1c0b14744",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 1985,
+        "month": "2023-09",
+        "sha256": "c1faa848529e17e15deafb208d817155576ef51e556813109cdb60c0153ac73d",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1807,
+        "month": "2023-10",
+        "sha256": "1b12d8d8687a2c3184612fadb23d403815e4b38011b2dc8ad9c7aaab53c85a49",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2154,
+        "month": "2023-10",
+        "sha256": "358b83bf0c2a5d5390a4bc4d4ae14fa9df0f56139642ad996c0df0f7bc712400",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2059,
+        "month": "2023-10",
+        "sha256": "baadc74c685a63d7ba453531c9f4d1df81a5719200501ab229018352a1be9630",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1819,
+        "month": "2023-11",
+        "sha256": "265f43677cdca9c19e7cef1cee1614339bd2589a1207733f6f6f8a24fceff628",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2102,
+        "month": "2023-11",
+        "sha256": "fac9823cac7bf56a3a6038c3b79417e949b00c172939e62000451c8c25edd7c1",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2022,
+        "month": "2023-11",
+        "sha256": "8faf9f53efe268d25d01b987b3a364cd9f1983703ab2f78486192c29218b1faf",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1874,
+        "month": "2023-12",
+        "sha256": "cd892efd72678fe5885b47607a6dd57422bcfacfd899a23155a4c832a3349b98",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2177,
+        "month": "2023-12",
+        "sha256": "056dad65795c9264ef90ee668a4c245e8fec73ebcbb272d28f5596c389913979",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2086,
+        "month": "2023-12",
+        "sha256": "1778c56d995fe5d32a0816a5214feabcd84d594f4e882315b4e225d6e86e5275",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1874,
+        "month": "2024-01",
+        "sha256": "5d4bdb84616da2d4b6a83b9b9360c40eec0871648a0cac65734e33444faf678c",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2190,
+        "month": "2024-01",
+        "sha256": "474c1ce6fbb09e42cfc7231fee249aecc58af2fb5918570ffeba37998926b4a4",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2109,
+        "month": "2024-01",
+        "sha256": "49598e812edcbf446f20d21a3ffc382a6f51fc1982a7e4224b78a416dbe36e8d",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1743,
+        "month": "2024-02",
+        "sha256": "1ab8349b900bb461b5099079b33c8e81225bcf405788b6f3b2c818a8a31f882f",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2053,
+        "month": "2024-02",
+        "sha256": "4dae0b3d6b8ea59e39e6493b7964040c52459ea7b0a50b9c2793dcbfae53800d",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 1976,
+        "month": "2024-02",
+        "sha256": "36ebece2c2a6fcccdc4ee2924cd037870e88fa09877208843e2cbdf5f5c93a44",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1915,
+        "month": "2024-03",
+        "sha256": "fa6108d195ab1e9ba3a93edd617fd09fc5af2ca8a58f655dc710d91415c517ae",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2224,
+        "month": "2024-03",
+        "sha256": "f7cd4fcafe79d1fac0c830d5fe152f7b3b9100e7c97e40352188766388af0ae0",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2125,
+        "month": "2024-03",
+        "sha256": "78f5a6edba263350c1df6d4678596570ae5ce5df38edd4e253ec89431fbddfc0",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1813,
+        "month": "2024-04",
+        "sha256": "d7fc923f6a8b776a567eb475a6fa86cb471b06588455e6e3f4648b292d7d5d17",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2141,
+        "month": "2024-04",
+        "sha256": "b4a8542c33e5251fb53f8a3352dd4e6f3cde4ac25f2c24935db8089aa1a2c3a0",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2050,
+        "month": "2024-04",
+        "sha256": "d0a5088a3d49cea7269dc3bf7f29912e23a390c87fb7b14acbed210ac9be8177",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1846,
+        "month": "2024-05",
+        "sha256": "805a64670052eedac4a271e180555347e4a027c2a551c57ea66b2827e4fd9eac",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2185,
+        "month": "2024-05",
+        "sha256": "0175f696039b9e30f06c6398d218c99e577661ac30424869c648fe9770507248",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2109,
+        "month": "2024-05",
+        "sha256": "d0c98ff2f16913e1c1f9bb72165086056ae9923db5b07f113ca6eaf334b87bbf",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1803,
+        "month": "2024-06",
+        "sha256": "3295c5a0ecb21631caa8f5c95d8d895c434c34edb2c3d4699155a0e2893cf949",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2095,
+        "month": "2024-06",
+        "sha256": "8a0f6416c2a83cfa15ba26c688d716fdafe35bb1748dd244f0550e8b2f7e38f7",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2014,
+        "month": "2024-06",
+        "sha256": "5198557b48b8df354f5dc07e76270e988416f9e8972e577d9c327b31d2cb1db1",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1864,
+        "month": "2024-07",
+        "sha256": "7d2b8921df19108e5f92ca27e5a846bf06831d03fc072879de63c1f66aebd33a",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2203,
+        "month": "2024-07",
+        "sha256": "9a2963ef6541b4d7630eff8df7b2eaee48ece33180af03c34b0bf92675692899",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2093,
+        "month": "2024-07",
+        "sha256": "ae4a1a154d9c4e27bb7551293216d6824a0455fef7ecea0efb5084e145ba1ac5",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1862,
+        "month": "2024-08",
+        "sha256": "074f124320c2aff60894d49aa3de8a76284c27af73379e41fe88fa0c2f191c28",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2190,
+        "month": "2024-08",
+        "sha256": "df41fe3260920b85da86855b4880f34618982e689081317d3d63b9b3bbcb1d53",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2107,
+        "month": "2024-08",
+        "sha256": "e41fc2dcefc5d0737fd74e943602327cfdbcde04dec40d94030cfcf01720e593",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1803,
+        "month": "2024-09",
+        "sha256": "c6594d1164647e075218c6c61fd98081c655c27db443fb2fa7d5543fbeae6afd",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2106,
+        "month": "2024-09",
+        "sha256": "89e459b2a8f4b138dc742d9358c0084fcabf719d40468e156c3149a3635f3359",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2030,
+        "month": "2024-09",
+        "sha256": "6e6add68412a0d89199fb6185b88b24994c32522e4ee67ac88d02ab8b81eb1c1",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1850,
+        "month": "2024-10",
+        "sha256": "b9d1534493268393431f6a189a905041a794ae553f242b495c102fcd5292c3ae",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2203,
+        "month": "2024-10",
+        "sha256": "d442a5f158d45d9ff7b1584b35023a4161cf915a3857f5e71a2a2e6aa68c69c5",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2084,
+        "month": "2024-10",
+        "sha256": "cc2ae0b168f8ddd7b45441a30ae9aa95f748ec9ecaa19ab3cf5e9ec21fc63783",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1915,
+        "month": "2024-11",
+        "sha256": "e056a4d76b86fae5d833a9d2ad1c2fdf4e33d894c93a10fb12135fa258ef152b",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2157,
+        "month": "2024-11",
+        "sha256": "b197219d9e8b5e933226e1cd24fe2b7bfc3a2e8a3e74e6f7dc08a48f314da8c3",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2074,
+        "month": "2024-11",
+        "sha256": "fe8b32f1ab7a3a72316b404ffc9d7002cb75801364f12dc52eddfedbb3e3af43",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 2014,
+        "month": "2024-12",
+        "sha256": "cb56172239def1e8e6c983b6050971333bb6aeb3d3305be702e780d3ee2becf0",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2218,
+        "month": "2024-12",
+        "sha256": "82ec90210f492694b9d01722f97f579108ee787968b8485b53d736ea735700da",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2128,
+        "month": "2024-12",
+        "sha256": "e36880cb5d79157599878eb97db2d20a5bc10f904384501f0b3571a09c1b6bcc",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1998,
+        "month": "2025-01",
+        "sha256": "50d7646f9fdeebba62408547b775ca328f85d1464139a1e22a761b6068edcd8d",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2254,
+        "month": "2025-01",
+        "sha256": "3a3eb1b723d944deb4dbef5ae361bbe39340a17fe987fe22e397ef03dca268d2",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2157,
+        "month": "2025-01",
+        "sha256": "fb1c6329259282a4174c646629515704da03c713bff9106f8da01ec188112a09",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1846,
+        "month": "2025-02",
+        "sha256": "ca8f4a9bdf0be827132459db5ab7da08f633456dfb99ae4e3bb1fe54225597ba",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2039,
+        "month": "2025-02",
+        "sha256": "27cfde08c9eb8e3801fb049e3be351a3e50ab46abd8553c24023fa98ea5e919e",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 1988,
+        "month": "2025-02",
+        "sha256": "ed3cf4f55aa296a25e092d73170c6772fa33e089c8ee5bdd379198fa94675361",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 2005,
+        "month": "2025-03",
+        "sha256": "71231a1cb118abbe98f2a5e330c699afe37e2998f025c13f3e7abbf0b034705b",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2249,
+        "month": "2025-03",
+        "sha256": "5874e405f55c46f040de1a8ea9daae583dc12b5bcaef6078b21aae9c627cedcc",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2172,
+        "month": "2025-03",
+        "sha256": "37a2a5d88861944141de683f7584d01cfeb23c0a69ba0aa2613fa6ec14b33960",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1913,
+        "month": "2025-04",
+        "sha256": "a90bca13bf407336c7c5646ba8c54d0cd5bceb923d30a1dd904050b83ae0116b",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2165,
+        "month": "2025-04",
+        "sha256": "8068a571425857cb0f5f71f75e733d3bc1e731362a09f84f835bbea6e087aeb2",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2107,
+        "month": "2025-04",
+        "sha256": "88554fccbad3d445fb7aad16440ef62aeb7b5a0d0d0be26101919753a455e106",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 2002,
+        "month": "2025-05",
+        "sha256": "0ec9f578274d77a7a6550a78f60fcb958e53ed4f96dc2e3bfae3bfa8f0f41552",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2253,
+        "month": "2025-05",
+        "sha256": "2b87aa0c63641ba1e954855bcfed96d7fc4eb21efe7936f354ff74e8e06cfcea",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2150,
+        "month": "2025-05",
+        "sha256": "05f9099dc0225439cdcd08661281bc958f4984a02c5219ff019c7988140a4511",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1906,
+        "month": "2025-06",
+        "sha256": "0724ea1a2ca134c138acf4c27f88c99a7271d2ac9f065ca1f2c2ebd1361838ed",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2170,
+        "month": "2025-06",
+        "sha256": "dc4bbe2c75f04372b909febe8e6b379b053f88423d78cdb3ad8b0be3a66d6ede",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2077,
+        "month": "2025-06",
+        "sha256": "1a436c3f4e79c6ef65e06749c7be302800f2bbe84b283f36b670688f1fe8e706",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 2009,
+        "month": "2025-07",
+        "sha256": "060a89450cfa7baf8b2068962b9d961c63b6a533970256d7fc8356162ba00905",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2232,
+        "month": "2025-07",
+        "sha256": "1ea64a346f6be0aaf455eb1ce107e6d38367164d97d0dd3719b9f9bb239796f4",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2148,
+        "month": "2025-07",
+        "sha256": "507452f08f6df58e28c66a56eb114c274a601908b7a36cca028f4f1fe685c5a0",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 2026,
+        "month": "2025-08",
+        "sha256": "3a26bfe42a85f8b7abef970107417d2c777f64976f84ad9137ee6b31b91d7663",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2237,
+        "month": "2025-08",
+        "sha256": "6720b573210cfbb98765f4a0de6826033d203fda42a6c8364455144b703ceace",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2173,
+        "month": "2025-08",
+        "sha256": "caaf73478addeaf0d1a1d470284448a8eea201ec8b54acbf4996327ee5fd30d3",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1981,
+        "month": "2025-09",
+        "sha256": "6742bc46e9a4b297ac5f3d33b940a114e444bbdfd0181f71c07d06f1853b5458",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2154,
+        "month": "2025-09",
+        "sha256": "9934e6d98a90139039bb070a90ba409ff1832ad80116920adcf088090ce4c996",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2104,
+        "month": "2025-09",
+        "sha256": "2362f78fe5ef79628fe7a16fcd720ba5e2490bd05806943d092d0c2bbc025403",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 2078,
+        "month": "2025-10",
+        "sha256": "721bbfffa88553681a7dd9422e58ccef9499a875f51efadc35ae22538c4975ef",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2262,
+        "month": "2025-10",
+        "sha256": "3597639a18f343c768e374157e8bd08dd046bb33693495ff4e13380abac1260e",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2174,
+        "month": "2025-10",
+        "sha256": "7ac29ddc8e5af97d63293df20ca5fe2d31952754d06fa7592992cd1b9ccc2fbb",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1981,
+        "month": "2025-11",
+        "sha256": "63fbd535e881fadbf1a7e66cb3f646537f09ea0ec7af78f1ae0e635a7b1df816",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2185,
+        "month": "2025-11",
+        "sha256": "9eded1225f9e3f3d4f127fad46111eb403553c1125cf6d11995e69d91d037290",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2101,
+        "month": "2025-11",
+        "sha256": "ca97638b3e43fa8fc6cfe9e01ebec4cd6b59ac5b37b694f951ae30719424bbed",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1985,
+        "month": "2025-12",
+        "sha256": "2c80ad1f432956cc84b4e03ccb3c77c6bda03b18dd9a61a53a572d25ccaeaf55",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2230,
+        "month": "2025-12",
+        "sha256": "b12a106198f3be3ba5916195f75c1c6d34d8e5302ab77b8fd7c4b1b58b6144f4",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2165,
+        "month": "2025-12",
+        "sha256": "eaf731c713e58a6d0e7a196c9887c41c5ed6066c73de68f878dfbe4a48de05e8",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1993,
+        "month": "2026-01",
+        "sha256": "e936735fca3f568a7908b0c04d6c949164bb4a140bf0f79e8ab9ea9c79280ace",
+        "symbol": "BNBUSDT"
+      },
+      {
+        "bytes": 2237,
+        "month": "2026-01",
+        "sha256": "b7775ddec3ddd3edafc6ad5abcc94d6ab8b8f063a0911d8a3f3daae6a8bbad2e",
+        "symbol": "BTCUSDT"
+      },
+      {
+        "bytes": 2151,
+        "month": "2026-01",
+        "sha256": "809eceed4a7a4eddf08f70e4c505f454ecf9d715d72269fa36db37964e4159f4",
+        "symbol": "ETHUSDT"
+      },
+      {
+        "bytes": 1941,
+        "month": "2020-12",
+        "sha256": "59000e4396bbb72233401465701e031ec2eba66af2089b155179c2a4fb5bfd5c",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1972,
+        "month": "2021-01",
+        "sha256": "8a3f8f2fa2e57e172d8a6ec16aa466fb3a568880b601b6455c46d1b7fc74b1e5",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1820,
+        "month": "2021-02",
+        "sha256": "fbd80e4a08895c1b56912566d2d634eed60c4e38fb8def3011479bfc1fd575ce",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 2004,
+        "month": "2021-03",
+        "sha256": "cb78b1ecf28c5d8227a9bb8c9249f28f0fee780f8436969621a2d2f4df477402",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 2003,
+        "month": "2021-04",
+        "sha256": "6e0be7b4f264f174bc7713c0ba483f6a7f28ffa6daf2b241ca9b428ffcf96f53",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 2059,
+        "month": "2021-05",
+        "sha256": "7dd853063d5e331f473b545534c6bf515168ef10c069813ebf2171f2d91a5934",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1929,
+        "month": "2021-06",
+        "sha256": "42dbd26776269aa64f191505254cf7d3550351cf68d9ae0d3fa31a5c1f4cb5f7",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1943,
+        "month": "2021-07",
+        "sha256": "b6b053f953df26b921879ac2ab1e74486ed61db6d0562f54db2ee9e09193b038",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1991,
+        "month": "2021-08",
+        "sha256": "294c49d62620c2c4f24b3d5c0ac42a4ee5b6342abf3a4f6c824c07b0a11b2896",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1948,
+        "month": "2021-09",
+        "sha256": "e4a38c152fc176b21e6c3c41c1c924c64094f47adcd01aabc121b77a794122f0",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1988,
+        "month": "2021-10",
+        "sha256": "48c4d33c8958037f49e8587d3d1e6599f4462748ff81dc7aba7eab7cef92d75f",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1962,
+        "month": "2021-11",
+        "sha256": "be4c97437388065a40e1e4fbc767e512306b32695ebf0d2c132e8b6efaf49dd3",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 2015,
+        "month": "2021-12",
+        "sha256": "b51697918cd70c26d65b16d3d938f8ee6a99b9a274c5cb1876eb0a734c717f15",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1987,
+        "month": "2022-01",
+        "sha256": "1a2a8dabef04a730fe58dbbba9e65ef9747f1c3ffa73ca8a6cbc65cb2bd75ee7",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1785,
+        "month": "2022-02",
+        "sha256": "0b42fe186cfc171ca740bd5a61adaba5bc8f62f4305961c1f9a148cfb2a420f5",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1956,
+        "month": "2022-03",
+        "sha256": "d77365f0edb98d3df7c4d5a1a0ed3461ad49c75437cad85571bcaf2c2d1025ec",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1912,
+        "month": "2022-04",
+        "sha256": "7f1d17cae356abea96c3ecc80943a8d1349eb7b8b9143bd6094625eeef8694b5",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 2022,
+        "month": "2022-05",
+        "sha256": "dd2b6761000218690dfaad47541ea08c0ece9f64307e0cf0e7c01ef588fb4856",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1941,
+        "month": "2022-06",
+        "sha256": "841a42d33525fd3baeab7e185a3074200354d2517c62c211adb3f7be4e19a1a8",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1921,
+        "month": "2022-07",
+        "sha256": "f358cfe3bb57735b9b0cb4b81c0a0396f00c821170eb99ddd09052b8e59928f5",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1906,
+        "month": "2022-08",
+        "sha256": "e9816bf21f8092c76c9596b2b9533fefc8b704aa84fb37c1045f8da1efe5a1c8",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1841,
+        "month": "2022-09",
+        "sha256": "76f6c85fb3a930fcdaac2788ddd945cd29a8503c6cbef6d05936fb869dda5a62",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1898,
+        "month": "2022-10",
+        "sha256": "11d361efc45301c56b50432acf8428e17e5f5df98365199e9ad8e89921e1939b",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1886,
+        "month": "2022-11",
+        "sha256": "4d5707ed2caf7a7f0a00ce8d057609a8f3beb6e31306dc722947e65079dbdd2f",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1890,
+        "month": "2022-12",
+        "sha256": "d34cb466aea3675941ecf9e147890731629120d3daa5ab6d17cd0679d4f93702",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1936,
+        "month": "2023-01",
+        "sha256": "02b70d95532d22fca032c3c1bc3180e2b45ee2d5579d178e6b433090e5738239",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1759,
+        "month": "2023-02",
+        "sha256": "bb4e06ac009ae19154745de4e44f9e16a8e6ce04149522f7c5935bcba6e5cae5",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1933,
+        "month": "2023-03",
+        "sha256": "88806f55ced6fb13cac8b99b759588fc39f47005070563f201f9fa5d47d801d3",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1832,
+        "month": "2023-04",
+        "sha256": "188a95c015efa468bac344c7998daac93051874ce4f4a3db857efefb60d2a46b",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1927,
+        "month": "2023-05",
+        "sha256": "9a426abde11957b2a474eedc328899d8f778ee0d01e9a7f88fbb3a2a5e28cb36",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1874,
+        "month": "2023-06",
+        "sha256": "c0c0c1a632d676eb3b8f1e6e3d3e25bb4f1b384d57fcacb3cc46794d36071f39",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1902,
+        "month": "2023-07",
+        "sha256": "a4554328603571f375ba8b530e98a57f7fc591ce5830e959f98cc90e0a5da50a",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1870,
+        "month": "2023-08",
+        "sha256": "8d8c28198925848b3b42504cc37b53067827e1b9f24e0d293bcd00179f6e8422",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1842,
+        "month": "2023-09",
+        "sha256": "3e39ce9a88473fdad22a491576c654eba54c06cb813a39d5d6c4b641a5de9fd7",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1908,
+        "month": "2023-10",
+        "sha256": "80680fbe1a189a1a6ecd205cb6d1a3e1804514b87ebdff9d368d55e072b893ff",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1878,
+        "month": "2023-11",
+        "sha256": "37ac66bffccc021050f29f94710a53ecd09097eb08ba313d70ed4954b4de2ba8",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1912,
+        "month": "2023-12",
+        "sha256": "f2dcbfb35d300b24463dbc1f88e9d72cfeee5981ff902d32b8fed7994e7a485f",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1929,
+        "month": "2024-01",
+        "sha256": "1b4c57a749d58a55d080fc3c8c203f9620e64d3498ba56ee953bdb9481e708d5",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1826,
+        "month": "2024-02",
+        "sha256": "6309f7ce87fcb01473f42c1e0775827a815772e66240d02ddb4531c13e833327",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1966,
+        "month": "2024-03",
+        "sha256": "c7ed2401ec7149eac58f4c7a007fb6ef0e90bd8c008969528e137caff10e82f7",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1901,
+        "month": "2024-04",
+        "sha256": "cd6331e859fb71822991b8abf0d87af17a89b45da7bb57277a4eb239ea8508b1",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1920,
+        "month": "2024-05",
+        "sha256": "a9836da6cf600dcdac6152677d1f983d8b1a7d0031701f11bb14273be4e7ea1d",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1863,
+        "month": "2024-06",
+        "sha256": "2fdd891a6a8d0a01f9f000899a5ebc107eb7bc05d5ab337dfbd9b087c175bf5d",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1905,
+        "month": "2024-07",
+        "sha256": "9017f8665e7afb2c5ae3b86eea1886275eec372a5a959c38d3496d2cf9de66ac",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1874,
+        "month": "2024-08",
+        "sha256": "2d4d31e1f018685f251f8614fe25c35287051d3b4e25821daea5b78ed8c09c59",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1770,
+        "month": "2024-09",
+        "sha256": "a3a1acfb9ad4691a1373406535ae7a23f7b211b7b3b0dfbbe187ea009e489cce",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1818,
+        "month": "2024-10",
+        "sha256": "7d3349c088190dc069ee6768e1f2ba6b7ed937ad107165d09ef03bd22a33cc38",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1839,
+        "month": "2024-11",
+        "sha256": "c4d2292c80cab260d9ec24bab68a833fce2fbfdec32226bb54e629446ce1b86f",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1962,
+        "month": "2024-12",
+        "sha256": "8a41a988fd7b47f7d4cd4c8bd6035df3abad2e2dc84f984514cea9f2df0b4c6c",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1920,
+        "month": "2025-01",
+        "sha256": "ae922546c6e9575fa29d7acdf643d4a6f8d52be68d2582ec43a5022a05d91433",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1730,
+        "month": "2025-02",
+        "sha256": "70c309a73f656e00fb1b10d54160db21ea7edbd38d19f00682de8174a70d947f",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1898,
+        "month": "2025-03",
+        "sha256": "fc38db85110d0eec6b1c5a27b74d1273329525f9b9e9df52e7f10a861be5eb27",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1828,
+        "month": "2025-04",
+        "sha256": "9feafe15bdeb4956c0579398a3281936148bb0e111d54513393d5f6e6b118be0",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1893,
+        "month": "2025-05",
+        "sha256": "77c31cab33755ce63e64b117857e3a7d1247201b6ea161cbb7335cd47362dd44",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1827,
+        "month": "2025-06",
+        "sha256": "e0e32320bcdd9b3a5fc987d9bdb3854d07c631de5ec1fc881dc86d027ac0dea3",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1898,
+        "month": "2025-07",
+        "sha256": "d1be70a9723fcc451e76dcfb5f21747810aa5f50e4d254e482a9192ca3d7a16d",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1903,
+        "month": "2025-08",
+        "sha256": "f9b303f0d15d58d2561d4973a376ad033a42df3c8db921e57eb05733d47bfb02",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1827,
+        "month": "2025-09",
+        "sha256": "fe809dfade11bcf4d1bb3aa4229328d9395497f4c5536a21926410a806ea05c6",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1906,
+        "month": "2025-10",
+        "sha256": "4ccda214aa7fce5025f9f627147e6014f3c0e1b9d432228f9e773b4401779071",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1829,
+        "month": "2025-11",
+        "sha256": "74485b6c6697fbf0951b65b514b3fb856b9350f4374b3db07a7d9305226b2ada",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1840,
+        "month": "2025-12",
+        "sha256": "0b56c467a55f38e5471c376a1f3b2870f19218858cf90bf7338715db7703a0d6",
+        "symbol": "TRXUSDT"
+      },
+      {
+        "bytes": 1850,
+        "month": "2026-01",
+        "sha256": "b43d87c58d51d31da00da4fd7b571f011577bea088ce243543bfcb5b804135ee",
+        "symbol": "TRXUSDT"
+      }
+    ]
+  },
+  "started_utc": "2026-11-08T14:12:06.107232+00:00",
+  "status": "evaluated_rejected",
+  "target_schedule_sha256": "49f3dd3cbac7d2932f33ec19cc91e274897613972deb9d274611a3093ca395ca"
+}
