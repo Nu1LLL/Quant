@@ -1,0 +1,37 @@
+{
+  "chains": [
+    {
+      "chain": "BSC",
+      "days": 1857,
+      "first": "2020-12-01",
+      "historical_subset_sha256": "4f036d30bcfff9caf8c9b542df22bc5452387a9c92f1d747f069de5bcbdfbe93",
+      "historical_values_read_for_signal_or_result": false,
+      "last": "2025-12-31",
+      "token_symbol": "BNBUSDT",
+      "url": "https://api.llama.fi/overview/dexs/BSC?excludeTotalDataChartBreakdown=true&dataType=dailyVolume"
+    },
+    {
+      "chain": "Ethereum",
+      "days": 1857,
+      "first": "2020-12-01",
+      "historical_subset_sha256": "dba04a8f6e4a6ca7722a44b4a7688f059d9c0091df14a9eaa056e9f92d7f5a28",
+      "historical_values_read_for_signal_or_result": false,
+      "last": "2025-12-31",
+      "token_symbol": "ETHUSDT",
+      "url": "https://api.llama.fi/overview/dexs/Ethereum?excludeTotalDataChartBreakdown=true&dataType=dailyVolume"
+    },
+    {
+      "chain": "Tron",
+      "days": 1857,
+      "first": "2020-12-01",
+      "historical_subset_sha256": "7ba65571d4de5347d9cda0c3edf949add76f737d07cdc7eacd03348975bc3c6d",
+      "historical_values_read_for_signal_or_result": false,
+      "last": "2025-12-31",
+      "token_symbol": "TRXUSDT",
+      "url": "https://api.llama.fi/overview/dexs/Tron?excludeTotalDataChartBreakdown=true&dataType=dailyVolume"
+    }
+  ],
+  "price_or_strategy_result_read": false,
+  "retrieved_at_utc": "2026-11-08T14:02:38.174807+00:00",
+  "source": "DefiLlama free DEX volume API, current historical snapshot"
+}
