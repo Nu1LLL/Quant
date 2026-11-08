@@ -1,0 +1,2484 @@
+{
+  "experiment": "us_10y_real_yield_easing_btc_eth_2026_11_08",
+  "prereg_commit": "639e477",
+  "code_commit": "07ddb83b944337c9b13bbe7fbc082c46b744f3e3",
+  "started_utc": "2026-11-08T15:03:35.258243+00:00",
+  "evidence_grade": "preregistered_retrospective_current_vintage_real_rate",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "status": "sealed_formal_result",
+  "sealed_utc": "2026-11-08T15:04:06.791691+00:00",
+  "sources": {
+    "fred_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2020-11-01&coed=2025-12-31",
+    "fred_sha256": "35f372e026b173dfbf847cc2384f3d553ba82c049a0ba3ffc9c52ab5d0b7f9ef",
+    "fred_bytes": 21732,
+    "fred_attempts": 1,
+    "fred_rows": 1348,
+    "fred_missing": 58,
+    "price_months": 125,
+    "price_transport_retries": 3,
+    "price_audit": [
+      {
+        "asset": "BTC",
+        "month": "2020-12",
+        "sha256": "77e2c7fa9a940828b3f36f7212f6def777acfc1402d173bdfad958d2e37ea469",
+        "bytes": 2231,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2021-01",
+        "sha256": "6ff53d94f600e2a208882bfd5c00e2133cff8f07e57b7f373af29f85f86e0284",
+        "bytes": 2295,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2021-02",
+        "sha256": "f18254dc4a70f396494be83a6081cfafd1935aaef42aef5a12f18b0244edeb27",
+        "bytes": 2103,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2021-03",
+        "sha256": "f43e48b5efc8e0b06e0520b91aad4e5668844c766933c0c5cf403115dba03303",
+        "bytes": 2282,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2021-04",
+        "sha256": "3dd852f06608173dec98b7210f6a38728ef221f08717b362b4f3f09436e0a5fe",
+        "bytes": 2189,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2021-05",
+        "sha256": "3122e1ebaa1376937d479964563dced19f850636a700bb7cb97d7872ea8c8f28",
+        "bytes": 2283,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2021-06",
+        "sha256": "9875e11e890f75ef6eb0188ef7f952e5c0ba6919bd6d72d3da4d6847b84c5ccf",
+        "bytes": 2204,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2021-07",
+        "sha256": "636f588a6abb568f977aea3ae798f34ced4135f2f96fbc1493a2f9ab54a844eb",
+        "bytes": 2264,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2021-08",
+        "sha256": "68612e3fb74c184f97e4d3b2e061dd3743156401a6813ab897014b0b35caedd7",
+        "bytes": 2246,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2021-09",
+        "sha256": "9f6535a0fe8a417b0909d230e4a02f6a9933eb23c770f54c9f6bf140e8d02257",
+        "bytes": 2156,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2021-10",
+        "sha256": "ba50ff3dab5726ca8b9fa26065fe3a8f612aed4baa978ecdd9d39647cd108684",
+        "bytes": 2210,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2021-11",
+        "sha256": "64162d8ec11458e9d02f49d8569e47765517852bcf0a908cd4d71211e3912e62",
+        "bytes": 2166,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2021-12",
+        "sha256": "6231b57d3a3b71fb76a1a34078a01a01275a59870857bf60408ccd3ba4618e75",
+        "bytes": 2196,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2022-01",
+        "sha256": "a4a2e0432a8f0b42e2da71ac26599b2e6385b579ca4feba692a95cb897decdcd",
+        "bytes": 2183,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2022-02",
+        "sha256": "faffa5eadb9ebf0b32742773777596d0dbf3f282e94a16dd05cf1eb7b53a3763",
+        "bytes": 2011,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2022-03",
+        "sha256": "452129b478585b18931f728f89daed9d2a19d4824b932af7a099366efd4db639",
+        "bytes": 2206,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2022-04",
+        "sha256": "70413f67212d012ebfd600a6ebf20c03a9c8311bf764ab6d21d1bfd2d21d1b19",
+        "bytes": 2117,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2022-05",
+        "sha256": "53eee1be2d5b461dabc67645ad706610b0465d8bbacd5f9cd99fc790c68f18f5",
+        "bytes": 2212,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2022-06",
+        "sha256": "dd5047ce33c16231bcb01f534951a709937bbfe0c0667c61f20f188cf9b94de4",
+        "bytes": 2169,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2022-07",
+        "sha256": "216567f1a8bc1dbeaada097f7eddff12dafde177c16b26507c762a613a57eb5f",
+        "bytes": 2245,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2022-08",
+        "sha256": "fc8bd69e95141afb6f83c5a4450c3f6b49c4a1cb16e42d90eb960c3ffa9e766e",
+        "bytes": 2237,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2022-09",
+        "sha256": "68a8357e23277ebd98842fd88d492b012d53dd578b5061cafb8c070c440b235e",
+        "bytes": 2213,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2022-10",
+        "sha256": "5b086535cba596ef1b465f247a26385b4ccfd12673a76f225e2dd9e00dddadfd",
+        "bytes": 2219,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2022-11",
+        "sha256": "142202b226078f54342c4a1d74c8c6081a98c655d7d6f6fba06314f9c101e2d9",
+        "bytes": 2191,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2022-12",
+        "sha256": "aff24746afa9a3dbd355dd3462bcef80e59e96ed9aa55f79007532f9e07991bf",
+        "bytes": 2222,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2023-01",
+        "sha256": "a9fd53b75add7cc42fb4779a545811606260f79810f3826215d6ebecda11bb36",
+        "bytes": 2250,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2023-02",
+        "sha256": "13df1e3633f15be3eeba4768d0cc323ef221191002657b53936a6d0fb5e6556f",
+        "bytes": 2072,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2023-03",
+        "sha256": "1cb1209700ec74fa4592048de2e4ea4a38ab2bd622dfe03f1d6195c249501381",
+        "bytes": 2265,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2023-04",
+        "sha256": "999e86be73731ebc347c6ada94abceb5e291b65e7f1b4df2ce390af1aa2a4a08",
+        "bytes": 2108,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2023-05",
+        "sha256": "c343e4689784c29f83d25147a096dd44b6ae5c1063c909f8adda82b56414469d",
+        "bytes": 2168,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2023-06",
+        "sha256": "634919565c55a29729543d730927ca4b547c0e52d118a38de730f37fdd7617ef",
+        "bytes": 2099,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2023-07",
+        "sha256": "32363d37de02e6ad8d334ac332c685f8cdf5684733a9f2cfbca40e15e591396b",
+        "bytes": 2132,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2023-08",
+        "sha256": "8c5e47bfe3f0b0273534379e8ba5c93e69c84d67e8b9a03f293d6621bead2a5f",
+        "bytes": 2160,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2023-09",
+        "sha256": "2fe68ecad48d6927a9280d89700e991cb6481dc2767698c785f2b2d1c0b14744",
+        "bytes": 2080,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2023-10",
+        "sha256": "358b83bf0c2a5d5390a4bc4d4ae14fa9df0f56139642ad996c0df0f7bc712400",
+        "bytes": 2154,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2023-11",
+        "sha256": "fac9823cac7bf56a3a6038c3b79417e949b00c172939e62000451c8c25edd7c1",
+        "bytes": 2102,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2023-12",
+        "sha256": "056dad65795c9264ef90ee668a4c245e8fec73ebcbb272d28f5596c389913979",
+        "bytes": 2177,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2024-01",
+        "sha256": "474c1ce6fbb09e42cfc7231fee249aecc58af2fb5918570ffeba37998926b4a4",
+        "bytes": 2190,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2024-02",
+        "sha256": "4dae0b3d6b8ea59e39e6493b7964040c52459ea7b0a50b9c2793dcbfae53800d",
+        "bytes": 2053,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2024-03",
+        "sha256": "f7cd4fcafe79d1fac0c830d5fe152f7b3b9100e7c97e40352188766388af0ae0",
+        "bytes": 2224,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2024-04",
+        "sha256": "b4a8542c33e5251fb53f8a3352dd4e6f3cde4ac25f2c24935db8089aa1a2c3a0",
+        "bytes": 2141,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2024-05",
+        "sha256": "0175f696039b9e30f06c6398d218c99e577661ac30424869c648fe9770507248",
+        "bytes": 2185,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2024-06",
+        "sha256": "8a0f6416c2a83cfa15ba26c688d716fdafe35bb1748dd244f0550e8b2f7e38f7",
+        "bytes": 2095,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2024-07",
+        "sha256": "9a2963ef6541b4d7630eff8df7b2eaee48ece33180af03c34b0bf92675692899",
+        "bytes": 2203,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2024-08",
+        "sha256": "df41fe3260920b85da86855b4880f34618982e689081317d3d63b9b3bbcb1d53",
+        "bytes": 2190,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2024-09",
+        "sha256": "89e459b2a8f4b138dc742d9358c0084fcabf719d40468e156c3149a3635f3359",
+        "bytes": 2106,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2024-10",
+        "sha256": "d442a5f158d45d9ff7b1584b35023a4161cf915a3857f5e71a2a2e6aa68c69c5",
+        "bytes": 2203,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2024-11",
+        "sha256": "b197219d9e8b5e933226e1cd24fe2b7bfc3a2e8a3e74e6f7dc08a48f314da8c3",
+        "bytes": 2157,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2024-12",
+        "sha256": "82ec90210f492694b9d01722f97f579108ee787968b8485b53d736ea735700da",
+        "bytes": 2218,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2025-01",
+        "sha256": "3a3eb1b723d944deb4dbef5ae361bbe39340a17fe987fe22e397ef03dca268d2",
+        "bytes": 2254,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2025-02",
+        "sha256": "27cfde08c9eb8e3801fb049e3be351a3e50ab46abd8553c24023fa98ea5e919e",
+        "bytes": 2039,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2025-03",
+        "sha256": "5874e405f55c46f040de1a8ea9daae583dc12b5bcaef6078b21aae9c627cedcc",
+        "bytes": 2249,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2025-04",
+        "sha256": "8068a571425857cb0f5f71f75e733d3bc1e731362a09f84f835bbea6e087aeb2",
+        "bytes": 2165,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2025-05",
+        "sha256": "2b87aa0c63641ba1e954855bcfed96d7fc4eb21efe7936f354ff74e8e06cfcea",
+        "bytes": 2253,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2025-06",
+        "sha256": "dc4bbe2c75f04372b909febe8e6b379b053f88423d78cdb3ad8b0be3a66d6ede",
+        "bytes": 2170,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2025-07",
+        "sha256": "1ea64a346f6be0aaf455eb1ce107e6d38367164d97d0dd3719b9f9bb239796f4",
+        "bytes": 2232,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2025-08",
+        "sha256": "6720b573210cfbb98765f4a0de6826033d203fda42a6c8364455144b703ceace",
+        "bytes": 2237,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2025-09",
+        "sha256": "9934e6d98a90139039bb070a90ba409ff1832ad80116920adcf088090ce4c996",
+        "bytes": 2154,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2025-10",
+        "sha256": "3597639a18f343c768e374157e8bd08dd046bb33693495ff4e13380abac1260e",
+        "bytes": 2262,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2025-11",
+        "sha256": "9eded1225f9e3f3d4f127fad46111eb403553c1125cf6d11995e69d91d037290",
+        "bytes": 2185,
+        "checksum_attempts": 2,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2025-12",
+        "sha256": "b12a106198f3be3ba5916195f75c1c6d34d8e5302ab77b8fd7c4b1b58b6144f4",
+        "bytes": 2230,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "BTC",
+        "month": "2026-01",
+        "sha256": "b7775ddec3ddd3edafc6ad5abcc94d6ab8b8f063a0911d8a3f3daae6a8bbad2e",
+        "bytes": 2237,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2020-11",
+        "sha256": "ab032f6eecf184ac52f3bc1eefff55031e98bedf256523b7e495b952197f08e0",
+        "bytes": 2076,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2020-12",
+        "sha256": "40dd3b625132d93b36397f9f4dcceaf6be13f50ffb357c28d06003370fd11176",
+        "bytes": 2129,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2021-01",
+        "sha256": "9c077a151ad30786ffbf2d560f457fb727ea3fc4f0932e6e287e2bf22ce5ba16",
+        "bytes": 2214,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2021-02",
+        "sha256": "07b43daa2cd8487fc7a652c58237b93a7a07108e5f4d5cb9ec086d7737898d99",
+        "bytes": 2005,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2021-03",
+        "sha256": "0f3fe06236480c4aed3460eac7b2d4e0ef621ec4cc5da20445797cb682b74dc2",
+        "bytes": 2195,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2021-04",
+        "sha256": "d483115836d4c285943064b22461670ff30ef1601b1183c4034c7edb4fffeedf",
+        "bytes": 2115,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2021-05",
+        "sha256": "bc68e71360869ed2f1d06bfa07ec6599c5bdb38406d6b712635afe2c6f1df7fa",
+        "bytes": 2240,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2021-06",
+        "sha256": "b8ddb26be6c48876a04a7fddfbc3f4c8842f53b8e217613eac9dd15a55836597",
+        "bytes": 2136,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2021-07",
+        "sha256": "c33ea50dc263d559315e7bf3dd6ab87a40f12747fe6fd0c16b5dff28dbd7b58f",
+        "bytes": 2186,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2021-08",
+        "sha256": "3cffa7628cff71c9b2ec5f33085c90317fc1d9866ac701ca9742322344182397",
+        "bytes": 2200,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2021-09",
+        "sha256": "14e849630ad4d5ae2f899c289c395736c12f1b699486b9dcfd1d7e058e4fff18",
+        "bytes": 2089,
+        "checksum_attempts": 1,
+        "zip_attempts": 2
+      },
+      {
+        "asset": "ETH",
+        "month": "2021-10",
+        "sha256": "4f9e66dc56961d8552082782b2cdac5a149e125da90694885ab90363a63e8ff5",
+        "bytes": 2129,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2021-11",
+        "sha256": "8e9ebb3bcc07d3080db603ceafaec29fe66612bd160ad737235a3476fc8eafe9",
+        "bytes": 2080,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2021-12",
+        "sha256": "2f30c04c60988621d47afa115e2b7771785440ee3effe87355d5f7038d234361",
+        "bytes": 2114,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2022-01",
+        "sha256": "d992b05664b21cef2e104aa93ab1de487fe396f68dc9767380d87998cc7969a1",
+        "bytes": 2139,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2022-02",
+        "sha256": "2d7eeb5c0c0574ebfff2d7369f3b991e2693fe81a2defc87525c667598c3ceef",
+        "bytes": 1948,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2022-03",
+        "sha256": "0cfffeb995ad02f64b0a1235db34fbca7982aef8b104ee4bb7fd52605323ad53",
+        "bytes": 2131,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2022-04",
+        "sha256": "2e3269eb718fd3c75f41a11f03c91f3e3af91bd14815b79b216ec371a876ec57",
+        "bytes": 2041,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2022-05",
+        "sha256": "fe39dd94b5e65aced7b4979fd6357fcd3700ae556a9d03c507d9983d507a628e",
+        "bytes": 2144,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2022-06",
+        "sha256": "62633207619685b148ef58bdc910b78a33fef724ac2b507ef57e7878145516dc",
+        "bytes": 2060,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2022-07",
+        "sha256": "6b4b9bdc7b0e1e6b87b95e750343d898c0df36d9d885bfeae594ca4e29ac0981",
+        "bytes": 2130,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2022-08",
+        "sha256": "9f54ee2471795608f083a175285cbfd77f5de473cbeaa0d491b3751cf791a3a9",
+        "bytes": 2118,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2022-09",
+        "sha256": "64daaa8bedcb3e82736d5b6426974aadd814007067fc81380ae87e04e1112714",
+        "bytes": 2022,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2022-10",
+        "sha256": "01a81d5a27053ead87542d1329763bfd22978080f6c3e7ee588f189cd49ff8d6",
+        "bytes": 2088,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2022-11",
+        "sha256": "83cef6abcb76dffbac6c6ad0e2842dd218f226e1e4a1839e78e35b12dd68a015",
+        "bytes": 2061,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2022-12",
+        "sha256": "e3f2c5851ef573c35733f29293188310099683948692d8e8ba008b17fdbd508f",
+        "bytes": 2050,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2023-01",
+        "sha256": "811ff55e20735e6fff55ef37c0c3e922eb6d26d41fe84fc04b2a03c0179549ad",
+        "bytes": 2087,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2023-02",
+        "sha256": "2f6cdf5aa6613ab3621dbd730a234935e8909f980f1195f7581abf145e422cce",
+        "bytes": 1916,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2023-03",
+        "sha256": "dbfe653bf62ebac3e4e2bf5c96160de6c76bcbd76e4979ca2105d11cf2bdf77e",
+        "bytes": 2098,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2023-04",
+        "sha256": "d316aea182914c088b06d03640812bae72e889a347ed9dcc78bb8ad10ed1bdf9",
+        "bytes": 2019,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2023-05",
+        "sha256": "a86ef09c35c764e6f0066953074ffb0dc93239afe92e3d73e232fbc95cdeab51",
+        "bytes": 2087,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2023-06",
+        "sha256": "4932a5fd8853ddf99f3853a501e5f35ffad45a07a466bbf4603ddb7fb4c821ac",
+        "bytes": 1994,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2023-07",
+        "sha256": "f66293651e4a841fe9bc36cc76483bdb9c1faaa085377fbbd2fd064cd401cd5e",
+        "bytes": 2036,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2023-08",
+        "sha256": "e694749c085b888401f51002dbd21bc8cf0c4d801d2da311e72d6c1ae97627d4",
+        "bytes": 2058,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2023-09",
+        "sha256": "c1faa848529e17e15deafb208d817155576ef51e556813109cdb60c0153ac73d",
+        "bytes": 1985,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2023-10",
+        "sha256": "baadc74c685a63d7ba453531c9f4d1df81a5719200501ab229018352a1be9630",
+        "bytes": 2059,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2023-11",
+        "sha256": "8faf9f53efe268d25d01b987b3a364cd9f1983703ab2f78486192c29218b1faf",
+        "bytes": 2022,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2023-12",
+        "sha256": "1778c56d995fe5d32a0816a5214feabcd84d594f4e882315b4e225d6e86e5275",
+        "bytes": 2086,
+        "checksum_attempts": 2,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2024-01",
+        "sha256": "49598e812edcbf446f20d21a3ffc382a6f51fc1982a7e4224b78a416dbe36e8d",
+        "bytes": 2109,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2024-02",
+        "sha256": "36ebece2c2a6fcccdc4ee2924cd037870e88fa09877208843e2cbdf5f5c93a44",
+        "bytes": 1976,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2024-03",
+        "sha256": "78f5a6edba263350c1df6d4678596570ae5ce5df38edd4e253ec89431fbddfc0",
+        "bytes": 2125,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2024-04",
+        "sha256": "d0a5088a3d49cea7269dc3bf7f29912e23a390c87fb7b14acbed210ac9be8177",
+        "bytes": 2050,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2024-05",
+        "sha256": "d0c98ff2f16913e1c1f9bb72165086056ae9923db5b07f113ca6eaf334b87bbf",
+        "bytes": 2109,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2024-06",
+        "sha256": "5198557b48b8df354f5dc07e76270e988416f9e8972e577d9c327b31d2cb1db1",
+        "bytes": 2014,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2024-07",
+        "sha256": "ae4a1a154d9c4e27bb7551293216d6824a0455fef7ecea0efb5084e145ba1ac5",
+        "bytes": 2093,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2024-08",
+        "sha256": "e41fc2dcefc5d0737fd74e943602327cfdbcde04dec40d94030cfcf01720e593",
+        "bytes": 2107,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2024-09",
+        "sha256": "6e6add68412a0d89199fb6185b88b24994c32522e4ee67ac88d02ab8b81eb1c1",
+        "bytes": 2030,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2024-10",
+        "sha256": "cc2ae0b168f8ddd7b45441a30ae9aa95f748ec9ecaa19ab3cf5e9ec21fc63783",
+        "bytes": 2084,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2024-11",
+        "sha256": "fe8b32f1ab7a3a72316b404ffc9d7002cb75801364f12dc52eddfedbb3e3af43",
+        "bytes": 2074,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2024-12",
+        "sha256": "e36880cb5d79157599878eb97db2d20a5bc10f904384501f0b3571a09c1b6bcc",
+        "bytes": 2128,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2025-01",
+        "sha256": "fb1c6329259282a4174c646629515704da03c713bff9106f8da01ec188112a09",
+        "bytes": 2157,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2025-02",
+        "sha256": "ed3cf4f55aa296a25e092d73170c6772fa33e089c8ee5bdd379198fa94675361",
+        "bytes": 1988,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2025-03",
+        "sha256": "37a2a5d88861944141de683f7584d01cfeb23c0a69ba0aa2613fa6ec14b33960",
+        "bytes": 2172,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2025-04",
+        "sha256": "88554fccbad3d445fb7aad16440ef62aeb7b5a0d0d0be26101919753a455e106",
+        "bytes": 2107,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2025-05",
+        "sha256": "05f9099dc0225439cdcd08661281bc958f4984a02c5219ff019c7988140a4511",
+        "bytes": 2150,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2025-06",
+        "sha256": "1a436c3f4e79c6ef65e06749c7be302800f2bbe84b283f36b670688f1fe8e706",
+        "bytes": 2077,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2025-07",
+        "sha256": "507452f08f6df58e28c66a56eb114c274a601908b7a36cca028f4f1fe685c5a0",
+        "bytes": 2148,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2025-08",
+        "sha256": "caaf73478addeaf0d1a1d470284448a8eea201ec8b54acbf4996327ee5fd30d3",
+        "bytes": 2173,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2025-09",
+        "sha256": "2362f78fe5ef79628fe7a16fcd720ba5e2490bd05806943d092d0c2bbc025403",
+        "bytes": 2104,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2025-10",
+        "sha256": "7ac29ddc8e5af97d63293df20ca5fe2d31952754d06fa7592992cd1b9ccc2fbb",
+        "bytes": 2174,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2025-11",
+        "sha256": "ca97638b3e43fa8fc6cfe9e01ebec4cd6b59ac5b37b694f951ae30719424bbed",
+        "bytes": 2101,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2025-12",
+        "sha256": "eaf731c713e58a6d0e7a196c9887c41c5ed6066c73de68f878dfbe4a48de05e8",
+        "bytes": 2165,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      },
+      {
+        "asset": "ETH",
+        "month": "2026-01",
+        "sha256": "809eceed4a7a4eddf08f70e4c505f454ecf9d715d72269fa36db37964e4159f4",
+        "bytes": 2151,
+        "checksum_attempts": 1,
+        "zip_attempts": 1
+      }
+    ]
+  },
+  "full": {
+    "days": 1826,
+    "start": 10000.0,
+    "end": 20661.789368123496,
+    "cagr": 0.1562246286019715,
+    "sharpe": 0.5500167102604204,
+    "max_drawdown": 0.5817974310222336,
+    "profit_factor_daily_dollar": 1.058541503972821,
+    "total_pnl": 10661.789368123496,
+    "positive_days": 407
+  },
+  "gross_no_cost": {
+    "days": 1826,
+    "start": 10000.0,
+    "end": 22539.46259220001,
+    "cagr": 0.1765174576047337,
+    "sharpe": 0.5894321111221892,
+    "max_drawdown": 0.5742032752771365,
+    "profit_factor_daily_dollar": 1.0663028821648068,
+    "total_pnl": 12539.462592200009,
+    "positive_days": 422
+  },
+  "same_cost_50_50_buy_and_hold": {
+    "days": 1826,
+    "start": 10000.0,
+    "end": 35222.157618263795,
+    "cagr": 0.28640631773508596,
+    "sharpe": 0.7112067215940693,
+    "max_drawdown": 0.7992042684811888,
+    "profit_factor_daily_dollar": 1.043220160662131,
+    "total_pnl": 25222.157618263795,
+    "positive_days": 938
+  },
+  "holdout_2024_2025": {
+    "days": 731,
+    "start": 25463.736698180503,
+    "end": 20661.789368123496,
+    "cagr": -0.09914698749577155,
+    "sharpe": -0.05786775775325351,
+    "max_drawdown": 0.5817974310222336,
+    "profit_factor_daily_dollar": 0.943666446952516,
+    "total_pnl": -4801.947330057006,
+    "positive_days": 188
+  },
+  "annual": {
+    "2021": {
+      "days": 365,
+      "start": 10000.0,
+      "end": 19157.632136820226,
+      "cagr": 0.9166164642449304,
+      "sharpe": 1.2998343669990446,
+      "max_drawdown": 0.5591820484804253,
+      "profit_factor_daily_dollar": 1.1846955948426332,
+      "total_pnl": 9157.632136820226,
+      "positive_days": 98
+    },
+    "2022": {
+      "days": 365,
+      "start": 19157.632136820226,
+      "end": 23016.27230181202,
+      "cagr": 0.20156630642920037,
+      "sharpe": 0.7048355175082355,
+      "max_drawdown": 0.2496173243405485,
+      "profit_factor_daily_dollar": 1.1536066035738421,
+      "total_pnl": 3858.6401649917934,
+      "positive_days": 57
+    },
+    "2023": {
+      "days": 365,
+      "start": 23016.27230181202,
+      "end": 25463.736698180503,
+      "cagr": 0.1064128412131482,
+      "sharpe": 0.534129717259699,
+      "max_drawdown": 0.17037121962790425,
+      "profit_factor_daily_dollar": 1.1103471038969783,
+      "total_pnl": 2447.464396368483,
+      "positive_days": 64
+    },
+    "2024": {
+      "days": 366,
+      "start": 25463.736698180503,
+      "end": 20328.185421557733,
+      "cagr": -0.20131240975378462,
+      "sharpe": -0.37062063785297594,
+      "max_drawdown": 0.4302893244352042,
+      "profit_factor_daily_dollar": 0.8942069235250588,
+      "total_pnl": -5135.551276622769,
+      "positive_days": 87
+    },
+    "2025": {
+      "days": 365,
+      "start": 20328.185421557733,
+      "end": 20661.789368123496,
+      "cagr": 0.01642223845954982,
+      "sharpe": 0.24421707992573655,
+      "max_drawdown": 0.4080415100269429,
+      "profit_factor_daily_dollar": 1.0090905268225547,
+      "total_pnl": 333.6039465657632,
+      "positive_days": 101
+    }
+  },
+  "monthly": {
+    "returns": {
+      "2021-01": 0.21538472346941617,
+      "2021-02": 0.3358457520754048,
+      "2021-03": 0.0,
+      "2021-04": 0.12343380715388941,
+      "2021-05": -0.16507841294002779,
+      "2021-06": -0.08563639071087481,
+      "2021-07": 0.13063099719590543,
+      "2021-08": 0.22987066031721803,
+      "2021-09": 0.0,
+      "2021-10": 0.027229592645676703,
+      "2021-11": -0.032697565628655,
+      "2021-12": -0.0042518716848591875,
+      "2022-01": -0.1481965627117594,
+      "2022-02": 0.0,
+      "2022-03": 0.2515187878827678,
+      "2022-04": 0.0,
+      "2022-05": 0.0,
+      "2022-06": 0.0,
+      "2022-07": 0.18496436985668563,
+      "2022-08": -0.0562858299838892,
+      "2022-09": 0.0,
+      "2022-10": -0.010382747727640917,
+      "2022-11": 0.06136428741130695,
+      "2022-12": -0.04051343284578479,
+      "2023-01": -0.005198195427891794,
+      "2023-02": -0.052844139031837156,
+      "2023-03": 0.018744612518088122,
+      "2023-04": -0.005674901546380617,
+      "2023-05": 0.0,
+      "2023-06": 0.0,
+      "2023-07": -0.035145439499044695,
+      "2023-08": -0.0044180373240680915,
+      "2023-09": 0.0,
+      "2023-10": 0.0,
+      "2023-11": 0.08084700118024735,
+      "2023-12": 0.11643208717170861,
+      "2024-01": 0.028581248566550643,
+      "2024-02": 0.0,
+      "2024-03": 0.017037656940245283,
+      "2024-04": -0.04108246677649807,
+      "2024-05": 0.12038123775300358,
+      "2024-06": -0.05209057453175836,
+      "2024-07": -0.10581962655911192,
+      "2024-08": -0.15286636107223328,
+      "2024-09": 0.10445328908735374,
+      "2024-10": -0.03636863286317282,
+      "2024-11": 0.0,
+      "2024-12": -0.07049533891164317,
+      "2025-01": 0.008136054468107501,
+      "2025-02": -0.25014956044553405,
+      "2025-03": -0.10178022691023503,
+      "2025-04": 0.03623839167906984,
+      "2025-05": 0.02766108717409055,
+      "2025-06": 0.086841216077302,
+      "2025-07": 0.28931365346809645,
+      "2025-08": 0.08437633244819653,
+      "2025-09": -0.02553856242036856,
+      "2025-10": -0.06035017113217078,
+      "2025-11": 0.010294315427857859,
+      "2025-12": 0.0
+    },
+    "positive": 23,
+    "months": 60,
+    "longest_nonpositive_streak": 7,
+    "worst": -0.25014956044553405
+  },
+  "regimes": {
+    "bull_high": {
+      "days": 88,
+      "net_dollar_pnl": 2671.638060842417
+    },
+    "bull_low": {
+      "days": 881,
+      "net_dollar_pnl": 6881.542013542807
+    },
+    "bear_high": {
+      "days": 146,
+      "net_dollar_pnl": -4468.916194955798
+    },
+    "bear_low": {
+      "days": 711,
+      "net_dollar_pnl": 5577.525488694071
+    }
+  },
+  "monte_carlo": {
+    "paths": 5000,
+    "joint_passes": 0,
+    "joint_pass_rate": 0.0,
+    "ruined": 0,
+    "undefined": 0,
+    "cagr": {
+      "p05": -0.138362030306528,
+      "p50": 0.15268608614657242,
+      "p95": 0.5700430665406422
+    },
+    "sharpe": {
+      "p05": -0.1065497608660498,
+      "p50": 0.5444671451062293,
+      "p95": 1.2692443135209823
+    },
+    "max_drawdown": {
+      "p05": 0.3921082024650154,
+      "p50": 0.59417590458291,
+      "p95": 0.8093698075104838
+    },
+    "profit_factor": {
+      "p05": 0.925222315081052,
+      "p50": 1.075417852840483,
+      "p95": 1.3013138714321693
+    }
+  },
+  "checks": {
+    "numerical_full": false,
+    "min_20_entries": true,
+    "annual_walk_forward": false,
+    "historical_2024_2025_holdout": false,
+    "monthly_stability": false,
+    "four_regimes": false,
+    "block_monte_carlo": false,
+    "double_slippage": true,
+    "one_day_latency": true,
+    "independent_executable_oos": false
+  },
+  "all_gate_passed": false,
+  "entries": 29,
+  "fills_by_year": {
+    "2021": 28,
+    "2022": 20,
+    "2023": 18,
+    "2024": 30,
+    "2025": 20
+  },
+  "fills": [
+    {
+      "day": "2021-01-04",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 33000.05,
+      "execution": 33016.550025000004,
+      "quantity": 0.15128000000000003,
+      "notional": 4994.743687782002,
+      "fee": 4.994743687782002
+    },
+    {
+      "day": "2021-01-04",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 978.33,
+      "execution": 978.819165,
+      "quantity": 5.103090000000001,
+      "notional": 4995.002292719851,
+      "fee": 4.9950022927198505
+    },
+    {
+      "day": "2021-01-11",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 38150.02,
+      "execution": 38130.944989999996,
+      "quantity": 0.15128000000000003,
+      "notional": 5768.4493580872,
+      "fee": 5.7684493580872,
+      "forced_terminal": false
+    },
+    {
+      "day": "2021-01-11",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 1254.24,
+      "execution": 1253.6128800000001,
+      "quantity": 5.103090000000001,
+      "notional": 6397.299351799202,
+      "fee": 6.397299351799202,
+      "forced_terminal": false
+    },
+    {
+      "day": "2021-02-08",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 38795.69,
+      "execution": 38815.087845,
+      "quantity": 0.1564,
+      "notional": 6070.679738958001,
+      "fee": 6.070679738958001
+    },
+    {
+      "day": "2021-02-08",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 1611.46,
+      "execution": 1612.2657299999998,
+      "quantity": 3.76541,
+      "notional": 6070.841502399299,
+      "fee": 6.0708415023993
+    },
+    {
+      "day": "2021-02-22",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 57412.35,
+      "execution": 57383.643825,
+      "quantity": 0.1564,
+      "notional": 8974.80189423,
+      "fee": 8.974801894230001,
+      "forced_terminal": false
+    },
+    {
+      "day": "2021-02-22",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 1933.54,
+      "execution": 1932.57323,
+      "quantity": 3.76541,
+      "notional": 7276.9305659743,
+      "fee": 7.2769305659743,
+      "forced_terminal": false
+    },
+    {
+      "day": "2021-04-12",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 59998.8,
+      "execution": 60028.799399999996,
+      "quantity": 0.13509000000000002,
+      "notional": 8109.290510946001,
+      "fee": 8.109290510946002
+    },
+    {
+      "day": "2021-04-12",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 2151.42,
+      "execution": 2152.49571,
+      "quantity": 3.76759,
+      "notional": 8109.721312038901,
+      "fee": 8.1097213120389
+    },
+    {
+      "day": "2021-06-07",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 35796.31,
+      "execution": 35778.411845,
+      "quantity": 0.13509000000000002,
+      "notional": 4833.305656141051,
+      "fee": 4.833305656141051,
+      "forced_terminal": false
+    },
+    {
+      "day": "2021-06-07",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 2711.92,
+      "execution": 2710.56404,
+      "quantity": 3.76759,
+      "notional": 10212.293971463601,
+      "fee": 10.212293971463602,
+      "forced_terminal": false
+    },
+    {
+      "day": "2021-06-21",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 35600.17,
+      "execution": 35617.97008499999,
+      "quantity": 0.21079,
+      "notional": 7507.9119142171485,
+      "fee": 7.507911914217148
+    },
+    {
+      "day": "2021-06-21",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 2243.49,
+      "execution": 2244.6117449999997,
+      "quantity": 3.3448900000000004,
+      "notional": 7507.979379733049,
+      "fee": 7.507979379733049
+    },
+    {
+      "day": "2021-06-28",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 34702.49,
+      "execution": 34685.138755,
+      "quantity": 0.21079,
+      "notional": 7311.28039816645,
+      "fee": 7.31128039816645,
+      "forced_terminal": false
+    },
+    {
+      "day": "2021-06-28",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 1982.27,
+      "execution": 1981.278865,
+      "quantity": 3.3448900000000004,
+      "notional": 6627.159862749851,
+      "fee": 6.627159862749851,
+      "forced_terminal": false
+    },
+    {
+      "day": "2021-07-05",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 35288.13,
+      "execution": 35305.774065,
+      "quantity": 0.197,
+      "notional": 6955.237490805,
+      "fee": 6.955237490805
+    },
+    {
+      "day": "2021-07-05",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 2322.69,
+      "execution": 2323.851345,
+      "quantity": 2.9930200000000005,
+      "notional": 6955.333552611901,
+      "fee": 6.955333552611901
+    },
+    {
+      "day": "2021-08-23",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 49239.22,
+      "execution": 49214.60039000001,
+      "quantity": 0.197,
+      "notional": 9695.276276830002,
+      "fee": 9.695276276830002,
+      "forced_terminal": false
+    },
+    {
+      "day": "2021-08-23",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 3238.0,
+      "execution": 3236.3810000000003,
+      "quantity": 2.9930200000000005,
+      "notional": 9686.553060620003,
+      "fee": 9.686553060620003,
+      "forced_terminal": false
+    },
+    {
+      "day": "2021-10-25",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 60852.22,
+      "execution": 60882.646109999994,
+      "quantity": 0.15885000000000002,
+      "notional": 9671.2083345735,
+      "fee": 9.671208334573501
+    },
+    {
+      "day": "2021-10-25",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 4082.33,
+      "execution": 4084.3711649999996,
+      "quantity": 2.36795,
+      "notional": 9671.58670016175,
+      "fee": 9.67158670016175
+    },
+    {
+      "day": "2021-11-29",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 57274.89,
+      "execution": 57246.252555,
+      "quantity": 0.15885000000000002,
+      "notional": 9093.567218361752,
+      "fee": 9.093567218361752,
+      "forced_terminal": false
+    },
+    {
+      "day": "2021-11-29",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 4294.77,
+      "execution": 4292.622615,
+      "quantity": 2.36795,
+      "notional": 10164.71572118925,
+      "fee": 10.16471572118925,
+      "forced_terminal": false
+    },
+    {
+      "day": "2021-12-06",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 49396.32,
+      "execution": 49421.01816,
+      "quantity": 0.19445,
+      "notional": 9609.916981212,
+      "fee": 9.609916981212
+    },
+    {
+      "day": "2021-12-06",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 4196.44,
+      "execution": 4198.5382199999995,
+      "quantity": 2.28891,
+      "notional": 9610.0761171402,
+      "fee": 9.6100761171402
+    },
+    {
+      "day": "2021-12-13",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 50053.9,
+      "execution": 50028.87305,
+      "quantity": 0.19445,
+      "notional": 9728.1143645725,
+      "fee": 9.7281143645725,
+      "forced_terminal": false
+    },
+    {
+      "day": "2021-12-13",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 4130.0,
+      "execution": 4127.935,
+      "quantity": 2.28891,
+      "notional": 9448.471700850001,
+      "fee": 9.448471700850002,
+      "forced_terminal": false
+    },
+    {
+      "day": "2022-01-03",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 47286.18,
+      "execution": 47309.82309,
+      "quantity": 0.20226000000000002,
+      "notional": 9568.8848181834,
+      "fee": 9.5688848181834
+    },
+    {
+      "day": "2022-01-03",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 3828.11,
+      "execution": 3830.024055,
+      "quantity": 2.4984800000000003,
+      "notional": 9569.2385009364,
+      "fee": 9.5692385009364
+    },
+    {
+      "day": "2022-01-10",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 41864.62,
+      "execution": 41843.687690000006,
+      "quantity": 0.20226000000000002,
+      "notional": 8463.304272179403,
+      "fee": 8.463304272179403,
+      "forced_terminal": false
+    },
+    {
+      "day": "2022-01-10",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 3151.97,
+      "execution": 3150.394015,
+      "quantity": 2.4984800000000003,
+      "notional": 7871.1964385972005,
+      "fee": 7.871196438597201,
+      "forced_terminal": false
+    },
+    {
+      "day": "2022-03-07",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 38420.8,
+      "execution": 38440.0104,
+      "quantity": 0.21204,
+      "notional": 8150.819805216,
+      "fee": 8.150819805215999
+    },
+    {
+      "day": "2022-03-07",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 2551.3,
+      "execution": 2552.57565,
+      "quantity": 3.19329,
+      "notional": 8151.114297388501,
+      "fee": 8.151114297388501
+    },
+    {
+      "day": "2022-03-28",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 46827.76,
+      "execution": 46804.34612,
+      "quantity": 0.21204,
+      "notional": 9924.3935512848,
+      "fee": 9.924393551284801,
+      "forced_terminal": false
+    },
+    {
+      "day": "2022-03-28",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 3295.65,
+      "execution": 3294.002175,
+      "quantity": 3.19329,
+      "notional": 10518.704205405751,
+      "fee": 10.51870420540575,
+      "forced_terminal": false
+    },
+    {
+      "day": "2022-07-18",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 20799.58,
+      "execution": 20809.97979,
+      "quantity": 0.49021000000000003,
+      "notional": 10201.260192855902,
+      "fee": 10.201260192855901
+    },
+    {
+      "day": "2022-07-18",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 1338.65,
+      "execution": 1339.319325,
+      "quantity": 7.61676,
+      "notional": 10201.273861886999,
+      "fee": 10.201273861887
+    },
+    {
+      "day": "2022-08-22",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 21516.7,
+      "execution": 21505.94165,
+      "quantity": 0.49021000000000003,
+      "notional": 10542.4276562465,
+      "fee": 10.5424276562465,
+      "forced_terminal": false
+    },
+    {
+      "day": "2022-08-22",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 1618.13,
+      "execution": 1617.3209350000002,
+      "quantity": 7.61676,
+      "notional": 12318.745404870602,
+      "fee": 12.318745404870603,
+      "forced_terminal": false
+    },
+    {
+      "day": "2022-10-31",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 20627.48,
+      "execution": 20637.793739999997,
+      "quantity": 0.55276,
+      "notional": 11407.746867722399,
+      "fee": 11.407746867722398
+    },
+    {
+      "day": "2022-10-31",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 1590.45,
+      "execution": 1591.245225,
+      "quantity": 7.1690700000000005,
+      "notional": 11407.74840519075,
+      "fee": 11.40774840519075
+    },
+    {
+      "day": "2022-11-07",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 20905.58,
+      "execution": 20895.127210000002,
+      "quantity": 0.55276,
+      "notional": 11549.990516599602,
+      "fee": 11.549990516599603,
+      "forced_terminal": false
+    },
+    {
+      "day": "2022-11-07",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 1568.25,
+      "execution": 1567.465875,
+      "quantity": 7.1690700000000005,
+      "notional": 11237.272580486251,
+      "fee": 11.237272580486252,
+      "forced_terminal": false
+    },
+    {
+      "day": "2022-11-14",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 16331.78,
+      "execution": 16339.945889999999,
+      "quantity": 0.69589,
+      "notional": 11370.8049453921,
+      "fee": 11.3708049453921
+    },
+    {
+      "day": "2022-11-14",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 1221.5,
+      "execution": 1222.1107499999998,
+      "quantity": 9.30429,
+      "notional": 11370.872830117498,
+      "fee": 11.370872830117499
+    },
+    {
+      "day": "2022-12-26",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 16832.11,
+      "execution": 16823.693945000003,
+      "quantity": 0.69589,
+      "notional": 11707.440379386053,
+      "fee": 11.707440379386053,
+      "forced_terminal": false
+    },
+    {
+      "day": "2022-12-26",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 1218.52,
+      "execution": 1217.91074,
+      "quantity": 9.30429,
+      "notional": 11331.7947190746,
+      "fee": 11.3317947190746,
+      "forced_terminal": false
+    },
+    {
+      "day": "2023-01-23",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 22706.02,
+      "execution": 22717.37301,
+      "quantity": 0.50607,
+      "notional": 11496.5809591707,
+      "fee": 11.4965809591707
+    },
+    {
+      "day": "2023-01-23",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 1627.43,
+      "execution": 1628.243715,
+      "quantity": 7.06076,
+      "notional": 11496.6380931234,
+      "fee": 11.4966380931234
+    },
+    {
+      "day": "2023-02-13",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 21782.37,
+      "execution": 21771.478815,
+      "quantity": 0.50607,
+      "notional": 11017.89228390705,
+      "fee": 11.017892283907049,
+      "forced_terminal": false
+    },
+    {
+      "day": "2023-02-13",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 1514.82,
+      "execution": 1514.06259,
+      "quantity": 7.06076,
+      "notional": 10690.4325729684,
+      "fee": 10.690432572968401,
+      "forced_terminal": false
+    },
+    {
+      "day": "2023-03-20",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 27972.87,
+      "execution": 27986.856434999998,
+      "quantity": 0.38705,
+      "notional": 10832.31278316675,
+      "fee": 10.83231278316675
+    },
+    {
+      "day": "2023-03-20",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 1780.67,
+      "execution": 1781.560335,
+      "quantity": 6.0803400000000005,
+      "notional": 10832.4925673139,
+      "fee": 10.832492567313901
+    },
+    {
+      "day": "2023-04-24",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 27590.59,
+      "execution": 27576.794705,
+      "quantity": 0.38705,
+      "notional": 10673.59839057025,
+      "fee": 10.67359839057025,
+      "forced_terminal": false
+    },
+    {
+      "day": "2023-04-24",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 1862.01,
+      "execution": 1861.078995,
+      "quantity": 6.0803400000000005,
+      "notional": 11315.993056458301,
+      "fee": 11.315993056458302,
+      "forced_terminal": false
+    },
+    {
+      "day": "2023-07-17",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 30232.0,
+      "execution": 30247.115999999998,
+      "quantity": 0.36277000000000004,
+      "notional": 10972.74627132,
+      "fee": 10.97274627132
+    },
+    {
+      "day": "2023-07-17",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 1922.12,
+      "execution": 1923.0810599999998,
+      "quantity": 5.70591,
+      "notional": 10972.9274510646,
+      "fee": 10.9729274510646
+    },
+    {
+      "day": "2023-08-14",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 29303.85,
+      "execution": 29289.198075,
+      "quantity": 0.36277000000000004,
+      "notional": 10625.24238566775,
+      "fee": 10.62524238566775,
+      "forced_terminal": false
+    },
+    {
+      "day": "2023-08-14",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 1840.73,
+      "execution": 1839.809635,
+      "quantity": 5.70591,
+      "notional": 10497.78819444285,
+      "fee": 10.497788194442851,
+      "forced_terminal": false
+    },
+    {
+      "day": "2023-11-06",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 35011.89,
+      "execution": 35029.395945,
+      "quantity": 0.3009,
+      "notional": 10540.3452398505,
+      "fee": 10.5403452398505
+    },
+    {
+      "day": "2023-11-06",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 1891.71,
+      "execution": 1892.655855,
+      "quantity": 5.56916,
+      "notional": 10540.5032814318,
+      "fee": 10.5405032814318
+    },
+    {
+      "day": "2023-11-13",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 37064.13,
+      "execution": 37045.597935,
+      "quantity": 0.3009,
+      "notional": 11147.0204186415,
+      "fee": 11.1470204186415,
+      "forced_terminal": false
+    },
+    {
+      "day": "2023-11-13",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 2044.69,
+      "execution": 2043.6676550000002,
+      "quantity": 5.56916,
+      "notional": 11381.5121575198,
+      "fee": 11.3815121575198,
+      "forced_terminal": false
+    },
+    {
+      "day": "2023-11-20",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 37359.85,
+      "execution": 37378.529924999995,
+      "quantity": 0.30075,
+      "notional": 11241.59287494375,
+      "fee": 11.24159287494375
+    },
+    {
+      "day": "2023-11-20",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 2011.47,
+      "execution": 2012.475735,
+      "quantity": 5.58607,
+      "notional": 11241.83032901145,
+      "fee": 11.241830329011451
+    },
+    {
+      "day": "2024-01-22",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 41580.32,
+      "execution": 41559.52984,
+      "quantity": 0.30075,
+      "notional": 12499.02859938,
+      "fee": 12.49902859938,
+      "forced_terminal": false
+    },
+    {
+      "day": "2024-01-22",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 2457.06,
+      "execution": 2455.83147,
+      "quantity": 5.58607,
+      "notional": 13718.446499622902,
+      "fee": 13.718446499622901,
+      "forced_terminal": false
+    },
+    {
+      "day": "2024-03-11",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 68955.88,
+      "execution": 68990.35794,
+      "quantity": 0.18963000000000002,
+      "notional": 13082.641576162201,
+      "fee": 13.082641576162201
+    },
+    {
+      "day": "2024-03-11",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 3878.47,
+      "execution": 3880.4092349999996,
+      "quantity": 3.3714600000000003,
+      "notional": 13082.6445194331,
+      "fee": 13.082644519433101
+    },
+    {
+      "day": "2024-03-18",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 68393.47,
+      "execution": 68359.27326500001,
+      "quantity": 0.18963000000000002,
+      "notional": 12962.968989241954,
+      "fee": 12.962968989241954,
+      "forced_terminal": false
+    },
+    {
+      "day": "2024-03-18",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 3644.7,
+      "execution": 3642.87765,
+      "quantity": 3.3714600000000003,
+      "notional": 12281.816281869002,
+      "fee": 12.281816281869002,
+      "forced_terminal": false
+    },
+    {
+      "day": "2024-03-25",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 67210.0,
+      "execution": 67243.605,
+      "quantity": 0.18733000000000002,
+      "notional": 12596.744524650001,
+      "fee": 12.596744524650001
+    },
+    {
+      "day": "2024-03-25",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 3454.99,
+      "execution": 3456.7174949999994,
+      "quantity": 3.6442600000000005,
+      "notional": 12597.1772983287,
+      "fee": 12.597177298328699
+    },
+    {
+      "day": "2024-04-08",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 69360.38,
+      "execution": 69325.69981,
+      "quantity": 0.18733000000000002,
+      "notional": 12986.783345407302,
+      "fee": 12.986783345407304,
+      "forced_terminal": false
+    },
+    {
+      "day": "2024-04-08",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 3454.2,
+      "execution": 3452.4729,
+      "quantity": 3.6442600000000005,
+      "notional": 12581.708890554002,
+      "fee": 12.581708890554003,
+      "forced_terminal": false
+    },
+    {
+      "day": "2024-05-20",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 66274.0,
+      "execution": 66307.137,
+      "quantity": 0.19242,
+      "notional": 12758.819301540001,
+      "fee": 12.75881930154
+    },
+    {
+      "day": "2024-05-20",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 3071.2,
+      "execution": 3072.7355999999995,
+      "quantity": 4.1523,
+      "notional": 12758.92003188,
+      "fee": 12.758920031879999
+    },
+    {
+      "day": "2024-06-10",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 69648.15,
+      "execution": 69613.325925,
+      "quantity": 0.19242,
+      "notional": 13394.9961744885,
+      "fee": 13.3949961744885,
+      "forced_terminal": false
+    },
+    {
+      "day": "2024-06-10",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 3706.4,
+      "execution": 3704.5468,
+      "quantity": 4.1523,
+      "notional": 15382.389677640002,
+      "fee": 15.382389677640003,
+      "forced_terminal": false
+    },
+    {
+      "day": "2024-06-17",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 66676.86,
+      "execution": 66710.19843,
+      "quantity": 0.21525000000000002,
+      "notional": 14359.370212057502,
+      "fee": 14.359370212057502
+    },
+    {
+      "day": "2024-06-17",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 3624.41,
+      "execution": 3626.2222049999996,
+      "quantity": 3.9600500000000003,
+      "notional": 14360.021242910248,
+      "fee": 14.360021242910248
+    },
+    {
+      "day": "2024-07-08",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 55857.81,
+      "execution": 55829.881095000004,
+      "quantity": 0.21525000000000002,
+      "notional": 12017.381905698752,
+      "fee": 12.017381905698752,
+      "forced_terminal": false
+    },
+    {
+      "day": "2024-07-08",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 2930.99,
+      "execution": 2929.524505,
+      "quantity": 3.9600500000000003,
+      "notional": 11601.06351602525,
+      "fee": 11.601063516025249,
+      "forced_terminal": false
+    },
+    {
+      "day": "2024-07-15",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 60797.91,
+      "execution": 60828.308955,
+      "quantity": 0.19375,
+      "notional": 11785.48486003125,
+      "fee": 11.785484860031252
+    },
+    {
+      "day": "2024-07-15",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 3245.2,
+      "execution": 3246.8225999999995,
+      "quantity": 3.6299900000000003,
+      "notional": 11785.933569773999,
+      "fee": 11.785933569773999
+    },
+    {
+      "day": "2024-09-02",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 57301.77,
+      "execution": 57273.119115,
+      "quantity": 0.19375,
+      "notional": 11096.66682853125,
+      "fee": 11.09666682853125,
+      "forced_terminal": false
+    },
+    {
+      "day": "2024-09-02",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 2425.71,
+      "execution": 2424.4971450000003,
+      "quantity": 3.6299900000000003,
+      "notional": 8800.900391378551,
+      "fee": 8.800900391378551,
+      "forced_terminal": false
+    },
+    {
+      "day": "2024-09-09",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 54869.95,
+      "execution": 54897.38497499999,
+      "quantity": 0.18086000000000002,
+      "notional": 9928.7410465785,
+      "fee": 9.9287410465785
+    },
+    {
+      "day": "2024-09-09",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 2297.3,
+      "execution": 2298.4486500000003,
+      "quantity": 4.31993,
+      "notional": 9929.137276594502,
+      "fee": 9.929137276594501
+    },
+    {
+      "day": "2024-10-07",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 62819.91,
+      "execution": 62788.50004500001,
+      "quantity": 0.18086000000000002,
+      "notional": 11355.928118138703,
+      "fee": 11.355928118138703,
+      "forced_terminal": false
+    },
+    {
+      "day": "2024-10-07",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 2440.02,
+      "execution": 2438.79999,
+      "quantity": 4.31993,
+      "notional": 10535.4452408007,
+      "fee": 10.5354452408007,
+      "forced_terminal": false
+    },
+    {
+      "day": "2024-12-02",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 97185.17,
+      "execution": 97233.76258499999,
+      "quantity": 0.11234000000000001,
+      "notional": 10923.2408887989,
+      "fee": 10.923240888798901
+    },
+    {
+      "day": "2024-12-02",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 3707.61,
+      "execution": 3709.463805,
+      "quantity": 2.9449,
+      "notional": 10923.999959344499,
+      "fee": 10.9239999593445
+    },
+    {
+      "day": "2024-12-23",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 95186.28,
+      "execution": 95138.68686,
+      "quantity": 0.11234000000000001,
+      "notional": 10687.880081852401,
+      "fee": 10.687880081852402,
+      "forced_terminal": false
+    },
+    {
+      "day": "2024-12-23",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 3281.83,
+      "execution": 3280.189085,
+      "quantity": 2.9449,
+      "notional": 9659.8288364165,
+      "fee": 9.6598288364165,
+      "forced_terminal": false
+    },
+    {
+      "day": "2025-01-27",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 102620.01,
+      "execution": 102671.32000499999,
+      "quantity": 0.09889,
+      "notional": 10153.166835294449,
+      "fee": 10.15316683529445
+    },
+    {
+      "day": "2025-01-27",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 3232.61,
+      "execution": 3234.226305,
+      "quantity": 3.13952,
+      "notional": 10153.9181690736,
+      "fee": 10.1539181690736
+    },
+    {
+      "day": "2025-03-31",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 82390.0,
+      "execution": 82348.80500000001,
+      "quantity": 0.09889,
+      "notional": 8143.473326450001,
+      "fee": 8.143473326450001,
+      "forced_terminal": false
+    },
+    {
+      "day": "2025-03-31",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 1807.74,
+      "execution": 1806.8361300000001,
+      "quantity": 3.13952,
+      "notional": 5672.5981668576005,
+      "fee": 5.6725981668576,
+      "forced_terminal": false
+    },
+    {
+      "day": "2025-04-07",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 78430.0,
+      "execution": 78469.215,
+      "quantity": 0.08786000000000001,
+      "notional": 6894.3052299,
+      "fee": 6.8943052299000005
+    },
+    {
+      "day": "2025-04-07",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 1580.77,
+      "execution": 1581.560385,
+      "quantity": 4.359380000000001,
+      "notional": 6894.622711161301,
+      "fee": 6.8946227111613005
+    },
+    {
+      "day": "2025-04-14",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 83760.0,
+      "execution": 83718.12000000001,
+      "quantity": 0.08786000000000001,
+      "notional": 7355.474023200001,
+      "fee": 7.355474023200001,
+      "forced_terminal": false
+    },
+    {
+      "day": "2025-04-14",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 1597.76,
+      "execution": 1596.9611200000002,
+      "quantity": 4.359380000000001,
+      "notional": 6961.760367305602,
+      "fee": 6.961760367305602,
+      "forced_terminal": false
+    },
+    {
+      "day": "2025-05-12",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 104118.0,
+      "execution": 104170.059,
+      "quantity": 0.06858,
+      "notional": 7143.98264622,
+      "fee": 7.1439826462200005
+    },
+    {
+      "day": "2025-05-12",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 2514.58,
+      "execution": 2515.83729,
+      "quantity": 2.8398000000000003,
+      "notional": 7144.474736142,
+      "fee": 7.1444747361420005
+    },
+    {
+      "day": "2025-05-26",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 109004.2,
+      "execution": 108949.6979,
+      "quantity": 0.06858,
+      "notional": 7471.770281982001,
+      "fee": 7.471770281982001,
+      "forced_terminal": false
+    },
+    {
+      "day": "2025-05-26",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 2551.22,
+      "execution": 2549.94439,
+      "quantity": 2.8398000000000003,
+      "notional": 7241.332078722001,
+      "fee": 7.241332078722001,
+      "forced_terminal": false
+    },
+    {
+      "day": "2025-06-23",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 100963.87,
+      "execution": 101014.35193499998,
+      "quantity": 0.07268000000000001,
+      "notional": 7341.7230986358,
+      "fee": 7.3417230986358
+    },
+    {
+      "day": "2025-06-23",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 2227.7,
+      "execution": 2228.8138499999995,
+      "quantity": 3.2941700000000003,
+      "notional": 7342.091720254499,
+      "fee": 7.342091720254499
+    },
+    {
+      "day": "2025-09-29",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 112163.96,
+      "execution": 112107.87802000002,
+      "quantity": 0.07268000000000001,
+      "notional": 8148.0005744936025,
+      "fee": 8.148000574493603,
+      "forced_terminal": false
+    },
+    {
+      "day": "2025-09-29",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 4142.16,
+      "execution": 4140.08892,
+      "quantity": 3.2941700000000003,
+      "notional": 13638.156717596401,
+      "fee": 13.6381567175964,
+      "forced_terminal": false
+    },
+    {
+      "day": "2025-10-27",
+      "asset": "BTC",
+      "side": "buy",
+      "reference": 114559.41,
+      "execution": 114616.689705,
+      "quantity": 0.09485,
+      "notional": 10871.39301851925,
+      "fee": 10.87139301851925
+    },
+    {
+      "day": "2025-10-27",
+      "asset": "ETH",
+      "side": "buy",
+      "reference": 4158.46,
+      "execution": 4160.539229999999,
+      "quantity": 2.6130000000000004,
+      "notional": 10871.48900799,
+      "fee": 10.87148900799
+    },
+    {
+      "day": "2025-11-03",
+      "asset": "BTC",
+      "side": "sell",
+      "reference": 110540.69,
+      "execution": 110485.419655,
+      "quantity": 0.09485,
+      "notional": 10479.542054276752,
+      "fee": 10.479542054276752,
+      "forced_terminal": false
+    },
+    {
+      "day": "2025-11-03",
+      "asset": "ETH",
+      "side": "sell",
+      "reference": 3906.58,
+      "execution": 3904.62671,
+      "quantity": 2.6130000000000004,
+      "notional": 10202.789593230002,
+      "fee": 10.202789593230001,
+      "forced_terminal": false
+    }
+  ],
+  "fees_usdt": 1158.0024065183613,
+  "slippage_reference_drag_usdt": 579.0043029582002,
+  "net_final_usdt": 20661.789368123496,
+  "gross_final_usdt": 22539.46259220001,
+  "double_slippage_final_usdt": 20071.014581979663,
+  "one_day_latency_final_usdt": 10678.080690448885
+}
