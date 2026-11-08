@@ -35,3 +35,11 @@ returns, sealed strategy, live order or raw article data was changed. A
 configured, authorized external feed and an always-on collector remain
 necessary before the claims stream can begin a defensible five-year
 prospective clock.
+
+After the code commit, the Quant adapter was copied byte-for-byte to the
+local `MiniMedallion/minimedallion_shadow` collector package; both SHA-256
+digests matched. One manual collector invocation exited 0 and reported
+`events/ALL: unchanged; items=172`, `claims/BTC: unavailable; items=0`,
+`claims/ETH: unavailable; items=0`, and `macro_schedule: fresh; items=9;
+changes=0`. This is the expected fail-closed behavior with the source
+unconfigured; it did not create a trading signal.
