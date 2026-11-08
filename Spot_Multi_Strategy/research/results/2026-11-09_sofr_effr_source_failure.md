@@ -1,0 +1,7 @@
+# SOFR/EFFR BTC study: sealed source-parser failure
+
+Experiment `sofr_effr_easing_btc_2026_11_09` was preregistered at `587e059`, implemented at `e467c7a`, and run exactly once. The run stopped at 2026-11-08 16:27:54 UTC while parsing SOFR, before downloading the BTC price archive or calculating a signal, trade, return, or Gate metric. The immutable failure record is `Spot_Multi_Strategy/reports/mini_medallion_sofr_effr_btc_oos/DATA_FAILURE.json`. Gate passed: **false**. No real order was placed.
+
+The source body still matched the preregistered SHA-256 and row counts. The error was in our frozen parser: it recognized `.` as a missing rate, but the pinned FRED CSV represents missing rates with an empty string. A post-failure *format-only* audit found 96 empty SOFR cells (68 during 2020–2025) and 259 empty EFFR cells (60 during 2020–2025); neither body contained `.` or null-shaped cells. No numeric rate was printed in the audit. The pre-registration date/presence check correctly excluded missing cells but did not check every raw token shape against the parser.
+
+This is a code-induced data-integrity failure, not a measured loss or a rejection of the economic spread hypothesis. Under the frozen one-run stop rule, do not patch this experiment's source code and rerun the same history. Future, economically independent studies may use a separate format-only preflight that enumerates every missing token shape before their preregistration and formal result read. The original mature strategy and all unrelated user files remain untouched.

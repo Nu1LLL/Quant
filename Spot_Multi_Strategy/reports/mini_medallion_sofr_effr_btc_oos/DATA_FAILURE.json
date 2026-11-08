@@ -1,0 +1,14 @@
+{
+  "experiment": "sofr_effr_easing_btc_2026_11_09",
+  "prereg_commit": "587e059",
+  "code_commit": "e467c7ac52fde9a3e2aaea2d9799f36684fb0f2e",
+  "started_utc": "2026-11-08T16:27:53.035806+00:00",
+  "evidence_grade": "preregistered_retrospective_current_vintage_us_money_market_rates",
+  "independent_executable_oos": false,
+  "real_orders_placed": false,
+  "status": "sealed_source_or_execution_failure",
+  "sealed_utc": "2026-11-08T16:27:54.630437+00:00",
+  "reason": "SOFR: malformed FRED rate CSV: could not convert string to float: ''",
+  "error_type": "SourceFailure",
+  "gate_passed": false
+}
