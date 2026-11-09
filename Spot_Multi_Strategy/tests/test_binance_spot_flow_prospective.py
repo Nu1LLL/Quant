@@ -6,7 +6,7 @@ import tempfile
 import unittest
 
 from research.crypto_blackbox.binance_spot_flow_prospective import (
-    ACTIVATION_MS, GRACE_MS, HOUR_MS, FlowCollector, Trade, _connect,
+    ACTIVATION_MS, GRACE_MS, HOUR_MS, SYMBOLS, FlowCollector, LateTradeError, Trade, _connect,
     parse_trade,
 )
 from research.crypto_blackbox.binance_spot_flow_coverage import CoverageError, audit
@@ -35,8 +35,40 @@ class BinanceSpotFlowTests(unittest.TestCase):
         event = parse_trade(self.message(maker=True), ACTIVATION_MS + 5500)
         self.assertEqual(event.buy_micros, 0)
         self.assertEqual(event.sell_micros, 5_000_000)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(LateTradeError):
             parse_trade(self.message(), ACTIVATION_MS + 20_000)
+
+    def test_late_trade_before_seal_invalidates_its_source_hour(self):
+        c = self.collector
+        c.connected(ACTIVATION_MS - 600_000)
+        received = ACTIVATION_MS + 20_000
+        with self.assertRaises(LateTradeError) as caught:
+            parse_trade(self.message(trade_ms=ACTIVATION_MS + 5000), received)
+        c.invalidate_late(caught.exception.symbol, caught.exception.trade_ms, received)
+        c.seal_due(ACTIVATION_MS + HOUR_MS + GRACE_MS)
+        status = self.db.execute("SELECT status FROM hourly_flow WHERE symbol='ADAUSDT'").fetchone()[0]
+        self.assertEqual(status, "invalid")
+
+    def test_late_trade_after_seal_append_only_incident_removes_coverage(self):
+        c = self.collector
+        c.connected(ACTIVATION_MS - 600_000)
+        for symbol in SYMBOLS:
+            c.ingest(Trade(symbol, 7, ACTIVATION_MS + 5000,
+                           ACTIVATION_MS + 5100, 5_000_000, 0), ACTIVATION_MS + 5200)
+        sealed = ACTIVATION_MS + HOUR_MS + GRACE_MS
+        c.seal_due(sealed)
+        self.assertEqual(audit(self.path, as_of_ms=sealed)["observed_hours_all_symbols"], 1)
+        detected = sealed + 1000
+        with self.assertRaises(LateTradeError) as caught:
+            parse_trade(self.message(agg_id=8), detected)
+        c.invalidate_late(caught.exception.symbol, caught.exception.trade_ms, detected)
+        self.assertEqual(self.db.execute("SELECT COUNT(*) FROM source_incident").fetchone()[0], 1)
+        self.assertEqual(self.db.execute("SELECT status FROM hourly_flow WHERE symbol='ADAUSDT'").fetchone()[0],
+                         "observed")
+        report = audit(self.path, as_of_ms=detected)
+        self.assertEqual(report["observed_hours_all_symbols"], 0)
+        self.assertEqual(report["postseal_incident_hours"], 1)
+        self.assertFalse(report["five_year_independent_oos_proven"])
 
     def test_continuous_hour_seals_once(self):
         c = self.collector

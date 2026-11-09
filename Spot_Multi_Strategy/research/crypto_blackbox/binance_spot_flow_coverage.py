@@ -63,9 +63,24 @@ def audit(path: Path = JOURNAL, *, as_of_ms: int | None = None) -> dict:
             contract = json.loads(contract_row[0])
             if (contract.get("activation_ms") != ACTIVATION_MS
                     or tuple(contract.get("symbols", ())) != SYMBOLS
-                    or contract.get("schema") != 1
+                    or contract.get("schema") != 2
                     or contract.get("source") != "binance_spot_aggTrade"):
                 raise CoverageError("source contract changed")
+            incidents = set()
+            incident_rows = db.execute("""
+                SELECT symbol,window_start_ms,detected_at_ms,reason
+                FROM source_incident WHERE window_start_ms>=? AND window_start_ms<?
+                  AND detected_at_ms<=?
+            """, (ACTIVATION_MS, end, now))
+            for incident in incident_rows:
+                symbol, start, detected, reason = incident
+                if (symbol not in SYMBOLS or type(start) is not int
+                        or (start - ACTIVATION_MS) % HOUR_MS
+                        or type(detected) is not int
+                        or detected < start + HOUR_MS + GRACE_MS
+                        or reason != "late_after_seal"):
+                    raise CoverageError("invalid append-only source incident")
+                incidents.add((symbol, start))
             rows = db.execute("""
                 SELECT symbol,window_start_ms,recorded_at_ms,status,count,
                        buys,sells,buy_micros,sell_micros,first_id,last_id,
@@ -101,20 +116,25 @@ def audit(path: Path = JOURNAL, *, as_of_ms: int | None = None) -> dict:
                         or (status == "observed" and ids[1] - ids[0] + 1 != count)
                         or (status == "empty" and count != 0)):
                     raise CoverageError("invalid prospective source row")
-                if status == "observed":
+                if status == "observed" and (symbol, start) not in incidents:
                     prior_id = previous_id.get(symbol)
                     if prior_id is not None and ids[0] != prior_id + 1:
                         raise CoverageError("aggregate-trade ID gap across observed hours")
                     previous_id[symbol] = ids[1]
-                elif status in {"invalid", "unavailable"}:
+                elif status in {"invalid", "unavailable"} or (symbol, start) in incidents:
                     previous_id.pop(symbol, None)
                 slot = seen.setdefault(start, set())
                 if symbol in slot:
                     raise CoverageError("duplicate source symbol/hour")
                 slot.add(symbol)
-                observed[start] = observed.get(start, 0) + (status == "observed")
+                observed[start] = observed.get(start, 0) + (
+                    status == "observed" and (symbol, start) not in incidents)
                 status_counts[symbol][status] += 1
+                if (symbol, start) in incidents:
+                    status_counts[symbol]["postseal_invalidated"] += 1
                 total_rows += 1
+            if any(symbol not in seen.get(start, ()) for symbol, start in incidents):
+                raise CoverageError("source incident has no sealed hourly row")
             db.execute("ROLLBACK")
     except (sqlite3.Error, json.JSONDecodeError) as exc:
         raise CoverageError("journal unreadable or schema changed") from exc
@@ -133,6 +153,7 @@ def audit(path: Path = JOURNAL, *, as_of_ms: int | None = None) -> dict:
                  if observed.get(ACTIVATION_MS + i * HOUR_MS, 0) != len(SYMBOLS)][:10]
     return {**base, "status": "audited", "database_bytes": size,
             "observed_hours_all_symbols": all_observed,
+            "postseal_incident_hours": len(incidents),
             "missing_rows": missing,
             "first_bad_hours_ms": first_bad,
             "status_counts": {symbol: dict(sorted(count.items()))

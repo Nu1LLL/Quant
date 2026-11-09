@@ -43,6 +43,15 @@ class Trade:
     sell_micros: int
 
 
+class LateTradeError(ValueError):
+    """A timestamped event arrived too late for normal hourly eligibility."""
+
+    def __init__(self, symbol: str, trade_ms: int):
+        super().__init__("late aggregate trade")
+        self.symbol = symbol
+        self.trade_ms = trade_ms
+
+
 @dataclass
 class Bucket:
     count: int = 0
@@ -70,9 +79,10 @@ def parse_trade(raw: str, received_ms: int) -> Trade:
         agg_id, trade_ms, event_ms = (data[key] for key in ("a", "T", "E"))
         if any(type(x) is not int or x < 0 for x in (agg_id, trade_ms, event_ms)):
             raise ValueError("invalid aggregate-trade ID or timestamp")
-        if (trade_ms > event_ms + 1000 or event_ms > received_ms + 2000
-                or received_ms - trade_ms > MAX_EVENT_LAG_MS):
+        if trade_ms > event_ms + 1000 or event_ms > received_ms + 2000:
             raise ValueError("late or future aggregate trade")
+        if received_ms - trade_ms > MAX_EVENT_LAG_MS:
+            raise LateTradeError(symbol, trade_ms)
         price, quantity = Decimal(data["p"]), Decimal(data["q"])
         if (not price.is_finite() or not quantity.is_finite()
                 or price <= 0 or quantity <= 0):
@@ -99,7 +109,7 @@ def _connect(path: Path) -> sqlite3.Connection:
     db.execute("PRAGMA synchronous=FULL")
     db.execute("CREATE TABLE IF NOT EXISTS source_contract (id INTEGER PRIMARY KEY CHECK(id=1), contract TEXT NOT NULL)")
     contract = json.dumps({"activation_ms": ACTIVATION_MS, "symbols": SYMBOLS,
-                           "schema": 1, "source": "binance_spot_aggTrade"},
+                           "schema": 2, "source": "binance_spot_aggTrade"},
                           sort_keys=True, separators=(",", ":"))
     db.execute("INSERT OR IGNORE INTO source_contract VALUES (1,?)", (contract,))
     if db.execute("SELECT contract FROM source_contract WHERE id=1").fetchone()[0] != contract:
@@ -132,6 +142,23 @@ def _connect(path: Path) -> sqlite3.Connection:
     db.execute("""
         CREATE TRIGGER IF NOT EXISTS hourly_flow_no_delete
         BEFORE DELETE ON hourly_flow BEGIN SELECT RAISE(ABORT,'append-only'); END
+    """)
+    db.execute("""
+        CREATE TABLE IF NOT EXISTS source_incident (
+            id INTEGER PRIMARY KEY,
+            symbol TEXT NOT NULL,
+            window_start_ms INTEGER NOT NULL,
+            detected_at_ms INTEGER NOT NULL,
+            reason TEXT NOT NULL CHECK(reason='late_after_seal')
+        )
+    """)
+    db.execute("""
+        CREATE TRIGGER IF NOT EXISTS source_incident_no_update
+        BEFORE UPDATE ON source_incident BEGIN SELECT RAISE(ABORT,'append-only'); END
+    """)
+    db.execute("""
+        CREATE TRIGGER IF NOT EXISTS source_incident_no_delete
+        BEFORE DELETE ON source_incident BEGIN SELECT RAISE(ABORT,'append-only'); END
     """)
     db.commit()
     return db
@@ -175,13 +202,30 @@ class FlowCollector:
             if at_ms - start <= GRACE_MS and start - HOUR_MS >= self.next_start:
                 self.invalid.add((symbol, start - HOUR_MS))
 
+    def invalidate_late(self, symbol: str, trade_ms: int, received_ms: int) -> None:
+        """Append a post-seal incident; never rewrite an already sealed hour."""
+        start = (trade_ms // HOUR_MS) * HOUR_MS
+        if start < ACTIVATION_MS:
+            return
+        if symbol not in SYMBOLS or received_ms < trade_ms:
+            raise ValueError("invalid late aggregate-trade identity or timing")
+        if start < self.next_start:
+            with self.db:
+                self.db.execute(
+                    "INSERT INTO source_incident(symbol,window_start_ms,detected_at_ms,reason) "
+                    "VALUES(?,?,?,'late_after_seal')",
+                    (symbol, start, received_ms))
+        else:
+            self.invalid.add((symbol, start))
+
     def ingest(self, trade: Trade, received_ms: int) -> None:
         start = (trade.trade_ms // HOUR_MS) * HOUR_MS
         if start < ACTIVATION_MS:
             self.last_id[trade.symbol] = trade.agg_id
             return
         if start < self.next_start:
-            raise RuntimeError("late aggregate trade for a sealed hour")
+            self.invalidate_late(trade.symbol, trade.trade_ms, received_ms)
+            return
         key = (trade.symbol, start)
         previous = self.last_id.get(trade.symbol)
         if previous is not None and trade.agg_id != previous + 1:
@@ -262,6 +306,8 @@ async def run(path: Path = JOURNAL) -> None:
                             collector.ingest(parse_trade(raw, received), received)
                         except asyncio.TimeoutError:
                             continue
+                        except LateTradeError as exc:
+                            collector.invalidate_late(exc.symbol, exc.trade_ms, received)
                         except (ValueError, KeyError, TypeError, AttributeError):
                             collector.invalidate_current(time.time_ns() // 1_000_000)
             except (OSError, TimeoutError, ssl.SSLError, websockets.exceptions.WebSocketException):
