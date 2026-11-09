@@ -68,7 +68,23 @@ class BinanceSpotFlowTests(unittest.TestCase):
         report = audit(self.path, as_of_ms=detected)
         self.assertEqual(report["observed_hours_all_symbols"], 0)
         self.assertEqual(report["postseal_incident_hours"], 1)
+        self.assertEqual(report["longest_complete_run_hours"], 0)
         self.assertFalse(report["five_year_independent_oos_proven"])
+
+    def test_later_complete_run_starts_after_an_earlier_bad_hour(self):
+        c = self.collector
+        c.connected(ACTIVATION_MS - 600_000)
+        c.invalidate_current(ACTIVATION_MS + 1000)
+        c.seal_due(ACTIVATION_MS + HOUR_MS + GRACE_MS)
+        for symbol in SYMBOLS:
+            c.ingest(Trade(symbol, 9, ACTIVATION_MS + HOUR_MS + 5000,
+                           ACTIVATION_MS + HOUR_MS + 5100, 5_000_000, 0),
+                     ACTIVATION_MS + HOUR_MS + 5200)
+        c.seal_due(ACTIVATION_MS + 2 * HOUR_MS + GRACE_MS)
+        result = audit(self.path, as_of_ms=ACTIVATION_MS + 2 * HOUR_MS + GRACE_MS)
+        self.assertEqual(result["longest_complete_run_hours"], 1)
+        self.assertEqual(result["longest_complete_start_ms"], ACTIVATION_MS + HOUR_MS)
+        self.assertFalse(result["first_five_year_source_coverage_complete"])
 
     def test_continuous_hour_seals_once(self):
         c = self.collector

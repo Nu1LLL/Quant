@@ -109,7 +109,7 @@ def _connect(path: Path) -> sqlite3.Connection:
     db.execute("PRAGMA synchronous=FULL")
     db.execute("CREATE TABLE IF NOT EXISTS source_contract (id INTEGER PRIMARY KEY CHECK(id=1), contract TEXT NOT NULL)")
     contract = json.dumps({"activation_ms": ACTIVATION_MS, "symbols": SYMBOLS,
-                           "schema": 2, "source": "binance_spot_aggTrade"},
+                           "schema": 1, "source": "binance_spot_aggTrade"},
                           sort_keys=True, separators=(",", ":"))
     db.execute("INSERT OR IGNORE INTO source_contract VALUES (1,?)", (contract,))
     if db.execute("SELECT contract FROM source_contract WHERE id=1").fetchone()[0] != contract:

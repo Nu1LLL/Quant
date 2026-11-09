@@ -43,6 +43,10 @@ def audit(path: Path = JOURNAL, *, as_of_ms: int | None = None) -> dict:
         return {**base, "status": ("awaiting_first_hour" if expected == 0
                                     else "journal_missing"),
                 "observed_hours_all_symbols": 0,
+                "longest_complete_run_hours": 0,
+                "longest_complete_start_ms": None,
+                "longest_complete_end_ms": None,
+                "five_year_continuous_source": False,
                 "missing_rows": expected * len(SYMBOLS),
                 "first_bad_hours_ms": [ACTIVATION_MS + i * HOUR_MS
                                        for i in range(min(expected, 10))]}
@@ -63,7 +67,7 @@ def audit(path: Path = JOURNAL, *, as_of_ms: int | None = None) -> dict:
             contract = json.loads(contract_row[0])
             if (contract.get("activation_ms") != ACTIVATION_MS
                     or tuple(contract.get("symbols", ())) != SYMBOLS
-                    or contract.get("schema") != 2
+                    or contract.get("schema") != 1
                     or contract.get("source") != "binance_spot_aggTrade"):
                 raise CoverageError("source contract changed")
             incidents = set()
@@ -145,6 +149,27 @@ def audit(path: Path = JOURNAL, *, as_of_ms: int | None = None) -> dict:
         status_counts[symbol]["missing"] = expected - sum(status_counts[symbol].values())
     all_observed = sum(observed.get(ACTIVATION_MS + i * HOUR_MS, 0) == len(SYMBOLS)
                        for i in range(expected))
+    longest = current = 0
+    longest_start = current_start = None
+    for i in range(expected):
+        start = ACTIVATION_MS + i * HOUR_MS
+        if observed.get(start, 0) == len(SYMBOLS):
+            if current == 0:
+                current_start = start
+            current += 1
+            if current > longest:
+                longest, longest_start = current, current_start
+        else:
+            current = 0
+    longest_end = None if longest_start is None else longest_start + longest * HOUR_MS
+    five_year_continuous = False
+    if longest_start is not None:
+        beginning = datetime.fromtimestamp(longest_start / 1000, tz=timezone.utc)
+        try:
+            anniversary = beginning.replace(year=beginning.year + 5)
+        except ValueError:
+            anniversary = beginning.replace(year=beginning.year + 5, month=3, day=1)
+        five_year_continuous = longest_end >= int(anniversary.timestamp() * 1000)
     first_five_hours = (FIVE_YEAR_END_MS - ACTIVATION_MS) // HOUR_MS
     first_five_observed = sum(
         observed.get(ACTIVATION_MS + i * HOUR_MS, 0) == len(SYMBOLS)
@@ -153,6 +178,10 @@ def audit(path: Path = JOURNAL, *, as_of_ms: int | None = None) -> dict:
                  if observed.get(ACTIVATION_MS + i * HOUR_MS, 0) != len(SYMBOLS)][:10]
     return {**base, "status": "audited", "database_bytes": size,
             "observed_hours_all_symbols": all_observed,
+            "longest_complete_run_hours": longest,
+            "longest_complete_start_ms": longest_start,
+            "longest_complete_end_ms": longest_end,
+            "five_year_continuous_source": five_year_continuous,
             "postseal_incident_hours": len(incidents),
             "missing_rows": missing,
             "first_bad_hours_ms": first_bad,
