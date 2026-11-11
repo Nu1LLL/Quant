@@ -1,0 +1,38 @@
+name: Binance Vision prospective source
+
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: binance-vision-prospective-main
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    if: github.repository == 'Nu1LLL/Quant'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Capture already published UTC days
+        run: python3 Spot_Multi_Strategy/research/crypto_blackbox/binance_vision_daily_prospective.py
+      - name: Commit new source evidence only
+        shell: bash
+        run: |
+          if [ -d Spot_Multi_Strategy/research/prospective/binance_vision_daily ]; then
+            git add Spot_Multi_Strategy/research/prospective/binance_vision_daily
+          fi
+          if git diff --cached --quiet; then
+            echo 'No new complete official archive.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Capture prospective Binance Vision daily source'
+          git pull --rebase origin main
+          git push origin HEAD:main
