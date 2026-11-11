@@ -9,9 +9,14 @@ import json
 from pathlib import Path
 import re
 
-from .binance_vision_daily_prospective import (
-    ACTIVATION_DATE, MAX_ZIP_BYTES, OUTPUT_ROOT, SYMBOLS, _archive_urls,
-)
+if __package__:
+    from .binance_vision_daily_prospective import (
+        ACTIVATION_DATE, MAX_ZIP_BYTES, OUTPUT_ROOT, SYMBOLS, _archive_urls,
+    )
+else:
+    from binance_vision_daily_prospective import (
+        ACTIVATION_DATE, MAX_ZIP_BYTES, OUTPUT_ROOT, SYMBOLS, _archive_urls,
+    )
 
 
 HEX64 = re.compile(r"[0-9a-f]{64}\Z")

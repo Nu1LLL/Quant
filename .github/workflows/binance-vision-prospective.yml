@@ -22,7 +22,7 @@ jobs:
       - name: Capture already published UTC days
         run: python3 Spot_Multi_Strategy/research/crypto_blackbox/binance_vision_daily_prospective.py
       - name: Audit captured source continuity before committing
-        run: PYTHONPATH=Spot_Multi_Strategy python3 -m research.crypto_blackbox.binance_vision_daily_coverage
+        run: python3 Spot_Multi_Strategy/research/crypto_blackbox/binance_vision_daily_coverage.py
       - name: Commit new source evidence only
         shell: bash
         run: |
