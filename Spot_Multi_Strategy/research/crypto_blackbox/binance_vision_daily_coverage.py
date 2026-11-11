@@ -84,9 +84,9 @@ def _read_summary(path: Path, day: date) -> tuple[dict[str, tuple[int, int]], in
 def audit(root: Path = OUTPUT_ROOT, *, as_of: date | None = None) -> dict:
     current = datetime.now(timezone.utc)
     today = current.date() if as_of is None else as_of
-    if type(today) is not date or today < ACTIVATION_DATE:
-        raise ValueError("as_of must be an eligible UTC date")
-    expected = (today - ACTIVATION_DATE).days
+    if type(today) is not date:
+        raise ValueError("as_of must be a UTC date")
+    expected = max(0, (today - ACTIVATION_DATE).days)
     cutoff_ms = int((current if as_of is None else datetime.combine(
         today + timedelta(days=1), datetime.min.time(), tzinfo=timezone.utc)).timestamp() * 1000)
     complete = 0

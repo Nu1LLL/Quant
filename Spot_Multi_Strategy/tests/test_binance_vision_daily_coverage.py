@@ -41,6 +41,9 @@ class BinanceVisionCoverageTests(unittest.TestCase):
     def test_empty_prelaunch_and_one_complete_day(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
+            prelaunch = audit(root, as_of=ACTIVATION_DATE - timedelta(days=1))
+            self.assertEqual(prelaunch["expected_days"], 0)
+            self.assertEqual(prelaunch["complete_days"], 0)
             self.assertEqual(audit(root, as_of=ACTIVATION_DATE)["expected_days"], 0)
             _write_day(root, ACTIVATION_DATE)
             report = audit(root, as_of=ACTIVATION_DATE + timedelta(days=1))
